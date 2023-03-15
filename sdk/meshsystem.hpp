@@ -1,0 +1,10 @@
+#pragma once
+#include <cstdint>
+#include "!GlobalTypes.hpp"
+
+///////////////////////////////////////////
+// Binary: meshsystem.dll
+// Class Count: 0
+// Enum Count: 0
+///////////////////////////////////////////
+
