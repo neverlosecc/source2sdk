@@ -3,7 +3,7 @@
 #include "!GlobalTypes.hpp"
 
 ///////////////////////////////////////////
-// Binary: networksystem.dll
+// Binary: renderingpipelines.dll
 // Class Count: 0
 // Enum Count: 0
 ///////////////////////////////////////////
