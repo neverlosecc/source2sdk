@@ -4,7 +4,7 @@
 
 ///////////////////////////////////////////
 // Binary: engine2.dll
-// Class Count: 49
+// Class Count: 48
 // Enum Count: 2
 ///////////////////////////////////////////
 
@@ -59,12 +59,12 @@ public:
 	float m_flFrameTime; // 0x0
 };
 
-// Aligment: 1
-// Size: 4
+// Aligment: 0
+// Size: 1
 struct EventProfileStorageAvailable_t
 {
 public:
-	int32_t m_nSplitScreenSlot; // 0x0
+// <no members described>
 };
 
 // Aligment: 0
@@ -345,11 +345,11 @@ public:
 };
 
 // Aligment: 1
-// Size: 16
+// Size: 8
 struct EventPreDataUpdate_t
 {
 public:
-	int32_t m_nCount; // 0x0
+	int32_t m_nEntityIndex; // 0x0
 };
 
 // Aligment: 1
@@ -395,7 +395,7 @@ public:
 };
 
 // Aligment: 8
-// Size: 120
+// Size: 112
 struct EntComponentInfo_t
 {
 public:
@@ -406,7 +406,7 @@ public:
 	char* m_pNetworkDataReferencedPtrPropDescription; // 0x28
 	int32_t m_nRuntimeIndex; // 0x30
 	uint32_t m_nFlags; // 0x34
-	CEntityComponentHelper* m_pBaseClassComponentHelper; // 0x70
+	CEntityComponentHelper* m_pBaseClassComponentHelper; // 0x68
 };
 
 // Aligment: 0
@@ -437,7 +437,7 @@ public:
 };
 
 // Aligment: 11
-// Size: 120
+// Size: 112
 class CEntityIdentity
 {
 public:
@@ -446,16 +446,16 @@ public:
 	int32_t m_nameStringableIndex; // 0x14
 	CUtlSymbolLarge m_name; // 0x18
 	CUtlSymbolLarge m_designerName; // 0x20
-	uint32_t m_flags; // 0x30
-	uint32_t m_fDataObjectTypes; // 0x38
+	uint32_t m_flags; // 0x28
+	uint32_t m_fDataObjectTypes; // 0x30
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
-	ChangeAccessorFieldPathIndex_t m_PathIndex; // 0x3c
-	CEntityIdentity* m_pPrev; // 0x50
-	CEntityIdentity* m_pNext; // 0x58
-	CEntityIdentity* m_pPrevByClass; // 0x60
-	CEntityIdentity* m_pNextByClass; // 0x68
-	V_uuid_t* m_pId; // 0x70
+	ChangeAccessorFieldPathIndex_t m_PathIndex; // 0x34
+	CEntityIdentity* m_pPrev; // 0x48
+	CEntityIdentity* m_pNext; // 0x50
+	CEntityIdentity* m_pPrevByClass; // 0x58
+	CEntityIdentity* m_pNextByClass; // 0x60
+	V_uuid_t* m_pId; // 0x68
 };
 
 // Aligment: 0
@@ -466,21 +466,16 @@ public:
 // <no members described>
 };
 
-// Aligment: 4
-// Size: 56
+// Aligment: 2
+// Size: 40
 class CEntityInstance : public IHandleEntity
 {
 public:
-	// MNetworkDisable
-	CUtlSymbolLarge m_iszPrivateVScripts; // 0x8
 	// MNetworkEnable
 	// MNetworkPriority "112"
-	CEntityIdentity* m_pEntity; // 0x10
+	CEntityIdentity* m_pEntity; // 0x8
 	// MNetworkDisable
-	CUtlStringToken m_worldGroupId; // 0x20
-	// MNetworkEnable
-	// MNetworkDisable
-	CScriptComponent* m_CScriptComponent; // 0x30
+	CUtlStringToken m_worldGroupId; // 0x10
 };
 
 // Aligment: 1
@@ -489,16 +484,5 @@ class CEntityIOOutput
 {
 public:
 	CVariantBase< CVariantDefaultAllocator > m_Value; // 0x18
-};
-
-// Aligment: 1
-// Size: 56
-class CScriptComponent : public CEntityComponent
-{
-public:
-	CUtlSymbolLarge m_scriptClassName; // 0x30
-public:
-	static EntComponentInfo_t &Get_s_EntComponentInfo() { return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("engine2.dll")->FindDeclaredClass("CScriptComponent")->m_static_fiels[0]->m_instance); }
-	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("engine2.dll")->FindDeclaredClass("CScriptComponent")->m_static_fiels[1]->m_instance); }
 };
 

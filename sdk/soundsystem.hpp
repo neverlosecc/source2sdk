@@ -4,7 +4,7 @@
 
 ///////////////////////////////////////////
 // Binary: soundsystem.dll
-// Class Count: 20
+// Class Count: 16
 // Enum Count: 7
 ///////////////////////////////////////////
 
@@ -69,7 +69,7 @@ enum class vmix_filter_type_t : uint16_t
 };
 
 // Aligment: 2
-// Size: 16
+// Size: 13
 enum class vmix_processor_type_t : uint16_t
 {
 	VPROCESSOR_UNKNOWN = 0,
@@ -85,9 +85,6 @@ enum class vmix_processor_type_t : uint16_t
 	VPROCESSOR_EQ8 = 10,
 	VPROCESSOR_ENVELOPE = 11,
 	VPROCESSOR_VOCODER = 12,
-	VPROCESSOR_CONVOLUTION = 13,
-	VPROCESSOR_DYNAMICS_3BAND = 14,
-	VPROCESSOR_DYNAMICS_COMPRESSOR = 15,
 };
 
 // Aligment: 3
@@ -186,7 +183,7 @@ public:
 class CSosSoundEventGroupListSchema
 {
 public:
-	// MPropertyAutoExpandSelf
+	// MPropertyAutoExpandGroup
 	// MPropertyFriendlyName "Groups"
 	CUtlVector< CSosSoundEventGroupSchema > m_groupList; // 0x0
 };
@@ -245,8 +242,8 @@ public:
 	float m_flWidth; // 0x24
 };
 
-// Aligment: 12
-// Size: 48
+// Aligment: 10
+// Size: 40
 struct vmix_dynamics_desc_t
 {
 public:
@@ -260,78 +257,6 @@ public:
 	float m_flAttackTimeMS; // 0x1c
 	float m_flReleaseTimeMS; // 0x20
 	float m_flRMSTimeMS; // 0x24
-	float m_flWetMix; // 0x28
-	bool m_bPeakMode; // 0x2c
-};
-
-// Aligment: 9
-// Size: 36
-struct vmix_dynamics_compressor_desc_t
-{
-public:
-	// MPropertyFriendlyName "Output Gain (dB)"
-	float m_fldbOutputGain; // 0x0
-	// MPropertyFriendlyName "Threshold (dB)"
-	float m_fldbCompressionThreshold; // 0x4
-	// MPropertyFriendlyName "Knee Width (dB)"
-	float m_fldbKneeWidth; // 0x8
-	// MPropertyFriendlyName "Compression Ratio"
-	float m_flCompressionRatio; // 0xc
-	// MPropertyFriendlyName "Attack time (ms)"
-	float m_flAttackTimeMS; // 0x10
-	// MPropertyFriendlyName "Release time (ms)"
-	float m_flReleaseTimeMS; // 0x14
-	// MPropertyFriendlyName "Threshold detection time (ms)"
-	float m_flRMSTimeMS; // 0x18
-	// MPropertyFriendlyName "Dry/Wet"
-	float m_flWetMix; // 0x1c
-	// MPropertyFriendlyName "Peak mode"
-	bool m_bPeakMode; // 0x20
-};
-
-// Aligment: 10
-// Size: 36
-struct vmix_dynamics_band_t
-{
-public:
-	// MPropertyFriendlyName "Input Gain (dB)"
-	float m_fldbGainInput; // 0x0
-	// MPropertyFriendlyName "Output Gain (dB)"
-	float m_fldbGainOutput; // 0x4
-	// MPropertyFriendlyName "Above Threshold(dB)"
-	float m_fldbThresholdBelow; // 0x8
-	// MPropertyFriendlyName "Below Threshold(dB)"
-	float m_fldbThresholdAbove; // 0xc
-	// MPropertyFriendlyName "Upward Ratio"
-	float m_flRatioBelow; // 0x10
-	// MPropertyFriendlyName "Downward Ratio"
-	float m_flRatioAbove; // 0x14
-	// MPropertyFriendlyName "Attack time (ms)"
-	float m_flAttackTimeMS; // 0x18
-	// MPropertyFriendlyName "Release time (ms)"
-	float m_flReleaseTimeMS; // 0x1c
-	// MPropertyFriendlyName "Enabled"
-	bool m_bEnable; // 0x20
-	// MPropertyFriendlyName "Solo"
-	bool m_bSolo; // 0x21
-};
-
-// Aligment: 11
-// Size: 148
-struct vmix_dynamics_3band_desc_t
-{
-public:
-	float m_fldbGainOutput; // 0x0
-	float m_flRMSTimeMS; // 0x4
-	float m_fldbKneeWidth; // 0x8
-	float m_flDepth; // 0xc
-	float m_flWetMix; // 0x10
-	float m_flTimeScale; // 0x14
-	float m_flLowCutoffFreq; // 0x18
-	float m_flHighCutoffFreq; // 0x1c
-	bool m_bPeakMode; // 0x20
-	int32_t m_nSoloBand; // 0x24
-	vmix_dynamics_band_t[3] m_bandDesc; // 0x28
 };
 
 // Aligment: 3
@@ -353,33 +278,6 @@ public:
 	float m_flPitchShift; // 0x4
 	int32_t m_nQuality; // 0x8
 	int32_t m_nProcType; // 0xc
-};
-
-// Aligment: 8
-// Size: 32
-struct vmix_convolution_desc_t
-{
-public:
-	// MPropertyFriendlyName "gain of wet signal (dB)"
-	// MPropertyAttributeRange "-36 3"
-	float m_fldbGain; // 0x0
-	// MPropertyFriendlyName "Pre-delay (ms)"
-	float m_flPreDelayMS; // 0x4
-	// MPropertyFriendlyName "Dry/Wet"
-	float m_flWetMix; // 0x8
-	// MPropertyFriendlyName "Low EQ gain (dB)"
-	// MPropertyAttributeRange "-24 24"
-	float m_fldbLow; // 0xc
-	// MPropertyFriendlyName "Mid EQ gain (dB)"
-	// MPropertyAttributeRange "-24 24"
-	float m_fldbMid; // 0x10
-	// MPropertyFriendlyName "High EQ gain (dB)"
-	// MPropertyAttributeRange "-24 24"
-	float m_fldbHigh; // 0x14
-	// MPropertyFriendlyName "Low Cutoff Freq (Hz)"
-	float m_flLowCutoffFreq; // 0x18
-	// MPropertyFriendlyName "High Cutoff Freq (Hz)"
-	float m_flHighCutoffFreq; // 0x1c
 };
 
 // Aligment: 10

@@ -4,7 +4,7 @@
 
 ///////////////////////////////////////////
 // Binary: worldrenderer.dll
-// Class Count: 23
+// Class Count: 22
 // Enum Count: 3
 ///////////////////////////////////////////
 
@@ -16,7 +16,7 @@ enum class EntityLumpFlags_t : uint32_t
 };
 
 // Aligment: 4
-// Size: 15
+// Size: 13
 enum class ObjectTypeFlags_t : uint32_t
 {
 	OBJECT_TYPE_NONE = 0x0,
@@ -31,8 +31,6 @@ enum class ObjectTypeFlags_t : uint32_t
 	OBJECT_TYPE_NO_SUN_SHADOWS = 0x100,
 	OBJECT_TYPE_RENDER_WITH_DYNAMIC = 0x200,
 	OBJECT_TYPE_RENDER_TO_CUBEMAPS = 0x400,
-	OBJECT_TYPE_MODEL_HAS_LODS = 0x800,
-	OBJECT_TYPE_NO_ZPREPASS = 0x1000,
 	OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
 };
 
@@ -172,20 +170,19 @@ public:
 	CUtlVector< uint8 > m_pData; // 0x20
 };
 
-// Aligment: 9
-// Size: 60
+// Aligment: 8
+// Size: 56
 struct AggregateMeshInfo_t
 {
 public:
-	Vector[2] m_vWorldBounds; // 0x0
-	uint32_t m_nVisClusterMemberOffset; // 0x18
-	uint8_t m_nVisClusterMemberCount; // 0x1c
-	uint8_t m_nLODGroupMask; // 0x1d
-	int32_t m_nCubeMapPrecomputedHandshake; // 0x20
-	ObjectTypeFlags_t m_objectFlags; // 0x24
-	Vector m_vLODOrigin; // 0x28
-	float m_fLODStartDrawDistance; // 0x34
-	float m_fLODEndDrawDistance; // 0x38
+	Vector4D m_vTintColor; // 0x0
+	Vector[2] m_vWorldBounds; // 0x10
+	uint16_t m_nDrawDescriptorIndex; // 0x28
+	uint16_t m_nVisClusterMemberOffset; // 0x2a
+	uint8_t m_nVisClusterMemberCount; // 0x2c
+	uint8_t _pad; // 0x2d
+	int32_t m_nCubeMapPrecomputedHandshake; // 0x30
+	ObjectTypeFlags_t m_objectFlags; // 0x34
 };
 
 // Aligment: 8
@@ -331,31 +328,15 @@ public:
 // <no members described>
 };
 
-// Aligment: 4
-// Size: 56
+// Aligment: 2
+// Size: 40
 class CEntityInstance : public IHandleEntity
 {
 public:
-	// MNetworkDisable
-	CUtlSymbolLarge m_iszPrivateVScripts; // 0x8
 	// MNetworkEnable
 	// MNetworkPriority "112"
-	CEntityIdentity* m_pEntity; // 0x10
+	CEntityIdentity* m_pEntity; // 0x8
 	// MNetworkDisable
-	CUtlStringToken m_worldGroupId; // 0x20
-	// MNetworkEnable
-	// MNetworkDisable
-	CScriptComponent* m_CScriptComponent; // 0x30
-};
-
-// Aligment: 1
-// Size: 56
-class CScriptComponent : public CEntityComponent
-{
-public:
-	CUtlSymbolLarge m_scriptClassName; // 0x30
-public:
-	static EntComponentInfo_t &Get_s_EntComponentInfo() { return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("worldrenderer.dll")->FindDeclaredClass("CScriptComponent")->m_static_fiels[0]->m_instance); }
-	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("worldrenderer.dll")->FindDeclaredClass("CScriptComponent")->m_static_fiels[1]->m_instance); }
+	CUtlStringToken m_worldGroupId; // 0x10
 };
 

@@ -5,18 +5,8 @@
 ///////////////////////////////////////////
 // Binary: scenesystem.dll
 // Class Count: 9
-// Enum Count: 1
+// Enum Count: 0
 ///////////////////////////////////////////
-
-// Aligment: 1
-// Size: 4
-enum class DisableShadows_t : uint8_t
-{
-	kDisableShadows_None = 0,
-	kDisableShadows_All = 1,
-	kDisableShadows_Baked = 2,
-	kDisableShadows_Realtime = 3,
-};
 
 // Aligment: 2
 // Size: 16
