@@ -5,8 +5,203 @@
 ///////////////////////////////////////////
 // Binary: particles.dll
 // Class Count: 354
-// Enum Count: 0
+// Enum Count: 16
 ///////////////////////////////////////////
+
+// Aligment: 4
+// Size: 7
+enum class Detail2Combo_t : uint32_t
+{
+	DETAIL_2_COMBO_UNINITIALIZED = 0xffffffffffffffff,
+	DETAIL_2_COMBO_OFF = 0x0,
+	DETAIL_2_COMBO_ADD = 0x1,
+	DETAIL_2_COMBO_ADD_SELF_ILLUM = 0x2,
+	DETAIL_2_COMBO_MOD2X = 0x3,
+	DETAIL_2_COMBO_MUL = 0x4,
+	DETAIL_2_COMBO_CROSSFADE = 0x5,
+};
+
+// Aligment: 4
+// Size: 16
+enum class ParticleAttachment_t : uint32_t
+{
+	PATTACH_INVALID = 0xffffffffffffffff,
+	PATTACH_ABSORIGIN = 0x0,
+	PATTACH_ABSORIGIN_FOLLOW = 0x1,
+	PATTACH_CUSTOMORIGIN = 0x2,
+	PATTACH_CUSTOMORIGIN_FOLLOW = 0x3,
+	PATTACH_POINT = 0x4,
+	PATTACH_POINT_FOLLOW = 0x5,
+	PATTACH_EYES_FOLLOW = 0x6,
+	PATTACH_OVERHEAD_FOLLOW = 0x7,
+	PATTACH_WORLDORIGIN = 0x8,
+	PATTACH_ROOTBONE_FOLLOW = 0x9,
+	PATTACH_RENDERORIGIN_FOLLOW = 0xa,
+	PATTACH_MAIN_VIEW = 0xb,
+	PATTACH_WATERWAKE = 0xc,
+	PATTACH_CENTER_FOLLOW = 0xd,
+	MAX_PATTACH_TYPES = 0xe,
+};
+
+// Aligment: 4
+// Size: 13
+enum class SequenceCombineMode_t : uint32_t
+{
+	SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0 = 0x0,
+	SEQUENCE_COMBINE_MODE_USE_SEQUENCE_1 = 0x1,
+	SEQUENCE_COMBINE_MODE_AVERAGE = 0x2,
+	SEQUENCE_COMBINE_MODE_ADDITIVE = 0x3,
+	SEQUENCE_COMBINE_MODE_ALPHA_FROM0_RGB_FROM_1 = 0x4,
+	SEQUENCE_COMBINE_MODE_ALPHA_FROM1_RGB_FROM_0 = 0x5,
+	SEQUENCE_COMBINE_MODE_WEIGHTED_BLEND = 0x6,
+	SEQUENCE_COMBINE_MODE_ALPHA_BLEND_1_OVER_0 = 0x7,
+	SEQUENCE_COMBINE_MODE_REPLICATEALPHA0 = 0x8,
+	SEQUENCE_COMBINE_MODE_REPLICATEALPHA1 = 0x9,
+	SEQUENCE_COMBINE_MODE_ALPHA_BLEND_0_OVER_1 = 0xa,
+	SEQUENCE_COMBINE_MODE_REPLICATE_COLOR_0 = 0xb,
+	SEQUENCE_COMBINE_MODE_REPLICATE_COLOR_1 = 0xc,
+};
+
+// Aligment: 4
+// Size: 3
+enum class PetGroundType_t : uint32_t
+{
+	PET_GROUND_NONE = 0x0,
+	PET_GROUND_GRID = 0x1,
+	PET_GROUND_PLANE = 0x2,
+};
+
+// Aligment: 4
+// Size: 5
+enum class ParticleTopology_t : uint32_t
+{
+	PARTICLE_TOPOLOGY_POINTS = 0x0,
+	PARTICLE_TOPOLOGY_LINES = 0x1,
+	PARTICLE_TOPOLOGY_TRIS = 0x2,
+	PARTICLE_TOPOLOGY_QUADS = 0x3,
+	PARTICLE_TOPOLOGY_CUBES = 0x4,
+};
+
+// Aligment: 4
+// Size: 5
+enum class ParticleColorBlendMode_t : uint32_t
+{
+	PARTICLEBLEND_DEFAULT = 0x0,
+	PARTICLEBLEND_OVERLAY = 0x1,
+	PARTICLEBLEND_DARKEN = 0x2,
+	PARTICLEBLEND_LIGHTEN = 0x3,
+	PARTICLEBLEND_MULTIPLY = 0x4,
+};
+
+// Aligment: 4
+// Size: 6
+enum class ScalarExpressionType_t : uint32_t
+{
+	SCALAR_EXPRESSION_UNINITIALIZED = 0xffffffffffffffff,
+	SCALAR_EXPRESSION_ADD = 0x0,
+	SCALAR_EXPRESSION_SUBTRACT = 0x1,
+	SCALAR_EXPRESSION_MUL = 0x2,
+	SCALAR_EXPRESSION_DIVIDE = 0x3,
+	SCALAR_EXPRESSION_INPUT_1 = 0x4,
+};
+
+// Aligment: 4
+// Size: 2
+enum class HitboxLerpType_t : uint32_t
+{
+	HITBOX_LERP_LIFETIME = 0x0,
+	HITBOX_LERP_CONSTANT = 0x1,
+};
+
+// Aligment: 4
+// Size: 6
+enum class ParticleOrientationChoiceList_t : uint32_t
+{
+	PARTICLE_ORIENTATION_SCREEN_ALIGNED = 0x0,
+	PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED = 0x1,
+	PARTICLE_ORIENTATION_WORLD_Z_ALIGNED = 0x2,
+	PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL = 0x3,
+	PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL = 0x4,
+	PARTICLE_ORIENTATION_FULL_3AXIS_ROTATION = 0x5,
+};
+
+// Aligment: 4
+// Size: 2
+enum class BlurFilterType_t : uint32_t
+{
+	BLURFILTER_GAUSSIAN = 0x0,
+	BLURFILTER_BOX = 0x1,
+};
+
+// Aligment: 4
+// Size: 3
+enum class ParticleLightTypeChoiceList_t : uint32_t
+{
+	PARTICLE_LIGHT_TYPE_POINT = 0x0,
+	PARTICLE_LIGHT_TYPE_SPOT = 0x1,
+	PARTICLE_LIGHT_TYPE_FX = 0x2,
+};
+
+// Aligment: 4
+// Size: 3
+enum class ParticleDepthFeatheringMode_t : uint32_t
+{
+	PARTICLE_DEPTH_FEATHERING_OFF = 0x0,
+	PARTICLE_DEPTH_FEATHERING_ON_OPTIONAL = 0x1,
+	PARTICLE_DEPTH_FEATHERING_ON_REQUIRED = 0x2,
+};
+
+// Aligment: 4
+// Size: 12
+enum class ParticleFloatType_t : uint32_t
+{
+	PF_TYPE_INVALID = 0xffffffffffffffff,
+	PF_TYPE_LITERAL = 0x0,
+	PF_TYPE_RANDOM_UNIFORM = 0x1,
+	PF_TYPE_RANDOM_BIASED = 0x2,
+	PF_TYPE_COLLECTION_AGE = 0x3,
+	PF_TYPE_CONTROL_POINT_COMPONENT = 0x4,
+	PF_TYPE_PARTICLE_AGE = 0x5,
+	PF_TYPE_PARTICLE_AGE_NORMALIZED = 0x6,
+	PF_TYPE_PARTICLE_FLOAT = 0x7,
+	PF_TYPE_PARTICLE_VECTOR_COMPONENT = 0x8,
+	PF_TYPE_PARTICLE_SPEED = 0x9,
+	PF_TYPE_COUNT = 0xa,
+};
+
+// Aligment: 4
+// Size: 5
+enum class ParticleFloatBiasType_t : uint32_t
+{
+	PF_BIAS_TYPE_INVALID = 0xffffffffffffffff,
+	PF_BIAS_TYPE_STANDARD = 0x0,
+	PF_BIAS_TYPE_GAIN = 0x1,
+	PF_BIAS_TYPE_EXPONENTIAL = 0x2,
+	PF_BIAS_TYPE_COUNT = 0x3,
+};
+
+// Aligment: 4
+// Size: 4
+enum class ParticleFloatRandomMode_t : uint32_t
+{
+	PF_RANDOM_MODE_INVALID = 0xffffffffffffffff,
+	PF_RANDOM_MODE_CONSTANT = 0x0,
+	PF_RANDOM_MODE_VARYING = 0x1,
+	PF_RANDOM_MODE_COUNT = 0x2,
+};
+
+// Aligment: 4
+// Size: 7
+enum class ParticleFloatMapType_t : uint32_t
+{
+	PF_MAP_TYPE_INVALID = 0xffffffffffffffff,
+	PF_MAP_TYPE_DIRECT = 0x0,
+	PF_MAP_TYPE_MULT = 0x1,
+	PF_MAP_TYPE_REMAP = 0x2,
+	PF_MAP_TYPE_REMAP_BIASED = 0x3,
+	PF_MAP_TYPE_CURVE = 0x4,
+	PF_MAP_TYPE_COUNT = 0x5,
+};
 
 // Aligment: 0
 // Size: 320

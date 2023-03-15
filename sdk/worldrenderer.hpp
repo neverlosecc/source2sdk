@@ -5,8 +5,57 @@
 ///////////////////////////////////////////
 // Binary: worldrenderer.dll
 // Class Count: 28
-// Enum Count: 0
+// Enum Count: 5
 ///////////////////////////////////////////
+
+// Aligment: 4
+// Size: 1
+enum class EntityLumpFlags_t : uint32_t
+{
+	ENTITY_LUMP_NONE = 0x0,
+};
+
+// Aligment: 4
+// Size: 10
+enum class ObjectTypeFlags_t : uint32_t
+{
+	OBJECT_TYPE_IMAGE_LOD = 0x1,
+	OBJECT_TYPE_GEOMETRY_LOD = 0x2,
+	OBJECT_TYPE_DECAL = 0x4,
+	OBJECT_TYPE_MODEL = 0x8,
+	OBJECT_TYPE_BLOCK_LIGHT = 0x10,
+	OBJECT_TYPE_NO_SHADOWS = 0x20,
+	OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND = 0x40,
+	OBJECT_TYPE_DISABLED_IN_LOW_QUALITY = 0x80,
+	OBJECT_TYPE_NO_SUN_SHADOWS = 0x100,
+	OBJECT_TYPE_EXCLUDE_FROM_IMPOSTORS = 0x200,
+};
+
+// Aligment: 4
+// Size: 2
+enum class voxel_vis_compression_t : uint32_t
+{
+	VOXVIS_COMPRESS_RAW = 0x0,
+	VOXVIS_COMPRESS_RLE = 0x1,
+};
+
+// Aligment: 4
+// Size: 2
+enum class IrradVolumeFlags_t : uint32_t
+{
+	IRRADVOLUME_FLAGS_NONE = 0x0,
+	IRRADVOLUME_FLAG_AUTO_GENERATED = 0x1,
+};
+
+// Aligment: 4
+// Size: 4
+enum class GlobalIlluminationMethod_t : uint32_t
+{
+	GLOBAL_ILLUMINATION_NONE = 0x0,
+	GLOBAL_ILLUMINATION_BAKE = 0x1,
+	GLOBAL_ILLUMINATION_AMBIENT_OCCLUSION = 0x2,
+	GLOBAL_ILLUMINATION_REALTIME_RADIOSITY = 0x3,
+};
 
 // Aligment: 7
 // Size: 28

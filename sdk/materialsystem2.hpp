@@ -5,8 +5,55 @@
 ///////////////////////////////////////////
 // Binary: materialsystem2.dll
 // Class Count: 13
-// Enum Count: 0
+// Enum Count: 5
 ///////////////////////////////////////////
+
+// Aligment: 4
+// Size: 4
+enum class HorizJustification_e : uint32_t
+{
+	HORIZ_JUSTIFICATION_LEFT = 0x0,
+	HORIZ_JUSTIFICATION_CENTER = 0x1,
+	HORIZ_JUSTIFICATION_RIGHT = 0x2,
+	HORIZ_JUSTIFICATION_NONE = 0x3,
+};
+
+// Aligment: 4
+// Size: 4
+enum class VertJustification_e : uint32_t
+{
+	VERT_JUSTIFICATION_TOP = 0x0,
+	VERT_JUSTIFICATION_CENTER = 0x1,
+	VERT_JUSTIFICATION_BOTTOM = 0x2,
+	VERT_JUSTIFICATION_NONE = 0x3,
+};
+
+// Aligment: 4
+// Size: 3
+enum class LayoutPositionType_e : uint32_t
+{
+	LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE = 0x0,
+	LAYOUTPOSITIONTYPE_FRACTIONAL = 0x1,
+	LAYOUTPOSITIONTYPE_NONE = 0x2,
+};
+
+// Aligment: 4
+// Size: 3
+enum class BloomBlendMode_t : uint32_t
+{
+	BLOOM_BLEND_ADD = 0x0,
+	BLOOM_BLEND_SCREEN = 0x1,
+	BLOOM_BLEND_BLUR = 0x2,
+};
+
+// Aligment: 4
+// Size: 3
+enum class ViewFadeMode_t : uint32_t
+{
+	VIEW_FADE_CONSTANT_COLOR = 0x0,
+	VIEW_FADE_MODULATE = 0x1,
+	VIEW_FADE_MOD2X = 0x2,
+};
 
 // Aligment: 1
 // Size: 4

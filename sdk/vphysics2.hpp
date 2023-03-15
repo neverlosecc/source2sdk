@@ -5,8 +5,27 @@
 ///////////////////////////////////////////
 // Binary: vphysics2.dll
 // Class Count: 21
-// Enum Count: 0
+// Enum Count: 2
 ///////////////////////////////////////////
+
+// Aligment: 4
+// Size: 4
+enum class JointAxis_t : uint32_t
+{
+	JOINT_AXIS_X = 0x0,
+	JOINT_AXIS_Y = 0x1,
+	JOINT_AXIS_Z = 0x2,
+	JOINT_AXIS_COUNT = 0x3,
+};
+
+// Aligment: 4
+// Size: 3
+enum class JointMotion_t : uint32_t
+{
+	JOINT_MOTION_FREE = 0x0,
+	JOINT_MOTION_LOCKED = 0x1,
+	JOINT_MOTION_COUNT = 0x2,
+};
 
 // Aligment: 1
 // Size: 104

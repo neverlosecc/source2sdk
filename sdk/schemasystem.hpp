@@ -5,8 +5,30 @@
 ///////////////////////////////////////////
 // Binary: schemasystem.dll
 // Class Count: 2
-// Enum Count: 0
+// Enum Count: 2
 ///////////////////////////////////////////
+
+// Aligment: 4
+// Size: 7
+enum class ResourceStructFlags_t : uint32_t
+{
+	STRUCT_HAS_VTABLE = 0x1,
+	STRUCT_TREE_REQUIRES_SCATTER = 0x2,
+	STRUCT_TREE_REQUIRES_CONSTRUCTOR = 0x4,
+	STRUCT_TREE_REQUIRES_DESTRUCTOR = 0x8,
+	STRUCT_TREE_REQUIRES_EXT_REFERENCES = 0x10,
+	STRUCT_TREE_REQUIRES_UNUSED = 0x20,
+	STRUCT_FLAGS_MAX = 0x20,
+};
+
+// Aligment: 4
+// Size: 3
+enum class ThreeState_t : uint32_t
+{
+	TRS_FALSE = 0x0,
+	TRS_TRUE = 0x1,
+	TRS_NONE = 0x2,
+};
 
 // Aligment: 18
 // Size: 336

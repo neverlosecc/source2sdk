@@ -5,8 +5,27 @@
 ///////////////////////////////////////////
 // Binary: resourcesystem.dll
 // Class Count: 89
-// Enum Count: 0
+// Enum Count: 2
 ///////////////////////////////////////////
+
+// Aligment: 4
+// Size: 6
+enum class LightType_t : uint32_t
+{
+	MATERIAL_LIGHT_DISABLE = 0x0,
+	MATERIAL_LIGHT_POINT = 0x1,
+	MATERIAL_LIGHT_DIRECTIONAL = 0x2,
+	MATERIAL_LIGHT_SPOT = 0x3,
+	MATERIAL_LIGHT_ORTHO = 0x4,
+	MATERIAL_LIGHT_ENVIRONMENT_PROBE = 0x5,
+};
+
+// Aligment: 4
+// Size: 1
+enum class LightSourceShape_t : uint32_t
+{
+	LIGHT_SOURCE_SHAPE_SPHERE = 0x0,
+};
 
 // Aligment: 0
 // Size: 1

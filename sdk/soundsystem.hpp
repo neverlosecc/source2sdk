@@ -5,8 +5,53 @@
 ///////////////////////////////////////////
 // Binary: soundsystem.dll
 // Class Count: 12
-// Enum Count: 0
+// Enum Count: 5
 ///////////////////////////////////////////
+
+// Aligment: 4
+// Size: 2
+enum class ActionType_t : uint32_t
+{
+	SOS_ACTION_NONE = 0x0,
+	SOS_ACTION_LIMITER = 0x1,
+};
+
+// Aligment: 4
+// Size: 3
+enum class SosActionStopType_t : uint32_t
+{
+	SOS_STOPTYPE_NONE = 0x0,
+	SOS_STOPTYPE_TIME = 0x1,
+	SOS_STOPTYPE_OPVAR = 0x2,
+};
+
+// Aligment: 4
+// Size: 2
+enum class SosActionSortType_t : uint32_t
+{
+	SOS_SORTTYPE_HIGHEST = 0x0,
+	SOS_SORTTYPE_LOWEST = 0x1,
+};
+
+// Aligment: 4
+// Size: 2
+enum class SosGroupType_t : uint32_t
+{
+	SOS_GROUPTYPE_DYNAMIC = 0x0,
+	SOS_GROUPTYPE_STATIC = 0x1,
+};
+
+// Aligment: 4
+// Size: 6
+enum class SosEditItemType_t : uint32_t
+{
+	SOS_EDIT_ITEM_TYPE_SOUNDEVENTS = 0x0,
+	SOS_EDIT_ITEM_TYPE_SOUNDEVENT = 0x1,
+	SOS_EDIT_ITEM_TYPE_LIBRARYSTACKS = 0x2,
+	SOS_EDIT_ITEM_TYPE_STACK = 0x3,
+	SOS_EDIT_ITEM_TYPE_OPERATOR = 0x4,
+	SOS_EDIT_ITEM_TYPE_FIELD = 0x5,
+};
 
 // Aligment: 3
 // Size: 24

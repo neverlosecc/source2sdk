@@ -5,8 +5,443 @@
 ///////////////////////////////////////////
 // Binary: animationsystem.dll
 // Class Count: 136
-// Enum Count: 0
+// Enum Count: 27
 ///////////////////////////////////////////
+
+// Aligment: 4
+// Size: 6
+enum class AnimationProcessingType_t : uint32_t
+{
+	ANIMATION_PROCESSING_SERVER_SIMULATION = 0x0,
+	ANIMATION_PROCESSING_CLIENT_SIMULATION = 0x1,
+	ANIMATION_PROCESSING_CLIENT_PREDICTION = 0x2,
+	ANIMATION_PROCESSING_CLIENT_INTERPOLATION = 0x3,
+	ANIMATION_PROCESSING_CLIENT_RENDER = 0x4,
+	ANIMATION_PROCESSING_MAX = 0x5,
+};
+
+// Aligment: 4
+// Size: 7
+enum class AnimationSnapshotType_t : uint32_t
+{
+	ANIMATION_SNAPSHOT_SERVER_SIMULATION = 0x0,
+	ANIMATION_SNAPSHOT_CLIENT_SIMULATION = 0x1,
+	ANIMATION_SNAPSHOT_CLIENT_PREDICTION = 0x2,
+	ANIMATION_SNAPSHOT_CLIENT_INTERPOLATION = 0x3,
+	ANIMATION_SNAPSHOT_CLIENT_RENDER = 0x4,
+	ANIMATION_SNAPSHOT_FINAL_COMPOSITE = 0x5,
+	ANIMATION_SNAPSHOT_MAX = 0x6,
+};
+
+// Aligment: 4
+// Size: 17
+enum class SeqResourceCmdEnum : uint32_t
+{
+	SEQ_CMD_Nop = 0x0,
+	SEQ_CMD_LinearDelta = 0x1,
+	SEQ_CMD_FetchFrameRange = 0x2,
+	SEQ_CMD_Slerp = 0x3,
+	SEQ_CMD_Add = 0x4,
+	SEQ_CMD_Subtract = 0x5,
+	SEQ_CMD_Scale = 0x6,
+	SEQ_CMD_Copy = 0x7,
+	SEQ_CMD_Blend = 0x8,
+	SEQ_CMD_Worldspace = 0x9,
+	SEQ_CMD_Sequence = 0xa,
+	SEQ_CMD_FetchCycle = 0xb,
+	SEQ_CMD_FetchFrame = 0xc,
+	SEQ_CMD_IKLockInPlace = 0xd,
+	SEQ_CMD_IKRestoreAll = 0xe,
+	SEQ_CMD_ReverseSequence = 0xf,
+	SEQ_CMD_Transform = 0x10,
+};
+
+// Aligment: 4
+// Size: 4
+enum class SeqResourcePoseSettingEnum : uint32_t
+{
+	SEQ_POSE_CONSTANT = 0x0,
+	SEQ_POSE_ROTATION = 0x1,
+	SEQ_POSE_POSITION = 0x2,
+	SEQ_POSE_VELOCITY = 0x3,
+};
+
+// Aligment: 1
+// Size: 64
+enum class fieldtype_t : uint8_t
+{
+	FIELD_VOID = 0,
+	FIELD_FLOAT32 = 1,
+	FIELD_STRING = 2,
+	FIELD_VECTOR = 3,
+	FIELD_QUATERNION = 4,
+	FIELD_INT32 = 5,
+	FIELD_BOOLEAN = 6,
+	FIELD_INT16 = 7,
+	FIELD_CHARACTER = 8,
+	FIELD_COLOR32 = 9,
+	FIELD_EMBEDDED = 10,
+	FIELD_CUSTOM = 11,
+	FIELD_CLASSPTR = 12,
+	FIELD_EHANDLE = 13,
+	FIELD_POSITION_VECTOR = 14,
+	FIELD_TIME = 15,
+	FIELD_TICK = 16,
+	FIELD_SOUNDNAME = 17,
+	FIELD_INPUT = 18,
+	FIELD_FUNCTION = 19,
+	FIELD_VMATRIX = 20,
+	FIELD_VMATRIX_WORLDSPACE = 21,
+	FIELD_MATRIX3X4_WORLDSPACE = 22,
+	FIELD_INTERVAL = 23,
+	FIELD_UNUSED = 24,
+	FIELD_VECTOR2D = 25,
+	FIELD_INT64 = 26,
+	FIELD_VECTOR4D = 27,
+	FIELD_RESOURCE = 28,
+	FIELD_TYPEUNKNOWN = 29,
+	FIELD_CSTRING = 30,
+	FIELD_HSCRIPT = 31,
+	FIELD_VARIANT = 32,
+	FIELD_UINT64 = 33,
+	FIELD_FLOAT64 = 34,
+	FIELD_POSITIVEINTEGER_OR_NULL = 35,
+	FIELD_HSCRIPT_NEW_INSTANCE = 36,
+	FIELD_UINT32 = 37,
+	FIELD_UTLSTRINGTOKEN = 38,
+	FIELD_QANGLE = 39,
+	FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTOR = 40,
+	FIELD_HMATERIAL = 41,
+	FIELD_HMODEL = 42,
+	FIELD_NETWORK_QUANTIZED_VECTOR = 43,
+	FIELD_NETWORK_QUANTIZED_FLOAT = 44,
+	FIELD_DIRECTION_VECTOR_WORLDSPACE = 45,
+	FIELD_QANGLE_WORLDSPACE = 46,
+	FIELD_QUATERNION_WORLDSPACE = 47,
+	FIELD_HSCRIPT_LIGHTBINDING = 48,
+	FIELD_V8_VALUE = 49,
+	FIELD_V8_OBJECT = 50,
+	FIELD_V8_ARRAY = 51,
+	FIELD_V8_CALLBACK_INFO = 52,
+	FIELD_UTLSTRING = 53,
+	FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_POSITION_VECTOR = 54,
+	FIELD_HRENDERTEXTURE = 55,
+	FIELD_HPARTICLESYSTEMDEFINITION = 56,
+	FIELD_UINT8 = 57,
+	FIELD_UINT16 = 58,
+	FIELD_CTRANSFORM = 59,
+	FIELD_CTRANSFORM_WORLDSPACE = 60,
+	FIELD_HPOSTPROCESSING = 61,
+	FIELD_MATRIX3X4 = 62,
+	FIELD_TYPECOUNT = 63,
+};
+
+// Aligment: 4
+// Size: 13
+enum class AnimParamButton_t : uint32_t
+{
+	ANIMPARAM_BUTTON_NONE = 0x0,
+	ANIMPARAM_BUTTON_DPAD_UP = 0x1,
+	ANIMPARAM_BUTTON_DPAD_RIGHT = 0x2,
+	ANIMPARAM_BUTTON_DPAD_DOWN = 0x3,
+	ANIMPARAM_BUTTON_DPAD_LEFT = 0x4,
+	ANIMPARAM_BUTTON_A = 0x5,
+	ANIMPARAM_BUTTON_B = 0x6,
+	ANIMPARAM_BUTTON_X = 0x7,
+	ANIMPARAM_BUTTON_Y = 0x8,
+	ANIMPARAM_BUTTON_LEFT_SHOULDER = 0x9,
+	ANIMPARAM_BUTTON_RIGHT_SHOULDER = 0xa,
+	ANIMPARAM_BUTTON_LTRIGGER = 0xb,
+	ANIMPARAM_BUTTON_RTRIGGER = 0xc,
+};
+
+// Aligment: 4
+// Size: 2
+enum class AnimNodeNetworkMode : uint32_t
+{
+	ServerAuthoritative = 0x0,
+	ClientSimulate = 0x1,
+};
+
+// Aligment: 4
+// Size: 2
+enum class AnimVRHandMotionRange_t : uint32_t
+{
+	MotionRange_WithController = 0x0,
+	MotionRange_WithoutController = 0x1,
+};
+
+// Aligment: 4
+// Size: 4
+enum class AnimVrFingerSplay_t : uint32_t
+{
+	AnimVrFingerSplay_Thumb_Index = 0x0,
+	AnimVrFingerSplay_Index_Middle = 0x1,
+	AnimVrFingerSplay_Middle_Ring = 0x2,
+	AnimVrFingerSplay_Ring_Pinky = 0x3,
+};
+
+// Aligment: 4
+// Size: 32
+enum class AnimValueSource : uint32_t
+{
+	MoveHeading = 0x0,
+	MoveSpeed = 0x1,
+	ForwardSpeed = 0x2,
+	StrafeSpeed = 0x3,
+	FacingHeading = 0x4,
+	LookHeading = 0x5,
+	LookPitch = 0x6,
+	Parameter = 0x7,
+	WayPointHeading = 0x8,
+	WayPointFacing = 0x9,
+	WayPointDistance = 0xa,
+	TargetMoveHeading = 0xb,
+	TargetMoveSpeed = 0xc,
+	AccelerationHeading = 0xd,
+	AccelerationSpeed = 0xe,
+	SlopeHeading = 0xf,
+	SlopeAngle = 0x10,
+	GoalDistance = 0x11,
+	AccelerationLeftRight = 0x12,
+	AccelerationFrontBack = 0x13,
+	RootMotionSpeed = 0x14,
+	RootMotionTurnSpeed = 0x15,
+	MoveHeadingRelativeToLookHeading = 0x16,
+	FingerCurl_Thumb = 0x17,
+	FingerCurl_Index = 0x18,
+	FingerCurl_Middle = 0x19,
+	FingerCurl_Ring = 0x1a,
+	FingerCurl_Pinky = 0x1b,
+	FingerSplay_Thumb_Index = 0x1c,
+	FingerSplay_Index_Middle = 0x1d,
+	FingerSplay_Middle_Ring = 0x1e,
+	FingerSplay_Ring_Pinky = 0x1f,
+};
+
+// Aligment: 4
+// Size: 13
+enum class AnimVectorSource : uint32_t
+{
+	MoveDirection = 0x0,
+	FacingDirection = 0x1,
+	LookDirection = 0x2,
+	VectorParameter = 0x3,
+	WayPointDirection = 0x4,
+	WayPointFacingDirection = 0x5,
+	TargetMoveDirection = 0x6,
+	Acceleration = 0x7,
+	SlopeNormal = 0x8,
+	LookTarget = 0x9,
+	WayPointPosition = 0xa,
+	GoalPosition = 0xb,
+	GoalFacingDirection = 0xc,
+};
+
+// Aligment: 4
+// Size: 3
+enum class DampingSpeedFunction : uint32_t
+{
+	NoDamping = 0x0,
+	Constant = 0x1,
+	Spring = 0x2,
+};
+
+// Aligment: 4
+// Size: 38
+enum class ControlValue : uint32_t
+{
+	ControlValue_MoveHeading = 0x0,
+	ControlValue_MoveSpeed = 0x1,
+	ControlValue_FacingHeading = 0x2,
+	ControlValue_LookHeading = 0x3,
+	ControlValue_LookPitch = 0x4,
+	ControlValue_WayPointHeading = 0x5,
+	ControlValue_WayPointFacing = 0x6,
+	ControlValue_WayPointDistance = 0x7,
+	ControlValue_TotalTranslation_SourceState = 0x8,
+	ControlValue_TotalTranslation_TargetState = 0x9,
+	ControlValue_RemainingTranslation_SourceState = 0xa,
+	ControlValue_RemainingTranslation_TargetState = 0xb,
+	ControlValue_MoveVsFacingDelta = 0xc,
+	ControlValue_SourceStateBlendWeight = 0xd,
+	ControlValue_TargetStateBlendWeight = 0xe,
+	ControlValue_TargetMoveHeading = 0xf,
+	ControlValue_TargetMoveSpeed = 0x10,
+	ControlValue_AccelerationHeading = 0x11,
+	ControlValue_AccelerationSpeed = 0x12,
+	ControlValue_SlopeHeading = 0x13,
+	ControlValue_SlopeAngle = 0x14,
+	ControlValue_GoalDistance = 0x15,
+	ControlValue_AccelerationLeftRight = 0x16,
+	ControlValue_AccelerationFrontBack = 0x17,
+	ControlValue_RootMotionSpeed = 0x18,
+	ControlValue_RootMotionTurnSpeed = 0x19,
+	ControlValue_MoveHeadingRelativeToLookHeading = 0x1a,
+	ControlValue_FingerCurl_Thumb = 0x1b,
+	ControlValue_FingerCurl_Index = 0x1c,
+	ControlValue_FingerCurl_Middle = 0x1d,
+	ControlValue_FingerCurl_Ring = 0x1e,
+	ControlValue_FingerCurl_Pinky = 0x1f,
+	ControlValue_FingerSplay_Thumb_Index = 0x20,
+	ControlValue_FingerSplay_Index_Middle = 0x21,
+	ControlValue_FingerSplay_Middle_Ring = 0x22,
+	ControlValue_FingerSplay_Ring_Pinky = 0x23,
+	ControlValue_Count = 0x24,
+	ControlValue_Invalid = 0xff,
+};
+
+// Aligment: 4
+// Size: 2
+enum class AimMatrixBlendMode : uint32_t
+{
+	AimMatrixBlendMode_Additive = 0x0,
+	AimMatrixBlendMode_BoneMask = 0x1,
+};
+
+// Aligment: 4
+// Size: 24
+enum class CGroundIKSolveAnimNode::DebugSkeletonBoneType_t : uint32_t
+{
+	CGroundIKSolveAnimNode::FLAG_NO_BONE_FLAGS = 0x0,
+	CGroundIKSolveAnimNode::FLAG_BONEFLEXDRIVER = 0x4,
+	CGroundIKSolveAnimNode::FLAG_CLOTH = 0x8,
+	CGroundIKSolveAnimNode::FLAG_PHYSICS = 0x10,
+	CGroundIKSolveAnimNode::FLAG_ATTACHMENT = 0x20,
+	CGroundIKSolveAnimNode::FLAG_ANIMATION = 0x40,
+	CGroundIKSolveAnimNode::FLAG_MESH = 0x80,
+	CGroundIKSolveAnimNode::FLAG_HITBOX = 0x100,
+	CGroundIKSolveAnimNode::FLAG_RETARGET_SRC = 0x200,
+	CGroundIKSolveAnimNode::FLAG_BONE_USED_BY_VERTEX_LOD0 = 0x400,
+	CGroundIKSolveAnimNode::FLAG_BONE_USED_BY_VERTEX_LOD1 = 0x800,
+	CGroundIKSolveAnimNode::FLAG_BONE_USED_BY_VERTEX_LOD2 = 0x1000,
+	CGroundIKSolveAnimNode::FLAG_BONE_USED_BY_VERTEX_LOD3 = 0x2000,
+	CGroundIKSolveAnimNode::FLAG_BONE_USED_BY_VERTEX_LOD4 = 0x4000,
+	CGroundIKSolveAnimNode::FLAG_BONE_USED_BY_VERTEX_LOD5 = 0x8000,
+	CGroundIKSolveAnimNode::FLAG_BONE_USED_BY_VERTEX_LOD6 = 0x10000,
+	CGroundIKSolveAnimNode::FLAG_BONE_USED_BY_VERTEX_LOD7 = 0x20000,
+	CGroundIKSolveAnimNode::FLAG_BONE_MERGE_READ = 0x40000,
+	CGroundIKSolveAnimNode::FLAG_BONE_MERGE_WRITE = 0x80000,
+	CGroundIKSolveAnimNode::BLEND_PREALIGNED = 0x100000,
+	CGroundIKSolveAnimNode::FLAG_RIGIDLENGTH = 0x200000,
+	CGroundIKSolveAnimNode::FLAG_PROCEDURAL = 0x400000,
+	CGroundIKSolveAnimNode::FLAG_IK = 0x800000,
+	CGroundIKSolveAnimNode::FLAG_ALL_BONE_FLAGS = 0xffffff,
+};
+
+// Aligment: 4
+// Size: 2
+enum class SelectionSource_t : uint32_t
+{
+	SelectionSource_Bool = 0x0,
+	SelectionSource_Enum = 0x1,
+};
+
+// Aligment: 4
+// Size: 8
+enum class FootFallTagFoot_t : uint32_t
+{
+	FOOT1 = 0x0,
+	FOOT2 = 0x1,
+	FOOT3 = 0x2,
+	FOOT4 = 0x3,
+	FOOT5 = 0x4,
+	FOOT6 = 0x5,
+	FOOT7 = 0x6,
+	FOOT8 = 0x7,
+};
+
+// Aligment: 4
+// Size: 4
+enum class BlendKeyType : uint32_t
+{
+	BlendKey_UserValue = 0x0,
+	BlendKey_Velocity = 0x1,
+	BlendKey_Distance = 0x2,
+	BlendKey_RemainingDistance = 0x3,
+};
+
+// Aligment: 4
+// Size: 4
+enum class ResetCycleOption : uint32_t
+{
+	Beginning = 0x0,
+	SameCycleAsSource = 0x1,
+	InverseSourceCycle = 0x2,
+	FixedValue = 0x3,
+};
+
+// Aligment: 4
+// Size: 4
+enum class ChoiceMethod : uint32_t
+{
+	WeightedRandom = 0x0,
+	WeightedRandomNoRepeat = 0x1,
+	Iterate = 0x2,
+	IterateRandom = 0x3,
+};
+
+// Aligment: 4
+// Size: 3
+enum class ChoiceChangeMethod : uint32_t
+{
+	OnReset = 0x0,
+	OnCycleEnd = 0x1,
+	OnResetOrCycleEnd = 0x2,
+};
+
+// Aligment: 4
+// Size: 3
+enum class GroundIKTiltSource_t : uint32_t
+{
+	TILT_None = 0x0,
+	TILT_IK = 0x1,
+	TILT_MovementManagerSlope = 0x2,
+};
+
+// Aligment: 4
+// Size: 3
+enum class BinaryNodeTiming : uint32_t
+{
+	UseChild1 = 0x0,
+	UseChild2 = 0x1,
+	SyncChildren = 0x2,
+};
+
+// Aligment: 4
+// Size: 3
+enum class SelectorTagBehaior_t : uint32_t
+{
+	SelectorTagBehavior_OnWhileCurrent = 0x0,
+	SelectorTagBehavior_OffWhenFinished = 0x1,
+	SelectorTagBehavior_OffBeforeFinished = 0x2,
+};
+
+// Aligment: 4
+// Size: 2
+enum class Blend2DMode : uint32_t
+{
+	Blend2DMode_General = 0x0,
+	Blend2DMode_Directional = 0x1,
+};
+
+// Aligment: 4
+// Size: 3
+enum class PathStatusOptions : uint32_t
+{
+	PathStatus_HasPath = 0x0,
+	PathStatus_WaypointIsGoal = 0x1,
+	PathStatus_GoalHasChanged = 0x2,
+};
+
+// Aligment: 4
+// Size: 3
+enum class BoneMaskBlendSpace : uint32_t
+{
+	BlendSpace_Parent = 0x0,
+	BlendSpace_Model = 0x1,
+	BlendSpace_Model_RotationOnly = 0x2,
+};
 
 // Aligment: 6
 // Size: 112

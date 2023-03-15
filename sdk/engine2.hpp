@@ -5,8 +5,270 @@
 ///////////////////////////////////////////
 // Binary: engine2.dll
 // Class Count: 127
-// Enum Count: 0
+// Enum Count: 22
 ///////////////////////////////////////////
+
+// Aligment: 4
+// Size: 8
+enum class SignonState_t : uint32_t
+{
+	SIGNONSTATE_NONE = 0x0,
+	SIGNONSTATE_CHALLENGE = 0x1,
+	SIGNONSTATE_CONNECTED = 0x2,
+	SIGNONSTATE_NEW = 0x3,
+	SIGNONSTATE_PRESPAWN = 0x4,
+	SIGNONSTATE_SPAWN = 0x5,
+	SIGNONSTATE_FULL = 0x6,
+	SIGNONSTATE_CHANGELEVEL = 0x7,
+};
+
+// Aligment: 4
+// Size: 5
+enum class VPhysXBodyPart_t::VPhysXFlagEnum_t : uint32_t
+{
+	VPhysXBodyPart_t::FLAG_STATIC = 0x1,
+	VPhysXBodyPart_t::FLAG_KINEMATIC = 0x2,
+	VPhysXBodyPart_t::FLAG_JOINT = 0x4,
+	VPhysXBodyPart_t::FLAG_MASS = 0x8,
+	VPhysXBodyPart_t::FLAG_ALWAYS_DYNAMIC_ON_CLIENT = 0x10,
+};
+
+// Aligment: 4
+// Size: 4
+enum class VPhysXConstraintParams_t::EnumFlags0_t : uint32_t
+{
+	VPhysXConstraintParams_t::FLAG0_SHIFT_INTERPENETRATE = 0x0,
+	VPhysXConstraintParams_t::FLAG0_SHIFT_CONSTRAIN = 0x1,
+	VPhysXConstraintParams_t::FLAG0_SHIFT_BREAKABLE_FORCE = 0x2,
+	VPhysXConstraintParams_t::FLAG0_SHIFT_BREAKABLE_TORQUE = 0x3,
+};
+
+// Aligment: 4
+// Size: 2
+enum class VPhysXJoint_t::Flags_t : uint32_t
+{
+	VPhysXJoint_t::JOINT_FLAGS_NONE = 0x0,
+	VPhysXJoint_t::JOINT_FLAGS_BODY1_FIXED = 0x1,
+};
+
+// Aligment: 4
+// Size: 3
+enum class VPhysXAggregateData_t::VPhysXFlagEnum_t : uint32_t
+{
+	VPhysXAggregateData_t::FLAG_IS_POLYSOUP_GEOMETRY = 0x1,
+	VPhysXAggregateData_t::FLAG_LEVEL_COLLISION = 0x10,
+	VPhysXAggregateData_t::FLAG_IGNORE_SCALE = 0x20,
+};
+
+// Aligment: 4
+// Size: 1
+enum class VPhysXDiskShapeHeader_t::VersinEnum_t : uint32_t
+{
+	VPhysXDiskShapeHeader_t::VERSION = 0x81,
+};
+
+// Aligment: 4
+// Size: 3
+enum class MeshTranslucencyType_t : uint32_t
+{
+	MESH_TRANSLUCENCY_FULLY_OPAQUE = 0x0,
+	MESH_TRANSLUCENCY_PARTIALLY_ALPHA_BLENDED = 0x1,
+	MESH_TRANSLUCENCY_FULLY_ALPHA_BLENDED = 0x2,
+};
+
+// Aligment: 4
+// Size: 10
+enum class MeshDrawPrimitiveFlags_t : uint32_t
+{
+	MESH_DRAW_FLAGS_NONE = 0x0,
+	MESH_DRAW_FLAGS_USE_SHADOW_FAST_PATH = 0x1,
+	MESH_DRAW_FLAGS_USE_COMPRESSED_NORMAL_TANGENT = 0x2,
+	MESH_DRAW_FLAGS_IS_OCCLUDER = 0x4,
+	MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL = 0x8,
+	MESH_DRAW_FLAGS_USE_COMPRESSED_PER_VERTEX_LIGHTING = 0x10,
+	MESH_DRAW_FLAGS_USE_UNCOMPRESSED_PER_VERTEX_LIGHTING = 0x20,
+	MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS = 0x40,
+	MESH_DRAW_FLAGS_DRAW_LAST = 0x80,
+	MESH_DRAW_FLAGS_HAS_LIGHTING_BASIS = 0x100,
+};
+
+// Aligment: 4
+// Size: 2
+enum class RenderSkeletonData_t::FlagEnum_t : uint32_t
+{
+	RenderSkeletonData_t::FLAG_BLEND_WEIGHT_COUNT_SHIFT = 0x0,
+	RenderSkeletonData_t::FLAG_BLEND_WEIGHT_COUNT_MASK = 0xf,
+};
+
+// Aligment: 4
+// Size: 2
+enum class AttachmentInfluenceFlags_t : uint32_t
+{
+	ATTACHMENT_INFLUENCE_FLAGS_NONE = 0x0,
+	ATTACHMENT_INFLUENCE_FLAGS_ROOT_TRANSFORM = 0x1,
+};
+
+// Aligment: 4
+// Size: 15
+enum class ConstraintType_t : uint32_t
+{
+	CONSTRAINT_TYPE_INVALID = 0x0,
+	CONSTRAINT_TYPE_HELPER_BONE = 0x1,
+	CONSTRAINT_TYPE_TWIST = 0x2,
+	CONSTRAINT_TYPE_AIM = 0x3,
+	CONSTRAINT_TYPE_POINT = 0x4,
+	CONSTRAINT_TYPE_ROTATION = 0x5,
+	CONSTRAINT_TYPE_ORIENT = 0x6,
+	CONSTRAINT_TYPE_2_BONE_IK = 0x7,
+	CONSTRAINT_TYPE_JIGGLE_BONE = 0x8,
+	CONSTRAINT_TYPE_TILT_TWIST = 0x9,
+	CONSTRAINT_TYPE_MORPH = 0xa,
+	CONSTRAINT_TYPE_PARENT = 0xb,
+	CONSTRAINT_TYPE_POSE_SPACE_MORPH = 0xc,
+	CONSTRAINT_TYPE_POSE_SPACE_BONE = 0xd,
+	CONSTRAINT_TYPE_MAX = 0xe,
+};
+
+// Aligment: 4
+// Size: 23
+enum class ModelSkeletonData_t::BoneFlags_t : uint32_t
+{
+	ModelSkeletonData_t::FLAG_NO_BONE_FLAGS = 0x0,
+	ModelSkeletonData_t::FLAG_BONEFLEXDRIVER = 0x4,
+	ModelSkeletonData_t::FLAG_CLOTH = 0x8,
+	ModelSkeletonData_t::FLAG_PHYSICS = 0x10,
+	ModelSkeletonData_t::FLAG_ATTACHMENT = 0x20,
+	ModelSkeletonData_t::FLAG_ANIMATION = 0x40,
+	ModelSkeletonData_t::FLAG_MESH = 0x80,
+	ModelSkeletonData_t::FLAG_HITBOX = 0x100,
+	ModelSkeletonData_t::FLAG_RETARGET_SRC = 0x200,
+	ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD0 = 0x400,
+	ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD1 = 0x800,
+	ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD2 = 0x1000,
+	ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD3 = 0x2000,
+	ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD4 = 0x4000,
+	ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD5 = 0x8000,
+	ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD6 = 0x10000,
+	ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD7 = 0x20000,
+	ModelSkeletonData_t::FLAG_BONE_MERGE_READ = 0x40000,
+	ModelSkeletonData_t::FLAG_BONE_MERGE_WRITE = 0x80000,
+	ModelSkeletonData_t::FLAG_ALL_BONE_FLAGS = 0xfffff,
+	ModelSkeletonData_t::BLEND_PREALIGNED = 0x100000,
+	ModelSkeletonData_t::FLAG_RIGIDLENGTH = 0x200000,
+	ModelSkeletonData_t::FLAG_PROCEDURAL = 0x400000,
+};
+
+// Aligment: 4
+// Size: 15
+enum class PermModelInfo_t::FlagEnum : uint32_t
+{
+	PermModelInfo_t::FLAG_TRANSLUCENT = 0x1,
+	PermModelInfo_t::FLAG_TRANSLUCENT_TWO_PASS = 0x2,
+	PermModelInfo_t::FLAG_MODEL_IS_RUNTIME_COMBINED = 0x4,
+	PermModelInfo_t::FLAG_SOURCE1_IMPORT = 0x8,
+	PermModelInfo_t::FLAG_MODEL_PART_CHILD = 0x10,
+	PermModelInfo_t::FLAG_NAV_GEN_NONE = 0x20,
+	PermModelInfo_t::FLAG_NAV_GEN_HULL = 0x40,
+	PermModelInfo_t::FLAG_NO_FORCED_FADE = 0x800,
+	PermModelInfo_t::FLAG_HAS_SKINNED_MESHES = 0x400,
+	PermModelInfo_t::FLAG_DO_NOT_CAST_SHADOWS = 0x20000,
+	PermModelInfo_t::FLAG_FORCE_PHONEME_CROSSFADE = 0x1000,
+	PermModelInfo_t::FLAG_NO_ANIM_EVENTS = 0x100000,
+	PermModelInfo_t::FLAG_ANIMATION_DRIVEN_FLEXES = 0x200000,
+	PermModelInfo_t::FLAG_IMPLICIT_BIND_POSE_SEQUENCE = 0x400000,
+	PermModelInfo_t::FLAG_MODEL_DOC = 0x800000,
+};
+
+// Aligment: 4
+// Size: 4
+enum class ModelBoneFlexComponent_t : uint32_t
+{
+	MODEL_BONE_FLEX_INVALID = 0xffffffffffffffff,
+	MODEL_BONE_FLEX_TX = 0x0,
+	MODEL_BONE_FLEX_TY = 0x1,
+	MODEL_BONE_FLEX_TZ = 0x2,
+};
+
+// Aligment: 4
+// Size: 4
+enum class RenderMeshFlexControllerRemapType_t : uint32_t
+{
+	FLEXCONTROLLER_REMAP_PASSTHRU = 0x0,
+	FLEXCONTROLLER_REMAP_2WAY = 0x1,
+	FLEXCONTROLLER_REMAP_NWAY = 0x2,
+	FLEXCONTROLLER_REMAP_EYELID = 0x3,
+};
+
+// Aligment: 4
+// Size: 4
+enum class BundleType_t : uint32_t
+{
+	BUNDLE_TYPE_NONE = 0x0,
+	BUNDLE_TYPE_POSITION_SPEED = 0x1,
+	BUNDLE_TYPE_NORMAL_WRINKLE = 0x2,
+	BUNDLE_TYPE_COUNT = 0x3,
+};
+
+// Aligment: 4
+// Size: 3
+enum class MorphSetData_t::LookupType_t : uint32_t
+{
+	MorphSetData_t::LOOKUP_TYPE_TEXCOORD = 0x0,
+	MorphSetData_t::LOOKUP_TYPE_VERTEX_ID = 0x1,
+	MorphSetData_t::LOOKUP_TYPE_COUNT = 0x2,
+};
+
+// Aligment: 4
+// Size: 3
+enum class MorphSetData_t::EncodingType_t : uint32_t
+{
+	MorphSetData_t::ENCODING_TYPE_OBJECT_SPACE = 0x0,
+	MorphSetData_t::ENCODING_TYPE_TANGENT_SPACE = 0x1,
+	MorphSetData_t::ENCODING_TYPE_COUNT = 0x2,
+};
+
+// Aligment: 4
+// Size: 2
+enum class AnimVRHand_t : uint32_t
+{
+	AnimVRHand_Left = 0x0,
+	AnimVRHand_Right = 0x1,
+};
+
+// Aligment: 4
+// Size: 5
+enum class AnimVRFinger_t : uint32_t
+{
+	AnimVrFinger_Thumb = 0x0,
+	AnimVrFinger_Index = 0x1,
+	AnimVrFinger_Middle = 0x2,
+	AnimVrFinger_Ring = 0x3,
+	AnimVrFinger_Pinky = 0x4,
+};
+
+// Aligment: 4
+// Size: 3
+enum class EntityDormancyType_t : uint32_t
+{
+	ENTITY_NOT_DORMANT = 0x0,
+	ENTITY_DORMANT = 0x1,
+	ENTITY_SUSPENDED = 0x2,
+};
+
+// Aligment: 4
+// Size: 9
+enum class EntityIOTargetType_t : uint32_t
+{
+	ENTITY_IO_TARGET_INVALID = 0xffffffffffffffff,
+	ENTITY_IO_TARGET_CLASSNAME = 0x0,
+	ENTITY_IO_TARGET_CLASSNAME_DERIVES_FROM = 0x1,
+	ENTITY_IO_TARGET_ENTITYNAME = 0x2,
+	ENTITY_IO_TARGET_CONTAINS_COMPONENT = 0x3,
+	ENTITY_IO_TARGET_SPECIAL_ACTIVATOR = 0x4,
+	ENTITY_IO_TARGET_SPECIAL_CALLER = 0x5,
+	ENTITY_IO_TARGET_EHANDLE = 0x6,
+	ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME = 0x7,
+};
 
 // Aligment: 4
 // Size: 40
