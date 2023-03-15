@@ -4,8 +4,8 @@
 
 ///////////////////////////////////////////
 // Binary: server.dll
-// Class Count: 481
-// Enum Count: 72
+// Class Count: 477
+// Enum Count: 74
 ///////////////////////////////////////////
 
 // Aligment: 4
@@ -18,26 +18,111 @@ enum class PerformanceMode_t : uint32_t
 	PM_REDUCED_GIBS = 0x3,
 };
 
+// Flags: MEnumFlagsWithOverlappingBits
 // Aligment: 4
-// Size: 4
-enum class explosion_t : uint32_t
+// Size: 45
+enum class GameAnimEventIndex_t : uint32_t
 {
-	EXPLOSION_DEFAULT = 0x0,
-	EXPLOSION_GRENADE = 0x1,
-	EXPLOSION_MOLOTOV = 0x2,
-	EXPLOSION_FIREWORKS = 0x3,
+	AE_EMPTY = 0x0,
+	AE_CL_PLAYSOUND = 0x1,
+	AE_CL_PLAYSOUND_ATTACHMENT = 0x2,
+	AE_CL_PLAYSOUND_POSITION = 0x3,
+	AE_SV_PLAYSOUND = 0x4,
+	AE_CL_STOPSOUND = 0x5,
+	AE_CL_PLAYSOUND_LOOPING = 0x6,
+	AE_CLIENT_EFFECT_ATTACH = 0x7,
+	AE_CL_CREATE_PARTICLE_EFFECT = 0x8,
+	AE_CL_STOP_PARTICLE_EFFECT = 0x9,
+	AE_CL_ADD_PARTICLE_EFFECT_CP = 0xa,
+	AE_CL_CREATE_PARTICLE_EFFECT_CFG = 0xb,
+	AE_CL_SUPPRESS_EVENTS_WITH_TAG = 0xc,
+	AE_START_SCRIPTED_EFFECT = 0xd,
+	AE_STOP_SCRIPTED_EFFECT = 0xe,
+	AE_MUZZLEFLASH = 0xf,
+	AE_SV_DUSTTRAIL = 0x10,
+	AE_FOOTSTEP = 0x11,
+	AE_CL_FOOTSTEP_LEFT = 0x12,
+	AE_CL_FOOTSTEP_RIGHT = 0x13,
+	AE_CL_MFOOTSTEP_LEFT = 0x14,
+	AE_CL_MFOOTSTEP_RIGHT = 0x15,
+	AE_CL_MFOOTSTEP_LEFT_LOUD = 0x16,
+	AE_CL_MFOOTSTEP_RIGHT_LOUD = 0x17,
+	AE_RAGDOLL = 0x18,
+	AE_CL_ENABLE_BODYGROUP = 0x19,
+	AE_CL_DISABLE_BODYGROUP = 0x1a,
+	AE_CL_BODYGROUP_SET_VALUE = 0x1b,
+	AE_SV_BODYGROUP_SET_VALUE = 0x1c,
+	AE_CL_BODYGROUP_SET_VALUE_CMODEL_WPN = 0x1d,
+	AE_WPN_PRIMARYATTACK = 0x1e,
+	AE_WPN_PLAYWPNSOUND = 0x1f,
+	AE_WPN_SECONDARYATTACK = 0x20,
+	AE_CL_SPEECH = 0x21,
+	AE_FIRE_INPUT = 0x22,
+	AE_IK_SET_LOCK_ROTATION_ALPHA = 0x23,
+	AE_IK_ALLOW_PLANE_TILT_NORMAL_UPDATES = 0x24,
+	AE_IK_SET_MASTER_BLEND_AMOUNT = 0x25,
+	AE_IK_SET_CHAIN_BLEND_AMOUNT = 0x26,
+	AE_CL_CLOTH_ATTR = 0x27,
+	AE_CL_CLOTH_GROUND_OFFSET = 0x28,
+	AE_CL_CLOTH_STIFFEN = 0x29,
+	AE_CL_CLOTH_EFFECT = 0x2a,
+	AE_CL_CREATE_ANIM_SCOPE_PROP = 0x2b,
+	AE_HAPTIC_PULSE = 0x2c,
 };
 
 // Aligment: 4
-// Size: 2
-enum class CRR_Response::ResponseEnum_t : uint32_t
+// Size: 27
+enum class RumbleEffect_t : uint32_t
 {
-	CRR_Response::MAX_RESPONSE_NAME = 0xc0,
-	CRR_Response::MAX_RULE_NAME = 0x80,
+	RUMBLE_INVALID = 0xffffffffffffffff,
+	RUMBLE_STOP_ALL = 0x0,
+	RUMBLE_PISTOL = 0x1,
+	RUMBLE_357 = 0x2,
+	RUMBLE_SMG1 = 0x3,
+	RUMBLE_AR2 = 0x4,
+	RUMBLE_SHOTGUN_SINGLE = 0x5,
+	RUMBLE_SHOTGUN_DOUBLE = 0x6,
+	RUMBLE_AR2_ALT_FIRE = 0x7,
+	RUMBLE_RPG_MISSILE = 0x8,
+	RUMBLE_CROWBAR_SWING = 0x9,
+	RUMBLE_AIRBOAT_GUN = 0xa,
+	RUMBLE_JEEP_ENGINE_LOOP = 0xb,
+	RUMBLE_FLAT_LEFT = 0xc,
+	RUMBLE_FLAT_RIGHT = 0xd,
+	RUMBLE_FLAT_BOTH = 0xe,
+	RUMBLE_DMG_LOW = 0xf,
+	RUMBLE_DMG_MED = 0x10,
+	RUMBLE_DMG_HIGH = 0x11,
+	RUMBLE_FALL_LONG = 0x12,
+	RUMBLE_FALL_SHORT = 0x13,
+	RUMBLE_PHYSCANNON_OPEN = 0x14,
+	RUMBLE_PHYSCANNON_PUNT = 0x15,
+	RUMBLE_PHYSCANNON_LOW = 0x16,
+	RUMBLE_PHYSCANNON_MEDIUM = 0x17,
+	RUMBLE_PHYSCANNON_HIGH = 0x18,
+	NUM_RUMBLE_EFFECTS = 0x19,
 };
 
 // Aligment: 4
-// Size: 988
+// Size: 12
+enum class WeaponSound_t : uint32_t
+{
+	WEAPON_SOUND_EMPTY = 0x0,
+	WEAPON_SOUND_SINGLE = 0x1,
+	WEAPON_SOUND_DOUBLE = 0x2,
+	WEAPON_SOUND_RELOAD = 0x3,
+	WEAPON_SOUND_MELEE_MISS = 0x4,
+	WEAPON_SOUND_MELEE_HIT = 0x5,
+	WEAPON_SOUND_MELEE_HIT_WORLD = 0x6,
+	WEAPON_SOUND_MELEE_HIT_PLAYER = 0x7,
+	WEAPON_SOUND_SPECIAL1 = 0x8,
+	WEAPON_SOUND_SPECIAL2 = 0x9,
+	WEAPON_SOUND_SPECIAL3 = 0xa,
+	WEAPON_SOUND_NUM_TYPES = 0xb,
+};
+
+// Aligment: 4
+// Size: 1028
 enum class BaseActivity_t : uint32_t
 {
 	ACT_RESET = 0x0,
@@ -176,7 +261,6 @@ enum class BaseActivity_t : uint32_t
 	ACT_IDLE_ON_FIRE = 0x85,
 	ACT_WALK_ON_FIRE = 0x86,
 	ACT_RUN_ON_FIRE = 0x87,
-	ACT_RAPPEL_LOOP = 0x88,
 	ACT_180_LEFT = 0x89,
 	ACT_180_RIGHT = 0x8a,
 	ACT_90_LEFT = 0x8b,
@@ -1028,6 +1112,55 @@ enum class BaseActivity_t : uint32_t
 	ACT_VR_PISTOL_LOW_KICK = 0x3d9,
 	ACT_VR_PISTOL_BURST_ATTACK = 0x3da,
 	ACT_VR_SHOTGUN_GRENADE_TWIST = 0x3db,
+	ACT_DIE_STAND = 0x3dc,
+	ACT_DIE_STAND_HEADSHOT = 0x3dd,
+	ACT_DIE_CROUCH = 0x3de,
+	ACT_DIE_CROUCH_HEADSHOT = 0x3df,
+	ACT_CSGO_NULL = 0x3e0,
+	ACT_CSGO_DEFUSE = 0x3e1,
+	ACT_CSGO_DEFUSE_WITH_KIT = 0x3e2,
+	ACT_CSGO_FLASHBANG_REACTION = 0x3e3,
+	ACT_CSGO_FIRE_PRIMARY = 0x3e4,
+	ACT_CSGO_FIRE_PRIMARY_OPT_1 = 0x3e5,
+	ACT_CSGO_FIRE_PRIMARY_OPT_2 = 0x3e6,
+	ACT_CSGO_FIRE_SECONDARY = 0x3e7,
+	ACT_CSGO_FIRE_SECONDARY_OPT_1 = 0x3e8,
+	ACT_CSGO_FIRE_SECONDARY_OPT_2 = 0x3e9,
+	ACT_CSGO_RELOAD = 0x3ea,
+	ACT_CSGO_RELOAD_START = 0x3eb,
+	ACT_CSGO_RELOAD_LOOP = 0x3ec,
+	ACT_CSGO_RELOAD_END = 0x3ed,
+	ACT_CSGO_OPERATE = 0x3ee,
+	ACT_CSGO_DEPLOY = 0x3ef,
+	ACT_CSGO_CATCH = 0x3f0,
+	ACT_CSGO_SILENCER_DETACH = 0x3f1,
+	ACT_CSGO_SILENCER_ATTACH = 0x3f2,
+	ACT_CSGO_TWITCH = 0x3f3,
+	ACT_CSGO_TWITCH_BUYZONE = 0x3f4,
+	ACT_CSGO_PLANT_BOMB = 0x3f5,
+	ACT_CSGO_IDLE_TURN_BALANCEADJUST = 0x3f6,
+	ACT_CSGO_IDLE_ADJUST_STOPPEDMOVING = 0x3f7,
+	ACT_CSGO_ALIVE_LOOP = 0x3f8,
+	ACT_CSGO_FLINCH = 0x3f9,
+	ACT_CSGO_FLINCH_HEAD = 0x3fa,
+	ACT_CSGO_FLINCH_MOLOTOV = 0x3fb,
+	ACT_CSGO_JUMP = 0x3fc,
+	ACT_CSGO_FALL = 0x3fd,
+	ACT_CSGO_CLIMB_LADDER = 0x3fe,
+	ACT_CSGO_LAND_LIGHT = 0x3ff,
+	ACT_CSGO_LAND_HEAVY = 0x400,
+	ACT_CSGO_EXIT_LADDER_TOP = 0x401,
+	ACT_CSGO_EXIT_LADDER_BOTTOM = 0x402,
+	ACT_CSGO_PARACHUTE = 0x403,
+	ACT_CSGO_TAUNT = 0x404,
+};
+
+// Aligment: 4
+// Size: 2
+enum class AmmoFlags_t : uint32_t
+{
+	AMMO_FORCE_DROP_IF_CARRIED = 0x1,
+	AMMO_FLAG_MAX = 0x1,
 };
 
 // Aligment: 1
@@ -1037,6 +1170,62 @@ enum class DamageOptions_t : uint8_t
 	DAMAGE_NO = 0,
 	DAMAGE_EVENTS_ONLY = 1,
 	DAMAGE_YES = 2,
+};
+
+// Aligment: 4
+// Size: 27
+enum class DamageTypes_t : uint32_t
+{
+	DMG_GENERIC = 0x0,
+	DMG_CRUSH = 0x1,
+	DMG_BULLET = 0x2,
+	DMG_SLASH = 0x4,
+	DMG_BURN = 0x8,
+	DMG_VEHICLE = 0x10,
+	DMG_FALL = 0x20,
+	DMG_BLAST = 0x40,
+	DMG_CLUB = 0x80,
+	DMG_SHOCK = 0x100,
+	DMG_SONIC = 0x200,
+	DMG_ENERGYBEAM = 0x400,
+	DMG_PREVENT_PHYSICS_FORCE = 0x800,
+	DMG_NEVERGIB = 0x1000,
+	DMG_ALWAYSGIB = 0x2000,
+	DMG_DROWN = 0x4000,
+	DMG_POISON = 0x8000,
+	DMG_RADIATION = 0x10000,
+	DMG_DROWNRECOVER = 0x20000,
+	DMG_ACID = 0x40000,
+	DMG_REMOVENORAGDOLL = 0x80000,
+	DMG_PHYSGUN = 0x100000,
+	DMG_DISSOLVE = 0x200000,
+	DMG_BLAST_SURFACE = 0x400000,
+	DMG_DIRECT = 0x800000,
+	DMG_BUCKSHOT = 0x1000000,
+	DMG_LASTGENERICFLAG = 0x1000000,
+};
+
+// Aligment: 4
+// Size: 17
+enum class BaseExplosionTypes_t : uint32_t
+{
+	EXPLOSION_TYPE_DEFAULT = 0x0,
+	EXPLOSION_TYPE_GRENADE = 0x1,
+	EXPLOSION_TYPE_MOLOTOV = 0x2,
+	EXPLOSION_TYPE_FIREWORKS = 0x3,
+	EXPLOSION_TYPE_GASCAN = 0x4,
+	EXPLOSION_TYPE_GASCYLINDER = 0x5,
+	EXPLOSION_TYPE_EXPLOSIVEBARREL = 0x6,
+	EXPLOSION_TYPE_ELECTRICAL = 0x7,
+	EXPLOSION_TYPE_EMP = 0x8,
+	EXPLOSION_TYPE_SHRAPNEL = 0x9,
+	EXPLOSION_TYPE_SMOKEGRENADE = 0xa,
+	EXPLOSION_TYPE_FLASHBANG = 0xb,
+	EXPLOSION_TYPE_TRIPMINE = 0xc,
+	EXPLOSION_TYPE_ICE = 0xd,
+	EXPLOSION_TYPE_NONE = 0xe,
+	EXPLOSION_TYPE_CUSTOM = 0xf,
+	EXPLOSION_TYPE_COUNT = 0x10,
 };
 
 // Aligment: 4
@@ -1052,6 +1241,18 @@ enum class HierarchyType_t : uint32_t
 };
 
 // Aligment: 4
+// Size: 6
+enum class ShakeCommand_t : uint32_t
+{
+	SHAKE_START = 0x0,
+	SHAKE_STOP = 0x1,
+	SHAKE_AMPLITUDE = 0x2,
+	SHAKE_FREQUENCY = 0x3,
+	SHAKE_START_RUMBLEONLY = 0x4,
+	SHAKE_START_NORUMBLE = 0x5,
+};
+
+// Aligment: 4
 // Size: 5
 enum class TimelineCompression_t : uint32_t
 {
@@ -1060,53 +1261,6 @@ enum class TimelineCompression_t : uint32_t
 	TIMELINE_COMPRESSION_AVERAGE = 0x2,
 	TIMELINE_COMPRESSION_AVERAGE_BLEND = 0x3,
 	TIMELINE_COMPRESSION_TOTAL = 0x4,
-};
-
-// Aligment: 4
-// Size: 17
-enum class WeaponSound_t : uint32_t
-{
-	WEAPON_SOUND_EMPTY = 0x0,
-	WEAPON_SOUND_SINGLE = 0x1,
-	WEAPON_SOUND_SINGLE_NPC = 0x2,
-	WEAPON_SOUND_DOUBLE = 0x3,
-	WEAPON_SOUND_DOUBLE_NPC = 0x4,
-	WEAPON_SOUND_BURST = 0x5,
-	WEAPON_SOUND_RELOAD = 0x6,
-	WEAPON_SOUND_RELOAD_NPC = 0x7,
-	WEAPON_SOUND_MELEE_MISS = 0x8,
-	WEAPON_SOUND_MELEE_HIT = 0x9,
-	WEAPON_SOUND_MELEE_HIT_WORLD = 0xa,
-	WEAPON_SOUND_SPECIAL1 = 0xb,
-	WEAPON_SOUND_SPECIAL2 = 0xc,
-	WEAPON_SOUND_SPECIAL3 = 0xd,
-	WEAPON_SOUND_TAUNT = 0xe,
-	WEAPON_SOUND_FAST_RELOAD = 0xf,
-	WEAPON_SOUND_NUM_TYPES = 0x10,
-};
-
-// Aligment: 4
-// Size: 9
-enum class WeaponTexture_t : uint32_t
-{
-	WEAPON_TEXTURE_ICON_ACTIVE = 0x0,
-	WEAPON_TEXTURE_ICON_INACTIVE = 0x1,
-	WEAPON_TEXTURE_ICON_AMMO = 0x2,
-	WEAPON_TEXTURE_ICON_AMMO2 = 0x3,
-	WEAPON_TEXTURE_ICON_CROSSHAIR = 0x4,
-	WEAPON_TEXTURE_ICON_AUTOAIM = 0x5,
-	WEAPON_TEXTURE_ICON_ZOOMED_CROSSHAIR = 0x6,
-	WEAPON_TEXTURE_ICON_ZOOMED_AUTOAIM = 0x7,
-	WEAPON_TEXTURE_ICON_SMALL = 0x8,
-};
-
-// Aligment: 4
-// Size: 3
-enum class BrushSolidities_e : uint32_t
-{
-	BRUSHSOLID_TOGGLE = 0x0,
-	BRUSHSOLID_NEVER = 0x1,
-	BRUSHSOLID_ALWAYS = 0x2,
 };
 
 // Aligment: 1
@@ -1127,6 +1281,61 @@ enum class MoveType_t : uint8_t
 	MOVETYPE_CUSTOM = 11,
 	MOVETYPE_LAST = 11,
 	MOVETYPE_MAX_BITS = 4,
+};
+
+// Aligment: 1
+// Size: 6
+enum class MoveCollide_t : uint8_t
+{
+	MOVECOLLIDE_DEFAULT = 0,
+	MOVECOLLIDE_FLY_BOUNCE = 1,
+	MOVECOLLIDE_FLY_CUSTOM = 2,
+	MOVECOLLIDE_FLY_SLIDE = 3,
+	MOVECOLLIDE_COUNT = 4,
+	MOVECOLLIDE_MAX_BITS = 3,
+};
+
+// Aligment: 1
+// Size: 9
+enum class SolidType_t : uint8_t
+{
+	SOLID_NONE = 0,
+	SOLID_BSP = 1,
+	SOLID_BBOX = 2,
+	SOLID_OBB = 3,
+	SOLID_SPHERE = 4,
+	SOLID_POINT = 5,
+	SOLID_VPHYSICS = 6,
+	SOLID_CAPSULE = 7,
+	SOLID_LAST = 8,
+};
+
+// Aligment: 4
+// Size: 3
+enum class BrushSolidities_e : uint32_t
+{
+	BRUSHSOLID_TOGGLE = 0x0,
+	BRUSHSOLID_NEVER = 0x1,
+	BRUSHSOLID_ALWAYS = 0x2,
+};
+
+// Aligment: 1
+// Size: 13
+enum class RenderMode_t : uint8_t
+{
+	kRenderNormal = 0,
+	kRenderTransColor = 1,
+	kRenderTransTexture = 2,
+	kRenderGlow = 3,
+	kRenderTransAlpha = 4,
+	kRenderTransAdd = 5,
+	kRenderEnvironmental = 6,
+	kRenderTransAddFrameBlend = 7,
+	kRenderTransAlphaAdd = 8,
+	kRenderWorldGlow = 9,
+	kRenderNone = 10,
+	kRenderDevVisualizer = 11,
+	kRenderModeCount = 12,
 };
 
 // Aligment: 1
@@ -1155,61 +1364,48 @@ enum class RenderFx_t : uint8_t
 	kRenderFxMax = 19,
 };
 
-// Aligment: 1
-// Size: 13
-enum class RenderMode_t : uint8_t
+// Aligment: 4
+// Size: 2
+enum class CRR_Response::ResponseEnum_t : uint32_t
 {
-	kRenderNormal = 0,
-	kRenderTransColor = 1,
-	kRenderTransTexture = 2,
-	kRenderGlow = 3,
-	kRenderTransAlpha = 4,
-	kRenderTransAdd = 5,
-	kRenderEnvironmental = 6,
-	kRenderTransAddFrameBlend = 7,
-	kRenderTransAlphaAdd = 8,
-	kRenderWorldGlow = 9,
-	kRenderNone = 10,
-	kRenderDevVisualizer = 11,
-	kRenderModeCount = 12,
-};
-
-// Aligment: 1
-// Size: 8
-enum class SolidType_t : uint8_t
-{
-	SOLID_NONE = 0,
-	SOLID_BSP = 1,
-	SOLID_BBOX = 2,
-	SOLID_OBB = 3,
-	SOLID_POINT = 5,
-	SOLID_VPHYSICS = 6,
-	SOLID_CAPSULE = 7,
-	SOLID_LAST = 8,
-};
-
-// Aligment: 1
-// Size: 6
-enum class MoveCollide_t : uint8_t
-{
-	MOVECOLLIDE_DEFAULT = 0,
-	MOVECOLLIDE_FLY_BOUNCE = 1,
-	MOVECOLLIDE_FLY_CUSTOM = 2,
-	MOVECOLLIDE_FLY_SLIDE = 3,
-	MOVECOLLIDE_COUNT = 4,
-	MOVECOLLIDE_MAX_BITS = 3,
+	CRR_Response::MAX_RESPONSE_NAME = 0xc0,
+	CRR_Response::MAX_RULE_NAME = 0x80,
 };
 
 // Aligment: 4
-// Size: 6
-enum class ShakeCommand_t : uint32_t
+// Size: 30
+enum class soundlevel_t : uint32_t
 {
-	SHAKE_START = 0x0,
-	SHAKE_STOP = 0x1,
-	SHAKE_AMPLITUDE = 0x2,
-	SHAKE_FREQUENCY = 0x3,
-	SHAKE_START_RUMBLEONLY = 0x4,
-	SHAKE_START_NORUMBLE = 0x5,
+	SNDLVL_NONE = 0x0,
+	SNDLVL_20dB = 0x14,
+	SNDLVL_25dB = 0x19,
+	SNDLVL_30dB = 0x1e,
+	SNDLVL_35dB = 0x23,
+	SNDLVL_40dB = 0x28,
+	SNDLVL_45dB = 0x2d,
+	SNDLVL_50dB = 0x32,
+	SNDLVL_55dB = 0x37,
+	SNDLVL_IDLE = 0x3c,
+	SNDLVL_60dB = 0x3c,
+	SNDLVL_65dB = 0x41,
+	SNDLVL_STATIC = 0x42,
+	SNDLVL_70dB = 0x46,
+	SNDLVL_NORM = 0x4b,
+	SNDLVL_75dB = 0x4b,
+	SNDLVL_80dB = 0x50,
+	SNDLVL_TALKING = 0x50,
+	SNDLVL_85dB = 0x55,
+	SNDLVL_90dB = 0x5a,
+	SNDLVL_95dB = 0x5f,
+	SNDLVL_100dB = 0x64,
+	SNDLVL_105dB = 0x69,
+	SNDLVL_110dB = 0x6e,
+	SNDLVL_120dB = 0x78,
+	SNDLVL_130dB = 0x82,
+	SNDLVL_GUNFIRE = 0x8c,
+	SNDLVL_140dB = 0x8c,
+	SNDLVL_150dB = 0x96,
+	SNDLVL_180dB = 0xb4,
 };
 
 // Aligment: 4
@@ -1230,6 +1426,23 @@ enum class Touch_t : uint32_t
 	touch_npc_only = 0x2,
 	touch_player_or_npc = 0x3,
 	touch_player_or_npc_or_physicsprop = 0x4,
+};
+
+// Aligment: 4
+// Size: 11
+enum class Hull_t : uint32_t
+{
+	HULL_HUMAN = 0x0,
+	HULL_SMALL_CENTERED = 0x1,
+	HULL_WIDE_HUMAN = 0x2,
+	HULL_TINY = 0x3,
+	HULL_MEDIUM = 0x4,
+	HULL_TINY_CENTERED = 0x5,
+	HULL_LARGE = 0x6,
+	HULL_LARGE_CENTERED = 0x7,
+	HULL_MEDIUM_TALL = 0x8,
+	NUM_HULLS = 0x9,
+	HULL_NONE = 0xa,
 };
 
 // Aligment: 4
@@ -1256,42 +1469,6 @@ enum class EntFinderMethod_t : uint32_t
 	ENT_FIND_METHOD_NEAREST = 0x0,
 	ENT_FIND_METHOD_FARTHEST = 0x1,
 	ENT_FIND_METHOD_RANDOM = 0x2,
-};
-
-// Aligment: 4
-// Size: 4
-enum class eLiteralHandType : uint32_t
-{
-	LITERAL_HAND_TYPE_UNKNOWN = 0xffffffffffffffff,
-	LITERAL_HAND_TYPE_RIGHT = 0x0,
-	LITERAL_HAND_TYPE_LEFT = 0x1,
-	LITERAL_HAND_TYPE_COUNT = 0x2,
-};
-
-// Aligment: 4
-// Size: 4
-enum class eLogicalHandType : uint32_t
-{
-	LOGICAL_HAND_TYPE_UNKNOWN = 0xffffffffffffffff,
-	LOGICAL_HAND_TYPE_PRIMARY_HAND = 0x0,
-	LOGICAL_HAND_TYPE_OFF_HAND = 0x1,
-	LOGICAL_HAND_TYPE_COUNT = 0x2,
-};
-
-// Aligment: 4
-// Size: 10
-enum class interactions_t : uint32_t
-{
-	INTERACTION_NONE = 0xffffffffffffffff,
-	INTERACTION_CLIP_TO_ENERGYGUN = 0x0,
-	INTERACTION_LARGE_CLIP_TO_ENERGYGUN = 0x1,
-	INTERACTION_CLIP_TO_SHOTGUN = 0x2,
-	INTERACTION_MULTICLIP_TO_SHOTGUN = 0x3,
-	INTERACTION_GRENADE_TO_SHOTGUN = 0x4,
-	INTERACTION_XENGRENADE_TO_SHOTGUN = 0x5,
-	INTERACTION_CHARGEDCLIP_TO_SHOTGUN = 0x6,
-	INTERACTION_CLIP_TO_RAPIDFIRE = 0x7,
-	NUM_HAND_INTERACTIONS = 0x8,
 };
 
 // Aligment: 4
@@ -1362,6 +1539,14 @@ enum class PointWorldTextReorientMode_t : uint32_t
 {
 	POINT_WORLD_TEXT_REORIENT_NONE = 0x0,
 	POINT_WORLD_TEXT_REORIENT_AROUND_UP = 0x1,
+};
+
+// Aligment: 4
+// Size: 2
+enum class SceneOnPlayerDeath_t : uint32_t
+{
+	SCENE_ONPLAYERDEATH_DO_NOTHING = 0x0,
+	SCENE_ONPLAYERDEATH_CANCEL = 0x1,
 };
 
 // Aligment: 4
@@ -1475,84 +1660,52 @@ enum class PointTemplateClientOnlyEntityBehavior_t : uint32_t
 };
 
 // Aligment: 4
-// Size: 4
-enum class NetChannelBufType_t : uint32_t
+// Size: 23
+enum class SoundFlags_t : uint32_t
 {
-	BUF_DEFAULT = 0xffffffffffffffff,
-	BUF_UNRELIABLE = 0x0,
-	BUF_RELIABLE = 0x1,
-	BUF_VOICE = 0x2,
+	SOUND_NONE = 0x0,
+	SOUND_COMBAT = 0x1,
+	SOUND_WORLD = 0x2,
+	SOUND_PLAYER = 0x4,
+	SOUND_DANGER = 0x8,
+	SOUND_BULLET_IMPACT = 0x10,
+	SOUND_THUMPER = 0x20,
+	SOUND_PHYSICS_DANGER = 0x40,
+	SOUND_MOVE_AWAY = 0x80,
+	SOUND_PLAYER_VEHICLE = 0x100,
+	SOUND_GLASS_BREAK = 0x200,
+	SOUND_PHYSICS_OBJECT = 0x400,
+	SOUND_CONTEXT_GUNFIRE = 0x100000,
+	SOUND_CONTEXT_COMBINE_ONLY = 0x200000,
+	SOUND_CONTEXT_REACT_TO_SOURCE = 0x400000,
+	SOUND_CONTEXT_EXPLOSION = 0x800000,
+	SOUND_CONTEXT_EXCLUDE_COMBINE = 0x1000000,
+	SOUND_CONTEXT_DANGER_APPROACH = 0x2000000,
+	SOUND_CONTEXT_ALLIES_ONLY = 0x4000000,
+	SOUND_CONTEXT_PANIC_NPCS = 0x8000000,
+	ALL_CONTEXTS = 0xfffffffffff00000,
+	ALL_SCENTS = 0x0,
+	ALL_SOUNDS = 0xfffff,
 };
 
 // Aligment: 4
-// Size: 2
-enum class ShatterSurface_t : uint32_t
+// Size: 3
+enum class SpawnDebugOverrideState_t : uint32_t
 {
-	SHATTERSURFACE_GLASS = 0x0,
-	SHATTERSURFACE_TILE = 0x1,
+	SPAWN_DEBUG_OVERRIDE_NONE = 0x0,
+	SPAWN_DEBUG_OVERRIDE_FORCE_ENABLED = 0x1,
+	SPAWN_DEBUG_OVERRIDE_FORCE_DISABLED = 0x2,
 };
 
 // Aligment: 4
-// Size: 30
-enum class soundlevel_t : uint32_t
+// Size: 5
+enum class SpawnDebugRestrictionOverrideState_t : uint32_t
 {
-	SNDLVL_NONE = 0x0,
-	SNDLVL_20dB = 0x14,
-	SNDLVL_25dB = 0x19,
-	SNDLVL_30dB = 0x1e,
-	SNDLVL_35dB = 0x23,
-	SNDLVL_40dB = 0x28,
-	SNDLVL_45dB = 0x2d,
-	SNDLVL_50dB = 0x32,
-	SNDLVL_55dB = 0x37,
-	SNDLVL_IDLE = 0x3c,
-	SNDLVL_60dB = 0x3c,
-	SNDLVL_65dB = 0x41,
-	SNDLVL_STATIC = 0x42,
-	SNDLVL_70dB = 0x46,
-	SNDLVL_NORM = 0x4b,
-	SNDLVL_75dB = 0x4b,
-	SNDLVL_80dB = 0x50,
-	SNDLVL_TALKING = 0x50,
-	SNDLVL_85dB = 0x55,
-	SNDLVL_90dB = 0x5a,
-	SNDLVL_95dB = 0x5f,
-	SNDLVL_100dB = 0x64,
-	SNDLVL_105dB = 0x69,
-	SNDLVL_110dB = 0x6e,
-	SNDLVL_120dB = 0x78,
-	SNDLVL_130dB = 0x82,
-	SNDLVL_GUNFIRE = 0x8c,
-	SNDLVL_140dB = 0x8c,
-	SNDLVL_150dB = 0x96,
-	SNDLVL_180dB = 0xb4,
-};
-
-// Aligment: 1
-// Size: 21
-enum class gender_t : uint8_t
-{
-	GENDER_NONE = 0,
-	GENDER_MALE = 1,
-	GENDER_FEMALE = 2,
-	GENDER_NAMVET = 3,
-	GENDER_TEENGIRL = 4,
-	GENDER_BIKER = 5,
-	GENDER_MANAGER = 6,
-	GENDER_GAMBLER = 7,
-	GENDER_PRODUCER = 8,
-	GENDER_COACH = 9,
-	GENDER_MECHANIC = 10,
-	GENDER_CEDA = 11,
-	GENDER_CRAWLER = 12,
-	GENDER_UNDISTRACTABLE = 13,
-	GENDER_FALLEN = 14,
-	GENDER_RIOT_CONTROL = 15,
-	GENDER_CLOWN = 16,
-	GENDER_JIMMY = 17,
-	GENDER_HOSPITAL_PATIENT = 18,
-	GENDER_BRIDE = 19,
-	GENDER_LAST = 20,
+	SPAWN_DEBUG_RESTRICT_NONE = 0x0,
+	SPAWN_DEBUG_RESTRICT_IGNORE_MANAGER_DISTANCE_REQS = 0x1,
+	SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_DISTANCE_LOS_REQS = 0x2,
+	SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS = 0x4,
+	SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS = 0x8,
 };
 
 // Aligment: 4
@@ -1594,24 +1747,6 @@ enum class SurroundingBoundsType_t : uint8_t
 };
 
 // Aligment: 4
-// Size: 5
-enum class LifeState_t : uint32_t
-{
-	LIFE_ALIVE = 0x0,
-	LIFE_DYING = 0x1,
-	LIFE_DEAD = 0x2,
-	LIFE_RESPAWNABLE = 0x3,
-	LIFE_RESPAWNING = 0x4,
-};
-
-// Aligment: 4
-// Size: 1
-enum class TakeHealthOptions_t : uint32_t
-{
-	TH_IGNORE_MAX_HITPOINTS = 0x1,
-};
-
-// Aligment: 4
 // Size: 7
 enum class PoseController_FModType_t : uint32_t
 {
@@ -1625,26 +1760,17 @@ enum class PoseController_FModType_t : uint32_t
 };
 
 // Aligment: 4
-// Size: 13
-enum class PrecipitationType_t : uint32_t
+// Size: 4
+enum class EntitySubclassScope_t : uint32_t
 {
-	PRECIPITATION_TYPE_RAIN = 0x0,
-	PRECIPITATION_TYPE_SNOW = 0x1,
-	PRECIPITATION_TYPE_ASH = 0x2,
-	PRECIPITATION_TYPE_SNOWFALL = 0x3,
-	PRECIPITATION_TYPE_PARTICLERAIN = 0x4,
-	PRECIPITATION_TYPE_PARTICLEASH = 0x5,
-	PRECIPITATION_TYPE_PARTICLERAINSTORM = 0x6,
-	PRECIPITATION_TYPE_PARTICLEBUGS = 0x7,
-	PRECIPITATION_TYPE_PARTICLESMOKE = 0x8,
-	PRECIPITATION_TYPE_PARTICLESNOW = 0x9,
-	PRECIPITATION_TYPE_PARTICLEXENSPORES = 0xa,
-	PRECIPITATION_TYPE_DUSTMOTES = 0xb,
-	NUM_PRECIPITATION_TYPES = 0xc,
+	SUBCLASS_SCOPE_NONE = 0xffffffffffffffff,
+	SUBCLASS_SCOPE_MISC = 0x0,
+	SUBCLASS_SCOPE_PRECIPITATION = 0x1,
+	SUBCLASS_SCOPE_COUNT = 0x2,
 };
 
 // Aligment: 4
-// Size: 15
+// Size: 16
 enum class vote_create_failed_t : uint32_t
 {
 	VOTE_FAILED_GENERIC = 0x0,
@@ -1662,6 +1788,7 @@ enum class vote_create_failed_t : uint32_t
 	VOTE_FAILED_CANNOT_KICK_ADMIN = 0xc,
 	VOTE_FAILED_SCRAMBLE_IN_PROGRESS = 0xd,
 	VOTE_FAILED_SPECTATOR = 0xe,
+	VOTE_FAILED_MAX = 0xf,
 };
 
 // Aligment: 4
@@ -1673,10 +1800,26 @@ enum class WeaponState_t : uint32_t
 	WEAPON_IS_ACTIVE = 0x2,
 };
 
+// Aligment: 1
+// Size: 9
+enum class ItemFlagTypes_t : uint8_t
+{
+	ITEM_FLAG_NONE = 0,
+	ITEM_FLAG_SELECTONEMPTY = 1,
+	ITEM_FLAG_NOAUTORELOAD = 2,
+	ITEM_FLAG_NOAUTOSWITCHEMPTY = 4,
+	ITEM_FLAG_LIMITINWORLD = 8,
+	ITEM_FLAG_EXHAUSTIBLE = 16,
+	ITEM_FLAG_DOHITLOCATIONDMG = 32,
+	ITEM_FLAG_NOAMMOPICKUPS = 64,
+	ITEM_FLAG_NOITEMPICKUP = 128,
+};
+
 // Aligment: 4
-// Size: 4
+// Size: 5
 enum class EntityDisolveType_t : uint32_t
 {
+	ENTITY_DISSOLVE_INVALID = 0xffffffffffffffff,
 	ENTITY_DISSOLVE_NORMAL = 0x0,
 	ENTITY_DISSOLVE_ELECTRICAL = 0x1,
 	ENTITY_DISSOLVE_ELECTRICAL_LIGHT = 0x2,
@@ -1695,25 +1838,6 @@ enum class DoorState_t : uint32_t
 };
 
 // Aligment: 4
-// Size: 4
-enum class MaterialModifyMode_t : uint32_t
-{
-	MATERIAL_MODIFY_MODE_NONE = 0x0,
-	MATERIAL_MODIFY_MODE_SETVAR = 0x1,
-	MATERIAL_MODIFY_MODE_ANIM_SEQUENCE = 0x2,
-	MATERIAL_MODIFY_MODE_FLOAT_LERP = 0x3,
-};
-
-// Aligment: 4
-// Size: 3
-enum class ScreenEffectType_t : uint32_t
-{
-	SCREENEFFECT_EP2_ADVISOR_STUN = 0x0,
-	SCREENEFFECT_EP1_INTRO = 0x1,
-	SCREENEFFECT_EP2_GROGGY = 0x2,
-};
-
-// Aligment: 4
 // Size: 2
 enum class ShadowType_t : uint32_t
 {
@@ -1729,7 +1853,7 @@ enum class Class_T : uint32_t
 	CLASS_PLAYER = 0x1,
 	CLASS_PLAYER_ALLY = 0x2,
 	CLASS_BULLSEYE = 0x3,
-	LAST_SHARED_ENTITY_CLASS = 0x4,
+	NUM_CLASSIFY_CLASSES = 0x4,
 };
 
 // Aligment: 4
@@ -1742,6 +1866,38 @@ enum class LatchDirtyPermission_t : uint32_t
 	LATCH_DIRTY_PREDICTION = 0x3,
 	LATCH_DIRTY_FRAMESIMULATE = 0x4,
 	LATCH_DIRTY_PARTICLE_SIMULATE = 0x5,
+};
+
+// Aligment: 4
+// Size: 5
+enum class LifeState_t : uint32_t
+{
+	LIFE_ALIVE = 0x0,
+	LIFE_DYING = 0x1,
+	LIFE_DEAD = 0x2,
+	LIFE_RESPAWNABLE = 0x3,
+	LIFE_RESPAWNING = 0x4,
+};
+
+// Aligment: 4
+// Size: 4
+enum class StanceType_t : uint32_t
+{
+	STANCE_CURRENT = 0xffffffffffffffff,
+	STANCE_DEFAULT = 0x0,
+	STANCE_CROUCHING = 0x1,
+	NUM_STANCES = 0x2,
+};
+
+// Aligment: 4
+// Size: 5
+enum class WeaponProficiency_t : uint32_t
+{
+	WEAPON_PROFICIENCY_POOR = 0x0,
+	WEAPON_PROFICIENCY_AVERAGE = 0x1,
+	WEAPON_PROFICIENCY_GOOD = 0x2,
+	WEAPON_PROFICIENCY_VERY_GOOD = 0x3,
+	WEAPON_PROFICIENCY_PERFECT = 0x4,
 };
 
 // Aligment: 4
@@ -1812,7 +1968,7 @@ enum class PetLevelup_Rule_t : uint32_t
 };
 
 // Aligment: 4
-// Size: 45
+// Size: 46
 enum class eEconItemOrigin : uint32_t
 {
 	kEconItemOrigin_Invalid = 0xffffffffffffffff,
@@ -1859,22 +2015,30 @@ enum class eEconItemOrigin : uint32_t
 	kEconItemOrigin_MarketRefunded = 0x28,
 	kEconItemOrigin_LimitedDraft = 0x29,
 	kEconItemOrigin_GauntletReward = 0x2a,
-	kEconItemOrigin_Max = 0x2b,
+	kEconItemOrigin_CompendiumGift = 0x2b,
+	kEconItemOrigin_Max = 0x2c,
 };
 
-// Aligment: 8
-// Size: 9
-enum class NavAttributeEnum : uint64_t
+// Aligment: 4
+// Size: 16
+enum class NavAttributeEnum : uint32_t
 {
+	NAV_MESH_AVOID = 0x80,
+	NAV_MESH_STAIRS = 0x1000,
+	NAV_MESH_NON_ZUP = 0x8000,
 	NAV_MESH_CROUCH = 0x1,
 	NAV_MESH_JUMP = 0x2,
 	NAV_MESH_PRECISE = 0x4,
 	NAV_MESH_NO_JUMP = 0x8,
-	NAV_MESH_AVOID = 0x80,
-	NAV_MESH_STAIRS = 0x1000,
+	NAV_MESH_STOP = 0x10,
+	NAV_MESH_RUN = 0x20,
+	NAV_MESH_WALK = 0x40,
+	NAV_MESH_TRANSIENT = 0x100,
+	NAV_MESH_DONT_HIDE = 0x200,
+	NAV_MESH_STAND = 0x400,
+	NAV_MESH_NO_HOSTAGES = 0x800,
 	NAV_MESH_NO_MERGE = 0x2000,
 	NAV_MESH_OBSTACLE_TOP = 0x4000,
-	NAV_MESH_CLIFF = 0x8000,
 };
 
 // Aligment: 4
@@ -1888,739 +2052,1081 @@ enum class NavDirType : uint32_t
 	NUM_DIRECTIONS = 0x4,
 };
 
-// Aligment: 18
-// Size: 2016
-class CPhysBox : public CBreakable, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 1
+// Size: 320
+class CNetworkTransmitComponent
 {
 public:
-	int32_t m_damageType; // 0x630
-	float m_massScale; // 0x634
-	int32_t m_damageToEnableMotion; // 0x638
-	float m_flForceToEnableMotion; // 0x63c
-	QAngle m_angPreferredCarryAngles; // 0x640
-	bool m_bNotSolidToWorld; // 0x64c
-	int32_t m_iExploitableByPlayer; // 0x650
-	float m_flTouchOutputPerEntityDelay; // 0x654
-	CEntityIOOutput m_OnDamaged; // 0x658
-	CEntityIOOutput m_OnAwakened; // 0x680
-	CEntityIOOutput m_OnMotionEnabled; // 0x6a8
-	CEntityIOOutput m_OnPhysGunPickup; // 0x6d0
-	CEntityIOOutput m_OnPhysGunPunt; // 0x6f8
-	CEntityIOOutput m_OnPhysGunOnlyPickup; // 0x720
-	CEntityIOOutput m_OnPhysGunDrop; // 0x748
-	CEntityIOOutput m_OnPlayerUse; // 0x770
-	CEntityIOOutput m_OnStartTouch; // 0x798
-	CHandle< CBasePlayer > m_hCarryingPlayer; // 0x7c0
+	uint8_t m_nTransmitStateOwnedCounter; // 0x12c
+public:
+	static int32_t &Get_s_nWatchTransmitEntity() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CNetworkTransmitComponent")->m_static_fiels[0]->m_instance); }
+	static bool &Get_s_bUseNetworkVars() { return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CNetworkTransmitComponent")->m_static_fiels[1]->m_instance); }
+	static bool &Get_s_bNetworkVarPerFieldTracking() { return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CNetworkTransmitComponent")->m_static_fiels[2]->m_instance); }
+	static bool &Get_s_bNetworkVarValidate() { return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CNetworkTransmitComponent")->m_static_fiels[3]->m_instance); }
+};
+
+// Aligment: 0
+// Size: 1
+class CPhysicsComponent
+{
+public:
+// <no members described>
+};
+
+// Aligment: 1
+// Size: 16
+class CSkillFloat
+{
+public:
+	float32[4] m_pValue; // 0x0
+};
+
+// Aligment: 1
+// Size: 16
+class CSkillInt
+{
+public:
+	int32[4] m_pValue; // 0x0
+};
+
+// Aligment: 1
+// Size: 16
+class CLevelFloat
+{
+public:
+	float32[4] m_pValue; // 0x0
 };
 
 // Aligment: 2
-// Size: 2032
-class CPhysBoxMultiplayer : public CPhysBox, CBreakable, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Size: 20
+class CSkillDamage
 {
 public:
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "1"
-	uint32_t m_iPhysicsMode; // 0x7e8
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_fMass; // 0x7ec
+	// MPropertyFriendlyName "Damage"
+	// MPropertyDescription "Damage Dealt (in the case of NPC vs NPC damage, medium skill is used)"
+	// MDefaultString
+	CSkillFloat m_flDamage; // 0x0
+	// MPropertyFriendlyName "Physics Force Damage"
+	// MPropertyDescription "If specified, the damage used to compute physics forces. Otherwise normal damage is used."
+	float m_flPhysicsForceDamage; // 0x10
 };
 
-// Aligment: 0
-// Size: 2696
-class CPhysicsPropMultiplayer : public CPhysicsProp, CBreakableProp, CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 2
+// Size: 184
+class CScriptUniformRandomStream
 {
 public:
-// <no members described>
+	HSCRIPT m_hScriptScope; // 0x8
+	int32_t m_nInitialSeed; // 0xb0
+public:
+	static CUtlVector< CScriptUniformRandomStream* > &Get_sm_UniformStreams() { return *reinterpret_cast<CUtlVector< CScriptUniformRandomStream* >*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CScriptUniformRandomStream")->m_static_fiels[0]->m_instance); }
+};
+
+// Aligment: 24
+// Size: 1032
+class CBasePlayerWeaponVData
+{
+public:
+	// MPropertyFriendlyName "Weapon Entity Name"
+	// MPropertyDescription "The name of the weapon entity to spawn for this NPC weapon."
+	CUtlString m_szClassName; // 0x10
+	// MPropertyFriendlyName "Name"
+	// MPropertyDescription "Localization token for name"
+	CUtlString m_szPrintName; // 0x18
+	// MPropertyFriendlyName "Model"
+	// MPropertyDescription "Model used on the ground or held by an entity"
+	// MPropertyGroupName "Visuals"
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szWorldModel; // 0x20
+	// MPropertyFriendlyName "Right Handed"
+	// MPropertyDescription "Was the weapon was built right-handed?"
+	// MPropertyGroupName "Visuals"
+	bool m_bBuiltRightHanded; // 0x100
+	// MPropertyFriendlyName "Allow Flipping"
+	// MPropertyDescription "Allows flipping the model, regardless of whether it is built left or right handed"
+	// MPropertyGroupName "Visuals"
+	bool m_bAllowFlipping; // 0x101
+	// MPropertySuppressField
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szViewModel; // 0x108
+	// MPropertySuppressField
+	CUtlString m_szAnimationPrefix; // 0x1e8
+	// MPropertyFriendlyName "Muzzle Flash Particle"
+	// MPropertyDescription "Effect when firing this weapon"
+	// MPropertyGroupName "Visuals"
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashParticle; // 0x1f0
+	// MPropertyFriendlyName "Tracer Particle"
+	// MPropertyDescription "Effect to actually fire into the world from this weapon"
+	// MPropertyGroupName "Visuals"
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szTracerParticle; // 0x2d0
+	// MPropertyFriendlyName "Item Flags"
+	ItemFlagTypes_t m_iFlags; // 0x3b0
+	// MPropertyFriendlyName "Is Melee Weapon"
+	bool m_bMeleeWeapon; // 0x3b1
+	// MPropertyFriendlyName "Primary Ammo Type"
+	// MPropertyAttributeEditor "VDataChoice( scripts/ammo.vdata )"
+	// MPropertyGroupName "Ammo"
+	// MPropertyCustomFGDType
+	AmmoIndex_t m_nPrimaryAmmoType; // 0x3b2
+	// MPropertyFriendlyName "Secondary Ammo Type"
+	// MPropertyAttributeEditor "VDataChoice( scripts/ammo.vdata )"
+	// MPropertyGroupName "Ammo"
+	// MPropertyCustomFGDType
+	AmmoIndex_t m_nSecondaryAmmoType; // 0x3b3
+	// MPropertyFriendlyName "Primary Clip Size"
+	// MPropertyDescription "How many bullets this gun can fire before it reloads (0 if no clip)"
+	// MPropertyAttributeRange "0 255"
+	// MDefaultString
+	// MPropertyGroupName "Ammo"
+	int32_t m_iMaxClip1; // 0x3b4
+	// MPropertyFriendlyName "Secondary Clip Size"
+	// MPropertyDescription "How many secondary bullets this gun can fire before it reloads (0 if no clip)"
+	// MDefaultString
+	// MPropertyGroupName "Ammo"
+	// MPropertyAttributeRange "0 255"
+	int32_t m_iMaxClip2; // 0x3b8
+	// MPropertyFriendlyName "Primary Initial Clip (-1 means use clip size)"
+	// MDefaultString
+	// MPropertyGroupName "Ammo"
+	// MPropertyAttributeRange "-1 255"
+	int32_t m_iDefaultClip1; // 0x3bc
+	// MPropertyFriendlyName "Secondary Initial Clip (-1 means use clip size)"
+	// MDefaultString
+	// MPropertyGroupName "Ammo"
+	// MPropertyAttributeRange "-1 255"
+	int32_t m_iDefaultClip2; // 0x3c0
+	// MPropertyFriendlyName "HUD Bucket"
+	// MPropertyDescription "Which 'column' to display this weapon in the HUD"
+	// MPropertyGroupName "UI"
+	int32_t m_iSlot; // 0x3c4
+	// MPropertyFriendlyName "HUD Bucket Position"
+	// MPropertyDescription "Which 'row' to display this weapon in the HUD"
+	// MPropertyGroupName "UI"
+	int32_t m_iPosition; // 0x3c8
+	// MPropertyFriendlyName "Weight"
+	// MPropertyDescription "This value used to determine this weapon's importance in autoselection"
+	// MPropertyGroupName "UI"
+	int32_t m_iWeight; // 0x3cc
+	// MPropertyFriendlyName "Safe To Auto-Switch To"
+	// MPropertyDescription "Whether this weapon is safe to automatically switch to (should be false for eg. explosives that can the player may accidentally hurt themselves with)"
+	// MDefaultString
+	// MPropertyGroupName "UI"
+	bool m_bAutoSwitchTo; // 0x3d0
+	// MPropertyFriendlyName "Safe To Auto-Switch Away From"
+	// MDefaultString
+	// MPropertyGroupName "UI"
+	bool m_bAutoSwitchFrom; // 0x3d1
+	// MPropertyFriendlyName "Which rumble effect to use when fired? (xbox)"
+	// MDefaultString
+	// MPropertyGroupName "UI"
+	RumbleEffect_t m_iRumbleEffect; // 0x3d4
+	// MPropertyFriendlyName "Sounds"
+	// MKV3TransferName "SoundData"
+	CUtlMap< WeaponSound_t, CSoundEventName > m_aShootSounds; // 0x3e0
 };
 
 // Aligment: 5
-// Size: 2752
-class CPhysicsPropRespawnable : public CPhysicsProp, CBreakableProp, CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Size: 56
+struct AmmoTypeInfo_t
 {
 public:
-	Vector m_vOriginalSpawnOrigin; // 0xa88
-	QAngle m_vOriginalSpawnAngles; // 0xa94
-	Vector m_vOriginalMins; // 0xaa0
-	Vector m_vOriginalMaxs; // 0xaac
-	float m_flRespawnDuration; // 0xab8
+	// MPropertyFriendlyName "Max Carry Amount"
+	int32_t m_nMaxCarry; // 0x10
+	// MPropertyFriendlyName "Water Splash Size"
+	CRangeInt m_nSplashSize; // 0x1c
+	// MPropertyFriendlyName "Flags"
+	AmmoFlags_t m_nFlags; // 0x24
+	// MPropertyFriendlyName "Bullet Mass"
+	float m_flMass; // 0x28
+	// MPropertyFriendlyName "Bullet Speed"
+	CRangeFloat m_flSpeed; // 0x2c
 };
 
-// Aligment: 0
-// Size: 848
-class CFuncPropRespawnZone : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 3
-// Size: 864
-class CPointHMDAnchor : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 15
+// Size: 176
+class CAnimationLayer
 {
 public:
 	// MNetworkEnable
 	// MNetworkEnable
-	bool m_bDisabled; // 0x350
+	// MNetworkChangeCallback "animationLayerOpChanged"
+	CNetworkedSequenceOperation m_op; // 0x18
 	// MNetworkEnable
 	// MNetworkEnable
-	float m_flEnableTime; // 0x354
-	// MNetworkEnable
+	// MNetworkChangeCallback "animationLayerOrderChanged"
+	int32_t m_nOrder; // 0x58
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	int32_t m_nPlayerIndex; // 0x358
+	// MNetworkMinValue "-4"
+	// MNetworkMaxValue "12"
+	// MNetworkEncodeFlags
+	// MNetworkSendProxyRecipientsFilter
+	CNetworkedQuantizedFloat m_flPlaybackRate; // 0x60
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkSendProxyRecipientsFilter
+	bool m_bLooping; // 0x78
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "64"
+	// MNetworkChangeCallback "animationLayerCycleReset"
+	// MNetworkSendProxyRecipientsFilter
+	int32_t m_nNewSequenceParity; // 0x7c
+	// MNetworkDisable
+	int32_t m_nFlags; // 0x80
+	// MNetworkDisable
+	bool m_bSequenceFinished; // 0x84
+	// MNetworkDisable
+	float m_flKillRate; // 0x88
+	// MNetworkDisable
+	float m_flKillDelay; // 0x8c
+	// MNetworkDisable
+	float m_flLayerAnimtime; // 0x90
+	// MNetworkDisable
+	float m_flLayerFadeOuttime; // 0x94
+	// MNetworkDisable
+	int32_t m_nActivity; // 0x98
+	// MNetworkDisable
+	int32_t m_nPriority; // 0x9c
+	// MNetworkDisable
+	float m_flLastEventCycle; // 0xa0
+	// MNetworkDisable
+	float m_flLastAccess; // 0xa4
 };
 
-// Aligment: 0
-// Size: 864
-class CPointHMDAnchorOverride : public CPointHMDAnchor, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 2
+// Size: 48
+struct CBaseAnimatingEasingFloat_t
 {
 public:
-// <no members described>
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlString m_GraphParameterName; // 0x8
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flGoal; // 0x28
 };
 
-// Aligment: 9
-// Size: 1768
-class CPropVRTrackedObject : public CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 1
+// Size: 56
+struct CBaseAnimatingEasings_t
 {
 public:
-	bool m_bShouldBePhysicallyConstrained; // 0x690
-	bool m_bFoundInitialSafeLocation; // 0x691
 	// MNetworkEnable
-	bool m_bIsTracking; // 0x6b0
 	// MNetworkEnable
-	Vector m_vTrackedPosition; // 0x6b4
+	CBaseAnimatingEasingFloat_t m_IKMasterBlendAmountEasing; // 0x8
+};
+
+// Aligment: 21
+// Size: 240
+struct handposepair_t
+{
+public:
+	matrix3x4_t[2] m_matHandOffset; // 0x0
+	Vector[2] m_vMaxExtentOrigin; // 0x60
+	Vector[2] m_vMinExtentOrigin; // 0x78
+	Vector[2] m_vRotationAxisEndpoints; // 0x90
+	float32[5] m_flHandPoseParams; // 0xa8
+	CUtlSymbolLarge m_poseSequenceName; // 0xc0
+	int32_t m_nUseRange; // 0xc8
+	int32_t m_iBone; // 0xcc
+	float m_flUseAnglesRange; // 0xd0
+	float m_flPivotMin; // 0xd4
+	float m_flPivotMax; // 0xd8
+	float m_flRotateMin; // 0xdc
+	float m_flRotateMax; // 0xe0
+	bool m_bHasExtent; // 0xe4
+	bool m_bHasRotation; // 0xe5
+	bool m_bAllowFlip; // 0xe6
+	bool m_bConformFingers; // 0xe7
+	bool m_bSqueezable; // 0xe8
+	bool m_bSqueezeTarget; // 0xe9
+	bool m_bGlobal; // 0xea
+	bool m_bHandPoseEntityData; // 0xeb
+};
+
+// Aligment: 2
+// Size: 40
+struct PhysicsRagdollPose_t
+{
+public:
 	// MNetworkEnable
-	QAngle m_qTrackedAngles; // 0x6c0
 	// MNetworkEnable
-	Vector m_vPhysicallyConstrainedPosition; // 0x6cc
-	// MNetworkEnable
-	QAngle m_qPhysicallyConstrainedAngles; // 0x6d8
-	// MNetworkEnable
-	bool m_bClientIsAuthoritativeForTransform; // 0x6e4
-	// MNetworkEnable
-	bool m_bIsInContact; // 0x6e5
+	// MNetworkChangeCallback "OnTransformChanged"
+	CUtlVector< CTransform > m_Transforms; // 0x8
+	bool m_bDirty; // 0x20
+};
+
+// Aligment: 1
+// Size: 4
+struct ModelConfigHandle_t
+{
+public:
+	uint32_t m_nBoxedTypeSafeInt; // 0x0
 };
 
 // Aligment: 4
-// Size: 1808
-class CPropHMDAvatar : public CPropVRTrackedObject, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Size: 72
+struct ActiveModelConfig_t
 {
 public:
 	// MNetworkEnable
 	// MNetworkEnable
-	int32[2] m_hLiteralControllerSlots; // 0x6e8
+	ModelConfigHandle_t m_Handle; // 0xc
 	// MNetworkEnable
 	// MNetworkEnable
-	int32[2] m_hLogicalControllerSlots; // 0x6f0
+	CUtlSymbolLarge m_Name; // 0x10
 	// MNetworkEnable
 	// MNetworkEnable
-	CHandle< CPropVRHand >[4] m_hVRControllers; // 0x6f8
+	CUtlVector< CHandle< CBaseModelEntity > > m_AssociatedEntities; // 0x18
 	// MNetworkEnable
 	// MNetworkEnable
-	CHandle< CPointWorldText > m_hCloseCaption; // 0x708
+	CUtlVector< CUtlSymbolLarge > m_AssociatedEntityNames; // 0x30
 };
 
-// Aligment: 5
-// Size: 52
-struct HandHistoryInfo_t
+// Aligment: 7
+// Size: 104
+class CNetworkOriginCellCoordQuantizedVector
 {
 public:
-	Vector m_vVelocity; // 0x0
-	Vector m_vFilteredVelocity; // 0xc
-	Vector m_vFilteredThrowVel; // 0x18
-	Vector m_vPosition; // 0x24
-	float m_flSampleTime; // 0x30
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnCellChanged"
+	// MNetworkPriority "32"
+	// MNetworkSerializer "cellx"
+	uint16_t m_cellX; // 0x18
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnCellChanged"
+	// MNetworkPriority "32"
+	// MNetworkSerializer "celly"
+	uint16_t m_cellY; // 0x1a
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnCellChanged"
+	// MNetworkPriority "32"
+	// MNetworkSerializer "cellz"
+	uint16_t m_cellZ; // 0x1c
+	// MNetworkEnable
+	uint16_t m_nOutsideWorld; // 0x1e
+	// MNetworkBitCount "15"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1024"
+	// MNetworkEncodeFlags
+	// MNetworkChangeCallback "OnCellChanged"
+	// MNetworkPriority "32"
+	// MNetworkSerializer "posx"
+	CNetworkedQuantizedFloat m_vecX; // 0x20
+	// MNetworkBitCount "15"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1024"
+	// MNetworkEncodeFlags
+	// MNetworkChangeCallback "OnCellChanged"
+	// MNetworkPriority "32"
+	// MNetworkSerializer "posy"
+	CNetworkedQuantizedFloat m_vecY; // 0x38
+	// MNetworkBitCount "15"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1024"
+	// MNetworkEncodeFlags
+	// MNetworkChangeCallback "OnCellChanged"
+	// MNetworkPriority "32"
+	// MNetworkSerializer "posz"
+	CNetworkedQuantizedFloat m_vecZ; // 0x50
 };
 
-// Aligment: 39
-// Size: 2456
-class CPropVRHand : public CPropVRTrackedObject, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 3
+// Size: 96
+class CNetworkOriginQuantizedVector
 {
 public:
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CBaseVRHandAttachment > m_hActiveHandAttachment; // 0x720
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CPropHMDAvatar > m_hHMDAvatar; // 0x724
-	// MNetworkEnable
-	bool m_bVrSkeletonActive; // 0x728
-	// MNetworkEnable
-	int32_t m_nVrBoneCount; // 0x72c
-	// MNetworkEnable
-	uint32_t m_unVrCompressedBoneTransformsSize; // 0x730
-	// MNetworkEnable
-	uint8[64] m_vrCompressedBoneTransforms; // 0x734
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkTypeAlias "CBaseVRHandAttachmentHandle"
-	CUtlVector< CHandle< CBaseVRHandAttachment > > m_hAttachments; // 0x778
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bInitialized; // 0x790
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bIsInView; // 0x791
-	// MNetworkEnable
-	// MNetworkEnable
-	int32_t m_nHandID; // 0x794
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flTriggerAnalogValue; // 0x798
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flGripAnalogValue; // 0x79c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFinger0; // 0x7a0
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFinger1; // 0x7a4
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFinger2; // 0x7a8
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFinger3; // 0x7ac
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFinger4; // 0x7b0
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFingerSplay0; // 0x7b4
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFingerSplay1; // 0x7b8
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFingerSplay2; // 0x7bc
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFingerSplay3; // 0x7c0
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flTrackpadAnalogValueX; // 0x7c4
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flTrackpadAnalogValueY; // 0x7c8
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flJoystickAnalogValueX; // 0x7cc
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flJoystickAnalogValueY; // 0x7d0
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bCanPerformUse; // 0x7d4
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bTipTransformInitialized; // 0x7d5
-	// MNetworkEnable
-	// MNetworkEnable
-	Vector m_localTipOrigin; // 0x7d8
-	// MNetworkEnable
-	// MNetworkEnable
-	QAngle m_localTipAngles; // 0x7e4
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flHapticPulseTime; // 0x7f0
-	// MNetworkEnable
-	// MNetworkEnable
-	int16_t m_nHapticPulseInterval; // 0x7f4
-	CInteractionManager m_InteractionMgr; // 0x7f8
-	matrix3x4_t m_matUseTransform; // 0x8d0
-	uint8_t m_nAttachUseIndex; // 0x900
-	matrix3x4_t m_matHoldTransform; // 0x904
-	uint8_t m_nAttachHoldIndex; // 0x934
-	matrix3x4_t m_matHoverTransform; // 0x938
-	uint8_t m_nAttachHoverIndex; // 0x968
-	// MNetworkEnable
-	// MNetworkEnable
-	eLiteralHandType m_LiteralHandType; // 0x96c
+	// MNetworkBitCount "19"
+	// MNetworkMinValue "-16384"
+	// MNetworkMaxValue "16384"
+	// MNetworkEncodeFlags
+	// MNetworkChangeCallback "CNetworkOriginQuantizedVector"
+	CNetworkedQuantizedFloat m_vecX; // 0x18
+	// MNetworkBitCount "19"
+	// MNetworkMinValue "-16384"
+	// MNetworkMaxValue "16384"
+	// MNetworkEncodeFlags
+	// MNetworkChangeCallback "CNetworkOriginQuantizedVector"
+	CNetworkedQuantizedFloat m_vecY; // 0x30
+	// MNetworkBitCount "19"
+	// MNetworkMinValue "-16384"
+	// MNetworkMaxValue "16384"
+	// MNetworkEncodeFlags
+	// MNetworkChangeCallback "CNetworkOriginQuantizedVector"
+	CNetworkedQuantizedFloat m_vecZ; // 0x48
+};
+
+// Aligment: 3
+// Size: 96
+class CNetworkVelocityVector
+{
+public:
+	// MNetworkBitCount "18"
+	// MNetworkMinValue "-4096"
+	// MNetworkMaxValue "4096"
+	// MNetworkEncodeFlags
+	// MNetworkChangeCallback "CNetworkVelocityVector"
+	CNetworkedQuantizedFloat m_vecX; // 0x18
+	// MNetworkBitCount "18"
+	// MNetworkMinValue "-4096"
+	// MNetworkMaxValue "4096"
+	// MNetworkEncodeFlags
+	// MNetworkChangeCallback "CNetworkVelocityVector"
+	CNetworkedQuantizedFloat m_vecY; // 0x30
+	// MNetworkBitCount "18"
+	// MNetworkMinValue "-4096"
+	// MNetworkMaxValue "4096"
+	// MNetworkEncodeFlags
+	// MNetworkChangeCallback "CNetworkVelocityVector"
+	CNetworkedQuantizedFloat m_vecZ; // 0x48
+};
+
+// Aligment: 3
+// Size: 96
+class CNetworkViewOffsetVector
+{
+public:
+	// MNetworkBitCount "10"
+	// MNetworkMinValue "-64"
+	// MNetworkMaxValue "64"
+	// MNetworkEncodeFlags
+	// MNetworkChangeCallback "CNetworkViewOffsetVector"
+	CNetworkedQuantizedFloat m_vecX; // 0x18
+	// MNetworkBitCount "10"
+	// MNetworkMinValue "-64"
+	// MNetworkMaxValue "64"
+	// MNetworkEncodeFlags
+	// MNetworkChangeCallback "CNetworkViewOffsetVector"
+	CNetworkedQuantizedFloat m_vecY; // 0x30
+	// MNetworkBitCount "20"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "128"
+	// MNetworkEncodeFlags
+	// MNetworkChangeCallback "CNetworkViewOffsetVector"
+	CNetworkedQuantizedFloat m_vecZ; // 0x48
 };
 
 // Aligment: 2
 // Size: 16
-struct prevent_interaction_t
+class CGameSceneNodeHandle
 {
 public:
-	CHandle< CBaseEntity > m_hEntity; // 0x8
-	float m_flUntilTime; // 0xc
+	// MNetworkEnable
+	CEntityHandle m_hOwner; // 0x8
+	// MNetworkEnable
+	CUtlStringToken m_name; // 0xc
 };
 
-// Aligment: 12
-// Size: 216
-class CInteractionManager
+// Aligment: 32
+// Size: 336
+class CGameSceneNode
 {
 public:
-	interactions_t m_nActiveInteraction; // 0x8
-	matrix3x4_t m_matHoldTransform; // 0xc
-	CHandle< CBaseAnimating > m_hSelf; // 0x3c
-	CHandle< CBasePlayer > m_hPlayer; // 0x40
-	CHandle< CBaseAnimating > m_hInteractionTarget; // 0x44
-	matrix3x4_t m_mInteractionTransformInit; // 0x48
-	matrix3x4_t m_mInteractionTransformTarget; // 0x78
-	float m_flInteractionLerp; // 0xa8
-	bool[8] m_bSelfInteractionRequirementMet; // 0xac
-	bool[8] m_bInteractionsDisabled; // 0xb4
-	bool m_bAllInteractionsDisabled; // 0xbc
-	CUtlVector< prevent_interaction_t > m_vecPreventionEntities; // 0xc0
+	// MNetworkDisable
+	CTransform m_nodeToWorld; // 0x10
+	// MNetworkDisable
+	CEntityInstance* m_pOwner; // 0x30
+	// MNetworkDisable
+	CGameSceneNode* m_pParent; // 0x38
+	// MNetworkDisable
+	CGameSceneNode* m_pChild; // 0x40
+	// MNetworkDisable
+	CGameSceneNode* m_pNextSibling; // 0x48
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkSerializer "gameSceneNode"
+	// MNetworkChangeCallback "gameSceneNodeHierarchyParentChanged"
+	// MNetworkPriority "64"
+	// MNetworkVarEmbeddedFieldOffsetDelta "8"
+	CGameSceneNodeHandle m_hParent; // 0x68
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "64"
+	// MNetworkUserGroup "Origin"
+	// MNetworkChangeCallback "gameSceneNodeLocalOriginChanged"
+	CNetworkOriginCellCoordQuantizedVector m_vecOrigin; // 0x78
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "64"
+	// MNetworkSerializer "gameSceneNodeStepSimulationAnglesSerializer"
+	// MNetworkChangeCallback "gameSceneNodeLocalAnglesChanged"
+	QAngle m_angRotation; // 0xe8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "gameSceneNodeLocalScaleChanged"
+	// MNetworkPriority "64"
+	float m_flScale; // 0xf4
+	// MNetworkDisable
+	Vector m_vecAbsOrigin; // 0xf8
+	// MNetworkDisable
+	QAngle m_angAbsRotation; // 0x104
+	// MNetworkDisable
+	float m_flAbsScale; // 0x110
+	// MNetworkDisable
+	int16_t m_nParentAttachmentOrBone; // 0x114
+	// MNetworkDisable
+	bool m_bDebugAbsOriginChanges; // 0x116
+	// MNetworkDisable
+	bool m_bDormant; // 0x117
+	// MNetworkDisable
+	bool m_bForceParentToBeNetworked; // 0x118
+	// MNetworkDisable
+	bitfield:1 m_bDirtyHierarchy; // 0x0
+	// MNetworkDisable
+	bitfield:1 m_bDirtyBoneMergeInfo; // 0x0
+	// MNetworkDisable
+	bitfield:1 m_bNetworkedPositionChanged; // 0x0
+	// MNetworkDisable
+	bitfield:1 m_bNetworkedAnglesChanged; // 0x0
+	// MNetworkDisable
+	bitfield:1 m_bNetworkedScaleChanged; // 0x0
+	// MNetworkDisable
+	bitfield:1 m_bWillBeCallingPostDataUpdate; // 0x0
+	// MNetworkDisable
+	bitfield:1 m_bNotifyBoneTransformsChanged; // 0x0
+	// MNetworkDisable
+	bitfield:2 m_nLatchAbsOrigin; // 0x0
+	// MNetworkDisable
+	bitfield:1 m_bDirtyBoneMergeBoneToRoot; // 0x0
+	// MNetworkDisable
+	uint8_t m_nHierarchicalDepth; // 0x11b
+	// MNetworkDisable
+	uint8_t m_nHierarchyType; // 0x11c
+	// MNetworkDisable
+	uint8_t m_nDoNotSetAnimTimeInInvalidatePhysicsCount; // 0x11d
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlStringToken m_name; // 0x120
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "gameSceneNodeHierarchyAttachmentChanged"
+	CUtlStringToken m_hierarchyAttachName; // 0x138
+	// MNetworkDisable
+	float m_flZOffset; // 0x13c
+	// MNetworkDisable
+	Vector m_vRenderOrigin; // 0x140
 };
 
-// Aligment: 15
-// Size: 224
-class CVRHandAttachmentInput
+// Aligment: 10
+// Size: 96
+class JiggleData
 {
 public:
-	uint64_t m_nButtons; // 0x0
-	uint64_t m_afButtonPressed; // 0x8
-	uint64_t m_afButtonReleased; // 0x10
-	float m_flTriggerAnalogValue; // 0x18
-	float m_flGripAnalogValue; // 0x1c
-	float m_flFinger0; // 0x20
-	float m_flFinger1; // 0x24
-	float m_flFinger2; // 0x28
-	float m_flFinger3; // 0x2c
-	float m_flFinger4; // 0x30
-	float m_flTrackpadAnalogValueX; // 0x34
-	float m_flTrackpadAnalogValueY; // 0x38
-	float m_flJoystickAnalogValueX; // 0x3c
-	float m_flJoystickAnalogValueY; // 0x40
-	CPropVRHand* m_pHand; // 0xd8
-};
-
-// Aligment: 4
-// Size: 1736
-class CBaseVRHandAttachment : public CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CEntityIOOutput m_OnAttachedToHand; // 0x670
-	CEntityIOOutput m_OnDetachedFromHand; // 0x698
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CPropVRHand > m_hAttachedHand; // 0x6c0
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bIsAttached; // 0x6c4
-};
-
-// Aligment: 0
-// Size: 1736
-class CVRHandModelOverride : public CBaseVRHandAttachment, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 40
-// Size: 1256
-class CPointValueRemapper : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bDisabled; // 0x350
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bUpdateOnClient; // 0x351
-	// MNetworkEnable
-	// MNetworkEnable
-	ValueRemapperInputType_t m_nInputType; // 0x354
-	CUtlSymbolLarge m_iszRemapLineStartName; // 0x358
-	CUtlSymbolLarge m_iszRemapLineEndName; // 0x360
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CBaseEntity > m_hRemapLineStart; // 0x368
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CBaseEntity > m_hRemapLineEnd; // 0x36c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flMaximumChangePerSecond; // 0x370
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flDisengageDistance; // 0x374
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flEngageDistance; // 0x378
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bRequiresUseKey; // 0x37c
-	// MNetworkEnable
-	// MNetworkEnable
-	ValueRemapperOutputType_t m_nOutputType; // 0x380
-	CUtlSymbolLarge m_iszOutputEntityName; // 0x388
-	CUtlSymbolLarge m_iszOutputEntity2Name; // 0x390
-	CUtlSymbolLarge m_iszOutputEntity3Name; // 0x398
-	CUtlSymbolLarge m_iszOutputEntity4Name; // 0x3a0
-	// MNetworkEnable
-	// MNetworkEnable
-	CUtlVector< CHandle< CBaseEntity > > m_hOutputEntities; // 0x3a8
-	// MNetworkEnable
-	// MNetworkEnable
-	ValueRemapperHapticsType_t m_nHapticsType; // 0x3c0
-	// MNetworkEnable
-	// MNetworkEnable
-	ValueRemapperMomentumType_t m_nMomentumType; // 0x3c4
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flMomentumModifier; // 0x3c8
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flSnapValue; // 0x3cc
-	float m_flCurrentMomentum; // 0x3d0
-	// MNetworkEnable
-	// MNetworkEnable
-	ValueRemapperRatchetType_t m_nRatchetType; // 0x3d4
-	float m_flRatchetOffset; // 0x3d8
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flInputOffset; // 0x3dc
-	bool m_bEngaged; // 0x3e0
-	bool m_bFirstUpdate; // 0x3e1
-	float m_flPreviousValue; // 0x3e4
-	float m_flPreviousUpdateTickTime; // 0x3e8
-	float m_flCustomOutputValue; // 0x3ec
-	CUtlSymbolLarge m_iszSoundEngage; // 0x3f0
-	CUtlSymbolLarge m_iszSoundDisengage; // 0x3f8
-	CUtlSymbolLarge m_iszSoundReachedValueZero; // 0x400
-	CUtlSymbolLarge m_iszSoundReachedValueOne; // 0x408
-	CUtlSymbolLarge m_iszSoundMovingLoop; // 0x410
-	CEntityIOOutput m_OnReachedValueZero; // 0x420
-	CEntityIOOutput m_OnReachedValueOne; // 0x448
-	CEntityIOOutput m_OnReachedValueCustom; // 0x470
-	CEntityIOOutput m_OnEngage; // 0x498
-	CEntityIOOutput m_OnDisengage; // 0x4c0
-};
-
-// Aligment: 3
-// Size: 864
-class CRagdollManager : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "6"
-	int8_t m_iCurrentMaxRagdollCount; // 0x350
-	int32_t m_iMaxRagdollCount; // 0x354
-	bool m_bSaveImportant; // 0x358
-};
-
-// Aligment: 21
-// Size: 1440
-class CRopeKeyframe : public CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "10"
-	uint16_t m_RopeFlags; // 0x550
-	CUtlSymbolLarge m_iNextLinkName; // 0x558
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "12"
-	int16_t m_Slack; // 0x560
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_Width; // 0x564
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "10"
-	// MNetworkMinValue "0.1"
-	// MNetworkMaxValue "10"
-	float m_TextureScale; // 0x568
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "4"
-	uint8_t m_nSegments; // 0x56c
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bConstrainBetweenEndpoints; // 0x56d
-	CUtlSymbolLarge m_strRopeMaterialModel; // 0x570
-	// MNetworkEnable
-	// MNetworkEnable
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_iRopeMaterialModelIndex; // 0x578
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "4"
-	uint8_t m_Subdiv; // 0x580
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "8"
-	uint8_t m_nChangeCount; // 0x581
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "15"
-	int16_t m_RopeLength; // 0x582
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "4"
-	uint8_t m_fLockedPoints; // 0x584
-	bool m_bCreatedFromMapFile; // 0x585
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flScrollSpeed; // 0x588
-	bool m_bStartPointValid; // 0x58c
-	bool m_bEndPointValid; // 0x58d
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CBaseEntity > m_hStartPoint; // 0x590
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CBaseEntity > m_hEndPoint; // 0x594
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "5"
-	int16_t m_iStartAttachment; // 0x598
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "5"
-	int16_t m_iEndAttachment; // 0x59a
+	int32_t bone; // 0x0
+	int32_t id; // 0x4
+	float lastUpdate; // 0x8
+	Vector basePos; // 0xc
+	Vector baseLastPos; // 0x18
+	Vector baseVel; // 0x24
+	Vector baseAccel; // 0x30
+	Vector tipPos; // 0x3c
+	Vector tipVel; // 0x48
+	Vector tipAccel; // 0x54
 };
 
 // Aligment: 0
-// Size: 1440
-class CRopeKeyframeAlias_move_rope : public CRopeKeyframe, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Size: 40
+class CJiggleBones
 {
 public:
 // <no members described>
-};
-
-// Aligment: 81
-// Size: 2032
-class CSceneEntity : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlSymbolLarge m_iszSceneFile; // 0x358
-	CUtlSymbolLarge m_iszResumeSceneFile; // 0x360
-	CUtlSymbolLarge m_iszTarget1; // 0x368
-	CUtlSymbolLarge m_iszTarget2; // 0x370
-	CUtlSymbolLarge m_iszTarget3; // 0x378
-	CUtlSymbolLarge m_iszTarget4; // 0x380
-	CUtlSymbolLarge m_iszTarget5; // 0x388
-	CUtlSymbolLarge m_iszTarget6; // 0x390
-	CUtlSymbolLarge m_iszTarget7; // 0x398
-	CUtlSymbolLarge m_iszTarget8; // 0x3a0
-	CHandle< CBaseEntity > m_hTarget1; // 0x3a8
-	CHandle< CBaseEntity > m_hTarget2; // 0x3ac
-	CHandle< CBaseEntity > m_hTarget3; // 0x3b0
-	CHandle< CBaseEntity > m_hTarget4; // 0x3b4
-	CHandle< CBaseEntity > m_hTarget5; // 0x3b8
-	CHandle< CBaseEntity > m_hTarget6; // 0x3bc
-	CHandle< CBaseEntity > m_hTarget7; // 0x3c0
-	CHandle< CBaseEntity > m_hTarget8; // 0x3c4
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bIsPlayingBack; // 0x3c8
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bPaused; // 0x3c9
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bMultiplayer; // 0x3ca
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bAutogenerated; // 0x3cb
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flForceClientTime; // 0x3cc
-	float m_flCurrentTime; // 0x3d0
-	float m_flFrameTime; // 0x3d4
-	bool m_bCancelAtNextInterrupt; // 0x3d8
-	float m_fPitch; // 0x3dc
-	bool m_bAutomated; // 0x3e0
-	int32_t m_nAutomatedAction; // 0x3e4
-	float m_flAutomationDelay; // 0x3e8
-	float m_flAutomationTime; // 0x3ec
-	CHandle< CBaseEntity > m_hWaitingForThisResumeScene; // 0x3f0
-	bool m_bWaitingForResumeScene; // 0x3f4
-	bool m_bPausedViaInput; // 0x3f5
-	bool m_bPauseAtNextInterrupt; // 0x3f6
-	bool m_bWaitingForActor; // 0x3f7
-	bool m_bWaitingForInterrupt; // 0x3f8
-	bool m_bInterruptedActorsScenes; // 0x3f9
-	bool m_bBreakOnNonIdle; // 0x3fa
-	// MNetworkEnable
-	// MNetworkEnable
-	CUtlVector< CHandle< CBaseFlex > > m_hActorList; // 0x400
-	CUtlVector< CHandle< CBaseEntity > > m_hRemoveActorList; // 0x418
-	int32_t m_nSceneFlushCounter; // 0x438
-	// MNetworkEnable
-	// MNetworkEnable
-	uint16_t m_nSceneStringIndex; // 0x43c
-	CEntityIOOutput m_OnStart; // 0x440
-	CEntityIOOutput m_OnCompletion; // 0x468
-	CEntityIOOutput m_OnCanceled; // 0x490
-	CEntityIOOutput m_OnPaused; // 0x4b8
-	CEntityIOOutput m_OnResumed; // 0x4e0
-	CEntityIOOutput m_OnTrigger1; // 0x508
-	CEntityIOOutput m_OnTrigger2; // 0x530
-	CEntityIOOutput m_OnTrigger3; // 0x558
-	CEntityIOOutput m_OnTrigger4; // 0x580
-	CEntityIOOutput m_OnTrigger5; // 0x5a8
-	CEntityIOOutput m_OnTrigger6; // 0x5d0
-	CEntityIOOutput m_OnTrigger7; // 0x5f8
-	CEntityIOOutput m_OnTrigger8; // 0x620
-	CEntityIOOutput m_OnTrigger9; // 0x648
-	CEntityIOOutput m_OnTrigger10; // 0x670
-	CEntityIOOutput m_OnTrigger11; // 0x698
-	CEntityIOOutput m_OnTrigger12; // 0x6c0
-	CEntityIOOutput m_OnTrigger13; // 0x6e8
-	CEntityIOOutput m_OnTrigger14; // 0x710
-	CEntityIOOutput m_OnTrigger15; // 0x738
-	CEntityIOOutput m_OnTrigger16; // 0x760
-	CHandle< CSceneEntity > m_hInterruptScene; // 0x788
-	int32_t m_nInterruptCount; // 0x78c
-	bool m_bSceneMissing; // 0x790
-	bool m_bInterrupted; // 0x791
-	bool m_bCompletedEarly; // 0x792
-	bool m_bInterruptSceneFinished; // 0x793
-	bool m_bRestoring; // 0x794
-	bool m_bGenerated; // 0x795
-	CUtlVector< CHandle< CSceneEntity > > m_hNotifySceneCompletion; // 0x798
-	CUtlVector< CHandle< CSceneListManager > > m_hListManagers; // 0x7b0
-	CUtlSymbolLarge m_iszSoundName; // 0x7c8
-	CHandle< CBaseFlex > m_hActor; // 0x7d0
-	CHandle< CBaseEntity > m_hActivator; // 0x7d4
-	CHandle< CBaseEntity > m_hCamera; // 0x7d8
-	int32_t m_BusyActor; // 0x7dc
-	int32_t m_iPlayerDeathBehavior; // 0x7e0
-	CRecipientFilter* m_pRecipientFilter; // 0x7e8
-public:
-	static int32_t &Get_s_nSceneFlushCounter() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CSceneEntity")->m_static_fiels[0]->m_instance); }
-};
-
-// Aligment: 0
-// Size: 2032
-class CSceneEntityAlias_logic_choreographed_scene : public CSceneEntity, CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 6
-// Size: 2312
-class CInstancedSceneEntity : public CSceneEntity, CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CHandle< CBaseEntity > m_hOwner; // 0x7f0
-	bool m_bHadOwner; // 0x7f4
-	float m_flPostSpeakDelay; // 0x7f8
-	float m_flPreDelay; // 0x7fc
-	char[260] m_szInstanceFilename; // 0x800
-	bool m_bIsBackground; // 0x904
-};
-
-// Aligment: 3
-// Size: 1064
-class CSceneListManager : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlVector< CHandle< CSceneListManager > > m_hListManagers; // 0x350
-	CUtlSymbolLarge[16] m_iszScenes; // 0x368
-	CHandle< CBaseEntity >[16] m_hScenes; // 0x3e8
-};
-
-// Aligment: 5
-// Size: 872
-class CShadowControl : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	Vector m_shadowDirection; // 0x350
-	// MNetworkEnable
-	// MNetworkEnable
-	Color m_shadowColor; // 0x35c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flShadowMaxDist; // 0x360
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bDisableShadows; // 0x364
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bEnableLocalLightShadows; // 0x365
 };
 
 // Aligment: 8
-// Size: 920
-class CSoundOpvarSetEntity : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Size: 56
+class CPlayerState
 {
 public:
-	CUtlSymbolLarge m_iszStackName; // 0x358
-	CUtlSymbolLarge m_iszOperatorName; // 0x360
-	CUtlSymbolLarge m_iszOpvarName; // 0x368
-	int32_t m_nOpvarType; // 0x370
-	int32_t m_nOpvarIndex; // 0x374
-	float m_flOpvarValue; // 0x378
-	CUtlSymbolLarge m_OpvarValueString; // 0x380
-	bool m_bSetOnSpawn; // 0x388
+	bool deadflag; // 0x8
+	bool hltv; // 0x9
+	QAngle v_angle; // 0xc
+	CUtlSymbolLarge netname; // 0x18
+	int32_t fixangle; // 0x20
+	QAngle anglechange; // 0x24
+	int32_t frags; // 0x30
+	int32_t deaths; // 0x34
 };
 
-// Aligment: 19
-// Size: 1040
-class CSoundOpvarSetPointEntity : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 1
+// Size: 16
+class CSkeletonAnimationController
 {
 public:
-	CEntityIOOutput m_OnEnter; // 0x350
-	CEntityIOOutput m_OnExit; // 0x378
-	float m_flDistanceMin; // 0x3a0
-	float m_flDistanceMax; // 0x3a4
-	float m_flValSetOnDisable; // 0x3a8
-	bool m_bSetValueOnDisable; // 0x3ac
-	bool m_bDisabled; // 0x3ad
-	bool m_bAutoDisable; // 0x3ae
-	CEntityHandle m_hSource; // 0x3c8
-	CUtlSymbolLarge m_iszStackName; // 0x3d8
-	CUtlSymbolLarge m_iszOperatorName; // 0x3e0
-	CUtlSymbolLarge m_iszOpvarName; // 0x3e8
-	CUtlSymbolLarge m_iszSourceEntityName; // 0x3f0
-	int32_t m_iOpvarIndex; // 0x3f8
-	float m_flDistanceMapMin; // 0x3fc
-	float m_flDistanceMapMax; // 0x400
-	float m_flOcclusionRadius; // 0x404
-	float m_flOcclusionMin; // 0x408
-	float m_flOcclusionMax; // 0x40c
+	// MNetworkDisable
+	CSkeletonInstance* m_pSkeletonInstance; // 0x8
 };
 
-// Aligment: 9
-// Size: 1144
-class CSoundOpvarSetAABBEntity : public CSoundOpvarSetPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 8
+// Size: 64
+class CNetworkedSequenceOperation
 {
 public:
-	Vector m_vDistanceInnerMins; // 0x410
-	Vector m_vDistanceInnerMaxs; // 0x41c
-	Vector m_vDistanceOuterMins; // 0x428
-	Vector m_vDistanceOuterMaxs; // 0x434
-	int32_t m_nAABBDirection; // 0x440
-	Vector m_vInnerMins; // 0x444
-	Vector m_vInnerMaxs; // 0x450
-	Vector m_vOuterMins; // 0x45c
-	Vector m_vOuterMaxs; // 0x468
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkSerializer "minusone"
+	// MNetworkChangeCallback "sequenceOpSequenceChanged"
+	// MNetworkPriority "64"
+	HSequence m_hSequence; // 0x8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "15"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1"
+	// MNetworkEncodeFlags
+	// MNetworkPriority "64"
+	// MNetworkSendProxyRecipientsFilter
+	// MNetworkUserGroup "m_flCycle"
+	float m_flPrevCycle; // 0xc
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "15"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1"
+	// MNetworkEncodeFlags
+	// MNetworkPriority "64"
+	// MNetworkSendProxyRecipientsFilter
+	// MNetworkUserGroup "m_flCycle"
+	// MNetworkChangeCallback "sequenceOpCycleChanged"
+	float m_flCycle; // 0x10
+	// MNetworkEnable
+	// MNetworkBitCount "8"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1"
+	// MNetworkEncodeFlags
+	CNetworkedQuantizedFloat m_flWeight; // 0x18
+	// MNetworkDisable
+	bool m_bSequenceChangeNetworked; // 0x30
+	// MNetworkDisable
+	bool m_bDiscontinuity; // 0x31
+	// MNetworkDisable
+	float m_flPrevCycleFromDiscontinuity; // 0x34
+	// MNetworkDisable
+	float m_flPrevCycleForAnimEventDetection; // 0x38
+};
+
+// Aligment: 6
+// Size: 64
+class CNetworkedIKProceduralTargetContext
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nChainIndex; // 0x14
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nRuleIndex; // 0x18
+	// MNetworkEnable
+	// MNetworkEnable
+	Vector m_vTargetPosition; // 0x1c
+	// MNetworkEnable
+	// MNetworkEnable
+	Quaternion m_qTargetOrientation; // 0x28
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "96"
+	float m_flWeight; // 0x38
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bIsValid; // 0x3c
+};
+
+// Aligment: 1
+// Size: 80
+class CNetworkedIKContext
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< CNetworkedIKProceduralTargetContext > m_ProceduralTargetContexts; // 0x8
+};
+
+// Aligment: 8
+// Size: 576
+class CModelState
+{
+public:
+	// MNetworkEnable
+	// MNetworkChangeCallback "skeletonModelChanged"
+	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0xa0
+	// MNetworkDisable
+	CUtlSymbolLarge m_ModelName; // 0xa8
+	// MNetworkEnable
+	bool m_bClientClothCreationSuppressed; // 0xe8
+	// MNetworkEnable
+	// MNetworkChangeCallback "skeletonMeshGroupMaskChanged"
+	uint64_t m_MeshGroupMask; // 0x188
+	// MNetworkEnable
+	// MNetworkChangeCallback "skeletonMotionTypeChanged"
+	int8_t m_nIdealMotionType; // 0x22a
+	// MNetworkDisable
+	int8_t m_nForceLOD; // 0x22b
+	// MNetworkDisable
+	bool m_bIsJiggleBonesEnabled; // 0x22c
+	// MNetworkDisable
+	int8_t m_nClothUpdateFlags; // 0x22d
+};
+
+// Aligment: 12
+// Size: 1200
+class CSkeletonInstance : public CGameSceneNode
+{
+public:
+	// MNetworkEnable
+	CModelState m_modelState; // 0x160
+	// MNetworkEnable
+	// MNetworkChangeCallback "skeletonRenderingEnableChanged"
+	bool m_bIsRenderingEnabled; // 0x3a0
+	// MNetworkEnable
+	bool m_bIsAnimationEnabled; // 0x3a1
+	// MNetworkEnable
+	bool m_bUseParentRenderBounds; // 0x3a2
+	// MNetworkDisable
+	bool m_bEnableIK; // 0x3a3
+	// MNetworkDisable
+	bool m_bDisableSolidCollisionsForHierarchy; // 0x3a4
+	// MNetworkDisable
+	bitfield:1 m_bDirtyMotionType; // 0x0
+	// MNetworkDisable
+	bitfield:1 m_bIsGeneratingLatchedParentSpaceState; // 0x0
+	// MNetworkEnable
+	// MNetworkChangeCallback "skeletonMaterialGroupChanged"
+	CUtlStringToken m_materialGroup; // 0x3a8
+	// MNetworkEnable
+	// MNetworkEnable
+	uint8_t m_nHitboxSet; // 0x3ac
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flIkMasterBlendValueCache; // 0x3f8
+	// MNetworkEnable
+	// MNetworkEnable
+	CNetworkedIKContext m_NetworkedIKContext; // 0x400
+};
+
+// Aligment: 1
+// Size: 16
+class IntervalTimer
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_timestamp; // 0x8
+};
+
+// Aligment: 2
+// Size: 16
+class CountdownTimer
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_duration; // 0x8
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_timestamp; // 0xc
+};
+
+// Aligment: 7
+// Size: 616
+class CTimeline : public IntervalTimer
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	float32[64] m_flValues; // 0x10
+	// MNetworkEnable
+	// MNetworkEnable
+	int32[64] m_nValueCounts; // 0x110
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nBucketCount; // 0x210
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flInterval; // 0x214
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFinalValue; // 0x218
+	// MNetworkEnable
+	// MNetworkEnable
+	TimelineCompression_t m_nCompressionType; // 0x21c
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bStopped; // 0x220
+};
+
+// Aligment: 13
+// Size: 304
+class CAnimGraphNetworkedVariables
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "animationgraph"
+	// MNetworkChangeCallback "OnNetVarChanged"
+	// MNetworkAlias "m_BoolVariables"
+	CUtlVector< bool > m_NetBoolVariables; // 0x8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "animationgraph"
+	// MNetworkChangeCallback "OnNetVarChanged"
+	// MNetworkAlias "m_ByteVariables"
+	CUtlVector< uint8 > m_NetByteVariables; // 0x20
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "animationgraph"
+	// MNetworkChangeCallback "OnNetVarChanged"
+	// MNetworkAlias "m_IntVariables"
+	CUtlVector< int32 > m_NetIntVariables; // 0x38
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "animationgraph"
+	// MNetworkChangeCallback "OnNetVarChanged"
+	// MNetworkAlias "m_FloatVariables"
+	CUtlVector< float32 > m_NetFloatVariables; // 0x50
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "animationgraph"
+	// MNetworkChangeCallback "OnNetVarChanged"
+	// MNetworkAlias "m_VectorVariables"
+	CUtlVector< Vector > m_NetVectorVariables; // 0x68
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "animationgraph"
+	// MNetworkChangeCallback "OnNetVarChanged"
+	// MNetworkAlias "m_QuaternionVariables"
+	CUtlVector< Quaternion > m_NetQuaternionVariables; // 0x80
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "animationgraph"
+	// MNetworkChangeCallback "OnNetVarChanged"
+	// MNetworkAlias "m_PredBoolVariables"
+	CUtlVector< bool > m_PredNetBoolVariables; // 0x98
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "animationgraph"
+	// MNetworkChangeCallback "OnNetVarChanged"
+	// MNetworkAlias "m_PredByteVariables"
+	CUtlVector< uint8 > m_PredNetByteVariables; // 0xb0
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "animationgraph"
+	// MNetworkChangeCallback "OnNetVarChanged"
+	// MNetworkAlias "m_PredIntVariables"
+	CUtlVector< int32 > m_PredNetIntVariables; // 0xc8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "animationgraph"
+	// MNetworkChangeCallback "OnNetVarChanged"
+	// MNetworkAlias "m_PredFloatVariables"
+	CUtlVector< float32 > m_PredNetFloatVariables; // 0xe0
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "animationgraph"
+	// MNetworkChangeCallback "OnNetVarChanged"
+	// MNetworkAlias "m_PredVectorVariables"
+	CUtlVector< Vector > m_PredNetVectorVariables; // 0xf8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "animationgraph"
+	// MNetworkChangeCallback "OnNetVarChanged"
+	// MNetworkAlias "m_PredQuaternionVariables"
+	CUtlVector< Quaternion > m_PredNetQuaternionVariables; // 0x110
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "animationgraph"
+	float m_flLastTeleportTime; // 0x128
 };
 
 // Aligment: 0
-// Size: 1144
-class CSoundOpvarSetOBBEntity : public CSoundOpvarSetAABBEntity, CSoundOpvarSetPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Size: 8
+class CFootstepTableHandle
 {
 public:
 // <no members described>
 };
 
-// Aligment: 6
-// Size: 880
-class CAISound : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 1
+// Size: 1
+struct AttachmentHandle_t
 {
 public:
-	int32_t m_iSoundType; // 0x350
-	int32_t m_iSoundContext; // 0x354
-	int32_t m_iVolume; // 0x358
-	int32_t m_iSoundIndex; // 0x35c
-	float m_flDuration; // 0x360
-	CUtlSymbolLarge m_iszProxyEntityName; // 0x368
+	uint8_t m_nBoxedTypeSafeInt; // 0x0
+};
+
+// Aligment: 8
+// Size: 49
+class ResponseFollowup
+{
+public:
+	char* followup_concept; // 0x0
+	char* followup_contexts; // 0x8
+	float followup_delay; // 0x10
+	char* followup_target; // 0x14
+	char* followup_entityiotarget; // 0x1c
+	char* followup_entityioinput; // 0x24
+	float followup_entityiodelay; // 0x2c
+	bool bFired; // 0x30
+};
+
+// Aligment: 4
+// Size: 32
+class ResponseParams
+{
+public:
+	int16_t odds; // 0x10
+	int16_t flags; // 0x12
+	uint8_t soundlevel; // 0x14
+	ResponseFollowup* m_pFollowup; // 0x18
+};
+
+// Aligment: 2
+// Size: 56
+class CResponseCriteriaSet
+{
+public:
+	int32_t m_nNumPrefixedContexts; // 0x30
+	bool m_bOverrideOnAppend; // 0x34
+};
+
+// Aligment: 10
+// Size: 496
+class CRR_Response
+{
+public:
+	uint8_t m_Type; // 0x0
+	char[192] m_szResponseName; // 0x1
+	char[128] m_szMatchingRule; // 0xc1
+	ResponseParams m_Params; // 0x150
+	float m_fMatchScore; // 0x170
+	char* m_szSpeakerContext; // 0x178
+	char* m_szWorldContext; // 0x180
+	ResponseFollowup m_Followup; // 0x188
+	CUtlVector< CUtlSymbol > m_pchCriteriaNames; // 0x1c0
+	CUtlVector< char* > m_pchCriteriaValues; // 0x1d8
+};
+
+// Aligment: 2
+// Size: 504
+struct ConceptHistory_t
+{
+public:
+	float timeSpoken; // 0x0
+	CRR_Response m_response; // 0x8
+};
+
+// Aligment: 9
+// Size: 104
+class CAI_Expresser
+{
+public:
+	float m_flStopTalkTime; // 0x40
+	float m_flStopTalkTimeWithoutDelay; // 0x44
+	float m_flBlockedTalkTime; // 0x48
+	int32_t m_voicePitch; // 0x4c
+	float m_flLastTimeAcceptedSpeak; // 0x50
+	bool m_bAllowSpeakingInterrupts; // 0x54
+	bool m_bConsiderSceneInvolvementAsSpeech; // 0x55
+	int32_t m_nLastSpokenPriority; // 0x58
+	CBaseFlex* m_pOuter; // 0x60
+};
+
+// Aligment: 1
+// Size: 112
+class CResponseQueue
+{
+public:
+	CUtlVector< CAI_Expresser* > m_ExpresserTargets; // 0x58
+};
+
+// Aligment: 5
+// Size: 592
+class CResponseQueue::CDeferredResponse
+{
+public:
+	CResponseCriteriaSet m_contexts; // 0x10
+	float m_fDispatchTime; // 0x48
+	CHandle< CBaseEntity > m_hIssuer; // 0x4c
+	CRR_Response m_response; // 0x58
+	bool m_bResponseValid; // 0x248
+};
+
+// Aligment: 1
+// Size: 120
+class CAI_ExpresserWithFollowup : public CAI_Expresser
+{
+public:
+	ResponseFollowup* m_pPostponedFollowup; // 0x68
+};
+
+// Aligment: 1
+// Size: 128
+class CMultiplayer_Expresser : public CAI_ExpresserWithFollowup, CAI_Expresser
+{
+public:
+	bool m_bAllowMultipleScenes; // 0x78
+};
+
+// Aligment: 12
+// Size: 120
+class CCommentarySystem
+{
+public:
+	uint64_t m_afPlayersLastButtons; // 0x18
+	bool m_bCommentaryConvarsChanging; // 0x20
+	int32_t m_iClearPressedButtons; // 0x24
+	bool m_bCommentaryEnabledMidGame; // 0x28
+	float m_flNextTeleportTime; // 0x2c
+	int32_t m_iTeleportStage; // 0x30
+	bool m_bCheatState; // 0x34
+	bool m_bIsFirstSpawnGroupToLoad; // 0x35
+	CHandle< CPointCommentaryNode > m_hCurrentNode; // 0x50
+	CHandle< CPointCommentaryNode > m_hActiveCommentaryNode; // 0x54
+	CHandle< CPointCommentaryNode > m_hLastCommentaryNode; // 0x58
+	CUtlVector< CHandle< CPointCommentaryNode > > m_vecNodes; // 0x60
+};
+
+// Aligment: 1
+// Size: 24
+class CPhysicsShake
+{
+public:
+	Vector m_force; // 0x8
+};
+
+// Aligment: 9
+// Size: 9
+struct HullFlags_t
+{
+public:
+	bool m_bHull_Human; // 0x0
+	bool m_bHull_SmallCentered; // 0x1
+	bool m_bHull_WideHuman; // 0x2
+	bool m_bHull_Tiny; // 0x3
+	bool m_bHull_Medium; // 0x4
+	bool m_bHull_TinyCentered; // 0x5
+	bool m_bHull_Large; // 0x6
+	bool m_bHull_LargeCentered; // 0x7
+	bool m_bHull_MediumTall; // 0x8
+};
+
+// Aligment: 4
+// Size: 64
+class CConstantForceController
+{
+public:
+	Vector m_linear; // 0xc
+	Vector m_angular; // 0x18
+	Vector m_linearSave; // 0x24
+	Vector m_angularSave; // 0x30
+};
+
+// Aligment: 4
+// Size: 32
+class CMotorController
+{
+public:
+	float m_speed; // 0x8
+	float m_maxTorque; // 0xc
+	Vector m_axis; // 0x10
+	float m_inertiaFactor; // 0x1c
 };
 
 // Aligment: 4
@@ -2636,15 +3142,15 @@ public:
 
 // Aligment: 2
 // Size: 40
-class CCopyRecipientFilter : public IRecipientFilter
+class CCopyRecipientFilter
 {
 public:
 	int32_t m_Flags; // 0x8
 	CUtlVector< CEntityIndex > m_Recipients; // 0x10
 };
 
-// Aligment: 15
-// Size: 160
+// Aligment: 13
+// Size: 144
 class CSoundPatch
 {
 public:
@@ -2654,532 +3160,15 @@ public:
 	float m_flLastTime; // 0x34
 	CUtlSymbolLarge m_iszSoundScriptName; // 0x38
 	CHandle< CBaseEntity > m_hEnt; // 0x40
-	int32_t m_entityChannel; // 0x44
-	CEntityIndex m_soundEntityIndex; // 0x48
-	Vector m_soundOrigin; // 0x4c
-	int32_t m_flags; // 0x58
-	int32_t m_baseFlags; // 0x5c
-	int32_t m_isPlaying; // 0x60
-	CCopyRecipientFilter m_Filter; // 0x68
-	float m_flCloseCaptionDuration; // 0x90
-	CUtlSymbolLarge m_iszClassName; // 0x98
+	CEntityIndex m_soundEntityIndex; // 0x44
+	Vector m_soundOrigin; // 0x48
+	int32_t m_isPlaying; // 0x54
+	CCopyRecipientFilter m_Filter; // 0x58
+	float m_flCloseCaptionDuration; // 0x80
+	bool m_bUpdatedSoundOrigin; // 0x84
+	CUtlSymbolLarge m_iszClassName; // 0x88
 public:
 	static int32_t &Get_g_SoundPatchCount() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CSoundPatch")->m_static_fiels[0]->m_instance); }
-};
-
-// Aligment: 6
-// Size: 928
-class CSoundEventEntity : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	bool m_bStartOnSpawn; // 0x350
-	bool m_bToLocalPlayer; // 0x351
-	CUtlSymbolLarge m_iszSoundName; // 0x358
-	CUtlSymbolLarge m_iszSourceEntityName; // 0x360
-	CEntityOutputTemplate< uint64 > m_onGUIDChanged; // 0x368
-	CEntityHandle m_hSource; // 0x398
-};
-
-// Aligment: 0
-// Size: 928
-class CSoundEventEntityAlias_snd_event_point : public CSoundEventEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 2
-// Size: 952
-class CSoundEventAABBEntity : public CSoundEventEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	Vector m_vMins; // 0x3a0
-	Vector m_vMaxs; // 0x3ac
-};
-
-// Aligment: 2
-// Size: 872
-class CSoundEventParameter : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlSymbolLarge m_iszParamName; // 0x358
-	float m_flFloatValue; // 0x360
-};
-
-// Aligment: 8
-// Size: 984
-class CEnvSoundscape : public CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CEntityIOOutput m_OnPlay; // 0x350
-	float m_flRadius; // 0x378
-	CUtlSymbolLarge m_soundscapeName; // 0x380
-	int32_t m_soundscapeIndex; // 0x388
-	int32_t m_soundscapeEntityListId; // 0x38c
-	CUtlSymbolLarge[8] m_positionNames; // 0x390
-	CHandle< CEnvSoundscape > m_hProxySoundscape; // 0x3d0
-	bool m_bDisabled; // 0x3d4
-};
-
-// Aligment: 1
-// Size: 992
-class CEnvSoundscapeProxy : public CEnvSoundscape, CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlSymbolLarge m_MainSoundscapeName; // 0x3d8
-};
-
-// Aligment: 0
-// Size: 992
-class CEnvSoundscapeProxyAlias_snd_soundscape_proxy : public CEnvSoundscapeProxy, CEnvSoundscape, CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 0
-// Size: 984
-class CEnvSoundscapeAlias_snd_soundscape : public CEnvSoundscape, CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 0
-// Size: 984
-class CEnvSoundscapeTriggerable : public CEnvSoundscape, CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 0
-// Size: 984
-class CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable : public CEnvSoundscapeTriggerable, CEnvSoundscape, CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 3
-// Size: 1816
-class CTriggerSoundscape : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CHandle< CEnvSoundscapeTriggerable > m_hSoundscape; // 0x6f0
-	CUtlSymbolLarge m_SoundscapeName; // 0x6f8
-	CUtlVector< CHandle< CBasePlayer > > m_spectators; // 0x700
-};
-
-// Aligment: 0
-// Size: 1464
-class CSpriteAlias_env_glow : public CSprite, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 11
-// Size: 1960
-class CPointWorldText : public CModelPointEntity, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	char[512] m_messageText; // 0x548
-	// MNetworkEnable
-	// MNetworkEnable
-	char[64] m_FontName; // 0x748
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bEnabled; // 0x788
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bFullbright; // 0x789
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flWorldUnitsPerPx; // 0x78c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFontSize; // 0x790
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flDepthOffset; // 0x794
-	// MNetworkEnable
-	// MNetworkEnable
-	Color m_Color; // 0x798
-	// MNetworkEnable
-	// MNetworkEnable
-	PointWorldTextJustifyHorizontal_t m_nJustifyHorizontal; // 0x79c
-	// MNetworkEnable
-	// MNetworkEnable
-	PointWorldTextJustifyVertical_t m_nJustifyVertical; // 0x7a0
-	// MNetworkEnable
-	// MNetworkEnable
-	PointWorldTextReorientMode_t m_nReorientMode; // 0x7a4
-};
-
-// Aligment: 0
-// Size: 848
-class CNullEntity : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 1
-// Size: 856
-class CBaseDMStart : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlSymbolLarge m_Master; // 0x350
-};
-
-// Aligment: 0
-// Size: 848
-class CInfoLandmark : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 1
-// Size: 1816
-class CTriggerRemove : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CEntityIOOutput m_OnRemove; // 0x6f0
-};
-
-// Aligment: 14
-// Size: 1936
-class CTriggerHurt : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	float m_flOriginalDamage; // 0x6f0
-	float m_flDamage; // 0x6f4
-	float m_flDamageCap; // 0x6f8
-	float m_flLastDmgTime; // 0x6fc
-	float m_flDmgResetTime; // 0x700
-	int32_t m_bitsDamageInflict; // 0x704
-	int32_t m_damageModel; // 0x708
-	bool m_bNoDmgForce; // 0x70c
-	Vector m_vDamageForce; // 0x710
-	bool m_thinkAlways; // 0x71c
-	float m_hurtThinkPeriod; // 0x720
-	CEntityIOOutput m_OnHurt; // 0x728
-	CEntityIOOutput m_OnHurtPlayer; // 0x750
-	CUtlVector< CHandle< CBaseEntity > > m_hurtEntities; // 0x778
-};
-
-// Aligment: 1
-// Size: 1952
-class CScriptTriggerHurt : public CTriggerHurt, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	Vector m_vExtent; // 0x790
-};
-
-// Aligment: 1
-// Size: 1816
-class CTriggerMultiple : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CEntityIOOutput m_OnTrigger; // 0x6f0
-};
-
-// Aligment: 1
-// Size: 1832
-class CScriptTriggerMultiple : public CTriggerMultiple, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	Vector m_vExtent; // 0x718
-};
-
-// Aligment: 0
-// Size: 1816
-class CTriggerOnce : public CTriggerMultiple, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 1
-// Size: 1832
-class CScriptTriggerOnce : public CTriggerOnce, CTriggerMultiple, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	Vector m_vExtent; // 0x718
-};
-
-// Aligment: 15
-// Size: 1976
-class CTriggerLook : public CTriggerOnce, CTriggerMultiple, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CHandle< CBaseEntity > m_hLookTarget; // 0x718
-	float m_flFieldOfView; // 0x71c
-	float m_flLookTime; // 0x720
-	float m_flLookTimeTotal; // 0x724
-	float m_flLookTimeLast; // 0x728
-	float m_flTimeoutDuration; // 0x72c
-	bool m_bTimeoutFired; // 0x730
-	bool m_bIsLooking; // 0x731
-	bool m_b2DFOV; // 0x732
-	bool m_bUseVelocity; // 0x733
-	CHandle< CBaseEntity > m_hActivator; // 0x734
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bTestOcclusion; // 0x738
-	CEntityIOOutput m_OnTimeout; // 0x740
-	CEntityIOOutput m_OnStartLook; // 0x768
-	CEntityIOOutput m_OnEndLook; // 0x790
-};
-
-// Aligment: 0
-// Size: 1352
-class CTriggerVolume : public CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 6
-// Size: 1840
-class CChangeLevel : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlString m_sMapName; // 0x6f0
-	CUtlString m_sLandmarkName; // 0x6f8
-	CEntityIOOutput m_OnChangeLevel; // 0x700
-	bool m_bTouched; // 0x728
-	bool m_bNoTouch; // 0x729
-	bool m_bNewChapter; // 0x72a
-};
-
-// Aligment: 5
-// Size: 1800
-class CTriggerPush : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	Vector m_vecPushDir; // 0x6f0
-	bool m_bPushDirIsLocal; // 0x6fc
-	bool m_bTriggerOnStartTouch; // 0x6fd
-	float m_flAlternateTicksFix; // 0x700
-	float m_flPushSpeed; // 0x704
-};
-
-// Aligment: 1
-// Size: 1816
-class CScriptTriggerPush : public CTriggerPush, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	Vector m_vExtent; // 0x708
-};
-
-// Aligment: 1
-// Size: 1784
-class CTriggerTeleport : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlSymbolLarge m_iLandmark; // 0x6f0
-};
-
-// Aligment: 0
-// Size: 848
-class CInfoTeleportDestination : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 1
-// Size: 1784
-class CTriggerToggleSave : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	bool m_bDisabled; // 0x6f0
-};
-
-// Aligment: 3
-// Size: 1792
-class CTriggerSave : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	bool m_bForceNewLevelUnit; // 0x6f0
-	float m_fDangerousTimer; // 0x6f4
-	int32_t m_minHitPoints; // 0x6f8
-};
-
-// Aligment: 0
-// Size: 1776
-class CTriggerGravity : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 1
-// Size: 856
-class CAI_ChangeTarget : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlSymbolLarge m_iszNewTarget; // 0x350
-};
-
-// Aligment: 5
-// Size: 880
-class CAI_ChangeHintGroup : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	int32_t m_iSearchType; // 0x350
-	CUtlSymbolLarge m_strSearchName; // 0x358
-	CUtlSymbolLarge m_strNewHintGroup; // 0x360
-	float m_flRadius; // 0x368
-	bool m_bHintGroupNavLimiting; // 0x36c
-};
-
-// Aligment: 5
-// Size: 1840
-class CTriggerProximity : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CHandle< CBaseEntity > m_hMeasureTarget; // 0x6f0
-	CUtlSymbolLarge m_iszMeasureTarget; // 0x6f8
-	float m_fRadius; // 0x700
-	int32_t m_nTouchers; // 0x704
-	CEntityOutputTemplate< float32 > m_NearestEntityDistance; // 0x708
-};
-
-// Aligment: 0
-// Size: 848
-class CLogicProximity : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 4
-// Size: 1872
-class CTriggerImpact : public CTriggerMultiple, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	float m_flMagnitude; // 0x718
-	float m_flNoise; // 0x71c
-	float m_flViewkick; // 0x720
-	CEntityOutputTemplate< Vector > m_pOutputForce; // 0x728
-};
-
-// Aligment: 0
-// Size: 1776
-class CTriggerPlayerMovement : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 0
-// Size: 1776
-class CServerRagdollTrigger : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 2
-// Size: 1824
-class CTriggerActiveWeaponDetect : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CEntityIOOutput m_OnTouchedActiveWeapon; // 0x6f0
-	CUtlSymbolLarge m_iszWeaponClassName; // 0x718
-};
-
-// Aligment: 11
-// Size: 1824
-class CPostProcessingVolume : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	CStrongHandle< InfoForResourceTypeCPostProcessingResource > m_hPostSettings; // 0x6f0
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFadeDuration; // 0x6f8
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flMinLogExposure; // 0x6fc
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flMaxLogExposure; // 0x700
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flMinExposure; // 0x704
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flMaxExposure; // 0x708
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flExposureCompensation; // 0x70c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flExposureFadeSpeedUp; // 0x710
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flExposureFadeSpeedDown; // 0x714
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bMaster; // 0x718
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bExposureControl; // 0x719
-};
-
-// Aligment: 12
-// Size: 1864
-class CTriggerPhysics : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	float m_gravityScale; // 0x700
-	float m_linearLimit; // 0x704
-	float m_linearDamping; // 0x708
-	float m_angularLimit; // 0x70c
-	float m_angularDamping; // 0x710
-	float m_linearForce; // 0x714
-	float m_flFrequency; // 0x718
-	float m_flDampingRatio; // 0x71c
-	Vector m_vecLinearForcePointAt; // 0x720
-	bool m_bCollapseToForcePoint; // 0x72c
-	Vector m_vecLinearForcePointAtWorld; // 0x730
-	Vector m_vecLinearForceDirection; // 0x73c
-};
-
-// Aligment: 5
-// Size: 1400
-class CFuncNavBlocker : public CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	Vector m_CachedMins; // 0x548
-	Vector m_CachedMaxs; // 0x554
-	bool[2] m_isBlockingNav; // 0x568
-	int32_t m_blockedTeamNumber; // 0x56c
-	bool m_bAffectsFlow; // 0x570
-};
-
-// Aligment: 1
-// Size: 1416
-class CScriptNavBlocker : public CFuncNavBlocker, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	Vector m_vExtent; // 0x578
-};
-
-// Aligment: 1
-// Size: 1368
-class CFuncNavObstruction : public CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	bool m_bDisabled; // 0x550
 };
 
 // Aligment: 25
@@ -3222,103 +3211,15 @@ public:
 // <no members described>
 };
 
-// Aligment: 10
-// Size: 1000
-class CAmbientGeneric : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	float m_radius; // 0x350
-	float m_flMaxRadius; // 0x354
-	soundlevel_t m_iSoundLevel; // 0x358
-	dynpitchvol_t m_dpv; // 0x35c
-	bool m_fActive; // 0x3c0
-	bool m_fLooping; // 0x3c1
-	CUtlSymbolLarge m_iszSound; // 0x3c8
-	CUtlSymbolLarge m_sSourceEntName; // 0x3d0
-	CHandle< CBaseEntity > m_hSoundSource; // 0x3d8
-	CEntityIndex m_nSoundSourceEntIndex; // 0x3dc
-};
-
-// Aligment: 5
-// Size: 20
+// Aligment: 4
+// Size: 16
 struct Relationship_t
 {
 public:
 	CHandle< CBaseEntity > entity; // 0x0
 	Class_T classType; // 0x4
-	int32_t faction; // 0x8
-	Disposition_t disposition; // 0xc
-	int32_t priority; // 0x10
-};
-
-// Aligment: 2
-// Size: 24
-class CBaseCombatCharacter::DamageHistory
-{
-public:
-	int32_t team; // 0x0
-	IntervalTimer interval; // 0x8
-};
-
-// Aligment: 34
-// Size: 2336
-class CBaseCombatCharacter : public CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	bool m_bForceServerRagdoll; // 0x708
-	bool m_bPreventWeaponPickup; // 0x709
-	bool m_bApplyStressDamage; // 0x70a
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkSendProxyRecipientsFilter
-	float m_flNextAttack; // 0x70c
-	Hull_t m_eHull; // 0x710
-	uint32_t m_navHullCategory; // 0x714
-	float m_flNavHullRadius; // 0x718
-	float m_flNavHullHeight; // 0x71c
-	int32_t m_bloodColor; // 0x720
-	// MNetworkEnable
-	float m_flFieldOfView; // 0x724
-	Vector m_HackedGunPos; // 0x728
-	CUtlSymbolLarge m_RelationshipString; // 0x738
-	float m_impactEnergyScale; // 0x740
-	int32_t m_LastHitGroup; // 0x744
-	float m_flDamageAccumulator; // 0x748
-	int32_t m_iDamageCount; // 0x74c
-	WeaponProficiency_t m_CurrentWeaponProficiency; // 0x750
-	CUtlVector< Relationship_t > m_Relationship; // 0x758
-	int32_t m_nFaction; // 0x770
-	CUtlVector< CHandle< CBaseEntity > > m_hTriggerFogList; // 0x778
-	CHandle< CBaseEntity > m_hLastFogTrigger; // 0x790
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "10"
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint32[32] m_iAmmo; // 0x794
-	// MNetworkEnable
-	// MNetworkEnable
-	CUtlVector< CHandle< CBaseCombatWeapon > > m_hMyWeapons; // 0x818
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CBaseCombatWeapon > m_hActiveWeapon; // 0x830
-	IntervalTimer m_aliveTimer; // 0x838
-	uint32_t m_hasBeenInjured; // 0x848
-	CBaseCombatCharacter::DamageHistory[4] m_damageHistory; // 0x850
-	CAI_MoveMonitor m_NavAreaUpdateMonitor; // 0x8d0
-	int32_t m_registeredNavTeam; // 0x8e0
-	int32_t m_navMeshID; // 0x8e4
-	CountdownTimer m_footstepTimer; // 0x8e8
-	int32_t m_spawnID; // 0x8f8
-	Vector m_vecSpawnOrigin; // 0x8fc
-	// MNetworkEnable
-	// MNetworkEnable
-	CUtlVector< CHandle< CEconWearable > > m_hMyWearables; // 0x908
-public:
-	static int32_t &Get_m_lastInteraction() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseCombatCharacter")->m_static_fiels[0]->m_instance); }
-	static Relationship_t** &Get_m_DefaultRelationship() { return *reinterpret_cast<Relationship_t***>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseCombatCharacter")->m_static_fiels[1]->m_instance); }
-	static Relationship_t** &Get_m_FactionRelationship() { return *reinterpret_cast<Relationship_t***>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseCombatCharacter")->m_static_fiels[2]->m_instance); }
-	static CUtlVector< CUtlVector< CHandle< CBaseEntity > > > &Get_m_aFactions() { return *reinterpret_cast<CUtlVector< CUtlVector< CHandle< CBaseEntity > > >*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseCombatCharacter")->m_static_fiels[3]->m_instance); }
-	static int32_t &Get_m_nextSpawnID() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseCombatCharacter")->m_static_fiels[4]->m_instance); }
+	Disposition_t disposition; // 0x8
+	int32_t priority; // 0xc
 };
 
 // Aligment: 3
@@ -3331,772 +3232,14 @@ public:
 	float m_fExpirationTime; // 0x10
 };
 
-// Aligment: 0
-// Size: 848
-class CServerOnlyPointEntity : public CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 166
-// Size: 4976
-class CBasePlayer : public CBaseCombatCharacter, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	int32_t m_StuckLast; // 0x920
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkSendProxyRecipientsFilter
-	CPlayerLocalData m_Local; // 0x928
-	// MNetworkEnable
-	// MNetworkEnable
-	fogplayerparams_t m_PlayerFog; // 0xb38
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CPostProcessController > m_hPostProcessCtrl; // 0xb90
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CColorCorrection > m_hColorCorrectionCtrl; // 0xb94
-	CUtlVector< CHandle< CBaseEntity > > m_hTriggerSoundscapeList; // 0xb98
-	CPlayerState m_pl; // 0xbb0
-	uint64_t m_nButtons; // 0xbf8
-	uint64_t m_afButtonPressed; // 0xc00
-	uint64_t m_afButtonReleased; // 0xc08
-	uint64_t m_afButtonLast; // 0xc10
-	uint64_t m_afButtonDisabled; // 0xc18
-	uint64_t m_afButtonForced; // 0xc20
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	bool m_fOnTarget; // 0xc28
-	char[32] m_szAnimExtension; // 0xc29
-	int32_t m_nUpdateRate; // 0xc4c
-	float m_fLerpTime; // 0xc50
-	bool m_bLagCompensation; // 0xc54
-	bool m_bPredictWeapons; // 0xc55
-	int32_t m_Activity; // 0xc58
-	Vector m_vecAdditionalPVSOrigin; // 0xc5c
-	Vector m_vecCameraPVSOrigin; // 0xc68
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "Player"
-	CHandle< CBaseEntity > m_hUseEntity; // 0xc74
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CBaseEntity > m_hHeldEntity; // 0xc78
-	float m_flPreventUseTime; // 0xc7c
-	int32_t m_iTrain; // 0xc80
-	float m_iRespawnFrames; // 0xc84
-	uint32_t m_afPhysicsFlags; // 0xc88
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "Player"
-	CHandle< CBaseEntity > m_hVehicle; // 0xc8c
-	int32_t m_iVehicleAnalogBias; // 0xc90
-	bool m_bPauseBonusProgress; // 0xc94
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "15"
-	int32_t m_iBonusProgress; // 0xc98
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "4"
-	int32_t m_iBonusChallenge; // 0xc9c
-	int32_t m_lastDamageAmount; // 0xca0
-	float m_fTimeLastHurt; // 0xca4
-	Vector m_DmgOrigin; // 0xca8
-	float m_DmgTake; // 0xcb4
-	float m_DmgSave; // 0xcb8
-	int32_t m_bitsDamageType; // 0xcbc
-	int32_t m_bitsHUDDamage; // 0xcc0
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	float m_flDeathTime; // 0xcc4
-	float m_flDeathAnimTime; // 0xcc8
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "3"
-	uint8_t m_iObserverMode; // 0xccc
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "8"
-	uint32_t m_iFOV; // 0xcd0
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "8"
-	uint32_t m_iDefaultFOV; // 0xcd4
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "8"
-	uint32_t m_iFOVStart; // 0xcd8
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFOVTime; // 0xcdc
-	int32_t m_iObserverLastMode; // 0xce0
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CBaseEntity > m_hObserverTarget; // 0xce4
-	bool m_bForcedObserverMode; // 0xce8
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CBaseEntity > m_hZoomOwner; // 0xcec
-	float m_tbdPrev; // 0xcf0
-	int32_t m_idrowndmg; // 0xcf4
-	int32_t m_idrownrestored; // 0xcf8
-	int32_t m_nPoisonDmg; // 0xcfc
-	int32_t m_nPoisonRestored; // 0xd00
-	uint8[8] m_rgbTimeBasedDamage; // 0xd04
-	int32_t m_vphysicsCollisionState; // 0xd0c
-	float m_fNextSuicideTime; // 0xd10
-	int32_t m_iSuicideCustomKillFlags; // 0xd14
-	float m_fDelay; // 0xd18
-	float m_fReplayEnd; // 0xd1c
-	CEntityIndex m_iReplayEntity; // 0xd20
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	CHandle< CBaseEntity > m_hTonemapController; // 0xd24
-	int32_t m_nHighestCommandNumberReceived; // 0xd58
-	IPhysicsPlayerController* m_pPhysicsController; // 0xd60
-	Vector m_oldOrigin; // 0xd78
-	Vector m_vecSmoothedVelocity; // 0xd84
-	bool m_touchedPhysObject; // 0xd90
-	bool m_bPhysicsWasFrozen; // 0xd91
-	int32_t m_iPlayerSound; // 0xd94
-	int32_t m_iTargetVolume; // 0xd98
-	int32[5] m_rgItems; // 0xd9c
-	IntervalTimer m_lastHeldVoteTimer; // 0xdb0
-	float m_flgeigerRange; // 0xdc0
-	float m_flgeigerDelay; // 0xdc4
-	int32_t m_igeigerRangePrev; // 0xdc8
-	bool m_fInitHUD; // 0xdcc
-	bool m_fGameHUDInitialized; // 0xdcd
-	bool m_fWeapon; // 0xdce
-	int32_t m_iUpdateTime; // 0xdd0
-	int32_t m_iFrags; // 0xdd4
-	int32_t m_iDeaths; // 0xdd8
-	float m_flNextDecalTime; // 0xddc
-	float m_flNextTauntTime; // 0xde0
-	PlayerConnectedState m_iConnected; // 0xde4
-	bool m_bIsLowViolence; // 0xde8
-	// MNetworkEnable
-	// MNetworkEnable
-	int32_t m_ArmorValue; // 0xdec
-	float m_AirFinished; // 0xdf0
-	float m_PainFinished; // 0xdf4
-	int32_t m_iPlayerLocked; // 0xdf8
-	CSimpleSimTimer m_AutoaimTimer; // 0xdfc
-	QAngle m_vecAutoAim; // 0xe00
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CBaseViewModel >[2] m_hViewModel; // 0xe0c
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CPropHMDAvatar > m_hPropHMDAvatar; // 0xe14
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CPointHMDAnchor > m_hPointHMDAnchor; // 0xe18
-	Vector m_vecLastAnchorPosition; // 0xe20
-	bool m_bReceivedInitialAnchorPos; // 0xe2c
-	// MNetworkEnable
-	// MNetworkEnable
-	int32_t m_VRControllerType; // 0xe30
-	IntervalTimer m_timeSinceCommandSimulated; // 0x1168
-	float m_flStepSoundTime; // 0x1178
-	bool m_bAllowInstantSpawn; // 0x117c
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "12"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "2048"
-	// MNetworkEncodeFlags
-	float m_flMaxspeed; // 0x1180
-	// MNetworkEnable
-	// MNetworkEnable
-	CUtlStringToken m_ladderSurfaceProps; // 0x1184
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkEncoder
-	Vector m_vecLadderNormal; // 0x1188
-	float m_flWaterJumpTime; // 0x1194
-	Vector m_vecWaterJumpVel; // 0x1198
-	int32_t m_nImpulse; // 0x11a4
-	float m_flSwimSoundTime; // 0x11a8
-	float m_flFlashTime; // 0x11ac
-	int32_t m_nDrownDmgRate; // 0x11b0
-	int32_t m_nNumCrouches; // 0x11b4
-	bool m_bDuckToggled; // 0x11b8
-	float m_flForwardMove; // 0x11bc
-	float m_flSideMove; // 0x11c0
-	int32_t m_nNumCrateHudHints; // 0x11c4
-	Vector m_vForcedOrigin; // 0x11c8
-	bool m_bForceOrigin; // 0x11d4
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkPriority "1"
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint32_t m_nTickBase; // 0x11d8
-	int32_t m_nOldTickBase; // 0x11dc
-	bool m_bGamePaused; // 0x11e0
-	float m_fLastPlayerTalkTime; // 0x11e4
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	CHandle< CBaseCombatWeapon > m_hLastWeapon; // 0x11e8
-	float m_flOldPlayerZ; // 0x11ec
-	float m_flOldPlayerViewOffsetZ; // 0x11f0
-	bool m_bPlayerUnderwater; // 0x11f4
-	float m_flLastAttackTime; // 0x11f8
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "Player"
-	CHandle< CBaseEntity > m_hViewEntity; // 0x11fc
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	CHandle< CBaseEntity > m_hConstraintEntity; // 0x1200
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	Vector m_vecConstraintCenter; // 0x1204
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	float m_flConstraintRadius; // 0x1210
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	float m_flConstraintWidth; // 0x1214
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	float m_flConstraintSpeedFactor; // 0x1218
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	bool m_bConstraintPastRadius; // 0x121c
-	char[32] m_szNetname; // 0x121d
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	float m_flLaggedMovementValue; // 0x1240
-	Vector m_vNewVPhysicsPosition; // 0x1244
-	Vector m_vNewVPhysicsVelocity; // 0x1250
-	Vector m_vecVehicleViewOrigin; // 0x125c
-	QAngle m_vecVehicleViewAngles; // 0x1268
-	float m_flVehicleViewFOV; // 0x1274
-	int32_t m_nVehicleViewSavedFrame; // 0x1278
-	Vector m_vecPreviouslyPredictedOrigin; // 0x127c
-	int32_t m_nBodyPitchPoseParam; // 0x1288
-	// MNetworkEnable
-	// MNetworkEnable
-	char[18] m_szLastPlaceName; // 0x128c
-	char[64] m_szNetworkIDString; // 0x129e
-	CPlayerInfo m_PlayerInfo; // 0x12e0
-	CUtlStringToken m_surfaceProps; // 0x12f8
-	float m_surfaceFriction; // 0x1308
-	char m_chTextureType; // 0x130c
-	char m_chPreviousTextureType; // 0x130d
-	bool m_bSinglePlayerGameEnding; // 0x130e
-	CHandle< CBaseEntity > m_hPlayerProxy; // 0x1310
-	bool m_bhasHaptics; // 0x1314
-	bool m_autoKickDisabled; // 0x1315
-	Vector m_movementCollisionNormal; // 0x1318
-	Vector m_groundNormal; // 0x1324
-	CHandle< CBaseCombatCharacter > m_stuckCharacter; // 0x1330
-	float m_lastEntitySteadyState; // 0x1334
-	int32_t m_availableEntitySteadyState; // 0x1338
-	CBitVec< 64 > m_playerInPVS; // 0x133c
-	bool m_hasAnySteadyStateEnts; // 0x1344
-	bool m_bSplitScreenPlayer; // 0x1345
-	CHandle< CBasePlayer > m_hSplitOwner; // 0x1348
-	CUtlVector< CHandle< CBasePlayer > > m_hSplitScreenPlayers; // 0x1350
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint64_t m_nUnHoldableButtons; // 0x1368
-public:
-	static bool &Get_ms_bUseSessionPersisterPosAng() { return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBasePlayer")->m_static_fiels[0]->m_instance); }
-	static Vector &Get_ms_vSessionPersisterPosition() { return *reinterpret_cast<Vector*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBasePlayer")->m_static_fiels[1]->m_instance); }
-	static QAngle &Get_ms_angSessionPersisterAngles() { return *reinterpret_cast<QAngle*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBasePlayer")->m_static_fiels[2]->m_instance); }
-};
-
-// Aligment: 9
-// Size: 5032
-class CBaseMultiplayerPlayer : public CBasePlayer, CBaseCombatCharacter, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	int32_t m_iIgnoreGlobalChat; // 0x1378
-	float m_flAreaCaptureScoreAccumulator; // 0x137c
-	float m_flCapPointScoreRate; // 0x1380
-	int32_t m_iCurrentConcept; // 0x1384
-	CMultiplayer_Expresser* m_pExpresser; // 0x1388
-	float m_flConnectionTime; // 0x1390
-	float m_flLastForcedChangeTeamTime; // 0x1394
-	int32_t m_iBalanceScore; // 0x1398
-	KeyValues* m_pAchievementKV; // 0x13a0
-};
-
-// Aligment: 17
-// Size: 1168
-class CColorCorrection : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFadeInDuration; // 0x350
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFadeOutDuration; // 0x354
-	float m_flStartFadeInWeight; // 0x358
-	float m_flStartFadeOutWeight; // 0x35c
-	float m_flTimeStartFadeIn; // 0x360
-	float m_flTimeStartFadeOut; // 0x364
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flMaxWeight; // 0x368
-	bool m_bStartDisabled; // 0x36c
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bEnabled; // 0x36d
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bMaster; // 0x36e
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bClientSide; // 0x36f
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bExclusive; // 0x370
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_MinFalloff; // 0x374
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_MaxFalloff; // 0x378
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flCurWeight; // 0x37c
-	// MNetworkEnable
-	// MNetworkEnable
-	char[260] m_netlookupFilename; // 0x380
-	CUtlSymbolLarge m_lookupFilename; // 0x488
-};
-
-// Aligment: 4
-// Size: 872
-class CRagdollMagnet : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	bool m_bDisabled; // 0x350
-	float m_radius; // 0x354
-	float m_force; // 0x358
-	Vector m_axis; // 0x35c
-};
-
-// Aligment: 0
-// Size: 1352
-class CEntityBlocker : public CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 10
-// Size: 1400
-class CEntityDissolve : public CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flStartTime; // 0x548
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFadeInStart; // 0x54c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFadeInLength; // 0x550
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFadeOutModelStart; // 0x554
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFadeOutModelLength; // 0x558
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFadeOutStart; // 0x55c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFadeOutLength; // 0x560
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "3"
-	EntityDisolveType_t m_nDissolveType; // 0x564
-	// MNetworkEnable
-	// MNetworkEnable
-	Vector m_vDissolverOrigin; // 0x568
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "8"
-	uint32_t m_nMagnitude; // 0x574
-};
-
-// Aligment: 10
-// Size: 896
-class CEnvDOFController : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	float m_flFocusTargetRange; // 0x350
-	CUtlSymbolLarge m_strFocusTargetName; // 0x358
-	CHandle< CBaseEntity > m_hFocusTarget; // 0x360
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bDOFEnabled; // 0x364
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flNearBlurDepth; // 0x368
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flNearFocusDepth; // 0x36c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFarFocusDepth; // 0x370
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFarBlurDepth; // 0x374
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flNearBlurRadius; // 0x378
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFarBlurRadius; // 0x37c
-};
-
-// Aligment: 5
-// Size: 944
-class CEnvPlayerSurfaceTrigger : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	int32_t m_iTargetGameMaterial; // 0x350
-	int32_t m_iCurrentGameMaterial; // 0x354
-	bool m_bDisabled; // 0x358
-	CEntityIOOutput m_OnSurfaceChangedToTarget; // 0x360
-	CEntityIOOutput m_OnSurfaceChangedFromTarget; // 0x388
-};
-
-// Aligment: 30
-// Size: 1712
-class CEnvProjectedTexture : public CModelPointEntity, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CBaseEntity > m_hTargetEntity; // 0x548
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bState; // 0x54c
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bAlwaysUpdate; // 0x54d
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flLightFOV; // 0x550
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bEnableShadows; // 0x554
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bSimpleProjection; // 0x555
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bLightOnlyTarget; // 0x556
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bLightWorld; // 0x557
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bCameraSpace; // 0x558
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flBrightnessScale; // 0x55c
-	// MNetworkEnable
-	// MNetworkEnable
-	Color m_LightColor; // 0x560
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flIntensity; // 0x564
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flLinearAttenuation; // 0x568
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flQuadraticAttenuation; // 0x56c
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bVolumetric; // 0x570
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flNoiseStrength; // 0x574
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFlashlightTime; // 0x578
-	// MNetworkEnable
-	// MNetworkEnable
-	uint32_t m_nNumPlanes; // 0x57c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flPlaneOffset; // 0x580
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flVolumetricIntensity; // 0x584
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flColorTransitionTime; // 0x588
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flAmbient; // 0x58c
-	// MNetworkEnable
-	// MNetworkEnable
-	char[260] m_SpotlightTextureName; // 0x590
-	// MNetworkEnable
-	// MNetworkEnable
-	int32_t m_nSpotlightTextureFrame; // 0x694
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "1"
-	uint32_t m_nShadowQuality; // 0x698
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "16"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "500"
-	// MNetworkEncodeFlags
-	float m_flNearZ; // 0x69c
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "18"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1500"
-	// MNetworkEncodeFlags
-	float m_flFarZ; // 0x6a0
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flProjectionSize; // 0x6a4
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flRotation; // 0x6a8
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bFlipHorizontal; // 0x6ac
-};
-
-// Aligment: 6
-// Size: 920
-class CMessage : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlSymbolLarge m_iszMessage; // 0x350
-	float m_MessageVolume; // 0x358
-	int32_t m_MessageAttenuation; // 0x35c
-	float m_Radius; // 0x360
-	CUtlSymbolLarge m_sNoise; // 0x368
-	CEntityIOOutput m_OnShowMessage; // 0x370
-};
-
-// Aligment: 17
-// Size: 1296
-class CEnvMicrophone : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	bool m_bDisabled; // 0x350
-	CHandle< CBaseEntity > m_hMeasureTarget; // 0x354
-	int32_t m_nSoundMask; // 0x358
-	float m_flSensitivity; // 0x35c
-	float m_flSmoothFactor; // 0x360
-	float m_flMaxRange; // 0x364
-	CUtlSymbolLarge m_iszSpeakerName; // 0x368
-	CHandle< CBaseEntity > m_hSpeaker; // 0x370
-	bool m_bAvoidFeedback; // 0x374
-	int32_t m_iSpeakerDSPPreset; // 0x378
-	CUtlSymbolLarge m_iszListenFilter; // 0x380
-	CHandle< CBaseFilter > m_hListenFilter; // 0x388
-	CEntityOutputTemplate< float32 > m_SoundLevel; // 0x390
-	CEntityIOOutput m_OnRoutedSound; // 0x3b8
-	CEntityIOOutput m_OnHeardSound; // 0x3e0
-	char[256] m_szLastSound; // 0x408
-	int32_t m_iLastRoutedFrame; // 0x508
-};
-
-// Aligment: 4
-// Size: 1072
-class CFilterMultiple : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	filter_t m_nFilterType; // 0x3a8
-	CUtlSymbolLarge[10] m_iFilterName; // 0x3b0
-	CHandle< CBaseEntity >[10] m_hFilter; // 0x400
-	int32_t m_nFilterCount; // 0x428
-};
-
-// Aligment: 1
-// Size: 944
-class CFilterProximity : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	float m_flRadius; // 0x3a8
-};
-
-// Aligment: 0
-// Size: 936
-class CFilterLOS : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 5
-// Size: 1400
-class CFuncAreaPortalWindow : public CFuncAreaPortalBase, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFadeStartDist; // 0x558
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flFadeDist; // 0x55c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flTranslucencyLimit; // 0x560
-	CUtlSymbolLarge m_iBackgroundBModelName; // 0x568
-	// MNetworkEnable
-	// MNetworkEnable
-	CStrongHandle< InfoForResourceTypeCModel > m_iBackgroundModelIndex; // 0x570
-};
-
-// Aligment: 13
-// Size: 1448
-class CFuncRotating : public CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	QAngle m_vecMoveAng; // 0x548
-	float m_flFanFriction; // 0x554
-	float m_flAttenuation; // 0x558
-	float m_flVolume; // 0x55c
-	float m_flTargetSpeed; // 0x560
-	float m_flMaxSpeed; // 0x564
-	float m_flBlockDamage; // 0x568
-	CUtlSymbolLarge m_NoiseRunning; // 0x570
-	bool m_bReversed; // 0x578
-	QAngle m_angStart; // 0x57c
-	bool m_bStopAtStartPos; // 0x588
-	Vector m_vecClientOrigin; // 0x58c
-	QAngle m_vecClientAngles; // 0x598
-};
-
-// Aligment: 0
-// Size: 1760
-class CInfoData : public CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 1
-// Size: 1360
-class CItemGenericTriggerHelper : public CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CHandle< CItemGeneric > m_hParentItem; // 0x548
-};
-
-// Aligment: 33
-// Size: 2192
-class CItemGeneric : public CItem, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	bool m_bHasTriggerRadius; // 0x720
-	bool m_bHasPickupRadius; // 0x721
-	float m_flPickupRadiusSqr; // 0x724
-	float m_flTriggerRadiusSqr; // 0x728
-	float m_flLastPickupCheck; // 0x72c
-	bool m_bPlayerCounterListenerAdded; // 0x730
-	bool m_bPlayerInTriggerRadius; // 0x731
-	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_hSpawnParticleEffect; // 0x738
-	CUtlSymbolLarge m_pAmbientSoundEffect; // 0x740
-	bool m_bAutoStartAmbientSound; // 0x748
-	CUtlSymbolLarge m_pSpawnScriptFunction; // 0x750
-	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_hPickupParticleEffect; // 0x758
-	CUtlSymbolLarge m_pPickupSoundEffect; // 0x760
-	CUtlSymbolLarge m_pPickupScriptFunction; // 0x768
-	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_hTimeoutParticleEffect; // 0x770
-	CUtlSymbolLarge m_pTimeoutSoundEffect; // 0x778
-	CUtlSymbolLarge m_pTimeoutScriptFunction; // 0x780
-	CUtlSymbolLarge m_pPickupFilterName; // 0x788
-	CHandle< CBaseFilter > m_hPickupFilter; // 0x790
-	CEntityIOOutput m_OnPickup; // 0x798
-	CEntityIOOutput m_OnTimeout; // 0x7c0
-	CEntityIOOutput m_OnTriggerStartTouch; // 0x7e8
-	CEntityIOOutput m_OnTriggerTouch; // 0x810
-	CEntityIOOutput m_OnTriggerEndTouch; // 0x838
-	CUtlSymbolLarge m_pAllowPickupScriptFunction; // 0x860
-	float m_flPickupRadius; // 0x868
-	float m_flTriggerRadius; // 0x86c
-	bool m_bPhysStartAsleep; // 0x870
-	CUtlSymbolLarge m_pTriggerSoundEffect; // 0x878
-	bool m_bGlowWhenInTrigger; // 0x880
-	Color m_glowColor; // 0x881
-	bool m_bUseable; // 0x885
-	CHandle< CItemGenericTriggerHelper > m_hTriggerHelper; // 0x888
-};
-
-// Aligment: 10
-// Size: 64
+// Aligment: 3
+// Size: 32
 struct locksound_t
 {
 public:
 	CUtlSymbolLarge sLockedSound; // 0x8
-	CUtlSymbolLarge sLockedSentence; // 0x10
-	CUtlSymbolLarge sUnlockedSound; // 0x18
-	CUtlSymbolLarge sUnlockedSentence; // 0x20
-	int32_t iLockedSentence; // 0x28
-	int32_t iUnlockedSentence; // 0x2c
-	float flwaitSound; // 0x30
-	float flwaitSentence; // 0x34
-	uint8_t bEOFLocked; // 0x38
-	uint8_t bEOFUnlocked; // 0x39
-};
-
-// Aligment: 4
-// Size: 960
-class CLogicBranch : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	bool m_bInValue; // 0x350
-	CUtlVector< CHandle< CBaseEntity > > m_Listeners; // 0x358
-	CEntityIOOutput m_OnTrue; // 0x370
-	CEntityIOOutput m_OnFalse; // 0x398
-};
-
-// Aligment: 1
-// Size: 1360
-class CFuncOccluder : public CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	bool m_bStartDisabled; // 0x548
-};
-
-// Aligment: 4
-// Size: 880
-class CParticleLight : public CServerOnlyPointEntity, CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	float m_flIntensity; // 0x350
-	Vector m_vColor; // 0x354
-	CUtlSymbolLarge m_PSName; // 0x360
-	bool m_bDirectional; // 0x368
+	CUtlSymbolLarge sUnlockedSound; // 0x10
+	float flwaitSound; // 0x18
 };
 
 // Aligment: 3
@@ -4134,28 +3277,16 @@ public:
 	bool m_bPlayReversalSound; // 0x81
 };
 
-// Aligment: 7
-// Size: 920
-class CPhysExplosion : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 5
+// Size: 32
+class CSmoothFunc
 {
 public:
-	bool m_bExplodeOnSpawn; // 0x350
-	float m_damage; // 0x354
-	float m_radius; // 0x358
-	CUtlSymbolLarge m_targetEntityName; // 0x360
-	float m_flInnerRadius; // 0x368
-	float m_flPushScale; // 0x36c
-	CEntityIOOutput m_OnPushedPlayer; // 0x370
-};
-
-// Aligment: 3
-// Size: 864
-class CPhysImpact : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	float m_damage; // 0x350
-	float m_distance; // 0x354
-	CUtlSymbolLarge m_directionEntityName; // 0x358
+	float m_flSmoothAmplitude; // 0x8
+	float m_flSmoothBias; // 0xc
+	float m_flSmoothDuration; // 0x10
+	float m_flSmoothRemainingTime; // 0x14
+	int32_t m_nSmoothDir; // 0x18
 };
 
 // Aligment: 1
@@ -4166,93 +3297,8 @@ public:
 	CHandle< CBaseEntity > hEntity; // 0x8
 };
 
-// Aligment: 12
-// Size: 1792
-class CPhysMagnet : public CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CEntityIOOutput m_OnMagnetAttach; // 0x670
-	CEntityIOOutput m_OnMagnetDetach; // 0x698
-	float m_massScale; // 0x6c0
-	float m_forceLimit; // 0x6c4
-	float m_torqueLimit; // 0x6c8
-	CUtlVector< magnetted_objects_t > m_MagnettedEntities; // 0x6d0
-	bool m_bActive; // 0x6e8
-	bool m_bHasHitSomething; // 0x6e9
-	float m_flTotalMass; // 0x6ec
-	float m_flRadius; // 0x6f0
-	float m_flNextSuckTime; // 0x6f4
-	int32_t m_iMaxObjectsAttached; // 0x6f8
-};
-
-// Aligment: 1
-// Size: 856
-class CInfoPlayerStart : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	bool m_bDisabled; // 0x350
-};
-
-// Aligment: 0
-// Size: 8
-class IBotController
-{
-public:
-// <no members described>
-};
-
-// Aligment: 0
-// Size: 8
-class IPlayerInfo
-{
-public:
-// <no members described>
-};
-
-// Aligment: 1
-// Size: 24
-class CPlayerInfo : public IBotController
-{
-public:
-	CBasePlayer* m_pParent; // 0x10
-};
-
-// Aligment: 8
-// Size: 1608
-class CPlayerResource : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "10"
-	uint32[34] m_iPing; // 0x350
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "16"
-	int32[34] m_iScore; // 0x3d8
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "12"
-	int32[34] m_iDeaths; // 0x460
-	// MNetworkEnable
-	// MNetworkEnable
-	bool[34] m_bConnected; // 0x4e8
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "4"
-	int32[34] m_iTeam; // 0x50c
-	// MNetworkEnable
-	// MNetworkEnable
-	bool[34] m_bAlive; // 0x594
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "10"
-	uint32[34] m_iHealth; // 0x5b8
-	int32_t m_nUpdateCounter; // 0x640
-};
-
 // Aligment: 27
-// Size: 528
+// Size: 568
 class CPlayerLocalData
 {
 public:
@@ -4269,7 +3315,6 @@ public:
 	int32_t m_nOldButtons; // 0x54
 	// MNetworkEnable
 	// MNetworkEnable
-	// MNetworkBitCount "12"
 	uint32_t m_iHideHUD; // 0x58
 	// MNetworkEnable
 	// MNetworkEnable
@@ -4286,16 +3331,13 @@ public:
 	bool m_bInDuckJump; // 0x6e
 	// MNetworkEnable
 	// MNetworkEnable
-	// MNetworkBitCount "10"
 	// MNetworkPriority "64"
 	uint32_t m_nDuckTimeMsecs; // 0x70
 	// MNetworkEnable
 	// MNetworkEnable
-	// MNetworkBitCount "10"
 	uint32_t m_nDuckJumpTimeMsecs; // 0x74
 	// MNetworkEnable
 	// MNetworkEnable
-	// MNetworkBitCount "10"
 	uint32_t m_nJumpTimeMsecs; // 0x78
 	// MNetworkEnable
 	// MNetworkEnable
@@ -4320,9 +3362,6 @@ public:
 	bool m_bWearingSuit; // 0xa1
 	// MNetworkEnable
 	// MNetworkEnable
-	bool m_bPoisoned; // 0xa2
-	// MNetworkEnable
-	// MNetworkEnable
 	// MNetworkBitCount "16"
 	// MNetworkEncodeFlags
 	// MNetworkMinValue "0"
@@ -4342,97 +3381,11 @@ public:
 	sky3dparams_t m_skybox3d; // 0xb0
 	// MNetworkEnable
 	// MNetworkEnable
-	audioparams_t m_audio; // 0x138
-	fogparams_t m_fog; // 0x1b0
-};
-
-// Aligment: 3
-// Size: 872
-class CPointPrefab : public CServerOnlyPointEntity, CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlSymbolLarge m_targetMapName; // 0x350
-	CUtlSymbolLarge m_forceWorldGroupID; // 0x358
-	bool m_fixupNames; // 0x360
-};
-
-// Aligment: 12
-// Size: 992
-class CPointTemplate : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlSymbolLarge m_iszWorldName; // 0x350
-	CUtlSymbolLarge m_iszSource2EntityLumpName; // 0x358
-	CUtlSymbolLarge m_iszEntityFilterName; // 0x360
-	float m_flTimeoutInterval; // 0x368
-	bool m_bAsynchronouslySpawnEntities; // 0x36c
-	CEntityIOOutput m_pOutputOnSpawned; // 0x370
-	PointTemplateClientOnlyEntityBehavior_t m_clientOnlyEntityBehavior; // 0x398
-	PointTemplateOwnerSpawnGroupType_t m_ownerSpawnGroupType; // 0x39c
-	CUtlVector< uint32 > m_createdSpawnGroupHandles; // 0x3a0
-	CUtlVector< CEntityHandle > m_SpawnedEntityHandles; // 0x3b8
-	HSCRIPT m_ScriptSpawnCallback; // 0x3d0
-	HSCRIPT m_ScriptCallbackScope; // 0x3d8
-};
-
-// Aligment: 10
-// Size: 888
-class CPostProcessController : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
+	audioparams_t m_audio; // 0x140
 	// MNetworkEnable
 	// MNetworkEnable
-	float m_fLocalContrastStrength; // 0x350
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_fLocalContrastEdgeStrength; // 0x354
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_fVignetteStart; // 0x358
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_fVignetteEnd; // 0x35c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_fVignetteBlurStrength; // 0x360
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_fFadeToBlackStrength; // 0x364
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_fGrainStrength; // 0x368
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_fTopVignetteStrength; // 0x36c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_fFadeTime; // 0x370
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bMaster; // 0x374
-};
-
-// Aligment: 4
-// Size: 1000
-class CSkyCamera : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	sky3dparams_t m_skyboxData; // 0x350
-	// MNetworkEnable
-	// MNetworkEnable
-	CUtlStringToken m_skyboxSlotToken; // 0x3d8
-	bool m_bUseAngles; // 0x3dc
-	CSkyCamera* m_pNext; // 0x3e0
-};
-
-// Aligment: 2
-// Size: 856
-class CSkyboxReference : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlStringToken m_worldGroupId; // 0x350
-	CHandle< CSkyCamera > m_hSkyCamera; // 0x354
+	CUtlVector< CHandle< CPostProcessingVolume > > m_PostProcessingVolumes; // 0x1b8
+	fogparams_t m_fog; // 0x1d0
 };
 
 // Aligment: 12
@@ -4454,127 +3407,17 @@ public:
 	bool m_bHasOwner; // 0x30
 };
 
-// Aligment: 4
-// Size: 7520
-class CSoundEnt : public CPointEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 6
+// Size: 52
+struct lerpdata_t
 {
 public:
-	int32_t m_iFreeSound; // 0x350
-	int32_t m_iActiveSound; // 0x354
-	int32_t m_cLastActiveSounds; // 0x358
-	CSound[128] m_SoundPool; // 0x35c
-};
-
-// Aligment: 4
-// Size: 1384
-class CSpotlightEnd : public CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flLightScale; // 0x548
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_Radius; // 0x54c
-	Vector m_vSpotlightDir; // 0x550
-	Vector m_vSpotlightOrg; // 0x55c
-};
-
-// Aligment: 7
-// Size: 1048
-class CTeam : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlVector< CTeamSpawnPoint* > m_aSpawnPoints; // 0x350
-	// MNetworkEnable
-	// MNetworkEnable
-	CUtlVector< CHandle< CBasePlayer > > m_aPlayers; // 0x368
-	// MNetworkEnable
-	// MNetworkEnable
-	int32_t m_iScore; // 0x380
-	// MNetworkEnable
-	// MNetworkEnable
-	int32_t m_iRoundsWon; // 0x384
-	// MNetworkEnable
-	// MNetworkEnable
-	char[129] m_szTeamname; // 0x388
-	int32_t m_iDeaths; // 0x40c
-	int32_t m_iLastSpawn; // 0x410
-};
-
-// Aligment: 15
-// Size: 2648
-class CTriggerSndSosOpvar : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlVector< CHandle< CBaseEntity > > m_hTouchingPlayers; // 0x6f0
-	Vector m_flPosition; // 0x708
-	float m_flCenterSize; // 0x714
-	float m_flMinVal; // 0x718
-	float m_flMaxVal; // 0x71c
-	float m_flWait; // 0x720
-	CUtlSymbolLarge m_opvarName; // 0x728
-	CUtlSymbolLarge m_stackName; // 0x730
-	CUtlSymbolLarge m_operatorName; // 0x738
-	bool m_bVolIs2D; // 0x740
-	char[256] m_opvarNameChar; // 0x741
-	char[256] m_stackNameChar; // 0x841
-	char[256] m_operatorNameChar; // 0x941
-	Vector m_VecNormPos; // 0xa44
-	float m_flNormCenterSize; // 0xa50
-};
-
-// Aligment: 0
-// Size: 1936
-class CTriggerHurtGhost : public CTriggerHurt, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 0
-// Size: 1784
-class CTriggerCallback : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 22
-// Size: 992
-class CTriggerCamera : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CHandle< CBaseEntity > m_hPlayer; // 0x350
-	CHandle< CBaseEntity > m_hTarget; // 0x354
-	CBaseEntity* m_pPath; // 0x358
-	CUtlSymbolLarge m_sPath; // 0x360
-	float m_flWait; // 0x368
-	float m_flReturnTime; // 0x36c
-	float m_flStopTime; // 0x370
-	float m_moveDistance; // 0x374
-	float m_targetSpeed; // 0x378
-	float m_initialSpeed; // 0x37c
-	float m_acceleration; // 0x380
-	float m_deceleration; // 0x384
-	int32_t m_state; // 0x388
-	Vector m_vecMoveDir; // 0x38c
-	float m_fov; // 0x398
-	float m_fovSpeed; // 0x39c
-	CUtlSymbolLarge m_iszTargetAttachment; // 0x3a0
-	int32_t m_iAttachmentIndex; // 0x3a8
-	bool m_bSnapToGoal; // 0x3ac
-	int32_t m_nPlayerButtons; // 0x3b0
-	DamageOptions_t m_nOldTakeDamage; // 0x3b4
-	CEntityIOOutput m_OnEndFollow; // 0x3b8
-};
-
-// Aligment: 0
-// Size: 1352
-class CFuncNavConnectionBlocker : public CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
+	CHandle< CBaseEntity > m_hEnt; // 0x0
+	MoveType_t m_MoveType; // 0x4
+	float m_flStartTime; // 0x8
+	Vector m_vecStartOrigin; // 0xc
+	Quaternion m_qStartRot; // 0x18
+	ParticleIndex_t m_nFXIndex; // 0x28
 };
 
 // Aligment: 2
@@ -4584,39 +3427,6 @@ struct ClusteredDistributionParams_t
 public:
 	float m_flClusterCoverageFraction; // 0x0
 	float m_flClusterArea; // 0x4
-};
-
-// Aligment: 0
-// Size: 128
-class CNavVolume
-{
-public:
-// <no members described>
-};
-
-// Aligment: 0
-// Size: 232
-class CNavVolumeMarkupVolume : public CNavVolume
-{
-public:
-// <no members described>
-};
-
-// Aligment: 0
-// Size: 168
-class CNavVolumeCalculatedVector : public CNavVolume
-{
-public:
-// <no members described>
-};
-
-// Aligment: 2
-// Size: 200
-class CNavVolumeBreadthFirstSearch : public CNavVolumeCalculatedVector, CNavVolume
-{
-public:
-	Vector m_vStartPos; // 0xb0
-	float m_flSearchDist; // 0xbc
 };
 
 // Aligment: 5
@@ -4653,6 +3463,22 @@ public:
 	constraint_breakableparams_t constraint; // 0x28
 };
 
+// Aligment: 0
+// Size: 8
+class IPlayerInfo
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 8
+class IBotController
+{
+public:
+// <no members described>
+};
+
 // Aligment: 1
 // Size: 2
 struct ChangeAccessorFieldPathIndex_t
@@ -4667,220 +3493,6 @@ class IPhysicsPlayerController
 {
 public:
 // <no members described>
-};
-
-// Aligment: 24
-// Size: 176
-struct HandInfo_t
-{
-public:
-	// MNetworkEnable
-	Vector m_vPosition; // 0xc
-	// MNetworkEnable
-	QAngle m_Angles; // 0x18
-	// MNetworkEnable
-	Vector m_vVelocity; // 0x24
-	// MNetworkEnable
-	float m_flSampleTime; // 0x30
-	// MNetworkEnable
-	Vector m_vFilteredPosition; // 0x34
-	// MNetworkEnable
-	QAngle m_FilteredAngles; // 0x40
-	// MNetworkEnable
-	Vector m_vFilteredVelocity; // 0x4c
-	// MNetworkEnable
-	Vector m_FilteredAngularVel; // 0x58
-	// MNetworkEnable
-	Vector m_vFilteredThrowVel; // 0x64
-	// MNetworkEnable
-	float m_flTriggerAnalogValue; // 0x70
-	// MNetworkEnable
-	float m_flGripAnalogValue; // 0x74
-	// MNetworkEnable
-	float m_flFinger0; // 0x78
-	// MNetworkEnable
-	float m_flFinger1; // 0x7c
-	// MNetworkEnable
-	float m_flFinger2; // 0x80
-	// MNetworkEnable
-	float m_flFinger3; // 0x84
-	// MNetworkEnable
-	float m_flFinger4; // 0x88
-	// MNetworkEnable
-	float m_flFingerSplay0; // 0x8c
-	// MNetworkEnable
-	float m_flFingerSplay1; // 0x90
-	// MNetworkEnable
-	float m_flFingerSplay2; // 0x94
-	// MNetworkEnable
-	float m_flFingerSplay3; // 0x98
-	// MNetworkEnable
-	float m_flTrackpadAnalogValueX; // 0x9c
-	// MNetworkEnable
-	float m_flTrackpadAnalogValueY; // 0xa0
-	// MNetworkEnable
-	float m_flJoystickAnalogValueX; // 0xa4
-	// MNetworkEnable
-	float m_flJoystickAnalogValueY; // 0xa8
-};
-
-// Aligment: 8
-// Size: 56
-class CPlayerState
-{
-public:
-	bool deadflag; // 0x8
-	bool hltv; // 0x9
-	QAngle v_angle; // 0xc
-	CUtlSymbolLarge netname; // 0x18
-	int32_t fixangle; // 0x20
-	QAngle anglechange; // 0x24
-	int32_t frags; // 0x30
-	int32_t deaths; // 0x34
-};
-
-// Aligment: 48
-// Size: 2008
-class CBaseCombatWeapon : public CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CBaseCombatCharacter > m_hOwner; // 0x678
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "1"
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	uint32_t m_nViewModelIndex; // 0x67c
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	float m_flNextPrimaryAttack; // 0x680
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	float m_flNextSecondaryAttack; // 0x684
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	int32_t m_nQueuedAttack; // 0x688
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	float m_flTimeAttackQueued; // 0x68c
-	// MNetworkEnable
-	// MNetworkEnable
-	CStrongHandle< InfoForResourceTypeCModel > m_iViewModelIndex; // 0x690
-	// MNetworkEnable
-	// MNetworkEnable
-	CStrongHandle< InfoForResourceTypeCModel > m_iWorldModelIndex; // 0x698
-	// MNetworkEnable
-	// MNetworkEnable
-	WeaponState_t m_iState; // 0x6a0
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "8"
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	int32_t m_iPrimaryAmmoType; // 0x6a4
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "8"
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	int32_t m_iSecondaryAmmoType; // 0x6a8
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkSerializer "minusone"
-	// MNetworkPriority "64"
-	int32_t m_iClip1; // 0x6ac
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkSerializer "minusone"
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	int32_t m_iClip2; // 0x6b0
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	bool m_bOnlyPump; // 0x6b4
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	// MNetworkPriority "64"
-	float m_flTimeWeaponIdle; // 0x6b8
-	float m_flNextEmptySoundTime; // 0x6bc
-	float m_fMinRange1; // 0x6c0
-	float m_fMinRange2; // 0x6c4
-	float m_fMaxRange1; // 0x6c8
-	float m_fMaxRange2; // 0x6cc
-	float m_fFireDuration; // 0x6d0
-	float m_fMinAdvanceToRange1; // 0x6d4
-	int32_t m_Activity; // 0x6d8
-	int32_t m_iPrimaryAmmoCount; // 0x6dc
-	int32_t m_iSecondaryAmmoCount; // 0x6e0
-	CUtlSymbolLarge m_iszName; // 0x6e8
-	bool m_bRemoveable; // 0x6f0
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bInReload; // 0x6f1
-	bool m_bFireOnEmpty; // 0x6f2
-	bool m_bFiresUnderwater; // 0x6f3
-	bool m_bAltFiresUnderwater; // 0x6f4
-	bool m_bReloadsSingly; // 0x6f5
-	HSequence m_hIdealSequence; // 0x6f8
-	int32_t m_IdealActivity; // 0x6fc
-	int32_t m_iSubType; // 0x700
-	float m_flUnlockTime; // 0x704
-	CHandle< CBaseEntity > m_hLocker; // 0x708
-	int32_t m_nTracerAttachmentIndex; // 0x70c
-	int32_t m_iAltFireHudHintCount; // 0x720
-	int32_t m_iReloadHudHintCount; // 0x724
-	bool m_bAltFireHudHintDisplayed; // 0x728
-	bool m_bReloadHudHintDisplayed; // 0x729
-	float m_flHudHintPollTime; // 0x72c
-	float m_flHudHintMinDisplayTime; // 0x730
-	CEntityIOOutput m_OnPlayerUse; // 0x738
-	CEntityIOOutput m_OnPlayerPickup; // 0x760
-	CEntityIOOutput m_OnNPCPickup; // 0x788
-	CEntityIOOutput m_OnCacheInteraction; // 0x7b0
-};
-
-// Aligment: 14
-// Size: 1760
-class CBaseViewModel : public CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	Vector m_vecLastFacing; // 0x678
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "1"
-	uint32_t m_nViewModelIndex; // 0x684
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "3"
-	uint32_t m_nAnimationParity; // 0x688
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "13"
-	HSequence m_hLayerSequence; // 0x68c
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "2"
-	uint32_t m_nLayer; // 0x690
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flAnimationStartTime; // 0x694
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnWeaponChanged"
-	CHandle< CBaseCombatWeapon > m_hWeapon; // 0x698
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CBaseEntity > m_hOwner; // 0x69c
-	int32_t m_Activity; // 0x6a0
-	CUtlSymbolLarge m_sVMName; // 0x6a8
-	CUtlSymbolLarge m_sAnimationPrefix; // 0x6b0
-	HSequence m_hOldLayerSequence; // 0x6b8
-	int32_t m_oldLayer; // 0x6bc
-	float m_oldLayerStartTime; // 0x6c0
 };
 
 // Aligment: 7
@@ -4923,7 +3535,6 @@ public:
 	Vector m_vecMaxs; // 0x44
 	// MNetworkEnable
 	// MNetworkEnable
-	// MNetworkBitCount "2"
 	// MNetworkChangeCallback "OnUpdateSolidFlags"
 	uint8_t m_usSolidFlags; // 0x52
 	// MNetworkEnable
@@ -4940,12 +3551,11 @@ public:
 	SurroundingBoundsType_t m_nSurroundType; // 0x55
 	// MNetworkEnable
 	// MNetworkEnable
-	// MNetworkBitCount "6"
 	uint8_t m_CollisionGroup; // 0x56
 	// MNetworkEnable
 	// MNetworkEnable
 	bool m_bHitboxEnabled; // 0x57
-	float m_flRadius; // 0x58
+	float m_flBoundingRadius; // 0x58
 	// MNetworkEnable
 	// MNetworkEnable
 	// MNetworkChangeCallback "MarkSurroundingBoundsDirty"
@@ -4967,23 +3577,7 @@ public:
 	float m_flCapsuleRadius; // 0xa4
 };
 
-// Aligment: 0
-// Size: 8
-class IDamageHandler
-{
-public:
-// <no members described>
-};
-
-// Aligment: 0
-// Size: 48
-class CDamageComponent : public CEntityComponent
-{
-public:
-// <no members described>
-};
-
-// Aligment: 19
+// Aligment: 21
 // Size: 112
 class CEffectData
 {
@@ -5038,38 +3632,98 @@ public:
 	uint32_t m_nDamageType; // 0x58
 	// MNetworkEnable
 	// MNetworkEnable
-	uint16_t m_nMaterial; // 0x5c
+	uint8_t m_nPenetrate; // 0x5c
 	// MNetworkEnable
 	// MNetworkEnable
-	uint16_t m_nHitBox; // 0x5e
+	uint16_t m_nMaterial; // 0x5e
 	// MNetworkEnable
 	// MNetworkEnable
-	uint8_t m_nColor; // 0x60
+	uint16_t m_nHitBox; // 0x60
 	// MNetworkEnable
 	// MNetworkEnable
-	uint8_t m_fFlags; // 0x61
+	uint8_t m_nColor; // 0x62
 	// MNetworkEnable
 	// MNetworkEnable
-	int8_t m_nAttachmentIndex; // 0x62
+	uint8_t m_fFlags; // 0x63
 	// MNetworkEnable
 	// MNetworkEnable
-	CUtlStringToken m_nAttachmentName; // 0x64
+	AttachmentHandle_t m_nAttachmentIndex; // 0x64
 	// MNetworkEnable
 	// MNetworkEnable
-	uint16_t m_iEffectName; // 0x68
+	CUtlStringToken m_nAttachmentName; // 0x68
+	// MNetworkEnable
+	// MNetworkEnable
+	uint16_t m_iEffectName; // 0x6c
+	// MNetworkEnable
+	// MNetworkEnable
+	uint8_t m_nExplosionType; // 0x6e
 };
 
-// Aligment: 2
-// Size: 856
-class CEnvDetailController : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 31
+// Size: 656
+class CEnvWindShared
 {
 public:
 	// MNetworkEnable
 	// MNetworkEnable
-	float m_flFadeStartDist; // 0x350
+	float m_flStartTime; // 0x8
 	// MNetworkEnable
 	// MNetworkEnable
-	float m_flFadeEndDist; // 0x354
+	uint32_t m_iWindSeed; // 0xc
+	// MNetworkEnable
+	// MNetworkEnable
+	uint16_t m_iMinWind; // 0x10
+	// MNetworkEnable
+	// MNetworkEnable
+	uint16_t m_iMaxWind; // 0x12
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_windRadius; // 0x14
+	// MNetworkEnable
+	// MNetworkEnable
+	uint16_t m_iMinGust; // 0x18
+	// MNetworkEnable
+	// MNetworkEnable
+	uint16_t m_iMaxGust; // 0x1a
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flMinGustDelay; // 0x1c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flMaxGustDelay; // 0x20
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flGustDuration; // 0x24
+	// MNetworkEnable
+	// MNetworkEnable
+	uint16_t m_iGustDirChange; // 0x28
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkEncoder
+	Vector m_location; // 0x2c
+	int32_t m_iszGustSound; // 0x38
+	int32_t m_iWindDir; // 0x3c
+	float m_flWindSpeed; // 0x40
+	Vector m_currentWindVector; // 0x44
+	Vector m_CurrentSwayVector; // 0x50
+	Vector m_PrevSwayVector; // 0x5c
+	// MNetworkEnable
+	// MNetworkEnable
+	uint16_t m_iInitialWindDir; // 0x68
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flInitialWindSpeed; // 0x6c
+	CEntityIOOutput m_OnGustStart; // 0x70
+	CEntityIOOutput m_OnGustEnd; // 0x98
+	float m_flVariationTime; // 0xc0
+	float m_flSwayTime; // 0xc4
+	float m_flSimTime; // 0xc8
+	float m_flSwitchTime; // 0xcc
+	float m_flAveWindSpeed; // 0xd0
+	bool m_bGusting; // 0xd4
+	float m_flWindAngleVariation; // 0xd8
+	float m_flWindSpeedVariation; // 0xdc
+	CEntityIndex m_iEntIndex; // 0xe0
 };
 
 // Aligment: 2
@@ -5090,88 +3744,6 @@ public:
 	float m_flWindSpeedVariation; // 0x4
 };
 
-// Aligment: 31
-// Size: 640
-class CEnvWindShared
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flStartTime; // 0x8
-	// MNetworkEnable
-	// MNetworkEnable
-	uint32_t m_iWindSeed; // 0xc
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "10"
-	uint16_t m_iMinWind; // 0x10
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "10"
-	uint16_t m_iMaxWind; // 0x12
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "14"
-	int32_t m_windRadius; // 0x14
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "10"
-	uint16_t m_iMinGust; // 0x18
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "10"
-	uint16_t m_iMaxGust; // 0x1a
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flMinGustDelay; // 0x1c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flMaxGustDelay; // 0x20
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flGustDuration; // 0x24
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "9"
-	uint16_t m_iGustDirChange; // 0x28
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkEncoder
-	Vector m_location; // 0x2c
-	int32_t m_iszGustSound; // 0x38
-	int32_t m_iWindDir; // 0x3c
-	float m_flWindSpeed; // 0x40
-	Vector m_currentWindVector; // 0x44
-	Vector m_CurrentSwayVector; // 0x50
-	Vector m_PrevSwayVector; // 0x5c
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "9"
-	uint16_t m_iInitialWindDir; // 0x68
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flInitialWindSpeed; // 0x6c
-	CEntityIOOutput m_OnGustStart; // 0x70
-	CEntityIOOutput m_OnGustEnd; // 0x98
-	float m_flVariationTime; // 0xc0
-	float m_flSwayTime; // 0xc4
-	float m_flSimTime; // 0xc8
-	float m_flSwitchTime; // 0xcc
-	float m_flAveWindSpeed; // 0xd0
-	bool m_bGusting; // 0xd4
-	float m_flWindAngleVariation; // 0xd8
-	float m_flWindSpeedVariation; // 0xdc
-	CEntityIndex m_iEntIndex; // 0xe0
-};
-
-// Aligment: 0
-// Size: 848
-class CGameRulesProxy : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
 // Aligment: 2
 // Size: 144
 class CGameRules
@@ -5181,8 +3753,8 @@ public:
 	int32_t m_nQuestPhase; // 0x88
 };
 
-// Aligment: 8
-// Size: 72
+// Aligment: 10
+// Size: 80
 class CGlowProperty
 {
 public:
@@ -5205,41 +3777,13 @@ public:
 	// MNetworkEnable
 	// MNetworkEnable
 	bool m_bFlashing; // 0x40
-	bool m_bGlowing; // 0x41
-};
-
-// Aligment: 4
-// Size: 24
-class CHealthComponent : public CEntityComponent
-{
-public:
-	LifeState_t m_lifeState; // 0x8
-	int32_t m_iMax; // 0xc
-	int32_t m_iHealth; // 0x10
-	float m_flDamageAccumulator; // 0x14
-public:
-	static EntComponentInfo_t &Get_s_EntComponentInfo() { return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CHealthComponent")->m_static_fiels[0]->m_instance); }
-	static int32_t &Get_entity_component_error_class_decl_says_referenced_but_impl_is_contained() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CHealthComponent")->m_static_fiels[1]->m_instance); }
-};
-
-// Aligment: 3
-// Size: 48
-class CHintMessage
-{
-public:
-	char* m_hintString; // 0x8
-	CUtlVector< char* > m_args; // 0x10
-	float m_duration; // 0x28
-};
-
-// Aligment: 3
-// Size: 48
-class CHintMessageQueue
-{
-public:
-	float m_tmMessageEnd; // 0x8
-	CUtlVector< CHintMessage* > m_messages; // 0x10
-	CBasePlayer* m_pPlayer; // 0x28
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flGlowTime; // 0x44
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flGlowStartTime; // 0x48
+	bool m_bGlowing; // 0x4c
 };
 
 // Aligment: 1
@@ -5249,12 +3793,12 @@ class CMultiplayRules : public CGameRules
 public:
 	float m_flIntermissionEndTime; // 0xa8
 public:
-	static int32_t &Get_m_nMapCycleTimeStamp() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CMultiplayRules")->m_static_fiels[0]->m_instance); }
+	static int64_t &Get_m_nMapCycleTimeStamp() { return *reinterpret_cast<int64_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CMultiplayRules")->m_static_fiels[0]->m_instance); }
 	static int32_t &Get_m_nMapCycleindex() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CMultiplayRules")->m_static_fiels[1]->m_instance); }
 };
 
-// Aligment: 22
-// Size: 96
+// Aligment: 24
+// Size: 104
 struct fogparams_t
 {
 public:
@@ -5325,14 +3869,22 @@ public:
 	float duration; // 0x54
 	// MNetworkEnable
 	// MNetworkEnable
-	bool enable; // 0x58
+	// MNetworkUserGroup "FogController"
+	float blendtobackground; // 0x58
 	// MNetworkEnable
 	// MNetworkEnable
-	bool blend; // 0x59
+	// MNetworkUserGroup "FogController"
+	float scattering; // 0x5c
 	// MNetworkEnable
 	// MNetworkEnable
-	bool m_bNoReflectionFog; // 0x5a
-	bool m_bPadding; // 0x5b
+	bool enable; // 0x60
+	// MNetworkEnable
+	// MNetworkEnable
+	bool blend; // 0x61
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bNoReflectionFog; // 0x62
+	bool m_bPadding; // 0x63
 };
 
 // Aligment: 14
@@ -5360,13 +3912,12 @@ public:
 };
 
 // Aligment: 6
-// Size: 136
+// Size: 144
 struct sky3dparams_t
 {
 public:
 	// MNetworkEnable
 	// MNetworkEnable
-	// MNetworkBitCount "12"
 	int16_t scale; // 0x8
 	// MNetworkEnable
 	// MNetworkEnable
@@ -5383,7 +3934,7 @@ public:
 	fogparams_t fog; // 0x20
 	// MNetworkEnable
 	// MNetworkEnable
-	CUtlStringToken m_nWorldGroupID; // 0x80
+	CUtlStringToken m_nWorldGroupID; // 0x88
 };
 
 // Aligment: 4
@@ -5397,19 +3948,17 @@ public:
 	Vector[8] localSound; // 0x8
 	// MNetworkEnable
 	// MNetworkEnable
-	// MNetworkBitCount "17"
 	int32_t soundscapeIndex; // 0x68
 	// MNetworkEnable
 	// MNetworkEnable
-	// MNetworkBitCount "8"
 	uint8_t localBits; // 0x6c
 	// MNetworkEnable
 	// MNetworkEnable
 	int32_t soundscapeEntityListIndex; // 0x70
 };
 
-// Aligment: 10
-// Size: 48
+// Aligment: 8
+// Size: 40
 struct TonemapParameters_t
 {
 public:
@@ -5426,76 +3975,9 @@ public:
 	// MNetworkEnable
 	float m_flTonemapMinAvgLum; // 0x1c
 	// MNetworkEnable
-	float m_flBloomScale; // 0x20
+	float m_flRate; // 0x20
 	// MNetworkEnable
-	float m_flBloomStartValue; // 0x24
-	// MNetworkEnable
-	float m_flRate; // 0x28
-	// MNetworkEnable
-	float m_flAccelerateExposureDown; // 0x2c
-};
-
-// Aligment: 14
-// Size: 928
-class CPoseController : public CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bPoseValueParity; // 0x350
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "11"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
-	float m_fPoseValue; // 0x354
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "11"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "10"
-	float m_fInterpolationDuration; // 0x358
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bInterpolationWrap; // 0x35c
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "11"
-	// MNetworkMinValue "-10"
-	// MNetworkMaxValue "10"
-	float m_fCycleFrequency; // 0x360
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "3"
-	PoseController_FModType_t m_nFModType; // 0x364
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "11"
-	// MNetworkMinValue "-1"
-	// MNetworkMaxValue "1"
-	float m_fFModTimeOffset; // 0x368
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "11"
-	// MNetworkMinValue "-10"
-	// MNetworkMaxValue "10"
-	float m_fFModRate; // 0x36c
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "11"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "10"
-	float m_fFModAmplitude; // 0x370
-	// MNetworkEnable
-	// MNetworkEnable
-	CHandle< CBaseEntity >[4] m_hProps; // 0x374
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "5"
-	uint8[4] m_chPoseIndex; // 0x384
-	bool m_bDisablePropLookup; // 0x388
-	CUtlSymbolLarge m_iszPropName; // 0x390
-	CUtlSymbolLarge m_iszPoseParameterName; // 0x398
+	float m_flAccelerateExposureDown; // 0x24
 };
 
 // Aligment: 0
@@ -5504,24 +3986,6 @@ class IRagdoll
 {
 public:
 // <no members described>
-};
-
-// Aligment: 9
-// Size: 128
-class CRagdoll : public IRagdoll
-{
-public:
-	ragdoll_t m_ragdoll; // 0x8
-	Vector m_mins; // 0x40
-	Vector m_maxs; // 0x4c
-	Vector m_origin; // 0x58
-	float m_lastUpdate; // 0x64
-	bool m_allAsleep; // 0x68
-	Vector m_vecLastOrigin; // 0x6c
-	float m_flLastOriginChangeTime; // 0x78
-	float m_flAwakeTime; // 0x7c
-public:
-	static uint32_t &Get_s_globalCount() { return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CRagdoll")->m_static_fiels[0]->m_instance); }
 };
 
 // Aligment: 3
@@ -5545,36 +4009,28 @@ public:
 	bool unused; // 0x31
 };
 
-// Aligment: 2
-// Size: 4
-struct cache_ragdoll_t
-{
-public:
-	int16_t solidCount; // 0x0
-	int16_t constraintCount; // 0x2
-};
-
-// Aligment: 16
+// Aligment: 17
 // Size: 96
 class CSceneEventInfo
 {
 public:
-	bool m_bStarted; // 0x1c
-	int32_t m_iLayer; // 0x20
-	int32_t m_iPriority; // 0x24
-	HSequence m_hSequence; // 0x28
-	bool m_bIsGesture; // 0x2c
-	float m_flWeight; // 0x30
-	CHandle< CBaseEntity > m_hTarget; // 0x34
-	bool m_bIsMoving; // 0x38
-	bool m_bHasArrived; // 0x39
-	float m_flInitialYaw; // 0x3c
-	float m_flTargetYaw; // 0x40
-	float m_flFacingYaw; // 0x44
-	int32_t m_nType; // 0x48
-	float m_flNext; // 0x4c
-	bool m_bClientSide; // 0x50
-	bool m_bShouldRemove; // 0x51
+	int32_t m_iLayer; // 0x0
+	int32_t m_iPriority; // 0x4
+	HSequence m_hSequence; // 0x8
+	float m_flWeight; // 0xc
+	bool m_bIsMoving; // 0x10
+	bool m_bHasArrived; // 0x11
+	float m_flInitialYaw; // 0x14
+	float m_flTargetYaw; // 0x18
+	float m_flFacingYaw; // 0x1c
+	int32_t m_nType; // 0x20
+	float m_flNext; // 0x24
+	bool m_bIsGesture; // 0x28
+	bool m_bShouldRemove; // 0x29
+	CHandle< CBaseEntity > m_hTarget; // 0x54
+	uint32_t m_nSceneEventId; // 0x58
+	bool m_bClientSide; // 0x5c
+	bool m_bStarted; // 0x5d
 };
 
 // Aligment: 4
@@ -5612,6 +4068,30 @@ public:
 	float m_flCurrentAnimTime; // 0x4c
 	TransitioningLayer_t[4] m_transitioningLayers; // 0x50
 	CBaseAnimatingController* m_pOwner; // 0x1d0
+};
+
+// Aligment: 1
+// Size: 4
+struct ParticleIndex_t
+{
+public:
+	int32_t m_nBoxedTypeSafeInt; // 0x0
+};
+
+// Aligment: 1
+// Size: 1
+struct AmmoIndex_t
+{
+public:
+	int8_t m_nBoxedTypeSafeInt; // 0x0
+};
+
+// Aligment: 0
+// Size: 40
+class CEntitySubclassVDataBase
+{
+public:
+// <no members described>
 };
 
 // Aligment: 4
@@ -5700,16 +4180,8 @@ public:
 // <no members described>
 };
 
-// Aligment: 0
-// Size: 1464
-class CSpriteOriented : public CSprite, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 22
-// Size: 136
+// Aligment: 21
+// Size: 160
 class CTakeDamageInfo
 {
 public:
@@ -5719,140 +4191,21 @@ public:
 	Vector m_vecDamageDirection; // 0x2c
 	CHandle< CBaseEntity > m_hInflictor; // 0x38
 	CHandle< CBaseEntity > m_hAttacker; // 0x3c
-	CHandle< CBaseEntity > m_hWeapon; // 0x40
+	CHandle< CBaseEntity > m_hAbility; // 0x40
 	float m_flDamage; // 0x44
 	float m_flMaxDamage; // 0x48
-	float m_flBaseDamage; // 0x4c
-	int32_t m_bitsDamageType; // 0x50
-	int32_t m_iDamageCustom; // 0x54
-	int32_t m_iAmmoType; // 0x58
-	float m_flRadius; // 0x5c
-	bool m_bCanHeadshot; // 0x68
-	float m_flOriginalDamage; // 0x6c
-	int32_t m_nDamageTaken; // 0x70
-	int16_t m_iRecord; // 0x74
-	float m_flStabilityDamage; // 0x78
-	bool m_bAllowFriendlyFire; // 0x7c
-	bool m_bCanBeBlocked; // 0x7d
+	int32_t m_bitsDamageType; // 0x4c
+	int32_t m_iDamageCustom; // 0x50
+	AmmoIndex_t m_iAmmoType; // 0x54
+	float m_flRadius; // 0x58
+	float m_flOriginalDamage; // 0x68
+	int32_t m_nDamageTaken; // 0x6c
+	int16_t m_iRecord; // 0x70
+	float m_flStabilityDamage; // 0x74
+	bool m_bAllowFriendlyFire; // 0x78
+	bool m_bCanBeBlocked; // 0x79
+	bool m_bCanHeadshot; // 0x7a
 	HSCRIPT m_hScriptInstance; // 0x80
-};
-
-// Aligment: 14
-// Size: 1784
-class CBaseClientUIEntity : public CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bEnabled; // 0x548
-	// MNetworkEnable
-	// MNetworkEnable
-	CUtlSymbolLarge m_DialogXMLName; // 0x550
-	// MNetworkEnable
-	// MNetworkEnable
-	CUtlSymbolLarge m_PanelClassName; // 0x558
-	// MNetworkEnable
-	// MNetworkEnable
-	CUtlSymbolLarge m_PanelID; // 0x560
-	CEntityIOOutput m_CustomOutput0; // 0x568
-	CEntityIOOutput m_CustomOutput1; // 0x590
-	CEntityIOOutput m_CustomOutput2; // 0x5b8
-	CEntityIOOutput m_CustomOutput3; // 0x5e0
-	CEntityIOOutput m_CustomOutput4; // 0x608
-	CEntityIOOutput m_CustomOutput5; // 0x630
-	CEntityIOOutput m_CustomOutput6; // 0x658
-	CEntityIOOutput m_CustomOutput7; // 0x680
-	CEntityIOOutput m_CustomOutput8; // 0x6a8
-	CEntityIOOutput m_CustomOutput9; // 0x6d0
-};
-
-// Aligment: 20
-// Size: 1864
-class CPointClientUIWorldPanel : public CBaseClientUIEntity, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bIgnoreInput; // 0x6f8
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bFollowPlayerAcrossTeleport; // 0x6f9
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flWidth; // 0x6fc
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flHeight; // 0x700
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flDPI; // 0x704
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flInteractDistance; // 0x708
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flDepthOffset; // 0x70c
-	// MNetworkEnable
-	// MNetworkEnable
-	uint32_t m_unOwnerContext; // 0x710
-	// MNetworkEnable
-	// MNetworkEnable
-	uint32_t m_unHorizontalAlign; // 0x714
-	// MNetworkEnable
-	// MNetworkEnable
-	uint32_t m_unVerticalAlign; // 0x718
-	// MNetworkEnable
-	// MNetworkEnable
-	uint32_t m_unOrientation; // 0x71c
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bAllowInteractionFromAllSceneWorlds; // 0x720
-	// MNetworkEnable
-	// MNetworkEnable
-	CUtlVector< CUtlSymbolLarge > m_vecCSSClasses; // 0x728
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bOpaque; // 0x740
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bNoDepth; // 0x741
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bRenderBackface; // 0x742
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bUseOffScreenIndicator; // 0x743
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bExcludeFromSaveGames; // 0x744
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bGrabbable; // 0x745
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bOnlyRenderToTexture; // 0x746
-};
-
-// Aligment: 1
-// Size: 2376
-class CPointClientUIWorldTextPanel : public CPointClientUIWorldPanel, CBaseClientUIEntity, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	char[512] m_messageText; // 0x748
-};
-
-// Aligment: 2
-// Size: 1792
-class CPointClientUIDialog : public CBaseClientUIEntity, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnDialogActivatorChanged"
-	CHandle< CBaseEntity > m_hActivator; // 0x6f8
-	bool m_bStartEnabled; // 0x6fc
 };
 
 // Aligment: 2
@@ -5889,57 +4242,6 @@ public:
 // <no members described>
 };
 
-// Aligment: 17
-// Size: 216
-class CEconItemView : public IEconItemInterface
-{
-public:
-	// MNetworkEnable
-	// MNetworkEnable
-	item_definition_index_t m_iItemDefinitionIndex; // 0x8
-	// MNetworkEnable
-	// MNetworkEnable
-	int32_t m_iEntityQuality; // 0xc
-	// MNetworkEnable
-	// MNetworkEnable
-	uint32_t m_iEntityLevel; // 0x10
-	// MNetworkEnable
-	// MNetworkEnable
-	itemid_t m_iItemID; // 0x18
-	// MNetworkEnable
-	// MNetworkEnable
-	uint32_t m_iAccountID; // 0x20
-	// MNetworkEnable
-	uint32_t m_iInventoryPosition; // 0x24
-	// MNetworkEnable
-	// MNetworkEnable
-	bool m_bInitialized; // 0x30
-	// MNetworkEnable
-	// MNetworkEnable
-	style_index_t m_nOverrideStyle; // 0x31
-	bool m_bIsStoreItem; // 0x32
-	bool m_bIsTradeItem; // 0x33
-	bool m_bHasComputedAttachedParticles; // 0x34
-	bool m_bHasAttachedParticles; // 0x35
-	int32_t m_iEntityQuantity; // 0x38
-	uint8_t m_unClientFlags; // 0x3c
-	eEconItemOrigin m_unOverrideOrigin; // 0x40
-	char* m_pszGrayedOutReason; // 0x50
-	// MNetworkEnable
-	// MNetworkEnable
-	CAttributeList m_AttributeList; // 0x58
-};
-
-// Aligment: 3
-// Size: 24
-struct CAttributeManager::cached_attribute_float_t
-{
-public:
-	float flIn; // 0x0
-	CUtlSymbolLarge iAttribHook; // 0x8
-	float flOut; // 0x10
-};
-
 // Aligment: 7
 // Size: 104
 class CAttributeManager
@@ -5958,6 +4260,16 @@ public:
 	// MNetworkEnable
 	attributeprovidertypes_t m_ProviderType; // 0x44
 	CUtlVector< CAttributeManager::cached_attribute_float_t > m_CachedResults; // 0x48
+};
+
+// Aligment: 3
+// Size: 24
+struct CAttributeManager::cached_attribute_float_t
+{
+public:
+	float flIn; // 0x0
+	CUtlSymbolLarge iAttribHook; // 0x8
+	float flOut; // 0x10
 };
 
 // Aligment: 1
@@ -5983,44 +4295,41 @@ public:
 struct CEconEntity::AttachedParticleInfo_t
 {
 public:
-	int32_t m_nAttachedParticleIndex; // 0x0
+	ParticleIndex_t m_nAttachedParticleIndex; // 0x0
 	CUtlStringToken m_customType; // 0x4
 	bool m_bShouldDestroyImmediately; // 0x8
 };
 
-// Aligment: 3
-// Size: 2136
-class CEconEntity : public CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 1
+// Size: 1
+struct HeroPersona_t
 {
 public:
-	// MNetworkEnable
-	CAttributeContainer m_AttributeManager; // 0x710
-	CHandle< CBaseEntity > m_hOldProvidee; // 0x850
-	int32_t m_iOldOwnerClass; // 0x854
+	int8_t m_nBoxedTypeSafeInt; // 0x0
 };
 
-// Aligment: 0
-// Size: 2136
-class CBaseAttributableItem : public CEconEntity, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 1
+// Size: 1
+struct style_index_t
 {
 public:
-// <no members described>
+	uint8_t m_nBoxedTypeSafeInt; // 0x0
 };
 
-// Aligment: 0
-// Size: 2136
-class CEconWearable : public CEconEntity, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 1
+// Size: 4
+struct item_definition_index_t
 {
 public:
-// <no members described>
+	uint32_t m_nBoxedTypeSafeInt; // 0x0
 };
 
-// Aligment: 0
-// Size: 2136
-class CTFWearableItem : public CEconWearable, CEconEntity, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Aligment: 1
+// Size: 8
+struct itemid_t
 {
 public:
-// <no members described>
+	uint64_t m_nBoxedTypeSafeInt; // 0x0
 };
 
 // Aligment: 28
@@ -6068,94 +4377,27 @@ public:
 };
 
 // Aligment: 1
-// Size: 10064
-class CFlexExpresserShim : public CFlexCycler, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Size: 160
+class CDCGGameRules : public CSingleplayRules, CGameRules
 {
 public:
-	CAI_Expresser* m_pExpresser; // 0x2748
+	float m_fTimeOfDay; // 0x98
 };
 
 // Aligment: 1
-// Size: 10080
-class CFlexExpresser : public CFlexExpresserShim, CFlexCycler, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Size: 8
+class CRangeFloat
 {
 public:
-	float m_flThenAnyMaxDist; // 0x2758
-};
-
-// Aligment: 5
-// Size: 1392
-class CFogVolume : public CServerOnlyModelEntity, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CUtlSymbolLarge m_fogName; // 0x548
-	CUtlSymbolLarge m_postProcessName; // 0x550
-	CUtlSymbolLarge m_colorCorrectionName; // 0x558
-	bool m_bDisabled; // 0x56c
-	bool m_bInFogVolumesList; // 0x56d
-};
-
-// Aligment: 10
-// Size: 1656
-class CEnvDeferredLight : public CModelPointEntity, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-	CHandle< CBaseEntity > m_hTargetEntity; // 0x548
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkBitCount "32"
-	Color m_LightColor; // 0x54c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flIntensity; // 0x550
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flLightSize; // 0x554
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flSpotFoV; // 0x558
-	// MNetworkEnable
-	// MNetworkEnable
-	QAngle m_vLightDirection; // 0x55c
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flStartFalloff; // 0x568
-	// MNetworkEnable
-	// MNetworkEnable
-	float m_flDistanceFalloff; // 0x56c
-	// MNetworkEnable
-	// MNetworkEnable
-	uint32_t m_nFlags; // 0x570
-	// MNetworkEnable
-	// MNetworkEnable
-	char[260] m_ProjectedTextureName; // 0x574
-};
-
-// Aligment: 0
-// Size: 1656
-class CEnvDeferredSpotLight : public CEnvDeferredLight, CModelPointEntity, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
-};
-
-// Aligment: 0
-// Size: 4976
-class CDCGPlayer : public CBasePlayer, CBaseCombatCharacter, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
-{
-public:
-// <no members described>
+	float32[2] m_pValue; // 0x0
 };
 
 // Aligment: 1
-// Size: 856
-class CDCGGameRulesProxy : public CGameRulesProxy, CBaseEntity, CGameEntity, CEntityInstance, IHandleEntity
+// Size: 8
+class CRangeInt
 {
 public:
-	// MNetworkEnable
-	// MNetworkEnable
-	// MNetworkPriority "64"
-	CSingleplayRules* m_pGameRules; // 0x350
+	int32[2] m_pValue; // 0x0
 };
 
 // Aligment: 2
@@ -6167,16 +4409,24 @@ public:
 	Vector hi; // 0xc
 };
 
+// Aligment: 0
+// Size: 112
+class CNavVolume
+{
+public:
+// <no members described>
+};
+
 // Aligment: 1
-// Size: 168
+// Size: 152
 class CNavVolumeVector : public CNavVolume
 {
 public:
-	bool m_bHasBeenPreFiltered; // 0x88
+	bool m_bHasBeenPreFiltered; // 0x78
 };
 
 // Aligment: 0
-// Size: 168
+// Size: 152
 class CNavVolumeAll : public CNavVolumeVector, CNavVolume
 {
 public:
@@ -6184,20 +4434,37 @@ public:
 };
 
 // Aligment: 2
-// Size: 144
+// Size: 128
 class CNavVolumeSphere : public CNavVolume
 {
 public:
-	Vector m_vCenter; // 0x80
-	float m_flRadius; // 0x8c
+	Vector m_vCenter; // 0x70
+	float m_flRadius; // 0x7c
 };
 
 // Aligment: 1
-// Size: 152
+// Size: 136
 class CNavVolumeSphericalShell : public CNavVolumeSphere, CNavVolume
 {
 public:
-	float m_flRadiusInner; // 0x90
+	float m_flRadiusInner; // 0x80
+};
+
+// Aligment: 4
+// Size: 56
+class CEntityInstance : public IHandleEntity
+{
+public:
+	// MNetworkDisable
+	CUtlSymbolLarge m_iszPrivateVScripts; // 0x8
+	// MNetworkEnable
+	// MNetworkPriority "112"
+	CEntityIdentity* m_pEntity; // 0x10
+	// MNetworkDisable
+	CUtlStringToken m_worldGroupId; // 0x20
+	// MNetworkEnable
+	// MNetworkDisable
+	CScriptComponent* m_CScriptComponent; // 0x30
 };
 
 // Aligment: 1
@@ -6209,5 +4476,6455 @@ public:
 public:
 	static EntComponentInfo_t &Get_s_EntComponentInfo() { return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CScriptComponent")->m_static_fiels[0]->m_instance); }
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CScriptComponent")->m_static_fiels[1]->m_instance); }
+};
+
+// Aligment: 2
+// Size: 64
+class CBodyComponent : public CEntityComponent
+{
+public:
+	// MNetworkDisable
+	CGameSceneNode* m_pSceneNode; // 0x8
+	// MNetworkDisable
+	// MNetworkChangeAccessorFieldPathIndex
+	CNetworkVarChainer __m_pChainEntity; // 0x20
+public:
+	static EntComponentInfo_t &Get_s_EntComponentInfo() { return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBodyComponent")->m_static_fiels[0]->m_instance); }
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBodyComponent")->m_static_fiels[1]->m_instance); }
+};
+
+// Aligment: 2
+// Size: 432
+class CBodyComponentPoint : public CBodyComponent, CEntityComponent
+{
+public:
+	// MNetworkEnable
+	CGameSceneNode m_sceneNode; // 0x40
+	// MNetworkDisable
+	// MNetworkChangeAccessorFieldPathIndex
+	CNetworkVarChainer __m_pChainEntity; // 0x190
+public:
+	static EntComponentInfo_t &Get_s_EntComponentInfo() { return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBodyComponentPoint")->m_static_fiels[0]->m_instance); }
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBodyComponentPoint")->m_static_fiels[1]->m_instance); }
+};
+
+// Aligment: 2
+// Size: 1296
+class CBodyComponentSkeletonInstance : public CBodyComponent, CEntityComponent
+{
+public:
+	// MNetworkEnable
+	CSkeletonInstance m_skeletonInstance; // 0x40
+	// MNetworkDisable
+	// MNetworkChangeAccessorFieldPathIndex
+	CNetworkVarChainer __m_pChainEntity; // 0x4f0
+public:
+	static EntComponentInfo_t &Get_s_EntComponentInfo() { return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBodyComponentSkeletonInstance")->m_static_fiels[0]->m_instance); }
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBodyComponentSkeletonInstance")->m_static_fiels[1]->m_instance); }
+};
+
+// Aligment: 0
+// Size: 24
+class CHitboxComponent : public CEntityComponent
+{
+public:
+// <no members described>
+};
+
+// Aligment: 62
+// Size: 416
+class CLightComponent : public CEntityComponent
+{
+public:
+	// MNetworkDisable
+	// MNetworkChangeAccessorFieldPathIndex
+	CNetworkVarChainer __m_pChainEntity; // 0x48
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	Color m_Color; // 0x74
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flBrightness; // 0x78
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flBrightnessMult; // 0x7c
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flRange; // 0x80
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flFalloff; // 0x84
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flAttenuation0; // 0x88
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flAttenuation1; // 0x8c
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flAttenuation2; // 0x90
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flTheta; // 0x94
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flPhi; // 0x98
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hLightCookie; // 0xa0
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	int32_t m_nCascades; // 0xa8
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	int32_t m_nCastShadows; // 0xac
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	int32_t m_nShadowWidth; // 0xb0
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	int32_t m_nShadowHeight; // 0xb4
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	bool m_bRenderDiffuse; // 0xb8
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	int32_t m_nRenderSpecular; // 0xbc
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	bool m_bRenderTransmissive; // 0xc0
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flOrthoLightWidth; // 0xc4
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flOrthoLightHeight; // 0xc8
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	int32_t m_nStyle; // 0xcc
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	CUtlString m_Pattern; // 0xd0
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flShadowCascadeDistance0; // 0xd8
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flShadowCascadeDistance1; // 0xdc
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flShadowCascadeDistance2; // 0xe0
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flShadowCascadeDistance3; // 0xe4
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	int32_t m_nShadowCascadeResolution0; // 0xe8
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	int32_t m_nShadowCascadeResolution1; // 0xec
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	int32_t m_nShadowCascadeResolution2; // 0xf0
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	int32_t m_nShadowCascadeResolution3; // 0xf4
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	int32_t m_nBakeLightIndex; // 0xf8
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flBakeLightIndexScale; // 0xfc
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	bool m_bUsesIndexedBakedLighting; // 0x100
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	bool m_bRenderToCubemaps; // 0x101
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	int32_t m_nPriority; // 0x104
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	CUtlSymbolLarge m_LightGroups; // 0x108
+	// MNetworkEnable
+	int32_t m_nDirectLight; // 0x110
+	// MNetworkEnable
+	int32_t m_nIndirectLight; // 0x114
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flFadeMinDist; // 0x118
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flFadeMaxDist; // 0x11c
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flShadowFadeMinDist; // 0x120
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flShadowFadeMaxDist; // 0x124
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	bool m_bEnabled; // 0x128
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	bool m_bFlicker; // 0x129
+	// MNetworkEnable
+	bool m_bPrecomputedFieldsValid; // 0x12a
+	// MNetworkEnable
+	Vector m_vPrecomputedBoundsMins; // 0x12c
+	// MNetworkEnable
+	Vector m_vPrecomputedBoundsMaxs; // 0x138
+	// MNetworkEnable
+	Vector m_vPrecomputedOBBOrigin; // 0x144
+	// MNetworkEnable
+	QAngle m_vPrecomputedOBBAngles; // 0x150
+	// MNetworkEnable
+	Vector m_vPrecomputedOBBExtent; // 0x15c
+	// MNetworkEnable
+	float m_flPrecomputedMaxRange; // 0x168
+	// MNetworkEnable
+	int32_t m_nFogLightingMode; // 0x16c
+	// MNetworkEnable
+	float m_flFogContributionStength; // 0x170
+	// MNetworkEnable
+	float m_flNearClipPlane; // 0x174
+	// MNetworkEnable
+	Color m_SkyColor; // 0x178
+	// MNetworkEnable
+	float m_flSkyIntensity; // 0x17c
+	// MNetworkEnable
+	bool m_bLowerHemisphereIsBlack; // 0x180
+	// MNetworkEnable
+	Color m_SkyAmbientBounce; // 0x181
+	// MNetworkEnable
+	// MNetworkChangeCallback "MixedShadowsChanged"
+	bool m_bMixedShadows; // 0x185
+	// MNetworkEnable
+	// MNetworkChangeCallback "LightRenderingChanged"
+	float m_flLightStyleStartTime; // 0x188
+	bool m_bPvsModifyEntity; // 0x198
+public:
+	static EntComponentInfo_t &Get_s_EntComponentInfo() { return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CLightComponent")->m_static_fiels[0]->m_instance); }
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CLightComponent")->m_static_fiels[1]->m_instance); }
+};
+
+// Aligment: 5
+// Size: 168
+class CRenderComponent : public CEntityComponent
+{
+public:
+	// MNetworkDisable
+	// MNetworkChangeAccessorFieldPathIndex
+	CNetworkVarChainer __m_pChainEntity; // 0x10
+	bool m_bIsRenderingWithViewModels; // 0x40
+	uint32_t m_nSplitscreenFlags; // 0x44
+	bool m_bEnableRendering; // 0x50
+	bool m_bInterpolationReadyToDraw; // 0xa0
+public:
+	static EntComponentInfo_t &Get_s_EntComponentInfo() { return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CRenderComponent")->m_static_fiels[0]->m_instance); }
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CRenderComponent")->m_static_fiels[1]->m_instance); }
+};
+
+// Aligment: 17
+// Size: 824
+class CBaseAnimatingController : public CSkeletonAnimationController
+{
+public:
+	// MNetworkEnable
+	// MNetworkChangeCallback "baseAnimBaseLayerChanged"
+	CNetworkedSequenceOperation m_baseLayer; // 0x18
+	// MNetworkDisable
+	bool m_bSequenceFinished; // 0x58
+	// MNetworkDisable
+	float m_flGroundSpeed; // 0x5c
+	// MNetworkDisable
+	float m_flLastEventCycle; // 0x60
+	// MNetworkDisable
+	float m_flLastEventAnimTime; // 0x64
+	// MNetworkEnable
+	// MNetworkBitCount "8"
+	// MNetworkMinValue "-4"
+	// MNetworkMaxValue "12"
+	// MNetworkEncodeFlags
+	// MNetworkPriority "64"
+	// MNetworkChangeCallback "playbackRateChanged"
+	CNetworkedQuantizedFloat m_flPlaybackRate; // 0x68
+	// MNetworkDisable
+	float m_flPrevAnimTime; // 0x80
+	// MNetworkEnable
+	// MNetworkBitCount "11"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1"
+	// MNetworkUserGroup "m_flPoseParameter"
+	// MNetworkChangeCallback "poseParametersChanged"
+	float32[24] m_flPoseParameter; // 0x84
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "clientSideAnimationChanged"
+	bool m_bClientSideAnimation; // 0xe4
+	// MNetworkDisable
+	bool m_bNetworkedAnimationInputsChanged; // 0xe5
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "64"
+	// MNetworkChangeCallback "clientSideAnimCycleReset"
+	int32_t m_nNewSequenceParity; // 0xe8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "64"
+	int32_t m_nResetEventsParity; // 0xec
+	// MNetworkDisable
+	float m_flIKGroundContactTime; // 0xf0
+	// MNetworkDisable
+	float m_flIKGroundMinHeight; // 0xf4
+	// MNetworkDisable
+	float m_flIKGroundMaxHeight; // 0xf8
+	// MNetworkDisable
+	float m_flIkZAdjustAmount; // 0xfc
+	// MNetworkDisable
+	CSequenceTransitioner2 m_SequenceTransitioner; // 0x128
+};
+
+// Aligment: 2
+// Size: 2144
+class CBodyComponentBaseAnimating : public CBodyComponentSkeletonInstance, CBodyComponent, CEntityComponent
+{
+public:
+	// MNetworkEnable
+	CBaseAnimatingController m_animationController; // 0x510
+	// MNetworkDisable
+	// MNetworkChangeAccessorFieldPathIndex
+	CNetworkVarChainer __m_pChainEntity; // 0x848
+public:
+	static EntComponentInfo_t &Get_s_EntComponentInfo() { return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBodyComponentBaseAnimating")->m_static_fiels[0]->m_instance); }
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBodyComponentBaseAnimating")->m_static_fiels[1]->m_instance); }
+};
+
+// Aligment: 1
+// Size: 904
+class CBaseAnimatingOverlayController : public CBaseAnimatingController, CSkeletonAnimationController
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "overlay_vars"
+	// MNetworkChangeCallback "OnOverlaysChanged2"
+	CUtlVector< CAnimationLayer > m_AnimOverlay; // 0x338
+};
+
+// Aligment: 2
+// Size: 2224
+class CBodyComponentBaseAnimatingOverlay : public CBodyComponentSkeletonInstance, CBodyComponent, CEntityComponent
+{
+public:
+	// MNetworkEnable
+	CBaseAnimatingOverlayController m_animationController; // 0x510
+	// MNetworkDisable
+	// MNetworkChangeAccessorFieldPathIndex
+	CNetworkVarChainer __m_pChainEntity; // 0x898
+public:
+	static EntComponentInfo_t &Get_s_EntComponentInfo() { return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBodyComponentBaseAnimatingOverlay")->m_static_fiels[0]->m_instance); }
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBodyComponentBaseAnimatingOverlay")->m_static_fiels[1]->m_instance); }
+};
+
+// Aligment: 1
+// Size: 1328
+class CBodyComponentBaseModelEntity : public CBodyComponentSkeletonInstance, CBodyComponent, CEntityComponent
+{
+public:
+	// MNetworkDisable
+	// MNetworkChangeAccessorFieldPathIndex
+	CNetworkVarChainer __m_pChainEntity; // 0x510
+public:
+	static EntComponentInfo_t &Get_s_EntComponentInfo() { return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBodyComponentBaseModelEntity")->m_static_fiels[0]->m_instance); }
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBodyComponentBaseModelEntity")->m_static_fiels[1]->m_instance); }
+};
+
+// Aligment: 0
+// Size: 32
+class CTouchExpansionComponent : public CEntityComponent
+{
+public:
+// <no members described>
+};
+
+// Aligment: 76
+// Size: 1112
+class CBaseEntity : public CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkUserGroup "CBodyComponent"
+	// MNetworkAlias "CBodyComponent"
+	// MNetworkTypeAlias "CBodyComponent"
+	// MNetworkPriority "96"
+	CBodyComponent* m_CBodyComponent; // 0x38
+	CNetworkTransmitComponent m_NetworkTransmitComponent; // 0x40
+	CUtlVector< thinkfunc_t > m_aThinkFunctions; // 0x180
+	int32_t m_iCurrentThinkContext; // 0x198
+	int32_t m_nLastThinkTick; // 0x19c
+	CGameSceneNode* m_pGameSceneNode; // 0x1a0
+	CBitVec< 64 > m_isSteadyState; // 0x1a8
+	float m_lastNetworkChange; // 0x1b0
+	CUtlVector< ResponseContext_t > m_ResponseContexts; // 0x1c0
+	CUtlSymbolLarge m_iszResponseContext; // 0x1d8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkSerializer "ClampHealth"
+	// MNetworkUserGroup "Player"
+	// MNetworkPriority "64"
+	int32_t m_iHealth; // 0x200
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_iMaxHealth; // 0x204
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "Player"
+	// MNetworkPriority "64"
+	uint8_t m_lifeState; // 0x208
+	// MNetworkEnable
+	// MNetworkEnable
+	DamageOptions_t m_takedamage; // 0x209
+	// MNetworkEnable
+	// MNetworkEnable
+	MoveCollide_t m_MoveCollide; // 0x20b
+	// MNetworkEnable
+	// MNetworkEnable
+	MoveType_t m_MoveType; // 0x20c
+	uint8_t m_nWaterTouch; // 0x20d
+	uint8_t m_nSlimeTouch; // 0x20e
+	bool m_bRestoreInHierarchy; // 0x20f
+	CUtlSymbolLarge m_target; // 0x210
+	float m_flMoveDoneTime; // 0x218
+	CHandle< CBaseEntity > m_hDamageFilter; // 0x21c
+	CUtlSymbolLarge m_iszDamageFilterName; // 0x220
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkSendProxyRecipientsFilter
+	CUtlStringToken m_nSubclassID; // 0x228
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "0"
+	// MNetworkSerializer "animTimeSerializer"
+	// MNetworkSendProxyRecipientsFilter
+	float m_flAnimTime; // 0x238
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "1"
+	// MNetworkSerializer "simulationTimeSerializer"
+	float m_flSimulationTime; // 0x23c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flCreateTime; // 0x240
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bClientSideRagdoll; // 0x244
+	// MNetworkEnable
+	// MNetworkEnable
+	uint8_t m_ubInterpolationFrame; // 0x245
+	// MNetworkEnable
+	// MNetworkEnable
+	uint8_t m_iTeamNum; // 0x246
+	CUtlSymbolLarge m_iGlobalname; // 0x248
+	int32_t m_iSentToClients; // 0x250
+	float m_flSpeed; // 0x254
+	CUtlString m_sUniqueHammerID; // 0x258
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_spawnflags; // 0x260
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	int32_t m_nNextThinkTick; // 0x264
+	int32_t m_nSimulationTick; // 0x268
+	CEntityIOOutput m_OnKilled; // 0x270
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "64"
+	// MNetworkSerializer "CropFlagsToPlayerFlagBitsLength"
+	// MNetworkUserGroup "Player"
+	uint32_t m_fFlags; // 0x298
+	// MNetworkEnable
+	Vector m_vecAbsVelocity; // 0x29c
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	// MNetworkPriority "64"
+	CNetworkVelocityVector m_vecVelocity; // 0x2a8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	Vector m_vecBaseVelocity; // 0x310
+	int32_t m_nPushEnumCount; // 0x31c
+	CCollisionProperty* m_pCollision; // 0x320
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hEffectEntity; // 0x328
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "64"
+	CHandle< CBaseEntity > m_hOwnerEntity; // 0x32c
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnEffectsChanged"
+	uint32_t m_fEffects; // 0x330
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "64"
+	// MNetworkUserGroup "Player"
+	CHandle< CBaseEntity > m_hGroundEntity; // 0x334
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "8"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "4"
+	// MNetworkEncodeFlags
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	float m_flFriction; // 0x338
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkEncoder
+	float m_flElasticity; // 0x33c
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	float m_flGravityScale; // 0x340
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "Player"
+	uint8_t m_nWaterLevel; // 0x344
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bSimulatedEveryTick; // 0x345
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bAnimatedEveryTick; // 0x346
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "ScalabilityOptions"
+	uint8_t m_nMinCPULevel; // 0x347
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "ScalabilityOptions"
+	uint8_t m_nMaxCPULevel; // 0x348
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "ScalabilityOptions"
+	uint8_t m_nMinGPULevel; // 0x349
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "ScalabilityOptions"
+	uint8_t m_nMaxGPULevel; // 0x34a
+	bool m_bSessionPersister; // 0x34b
+	bool m_bDisableLowViolence; // 0x34c
+	uint8_t m_nWaterType; // 0x34d
+	int32_t m_iEFlags; // 0x350
+	CEntityIOOutput m_OnUser1; // 0x388
+	CEntityIOOutput m_OnUser2; // 0x3b0
+	CEntityIOOutput m_OnUser3; // 0x3d8
+	CEntityIOOutput m_OnUser4; // 0x400
+	int32_t m_iInitialTeamNum; // 0x428
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flNavIgnoreUntilTime; // 0x42c
+	QAngle m_vecAngVelocity; // 0x430
+	float m_flGroundChangeTime; // 0x43c
+	bool m_bNetworkQuantizeOriginAndAngles; // 0x440
+	bool m_bLagCompensate; // 0x441
+	float m_flOverriddenFriction; // 0x444
+	CHandle< CBaseEntity > m_pBlocker; // 0x448
+	float m_flLocalTime; // 0x44c
+	float m_flVPhysicsUpdateLocalTime; // 0x450
+public:
+	static bool &Get_sm_bAccurateTriggerBboxChecks() { return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseEntity")->m_static_fiels[0]->m_instance); }
+	static bool &Get_sm_bDisableTouchFuncs() { return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseEntity")->m_static_fiels[1]->m_instance); }
+	static bool &Get_m_bAllowPrecache() { return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseEntity")->m_static_fiels[2]->m_instance); }
+	static bool &Get_s_bAbsQueriesValid() { return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseEntity")->m_static_fiels[3]->m_instance); }
+	static bool &Get_s_bPreventingSetAnimRunAnimEvents() { return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseEntity")->m_static_fiels[4]->m_instance); }
+	static int32_t &Get_m_nPredictionRandomSeed() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseEntity")->m_static_fiels[5]->m_instance); }
+	static CBasePlayer* &Get_m_pPredictionPlayer() { return *reinterpret_cast<CBasePlayer**>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseEntity")->m_static_fiels[6]->m_instance); }
+	static bool &Get_sm_bDatadescValidating() { return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseEntity")->m_static_fiels[7]->m_instance); }
+};
+
+// Aligment: 0
+// Size: 1112
+class CServerOnlyEntity : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1112
+class CServerOnlyPointEntity : public CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1112
+class CLogicalEntity : public CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 17
+// Size: 1432
+class CColorCorrection : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeInDuration; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeOutDuration; // 0x45c
+	float m_flStartFadeInWeight; // 0x460
+	float m_flStartFadeOutWeight; // 0x464
+	float m_flTimeStartFadeIn; // 0x468
+	float m_flTimeStartFadeOut; // 0x46c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flMaxWeight; // 0x470
+	bool m_bStartDisabled; // 0x474
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bEnabled; // 0x475
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bMaster; // 0x476
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bClientSide; // 0x477
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bExclusive; // 0x478
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_MinFalloff; // 0x47c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_MaxFalloff; // 0x480
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flCurWeight; // 0x484
+	// MNetworkEnable
+	// MNetworkEnable
+	char[260] m_netlookupFilename; // 0x488
+	CUtlSymbolLarge m_lookupFilename; // 0x590
+};
+
+// Aligment: 3
+// Size: 1200
+class CBaseFilter : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bNegated; // 0x458
+	CEntityIOOutput m_OnPass; // 0x460
+	CEntityIOOutput m_OnFail; // 0x488
+};
+
+// Aligment: 4
+// Size: 1336
+class CFilterMultiple : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	filter_t m_nFilterType; // 0x4b0
+	CUtlSymbolLarge[10] m_iFilterName; // 0x4b8
+	CHandle< CBaseEntity >[10] m_hFilter; // 0x508
+	int32_t m_nFilterCount; // 0x530
+};
+
+// Aligment: 1
+// Size: 1208
+class CFilterProximity : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flRadius; // 0x4b0
+};
+
+// Aligment: 0
+// Size: 1200
+class CFilterLOS : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 1
+// Size: 1208
+class CFilterClass : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iFilterClass; // 0x4b0
+};
+
+// Aligment: 0
+// Size: 2032
+class CInfoData : public CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 4
+// Size: 1224
+class CLogicBranch : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bInValue; // 0x458
+	CUtlVector< CHandle< CBaseEntity > > m_Listeners; // 0x460
+	CEntityIOOutput m_OnTrue; // 0x478
+	CEntityIOOutput m_OnFalse; // 0x4a0
+};
+
+// Aligment: 1
+// Size: 24
+class CPlayerInfo : public IBotController
+{
+public:
+	CBasePlayer* m_pParent; // 0x10
+};
+
+// Aligment: 8
+// Size: 1872
+class CPlayerResource : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32[34] m_iPing; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	int32[34] m_iScore; // 0x4e0
+	// MNetworkEnable
+	// MNetworkEnable
+	int32[34] m_iDeaths; // 0x568
+	// MNetworkEnable
+	// MNetworkEnable
+	bool[34] m_bConnected; // 0x5f0
+	// MNetworkEnable
+	// MNetworkEnable
+	int32[34] m_iTeam; // 0x614
+	// MNetworkEnable
+	// MNetworkEnable
+	bool[34] m_bAlive; // 0x69c
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32[34] m_iHealth; // 0x6c0
+	int32_t m_nUpdateCounter; // 0x748
+};
+
+// Aligment: 3
+// Size: 1136
+class CPointPrefab : public CServerOnlyPointEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_targetMapName; // 0x458
+	CUtlSymbolLarge m_forceWorldGroupID; // 0x460
+	bool m_fixupNames; // 0x468
+};
+
+// Aligment: 12
+// Size: 1256
+class CPointTemplate : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszWorldName; // 0x458
+	CUtlSymbolLarge m_iszSource2EntityLumpName; // 0x460
+	CUtlSymbolLarge m_iszEntityFilterName; // 0x468
+	float m_flTimeoutInterval; // 0x470
+	bool m_bAsynchronouslySpawnEntities; // 0x474
+	CEntityIOOutput m_pOutputOnSpawned; // 0x478
+	PointTemplateClientOnlyEntityBehavior_t m_clientOnlyEntityBehavior; // 0x4a0
+	PointTemplateOwnerSpawnGroupType_t m_ownerSpawnGroupType; // 0x4a4
+	CUtlVector< uint32 > m_createdSpawnGroupHandles; // 0x4a8
+	CUtlVector< CEntityHandle > m_SpawnedEntityHandles; // 0x4c0
+	HSCRIPT m_ScriptSpawnCallback; // 0x4d8
+	HSCRIPT m_ScriptCallbackScope; // 0x4e0
+};
+
+// Aligment: 2
+// Size: 1120
+class CSkyboxReference : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlStringToken m_worldGroupId; // 0x458
+	CHandle< CSkyCamera > m_hSkyCamera; // 0x45c
+};
+
+// Aligment: 4
+// Size: 1272
+class CSkyCamera : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	sky3dparams_t m_skyboxData; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlStringToken m_skyboxSlotToken; // 0x4e8
+	bool m_bUseAngles; // 0x4ec
+	CSkyCamera* m_pNext; // 0x4f0
+};
+
+// Aligment: 8
+// Size: 1248
+class CEnvSoundscape : public CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnPlay; // 0x458
+	float m_flRadius; // 0x480
+	CUtlSymbolLarge m_soundscapeName; // 0x488
+	int32_t m_soundscapeIndex; // 0x490
+	int32_t m_soundscapeEntityListId; // 0x494
+	CUtlSymbolLarge[8] m_positionNames; // 0x498
+	CHandle< CEnvSoundscape > m_hProxySoundscape; // 0x4d8
+	bool m_bDisabled; // 0x4dc
+};
+
+// Aligment: 1
+// Size: 1256
+class CEnvSoundscapeProxy : public CEnvSoundscape, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_MainSoundscapeName; // 0x4e0
+};
+
+// Aligment: 0
+// Size: 1248
+class CEnvSoundscapeTriggerable : public CEnvSoundscape, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 5
+// Size: 1280
+class CTeam : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< CHandle< CBasePlayer > > m_aPlayers; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_iScore; // 0x470
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_iRoundsWon; // 0x474
+	// MNetworkEnable
+	// MNetworkEnable
+	char[129] m_szTeamname; // 0x478
+	int32_t m_iDeaths; // 0x4fc
+};
+
+// Aligment: 26
+// Size: 1280
+class CTriggerCamera : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CHandle< CBaseEntity > m_hPlayer; // 0x458
+	CHandle< CBaseEntity > m_hTarget; // 0x45c
+	CBaseEntity* m_pPath; // 0x460
+	CUtlSymbolLarge m_sPath; // 0x468
+	float m_flWait; // 0x470
+	float m_flReturnTime; // 0x474
+	float m_flStopTime; // 0x478
+	float m_moveDistance; // 0x47c
+	float m_targetSpeed; // 0x480
+	float m_initialSpeed; // 0x484
+	float m_acceleration; // 0x488
+	float m_deceleration; // 0x48c
+	int32_t m_state; // 0x490
+	Vector m_vecMoveDir; // 0x494
+	float m_fov; // 0x4a0
+	float m_fovSpeed; // 0x4a4
+	CUtlSymbolLarge m_iszTargetAttachment; // 0x4a8
+	AttachmentHandle_t m_iAttachmentIndex; // 0x4b0
+	bool m_bSnapToGoal; // 0x4b1
+	bool m_bInterpolatePosition; // 0x4b2
+	Vector m_vStartPos; // 0x4b4
+	Vector m_vEndPos; // 0x4c0
+	float m_flInterpStartTime; // 0x4cc
+	int32_t m_nPlayerButtons; // 0x4d0
+	DamageOptions_t m_nOldTakeDamage; // 0x4d4
+	CEntityIOOutput m_OnEndFollow; // 0x4d8
+public:
+	static float &Get_kflPosInterpTime() { return *reinterpret_cast<float*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CTriggerCamera")->m_static_fiels[0]->m_instance); }
+};
+
+// Aligment: 0
+// Size: 216
+class CNavVolumeMarkupVolume : public CNavVolume
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 152
+class CNavVolumeCalculatedVector : public CNavVolume
+{
+public:
+// <no members described>
+};
+
+// Aligment: 2
+// Size: 184
+class CNavVolumeBreadthFirstSearch : public CNavVolumeCalculatedVector, CNavVolume
+{
+public:
+	Vector m_vStartPos; // 0xa0
+	float m_flSearchDist; // 0xac
+};
+
+// Aligment: 6
+// Size: 344
+class CBasePlayerVData : public CEntitySubclassVDataBase
+{
+public:
+	// MPropertyFriendlyName "Model Name"
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_sModelName; // 0x28
+	// MPropertyFriendlyName "Head Damage Multiplier"
+	// MDefaultString
+	CSkillFloat m_flHeadDamageMultiplier; // 0x108
+	// MPropertyFriendlyName "Chest Damage Multiplier"
+	// MDefaultString
+	CSkillFloat m_flChestDamageMultiplier; // 0x118
+	// MPropertyFriendlyName "Stomach Damage Multiplier"
+	// MDefaultString
+	CSkillFloat m_flStomachDamageMultiplier; // 0x128
+	// MPropertyFriendlyName "Arm Damage Multiplier"
+	// MDefaultString
+	CSkillFloat m_flArmDamageMultiplier; // 0x138
+	// MPropertyFriendlyName "Leg Damage Multiplier"
+	// MDefaultString
+	CSkillFloat m_flLegDamageMultiplier; // 0x148
+};
+
+// Aligment: 2
+// Size: 1120
+class CEnvDetailController : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeStartDist; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeEndDist; // 0x45c
+};
+
+// Aligment: 0
+// Size: 1112
+class CGameRulesProxy : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 14
+// Size: 1192
+class CPoseController : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bPoseValueParity; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "11"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1"
+	float m_fPoseValue; // 0x45c
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "11"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "10"
+	float m_fInterpolationDuration; // 0x460
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bInterpolationWrap; // 0x464
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "11"
+	// MNetworkMinValue "-10"
+	// MNetworkMaxValue "10"
+	float m_fCycleFrequency; // 0x468
+	// MNetworkEnable
+	// MNetworkEnable
+	PoseController_FModType_t m_nFModType; // 0x46c
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "11"
+	// MNetworkMinValue "-1"
+	// MNetworkMaxValue "1"
+	float m_fFModTimeOffset; // 0x470
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "11"
+	// MNetworkMinValue "-10"
+	// MNetworkMaxValue "10"
+	float m_fFModRate; // 0x474
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "11"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "10"
+	float m_fFModAmplitude; // 0x478
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity >[4] m_hProps; // 0x47c
+	// MNetworkEnable
+	// MNetworkEnable
+	uint8[4] m_chPoseIndex; // 0x48c
+	bool m_bDisablePropLookup; // 0x490
+	CUtlSymbolLarge m_iszPropName; // 0x498
+	CUtlSymbolLarge m_iszPoseParameterName; // 0x4a0
+};
+
+// Aligment: 4
+// Size: 280
+class CPrecipitationVData : public CEntitySubclassVDataBase
+{
+public:
+	// MPropertyFriendlyName "Effect"
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szParticlePrecipitationEffect; // 0x28
+	// MPropertyFriendlyName "Inner Distance"
+	// MDefaultString
+	float m_flInnerDistance; // 0x108
+	// MPropertyFriendlyName "Effect Attach Type"
+	// MDefaultString
+	ParticleAttachment_t m_nAttachType; // 0x10c
+	// MPropertyFriendlyName "Modifier"
+	// MDefaultString
+	CUtlString m_szModifier; // 0x110
+};
+
+// Aligment: 9
+// Size: 128
+class CRagdoll : public IRagdoll
+{
+public:
+	ragdoll_t m_ragdoll; // 0x8
+	Vector m_mins; // 0x40
+	Vector m_maxs; // 0x4c
+	Vector m_origin; // 0x58
+	float m_lastUpdate; // 0x64
+	bool m_allAsleep; // 0x68
+	Vector m_vecLastOrigin; // 0x6c
+	float m_flLastOriginChangeTime; // 0x78
+	float m_flAwakeTime; // 0x7c
+public:
+	static uint32_t &Get_s_globalCount() { return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CRagdoll")->m_static_fiels[0]->m_instance); }
+};
+
+// Aligment: 17
+// Size: 216
+class CEconItemView : public IEconItemInterface
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	item_definition_index_t m_iItemDefinitionIndex; // 0x8
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_iEntityQuality; // 0xc
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_iEntityLevel; // 0x10
+	// MNetworkEnable
+	// MNetworkEnable
+	itemid_t m_iItemID; // 0x18
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_iAccountID; // 0x20
+	// MNetworkEnable
+	uint32_t m_iInventoryPosition; // 0x24
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bInitialized; // 0x30
+	// MNetworkEnable
+	// MNetworkEnable
+	style_index_t m_nOverrideStyle; // 0x31
+	bool m_bIsStoreItem; // 0x32
+	bool m_bIsTradeItem; // 0x33
+	bool m_bHasComputedAttachedParticles; // 0x34
+	bool m_bHasAttachedParticles; // 0x35
+	int32_t m_iEntityQuantity; // 0x38
+	uint8_t m_unClientFlags; // 0x3c
+	eEconItemOrigin m_unOverrideOrigin; // 0x40
+	char* m_pszGrayedOutReason; // 0x50
+	// MNetworkEnable
+	// MNetworkEnable
+	CAttributeList m_AttributeList; // 0x58
+};
+
+// Aligment: 1
+// Size: 1120
+class CDCGGameRulesProxy : public CGameRulesProxy, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "64"
+	CDCGGameRules* m_pGameRules; // 0x458
+};
+
+// Aligment: 0
+// Size: 1112
+class CPointEntity : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 19
+// Size: 5536
+class CEnvCombinedLightProbeVolume : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkChangeCallback "StateChanged"
+	Color m_Color; // 0x1510
+	// MNetworkEnable
+	// MNetworkChangeCallback "StateChanged"
+	float m_flBrightness; // 0x1514
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hCubemapTexture; // 0x1518
+	// MNetworkEnable
+	bool m_bCustomCubemapTexture; // 0x1520
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hLightProbeTexture; // 0x1528
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hLightProbeDirectLightIndicesTexture; // 0x1530
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hLightProbeDirectLightScalarsTexture; // 0x1538
+	// MNetworkEnable
+	Vector m_vBoxMins; // 0x1540
+	// MNetworkEnable
+	Vector m_vBoxMaxs; // 0x154c
+	// MNetworkEnable
+	CUtlSymbolLarge m_LightGroups; // 0x1558
+	// MNetworkEnable
+	bool m_bMoveable; // 0x1560
+	// MNetworkEnable
+	int32_t m_nHandshake; // 0x1564
+	// MNetworkEnable
+	int32_t m_nEnvCubeMapArrayIndex; // 0x1568
+	// MNetworkEnable
+	int32_t m_nPriority; // 0x156c
+	// MNetworkEnable
+	int32_t m_nGgxCubemapBlurAccumulationPassCount; // 0x1570
+	// MNetworkEnable
+	bool m_bStartDisabled; // 0x1574
+	// MNetworkEnable
+	float m_flEdgeFadeDist; // 0x1578
+	// MNetworkEnable
+	Vector m_vEdgeFadeDists; // 0x157c
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bEnabled; // 0x1599
+};
+
+// Aligment: 20
+// Size: 1480
+class CEnvCubemap : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hCubemapTexture; // 0x550
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hDepthmapTexture; // 0x558
+	// MNetworkEnable
+	bool m_bCustomCubemapTexture; // 0x560
+	// MNetworkEnable
+	float m_flInfluenceRadius; // 0x564
+	// MNetworkEnable
+	Vector m_vBoxProjectMins; // 0x568
+	// MNetworkEnable
+	Vector m_vBoxProjectMaxs; // 0x574
+	// MNetworkEnable
+	CUtlSymbolLarge m_LightGroups; // 0x580
+	// MNetworkEnable
+	bool m_bMoveable; // 0x588
+	// MNetworkEnable
+	int32_t m_nHandshake; // 0x58c
+	// MNetworkEnable
+	int32_t m_nEnvCubeMapArrayIndex; // 0x590
+	// MNetworkEnable
+	int32_t m_nPriority; // 0x594
+	// MNetworkEnable
+	int32_t m_nGgxCubemapBlurAccumulationPassCount; // 0x598
+	// MNetworkEnable
+	float m_flEdgeFadeDist; // 0x59c
+	// MNetworkEnable
+	Vector m_vEdgeFadeDists; // 0x5a0
+	// MNetworkEnable
+	float m_flDiffuseScale; // 0x5ac
+	// MNetworkEnable
+	bool m_bStartDisabled; // 0x5b0
+	// MNetworkEnable
+	bool m_bDefaultEnvMap; // 0x5b1
+	// MNetworkEnable
+	bool m_bRenderDepthMap; // 0x5b2
+	// MNetworkEnable
+	bool m_bAlwaysCheckDepth; // 0x5b3
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bEnabled; // 0x5c0
+};
+
+// Aligment: 0
+// Size: 1480
+class CEnvCubemapBox : public CEnvCubemap, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 18
+// Size: 1192
+class CEnvCubemapFog : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flEndDistance; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flStartDistance; // 0x45c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFogFalloffExponent; // 0x460
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bHeightFogEnabled; // 0x464
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFogHeightWidth; // 0x468
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFogHeightEnd; // 0x46c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFogHeightStart; // 0x470
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFogHeightExponent; // 0x474
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flLODBias; // 0x478
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bActive; // 0x47c
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bStartDisabled; // 0x47d
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFogMaxOpacity; // 0x480
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nCubemapSourceType; // 0x484
+	// MNetworkEnable
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hSkyMaterial; // 0x488
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_iszSkyEntity; // 0x490
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hFogCubemapTexture; // 0x498
+	// MNetworkEnable
+	bool m_bHasHeightFogEnd; // 0x4a0
+	bool m_bFirstTime; // 0x4a1
+};
+
+// Aligment: 11
+// Size: 5232
+class CEnvLightProbeVolume : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hLightProbeTexture; // 0x1418
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hLightProbeDirectLightIndicesTexture; // 0x1420
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hLightProbeDirectLightScalarsTexture; // 0x1428
+	// MNetworkEnable
+	Vector m_vBoxMins; // 0x1430
+	// MNetworkEnable
+	Vector m_vBoxMaxs; // 0x143c
+	// MNetworkEnable
+	CUtlSymbolLarge m_LightGroups; // 0x1448
+	// MNetworkEnable
+	bool m_bMoveable; // 0x1450
+	// MNetworkEnable
+	int32_t m_nHandshake; // 0x1454
+	// MNetworkEnable
+	int32_t m_nPriority; // 0x1458
+	// MNetworkEnable
+	bool m_bStartDisabled; // 0x145c
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bEnabled; // 0x1469
+};
+
+// Aligment: 7
+// Size: 1144
+class CTonemapController2 : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flAutoExposureMin; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flAutoExposureMax; // 0x45c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flTonemapPercentTarget; // 0x460
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flTonemapPercentBrightPixels; // 0x464
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flTonemapMinAvgLum; // 0x468
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flRate; // 0x46c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flAccelerateExposureDown; // 0x470
+};
+
+// Aligment: 28
+// Size: 1240
+class CEnvVolumetricFogController : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flScattering; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flAnisotropy; // 0x45c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeSpeed; // 0x460
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDrawDistance; // 0x464
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeInStart; // 0x468
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeInEnd; // 0x46c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flIndirectStrength; // 0x470
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nIndirectTextureDimX; // 0x474
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nIndirectTextureDimY; // 0x478
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nIndirectTextureDimZ; // 0x47c
+	// MNetworkEnable
+	// MNetworkEnable
+	Vector m_vBoxMins; // 0x480
+	// MNetworkEnable
+	// MNetworkEnable
+	Vector m_vBoxMaxs; // 0x48c
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bActive; // 0x498
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flStartAnisoTime; // 0x49c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flStartScatterTime; // 0x4a0
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flStartDrawDistanceTime; // 0x4a4
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flStartAnisotropy; // 0x4a8
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flStartScattering; // 0x4ac
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flStartDrawDistance; // 0x4b0
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDefaultAnisotropy; // 0x4b4
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDefaultScattering; // 0x4b8
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDefaultDrawDistance; // 0x4bc
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bStartDisabled; // 0x4c0
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bEnableIndirect; // 0x4c1
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bIsMaster; // 0x4c2
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hFogIndirectTexture; // 0x4c8
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nForceRefreshCount; // 0x4d0
+	bool m_bFirstTime; // 0x4d4
+};
+
+// Aligment: 7
+// Size: 1160
+class CEnvVolumetricFogVolume : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bActive; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	Vector m_vBoxMins; // 0x45c
+	// MNetworkEnable
+	// MNetworkEnable
+	Vector m_vBoxMaxs; // 0x468
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bStartDisabled; // 0x474
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flStrength; // 0x478
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nFalloffShape; // 0x47c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFalloffExponent; // 0x480
+};
+
+// Aligment: 3
+// Size: 1224
+class CFogController : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	fogparams_t m_fog; // 0x458
+	bool m_bUseAngles; // 0x4c0
+	int32_t m_iChangedVariables; // 0x4c4
+};
+
+// Aligment: 0
+// Size: 1112
+class CInfoTarget : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1112
+class CInfoParticleTarget : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 3
+// Size: 1136
+class CInfoVisibilityBox : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nMode; // 0x45c
+	// MNetworkEnable
+	// MNetworkEnable
+	Vector m_vBoxSize; // 0x460
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bEnabled; // 0x46c
+};
+
+// Aligment: 7
+// Size: 1176
+class CInfoWorldLayer : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_pOutputOnEntitiesSpawned; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_worldName; // 0x480
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_layerName; // 0x488
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bWorldLayerVisible; // 0x490
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bEntitiesSpawned; // 0x491
+	bool m_bCreateAsChildSpawnGroup; // 0x492
+	uint32_t m_hLayerSpawnGroup; // 0x494
+};
+
+// Aligment: 8
+// Size: 1176
+class CMultiLightProxy : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszLightNameFilter; // 0x458
+	CUtlSymbolLarge m_iszLightClassFilter; // 0x460
+	float m_flLightRadiusFilter; // 0x468
+	float m_flBrightnessDelta; // 0x46c
+	bool m_bPerformScreenFade; // 0x470
+	float m_flTargetBrightnessMultiplier; // 0x474
+	float m_flCurrentBrightnessMultiplier; // 0x478
+	CUtlVector< CHandle< CLightEntity > > m_vecLights; // 0x480
+};
+
+// Aligment: 25
+// Size: 1216
+class CPointCamera : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_FOV; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_Resolution; // 0x45c
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bFogEnable; // 0x460
+	// MNetworkEnable
+	// MNetworkEnable
+	Color m_FogColor; // 0x461
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFogStart; // 0x468
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFogEnd; // 0x46c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFogMaxDensity; // 0x470
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bActive; // 0x474
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bUseScreenAspectRatio; // 0x475
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flAspectRatio; // 0x478
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bNoSky; // 0x47c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_fBrightness; // 0x480
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flZFar; // 0x484
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flZNear; // 0x488
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flOverrideShadowFarZ; // 0x48c
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bDofEnabled; // 0x490
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDofNearBlurry; // 0x494
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDofNearCrisp; // 0x498
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDofFarCrisp; // 0x49c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDofFarBlurry; // 0x4a0
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDofTiltToGround; // 0x4a4
+	float m_TargetFOV; // 0x4a8
+	float m_DegreesPerSecond; // 0x4ac
+	bool m_bIsOn; // 0x4b0
+	CPointCamera* m_pNext; // 0x4b8
+};
+
+// Aligment: 4
+// Size: 1168
+class CGameGibManager : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bAllowNewGibs; // 0x480
+	int32_t m_iCurrentMaxPieces; // 0x484
+	int32_t m_iMaxPieces; // 0x488
+	int32_t m_iLastFrame; // 0x48c
+};
+
+// Aligment: 2
+// Size: 1128
+class CInfoGameEventProxy : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszEventName; // 0x458
+	float m_flRange; // 0x460
+};
+
+// Aligment: 2
+// Size: 1120
+class CProjectedDecal : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_nTexture; // 0x458
+	float m_flDistance; // 0x45c
+};
+
+// Aligment: 23
+// Size: 1648
+class CBaseModelEntity : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkUserGroup "CRenderComponent"
+	// MNetworkAlias "CRenderComponent"
+	// MNetworkTypeAlias "CRenderComponent"
+	CRenderComponent* m_CRenderComponent; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	RenderMode_t m_nRenderMode; // 0x460
+	// MNetworkEnable
+	// MNetworkEnable
+	RenderFx_t m_nRenderFX; // 0x461
+	bool m_bAllowFadeInView; // 0x462
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnColorChanged"
+	Color m_clrRender; // 0x463
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnRenderAttributesChanged"
+	CUtlStringToken[4] m_RenderAttributeIDs; // 0x468
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnRenderAttributesChanged"
+	Vector4D[4] m_RenderAttributeValues; // 0x478
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnLightGroupChanged"
+	CUtlStringToken m_LightGroup; // 0x4b8
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bRenderToCubemaps; // 0x4bc
+	// MNetworkEnable
+	// MNetworkEnable
+	CCollisionProperty m_Collision; // 0x4c0
+	// MNetworkEnable
+	// MNetworkEnable
+	CGlowProperty m_Glow; // 0x568
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flGlowBackfaceMult; // 0x5b8
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_fadeMinDist; // 0x5bc
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_fadeMaxDist; // 0x5c0
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeScale; // 0x5c4
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flShadowStrength; // 0x5c8
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nAddDecal; // 0x5cc
+	// MNetworkEnable
+	// MNetworkEnable
+	Vector m_vDecalPosition; // 0x5d0
+	// MNetworkEnable
+	// MNetworkEnable
+	Vector m_vDecalForwardAxis; // 0x5dc
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDecalHealBloodRate; // 0x5e8
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDecalHealHeightRate; // 0x5ec
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< CHandle< CBaseModelEntity > > m_ConfigEntitiesToPropagateMaterialDecalsTo; // 0x5f0
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "64"
+	// MNetworkUserGroup "Player"
+	CNetworkViewOffsetVector m_vecViewOffset; // 0x608
+};
+
+// Aligment: 0
+// Size: 1648
+class CServerOnlyModelEntity : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1648
+class CModelPointEntity : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 7
+// Size: 1200
+class CLogicRelay : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnTrigger; // 0x458
+	CEntityIOOutput m_OnSpawn; // 0x480
+	bool m_bDisabled; // 0x4a8
+	bool m_bWaitForRefire; // 0x4a9
+	bool m_bTriggerOnce; // 0x4aa
+	bool m_bFastRetrigger; // 0x4ab
+	bool m_bPassthoughCaller; // 0x4ac
+};
+
+// Aligment: 12
+// Size: 2768
+class CParticleSystem : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	char[260] m_szSnapshotFileName; // 0x670
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bActive; // 0x774
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nStopType; // 0x778
+	// MNetworkEnable
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_iEffectIndex; // 0x780
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flStartTime; // 0x788
+	// MNetworkEnable
+	// MNetworkEnable
+	Vector[4] m_vServerControlPoints; // 0x78c
+	// MNetworkEnable
+	// MNetworkEnable
+	uint8[4] m_iServerControlPointAssignments; // 0x7bc
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity >[64] m_hControlPointEnts; // 0x7c0
+	bool m_bNoSave; // 0x8c0
+	bool m_bStartActive; // 0x8c1
+	CUtlSymbolLarge m_iszEffectName; // 0x8c8
+	CUtlSymbolLarge[64] m_iszControlPointNames; // 0x8d0
+};
+
+// Aligment: 16
+// Size: 1336
+class CPathParticleRope : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bStartActive; // 0x458
+	float m_flMaxSimulationTime; // 0x45c
+	CUtlSymbolLarge m_iszEffectName; // 0x460
+	CUtlVector< CUtlSymbolLarge > m_PathNodes_Name; // 0x468
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flParticleSpacing; // 0x480
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "parametersChanged"
+	float m_flSlack; // 0x484
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "parametersChanged"
+	float m_flRadius; // 0x488
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "parametersChanged"
+	Color m_ColorTint; // 0x48c
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "effectStateChanged"
+	int32_t m_nEffectState; // 0x490
+	// MNetworkEnable
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_iEffectIndex; // 0x498
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< Vector > m_PathNodes_Position; // 0x4a0
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< Vector > m_PathNodes_TangentIn; // 0x4b8
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< Vector > m_PathNodes_TangentOut; // 0x4d0
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< Vector > m_PathNodes_Color; // 0x4e8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "pinStateChanged"
+	CUtlVector< bool > m_PathNodes_PinEnabled; // 0x500
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< float32 > m_PathNodes_RadiusScale; // 0x518
+};
+
+// Aligment: 0
+// Size: 1112
+class CInfoSpawnGroupLandmark : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 11
+// Size: 1368
+class CInfoSpawnGroupLoadUnload : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnSpawnGroupLoadStarted; // 0x458
+	CEntityIOOutput m_OnSpawnGroupLoadFinished; // 0x480
+	CEntityIOOutput m_OnSpawnGroupUnloadStarted; // 0x4a8
+	CEntityIOOutput m_OnSpawnGroupUnloadFinished; // 0x4d0
+	CUtlSymbolLarge m_iszSpawnGroupName; // 0x4f8
+	CUtlSymbolLarge m_iszSpawnGroupFilterName; // 0x500
+	CUtlSymbolLarge m_iszLandmarkName; // 0x508
+	CUtlString m_sFixedSpawnGroupName; // 0x510
+	float m_flTimeoutInterval; // 0x518
+	bool m_bStreamingStarted; // 0x51c
+	bool m_bUnloadingStarted; // 0x51d
+};
+
+// Aligment: 1
+// Size: 1656
+class CFuncWall : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_nState; // 0x670
+};
+
+// Aligment: 0
+// Size: 1656
+class CFuncWallToggle : public CFuncWall, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1648
+class CFuncVehicleClip : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 2
+// Size: 1672
+class CFuncConveyor : public CFuncWall, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vecMoveDir; // 0x678
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flConveyorSpeed; // 0x684
+};
+
+// Aligment: 0
+// Size: 1648
+class CFuncIllusionary : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 1
+// Size: 1656
+class CFuncVPhysicsClip : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bDisabled; // 0x670
+};
+
+// Aligment: 3
+// Size: 1672
+class CFuncInteractionLayerClip : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bDisabled; // 0x670
+	CUtlSymbolLarge m_iszInteractsAs; // 0x678
+	CUtlSymbolLarge m_iszInteractsWith; // 0x680
+};
+
+// Aligment: 0
+// Size: 1112
+class CPointClientCommand : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1112
+class CPointServerCommand : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1112
+class CPointBroadcastClientCommand : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 3
+// Size: 1232
+class CCommentaryAuto : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnCommentaryNewGame; // 0x458
+	CEntityIOOutput m_OnCommentaryMidGame; // 0x480
+	CEntityIOOutput m_OnCommentaryMultiplayerSpawn; // 0x4a8
+};
+
+// Aligment: 9
+// Size: 1672
+class CDynamicLight : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	uint8_t m_ActualFlags; // 0x670
+	// MNetworkEnable
+	// MNetworkEnable
+	uint8_t m_Flags; // 0x671
+	// MNetworkEnable
+	// MNetworkEnable
+	uint8_t m_LightStyle; // 0x672
+	bool m_On; // 0x673
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_Radius; // 0x674
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_Exponent; // 0x678
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "8"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "360"
+	float m_InnerAngle; // 0x67c
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "8"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "360"
+	float m_OuterAngle; // 0x680
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_SpotRadius; // 0x684
+};
+
+// Aligment: 1
+// Size: 2053184
+class CDebugHistory : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_nNpcEvents; // 0x1f4498
+};
+
+// Aligment: 12
+// Size: 1272
+class CEnvEntityMaker : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vecEntityMins; // 0x458
+	Vector m_vecEntityMaxs; // 0x464
+	CHandle< CBaseEntity > m_hCurrentInstance; // 0x470
+	CHandle< CBaseEntity > m_hCurrentBlocker; // 0x474
+	Vector m_vecBlockerOrigin; // 0x478
+	QAngle m_angPostSpawnDirection; // 0x484
+	float m_flPostSpawnDirectionVariance; // 0x490
+	float m_flPostSpawnSpeed; // 0x494
+	bool m_bPostSpawnUseAngles; // 0x498
+	CUtlSymbolLarge m_iszTemplate; // 0x4a0
+	CEntityIOOutput m_pOutputOnSpawned; // 0x4a8
+	CEntityIOOutput m_pOutputOnFailedSpawn; // 0x4d0
+};
+
+// Aligment: 0
+// Size: 1112
+class CInfoInstructorHintTarget : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 24
+// Size: 1224
+class CEnvInstructorHint : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszName; // 0x458
+	CUtlSymbolLarge m_iszReplace_Key; // 0x460
+	CUtlSymbolLarge m_iszHintTargetEntity; // 0x468
+	int32_t m_iTimeout; // 0x470
+	int32_t m_iDisplayLimit; // 0x474
+	CUtlSymbolLarge m_iszIcon_Onscreen; // 0x478
+	CUtlSymbolLarge m_iszIcon_Offscreen; // 0x480
+	CUtlSymbolLarge m_iszCaption; // 0x488
+	CUtlSymbolLarge m_iszActivatorCaption; // 0x490
+	Color m_Color; // 0x498
+	float m_fIconOffset; // 0x49c
+	float m_fRange; // 0x4a0
+	uint8_t m_iPulseOption; // 0x4a4
+	uint8_t m_iAlphaOption; // 0x4a5
+	uint8_t m_iShakeOption; // 0x4a6
+	bool m_bStatic; // 0x4a7
+	bool m_bNoOffscreen; // 0x4a8
+	bool m_bForceCaption; // 0x4a9
+	int32_t m_iInstanceType; // 0x4ac
+	bool m_bSuppressRest; // 0x4b0
+	CUtlSymbolLarge m_iszBinding; // 0x4b8
+	bool m_bAllowNoDrawTarget; // 0x4c0
+	bool m_bAutoStart; // 0x4c1
+	bool m_bLocalPlayerOnly; // 0x4c2
+};
+
+// Aligment: 9
+// Size: 1176
+class CEnvInstructorVRHint : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszName; // 0x458
+	CUtlSymbolLarge m_iszHintTargetEntity; // 0x460
+	int32_t m_iTimeout; // 0x468
+	CUtlSymbolLarge m_iszCaption; // 0x470
+	CUtlSymbolLarge m_iszStartSound; // 0x478
+	int32_t m_iLayoutFileType; // 0x480
+	CUtlSymbolLarge m_iszCustomLayoutFile; // 0x488
+	int32_t m_iAttachType; // 0x490
+	float m_flHeightOffset; // 0x494
+};
+
+// Aligment: 3
+// Size: 1136
+class CInstructorEventEntity : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszName; // 0x458
+	CUtlSymbolLarge m_iszHintTargetEntity; // 0x460
+	CHandle< CBasePlayer > m_hTargetPlayer; // 0x468
+};
+
+// Aligment: 5
+// Size: 1248
+class CEnvScreenOverlay : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge[10] m_iszOverlayNames; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "11"
+	// MNetworkMinValue "-1"
+	// MNetworkMaxValue "63"
+	float32[10] m_flOverlayTimes; // 0x4a8
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flStartTime; // 0x4d0
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_iDesiredOverlay; // 0x4d4
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bIsActive; // 0x4d8
+};
+
+// Aligment: 2
+// Size: 1120
+class CEnvZoom : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flSpeed; // 0x458
+	int32_t m_nFOV; // 0x45c
+};
+
+// Aligment: 4
+// Size: 1168
+class CEnvFade : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	Color m_fadeColor; // 0x458
+	float m_Duration; // 0x45c
+	float m_HoldDuration; // 0x460
+	CEntityIOOutput m_OnBeginFade; // 0x468
+};
+
+// Aligment: 3
+// Size: 1160
+class CCredits : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnCreditsDone; // 0x458
+	bool m_bRolledOutroCredits; // 0x480
+	float m_flLogoLength; // 0x484
+};
+
+// Aligment: 10
+// Size: 1192
+class CEnvShake : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_limitToEntity; // 0x458
+	float m_Amplitude; // 0x460
+	float m_Frequency; // 0x464
+	float m_Duration; // 0x468
+	float m_Radius; // 0x46c
+	float m_stopTime; // 0x470
+	float m_nextShake; // 0x474
+	float m_currentAmp; // 0x478
+	Vector m_maxForce; // 0x47c
+	CPhysicsShake m_shakeCallback; // 0x490
+};
+
+// Aligment: 4
+// Size: 1128
+class CEnvTilt : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_Duration; // 0x458
+	float m_Radius; // 0x45c
+	float m_TiltTime; // 0x460
+	float m_stopTime; // 0x464
+};
+
+// Aligment: 5
+// Size: 1168
+class CEnvSpark : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flDelay; // 0x458
+	int32_t m_nMagnitude; // 0x45c
+	int32_t m_nTrailLength; // 0x460
+	int32_t m_nType; // 0x464
+	CEntityIOOutput m_OnSpark; // 0x468
+};
+
+// Aligment: 0
+// Size: 1112
+class CShower : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 12
+// Size: 1728
+class CEnvExplosion : public CModelPointEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_iMagnitude; // 0x670
+	int32_t m_iRadiusOverride; // 0x674
+	int32_t m_spriteScale; // 0x678
+	float m_flDamageForce; // 0x67c
+	CHandle< CBaseEntity > m_hInflictor; // 0x680
+	int32_t m_iCustomDamageType; // 0x684
+	CUtlSymbolLarge m_iszExplosionType; // 0x690
+	CUtlSymbolLarge m_iszCustomEffectName; // 0x698
+	CUtlSymbolLarge m_iszCustomSoundName; // 0x6a0
+	int32_t m_iClassIgnore; // 0x6a8
+	CUtlSymbolLarge m_iszEntityIgnoreName; // 0x6b0
+	CHandle< CBaseEntity > m_hEntityIgnore; // 0x6b8
+};
+
+// Aligment: 1
+// Size: 1208
+class CFilterName : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iFilterName; // 0x4b0
+};
+
+// Aligment: 1
+// Size: 1208
+class CFilterModel : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iFilterModel; // 0x4b0
+};
+
+// Aligment: 1
+// Size: 1208
+class CFilterContext : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iFilterContext; // 0x4b0
+};
+
+// Aligment: 1
+// Size: 1208
+class FilterTeam : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_iFilterTeam; // 0x4b0
+};
+
+// Aligment: 1
+// Size: 1208
+class CFilterMassGreater : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_fFilterMass; // 0x4b0
+};
+
+// Aligment: 1
+// Size: 1208
+class FilterDamageType : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_iDamageType; // 0x4b0
+};
+
+// Aligment: 3
+// Size: 1216
+class FilterHealth : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bAdrenalineActive; // 0x4b0
+	int32_t m_iHealthMin; // 0x4b4
+	int32_t m_iHealthMax; // 0x4b8
+};
+
+// Aligment: 5
+// Size: 1232
+class CFilterEnemy : public CBaseFilter, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszEnemyName; // 0x4b0
+	float m_flRadius; // 0x4b8
+	float m_flOuterRadius; // 0x4bc
+	int32_t m_nMaxSquadmatesPerEnemy; // 0x4c0
+	CUtlSymbolLarge m_iszPlayerName; // 0x4c8
+};
+
+// Aligment: 5
+// Size: 1136
+class CFuncTimescale : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flDesiredTimescale; // 0x458
+	float m_flAcceleration; // 0x45c
+	float m_flMinBlendRate; // 0x460
+	float m_flBlendDeltaMultiplier; // 0x464
+	bool m_isStarted; // 0x468
+};
+
+// Aligment: 23
+// Size: 1856
+class CGameUI : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flFieldOfView; // 0x458
+	CHandle< CBasePlayerWeapon > m_hSaveWeapon; // 0x45c
+	CEntityIOOutput m_playerOn; // 0x460
+	CEntityIOOutput m_playerOff; // 0x488
+	CEntityIOOutput m_pressedMoveLeft; // 0x4b0
+	CEntityIOOutput m_pressedMoveRight; // 0x4d8
+	CEntityIOOutput m_pressedForward; // 0x500
+	CEntityIOOutput m_pressedBack; // 0x528
+	CEntityIOOutput m_pressedAttack; // 0x550
+	CEntityIOOutput m_pressedAttack2; // 0x578
+	CEntityIOOutput m_unpressedMoveLeft; // 0x5a0
+	CEntityIOOutput m_unpressedMoveRight; // 0x5c8
+	CEntityIOOutput m_unpressedForward; // 0x5f0
+	CEntityIOOutput m_unpressedBack; // 0x618
+	CEntityIOOutput m_unpressedAttack; // 0x640
+	CEntityIOOutput m_unpressedAttack2; // 0x668
+	CEntityOutputTemplate< float32 > m_xaxis; // 0x690
+	CEntityOutputTemplate< float32 > m_yaxis; // 0x6b8
+	CEntityOutputTemplate< float32 > m_attackaxis; // 0x6e0
+	CEntityOutputTemplate< float32 > m_attack2axis; // 0x708
+	bool m_bForceUpdate; // 0x730
+	int32_t m_nLastButtonState; // 0x734
+	CHandle< CBasePlayer > m_player; // 0x738
+};
+
+// Aligment: 2
+// Size: 1128
+class CPointGamestatsCounter : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_strStatisticName; // 0x458
+	bool m_bDisabled; // 0x460
+};
+
+// Aligment: 5
+// Size: 1168
+class CGameWeaponManager : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszWeaponName; // 0x458
+	int32_t m_iMaxPieces; // 0x468
+	float m_flAmmoMod; // 0x46c
+	bool m_bExpectingWeapon; // 0x470
+	CUtlVector< CHandle< CBaseEntity > > m_ManagedNonWeapons; // 0x478
+};
+
+// Aligment: 7
+// Size: 1680
+class CLightGlow : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_nHorizontalSize; // 0x670
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_nVerticalSize; // 0x674
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_nMinDist; // 0x678
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_nMaxDist; // 0x67c
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_nOuterMaxDist; // 0x680
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "6"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "64"
+	// MNetworkEncodeFlags
+	float m_flGlowProxySize; // 0x684
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "100"
+	float m_flHDRColorScale; // 0x688
+};
+
+// Aligment: 3
+// Size: 1168
+class CLogicAchievement : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bDisabled; // 0x458
+	CUtlSymbolLarge m_iszAchievementEventID; // 0x460
+	CEntityIOOutput m_OnFired; // 0x468
+};
+
+// Aligment: 5
+// Size: 1192
+class CLogicGameEventListener : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnEventFired; // 0x468
+	CUtlSymbolLarge m_iszGameEventName; // 0x490
+	CUtlSymbolLarge m_iszGameEventItem; // 0x498
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bEnabled; // 0x4a0
+	bool m_bStartEnabled; // 0x4a1
+};
+
+// Aligment: 9
+// Size: 1160
+class CLogicMeasureMovement : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_strMeasureTarget; // 0x458
+	CUtlSymbolLarge m_strMeasureReference; // 0x460
+	CUtlSymbolLarge m_strTargetReference; // 0x468
+	CHandle< CBaseEntity > m_hMeasureTarget; // 0x470
+	CHandle< CBaseEntity > m_hMeasureReference; // 0x474
+	CHandle< CBaseEntity > m_hTarget; // 0x478
+	CHandle< CBaseEntity > m_hTargetReference; // 0x47c
+	float m_flScale; // 0x480
+	int32_t m_nMeasureType; // 0x484
+};
+
+// Aligment: 2
+// Size: 1128
+class CLogicNavigation : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_isOn; // 0x460
+	navproperties_t m_navProperty; // 0x464
+};
+
+// Aligment: 48
+// Size: 1944
+class CLogicNPCCounter : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnMinCountAll; // 0x458
+	CEntityIOOutput m_OnMaxCountAll; // 0x480
+	CEntityOutputTemplate< float32 > m_OnFactorAll; // 0x4a8
+	CEntityOutputTemplate< float32 > m_OnMinPlayerDistAll; // 0x4d0
+	CEntityIOOutput m_OnMinCount_1; // 0x4f8
+	CEntityIOOutput m_OnMaxCount_1; // 0x520
+	CEntityOutputTemplate< float32 > m_OnFactor_1; // 0x548
+	CEntityOutputTemplate< float32 > m_OnMinPlayerDist_1; // 0x570
+	CEntityIOOutput m_OnMinCount_2; // 0x598
+	CEntityIOOutput m_OnMaxCount_2; // 0x5c0
+	CEntityOutputTemplate< float32 > m_OnFactor_2; // 0x5e8
+	CEntityOutputTemplate< float32 > m_OnMinPlayerDist_2; // 0x610
+	CEntityIOOutput m_OnMinCount_3; // 0x638
+	CEntityIOOutput m_OnMaxCount_3; // 0x660
+	CEntityOutputTemplate< float32 > m_OnFactor_3; // 0x688
+	CEntityOutputTemplate< float32 > m_OnMinPlayerDist_3; // 0x6b0
+	CEntityHandle m_hSource; // 0x6d8
+	CUtlSymbolLarge m_iszSourceEntityName; // 0x6e0
+	float m_flDistanceMax; // 0x6e8
+	bool m_bDisabled; // 0x6ec
+	int32_t m_nMinCountAll; // 0x6f0
+	int32_t m_nMaxCountAll; // 0x6f4
+	int32_t m_nMinFactorAll; // 0x6f8
+	int32_t m_nMaxFactorAll; // 0x6fc
+	CUtlSymbolLarge m_iszNPCClassname_1; // 0x708
+	int32_t m_nNPCState_1; // 0x710
+	bool m_bInvertState_1; // 0x714
+	int32_t m_nMinCount_1; // 0x718
+	int32_t m_nMaxCount_1; // 0x71c
+	int32_t m_nMinFactor_1; // 0x720
+	int32_t m_nMaxFactor_1; // 0x724
+	float m_flDefaultDist_1; // 0x72c
+	CUtlSymbolLarge m_iszNPCClassname_2; // 0x730
+	int32_t m_nNPCState_2; // 0x738
+	bool m_bInvertState_2; // 0x73c
+	int32_t m_nMinCount_2; // 0x740
+	int32_t m_nMaxCount_2; // 0x744
+	int32_t m_nMinFactor_2; // 0x748
+	int32_t m_nMaxFactor_2; // 0x74c
+	float m_flDefaultDist_2; // 0x754
+	CUtlSymbolLarge m_iszNPCClassname_3; // 0x758
+	int32_t m_nNPCState_3; // 0x760
+	bool m_bInvertState_3; // 0x764
+	int32_t m_nMinCount_3; // 0x768
+	int32_t m_nMaxCount_3; // 0x76c
+	int32_t m_nMinFactor_3; // 0x770
+	int32_t m_nMaxFactor_3; // 0x774
+	float m_flDefaultDist_3; // 0x77c
+};
+
+// Aligment: 4
+// Size: 1992
+class CLogicNPCCounterAABB : public CLogicNPCCounter, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vDistanceOuterMins; // 0x798
+	Vector m_vDistanceOuterMaxs; // 0x7a4
+	Vector m_vOuterMins; // 0x7b0
+	Vector m_vOuterMaxs; // 0x7bc
+};
+
+// Aligment: 0
+// Size: 1992
+class CLogicNPCCounterOBB : public CLogicNPCCounterAABB, CLogicNPCCounter, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 5
+// Size: 1280
+class CLogicPlayerProxy : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CHandle< CBaseEntity > m_hPlayer; // 0x458
+	CEntityIOOutput m_PlayerHasAmmo; // 0x460
+	CEntityIOOutput m_PlayerHasNoAmmo; // 0x488
+	CEntityIOOutput m_PlayerDied; // 0x4b0
+	CEntityOutputTemplate< int32 > m_RequestedPlayerHealth; // 0x4d8
+};
+
+// Aligment: 11
+// Size: 1520
+class CLogicAuto : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnMapSpawn; // 0x458
+	CEntityIOOutput m_OnDemoMapSpawn; // 0x480
+	CEntityIOOutput m_OnNewGame; // 0x4a8
+	CEntityIOOutput m_OnLoadGame; // 0x4d0
+	CEntityIOOutput m_OnMapTransition; // 0x4f8
+	CEntityIOOutput m_OnBackgroundMap; // 0x520
+	CEntityIOOutput m_OnMultiNewMap; // 0x548
+	CEntityIOOutput m_OnMultiNewRound; // 0x570
+	CEntityIOOutput m_OnVREnabled; // 0x598
+	CEntityIOOutput m_OnVRNotEnabled; // 0x5c0
+	CUtlSymbolLarge m_globalstate; // 0x5e8
+};
+
+// Aligment: 0
+// Size: 1112
+class CLogicScript : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 10
+// Size: 1264
+class CTimerEntity : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnTimer; // 0x458
+	CEntityIOOutput m_OnTimerHigh; // 0x480
+	CEntityIOOutput m_OnTimerLow; // 0x4a8
+	int32_t m_iDisabled; // 0x4d0
+	float m_flInitialDelay; // 0x4d4
+	float m_flRefireTime; // 0x4d8
+	bool m_bUpDownState; // 0x4dc
+	int32_t m_iUseRandomTime; // 0x4e0
+	float m_flLowerRandomBound; // 0x4e4
+	float m_flUpperRandomBound; // 0x4e8
+};
+
+// Aligment: 4
+// Size: 1168
+class CLogicLineToEntity : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityOutputTemplate< Vector > m_Line; // 0x458
+	CUtlSymbolLarge m_SourceName; // 0x480
+	CHandle< CBaseEntity > m_StartEntity; // 0x488
+	CHandle< CBaseEntity > m_EndEntity; // 0x48c
+};
+
+// Aligment: 11
+// Size: 1336
+class CMathRemap : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flInMin; // 0x458
+	float m_flInMax; // 0x45c
+	float m_flOut1; // 0x460
+	float m_flOut2; // 0x464
+	float m_flOldInValue; // 0x468
+	bool m_bEnabled; // 0x46c
+	CEntityOutputTemplate< float32 > m_OutValue; // 0x470
+	CEntityIOOutput m_OnRoseAboveMin; // 0x498
+	CEntityIOOutput m_OnRoseAboveMax; // 0x4c0
+	CEntityIOOutput m_OnFellBelowMin; // 0x4e8
+	CEntityIOOutput m_OnFellBelowMax; // 0x510
+};
+
+// Aligment: 5
+// Size: 1168
+class CMathColorBlend : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flInMin; // 0x458
+	float m_flInMax; // 0x45c
+	Color m_OutColor1; // 0x460
+	Color m_OutColor2; // 0x464
+	CEntityOutputTemplate< Color > m_OutValue; // 0x468
+};
+
+// Aligment: 5
+// Size: 1176
+class CEnvGlobal : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityOutputTemplate< int32 > m_outCounter; // 0x458
+	CUtlSymbolLarge m_globalstate; // 0x480
+	int32_t m_triggermode; // 0x488
+	int32_t m_initialstate; // 0x48c
+	int32_t m_counter; // 0x490
+};
+
+// Aligment: 5
+// Size: 1424
+class CMultiSource : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CHandle< CBaseEntity >[32] m_rgEntities; // 0x458
+	int32[32] m_rgTriggered; // 0x4d8
+	CEntityIOOutput m_OnTrigger; // 0x558
+	int32_t m_iTotal; // 0x580
+	CUtlSymbolLarge m_globalstate; // 0x588
+};
+
+// Aligment: 11
+// Size: 1368
+class CMathCounter : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flMin; // 0x458
+	float m_flMax; // 0x45c
+	bool m_bHitMin; // 0x460
+	bool m_bHitMax; // 0x461
+	bool m_bDisabled; // 0x462
+	CEntityOutputTemplate< float32 > m_OutValue; // 0x468
+	CEntityOutputTemplate< float32 > m_OnGetValue; // 0x490
+	CEntityIOOutput m_OnHitMin; // 0x4b8
+	CEntityIOOutput m_OnHitMax; // 0x4e0
+	CEntityIOOutput m_OnChangedFromMin; // 0x508
+	CEntityIOOutput m_OnChangedFromMax; // 0x530
+};
+
+// Aligment: 6
+// Size: 1944
+class CLogicCase : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge[16] m_nCase; // 0x458
+	int32_t m_nShuffleCases; // 0x4d8
+	int32_t m_nLastShuffleCase; // 0x4dc
+	uint8[16] m_uchShuffleCaseMap; // 0x4e0
+	CEntityIOOutput[16] m_OnCase; // 0x4f0
+	CEntityOutputTemplate< CVariantBase< CVariantDefaultAllocator > > m_OnDefault; // 0x770
+};
+
+// Aligment: 6
+// Size: 1280
+class CLogicCompare : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flInValue; // 0x458
+	float m_flCompareValue; // 0x45c
+	CEntityOutputTemplate< float32 > m_OnLessThan; // 0x460
+	CEntityOutputTemplate< float32 > m_OnEqualTo; // 0x488
+	CEntityOutputTemplate< float32 > m_OnNotEqualTo; // 0x4b0
+	CEntityOutputTemplate< float32 > m_OnGreaterThan; // 0x4d8
+};
+
+// Aligment: 3
+// Size: 1128
+class CLogicAutosave : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bForceNewLevelUnit; // 0x458
+	int32_t m_minHitPoints; // 0x45c
+	int32_t m_minHitPointsToCommit; // 0x460
+};
+
+// Aligment: 4
+// Size: 1144
+class CLogicActiveAutosave : public CLogicAutosave, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_TriggerHitPoints; // 0x468
+	float m_flTimeToTrigger; // 0x46c
+	float m_flStartTime; // 0x470
+	float m_flDangerousTime; // 0x474
+};
+
+// Aligment: 6
+// Size: 1136
+class CLogicDistanceAutosave : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszTargetEntity; // 0x458
+	float m_flDistanceToPlayer; // 0x460
+	bool m_bForceNewLevelUnit; // 0x464
+	bool m_bCheckCough; // 0x465
+	bool m_bThinkDangerous; // 0x466
+	float m_flDangerousTime; // 0x468
+};
+
+// Aligment: 4
+// Size: 1136
+class CLogicCollisionPair : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_nameAttach1; // 0x458
+	CUtlSymbolLarge m_nameAttach2; // 0x460
+	bool m_disabled; // 0x468
+	bool m_succeeded; // 0x469
+};
+
+// Aligment: 6
+// Size: 1392
+class CLogicBranchList : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge[16] m_nLogicBranchNames; // 0x458
+	CUtlVector< CHandle< CBaseEntity > > m_LogicBranchList; // 0x4d8
+	CLogicBranchList::LogicBranchListenerLastState_t m_eLastState; // 0x4f0
+	CEntityIOOutput m_OnAllTrue; // 0x4f8
+	CEntityIOOutput m_OnAllFalse; // 0x520
+	CEntityIOOutput m_OnMixed; // 0x548
+};
+
+// Aligment: 1
+// Size: 1120
+class CLogicGameEvent : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszEventName; // 0x458
+};
+
+// Aligment: 5
+// Size: 1136
+class CMessageEntity : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_radius; // 0x458
+	CUtlSymbolLarge m_messageText; // 0x460
+	bool m_drawText; // 0x468
+	bool m_bDeveloperOnly; // 0x469
+	bool m_bEnabled; // 0x46a
+};
+
+// Aligment: 5
+// Size: 1776
+class CTriggerBrush : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnStartTouch; // 0x670
+	CEntityIOOutput m_OnEndTouch; // 0x698
+	CEntityIOOutput m_OnUse; // 0x6c0
+	int32_t m_iInputFilter; // 0x6e8
+	int32_t m_iDontMessageParent; // 0x6ec
+};
+
+// Aligment: 8
+// Size: 1192
+class CPathKeyFrame : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_Origin; // 0x458
+	QAngle m_Angles; // 0x464
+	Quaternion m_qAngle; // 0x470
+	CUtlSymbolLarge m_iNextKey; // 0x480
+	float m_flNextTime; // 0x488
+	CPathKeyFrame* m_pNextKey; // 0x490
+	CPathKeyFrame* m_pPrevKey; // 0x498
+	float m_flSpeed; // 0x4a0
+};
+
+// Aligment: 11
+// Size: 1256
+class CBaseMoveBehavior : public CPathKeyFrame, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_iPositionInterpolator; // 0x4a8
+	int32_t m_iRotationInterpolator; // 0x4ac
+	float m_flAnimStartTime; // 0x4b0
+	float m_flAnimEndTime; // 0x4b4
+	float m_flAverageSpeedAcrossFrame; // 0x4b8
+	CPathKeyFrame* m_pCurrentKeyFrame; // 0x4c0
+	CPathKeyFrame* m_pTargetKeyFrame; // 0x4c8
+	CPathKeyFrame* m_pPreKeyFrame; // 0x4d0
+	CPathKeyFrame* m_pPostKeyFrame; // 0x4d8
+	float m_flTimeIntoFrame; // 0x4e0
+	int32_t m_iDirection; // 0x4e4
+};
+
+// Aligment: 4
+// Size: 1168
+class CPathCorner : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flWait; // 0x458
+	float m_flRadius; // 0x45c
+	CEntityIOOutput m_OnPass; // 0x460
+	CUtlSymbolLarge m_MoveActivityName; // 0x488
+};
+
+// Aligment: 6
+// Size: 1208
+class CPhysForce : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_nameAttach; // 0x460
+	float m_force; // 0x468
+	float m_forceTime; // 0x46c
+	CHandle< CBaseEntity > m_attachedObject; // 0x470
+	bool m_wasRestored; // 0x474
+	CConstantForceController m_integrator; // 0x478
+};
+
+// Aligment: 1
+// Size: 1224
+class CPhysThruster : public CPhysForce, CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_localOrigin; // 0x4b8
+};
+
+// Aligment: 1
+// Size: 1224
+class CPhysTorque : public CPhysForce, CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_axis; // 0x4b8
+};
+
+// Aligment: 7
+// Size: 1192
+class CPhysMotor : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_nameAttach; // 0x458
+	CHandle< CBaseEntity > m_hAttachedObject; // 0x460
+	float m_spinUp; // 0x464
+	float m_additionalAcceleration; // 0x468
+	float m_angularAcceleration; // 0x46c
+	float m_lastTime; // 0x470
+	CMotorController m_motor; // 0x488
+};
+
+// Aligment: 7
+// Size: 1176
+class CKeepUpright : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_worldGoalAxis; // 0x460
+	Vector m_localTestAxis; // 0x46c
+	CUtlSymbolLarge m_nameAttach; // 0x480
+	CHandle< CBaseEntity > m_attachedObject; // 0x488
+	float m_angularLimit; // 0x48c
+	bool m_bActive; // 0x490
+	bool m_bDampAllRotation; // 0x491
+};
+
+// Aligment: 8
+// Size: 1200
+class CPhysConstraint : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_nameAttach1; // 0x460
+	CUtlSymbolLarge m_nameAttach2; // 0x468
+	CUtlSymbolLarge m_breakSound; // 0x470
+	float m_forceLimit; // 0x478
+	float m_torqueLimit; // 0x47c
+	uint32_t m_teleportTick; // 0x480
+	float m_minTeleportDistance; // 0x484
+	CEntityIOOutput m_OnBreak; // 0x488
+};
+
+// Aligment: 18
+// Size: 1616
+class CPhysHinge : public CPhysConstraint, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	ConstraintSoundInfo m_soundInfo; // 0x4b8
+	CEntityIOOutput m_NotifyMinLimitReached; // 0x540
+	CEntityIOOutput m_NotifyMaxLimitReached; // 0x568
+	bool m_bAtMinLimit; // 0x590
+	bool m_bAtMaxLimit; // 0x591
+	constraint_hingeparams_t m_hinge; // 0x594
+	float m_hingeFriction; // 0x5d4
+	float m_systemLoadScale; // 0x5d8
+	bool m_bIsAxisLocal; // 0x5dc
+	float m_flMinRotation; // 0x5e0
+	float m_flMaxRotation; // 0x5e4
+	float m_flInitialRotation; // 0x5e8
+	float m_flMotorFrequency; // 0x5ec
+	float m_flMotorDampingRatio; // 0x5f0
+	float m_flAngleSpeed; // 0x5f4
+	float m_flAngleSpeedThreshold; // 0x5f8
+	CEntityIOOutput m_OnStartMoving; // 0x600
+	CEntityIOOutput m_OnStopMoving; // 0x628
+};
+
+// Aligment: 0
+// Size: 1616
+class CPhysHingeAlias_phys_hinge_local : public CPhysHinge, CPhysConstraint, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 1
+// Size: 1208
+class CPhysBallSocket : public CPhysConstraint, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flFriction; // 0x4b0
+};
+
+// Aligment: 10
+// Size: 1384
+class CPhysSlideConstraint : public CPhysConstraint, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_axisEnd; // 0x4b8
+	float m_slideFriction; // 0x4c4
+	float m_systemLoadScale; // 0x4c8
+	float m_initialOffset; // 0x4cc
+	bool m_bEnableLinearConstraint; // 0x4d0
+	bool m_bEnableAngularConstraint; // 0x4d1
+	float m_flMotorFrequency; // 0x4d4
+	float m_flMotorDampingRatio; // 0x4d8
+	bool m_bUseEntityPivot; // 0x4dc
+	ConstraintSoundInfo m_soundInfo; // 0x4e0
+};
+
+// Aligment: 6
+// Size: 1224
+class CPhysFixed : public CPhysConstraint, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flLinearFrequency; // 0x4b0
+	float m_flLinearDampingRatio; // 0x4b4
+	float m_flAngularFrequency; // 0x4b8
+	float m_flAngularDampingRatio; // 0x4bc
+	bool m_bEnableLinearConstraint; // 0x4c0
+	bool m_bEnableAngularConstraint; // 0x4c1
+};
+
+// Aligment: 4
+// Size: 1248
+class CPhysPulley : public CPhysConstraint, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_position2; // 0x4b0
+	Vector[2] m_offset; // 0x4bc
+	float m_addLength; // 0x4d4
+	float m_gearRatio; // 0x4d8
+};
+
+// Aligment: 6
+// Size: 1256
+class CPhysLength : public CPhysConstraint, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector[2] m_offset; // 0x4b0
+	Vector m_vecAttach; // 0x4c8
+	float m_addLength; // 0x4d4
+	float m_minLength; // 0x4d8
+	float m_totalLength; // 0x4dc
+	bool m_bEnableCollision; // 0x4e0
+};
+
+// Aligment: 9
+// Size: 1240
+class CRagdollConstraint : public CPhysConstraint, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_xmin; // 0x4b0
+	float m_xmax; // 0x4b4
+	float m_ymin; // 0x4b8
+	float m_ymax; // 0x4bc
+	float m_zmin; // 0x4c0
+	float m_zmax; // 0x4c4
+	float m_xfriction; // 0x4c8
+	float m_yfriction; // 0x4cc
+	float m_zfriction; // 0x4d0
+};
+
+// Aligment: 48
+// Size: 1504
+class CGenericConstraint : public CPhysConstraint, CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	JointMotion_t m_nLinearMotionX; // 0x4b8
+	JointMotion_t m_nLinearMotionY; // 0x4bc
+	JointMotion_t m_nLinearMotionZ; // 0x4c0
+	float m_flLinearFrequencyX; // 0x4c4
+	float m_flLinearFrequencyY; // 0x4c8
+	float m_flLinearFrequencyZ; // 0x4cc
+	float m_flLinearDampingRatioX; // 0x4d0
+	float m_flLinearDampingRatioY; // 0x4d4
+	float m_flLinearDampingRatioZ; // 0x4d8
+	float m_flMaxLinearImpulseX; // 0x4dc
+	float m_flMaxLinearImpulseY; // 0x4e0
+	float m_flMaxLinearImpulseZ; // 0x4e4
+	float m_flBreakAfterTimeX; // 0x4e8
+	float m_flBreakAfterTimeY; // 0x4ec
+	float m_flBreakAfterTimeZ; // 0x4f0
+	float m_flBreakAfterTimeStartTimeX; // 0x4f4
+	float m_flBreakAfterTimeStartTimeY; // 0x4f8
+	float m_flBreakAfterTimeStartTimeZ; // 0x4fc
+	float m_flBreakAfterTimeThresholdX; // 0x500
+	float m_flBreakAfterTimeThresholdY; // 0x504
+	float m_flBreakAfterTimeThresholdZ; // 0x508
+	float m_flNotifyForceX; // 0x50c
+	float m_flNotifyForceY; // 0x510
+	float m_flNotifyForceZ; // 0x514
+	float m_flNotifyForceMinTimeX; // 0x518
+	float m_flNotifyForceMinTimeY; // 0x51c
+	float m_flNotifyForceMinTimeZ; // 0x520
+	float m_flNotifyForceLastTimeX; // 0x524
+	float m_flNotifyForceLastTimeY; // 0x528
+	float m_flNotifyForceLastTimeZ; // 0x52c
+	bool m_bAxisNotifiedX; // 0x530
+	bool m_bAxisNotifiedY; // 0x531
+	bool m_bAxisNotifiedZ; // 0x532
+	JointMotion_t m_nAngularMotionX; // 0x534
+	JointMotion_t m_nAngularMotionY; // 0x538
+	JointMotion_t m_nAngularMotionZ; // 0x53c
+	float m_flAngularFrequencyX; // 0x540
+	float m_flAngularFrequencyY; // 0x544
+	float m_flAngularFrequencyZ; // 0x548
+	float m_flAngularDampingRatioX; // 0x54c
+	float m_flAngularDampingRatioY; // 0x550
+	float m_flAngularDampingRatioZ; // 0x554
+	float m_flMaxAngularImpulseX; // 0x558
+	float m_flMaxAngularImpulseY; // 0x55c
+	float m_flMaxAngularImpulseZ; // 0x560
+	CEntityIOOutput m_NotifyForceReachedX; // 0x568
+	CEntityIOOutput m_NotifyForceReachedY; // 0x590
+	CEntityIOOutput m_NotifyForceReachedZ; // 0x5b8
+};
+
+// Aligment: 6
+// Size: 1152
+class CPhysicsEntitySolver : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CHandle< CBaseEntity > m_hMovingEntity; // 0x460
+	CHandle< CBaseEntity > m_hPhysicsBlocker; // 0x464
+	float m_separationDuration; // 0x468
+	float m_cancelTime; // 0x46c
+	int32_t m_savedCollisionGroup; // 0x470
+	uint64_t m_savedInteractsAsMask; // 0x478
+};
+
+// Aligment: 8
+// Size: 1184
+class CPhysicsSpring : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flFrequency; // 0x460
+	float m_flDampingRatio; // 0x464
+	float m_flRestLength; // 0x468
+	CUtlSymbolLarge m_nameAttachStart; // 0x470
+	CUtlSymbolLarge m_nameAttachEnd; // 0x478
+	Vector m_start; // 0x480
+	Vector m_end; // 0x48c
+	uint32_t m_teleportTick; // 0x498
+};
+
+// Aligment: 0
+// Size: 1648
+class CSimplePhysicsBrush : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 3
+// Size: 1168
+class CPhysConvert : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnConvert; // 0x458
+	CUtlSymbolLarge m_swapModel; // 0x480
+	float m_flMassOverride; // 0x488
+};
+
+// Aligment: 7
+// Size: 1152
+class CPointPush : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bEnabled; // 0x458
+	float m_flMagnitude; // 0x45c
+	float m_flRadius; // 0x460
+	float m_flInnerRadius; // 0x464
+	float m_flConeOfInfluence; // 0x468
+	CUtlSymbolLarge m_iszFilterName; // 0x470
+	CHandle< CBaseFilter > m_hFilter; // 0x478
+};
+
+// Aligment: 0
+// Size: 1112
+class CSprayCan : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 3
+// Size: 1664
+class CRevertSaved : public CModelPointEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_loadTime; // 0x670
+	float m_Duration; // 0x674
+	float m_HoldTime; // 0x678
+};
+
+// Aligment: 7
+// Size: 1192
+class CPointEntityFinder : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CHandle< CBaseEntity > m_hEntity; // 0x458
+	CUtlSymbolLarge m_iFilterName; // 0x460
+	CHandle< CBaseFilter > m_hFilter; // 0x468
+	CUtlSymbolLarge m_iRefName; // 0x470
+	CHandle< CBaseEntity > m_hReference; // 0x478
+	EntFinderMethod_t m_FindMethod; // 0x47c
+	CEntityIOOutput m_OnFoundEntity; // 0x480
+};
+
+// Aligment: 3
+// Size: 1128
+class CPointHMDAnchor : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bDisabled; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flEnableTime; // 0x45c
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nPlayerIndex; // 0x460
+};
+
+// Aligment: 0
+// Size: 1128
+class CPointHMDAnchorOverride : public CPointHMDAnchor, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 6
+// Size: 1192
+class CPointPlayerMoveConstraint : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flRadius; // 0x458
+	float m_flConstraintWidth; // 0x45c
+	float m_flSpeedFactor; // 0x460
+	float m_flRadiusSquared; // 0x464
+	CUtlVector< CHandle< CBaseEntity > > m_hConstrainedPlayers; // 0x468
+	CEntityIOOutput m_OnConstraintBroken; // 0x480
+};
+
+// Aligment: 44
+// Size: 1616
+class CPointValueRemapper : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bDisabled; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bUpdateOnClient; // 0x459
+	// MNetworkEnable
+	// MNetworkEnable
+	ValueRemapperInputType_t m_nInputType; // 0x45c
+	CUtlSymbolLarge m_iszRemapLineStartName; // 0x460
+	CUtlSymbolLarge m_iszRemapLineEndName; // 0x468
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hRemapLineStart; // 0x470
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hRemapLineEnd; // 0x474
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flMaximumChangePerSecond; // 0x478
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDisengageDistance; // 0x47c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flEngageDistance; // 0x480
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bRequiresUseKey; // 0x484
+	// MNetworkEnable
+	// MNetworkEnable
+	ValueRemapperOutputType_t m_nOutputType; // 0x488
+	CUtlSymbolLarge m_iszOutputEntityName; // 0x490
+	CUtlSymbolLarge m_iszOutputEntity2Name; // 0x498
+	CUtlSymbolLarge m_iszOutputEntity3Name; // 0x4a0
+	CUtlSymbolLarge m_iszOutputEntity4Name; // 0x4a8
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< CHandle< CBaseEntity > > m_hOutputEntities; // 0x4b0
+	// MNetworkEnable
+	// MNetworkEnable
+	ValueRemapperHapticsType_t m_nHapticsType; // 0x4c8
+	// MNetworkEnable
+	// MNetworkEnable
+	ValueRemapperMomentumType_t m_nMomentumType; // 0x4cc
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flMomentumModifier; // 0x4d0
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flSnapValue; // 0x4d4
+	float m_flCurrentMomentum; // 0x4d8
+	// MNetworkEnable
+	// MNetworkEnable
+	ValueRemapperRatchetType_t m_nRatchetType; // 0x4dc
+	float m_flRatchetOffset; // 0x4e0
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flInputOffset; // 0x4e4
+	bool m_bEngaged; // 0x4e8
+	bool m_bFirstUpdate; // 0x4e9
+	float m_flPreviousValue; // 0x4ec
+	float m_flPreviousUpdateTickTime; // 0x4f0
+	Vector m_vecPreviousTestPoint; // 0x4f4
+	CHandle< CBasePlayer > m_hUsingPlayer; // 0x500
+	float m_flCustomOutputValue; // 0x504
+	CUtlSymbolLarge m_iszSoundEngage; // 0x508
+	CUtlSymbolLarge m_iszSoundDisengage; // 0x510
+	CUtlSymbolLarge m_iszSoundReachedValueZero; // 0x518
+	CUtlSymbolLarge m_iszSoundReachedValueOne; // 0x520
+	CUtlSymbolLarge m_iszSoundMovingLoop; // 0x528
+	CEntityOutputTemplate< float32 > m_Position; // 0x538
+	CEntityOutputTemplate< float32 > m_PositionDelta; // 0x560
+	CEntityIOOutput m_OnReachedValueZero; // 0x588
+	CEntityIOOutput m_OnReachedValueOne; // 0x5b0
+	CEntityIOOutput m_OnReachedValueCustom; // 0x5d8
+	CEntityIOOutput m_OnEngage; // 0x600
+	CEntityIOOutput m_OnDisengage; // 0x628
+};
+
+// Aligment: 11
+// Size: 2256
+class CPointWorldText : public CModelPointEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	char[512] m_messageText; // 0x670
+	// MNetworkEnable
+	// MNetworkEnable
+	char[64] m_FontName; // 0x870
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bEnabled; // 0x8b0
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bFullbright; // 0x8b1
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flWorldUnitsPerPx; // 0x8b4
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFontSize; // 0x8b8
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDepthOffset; // 0x8bc
+	// MNetworkEnable
+	// MNetworkEnable
+	Color m_Color; // 0x8c0
+	// MNetworkEnable
+	// MNetworkEnable
+	PointWorldTextJustifyHorizontal_t m_nJustifyHorizontal; // 0x8c4
+	// MNetworkEnable
+	// MNetworkEnable
+	PointWorldTextJustifyVertical_t m_nJustifyVertical; // 0x8c8
+	// MNetworkEnable
+	// MNetworkEnable
+	PointWorldTextReorientMode_t m_nReorientMode; // 0x8cc
+};
+
+// Aligment: 16
+// Size: 1408
+class CPointAngularVelocitySensor : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CHandle< CBaseEntity > m_hTargetEntity; // 0x458
+	float m_flThreshold; // 0x45c
+	int32_t m_nLastCompareResult; // 0x460
+	int32_t m_nLastFireResult; // 0x464
+	float m_flFireTime; // 0x468
+	float m_flFireInterval; // 0x46c
+	float m_flLastAngVelocity; // 0x470
+	QAngle m_lastOrientation; // 0x474
+	Vector m_vecAxis; // 0x480
+	bool m_bUseHelper; // 0x48c
+	CEntityOutputTemplate< float32 > m_AngularVelocity; // 0x490
+	CEntityIOOutput m_OnLessThan; // 0x4b8
+	CEntityIOOutput m_OnLessThanOrEqualTo; // 0x4e0
+	CEntityIOOutput m_OnGreaterThan; // 0x508
+	CEntityIOOutput m_OnGreaterThanOrEqualTo; // 0x530
+	CEntityIOOutput m_OnEqualTo; // 0x558
+};
+
+// Aligment: 6
+// Size: 1184
+class CPointVelocitySensor : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CHandle< CBaseEntity > m_hTargetEntity; // 0x458
+	Vector m_vecAxis; // 0x45c
+	bool m_bEnabled; // 0x468
+	float m_fPrevVelocity; // 0x46c
+	float m_flAvgInterval; // 0x470
+	CEntityOutputTemplate< float32 > m_Velocity; // 0x478
+};
+
+// Aligment: 0
+// Size: 1112
+class CEnableMotionFixup : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1112
+class CFuncPropRespawnZone : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 3
+// Size: 1128
+class CRagdollManager : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	int8_t m_iCurrentMaxRagdollCount; // 0x458
+	int32_t m_iMaxRagdollCount; // 0x45c
+	bool m_bSaveImportant; // 0x460
+};
+
+// Aligment: 3
+// Size: 1328
+class CSceneListManager : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlVector< CHandle< CSceneListManager > > m_hListManagers; // 0x458
+	CUtlSymbolLarge[16] m_iszScenes; // 0x470
+	CHandle< CBaseEntity >[16] m_hScenes; // 0x4f0
+};
+
+// Aligment: 80
+// Size: 2296
+class CSceneEntity : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszSceneFile; // 0x460
+	CUtlSymbolLarge m_iszResumeSceneFile; // 0x468
+	CUtlSymbolLarge m_iszTarget1; // 0x470
+	CUtlSymbolLarge m_iszTarget2; // 0x478
+	CUtlSymbolLarge m_iszTarget3; // 0x480
+	CUtlSymbolLarge m_iszTarget4; // 0x488
+	CUtlSymbolLarge m_iszTarget5; // 0x490
+	CUtlSymbolLarge m_iszTarget6; // 0x498
+	CUtlSymbolLarge m_iszTarget7; // 0x4a0
+	CUtlSymbolLarge m_iszTarget8; // 0x4a8
+	CHandle< CBaseEntity > m_hTarget1; // 0x4b0
+	CHandle< CBaseEntity > m_hTarget2; // 0x4b4
+	CHandle< CBaseEntity > m_hTarget3; // 0x4b8
+	CHandle< CBaseEntity > m_hTarget4; // 0x4bc
+	CHandle< CBaseEntity > m_hTarget5; // 0x4c0
+	CHandle< CBaseEntity > m_hTarget6; // 0x4c4
+	CHandle< CBaseEntity > m_hTarget7; // 0x4c8
+	CHandle< CBaseEntity > m_hTarget8; // 0x4cc
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bIsPlayingBack; // 0x4d0
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bPaused; // 0x4d1
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bMultiplayer; // 0x4d2
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bAutogenerated; // 0x4d3
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flForceClientTime; // 0x4d4
+	float m_flCurrentTime; // 0x4d8
+	float m_flFrameTime; // 0x4dc
+	bool m_bCancelAtNextInterrupt; // 0x4e0
+	float m_fPitch; // 0x4e4
+	bool m_bAutomated; // 0x4e8
+	int32_t m_nAutomatedAction; // 0x4ec
+	float m_flAutomationDelay; // 0x4f0
+	float m_flAutomationTime; // 0x4f4
+	CHandle< CBaseEntity > m_hWaitingForThisResumeScene; // 0x4f8
+	bool m_bWaitingForResumeScene; // 0x4fc
+	bool m_bPausedViaInput; // 0x4fd
+	bool m_bPauseAtNextInterrupt; // 0x4fe
+	bool m_bWaitingForActor; // 0x4ff
+	bool m_bWaitingForInterrupt; // 0x500
+	bool m_bInterruptedActorsScenes; // 0x501
+	bool m_bBreakOnNonIdle; // 0x502
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< CHandle< CBaseFlex > > m_hActorList; // 0x508
+	CUtlVector< CHandle< CBaseEntity > > m_hRemoveActorList; // 0x520
+	int32_t m_nSceneFlushCounter; // 0x540
+	// MNetworkEnable
+	// MNetworkEnable
+	uint16_t m_nSceneStringIndex; // 0x544
+	CEntityIOOutput m_OnStart; // 0x548
+	CEntityIOOutput m_OnCompletion; // 0x570
+	CEntityIOOutput m_OnCanceled; // 0x598
+	CEntityIOOutput m_OnPaused; // 0x5c0
+	CEntityIOOutput m_OnResumed; // 0x5e8
+	CEntityIOOutput m_OnTrigger1; // 0x610
+	CEntityIOOutput m_OnTrigger2; // 0x638
+	CEntityIOOutput m_OnTrigger3; // 0x660
+	CEntityIOOutput m_OnTrigger4; // 0x688
+	CEntityIOOutput m_OnTrigger5; // 0x6b0
+	CEntityIOOutput m_OnTrigger6; // 0x6d8
+	CEntityIOOutput m_OnTrigger7; // 0x700
+	CEntityIOOutput m_OnTrigger8; // 0x728
+	CEntityIOOutput m_OnTrigger9; // 0x750
+	CEntityIOOutput m_OnTrigger10; // 0x778
+	CEntityIOOutput m_OnTrigger11; // 0x7a0
+	CEntityIOOutput m_OnTrigger12; // 0x7c8
+	CEntityIOOutput m_OnTrigger13; // 0x7f0
+	CEntityIOOutput m_OnTrigger14; // 0x818
+	CEntityIOOutput m_OnTrigger15; // 0x840
+	CEntityIOOutput m_OnTrigger16; // 0x868
+	CHandle< CSceneEntity > m_hInterruptScene; // 0x890
+	int32_t m_nInterruptCount; // 0x894
+	bool m_bSceneMissing; // 0x898
+	bool m_bInterrupted; // 0x899
+	bool m_bCompletedEarly; // 0x89a
+	bool m_bInterruptSceneFinished; // 0x89b
+	bool m_bRestoring; // 0x89c
+	bool m_bGenerated; // 0x89d
+	CUtlVector< CHandle< CSceneEntity > > m_hNotifySceneCompletion; // 0x8a0
+	CUtlVector< CHandle< CSceneListManager > > m_hListManagers; // 0x8b8
+	CUtlSymbolLarge m_iszSoundName; // 0x8d0
+	CHandle< CBaseFlex > m_hActor; // 0x8d8
+	CHandle< CBaseEntity > m_hActivator; // 0x8dc
+	CHandle< CBaseEntity > m_hCamera; // 0x8e0
+	int32_t m_BusyActor; // 0x8e4
+	SceneOnPlayerDeath_t m_iPlayerDeathBehavior; // 0x8e8
+public:
+	static int32_t &Get_s_nSceneFlushCounter() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CSceneEntity")->m_static_fiels[0]->m_instance); }
+};
+
+// Aligment: 8
+// Size: 1184
+class CSoundOpvarSetEntity : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszStackName; // 0x460
+	CUtlSymbolLarge m_iszOperatorName; // 0x468
+	CUtlSymbolLarge m_iszOpvarName; // 0x470
+	int32_t m_nOpvarType; // 0x478
+	int32_t m_nOpvarIndex; // 0x47c
+	float m_flOpvarValue; // 0x480
+	CUtlSymbolLarge m_OpvarValueString; // 0x488
+	bool m_bSetOnSpawn; // 0x490
+};
+
+// Aligment: 28
+// Size: 1376
+class CSoundOpvarSetPointEntity : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnEnter; // 0x458
+	CEntityIOOutput m_OnExit; // 0x480
+	float m_flDistanceMin; // 0x4a8
+	float m_flDistanceMax; // 0x4ac
+	float m_flValSetOnDisable; // 0x4b0
+	bool m_bSetValueOnDisable; // 0x4b4
+	bool m_bDisabled; // 0x4b5
+	bool m_bAutoDisable; // 0x4b6
+	CEntityHandle m_hSource; // 0x4d0
+	CUtlSymbolLarge m_iszSourceEntityName; // 0x4e0
+	float m_flDistanceMapMin; // 0x4e8
+	float m_flDistanceMapMax; // 0x4ec
+	float m_flOcclusionRadius; // 0x4f0
+	float m_flOcclusionMin; // 0x4f4
+	float m_flOcclusionMax; // 0x4f8
+	int32_t m_nSimulationMode; // 0x4fc
+	int32_t m_nVisibilitySamples; // 0x500
+	Vector m_vDynamicProxyPoint; // 0x504
+	float m_flDynamicMaximumOcclusion; // 0x510
+	CEntityHandle m_hDynamicEntity; // 0x514
+	CUtlSymbolLarge m_iszDynamicEntityName; // 0x518
+	float m_flPathingDistanceNormFactor; // 0x520
+	Vector m_vPathingSourcePos; // 0x524
+	Vector m_vPathingListenerPos; // 0x530
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_iszStackName; // 0x540
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_iszOperatorName; // 0x548
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_iszOpvarName; // 0x550
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_iOpvarIndex; // 0x558
+};
+
+// Aligment: 9
+// Size: 1480
+class CSoundOpvarSetAABBEntity : public CSoundOpvarSetPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vDistanceInnerMins; // 0x560
+	Vector m_vDistanceInnerMaxs; // 0x56c
+	Vector m_vDistanceOuterMins; // 0x578
+	Vector m_vDistanceOuterMaxs; // 0x584
+	int32_t m_nAABBDirection; // 0x590
+	Vector m_vInnerMins; // 0x594
+	Vector m_vInnerMaxs; // 0x5a0
+	Vector m_vOuterMins; // 0x5ac
+	Vector m_vOuterMaxs; // 0x5b8
+};
+
+// Aligment: 0
+// Size: 1480
+class CSoundOpvarSetOBBEntity : public CSoundOpvarSetAABBEntity, CSoundOpvarSetPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 6
+// Size: 1144
+class CAISound : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_iSoundType; // 0x458
+	int32_t m_iSoundContext; // 0x45c
+	int32_t m_iVolume; // 0x460
+	int32_t m_iSoundIndex; // 0x464
+	float m_flDuration; // 0x468
+	CUtlSymbolLarge m_iszProxyEntityName; // 0x470
+};
+
+// Aligment: 1
+// Size: 1120
+class CSoundStackSave : public CLogicalEntity, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszStackName; // 0x458
+};
+
+// Aligment: 12
+// Size: 1288
+class CSoundEventEntity : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bStartOnSpawn; // 0x458
+	bool m_bToLocalPlayer; // 0x459
+	bool m_bStopOnNew; // 0x45a
+	bool m_bSaveRestore; // 0x45b
+	bool m_bSavedIsPlaying; // 0x45c
+	float m_flSavedElapsedTime; // 0x460
+	CUtlSymbolLarge m_iszSoundName; // 0x468
+	CUtlSymbolLarge m_iszSourceEntityName; // 0x470
+	CUtlSymbolLarge m_iszAttachmentName; // 0x478
+	CEntityOutputTemplate< uint64 > m_onGUIDChanged; // 0x480
+	CEntityIOOutput m_onSoundFinished; // 0x4a8
+	CEntityHandle m_hSource; // 0x500
+};
+
+// Aligment: 0
+// Size: 1288
+class CSoundEventEntityAlias_snd_event_point : public CSoundEventEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 2
+// Size: 1312
+class CSoundEventAABBEntity : public CSoundEventEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vMins; // 0x508
+	Vector m_vMaxs; // 0x514
+};
+
+// Aligment: 2
+// Size: 1136
+class CSoundEventParameter : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszParamName; // 0x460
+	float m_flFloatValue; // 0x468
+};
+
+// Aligment: 0
+// Size: 1256
+class CEnvSoundscapeProxyAlias_snd_soundscape_proxy : public CEnvSoundscapeProxy, CEnvSoundscape, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1248
+class CEnvSoundscapeAlias_snd_soundscape : public CEnvSoundscape, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1248
+class CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable : public CEnvSoundscapeTriggerable, CEnvSoundscape, CServerOnlyEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1112
+class CNullEntity : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 1
+// Size: 1120
+class CBaseDMStart : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_Master; // 0x458
+};
+
+// Aligment: 0
+// Size: 1112
+class CInfoLandmark : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 2
+// Size: 1664
+class CTriggerVolume : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iFilterName; // 0x670
+	CHandle< CBaseFilter > m_hFilter; // 0x678
+};
+
+// Aligment: 0
+// Size: 1112
+class CInfoTeleportDestination : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 1
+// Size: 1120
+class CAI_ChangeTarget : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszNewTarget; // 0x458
+};
+
+// Aligment: 4
+// Size: 1144
+class CAI_ChangeHintGroup : public CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_iSearchType; // 0x458
+	CUtlSymbolLarge m_strSearchName; // 0x460
+	CUtlSymbolLarge m_strNewHintGroup; // 0x468
+	float m_flRadius; // 0x470
+};
+
+// Aligment: 0
+// Size: 1112
+class CLogicProximity : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 1
+// Size: 1664
+class CFuncNavObstruction : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bDisabled; // 0x678
+};
+
+// Aligment: 10
+// Size: 1264
+class CAmbientGeneric : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_radius; // 0x458
+	float m_flMaxRadius; // 0x45c
+	soundlevel_t m_iSoundLevel; // 0x460
+	dynpitchvol_t m_dpv; // 0x464
+	bool m_fActive; // 0x4c8
+	bool m_fLooping; // 0x4c9
+	CUtlSymbolLarge m_iszSound; // 0x4d0
+	CUtlSymbolLarge m_sSourceEntName; // 0x4d8
+	CHandle< CBaseEntity > m_hSoundSource; // 0x4e0
+	CEntityIndex m_nSoundSourceEntIndex; // 0x4e4
+};
+
+// Aligment: 16
+// Size: 1776
+class CBaseToggle : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	TOGGLE_STATE m_toggle_state; // 0x670
+	float m_flMoveDistance; // 0x674
+	float m_flWait; // 0x678
+	float m_flLip; // 0x67c
+	bool m_bAlwaysFireBlockedOutputs; // 0x680
+	Vector m_vecPosition1; // 0x684
+	Vector m_vecPosition2; // 0x690
+	QAngle m_vecMoveAng; // 0x69c
+	QAngle m_vecAngle1; // 0x6a8
+	QAngle m_vecAngle2; // 0x6b4
+	float m_flHeight; // 0x6c0
+	CHandle< CBaseEntity > m_hActivator; // 0x6c4
+	Vector m_vecFinalDest; // 0x6c8
+	QAngle m_vecFinalAngle; // 0x6d4
+	int32_t m_movementType; // 0x6e0
+	CUtlSymbolLarge m_sMaster; // 0x6e8
+};
+
+// Aligment: 4
+// Size: 1136
+class CRagdollMagnet : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bDisabled; // 0x458
+	float m_radius; // 0x45c
+	float m_force; // 0x460
+	Vector m_axis; // 0x464
+};
+
+// Aligment: 0
+// Size: 1648
+class CEntityBlocker : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 10
+// Size: 1696
+class CEntityDissolve : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flStartTime; // 0x670
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeInStart; // 0x674
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeInLength; // 0x678
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeOutModelStart; // 0x67c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeOutModelLength; // 0x680
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeOutStart; // 0x684
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeOutLength; // 0x688
+	// MNetworkEnable
+	// MNetworkEnable
+	EntityDisolveType_t m_nDissolveType; // 0x68c
+	// MNetworkEnable
+	// MNetworkEnable
+	Vector m_vDissolverOrigin; // 0x690
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_nMagnitude; // 0x69c
+};
+
+// Aligment: 5
+// Size: 1208
+class CEnvPlayerSurfaceTrigger : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_iTargetGameMaterial; // 0x458
+	int32_t m_iCurrentGameMaterial; // 0x45c
+	bool m_bDisabled; // 0x460
+	CEntityIOOutput m_OnSurfaceChangedToTarget; // 0x468
+	CEntityIOOutput m_OnSurfaceChangedFromTarget; // 0x490
+};
+
+// Aligment: 30
+// Size: 2008
+class CEnvProjectedTexture : public CModelPointEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hTargetEntity; // 0x670
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bState; // 0x674
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bAlwaysUpdate; // 0x675
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flLightFOV; // 0x678
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bEnableShadows; // 0x67c
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bSimpleProjection; // 0x67d
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bLightOnlyTarget; // 0x67e
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bLightWorld; // 0x67f
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bCameraSpace; // 0x680
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flBrightnessScale; // 0x684
+	// MNetworkEnable
+	// MNetworkEnable
+	Color m_LightColor; // 0x688
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flIntensity; // 0x68c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flLinearAttenuation; // 0x690
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flQuadraticAttenuation; // 0x694
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bVolumetric; // 0x698
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flNoiseStrength; // 0x69c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFlashlightTime; // 0x6a0
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_nNumPlanes; // 0x6a4
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flPlaneOffset; // 0x6a8
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flVolumetricIntensity; // 0x6ac
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flColorTransitionTime; // 0x6b0
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flAmbient; // 0x6b4
+	// MNetworkEnable
+	// MNetworkEnable
+	char[260] m_SpotlightTextureName; // 0x6b8
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nSpotlightTextureFrame; // 0x7bc
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_nShadowQuality; // 0x7c0
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "16"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "500"
+	// MNetworkEncodeFlags
+	float m_flNearZ; // 0x7c4
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "18"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1500"
+	// MNetworkEncodeFlags
+	float m_flFarZ; // 0x7c8
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flProjectionSize; // 0x7cc
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flRotation; // 0x7d0
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bFlipHorizontal; // 0x7d4
+};
+
+// Aligment: 6
+// Size: 1184
+class CMessage : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszMessage; // 0x458
+	float m_MessageVolume; // 0x460
+	int32_t m_MessageAttenuation; // 0x464
+	float m_Radius; // 0x468
+	CUtlSymbolLarge m_sNoise; // 0x470
+	CEntityIOOutput m_OnShowMessage; // 0x478
+};
+
+// Aligment: 17
+// Size: 1560
+class CEnvMicrophone : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bDisabled; // 0x458
+	CHandle< CBaseEntity > m_hMeasureTarget; // 0x45c
+	int32_t m_nSoundMask; // 0x460
+	float m_flSensitivity; // 0x464
+	float m_flSmoothFactor; // 0x468
+	float m_flMaxRange; // 0x46c
+	CUtlSymbolLarge m_iszSpeakerName; // 0x470
+	CHandle< CBaseEntity > m_hSpeaker; // 0x478
+	bool m_bAvoidFeedback; // 0x47c
+	int32_t m_iSpeakerDSPPreset; // 0x480
+	CUtlSymbolLarge m_iszListenFilter; // 0x488
+	CHandle< CBaseFilter > m_hListenFilter; // 0x490
+	CEntityOutputTemplate< float32 > m_SoundLevel; // 0x498
+	CEntityIOOutput m_OnRoutedSound; // 0x4c0
+	CEntityIOOutput m_OnHeardSound; // 0x4e8
+	char[256] m_szLastSound; // 0x510
+	int32_t m_iLastRoutedFrame; // 0x610
+};
+
+// Aligment: 21
+// Size: 1848
+class CBreakable : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Materials m_Material; // 0x680
+	CHandle< CBaseEntity > m_hBreaker; // 0x684
+	Explosions m_Explosion; // 0x688
+	QAngle m_GibDir; // 0x68c
+	CUtlSymbolLarge m_iszSpawnObject; // 0x698
+	float m_flPressureDelay; // 0x6a0
+	int32_t m_iMinHealthDmg; // 0x6a4
+	CUtlSymbolLarge m_iszPropData; // 0x6a8
+	float m_impactEnergyScale; // 0x6b0
+	CEntityIOOutput m_OnBreak; // 0x6b8
+	CEntityOutputTemplate< float32 > m_OnHealthChanged; // 0x6e0
+	float m_flDmgModBullet; // 0x708
+	float m_flDmgModClub; // 0x70c
+	float m_flDmgModExplosive; // 0x710
+	float m_flDmgModFire; // 0x714
+	CUtlSymbolLarge m_iszPhysicsDamageTableName; // 0x718
+	CUtlSymbolLarge m_iszBasePropData; // 0x720
+	int32_t m_iInteractions; // 0x728
+	PerformanceMode_t m_PerformanceMode; // 0x72c
+	CHandle< CBasePlayer > m_hPhysicsAttacker; // 0x730
+	float m_flLastPhysicsInfluenceTime; // 0x734
+};
+
+// Aligment: 13
+// Size: 1752
+class CFuncRotating : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	QAngle m_vecMoveAng; // 0x670
+	float m_flFanFriction; // 0x67c
+	float m_flAttenuation; // 0x680
+	float m_flVolume; // 0x684
+	float m_flTargetSpeed; // 0x688
+	float m_flMaxSpeed; // 0x68c
+	float m_flBlockDamage; // 0x690
+	CUtlSymbolLarge m_NoiseRunning; // 0x698
+	bool m_bReversed; // 0x6a0
+	QAngle m_angStart; // 0x6ac
+	bool m_bStopAtStartPos; // 0x6b8
+	Vector m_vecClientOrigin; // 0x6bc
+	QAngle m_vecClientAngles; // 0x6c8
+};
+
+// Aligment: 1
+// Size: 1656
+class CItemGenericTriggerHelper : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CHandle< CItemGeneric > m_hParentItem; // 0x670
+};
+
+// Aligment: 1
+// Size: 1656
+class CMarkupVolume : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bEnabled; // 0x670
+};
+
+// Aligment: 5
+// Size: 1712
+class CMarkupVolumeTagged : public CMarkupVolume, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bIsGroup; // 0x6a8
+	bool m_bGroupByPrefab; // 0x6a9
+	bool m_bGroupByVolume; // 0x6aa
+	bool m_bGroupOtherGroups; // 0x6ab
+	bool m_bIsInGroup; // 0x6ac
+};
+
+// Aligment: 3
+// Size: 1736
+class CMarkupVolumeWithRef : public CMarkupVolumeTagged, CMarkupVolume, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bUseRef; // 0x6b0
+	Vector m_vRefPos; // 0x6b4
+	float m_flRefDot; // 0x6c0
+};
+
+// Aligment: 6
+// Size: 1680
+class CFuncBrush : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	BrushSolidities_e m_iSolidity; // 0x670
+	int32_t m_iDisabled; // 0x674
+	bool m_bSolidBsp; // 0x678
+	CUtlSymbolLarge m_iszExcludedClass; // 0x680
+	bool m_bInvertExclusion; // 0x688
+	bool m_bScriptedMovement; // 0x689
+};
+
+// Aligment: 14
+// Size: 2120
+class CPhysBox : public CBreakable, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_damageType; // 0x738
+	float m_massScale; // 0x73c
+	int32_t m_damageToEnableMotion; // 0x740
+	float m_flForceToEnableMotion; // 0x744
+	QAngle m_angPreferredCarryAngles; // 0x748
+	bool m_bNotSolidToWorld; // 0x754
+	int32_t m_iExploitableByPlayer; // 0x758
+	float m_flTouchOutputPerEntityDelay; // 0x75c
+	CEntityIOOutput m_OnDamaged; // 0x760
+	CEntityIOOutput m_OnAwakened; // 0x788
+	CEntityIOOutput m_OnMotionEnabled; // 0x7b0
+	CEntityIOOutput m_OnPlayerUse; // 0x7d8
+	CEntityIOOutput m_OnStartTouch; // 0x800
+	CHandle< CBasePlayer > m_hCarryingPlayer; // 0x828
+};
+
+// Aligment: 9
+// Size: 1192
+class CPhysExplosion : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bExplodeOnSpawn; // 0x458
+	float m_flMagnitude; // 0x45c
+	float m_flDamage; // 0x460
+	float m_radius; // 0x464
+	CUtlSymbolLarge m_targetEntityName; // 0x468
+	float m_flInnerRadius; // 0x470
+	float m_flPushScale; // 0x474
+	bool m_bConvertToDebrisWhenPossible; // 0x478
+	CEntityIOOutput m_OnPushedPlayer; // 0x480
+};
+
+// Aligment: 3
+// Size: 1128
+class CPhysImpact : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_damage; // 0x458
+	float m_distance; // 0x45c
+	CUtlSymbolLarge m_directionEntityName; // 0x460
+};
+
+// Aligment: 1
+// Size: 1120
+class CInfoPlayerStart : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bDisabled; // 0x458
+};
+
+// Aligment: 21
+// Size: 1736
+class CRopeKeyframe : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	uint16_t m_RopeFlags; // 0x678
+	CUtlSymbolLarge m_iNextLinkName; // 0x680
+	// MNetworkEnable
+	// MNetworkEnable
+	int16_t m_Slack; // 0x688
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_Width; // 0x68c
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "10"
+	// MNetworkMinValue "0.1"
+	// MNetworkMaxValue "10"
+	float m_TextureScale; // 0x690
+	// MNetworkEnable
+	// MNetworkEnable
+	uint8_t m_nSegments; // 0x694
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bConstrainBetweenEndpoints; // 0x695
+	CUtlSymbolLarge m_strRopeMaterialModel; // 0x698
+	// MNetworkEnable
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_iRopeMaterialModelIndex; // 0x6a0
+	// MNetworkEnable
+	// MNetworkEnable
+	uint8_t m_Subdiv; // 0x6a8
+	// MNetworkEnable
+	// MNetworkEnable
+	uint8_t m_nChangeCount; // 0x6a9
+	// MNetworkEnable
+	// MNetworkEnable
+	int16_t m_RopeLength; // 0x6aa
+	// MNetworkEnable
+	// MNetworkEnable
+	uint8_t m_fLockedPoints; // 0x6ac
+	bool m_bCreatedFromMapFile; // 0x6ad
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flScrollSpeed; // 0x6b0
+	bool m_bStartPointValid; // 0x6b4
+	bool m_bEndPointValid; // 0x6b5
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hStartPoint; // 0x6b8
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hEndPoint; // 0x6bc
+	// MNetworkEnable
+	// MNetworkEnable
+	AttachmentHandle_t m_iStartAttachment; // 0x6c0
+	// MNetworkEnable
+	// MNetworkEnable
+	AttachmentHandle_t m_iEndAttachment; // 0x6c1
+};
+
+// Aligment: 4
+// Size: 7784
+class CSoundEnt : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_iFreeSound; // 0x458
+	int32_t m_iActiveSound; // 0x45c
+	int32_t m_cLastActiveSounds; // 0x460
+	CSound[128] m_SoundPool; // 0x464
+};
+
+// Aligment: 4
+// Size: 1680
+class CSpotlightEnd : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flLightScale; // 0x670
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_Radius; // 0x674
+	Vector m_vSpotlightDir; // 0x678
+	Vector m_vSpotlightOrg; // 0x684
+};
+
+// Aligment: 11
+// Size: 2072
+class CBaseTrigger : public CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bDisabled; // 0x6f0
+	CUtlSymbolLarge m_iFilterName; // 0x6f8
+	CHandle< CBaseFilter > m_hFilter; // 0x700
+	CEntityIOOutput m_OnStartTouch; // 0x708
+	CEntityIOOutput m_OnStartTouchAll; // 0x730
+	CEntityIOOutput m_OnEndTouch; // 0x758
+	CEntityIOOutput m_OnEndTouchAll; // 0x780
+	CEntityIOOutput m_OnTouching; // 0x7a8
+	CEntityIOOutput m_OnNotTouching; // 0x7d0
+	CUtlVector< CHandle< CBaseEntity > > m_hTouchingEntities; // 0x7f8
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bClientSidePredicted; // 0x810
+};
+
+// Aligment: 1
+// Size: 2112
+class CTriggerMultiple : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnTrigger; // 0x818
+};
+
+// Aligment: 15
+// Size: 2944
+class CTriggerSndSosOpvar : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlVector< CHandle< CBaseEntity > > m_hTouchingPlayers; // 0x818
+	Vector m_flPosition; // 0x830
+	float m_flCenterSize; // 0x83c
+	float m_flMinVal; // 0x840
+	float m_flMaxVal; // 0x844
+	float m_flWait; // 0x848
+	CUtlSymbolLarge m_opvarName; // 0x850
+	CUtlSymbolLarge m_stackName; // 0x858
+	CUtlSymbolLarge m_operatorName; // 0x860
+	bool m_bVolIs2D; // 0x868
+	char[256] m_opvarNameChar; // 0x869
+	char[256] m_stackNameChar; // 0x969
+	char[256] m_operatorNameChar; // 0xa69
+	Vector m_VecNormPos; // 0xb6c
+	float m_flNormCenterSize; // 0xb78
+};
+
+// Aligment: 14
+// Size: 2232
+class CTriggerHurt : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flOriginalDamage; // 0x818
+	float m_flDamage; // 0x81c
+	float m_flDamageCap; // 0x820
+	float m_flLastDmgTime; // 0x824
+	float m_flForgivenessDelay; // 0x828
+	int32_t m_bitsDamageInflict; // 0x82c
+	int32_t m_damageModel; // 0x830
+	bool m_bNoDmgForce; // 0x834
+	Vector m_vDamageForce; // 0x838
+	bool m_thinkAlways; // 0x844
+	float m_hurtThinkPeriod; // 0x848
+	CEntityIOOutput m_OnHurt; // 0x850
+	CEntityIOOutput m_OnHurtPlayer; // 0x878
+	CUtlVector< CHandle< CBaseEntity > > m_hurtEntities; // 0x8a0
+};
+
+// Aligment: 0
+// Size: 2232
+class CTriggerHurtGhost : public CTriggerHurt, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 2080
+class CTriggerCallback : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 12
+// Size: 2232
+class CTriggerLerpObject : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszLerpTarget; // 0x818
+	CHandle< CBaseEntity > m_hLerpTarget; // 0x820
+	CUtlSymbolLarge m_iszLerpTargetAttachment; // 0x828
+	AttachmentHandle_t m_hLerpTargetAttachment; // 0x830
+	float m_flLerpDuration; // 0x834
+	bool m_bLerpRestoreMoveType; // 0x838
+	bool m_bSingleLerpObject; // 0x839
+	CUtlVector< lerpdata_t > m_vecLerpingObjects; // 0x840
+	CUtlSymbolLarge m_iszLerpEffect; // 0x858
+	CUtlSymbolLarge m_iszLerpSound; // 0x860
+	CEntityIOOutput m_OnLerpStarted; // 0x868
+	CEntityIOOutput m_OnLerpFinished; // 0x890
+};
+
+// Aligment: 7
+// Size: 2136
+class CChangeLevel : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlString m_sMapName; // 0x818
+	CUtlString m_sLandmarkName; // 0x820
+	CEntityIOOutput m_OnChangeLevel; // 0x828
+	bool m_bTouched; // 0x850
+	bool m_bNoTouch; // 0x851
+	bool m_bNewChapter; // 0x852
+	bool m_bOnChangeLevelFired; // 0x853
+};
+
+// Aligment: 3
+// Size: 2088
+class CTriggerTeleport : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iLandmark; // 0x818
+	bool m_bUseLandmarkAngles; // 0x820
+	bool m_bMirrorPlayer; // 0x821
+};
+
+// Aligment: 2
+// Size: 1664
+class CFuncNavBlocker : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bDisabled; // 0x670
+	int32_t m_nBlockedTeamNumber; // 0x674
+};
+
+// Aligment: 3
+// Size: 1136
+class CNavLinkEntity : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_typeName; // 0x458
+	Vector m_vEndpointLocal; // 0x460
+	int32_t m_nNavLinkId; // 0x46c
+};
+
+// Aligment: 24
+// Size: 1808
+class CBeam : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "10"
+	// MNetworkMinValue "-25"
+	// MNetworkMaxValue "25"
+	// MNetworkEncodeFlags
+	float m_flFrameRate; // 0x670
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flHDRColorScale; // 0x674
+	float m_flFireTime; // 0x678
+	float m_flDamage; // 0x67c
+	// MNetworkEnable
+	// MNetworkEnable
+	uint8_t m_nNumBeamEnts; // 0x680
+	// MNetworkEnable
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hBaseMaterial; // 0x688
+	// MNetworkEnable
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_nHaloIndex; // 0x690
+	// MNetworkEnable
+	// MNetworkEnable
+	BeamType_t m_nBeamType; // 0x698
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_nBeamFlags; // 0x69c
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity >[10] m_hAttachEntity; // 0x6a0
+	// MNetworkEnable
+	// MNetworkEnable
+	AttachmentHandle_t[10] m_nAttachIndex; // 0x6c8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "10"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "102.3"
+	// MNetworkEncodeFlags
+	float m_fWidth; // 0x6d4
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "10"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "102.3"
+	// MNetworkEncodeFlags
+	float m_fEndWidth; // 0x6d8
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_fFadeLength; // 0x6dc
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_fHaloScale; // 0x6e0
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "8"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "64"
+	// MNetworkEncodeFlags
+	float m_fAmplitude; // 0x6e4
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "8"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "256"
+	// MNetworkEncodeFlags
+	float m_fStartFrame; // 0x6e8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "8"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "100"
+	float m_fSpeed; // 0x6ec
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "20"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "256"
+	// MNetworkEncodeFlags
+	// MNetworkPriority "64"
+	float m_flFrame; // 0x6f0
+	// MNetworkEnable
+	// MNetworkEnable
+	BeamClipStyle_t m_nClipStyle; // 0x6f4
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bTurnedOff; // 0x6f8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkEncoder
+	Vector m_vecEndPos; // 0x6fc
+	CHandle< CBaseEntity > m_hEndEntity; // 0x708
+	int32_t m_nDissolveType; // 0x70c
+};
+
+// Aligment: 23
+// Size: 1760
+class CSprite : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hSpriteMaterial; // 0x670
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hAttachedToEntity; // 0x678
+	// MNetworkEnable
+	// MNetworkEnable
+	AttachmentHandle_t m_nAttachment; // 0x67c
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "8"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "60"
+	// MNetworkEncodeFlags
+	float m_flSpriteFramerate; // 0x680
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "20"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "256"
+	// MNetworkEncodeFlags
+	float m_flFrame; // 0x684
+	float m_flDieTime; // 0x688
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_nBrightness; // 0x698
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flBrightnessDuration; // 0x69c
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnSpriteScaleChanged"
+	float m_flSpriteScale; // 0x6a0
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flScaleDuration; // 0x6a4
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bWorldSpaceScale; // 0x6a8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "6"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "64"
+	// MNetworkEncodeFlags
+	float m_flGlowProxySize; // 0x6ac
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flHDRColorScale; // 0x6b0
+	float m_flLastTime; // 0x6b4
+	float m_flMaxFrame; // 0x6b8
+	float m_flStartScale; // 0x6bc
+	float m_flDestScale; // 0x6c0
+	float m_flScaleTimeStart; // 0x6c4
+	int32_t m_nStartBrightness; // 0x6c8
+	int32_t m_nDestBrightness; // 0x6cc
+	float m_flBrightnessTimeStart; // 0x6d0
+	int32_t m_nSpriteWidth; // 0x6d4
+	int32_t m_nSpriteHeight; // 0x6d8
+};
+
+// Aligment: 0
+// Size: 1760
+class CSpriteOriented : public CSprite, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 14
+// Size: 2080
+class CBaseClientUIEntity : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bEnabled; // 0x670
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_DialogXMLName; // 0x678
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_PanelClassName; // 0x680
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_PanelID; // 0x688
+	CEntityIOOutput m_CustomOutput0; // 0x690
+	CEntityIOOutput m_CustomOutput1; // 0x6b8
+	CEntityIOOutput m_CustomOutput2; // 0x6e0
+	CEntityIOOutput m_CustomOutput3; // 0x708
+	CEntityIOOutput m_CustomOutput4; // 0x730
+	CEntityIOOutput m_CustomOutput5; // 0x758
+	CEntityIOOutput m_CustomOutput6; // 0x780
+	CEntityIOOutput m_CustomOutput7; // 0x7a8
+	CEntityIOOutput m_CustomOutput8; // 0x7d0
+	CEntityIOOutput m_CustomOutput9; // 0x7f8
+};
+
+// Aligment: 2
+// Size: 2088
+class CPointClientUIDialog : public CBaseClientUIEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnDialogActivatorChanged"
+	CHandle< CBaseEntity > m_hActivator; // 0x820
+	bool m_bStartEnabled; // 0x824
+};
+
+// Aligment: 23
+// Size: 2168
+class CPointClientUIWorldPanel : public CBaseClientUIEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bIgnoreInput; // 0x820
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bLit; // 0x821
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bFollowPlayerAcrossTeleport; // 0x822
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flWidth; // 0x824
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flHeight; // 0x828
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDPI; // 0x82c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flInteractDistance; // 0x830
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDepthOffset; // 0x834
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_unOwnerContext; // 0x838
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_unHorizontalAlign; // 0x83c
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_unVerticalAlign; // 0x840
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_unOrientation; // 0x844
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bAllowInteractionFromAllSceneWorlds; // 0x848
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< CUtlSymbolLarge > m_vecCSSClasses; // 0x850
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bOpaque; // 0x868
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bNoDepth; // 0x869
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bRenderBackface; // 0x86a
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bUseOffScreenIndicator; // 0x86b
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bExcludeFromSaveGames; // 0x86c
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bGrabbable; // 0x86d
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bOnlyRenderToTexture; // 0x86e
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bDisableMipGen; // 0x86f
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nExplicitImageLayout; // 0x870
+};
+
+// Aligment: 1
+// Size: 2680
+class CPointClientUIWorldTextPanel : public CPointClientUIWorldPanel, CBaseClientUIEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	char[512] m_messageText; // 0x878
+};
+
+// Aligment: 0
+// Size: 2176
+class CPointHintUi : public CPointClientUIWorldPanel, CBaseClientUIEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 10
+// Size: 1232
+class CInfoOffscreenPanoramaTexture : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bDisabled; // 0x458
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nResolutionX; // 0x45c
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nResolutionY; // 0x460
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_szLayoutFileName; // 0x468
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_RenderAttrName; // 0x470
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< CHandle< CBaseModelEntity > > m_TargetEntities; // 0x478
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nTargetChangeCount; // 0x490
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< CUtlSymbolLarge > m_vecCSSClasses; // 0x498
+	CUtlSymbolLarge m_szTargetsName; // 0x4b0
+	CUtlVector< CHandle< CBaseModelEntity > > m_AdditionalTargetEntities; // 0x4b8
+};
+
+// Aligment: 5
+// Size: 1688
+class CFogVolume : public CServerOnlyModelEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_fogName; // 0x670
+	CUtlSymbolLarge m_postProcessName; // 0x678
+	CUtlSymbolLarge m_colorCorrectionName; // 0x680
+	bool m_bDisabled; // 0x690
+	bool m_bInFogVolumesList; // 0x691
+};
+
+// Aligment: 10
+// Size: 1952
+class CEnvDeferredLight : public CModelPointEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CHandle< CBaseEntity > m_hTargetEntity; // 0x670
+	// MNetworkEnable
+	// MNetworkEnable
+	Color m_LightColor; // 0x674
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flIntensity; // 0x678
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flLightSize; // 0x67c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flSpotFoV; // 0x680
+	// MNetworkEnable
+	// MNetworkEnable
+	QAngle m_vLightDirection; // 0x684
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flStartFalloff; // 0x690
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flDistanceFalloff; // 0x694
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_nFlags; // 0x698
+	// MNetworkEnable
+	// MNetworkEnable
+	char[260] m_ProjectedTextureName; // 0x69c
+};
+
+// Aligment: 5
+// Size: 1136
+class CInfoDynamicShadowHint : public CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bDisabled; // 0x458
+	float m_flRange; // 0x45c
+	int32_t m_nImportance; // 0x460
+	int32_t m_nLightChoice; // 0x464
+	CHandle< CBaseEntity > m_hLight; // 0x468
+public:
+	static CUtlVector< CInfoDynamicShadowHint* > &Get_m_AllHints() { return *reinterpret_cast<CUtlVector< CInfoDynamicShadowHint* >*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CInfoDynamicShadowHint")->m_static_fiels[0]->m_instance); }
+};
+
+// Aligment: 2
+// Size: 1160
+class CInfoDynamicShadowHintBox : public CInfoDynamicShadowHint, CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vBoxMins; // 0x470
+	Vector m_vBoxMaxs; // 0x47c
+};
+
+// Aligment: 9
+// Size: 1720
+class CEnvSky : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "SkyStateChanged"
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hSkyMaterial; // 0x670
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "SkyStateChanged"
+	bool m_bStartDisabled; // 0x678
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "SkyStateChanged"
+	Color m_vTintColor; // 0x679
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "SkyStateChanged"
+	int32_t m_nFogType; // 0x680
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "SkyStateChanged"
+	float m_flFogMinStart; // 0x684
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "SkyStateChanged"
+	float m_flFogMinEnd; // 0x688
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "SkyStateChanged"
+	float m_flFogMaxStart; // 0x68c
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "SkyStateChanged"
+	float m_flFogMaxEnd; // 0x690
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "SkyStateChanged"
+	bool m_bEnabled; // 0x694
+};
+
+// Aligment: 0
+// Size: 1144
+class CTonemapController2Alias_env_tonemap_controller2 : public CTonemapController2, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 2
+// Size: 2088
+class CTonemapTrigger : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_tonemapControllerName; // 0x818
+	CEntityHandle m_hTonemapController; // 0x820
+};
+
+// Aligment: 1
+// Size: 2176
+class CFogTrigger : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	fogparams_t m_fog; // 0x818
+};
+
+// Aligment: 1
+// Size: 1656
+class CLightEntity : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkUserGroup "CLightComponent"
+	// MNetworkAlias "CLightComponent"
+	// MNetworkTypeAlias "CLightComponent"
+	CLightComponent* m_CLightComponent; // 0x670
+};
+
+// Aligment: 0
+// Size: 1656
+class CLightSpotEntity : public CLightEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1656
+class CLightOrthoEntity : public CLightEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1656
+class CLightDirectionalEntity : public CLightEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1656
+class CLightEnvironmentEntity : public CLightDirectionalEntity, CLightEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 11
+// Size: 2136
+class CPostProcessingVolume : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCPostProcessingResource > m_hPostSettings; // 0x828
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFadeDuration; // 0x830
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flMinLogExposure; // 0x834
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flMaxLogExposure; // 0x838
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flMinExposure; // 0x83c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flMaxExposure; // 0x840
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flExposureCompensation; // 0x844
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flExposureFadeSpeedUp; // 0x848
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flExposureFadeSpeedDown; // 0x84c
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bMaster; // 0x850
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bExposureControl; // 0x851
+};
+
+// Aligment: 5
+// Size: 2792
+class CEnvParticleGlow : public CParticleSystem, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flAlphaScale; // 0xad0
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flRadiusScale; // 0xad4
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flSelfIllumScale; // 0xad8
+	// MNetworkEnable
+	// MNetworkEnable
+	Color m_ColorTint; // 0xadc
+	// MNetworkEnable
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hTextureOverride; // 0xae0
+};
+
+// Aligment: 0
+// Size: 1648
+class CWorld : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 10
+// Size: 2032
+class CBaseAnimating : public CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkUserGroup "CHitboxComponent"
+	// MNetworkAlias "CHitboxComponent"
+	// MNetworkTypeAlias "CHitboxComponent"
+	CHitboxComponent m_CHitboxComponent; // 0x670
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnRagdollPoseChanged"
+	PhysicsRagdollPose_t* m_pRagdollPose; // 0x690
+	// MNetworkEnable
+	// MNetworkEnable
+	Vector m_vecForce; // 0x698
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nForceBone; // 0x6a4
+	CUtlVector< handposepair_t > m_HandPoses; // 0x6a8
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bShouldAnimateDuringGameplayPause; // 0x6c0
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bAnimGraphUpdateEnabled; // 0x6c1
+	float m_flDissolveStartTime; // 0x6c4
+	CEntityIOOutput m_OnIgnite; // 0x6c8
+	// MNetworkEnable
+	// MNetworkEnable
+	CBaseAnimatingEasings_t m_Easings; // 0x7b8
+};
+
+// Aligment: 0
+// Size: 2032
+class CBaseAnimatingOverlay : public CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 4
+// Size: 2096
+class CBaseProp : public CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bModelOverrodeBlockLOS; // 0x7f0
+	int32_t m_iShapeType; // 0x7f4
+	bool m_bConformToCollisionBounds; // 0x7f8
+	matrix3x4_t m_mPreferredCatchTransform; // 0x7fc
+};
+
+// Aligment: 40
+// Size: 2600
+class CBreakableProp : public CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnBreak; // 0x840
+	CEntityOutputTemplate< float32 > m_OnHealthChanged; // 0x868
+	CEntityIOOutput m_OnTakeDamage; // 0x890
+	float m_impactEnergyScale; // 0x8b8
+	int32_t m_iMinHealthDmg; // 0x8bc
+	QAngle m_preferredCarryAngles; // 0x8c0
+	float m_flPressureDelay; // 0x8cc
+	CHandle< CBaseEntity > m_hBreaker; // 0x8d0
+	PerformanceMode_t m_PerformanceMode; // 0x8d4
+	float m_flDmgModBullet; // 0x8d8
+	float m_flDmgModClub; // 0x8dc
+	float m_flDmgModExplosive; // 0x8e0
+	float m_flDmgModFire; // 0x8e4
+	CUtlSymbolLarge m_iszPhysicsDamageTableName; // 0x8e8
+	CUtlSymbolLarge m_iszBasePropData; // 0x8f0
+	int32_t m_iInteractions; // 0x8f8
+	float m_flPreventDamageBeforeTime; // 0x8fc
+	bool m_bHasBreakPiecesOrCommands; // 0x900
+	float m_explodeDamage; // 0x904
+	float m_explodeRadius; // 0x908
+	float m_explosionDelay; // 0x910
+	CUtlSymbolLarge m_explosionBuildupSound; // 0x918
+	CUtlSymbolLarge m_explosionCustomEffect; // 0x920
+	CUtlSymbolLarge m_explosionCustomSound; // 0x928
+	CHandle< CBasePlayer > m_hPhysicsAttacker; // 0x930
+	float m_flLastPhysicsInfluenceTime; // 0x934
+	bool m_bOriginalBlockLOS; // 0x938
+	char m_nPhysgunState; // 0x939
+	CEntityIOOutput m_OnPhysCannonDetach; // 0x940
+	CEntityIOOutput m_OnPhysCannonAnimatePreStarted; // 0x968
+	CEntityIOOutput m_OnPhysCannonAnimatePullStarted; // 0x990
+	CEntityIOOutput m_OnPhysCannonAnimatePostStarted; // 0x9b8
+	CEntityIOOutput m_OnPhysCannonPullAnimFinished; // 0x9e0
+	float m_flDefaultFadeScale; // 0xa08
+	CHandle< CBaseEntity > m_hLastAttacker; // 0xa0c
+	CHandle< CBaseEntity > m_hFlareEnt; // 0xa10
+	bool m_bUsePuntSound; // 0xa14
+	CUtlSymbolLarge m_iszPuntSound; // 0xa18
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_noGhostCollision; // 0xa20
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flClothScale; // 0xa24
+};
+
+// Aligment: 32
+// Size: 2888
+class CDynamicProp : public CBreakableProp, CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_pOutputAnimBegun; // 0xa28
+	CEntityIOOutput m_pOutputAnimOver; // 0xa50
+	CEntityIOOutput m_pOutputAnimLoopCycleOver; // 0xa78
+	CEntityIOOutput m_OnAnimReachedStart; // 0xaa0
+	CEntityIOOutput m_OnAnimReachedEnd; // 0xac8
+	CUtlSymbolLarge m_iszDefaultAnim; // 0xaf0
+	CUtlSymbolLarge m_iszInitialAnim; // 0xaf8
+	HSequence m_hGoalSequence; // 0xb00
+	int32_t m_iTransitionDirection; // 0xb04
+	bool m_bAnimateOnServer; // 0xb08
+	bool m_bRandomizeCycle; // 0xb09
+	bool m_bHoldAnimation; // 0xb0a
+	bool m_bIsHoldingAnimation; // 0xb0b
+	bool m_bRandomAnimator; // 0xb0c
+	float m_flNextRandAnim; // 0xb10
+	float m_flMinRandAnimDuration; // 0xb14
+	float m_flMaxRandAnimDuration; // 0xb18
+	HSequence m_hPendingSequence; // 0xb1c
+	bool m_bStartDisabled; // 0xb20
+	bool m_bUpdateAttachedChildren; // 0xb21
+	bool m_bScriptedMovement; // 0xb22
+	bool m_bFiredStartEndOutput; // 0xb23
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bUseHitboxesForRenderBox; // 0xb24
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bUseAnimGraph; // 0xb25
+	bool m_bCreateNavObstacle; // 0xb30
+	bool m_bForceNpcExclude; // 0xb31
+	bool m_bCreateNonSolid; // 0xb32
+	bool m_bIsOverrideProp; // 0xb33
+	int32_t m_iInitialGlowState; // 0xb34
+	int32_t m_nGlowRange; // 0xb38
+	int32_t m_nGlowRangeMin; // 0xb3c
+	Color m_glowColor; // 0xb40
+};
+
+// Aligment: 0
+// Size: 2888
+class CDynamicPropAlias_dynamic_prop : public CDynamicProp, CBreakableProp, CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 2888
+class CDynamicPropAlias_prop_dynamic_override : public CDynamicProp, CBreakableProp, CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 2888
+class CDynamicPropAlias_cable_dynamic : public CDynamicProp, CBreakableProp, CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 10
+// Size: 2368
+class CColorCorrectionVolume : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bEnabled; // 0x818
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_MaxWeight; // 0x81c
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_FadeDuration; // 0x820
+	bool m_bStartDisabled; // 0x824
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_Weight; // 0x828
+	// MNetworkEnable
+	// MNetworkEnable
+	char[260] m_lookupFilename; // 0x82c
+	float m_LastEnterWeight; // 0x930
+	float m_LastEnterTime; // 0x934
+	float m_LastExitWeight; // 0x938
+	float m_LastExitTime; // 0x93c
+};
+
+// Aligment: 30
+// Size: 2280
+class CPointCommentaryNode : public CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_iszPreCommands; // 0x7f0
+	CUtlSymbolLarge m_iszPostCommands; // 0x7f8
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_iszCommentaryFile; // 0x800
+	CUtlSymbolLarge m_iszViewTarget; // 0x808
+	CHandle< CBaseEntity > m_hViewTarget; // 0x810
+	CHandle< CBaseEntity > m_hViewTargetAngles; // 0x814
+	CUtlSymbolLarge m_iszViewPosition; // 0x818
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hViewPosition; // 0x820
+	CHandle< CBaseEntity > m_hViewPositionMover; // 0x824
+	bool m_bPreventMovement; // 0x828
+	bool m_bUnderCrosshair; // 0x829
+	bool m_bUnstoppable; // 0x82a
+	float m_flFinishedTime; // 0x82c
+	Vector m_vecFinishOrigin; // 0x830
+	QAngle m_vecOriginalAngles; // 0x83c
+	QAngle m_vecFinishAngles; // 0x848
+	bool m_bPreventChangesWhileMoving; // 0x854
+	bool m_bDisabled; // 0x855
+	Vector m_vecTeleportOrigin; // 0x858
+	float m_flAbortedPlaybackAt; // 0x864
+	CEntityIOOutput m_pOnCommentaryStarted; // 0x868
+	CEntityIOOutput m_pOnCommentaryStopped; // 0x890
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bActive; // 0x8b8
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flStartTime; // 0x8bc
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flStartTimeInCommentary; // 0x8c0
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_iszTitle; // 0x8c8
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_iszSpeakers; // 0x8d0
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_iNodeNumber; // 0x8d8
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_iNodeNumberMax; // 0x8dc
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bListenedTo; // 0x8e0
+};
+
+// Aligment: 0
+// Size: 1760
+class CCommentaryViewPosition : public CSprite, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 19
+// Size: 1976
+class CEnvBeam : public CBeam, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_active; // 0x710
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_spriteTexture; // 0x718
+	CUtlSymbolLarge m_iszStartEntity; // 0x720
+	CUtlSymbolLarge m_iszEndEntity; // 0x728
+	float m_life; // 0x730
+	float m_boltWidth; // 0x734
+	float m_noiseAmplitude; // 0x738
+	int32_t m_speed; // 0x73c
+	float m_restrike; // 0x740
+	CUtlSymbolLarge m_iszSpriteName; // 0x748
+	int32_t m_frameStart; // 0x750
+	Vector m_vEndPointWorld; // 0x754
+	Vector m_vEndPointRelative; // 0x760
+	float m_radius; // 0x76c
+	Touch_t m_TouchType; // 0x770
+	CUtlSymbolLarge m_iFilterName; // 0x778
+	CHandle< CBaseEntity > m_hFilter; // 0x780
+	CUtlSymbolLarge m_iszDecal; // 0x788
+	CEntityIOOutput m_OnTouchedByEntity; // 0x790
+};
+
+// Aligment: 0
+// Size: 1848
+class CPushable : public CBreakable, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 3
+// Size: 1824
+class CGunTarget : public CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_on; // 0x6f0
+	CHandle< CBaseEntity > m_hTargetEnt; // 0x6f4
+	CEntityIOOutput m_OnDeath; // 0x6f8
+};
+
+// Aligment: 0
+// Size: 1712
+class CMarkupVolumeTagged_Group : public CMarkupVolumeTagged, CMarkupVolume, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1712
+class CMarkupVolumeTagged_Nav : public CMarkupVolumeTagged, CMarkupVolume, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1712
+class CMarkupVolumeTagged_NavL4D : public CMarkupVolumeTagged, CMarkupVolume, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1712
+class CMarkupVolumeTagged_NavHLVR : public CMarkupVolumeTagged, CMarkupVolume, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1736
+class CMarkupVolumeTagged_AI_HLVR : public CMarkupVolumeWithRef, CMarkupVolumeTagged, CMarkupVolume, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 1736
+class CMarkupVolumeTagged_NavCitadel : public CMarkupVolumeWithRef, CMarkupVolumeTagged, CMarkupVolume, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 4
+// Size: 1752
+class CFuncCombineBarrier : public CFuncBrush, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_EffectName; // 0x698
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_eBarrierState; // 0x6a8
+	CUtlSymbolLarge m_iFilterName; // 0x6c8
+	CHandle< CBaseFilter > m_hFilter; // 0x6d0
+};
+
+// Aligment: 1
+// Size: 1736
+class CFuncElectrifiedVolume : public CFuncBrush, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_EffectName; // 0x690
+};
+
+// Aligment: 0
+// Size: 1168
+class CPathCornerCrash : public CPathCorner, CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 1
+// Size: 2040
+class CConstraintAnchor : public CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_massScale; // 0x7f0
+};
+
+// Aligment: 0
+// Size: 2096
+class CSimplePhysicsProp : public CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 1
+// Size: 2896
+class COrnamentProp : public CDynamicProp, CBreakableProp, CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CUtlSymbolLarge m_initialOwner; // 0xb48
+};
+
+// Aligment: 0
+// Size: 1736
+class CRopeKeyframeAlias_move_rope : public CRopeKeyframe, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 2296
+class CSceneEntityAlias_logic_choreographed_scene : public CSceneEntity, CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 6
+// Size: 2576
+class CInstancedSceneEntity : public CSceneEntity, CPointEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CHandle< CBaseEntity > m_hOwner; // 0x8f8
+	bool m_bHadOwner; // 0x8fc
+	float m_flPostSpeakDelay; // 0x900
+	float m_flPreDelay; // 0x904
+	char[260] m_szInstanceFilename; // 0x908
+	bool m_bIsBackground; // 0xa0c
+};
+
+// Aligment: 3
+// Size: 2112
+class CTriggerSoundscape : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CHandle< CEnvSoundscapeTriggerable > m_hSoundscape; // 0x818
+	CUtlSymbolLarge m_SoundscapeName; // 0x820
+	CUtlVector< CHandle< CBasePlayer > > m_spectators; // 0x828
+};
+
+// Aligment: 0
+// Size: 1760
+class CSpriteAlias_env_glow : public CSprite, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 1
+// Size: 2112
+class CTriggerRemove : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnRemove; // 0x818
+};
+
+// Aligment: 1
+// Size: 2248
+class CScriptTriggerHurt : public CTriggerHurt, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vExtent; // 0x8b8
+};
+
+// Aligment: 1
+// Size: 2128
+class CScriptTriggerMultiple : public CTriggerMultiple, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vExtent; // 0x840
+};
+
+// Aligment: 0
+// Size: 2112
+class CTriggerOnce : public CTriggerMultiple, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 1
+// Size: 2128
+class CScriptTriggerOnce : public CTriggerOnce, CTriggerMultiple, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vExtent; // 0x840
+};
+
+// Aligment: 15
+// Size: 2272
+class CTriggerLook : public CTriggerOnce, CTriggerMultiple, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CHandle< CBaseEntity > m_hLookTarget; // 0x840
+	float m_flFieldOfView; // 0x844
+	float m_flLookTime; // 0x848
+	float m_flLookTimeTotal; // 0x84c
+	float m_flLookTimeLast; // 0x850
+	float m_flTimeoutDuration; // 0x854
+	bool m_bTimeoutFired; // 0x858
+	bool m_bIsLooking; // 0x859
+	bool m_b2DFOV; // 0x85a
+	bool m_bUseVelocity; // 0x85b
+	CHandle< CBaseEntity > m_hActivator; // 0x85c
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bTestOcclusion; // 0x860
+	CEntityIOOutput m_OnTimeout; // 0x868
+	CEntityIOOutput m_OnStartLook; // 0x890
+	CEntityIOOutput m_OnEndLook; // 0x8b8
+};
+
+// Aligment: 5
+// Size: 2096
+class CTriggerPush : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vecPushDir; // 0x818
+	bool m_bPushDirIsLocal; // 0x824
+	bool m_bTriggerOnStartTouch; // 0x825
+	float m_flAlternateTicksFix; // 0x828
+	float m_flPushSpeed; // 0x82c
+};
+
+// Aligment: 1
+// Size: 2112
+class CScriptTriggerPush : public CTriggerPush, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vExtent; // 0x830
+};
+
+// Aligment: 1
+// Size: 2080
+class CTriggerToggleSave : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bDisabled; // 0x818
+};
+
+// Aligment: 3
+// Size: 2088
+class CTriggerSave : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bForceNewLevelUnit; // 0x818
+	float m_fDangerousTimer; // 0x81c
+	int32_t m_minHitPoints; // 0x820
+};
+
+// Aligment: 0
+// Size: 2072
+class CTriggerGravity : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 2096
+class CTriggerBuoyancy : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 5
+// Size: 2136
+class CTriggerProximity : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CHandle< CBaseEntity > m_hMeasureTarget; // 0x818
+	CUtlSymbolLarge m_iszMeasureTarget; // 0x820
+	float m_fRadius; // 0x828
+	int32_t m_nTouchers; // 0x82c
+	CEntityOutputTemplate< float32 > m_NearestEntityDistance; // 0x830
+};
+
+// Aligment: 4
+// Size: 2168
+class CTriggerImpact : public CTriggerMultiple, CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flMagnitude; // 0x840
+	float m_flNoise; // 0x844
+	float m_flViewkick; // 0x848
+	CEntityOutputTemplate< Vector > m_pOutputForce; // 0x850
+};
+
+// Aligment: 0
+// Size: 2072
+class CTriggerPlayerMovement : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 2072
+class CServerRagdollTrigger : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 2
+// Size: 2120
+class CTriggerActiveWeaponDetect : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnTouchedActiveWeapon; // 0x818
+	CUtlSymbolLarge m_iszWeaponClassName; // 0x840
+};
+
+// Aligment: 13
+// Size: 2168
+class CTriggerPhysics : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_gravityScale; // 0x828
+	float m_linearLimit; // 0x82c
+	float m_linearDamping; // 0x830
+	float m_angularLimit; // 0x834
+	float m_angularDamping; // 0x838
+	float m_linearForce; // 0x83c
+	float m_flFrequency; // 0x840
+	float m_flDampingRatio; // 0x844
+	Vector m_vecLinearForcePointAt; // 0x848
+	bool m_bCollapseToForcePoint; // 0x854
+	Vector m_vecLinearForcePointAtWorld; // 0x858
+	Vector m_vecLinearForceDirection; // 0x864
+	bool m_bConvertToDebrisWhenPossible; // 0x870
+};
+
+// Aligment: 2
+// Size: 2120
+class CTriggerDetectBulletFire : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bPlayerFireOnly; // 0x818
+	CEntityIOOutput m_OnDetectedBulletFire; // 0x820
+};
+
+// Aligment: 1
+// Size: 2168
+class CTriggerDetectExplosion : public CBaseTrigger, CBaseToggle, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnDetectedExplosion; // 0x850
+};
+
+// Aligment: 1
+// Size: 1680
+class CScriptNavBlocker : public CFuncNavBlocker, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vExtent; // 0x680
+};
+
+// Aligment: 7
+// Size: 2184
+class CBaseFlex : public CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "12"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1"
+	// MNetworkEncodeFlags
+	CUtlVector< float32 > m_flexWeight; // 0x7f0
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkEncoder
+	Vector m_vLookTargetPosition; // 0x808
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_blinktoggle; // 0x814
+	float m_flAllowResponsesEndTime; // 0x870
+	float m_flLastFlexAnimationTime; // 0x874
+	uint32_t m_nNextSceneEventId; // 0x878
+	bool m_bUpdateLayerPriorities; // 0x87c
+};
+
+// Aligment: 9
+// Size: 10424
+class CFlexCycler : public CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flextime; // 0x888
+	float32[2048] m_flextarget; // 0x890
+	float m_blinktime; // 0x2890
+	float m_looktime; // 0x2894
+	Vector m_lookTarget; // 0x2898
+	float m_speaktime; // 0x28a4
+	int32_t m_istalking; // 0x28a8
+	int32_t m_phoneme; // 0x28ac
+	HSequence m_hCurrLayerSequence; // 0x28b0
+};
+
+// Aligment: 9
+// Size: 10496
+class CGenericFlexCycler : public CFlexCycler, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nTestMode; // 0x28c0
+	int32_t m_nTestIndex; // 0x28c4
+	CUtlSymbolLarge m_poseParameterName; // 0x28c8
+	bool m_bDoClientSideAnimation; // 0x28d0
+	CUtlSymbolLarge[2] m_layerSequence; // 0x28d8
+	int32[2] m_nLayerIndex; // 0x28e8
+	HSequence[2] m_hBaseSequence; // 0x28f0
+	int32_t m_nBoneOverrideIndex; // 0x28f8
+	float m_flLastSimTime; // 0x28fc
+};
+
+// Aligment: 8
+// Size: 2248
+class CItem : public CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnPlayerTouch; // 0x7f8
+	bool m_bActivateWhenAtRest; // 0x820
+	CEntityIOOutput m_OnCacheInteraction; // 0x828
+	CEntityIOOutput m_OnPlayerPickup; // 0x850
+	CEntityIOOutput m_OnGlovePulled; // 0x878
+	Vector m_vOriginalSpawnOrigin; // 0x8a0
+	QAngle m_vOriginalSpawnAngles; // 0x8ac
+	bool m_bPhysStartAsleep; // 0x8b8
+};
+
+// Aligment: 28
+// Size: 2448
+class CRagdollProp : public CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	ragdoll_t m_ragdoll; // 0x7f8
+	bool m_bStartDisabled; // 0x830
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkEncoder
+	CUtlVector< Vector > m_ragPos; // 0x838
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkEncoder
+	// MNetworkBitCount "13"
+	CUtlVector< QAngle > m_ragAngles; // 0x850
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hRagdollSource; // 0x868
+	uint32_t m_lastUpdateTickCount; // 0x86c
+	bool m_allAsleep; // 0x870
+	bool m_bFirstCollisionAfterLaunch; // 0x871
+	CHandle< CBaseEntity > m_hDamageEntity; // 0x874
+	CHandle< CBaseEntity > m_hKiller; // 0x878
+	CHandle< CBasePlayer > m_hPhysicsAttacker; // 0x87c
+	float m_flLastPhysicsInfluenceTime; // 0x880
+	float m_flFadeOutStartTime; // 0x884
+	float m_flFadeTime; // 0x888
+	// MNetworkDisable
+	Vector m_vecLastOrigin; // 0x88c
+	float m_flAwakeTime; // 0x898
+	float m_flLastOriginChangeTime; // 0x89c
+	int32_t m_nBloodColor; // 0x8a0
+	CUtlSymbolLarge m_strSourceClassName; // 0x8a8
+	bool m_bHasBeenPhysgunned; // 0x8b0
+	bool m_bShouldTeleportPhysics; // 0x8b1
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "8"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1"
+	// MNetworkEncodeFlags
+	float m_flBlendWeight; // 0x8b4
+	bool m_bDiscoverable; // 0x8b8
+	float m_flDefaultFadeScale; // 0x8bc
+	CUtlVector< Vector > m_ragdollMins; // 0x8c0
+	CUtlVector< Vector > m_ragdollMaxs; // 0x8d8
+	bool m_bShouldDeleteActivationRecord; // 0x8f0
+	bool m_bValidatePoweredRagdollPose; // 0x950
+};
+
+// Aligment: 12
+// Size: 2176
+class CPhysMagnet : public CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnMagnetAttach; // 0x7f0
+	CEntityIOOutput m_OnMagnetDetach; // 0x818
+	float m_massScale; // 0x840
+	float m_forceLimit; // 0x844
+	float m_torqueLimit; // 0x848
+	CUtlVector< magnetted_objects_t > m_MagnettedEntities; // 0x850
+	bool m_bActive; // 0x868
+	bool m_bHasHitSomething; // 0x869
+	float m_flTotalMass; // 0x86c
+	float m_flRadius; // 0x870
+	float m_flNextSuckTime; // 0x874
+	int32_t m_iMaxObjectsAttached; // 0x878
+};
+
+// Aligment: 31
+// Size: 2960
+class CPhysicsProp : public CBreakableProp, CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_MotionEnabled; // 0xa30
+	CEntityIOOutput m_OnAwakened; // 0xa58
+	CEntityIOOutput m_OnAwake; // 0xa80
+	CEntityIOOutput m_OnAsleep; // 0xaa8
+	CEntityIOOutput m_OnPlayerUse; // 0xad0
+	CEntityIOOutput m_OnPlayerPickup; // 0xaf8
+	CEntityIOOutput m_OnOutOfWorld; // 0xb20
+	float m_massScale; // 0xb48
+	float m_inertiaScale; // 0xb4c
+	int32_t m_damageType; // 0xb50
+	int32_t m_damageToEnableMotion; // 0xb54
+	float m_flForceToEnableMotion; // 0xb58
+	bool m_bThrownByPlayer; // 0xb5c
+	bool m_bDroppedByPlayer; // 0xb5d
+	bool m_bTouchedByPlayer; // 0xb5e
+	bool m_bFirstCollisionAfterLaunch; // 0xb5f
+	int32_t m_iExploitableByPlayer; // 0xb60
+	bool m_bHasBeenAwakened; // 0xb64
+	bool m_bIsOverrideProp; // 0xb65
+	float m_fNextCheckDisableMotionContactsTime; // 0xb68
+	int32_t m_iInitialGlowState; // 0xb6c
+	int32_t m_nGlowRange; // 0xb70
+	int32_t m_nGlowRangeMin; // 0xb74
+	Color m_glowColor; // 0xb78
+	bool m_bForceNavIgnore; // 0xb7c
+	bool m_bForceNpcExclude; // 0xb7d
+	bool m_bShouldAutoConvertBackFromDebris; // 0xb7e
+	bool m_bMuteImpactEffects; // 0xb7f
+	bool m_bAcceptDamageFromHeldObjects; // 0xb84
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bAwake; // 0xb85
+	int32_t m_nCollisionGroupOverride; // 0xb88
+};
+
+// Aligment: 45
+// Size: 2344
+class CBasePlayerWeapon : public CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBasePlayer > m_hOwner; // 0x7f8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "64"
+	uint8_t m_nMuzzleFlashParity; // 0x7fc
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalWeaponExclusive"
+	uint32_t m_nViewModelIndex; // 0x800
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalWeaponExclusive"
+	float m_flNextPrimaryAttack; // 0x804
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalWeaponExclusive"
+	float m_flNextSecondaryAttack; // 0x808
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalWeaponExclusive"
+	int32_t m_nQueuedAttack; // 0x80c
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalWeaponExclusive"
+	float m_flTimeAttackQueued; // 0x810
+	// MNetworkEnable
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCModel > m_iViewModelIndex; // 0x818
+	// MNetworkEnable
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCModel > m_iWorldModelIndex; // 0x820
+	// MNetworkEnable
+	// MNetworkEnable
+	WeaponState_t m_iState; // 0x828
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkSerializer "minusone"
+	// MNetworkPriority "64"
+	int32_t m_iClip1; // 0x82c
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkSerializer "minusone"
+	// MNetworkUserGroup "LocalWeaponExclusive"
+	int32_t m_iClip2; // 0x830
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalWeaponExclusive"
+	bool m_bOnlyPump; // 0x834
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalWeaponExclusive"
+	// MNetworkPriority "64"
+	float m_flTimeWeaponIdle; // 0x838
+	float m_flNextEmptySoundTime; // 0x83c
+	float m_flNextSoundTime; // 0x840
+	float m_fMinRange1; // 0x844
+	float m_fMinRange2; // 0x848
+	float m_fMaxRange1; // 0x84c
+	float m_fMaxRange2; // 0x850
+	float m_fFireDuration; // 0x854
+	int32_t m_Activity; // 0x858
+	int32_t m_iPrimaryAmmoCount; // 0x85c
+	int32_t m_iSecondaryAmmoCount; // 0x860
+	CUtlSymbolLarge m_iszName; // 0x868
+	bool m_bRemoveable; // 0x870
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bInReload; // 0x871
+	bool m_bFireOnEmpty; // 0x872
+	bool m_bPlayedEmptyClipSound; // 0x873
+	bool m_bFiresUnderwater; // 0x874
+	bool m_bAltFiresUnderwater; // 0x875
+	bool m_bReloadsSingly; // 0x876
+	HSequence m_hIdealSequence; // 0x878
+	int32_t m_IdealActivity; // 0x87c
+	AttachmentHandle_t m_nTracerAttachmentIndex; // 0x880
+	int32_t m_iAltFireHudHintCount; // 0x890
+	int32_t m_iReloadHudHintCount; // 0x894
+	bool m_bAltFireHudHintDisplayed; // 0x898
+	bool m_bReloadHudHintDisplayed; // 0x899
+	float m_flHudHintPollTime; // 0x89c
+	float m_flHudHintMinDisplayTime; // 0x8a0
+	CEntityIOOutput m_OnPlayerUse; // 0x8a8
+	CEntityIOOutput m_OnPlayerPickup; // 0x8d0
+	CEntityIOOutput m_OnCacheInteraction; // 0x8f8
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlSymbolLarge m_iszWeaponParseDataNameOverride; // 0x920
+};
+
+// Aligment: 15
+// Size: 2120
+class CBaseViewModel : public CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vecLastFacing; // 0x7f8
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_nViewModelIndex; // 0x804
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_nAnimationParity; // 0x808
+	// MNetworkEnable
+	// MNetworkEnable
+	HSequence m_hLayerSequence; // 0x80c
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_nLayer; // 0x810
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flAnimationStartTime; // 0x814
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnWeaponChanged"
+	CHandle< CBasePlayerWeapon > m_hWeapon; // 0x818
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hOwner; // 0x81c
+	int32_t m_Activity; // 0x820
+	CUtlSymbolLarge m_sVMName; // 0x828
+	CUtlSymbolLarge m_sAnimationPrefix; // 0x830
+	HSequence m_hOldLayerSequence; // 0x838
+	int32_t m_oldLayer; // 0x83c
+	float m_oldLayerStartTime; // 0x840
+	// MNetworkEnable
+	// MNetworkEnable
+	CEntityHandle m_hControlPanel; // 0x844
+};
+
+// Aligment: 3
+// Size: 2528
+class CEconEntity : public CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	CAttributeContainer m_AttributeManager; // 0x898
+	CHandle< CBaseEntity > m_hOldProvidee; // 0x9d8
+	int32_t m_iOldOwnerClass; // 0x9dc
+};
+
+// Aligment: 0
+// Size: 2536
+class CEconWearable : public CEconEntity, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 2536
+class CTFWearableItem : public CEconWearable, CEconEntity, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 1
+// Size: 10432
+class CFlexExpresserShim : public CFlexCycler, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CAI_Expresser* m_pExpresser; // 0x28b8
+};
+
+// Aligment: 1
+// Size: 10448
+class CFlexExpresser : public CFlexExpresserShim, CFlexCycler, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	float m_flThenAnyMaxDist; // 0x28c8
+};
+
+// Aligment: 0
+// Size: 1952
+class CEnvDeferredSpotLight : public CEnvDeferredLight, CModelPointEntity, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 19
+// Size: 2992
+class CDevtestHierarchy : public CDynamicProp, CBreakableProp, CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vRotationAxis; // 0xb48
+	float m_flRotationSpeed; // 0xb54
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nTestMode; // 0xb58
+	CHandle< CBaseEntity > m_hChild; // 0xb5c
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlStringToken m_attachName; // 0xb60
+	// MNetworkEnable
+	// MNetworkEnable
+	Vector m_vDynamicAttachOffset; // 0xb64
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_nDynamicResetCount; // 0xb70
+	int32_t m_nDynamicDetachCount; // 0xb74
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bChildIsDynamic; // 0xb78
+	// MNetworkEnable
+	// MNetworkEnable
+	bool m_bCreateChildSideChild; // 0xb79
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlStringToken m_alternateAttachName; // 0xb7c
+	CHandle< CBaseEntity > m_hAlternateParent; // 0xb80
+	CStrongHandle< InfoForResourceTypeCModel > m_hAlternateModel; // 0xb88
+	CStrongHandle< InfoForResourceTypeCModel > m_hOriginalModel; // 0xb90
+	// MNetworkEnable
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCModel > m_hClientSideChildModel; // 0xb98
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flEntityStartTime; // 0xba0
+	int32_t m_nTestIndex; // 0xba4
+	HierarchyType_t m_nCurrType; // 0xba8
+	int32_t m_nCurrentModel; // 0xbac
+};
+
+// Aligment: 0
+// Size: 2888
+class CDevtestHierarchyChild : public CDynamicProp, CBreakableProp, CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 2032
+class CDevtestHierarchy2 : public CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 2184
+class CBaseFlexAlias_funCBaseFlex : public CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 10496
+class CGenericFlexCyclerAlias_cycler : public CGenericFlexCycler, CFlexCycler, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 2
+// Size: 2296
+class CScriptItem : public CItem, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	CEntityIOOutput m_OnPlayerPickup; // 0x8c8
+	MoveType_t m_MoveTypeOverride; // 0x8f0
+};
+
+// Aligment: 0
+// Size: 2448
+class CRagdollPropAlias_physics_prop_ragdoll : public CRagdollProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 6
+// Size: 2512
+class CRagdollPropAttached : public CRagdollProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_boneIndexAttached; // 0x990
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_ragdollAttachedObjectIndex; // 0x994
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkEncoder
+	Vector m_attachmentPointBoneSpace; // 0x998
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkEncoder
+	Vector m_attachmentPointRagdollSpace; // 0x9a4
+	bool m_bShouldDetach; // 0x9b0
+	bool m_bShouldDeleteAttachedActivationRecord; // 0x9c0
+};
+
+// Aligment: 0
+// Size: 2960
+class CPhysicsPropAlias_physics_prop : public CPhysicsProp, CBreakableProp, CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 0
+// Size: 2960
+class CPhysicsPropOverride : public CPhysicsProp, CBreakableProp, CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 5
+// Size: 3016
+class CPhysicsPropRespawnable : public CPhysicsProp, CBreakableProp, CBaseProp, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	Vector m_vOriginalSpawnOrigin; // 0xb90
+	QAngle m_vOriginalSpawnAngles; // 0xb9c
+	Vector m_vOriginalMins; // 0xba8
+	Vector m_vOriginalMaxs; // 0xbb4
+	float m_flRespawnDuration; // 0xbc0
+};
+
+// Aligment: 15
+// Size: 2312
+class CBaseCombatCharacter : public CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bForceServerRagdoll; // 0x888
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< CHandle< CEconWearable > > m_hMyWearables; // 0x890
+	// MNetworkEnable
+	float m_flFieldOfView; // 0x8a8
+	float m_impactEnergyScale; // 0x8ac
+	int32_t m_LastHitGroup; // 0x8b0
+	float m_flDamageAccumulator; // 0x8b4
+	bool m_bApplyStressDamage; // 0x8b8
+	int32_t m_bloodColor; // 0x8bc
+	int32_t m_registeredNavTeam; // 0x8e0
+	int32_t m_navMeshID; // 0x8e4
+	int32_t m_iDamageCount; // 0x8e8
+	CUtlVector< Relationship_t >* m_pVecRelationships; // 0x8f0
+	CUtlSymbolLarge m_strRelationships; // 0x8f8
+	Hull_t m_eHull; // 0x900
+	uint32_t m_nNavHullIdx; // 0x904
+public:
+	static int32_t &Get_sm_lastInteraction() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseCombatCharacter")->m_static_fiels[0]->m_instance); }
+	static Relationship_t** &Get_sm_DefaultRelationship() { return *reinterpret_cast<Relationship_t***>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseCombatCharacter")->m_static_fiels[1]->m_instance); }
+};
+
+// Aligment: 32
+// Size: 2616
+class CItemGeneric : public CItem, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	bool m_bHasTriggerRadius; // 0x8d0
+	bool m_bHasPickupRadius; // 0x8d1
+	float m_flPickupRadiusSqr; // 0x8d4
+	float m_flTriggerRadiusSqr; // 0x8d8
+	float m_flLastPickupCheck; // 0x8dc
+	bool m_bPlayerCounterListenerAdded; // 0x8e0
+	bool m_bPlayerInTriggerRadius; // 0x8e1
+	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_hSpawnParticleEffect; // 0x8e8
+	CUtlSymbolLarge m_pAmbientSoundEffect; // 0x8f0
+	bool m_bAutoStartAmbientSound; // 0x8f8
+	CUtlSymbolLarge m_pSpawnScriptFunction; // 0x900
+	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_hPickupParticleEffect; // 0x908
+	CUtlSymbolLarge m_pPickupSoundEffect; // 0x910
+	CUtlSymbolLarge m_pPickupScriptFunction; // 0x918
+	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_hTimeoutParticleEffect; // 0x920
+	CUtlSymbolLarge m_pTimeoutSoundEffect; // 0x928
+	CUtlSymbolLarge m_pTimeoutScriptFunction; // 0x930
+	CUtlSymbolLarge m_pPickupFilterName; // 0x938
+	CHandle< CBaseFilter > m_hPickupFilter; // 0x940
+	CEntityIOOutput m_OnPickup; // 0x948
+	CEntityIOOutput m_OnTimeout; // 0x970
+	CEntityIOOutput m_OnTriggerStartTouch; // 0x998
+	CEntityIOOutput m_OnTriggerTouch; // 0x9c0
+	CEntityIOOutput m_OnTriggerEndTouch; // 0x9e8
+	CUtlSymbolLarge m_pAllowPickupScriptFunction; // 0xa10
+	float m_flPickupRadius; // 0xa18
+	float m_flTriggerRadius; // 0xa1c
+	CUtlSymbolLarge m_pTriggerSoundEffect; // 0xa20
+	bool m_bGlowWhenInTrigger; // 0xa28
+	Color m_glowColor; // 0xa29
+	bool m_bUseable; // 0xa2d
+	CHandle< CItemGenericTriggerHelper > m_hTriggerHelper; // 0xa30
+};
+
+// Aligment: 132
+// Size: 4232
+class CBasePlayer : public CBaseCombatCharacter, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_StuckLast; // 0x908
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkSendProxyRecipientsFilter
+	CPlayerLocalData m_Local; // 0x910
+	// MNetworkEnable
+	// MNetworkEnable
+	fogplayerparams_t m_PlayerFog; // 0xb48
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CColorCorrection > m_hColorCorrectionCtrl; // 0xba0
+	CUtlVector< CHandle< CBaseEntity > > m_hTriggerSoundscapeList; // 0xba8
+	CPlayerState m_pl; // 0xbc0
+	uint64_t m_nButtons; // 0xc08
+	uint64_t m_afButtonPressed; // 0xc10
+	uint64_t m_afButtonReleased; // 0xc18
+	uint64_t m_afButtonLast; // 0xc20
+	uint64_t m_afButtonDisabled; // 0xc28
+	uint64_t m_afButtonForced; // 0xc30
+	char[32] m_szAnimExtension; // 0xc38
+	int32_t m_nUpdateRate; // 0xc58
+	float m_fLerpTime; // 0xc5c
+	bool m_bLagCompensation; // 0xc60
+	bool m_bPredictWeapons; // 0xc61
+	// MNetworkEnable
+	// MNetworkEnable
+	CUtlVector< CHandle< CBasePlayerWeapon > > m_hMyWeapons; // 0xc68
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBasePlayerWeapon > m_hActiveWeapon; // 0xc80
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkSendProxyRecipientsFilter
+	float m_flNextAttack; // 0xc84
+	bool m_bPreventWeaponPickup; // 0xc88
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	uint16[32] m_iAmmo; // 0xc8a
+	int32_t m_Activity; // 0xccc
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "Player"
+	CHandle< CBaseEntity > m_hUseEntity; // 0xcd0
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hHeldEntity; // 0xcd4
+	float m_flPreventUseTime; // 0xcd8
+	int32_t m_iTrain; // 0xcdc
+	float m_iRespawnFrames; // 0xce0
+	uint32_t m_afPhysicsFlags; // 0xce4
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "Player"
+	CHandle< CBaseEntity > m_hVehicle; // 0xce8
+	int32_t m_iVehicleAnalogBias; // 0xcec
+	float m_fTimeLastHurt; // 0xcf0
+	float m_DmgSave; // 0xcf4
+	int32_t m_bitsDamageType; // 0xcf8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	float m_flDeathTime; // 0xcfc
+	float m_flDeathAnimTime; // 0xd00
+	// MNetworkEnable
+	// MNetworkEnable
+	uint8_t m_iObserverMode; // 0xd04
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_iFOV; // 0xd08
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_iDefaultFOV; // 0xd0c
+	// MNetworkEnable
+	// MNetworkEnable
+	uint32_t m_iFOVStart; // 0xd10
+	// MNetworkEnable
+	// MNetworkEnable
+	float m_flFOVTime; // 0xd14
+	int32_t m_iObserverLastMode; // 0xd18
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hObserverTarget; // 0xd1c
+	bool m_bForcedObserverMode; // 0xd20
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hZoomOwner; // 0xd24
+	float m_tbdPrev; // 0xd28
+	int32_t m_idrowndmg; // 0xd2c
+	int32_t m_idrownrestored; // 0xd30
+	float m_fNextSuicideTime; // 0xd34
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	CHandle< CBaseEntity > m_hTonemapController; // 0xd38
+	int32_t m_nHighestCommandNumberReceived; // 0xd70
+	int32_t m_nCommandsSimulatedThisTick; // 0xd74
+	int64_t m_nUsecTimestampLastUserCmdReceived; // 0xd78
+	IPhysicsPlayerController* m_pPhysicsController; // 0xd80
+	Vector m_oldOrigin; // 0xd88
+	Vector m_vecSmoothedVelocity; // 0xd94
+	bool m_touchedPhysObject; // 0xda0
+	bool m_bPhysicsWasFrozen; // 0xda1
+	int32_t m_iTargetVolume; // 0xda4
+	int32[5] m_rgItems; // 0xda8
+	bool m_fInitHUD; // 0xdbc
+	bool m_fGameHUDInitialized; // 0xdbd
+	int32_t m_iFrags; // 0xdc0
+	int32_t m_iDeaths; // 0xdc4
+	float m_flNextDecalTime; // 0xdc8
+	PlayerConnectedState m_iConnected; // 0xdcc
+	bool m_bIsLowViolence; // 0xdd0
+	// MNetworkEnable
+	// MNetworkEnable
+	int32_t m_ArmorValue; // 0xdd4
+	float m_AirFinished; // 0xdd8
+	float m_PainFinished; // 0xddc
+	int32_t m_iPlayerLocked; // 0xde0
+	CSimpleSimTimer m_AutoaimTimer; // 0xde4
+	// MNetworkEnable
+	// MNetworkEnable
+	CHandle< CBaseViewModel >[2] m_hViewModel; // 0xde8
+	float m_flStepSoundTime; // 0xe40
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkBitCount "12"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "2048"
+	// MNetworkEncodeFlags
+	float m_flMaxspeed; // 0xe44
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkEncoder
+	Vector m_vecLadderNormal; // 0xe48
+	float m_flWaterJumpTime; // 0xe54
+	Vector m_vecWaterJumpVel; // 0xe58
+	int32_t m_nImpulse; // 0xe64
+	float m_flSwimSoundTime; // 0xe68
+	float m_flFlashTime; // 0xe6c
+	int32_t m_nDrownDmgRate; // 0xe70
+	bool m_bDuckToggled; // 0xe74
+	float m_flForwardMove; // 0xe78
+	float m_flSideMove; // 0xe7c
+	bool m_bGamePaused; // 0xe80
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkPriority "1"
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	uint32_t m_nTickBase; // 0xe84
+	int32_t m_nOldTickBase; // 0xe88
+	Vector m_vForcedOrigin; // 0xe9c
+	bool m_bForceOrigin; // 0xea8
+	float m_fLastPlayerTalkTime; // 0xeac
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	CHandle< CBasePlayerWeapon > m_hLastWeapon; // 0xeb0
+	WeaponProficiency_t m_CurrentWeaponProficiency; // 0xeb4
+	float m_flOldPlayerZ; // 0xeb8
+	float m_flOldPlayerViewOffsetZ; // 0xebc
+	bool m_bPlayerUnderwater; // 0xec0
+	float m_flLastAttackTime; // 0xec4
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "Player"
+	CHandle< CBaseEntity > m_hViewEntity; // 0xec8
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	CHandle< CBaseEntity > m_hConstraintEntity; // 0xecc
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	Vector m_vecConstraintCenter; // 0xed0
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	float m_flConstraintRadius; // 0xedc
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	float m_flConstraintWidth; // 0xee0
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	float m_flConstraintSpeedFactor; // 0xee4
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	bool m_bConstraintPastRadius; // 0xee8
+	char[128] m_szNetname; // 0xee9
+	Vector m_vNewVPhysicsPosition; // 0xf6c
+	Vector m_vNewVPhysicsVelocity; // 0xf78
+	Vector m_vecVehicleViewOrigin; // 0xf84
+	QAngle m_vecVehicleViewAngles; // 0xf90
+	float m_flVehicleViewFOV; // 0xf9c
+	int32_t m_nVehicleViewSavedFrame; // 0xfa0
+	Vector m_vecPreviouslyPredictedOrigin; // 0xfa4
+	int32_t m_nBodyPitchPoseParam; // 0xfb0
+	// MNetworkEnable
+	// MNetworkEnable
+	char[18] m_szLastPlaceName; // 0xfb4
+	char[64] m_szNetworkIDString; // 0xfc6
+	CPlayerInfo m_PlayerInfo; // 0x1008
+	CUtlStringToken m_surfaceProps; // 0x1020
+	float m_surfaceFriction; // 0x1030
+	char m_chTextureType; // 0x1034
+	char m_chPreviousTextureType; // 0x1035
+	bool m_bSinglePlayerGameEnding; // 0x1036
+	CHandle< CBaseEntity > m_hPlayerProxy; // 0x1038
+	bool m_autoKickDisabled; // 0x103c
+	Vector m_groundNormal; // 0x1040
+	float m_lastEntitySteadyState; // 0x104c
+	int32_t m_availableEntitySteadyState; // 0x1050
+	CBitVec< 64 > m_playerInPVS; // 0x1054
+	bool m_hasAnySteadyStateEnts; // 0x105c
+	bool m_bSplitScreenPlayer; // 0x105d
+	CHandle< CBasePlayer > m_hSplitOwner; // 0x1060
+	CUtlVector< CHandle< CBasePlayer > > m_hSplitScreenPlayers; // 0x1068
+	// MNetworkEnable
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	uint64_t m_nUnHoldableButtons; // 0x1080
+public:
+	static bool &Get_ms_bUseSessionPersisterPosAng() { return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBasePlayer")->m_static_fiels[0]->m_instance); }
+	static Vector &Get_ms_vSessionPersisterPosition() { return *reinterpret_cast<Vector*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBasePlayer")->m_static_fiels[1]->m_instance); }
+	static QAngle &Get_ms_angSessionPersisterAngles() { return *reinterpret_cast<QAngle*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBasePlayer")->m_static_fiels[2]->m_instance); }
+};
+
+// Aligment: 0
+// Size: 4232
+class CDCGPlayer : public CBasePlayer, CBaseCombatCharacter, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+// <no members described>
+};
+
+// Aligment: 9
+// Size: 4288
+class CBaseMultiplayerPlayer : public CBasePlayer, CBaseCombatCharacter, CBaseFlex, CBaseAnimatingOverlay, CBaseAnimating, CBaseModelEntity, CBaseEntity, CEntityInstance, IHandleEntity
+{
+public:
+	int32_t m_iIgnoreGlobalChat; // 0x1090
+	float m_flAreaCaptureScoreAccumulator; // 0x1094
+	float m_flCapPointScoreRate; // 0x1098
+	int32_t m_iCurrentConcept; // 0x109c
+	CMultiplayer_Expresser* m_pExpresser; // 0x10a0
+	float m_flConnectionTime; // 0x10a8
+	float m_flLastForcedChangeTeamTime; // 0x10ac
+	int32_t m_iBalanceScore; // 0x10b0
+	KeyValues* m_pAchievementKV; // 0x10b8
 };
 
