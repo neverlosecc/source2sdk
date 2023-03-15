@@ -4,7 +4,7 @@
 
 ///////////////////////////////////////////
 // Binary: materialsystem2.dll
-// Class Count: 12
+// Class Count: 13
 // Enum Count: 5
 ///////////////////////////////////////////
 
@@ -177,8 +177,20 @@ public:
 	Vector m_vColorTint; // 0x18
 };
 
-// Aligment: 8
-// Size: 224
+// Aligment: 5
+// Size: 20
+struct PostProcessingLocalContrastParameters_t
+{
+public:
+	float m_flLocalContrastStrength; // 0x0
+	float m_flLocalContrastEdgeStrength; // 0x4
+	float m_flLocalContrastVignetteStart; // 0x8
+	float m_flLocalContrastVignetteEnd; // 0xc
+	float m_flLocalContrastVignetteBlur; // 0x10
+};
+
+// Aligment: 11
+// Size: 256
 struct PostProcessingResource_t
 {
 public:
@@ -188,7 +200,10 @@ public:
 	PostProcessingBloomParameters_t m_bloomParams; // 0x28
 	bool m_bHasVignetteParams; // 0x98
 	PostProcessingVignetteParameters_t m_vignetteParams; // 0x9c
-	int32_t m_nColorCorrectionVolumeDim; // 0xc0
-	CUtlBinaryBlock m_colorCorrectionVolumeData; // 0xc8
+	bool m_bHasLocalContrastParams; // 0xc0
+	PostProcessingLocalContrastParameters_t m_localConstrastParams; // 0xc4
+	int32_t m_nColorCorrectionVolumeDim; // 0xd8
+	CUtlBinaryBlock m_colorCorrectionVolumeData; // 0xe0
+	bool m_bHasColorCorrection; // 0xf8
 };
 

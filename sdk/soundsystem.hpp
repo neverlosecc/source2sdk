@@ -4,9 +4,45 @@
 
 ///////////////////////////////////////////
 // Binary: soundsystem.dll
-// Class Count: 15
-// Enum Count: 7
+// Class Count: 24
+// Enum Count: 11
 ///////////////////////////////////////////
+
+// Aligment: 4
+// Size: 30
+enum class soundlevel_t : uint32_t
+{
+	SNDLVL_NONE = 0x0,
+	SNDLVL_20dB = 0x14,
+	SNDLVL_25dB = 0x19,
+	SNDLVL_30dB = 0x1e,
+	SNDLVL_35dB = 0x23,
+	SNDLVL_40dB = 0x28,
+	SNDLVL_45dB = 0x2d,
+	SNDLVL_50dB = 0x32,
+	SNDLVL_55dB = 0x37,
+	SNDLVL_IDLE = 0x3c,
+	SNDLVL_60dB = 0x3c,
+	SNDLVL_65dB = 0x41,
+	SNDLVL_STATIC = 0x42,
+	SNDLVL_70dB = 0x46,
+	SNDLVL_NORM = 0x4b,
+	SNDLVL_75dB = 0x4b,
+	SNDLVL_80dB = 0x50,
+	SNDLVL_TALKING = 0x50,
+	SNDLVL_85dB = 0x55,
+	SNDLVL_90dB = 0x5a,
+	SNDLVL_95dB = 0x5f,
+	SNDLVL_100dB = 0x64,
+	SNDLVL_105dB = 0x69,
+	SNDLVL_110dB = 0x6e,
+	SNDLVL_120dB = 0x78,
+	SNDLVL_130dB = 0x82,
+	SNDLVL_GUNFIRE = 0x8c,
+	SNDLVL_140dB = 0x8c,
+	SNDLVL_150dB = 0x96,
+	SNDLVL_180dB = 0xb4,
+};
 
 // Aligment: 4
 // Size: 3
@@ -56,7 +92,7 @@ enum class SosEditItemType_t : uint32_t
 
 // Aligment: 2
 // Size: 8
-enum class vmix_filter_type_t : uint16_t
+enum class VMixFilterType_t : uint16_t
 {
 	FILTER_UNKNOWN = 18446744073709551615,
 	FILTER_LOWPASS = 0,
@@ -68,9 +104,20 @@ enum class vmix_filter_type_t : uint16_t
 	FILTER_HIGH_SHELF = 6,
 };
 
+// Aligment: 1
+// Size: 5
+enum class VMixFilterSlope_t : uint8_t
+{
+	FILTER_SLOPE_12dB = 0,
+	FILTER_SLOPE_24dB = 1,
+	FILTER_SLOPE_36dB = 2,
+	FILTER_SLOPE_48dB = 3,
+	FILTER_SLOPE_MAX = 3,
+};
+
 // Aligment: 2
-// Size: 12
-enum class vmix_processor_type_t : uint16_t
+// Size: 19
+enum class VMixProcessorType_t : uint16_t
 {
 	VPROCESSOR_UNKNOWN = 0,
 	VPROCESSOR_STEAMAUDIO_REVERB = 1,
@@ -84,6 +131,36 @@ enum class vmix_processor_type_t : uint16_t
 	VPROCESSOR_STEAMAUDIO_PATHING = 9,
 	VPROCESSOR_EQ8 = 10,
 	VPROCESSOR_ENVELOPE = 11,
+	VPROCESSOR_VOCODER = 12,
+	VPROCESSOR_CONVOLUTION = 13,
+	VPROCESSOR_DYNAMICS_3BAND = 14,
+	VPROCESSOR_DYNAMICS_COMPRESSOR = 15,
+	VPROCESSOR_SHAPER = 16,
+	VPROCESSOR_UTILITY = 17,
+	VPROCESSOR_AUTOFILTER = 18,
+};
+
+// Aligment: 4
+// Size: 5
+enum class VMixLFOShape_t : uint32_t
+{
+	LFO_SHAPE_SINE = 0x0,
+	LFO_SHAPE_SQUARE = 0x1,
+	LFO_SHAPE_TRI = 0x2,
+	LFO_SHAPE_SAW = 0x3,
+	LFO_SHAPE_NOISE = 0x4,
+};
+
+// Aligment: 4
+// Size: 6
+enum class VMixChannelOperation_t : uint32_t
+{
+	VMIX_CHAN_STEREO = 0x0,
+	VMIX_CHAN_LEFT = 0x1,
+	VMIX_CHAN_RIGHT = 0x2,
+	VMIX_CHAN_SWAP = 0x3,
+	VMIX_CHAN_MONO = 0x4,
+	VMIX_CHAN_MID_SIDE = 0x5,
 };
 
 // Aligment: 3
@@ -182,7 +259,7 @@ public:
 class CSosSoundEventGroupListSchema
 {
 public:
-	// MPropertyAutoExpandGroup
+	// MPropertyAutoExpandSelf
 	// MPropertyFriendlyName "Groups"
 	CUtlVector< CSosSoundEventGroupSchema > m_groupList; // 0x0
 };
@@ -207,13 +284,22 @@ public:
 	CUtlVector< SosEditItemInfo_t > m_EditItems; // 0x0
 };
 
-// Aligment: 5
-// Size: 16
-struct vmix_filter_desc_t
+// Aligment: 1
+// Size: 8
+class CSoundEventMetaData
 {
 public:
-	vmix_filter_type_t m_nFilterType; // 0x0
-	bool m_bEnabled; // 0x2
+	CStrongHandle< InfoForResourceTypeCVMixListResource > m_soundEventVMix; // 0x0
+};
+
+// Aligment: 6
+// Size: 16
+struct VMixFilterDesc_t
+{
+public:
+	VMixFilterType_t m_nFilterType; // 0x0
+	VMixFilterSlope_t m_nFilterSlope; // 0x2
+	bool m_bEnabled; // 0x3
 	float m_fldbGain; // 0x4
 	float m_flCutoffFreq; // 0x8
 	float m_flQ; // 0xc
@@ -221,18 +307,18 @@ public:
 
 // Aligment: 1
 // Size: 128
-struct vmix_eq8_desc_t
+struct VMixEQ8Desc_t
 {
 public:
-	vmix_filter_desc_t[8] m_stages; // 0x0
+	VMixFilterDesc_t[8] m_stages; // 0x0
 };
 
 // Aligment: 7
 // Size: 40
-struct vmix_delay_desc_t
+struct VMixDelayDesc_t
 {
 public:
-	vmix_filter_desc_t m_feedbackFilter; // 0x0
+	VMixFilterDesc_t m_feedbackFilter; // 0x0
 	bool m_bEnableFilter; // 0x10
 	float m_flDelay; // 0x14
 	float m_flDirectGain; // 0x18
@@ -241,9 +327,9 @@ public:
 	float m_flWidth; // 0x24
 };
 
-// Aligment: 10
-// Size: 40
-struct vmix_dynamics_desc_t
+// Aligment: 12
+// Size: 48
+struct VMixDynamicsDesc_t
 {
 public:
 	float m_fldbGain; // 0x0
@@ -256,11 +342,82 @@ public:
 	float m_flAttackTimeMS; // 0x1c
 	float m_flReleaseTimeMS; // 0x20
 	float m_flRMSTimeMS; // 0x24
+	float m_flWetMix; // 0x28
+	bool m_bPeakMode; // 0x2c
+};
+
+// Aligment: 9
+// Size: 36
+struct VMixDynamicsCompressorDesc_t
+{
+public:
+	// MPropertyFriendlyName "Output Gain (dB)"
+	float m_fldbOutputGain; // 0x0
+	// MPropertyFriendlyName "Threshold (dB)"
+	float m_fldbCompressionThreshold; // 0x4
+	// MPropertyFriendlyName "Knee Width (dB)"
+	float m_fldbKneeWidth; // 0x8
+	// MPropertyFriendlyName "Compression Ratio"
+	float m_flCompressionRatio; // 0xc
+	// MPropertyFriendlyName "Attack time (ms)"
+	float m_flAttackTimeMS; // 0x10
+	// MPropertyFriendlyName "Release time (ms)"
+	float m_flReleaseTimeMS; // 0x14
+	// MPropertyFriendlyName "Threshold detection time (ms)"
+	float m_flRMSTimeMS; // 0x18
+	// MPropertyFriendlyName "Dry/Wet"
+	float m_flWetMix; // 0x1c
+	// MPropertyFriendlyName "Peak mode"
+	bool m_bPeakMode; // 0x20
+};
+
+// Aligment: 10
+// Size: 36
+struct VMixDynamicsBand_t
+{
+public:
+	// MPropertyFriendlyName "Input Gain (dB)"
+	float m_fldbGainInput; // 0x0
+	// MPropertyFriendlyName "Output Gain (dB)"
+	float m_fldbGainOutput; // 0x4
+	// MPropertyFriendlyName "Above Threshold(dB)"
+	float m_fldbThresholdBelow; // 0x8
+	// MPropertyFriendlyName "Below Threshold(dB)"
+	float m_fldbThresholdAbove; // 0xc
+	// MPropertyFriendlyName "Upward Ratio"
+	float m_flRatioBelow; // 0x10
+	// MPropertyFriendlyName "Downward Ratio"
+	float m_flRatioAbove; // 0x14
+	// MPropertyFriendlyName "Attack time (ms)"
+	float m_flAttackTimeMS; // 0x18
+	// MPropertyFriendlyName "Release time (ms)"
+	float m_flReleaseTimeMS; // 0x1c
+	// MPropertyFriendlyName "Enabled"
+	bool m_bEnable; // 0x20
+	// MPropertyFriendlyName "Solo"
+	bool m_bSolo; // 0x21
+};
+
+// Aligment: 10
+// Size: 144
+struct VMixDynamics3BandDesc_t
+{
+public:
+	float m_fldbGainOutput; // 0x0
+	float m_flRMSTimeMS; // 0x4
+	float m_fldbKneeWidth; // 0x8
+	float m_flDepth; // 0xc
+	float m_flWetMix; // 0x10
+	float m_flTimeScale; // 0x14
+	float m_flLowCutoffFreq; // 0x18
+	float m_flHighCutoffFreq; // 0x1c
+	bool m_bPeakMode; // 0x20
+	VMixDynamicsBand_t[3] m_bandDesc; // 0x24
 };
 
 // Aligment: 3
 // Size: 12
-struct vmix_envelope_desc_t
+struct VMixEnvelopeDesc_t
 {
 public:
 	float m_flAttackTimeMS; // 0x0
@@ -268,12 +425,113 @@ public:
 	float m_flReleaseTimeMS; // 0x8
 };
 
-// Aligment: 2
-// Size: 8
-struct vmix_pitch_shift_desc_t
+// Aligment: 4
+// Size: 16
+struct VMixPitchShiftDesc_t
 {
 public:
 	int32_t m_nGrainSampleCount; // 0x0
 	float m_flPitchShift; // 0x4
+	int32_t m_nQuality; // 0x8
+	int32_t m_nProcType; // 0xc
+};
+
+// Aligment: 8
+// Size: 32
+struct VMixConvolutionDesc_t
+{
+public:
+	// MPropertyFriendlyName "gain of wet signal (dB)"
+	// MPropertyAttributeRange "-36 3"
+	float m_fldbGain; // 0x0
+	// MPropertyFriendlyName "Pre-delay (ms)"
+	float m_flPreDelayMS; // 0x4
+	// MPropertyFriendlyName "Dry/Wet"
+	float m_flWetMix; // 0x8
+	// MPropertyFriendlyName "Low EQ gain (dB)"
+	// MPropertyAttributeRange "-24 24"
+	float m_fldbLow; // 0xc
+	// MPropertyFriendlyName "Mid EQ gain (dB)"
+	// MPropertyAttributeRange "-24 24"
+	float m_fldbMid; // 0x10
+	// MPropertyFriendlyName "High EQ gain (dB)"
+	// MPropertyAttributeRange "-24 24"
+	float m_fldbHigh; // 0x14
+	// MPropertyFriendlyName "Low Cutoff Freq (Hz)"
+	float m_flLowCutoffFreq; // 0x18
+	// MPropertyFriendlyName "High Cutoff Freq (Hz)"
+	float m_flHighCutoffFreq; // 0x1c
+};
+
+// Aligment: 10
+// Size: 40
+struct VMixVocoderDesc_t
+{
+public:
+	int32_t m_nBandCount; // 0x0
+	float m_flBandwidth; // 0x4
+	float m_fldBModGain; // 0x8
+	float m_flFreqRangeStart; // 0xc
+	float m_flFreqRangeEnd; // 0x10
+	float m_fldBUnvoicedGain; // 0x14
+	float m_flAttackTimeMS; // 0x18
+	float m_flReleaseTimeMS; // 0x1c
+	int32_t m_nDebugBand; // 0x20
+	bool m_bPeakMode; // 0x24
+};
+
+// Aligment: 5
+// Size: 20
+struct VMixShaperDesc_t
+{
+public:
+	// MPropertyFriendlyName "Shape"
+	// MPropertyAttributeRange "0 14"
+	int32_t m_nShape; // 0x0
+	// MPropertyFriendlyName "Drive (dB)"
+	// MPropertyAttributeRange "0 36"
+	float m_fldbDrive; // 0x4
+	// MPropertyFriendlyName "Output Gain (dB)"
+	// MPropertyAttributeRange "-36 0"
+	float m_fldbOutputGain; // 0x8
+	// MPropertyFriendlyName "Dry/Wet"
+	float m_flWetMix; // 0xc
+	// MPropertyFriendlyName "Oversampling"
+	int32_t m_nOversampleFactor; // 0x10
+};
+
+// Aligment: 6
+// Size: 24
+struct VMixUtilityDesc_t
+{
+public:
+	// MPropertyFriendlyName "Channels"
+	VMixChannelOperation_t m_nOp; // 0x0
+	// MPropertyFriendlyName "Input Pan"
+	// MPropertyAttributeRange "-1 1"
+	float m_flInputPan; // 0x4
+	// MPropertyFriendlyName "Output Balance"
+	// MPropertyAttributeRange "-1 1"
+	float m_flOutputBalance; // 0x8
+	// MPropertyFriendlyName "Output Gain (dB)"
+	// MPropertyAttributeRange "-36 0"
+	float m_fldbOutputGain; // 0xc
+	bool m_bBassMono; // 0x10
+	float m_flBassFreq; // 0x14
+};
+
+// Aligment: 8
+// Size: 44
+struct VMixAutoFilterDesc_t
+{
+public:
+	float m_flEnvelopeAmount; // 0x0
+	float m_flAttackTimeMS; // 0x4
+	float m_flReleaseTimeMS; // 0x8
+	VMixFilterDesc_t m_filter; // 0xc
+	float m_flLFOAmount; // 0x1c
+	float m_flLFORate; // 0x20
+	float m_flPhase; // 0x24
+	VMixLFOShape_t m_nLFOShape; // 0x28
 };
 

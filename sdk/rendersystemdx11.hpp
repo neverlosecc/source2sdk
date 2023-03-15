@@ -4,48 +4,9 @@
 
 ///////////////////////////////////////////
 // Binary: rendersystemdx11.dll
-// Class Count: 8
-// Enum Count: 7
+// Class Count: 3
+// Enum Count: 5
 ///////////////////////////////////////////
-
-// Aligment: 4
-// Size: 21
-enum class TextureSpecificationFlags_t : uint32_t
-{
-	TSPEC_FLAGS = 0x0,
-	TSPEC_RENDER_TARGET = 0x1,
-	TSPEC_VERTEX_TEXTURE = 0x2,
-	TSPEC_UNFILTERABLE_OK = 0x4,
-	TSPEC_RENDER_TARGET_SAMPLEABLE = 0x8,
-	TSPEC_SUGGEST_CLAMPS = 0x10,
-	TSPEC_SUGGEST_CLAMPT = 0x20,
-	TSPEC_SUGGEST_CLAMPU = 0x40,
-	TSPEC_NO_LOD = 0x80,
-	TSPEC_CUBE_TEXTURE = 0x100,
-	TSPEC_VOLUME_TEXTURE = 0x200,
-	TSPEC_TEXTURE_ARRAY = 0x400,
-	TSPEC_TEXTURE_GEN_MIP_MAPS = 0x800,
-	TSPEC_LINE_TEXTURE_360 = 0x1000,
-	TSPEC_LINEAR_ADDRESSING_360 = 0x2000,
-	TSPEC_USE_TYPED_IMAGEFORMAT = 0x4000,
-	TSPEC_SHARED_RESOURCE = 0x8000,
-	TSPEC_UAV = 0x10000,
-	TSPEC_INPUT_ATTACHMENT = 0x20000,
-	TSPEC_CUBE_CAN_SAMPLE_AS_ARRAY = 0x40000,
-	TSPEC_LINEAR_COLOR_SPACE = 0x80000,
-};
-
-// Aligment: 4
-// Size: 6
-enum class CubeMapFace_t : uint32_t
-{
-	CUBEMAP_FACE_POSITIVE_X = 0x0,
-	CUBEMAP_FACE_NEGATIVE_X = 0x1,
-	CUBEMAP_FACE_POSITIVE_Y = 0x2,
-	CUBEMAP_FACE_NEGATIVE_Y = 0x3,
-	CUBEMAP_FACE_POSITIVE_Z = 0x4,
-	CUBEMAP_FACE_NEGATIVE_Z = 0x5,
-};
 
 // Aligment: 4
 // Size: 3
@@ -57,7 +18,7 @@ enum class RenderSlotType_t : uint32_t
 };
 
 // Aligment: 4
-// Size: 8
+// Size: 9
 enum class RenderBufferFlags_t : uint32_t
 {
 	RENDER_BUFFER_USAGE_VERTEX_BUFFER = 0x1,
@@ -68,6 +29,7 @@ enum class RenderBufferFlags_t : uint32_t
 	RENDER_BUFFER_STRUCTURED_BUFFER = 0x20,
 	RENDER_BUFFER_APPEND_CONSUME_BUFFER = 0x40,
 	RENDER_BUFFER_UAV_COUNTER = 0x80,
+	RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS = 0x100,
 };
 
 // Aligment: 4
@@ -122,15 +84,14 @@ enum class RenderPrimitiveType_t : uint32_t
 };
 
 // Aligment: 4
-// Size: 6
+// Size: 5
 enum class InputLayoutVariation_t : uint32_t
 {
 	INPUT_LAYOUT_VARIATION_DEFAULT = 0x0,
-	INPUT_LAYOUT_VARIATION_STREAM1_MAT3X4 = 0x1,
-	INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID = 0x2,
-	INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_LIGHTMAP_PARAMS = 0x3,
-	INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID = 0x4,
-	INPUT_LAYOUT_VARIATION_MAX = 0x5,
+	INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID = 0x1,
+	INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID = 0x2,
+	INPUT_LAYOUT_VARIATION_STREAM1_DRAWINDIRECT_ID = 0x3,
+	INPUT_LAYOUT_VARIATION_MAX = 0x4,
 };
 
 // Aligment: 4
@@ -145,57 +106,6 @@ enum class RenderMultisampleType_t : uint32_t
 	RENDER_MULTISAMPLE_8X = 0x4,
 	RENDER_MULTISAMPLE_16X = 0x5,
 	RENDER_MULTISAMPLE_TYPE_COUNT = 0x6,
-};
-
-// Aligment: 2
-// Size: 8
-struct SequenceFloatParam_t
-{
-public:
-	CResourceString m_name; // 0x0
-	float m_value; // 0x4
-};
-
-// Aligment: 9
-// Size: 32
-struct SheetSequence_t
-{
-public:
-	uint32_t m_nId; // 0x0
-	bool m_bClamp; // 0x4
-	bool m_bAlphaCrop; // 0x5
-	bool m_bNoColor; // 0x6
-	bool m_bNoAlpha; // 0x7
-	CResourceArray< SheetSequenceFrame_t > m_Frames; // 0x8
-	float m_flTotalTime; // 0x10
-	CResourceString m_name; // 0x14
-	CResourceArray< SequenceFloatParam_t > m_floatParams; // 0x18
-};
-
-// Aligment: 2
-// Size: 12
-struct SheetSequenceFrame_t
-{
-public:
-	float m_flDisplayTime; // 0x0
-	CResourceArray< SheetFrameImage_t > m_Images; // 0x4
-};
-
-// Aligment: 2
-// Size: 32
-struct SheetFrameImage_t
-{
-public:
-	Vector2D[2] uvCropped; // 0x0
-	Vector2D[2] uvUncropped; // 0x10
-};
-
-// Aligment: 1
-// Size: 8
-struct Sheet_t
-{
-public:
-	CResourceArray< SheetSequence_t > m_Sequences; // 0x0
 };
 
 // Aligment: 7
