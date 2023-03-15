@@ -4,7 +4,7 @@
 
 ///////////////////////////////////////////
 // Binary: worldrenderer.dll
-// Class Count: 22
+// Class Count: 21
 // Enum Count: 3
 ///////////////////////////////////////////
 
@@ -16,10 +16,9 @@ enum class EntityLumpFlags_t : uint32_t
 };
 
 // Aligment: 4
-// Size: 13
+// Size: 12
 enum class ObjectTypeFlags_t : uint32_t
 {
-	OBJECT_TYPE_NONE = 0x0,
 	OBJECT_TYPE_IMAGE_LOD = 0x1,
 	OBJECT_TYPE_GEOMETRY_LOD = 0x2,
 	OBJECT_TYPE_DECAL = 0x4,
@@ -65,21 +64,20 @@ public:
 	CUtlVector< EntityIOConnectionData_t > m_connections; // 0x18
 };
 
-// Aligment: 6
-// Size: 80
+// Aligment: 5
+// Size: 72
 struct PermEntityLumpData_t
 {
 public:
 	CUtlString m_name; // 0x0
-	CUtlString m_hammerUniqueId; // 0x8
-	EntityLumpFlags_t m_flags; // 0x10
-	CUtlString m_manifestName; // 0x18
-	CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > > m_childLumps; // 0x20
-	CUtlVector< EntityKeyValueData_t > m_entityKeyValues; // 0x38
+	EntityLumpFlags_t m_flags; // 0x8
+	CUtlString m_manifestName; // 0x10
+	CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > > m_childLumps; // 0x18
+	CUtlVector< EntityKeyValueData_t > m_entityKeyValues; // 0x30
 };
 
-// Aligment: 16
-// Size: 144
+// Aligment: 17
+// Size: 168
 struct SceneObject_t
 {
 public:
@@ -99,6 +97,7 @@ public:
 	int16_t m_nBoundsGroupIndex; // 0x78
 	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x80
 	CStrongHandle< InfoForResourceTypeCRenderMesh > m_renderable; // 0x88
+	CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCTextureBase > > m_externalTextures; // 0x90
 };
 
 // Aligment: 1
@@ -107,6 +106,15 @@ struct BaseSceneObjectOverride_t
 {
 public:
 	uint32_t m_nSceneObjectIndex; // 0x0
+};
+
+// Aligment: 2
+// Size: 56
+struct BoneOverride_t : public BaseSceneObjectOverride_t
+{
+public:
+	CUtlVector< uint32 > m_boneHashes; // 0x8
+	CUtlVector< matrix3x4_t > m_boneTransforms; // 0x20
 };
 
 // Aligment: 4
@@ -147,16 +155,20 @@ public:
 	int32_t m_nSequenceOverride; // 0x6c
 };
 
-// Aligment: 5
-// Size: 48
+// Aligment: 9
+// Size: 80
 struct BakedLightingInfo_t
 {
 public:
-	uint32_t m_nLightmapVersionNumber; // 0x0
-	uint32_t m_nLightmapGameVersionNumber; // 0x4
-	Vector2D m_vLightmapUvScale; // 0x8
-	bool m_bHasLightmaps; // 0x10
-	CUtlVector< CStrongHandle< InfoForResourceTypeCTextureBase > > m_lightMaps; // 0x18
+	CUtlVector< uint8 > m_PerVertexLightingDataPlainRGBM; // 0x0
+	uint32_t m_nPerVertexLightingDataPlainRGBMWidth; // 0x18
+	uint32_t m_nPerVertexLightingDataPlainRGBMHeight; // 0x1c
+	uint32_t m_nPerVertexLightingDataPlainRGBMDepth; // 0x20
+	uint32_t m_nLightmapVersionNumber; // 0x24
+	uint32_t m_nLightmapGameVersionNumber; // 0x28
+	Vector2D m_vLightmapUvScale; // 0x2c
+	bool m_bHasLightmaps; // 0x34
+	CUtlVector< CStrongHandle< InfoForResourceTypeCTextureBase > > m_lightMaps; // 0x38
 };
 
 // Aligment: 4
@@ -170,38 +182,8 @@ public:
 	CUtlVector< uint8 > m_pData; // 0x20
 };
 
-// Aligment: 8
-// Size: 56
-struct AggregateMeshInfo_t
-{
-public:
-	Vector4D m_vTintColor; // 0x0
-	Vector[2] m_vWorldBounds; // 0x10
-	uint16_t m_nDrawDescriptorIndex; // 0x28
-	uint16_t m_nVisClusterMemberOffset; // 0x2a
-	uint8_t m_nVisClusterMemberCount; // 0x2c
-	uint8_t _pad; // 0x2d
-	int32_t m_nCubeMapPrecomputedHandshake; // 0x30
-	ObjectTypeFlags_t m_objectFlags; // 0x34
-};
-
-// Aligment: 8
-// Size: 96
-struct AggregateSceneObject_t
-{
-public:
-	Vector[2] m_vWorldBounds; // 0x0
-	ObjectTypeFlags_t m_allFlags; // 0x18
-	ObjectTypeFlags_t m_anyFlags; // 0x1c
-	int16_t m_nLayer; // 0x20
-	int16_t m_nBoundsGroupIndex; // 0x22
-	CUtlVector< AggregateMeshInfo_t > m_aggregateMeshes; // 0x28
-	CUtlVector< uint16 > m_visClusterMembership; // 0x40
-	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x58
-};
-
 // Aligment: 13
-// Size: 320
+// Size: 352
 struct WorldNode_t
 {
 public:
@@ -209,7 +191,7 @@ public:
 	CUtlVector< InfoOverlayData_t > m_infoOverlays; // 0x18
 	CUtlVector< uint16 > m_visClusterMembership; // 0x30
 	CUtlVector< AABB_t > m_boundsGroups; // 0x48
-	CUtlVector< AggregateSceneObject_t > m_aggregateSceneObjects; // 0x60
+	CUtlVector< BoneOverride_t > m_boneOverrides; // 0x60
 	CUtlVector< ExtraVertexStreamOverride_t > m_extraVertexStreamOverrides; // 0x78
 	CUtlVector< MaterialOverride_t > m_materialOverrides; // 0x90
 	CUtlVector< WorldNodeOnDiskBufferData_t > m_extraVertexStreams; // 0xa8
@@ -220,8 +202,8 @@ public:
 	BakedLightingInfo_t m_nodeLightingInfo; // 0x110
 };
 
-// Aligment: 21
-// Size: 104
+// Aligment: 19
+// Size: 84
 struct WorldBuilderParams_t
 {
 public:
@@ -244,8 +226,6 @@ public:
 	bool m_bWrapInAtlas; // 0x48
 	bool m_bBuildBakedLighting; // 0x49
 	Vector2D m_vLightmapUvScale; // 0x4c
-	uint64_t m_nCompileTimestamp; // 0x58
-	uint64_t m_nCompileFingerprint; // 0x60
 };
 
 // Aligment: 8
@@ -264,14 +244,14 @@ public:
 };
 
 // Aligment: 4
-// Size: 200
+// Size: 216
 struct World_t
 {
 public:
 	WorldBuilderParams_t m_builderParams; // 0x0
-	CUtlVector< NodeData_t > m_worldNodes; // 0x68
-	BakedLightingInfo_t m_worldLightingInfo; // 0x80
-	CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > > m_entityLumps; // 0xb0
+	CUtlVector< NodeData_t > m_worldNodes; // 0x58
+	BakedLightingInfo_t m_worldLightingInfo; // 0x70
+	CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > > m_entityLumps; // 0xc0
 };
 
 // Aligment: 2
@@ -283,33 +263,22 @@ public:
 	uint32_t m_nOffsetIntoBlock; // 0x4
 };
 
-// Aligment: 2
-// Size: 8
-struct voxel_vis_mergelist_t
-{
-public:
-	uint32_t m_nFirstCluster; // 0x0
-	uint32_t m_nClusterCount; // 0x4
-};
-
-// Aligment: 13
-// Size: 216
+// Aligment: 11
+// Size: 152
 class CVoxelVisibility
 {
 public:
-	CUtlVector< uint32 > m_blockOffset; // 0x40
-	CUtlVector< voxel_vis_cluster_t > m_clusters; // 0x58
-	CUtlVector< uint16 > m_mergeClusters; // 0x70
-	CUtlVector< voxel_vis_mergelist_t > m_mergeLists; // 0x88
-	Vector m_vMinBounds; // 0xa0
-	Vector m_vMaxBounds; // 0xac
-	float m_flGridSize; // 0xb8
-	int32_t m_nNodeCount; // 0xbc
-	int32_t m_nRegionCount; // 0xc0
-	voxel_vis_cluster_t m_skyVisibilityCluster; // 0xc4
-	voxel_vis_compression_t m_nPVSCompression; // 0xcc
-	uint32_t m_nTreeSize; // 0xd0
-	uint32_t m_nPVSSizeCompressed; // 0xd4
+	CUtlVector< uint32 > m_blockOffset; // 0x30
+	CUtlVector< voxel_vis_cluster_t > m_clusters; // 0x48
+	Vector m_vMinBounds; // 0x60
+	Vector m_vMaxBounds; // 0x6c
+	float m_flGridSize; // 0x78
+	int32_t m_nNodeCount; // 0x7c
+	int32_t m_nRegionCount; // 0x80
+	voxel_vis_cluster_t m_skyVisibilityCluster; // 0x84
+	voxel_vis_compression_t m_nPVSCompression; // 0x8c
+	uint32_t m_nTreeSize; // 0x90
+	uint32_t m_nPVSSizeCompressed; // 0x94
 };
 
 // Aligment: 0
@@ -328,15 +297,31 @@ public:
 // <no members described>
 };
 
-// Aligment: 2
-// Size: 40
+// Aligment: 4
+// Size: 56
 class CEntityInstance : public IHandleEntity
 {
 public:
+	// MNetworkDisable
+	CUtlSymbolLarge m_iszPrivateVScripts; // 0x8
 	// MNetworkEnable
 	// MNetworkPriority "112"
-	CEntityIdentity* m_pEntity; // 0x8
+	CEntityIdentity* m_pEntity; // 0x10
 	// MNetworkDisable
-	CUtlStringToken m_worldGroupId; // 0x10
+	CUtlStringToken m_worldGroupId; // 0x20
+	// MNetworkEnable
+	// MNetworkDisable
+	CScriptComponent* m_CScriptComponent; // 0x30
+};
+
+// Aligment: 1
+// Size: 56
+class CScriptComponent : public CEntityComponent
+{
+public:
+	CUtlSymbolLarge m_scriptClassName; // 0x30
+public:
+	static EntComponentInfo_t &Get_s_EntComponentInfo() { return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("worldrenderer.dll")->FindDeclaredClass("CScriptComponent")->m_static_fiels[0]->m_instance); }
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced() { return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("worldrenderer.dll")->FindDeclaredClass("CScriptComponent")->m_static_fiels[1]->m_instance); }
 };
 

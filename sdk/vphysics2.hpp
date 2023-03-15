@@ -4,8 +4,8 @@
 
 ///////////////////////////////////////////
 // Binary: vphysics2.dll
-// Class Count: 147
-// Enum Count: 18
+// Class Count: 157
+// Enum Count: 20
 ///////////////////////////////////////////
 
 // Aligment: 4
@@ -62,7 +62,14 @@ enum class VPhysXAggregateData_t::VPhysXFlagEnum_t : uint32_t
 {
 	VPhysXAggregateData_t::FLAG_IS_POLYSOUP_GEOMETRY = 0x1,
 	VPhysXAggregateData_t::FLAG_LEVEL_COLLISION = 0x10,
-	VPhysXAggregateData_t::FLAG_IGNORE_SCALE_OBSOLETE_DO_NOT_USE = 0x20,
+	VPhysXAggregateData_t::FLAG_IGNORE_SCALE = 0x20,
+};
+
+// Aligment: 4
+// Size: 1
+enum class VPhysXDiskShapeHeader_t::VersinEnum_t : uint32_t
+{
+	VPhysXDiskShapeHeader_t::VERSION = 0x81,
 };
 
 // Aligment: 4
@@ -75,17 +82,19 @@ enum class MeshTranslucencyType_t : uint32_t
 };
 
 // Aligment: 4
-// Size: 8
+// Size: 10
 enum class MeshDrawPrimitiveFlags_t : uint32_t
 {
 	MESH_DRAW_FLAGS_NONE = 0x0,
 	MESH_DRAW_FLAGS_USE_SHADOW_FAST_PATH = 0x1,
 	MESH_DRAW_FLAGS_USE_COMPRESSED_NORMAL_TANGENT = 0x2,
+	MESH_DRAW_FLAGS_IS_OCCLUDER = 0x4,
 	MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL = 0x8,
 	MESH_DRAW_FLAGS_USE_COMPRESSED_PER_VERTEX_LIGHTING = 0x10,
 	MESH_DRAW_FLAGS_USE_UNCOMPRESSED_PER_VERTEX_LIGHTING = 0x20,
 	MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS = 0x40,
 	MESH_DRAW_FLAGS_DRAW_LAST = 0x80,
+	MESH_DRAW_FLAGS_HAS_LIGHTING_BASIS = 0x100,
 };
 
 // Aligment: 4
@@ -146,6 +155,17 @@ enum class ModelBoneFlexComponent_t : uint32_t
 	MODEL_BONE_FLEX_TX = 0x0,
 	MODEL_BONE_FLEX_TY = 0x1,
 	MODEL_BONE_FLEX_TZ = 0x2,
+};
+
+// Aligment: 4
+// Size: 5
+enum class ModelConfigAttachmentType_t : uint32_t
+{
+	MODEL_CONFIG_ATTACHMENT_INVALID = 0xffffffffffffffff,
+	MODEL_CONFIG_ATTACHMENT_BONE_OR_ATTACHMENT = 0x0,
+	MODEL_CONFIG_ATTACHMENT_ROOT_RELATIVE = 0x1,
+	MODEL_CONFIG_ATTACHMENT_BONEMERGE = 0x2,
+	MODEL_CONFIG_ATTACHMENT_COUNT = 0x3,
 };
 
 // Aligment: 4
@@ -301,7 +321,7 @@ public:
 };
 
 // Aligment: 98
-// Size: 1512
+// Size: 1408
 struct PhysFeModelDesc_t
 {
 public:
@@ -322,87 +342,87 @@ public:
 	uint16_t m_nQuadCount2; // 0x50
 	uint16_t m_nCollisionSphereInclusiveCount; // 0x52
 	uint16_t m_nTreeDepth; // 0x54
-	uint16_t m_nNodeBaseJiggleboneDependsCount; // 0x56
-	uint16_t m_nRopeCount; // 0x58
-	CUtlVector< uint16 > m_Ropes; // 0x60
-	CUtlVector< FeNodeBase_t > m_NodeBases; // 0x78
-	CUtlVector< FeSimdNodeBase_t > m_SimdNodeBases; // 0x90
-	CUtlVector< FeQuad_t > m_Quads; // 0xa8
-	CUtlVector< FeSimdQuad_t > m_SimdQuads; // 0xc0
-	CUtlVector< FeSimdTri_t > m_SimdTris; // 0xd8
-	CUtlVector< FeSimdRodConstraint_t > m_SimdRods; // 0xf0
-	CUtlVector< CTransform > m_InitPose; // 0x108
-	CUtlVector< FeRodConstraint_t > m_Rods; // 0x120
-	CUtlVector< FeAxialEdgeBend_t > m_AxialEdges; // 0x138
-	CUtlVector< float32 > m_NodeInvMasses; // 0x150
-	CUtlVector< FeCtrlOffset_t > m_CtrlOffsets; // 0x168
-	CUtlVector< FeCtrlOsOffset_t > m_CtrlOsOffsets; // 0x180
-	CUtlVector< FeFollowNode_t > m_FollowNodes; // 0x198
-	CUtlVector< FeCollisionSphere_t > m_CollisionSpheres; // 0x1b0
-	CUtlVector< FeCollisionPlane_t > m_CollisionPlanes; // 0x1c8
-	CUtlVector< FeNodeIntegrator_t > m_NodeIntegrator; // 0x1e0
-	CUtlVector< FeSpringIntegrator_t > m_SpringIntegrator; // 0x1f8
-	CUtlVector< FeSimdSpringIntegrator_t > m_SimdSpringIntegrator; // 0x210
-	CUtlVector< FeWorldCollisionParams_t > m_WorldCollisionParams; // 0x228
-	CUtlVector< float32 > m_LegacyStretchForce; // 0x240
-	CUtlVector< float32 > m_NodeCollisionRadii; // 0x258
-	CUtlVector< float32 > m_DynNodeFriction; // 0x270
-	CUtlVector< float32 > m_LocalRotation; // 0x288
-	CUtlVector< float32 > m_LocalForce; // 0x2a0
-	CUtlVector< FeTaperedCapsuleStretch_t > m_TaperedCapsuleStretches; // 0x2b8
-	CUtlVector< FeTaperedCapsuleRigid_t > m_TaperedCapsuleRigids; // 0x2d0
-	CUtlVector< FeSphereRigid_t > m_SphereRigids; // 0x2e8
-	CUtlVector< uint16 > m_WorldCollisionNodes; // 0x300
-	CUtlVector< uint16 > m_TreeParents; // 0x318
-	CUtlVector< uint16 > m_TreeCollisionMasks; // 0x330
-	CUtlVector< FeTreeChildren_t > m_TreeChildren; // 0x348
-	CUtlVector< uint16 > m_FreeNodes; // 0x360
-	CUtlVector< FeFitMatrix_t > m_FitMatrices; // 0x378
-	CUtlVector< FeFitWeight_t > m_FitWeights; // 0x390
-	CUtlVector< FeNodeReverseOffset_t > m_ReverseOffsets; // 0x3a8
-	CUtlVector< FeAnimStrayRadius_t > m_AnimStrayRadii; // 0x3c0
-	CUtlVector< FeSimdAnimStrayRadius_t > m_SimdAnimStrayRadii; // 0x3d8
-	CUtlVector< FeKelagerBend2_t > m_KelagerBends; // 0x3f0
-	CUtlVector< FeCtrlSoftOffset_t > m_CtrlSoftOffsets; // 0x408
-	CUtlVector< CFeIndexedJiggleBone > m_JiggleBones; // 0x420
-	CUtlVector< uint16 > m_SourceElems; // 0x438
-	CUtlVector< uint32 > m_GoalDampedSpringIntegrators; // 0x450
-	CUtlVector< FeTri_t > m_Tris; // 0x468
-	uint16_t m_nTriCount1; // 0x480
-	uint16_t m_nTriCount2; // 0x482
-	uint8_t m_nReservedUint8; // 0x484
-	uint8_t m_nExtraPressureIterations; // 0x485
-	uint8_t m_nExtraGoalIterations; // 0x486
-	uint8_t m_nExtraIterations; // 0x487
-	CUtlVector< FeBoxRigid_t > m_BoxRigids; // 0x488
-	CUtlVector< uint8 > m_DynNodeVertexSet; // 0x4a0
-	CUtlVector< uint32 > m_VertexSetNames; // 0x4b8
-	CUtlVector< FeRigidColliderIndices_t > m_RigidColliderPriorities; // 0x4d0
-	CUtlVector< FeMorphLayerDepr_t > m_MorphLayers; // 0x4e8
-	CUtlVector< uint8 > m_MorphSetData; // 0x500
-	CUtlVector< FeVertexMapDesc_t > m_VertexMaps; // 0x518
-	CUtlVector< uint8 > m_VertexMapValues; // 0x530
-	CUtlVector< FeEffectDesc_t > m_Effects; // 0x548
-	CUtlVector< FeCtrlOffset_t > m_LockToParent; // 0x560
-	CUtlVector< uint16 > m_LockToGoal; // 0x578
-	CUtlVector< FeNodeWindBase_t > m_DynNodeWindBases; // 0x590
-	float m_flInternalPressure; // 0x5a8
-	float m_flDefaultTimeDilation; // 0x5ac
-	float m_flWindage; // 0x5b0
-	float m_flWindDrag; // 0x5b4
-	float m_flDefaultSurfaceStretch; // 0x5b8
-	float m_flDefaultThreadStretch; // 0x5bc
-	float m_flDefaultGravityScale; // 0x5c0
-	float m_flDefaultVelAirDrag; // 0x5c4
-	float m_flDefaultExpAirDrag; // 0x5c8
-	float m_flDefaultVelQuadAirDrag; // 0x5cc
-	float m_flDefaultExpQuadAirDrag; // 0x5d0
-	float m_flRodVelocitySmoothRate; // 0x5d4
-	float m_flQuadVelocitySmoothRate; // 0x5d8
-	float m_flAddWorldCollisionRadius; // 0x5dc
-	float m_flDefaultVolumetricSolveAmount; // 0x5e0
-	uint16_t m_nRodVelocitySmoothIterations; // 0x5e4
-	uint16_t m_nQuadVelocitySmoothIterations; // 0x5e6
+	uint16_t m_nFitMatrixCount1; // 0x56
+	uint16_t m_nFitMatrixCount2; // 0x58
+	uint16_t m_nSimdFitMatrixCount1; // 0x5a
+	uint16_t m_nSimdFitMatrixCount2; // 0x5c
+	uint16_t m_nNodeBaseJiggleboneDependsCount; // 0x5e
+	uint16_t m_nRopeCount; // 0x60
+	CUtlVector< uint16 > m_Ropes; // 0x68
+	CUtlVector< FeNodeBase_t > m_NodeBases; // 0x80
+	CUtlVector< FeSimdNodeBase_t > m_SimdNodeBases; // 0x98
+	CUtlVector< FeQuad_t > m_Quads; // 0xb0
+	CUtlVector< FeSimdQuad_t > m_SimdQuads; // 0xc8
+	CUtlVector< FeSimdTri_t > m_SimdTris; // 0xe0
+	CUtlVector< FeSimdRodConstraint_t > m_SimdRods; // 0xf8
+	CUtlVector< CTransform > m_InitPose; // 0x110
+	CUtlVector< FeRodConstraint_t > m_Rods; // 0x128
+	CUtlVector< FeAxialEdgeBend_t > m_AxialEdges; // 0x140
+	CUtlVector< float32 > m_NodeInvMasses; // 0x158
+	CUtlVector< FeCtrlOffset_t > m_CtrlOffsets; // 0x170
+	CUtlVector< FeCtrlOsOffset_t > m_CtrlOsOffsets; // 0x188
+	CUtlVector< FeFollowNode_t > m_FollowNodes; // 0x1a0
+	CUtlVector< FeCollisionSphere_t > m_CollisionSpheres; // 0x1b8
+	CUtlVector< FeCollisionPlane_t > m_CollisionPlanes; // 0x1d0
+	CUtlVector< FeNodeIntegrator_t > m_NodeIntegrator; // 0x1e8
+	CUtlVector< FeSpringIntegrator_t > m_SpringIntegrator; // 0x200
+	CUtlVector< FeSimdSpringIntegrator_t > m_SimdSpringIntegrator; // 0x218
+	CUtlVector< FeWorldCollisionParams_t > m_WorldCollisionParams; // 0x230
+	CUtlVector< float32 > m_LegacyStretchForce; // 0x248
+	CUtlVector< float32 > m_NodeCollisionRadii; // 0x260
+	CUtlVector< float32 > m_DynNodeFriction; // 0x278
+	CUtlVector< float32 > m_LocalRotation; // 0x290
+	CUtlVector< float32 > m_LocalForce; // 0x2a8
+	CUtlVector< FeTaperedCapsuleStretch_t > m_TaperedCapsuleStretches; // 0x2c0
+	CUtlVector< FeTaperedCapsuleRigid_t > m_TaperedCapsuleRigids; // 0x2d8
+	CUtlVector< FeSphereRigid_t > m_SphereRigids; // 0x2f0
+	CUtlVector< uint16 > m_WorldCollisionNodes; // 0x308
+	CUtlVector< uint16 > m_TreeParents; // 0x320
+	CUtlVector< uint16 > m_TreeCollisionMasks; // 0x338
+	CUtlVector< FeTreeChildren_t > m_TreeChildren; // 0x350
+	CUtlVector< uint16 > m_FreeNodes; // 0x368
+	CUtlVector< FeFitMatrix_t > m_FitMatrices; // 0x380
+	CUtlVector< FeSimdFitMatrices_t > m_SimdFitMatrices; // 0x398
+	CUtlVector< FeFitWeight_t > m_FitWeights; // 0x3b0
+	CUtlVector< FeNodeReverseOffset_t > m_ReverseOffsets; // 0x3c8
+	CUtlVector< FeAnimStrayRadius_t > m_AnimStrayRadii; // 0x3e0
+	CUtlVector< FeSimdAnimStrayRadius_t > m_SimdAnimStrayRadii; // 0x3f8
+	CUtlVector< FeKelagerBend2_t > m_KelagerBends; // 0x410
+	CUtlVector< FeCtrlSoftOffset_t > m_CtrlSoftOffsets; // 0x428
+	CUtlVector< CFeIndexedJiggleBone > m_JiggleBones; // 0x440
+	CUtlVector< uint16 > m_SourceElems; // 0x458
+	CUtlVector< uint32 > m_GoalDampedSpringIntegrators; // 0x470
+	CUtlVector< FeTri_t > m_Tris; // 0x488
+	uint16_t m_nTriCount1; // 0x4a0
+	uint16_t m_nTriCount2; // 0x4a2
+	uint8_t m_nReservedUint8; // 0x4a4
+	uint8_t m_nExtraPressureIterations; // 0x4a5
+	uint8_t m_nExtraGoalIterations; // 0x4a6
+	uint8_t m_nExtraIterations; // 0x4a7
+	CUtlVector< FeBoxRigid_t > m_BoxRigids; // 0x4a8
+	CUtlVector< uint8 > m_DynNodeVertexSet; // 0x4c0
+	CUtlVector< uint32 > m_VertexSetNames; // 0x4d8
+	CUtlVector< FeRigidColliderIndices_t > m_RigidColliderPriorities; // 0x4f0
+	CUtlVector< FeMorphLayerDepr_t > m_MorphLayers; // 0x508
+	CUtlVector< uint8 > m_MorphSetData; // 0x520
+	float m_flInternalPressure; // 0x538
+	float m_flWindage; // 0x53c
+	float m_flWindDrag; // 0x540
+	float m_flDefaultSurfaceStretch; // 0x544
+	float m_flDefaultThreadStretch; // 0x548
+	float m_flDefaultGravityScale; // 0x54c
+	float m_flDefaultVelAirDrag; // 0x550
+	float m_flDefaultExpAirDrag; // 0x554
+	float m_flDefaultVelQuadAirDrag; // 0x558
+	float m_flDefaultExpQuadAirDrag; // 0x55c
+	float m_flDefaultVelRodAirDrag; // 0x560
+	float m_flDefaultExpRodAirDrag; // 0x564
+	float m_flRodVelocitySmoothRate; // 0x568
+	float m_flQuadVelocitySmoothRate; // 0x56c
+	float m_flAddWorldCollisionRadius; // 0x570
+	float m_flDefaultVolumetricSolveAmount; // 0x574
+	uint16_t m_nRodVelocitySmoothIterations; // 0x578
+	uint16_t m_nQuadVelocitySmoothIterations; // 0x57a
 };
 
 // Aligment: 2
@@ -463,15 +483,6 @@ public:
 	uint16_t nReserved; // 0x16
 };
 
-// Aligment: 2
-// Size: 12
-struct FeStiffHingeBuild_t
-{
-public:
-	float flMaxAngle; // 0x0
-	uint16[3] nNode; // 0x4
-};
-
 // Aligment: 5
 // Size: 28
 struct FeTri_t
@@ -518,17 +529,6 @@ public:
 	uint16_t nNodeY0; // 0xc
 	uint16_t nNodeY1; // 0xe
 	Quaternion qAdjust; // 0x10
-};
-
-// Aligment: 4
-// Size: 8
-struct FeNodeWindBase_t
-{
-public:
-	uint16_t nNodeX0; // 0x0
-	uint16_t nNodeX1; // 0x2
-	uint16_t nNodeY0; // 0x4
-	uint16_t nNodeY1; // 0x6
 };
 
 // Aligment: 3
@@ -758,30 +758,28 @@ public:
 	uint16[2] nChild; // 0x0
 };
 
-// Aligment: 6
-// Size: 48
+// Aligment: 5
+// Size: 40
 struct FeTaperedCapsuleRigid_t
 {
 public:
-	fltx4[2] vSphere; // 0x0
-	float flStickiness; // 0x20
-	uint16_t nNode; // 0x24
-	uint16_t nCollisionMask; // 0x26
-	uint16_t nVertexMapIndex; // 0x28
-	uint16_t nFlags; // 0x2a
+	uint16_t nNode; // 0x0
+	uint16_t nCollisionMask; // 0x2
+	Vector[2] vCenter; // 0x4
+	float32[2] flRadius; // 0x1c
+	float flStickiness; // 0x24
 };
 
-// Aligment: 6
-// Size: 32
+// Aligment: 5
+// Size: 24
 struct FeSphereRigid_t
 {
 public:
-	fltx4 vSphere; // 0x0
-	float flStickiness; // 0x10
-	uint16_t nNode; // 0x14
-	uint16_t nCollisionMask; // 0x16
-	uint16_t nVertexMapIndex; // 0x18
-	uint16_t nFlags; // 0x1a
+	uint16_t nNode; // 0x0
+	uint16_t nCollisionMask; // 0x2
+	Vector vCenter; // 0x4
+	float flRadius; // 0x10
+	float flStickiness; // 0x14
 };
 
 // Aligment: 5
@@ -797,7 +795,7 @@ public:
 	float flStickiness; // 0x10
 };
 
-// Aligment: 8
+// Aligment: 6
 // Size: 80
 struct FeBoxRigid_t
 {
@@ -806,9 +804,7 @@ public:
 	uint16_t nCollisionMask; // 0x2
 	Vector vSize; // 0x4
 	float flStickiness; // 0x10
-	uint16_t nVertexMapIndex; // 0x14
-	uint16_t nFlags; // 0x16
-	float32[2] flReserved; // 0x18
+	float32[3] flReserved; // 0x14
 	matrix3x4a_t tmFrame; // 0x20
 };
 
@@ -854,7 +850,7 @@ public:
 	uint32_t nMatrixNode; // 0x8
 };
 
-// Aligment: 5
+// Aligment: 6
 // Size: 64
 struct FeFitMatrix_t
 {
@@ -863,7 +859,21 @@ public:
 	Vector vCenter; // 0x20
 	uint16_t nEnd; // 0x2c
 	uint16_t nNode; // 0x2e
-	uint16_t nBeginDynamic; // 0x30
+	uint16_t nCtrl; // 0x30
+	uint16_t nBeginDynamic; // 0x32
+};
+
+// Aligment: 6
+// Size: 192
+struct FeSimdFitMatrices_t
+{
+public:
+	FourVectors vCenter; // 0x0
+	uint16[4] nEnd; // 0x30
+	uint16[4] nCtrl; // 0x38
+	FourCovMatrices3 AqqInv; // 0x40
+	fltx4 flStretchMin; // 0xa0
+	fltx4 flStretchMax; // 0xb0
 };
 
 // Aligment: 5
@@ -878,31 +888,28 @@ public:
 	uint16_t m_nCollisionPlaneIndex; // 0xa
 };
 
-// Aligment: 2
-// Size: 64
+// Aligment: 1
+// Size: 44
 struct FeBuildTaperedCapsuleRigid_t : public FeTaperedCapsuleRigid_t
 {
 public:
-	int32_t m_nPriority; // 0x30
-	uint32_t m_nVertexMapHash; // 0x34
+	int32_t m_nPriority; // 0x28
 };
 
-// Aligment: 2
+// Aligment: 1
 // Size: 96
 struct FeBuildBoxRigid_t : public FeBoxRigid_t
 {
 public:
 	int32_t m_nPriority; // 0x50
-	uint32_t m_nVertexMapHash; // 0x54
 };
 
-// Aligment: 2
-// Size: 48
+// Aligment: 1
+// Size: 28
 struct FeBuildSphereRigid_t : public FeSphereRigid_t
 {
 public:
-	int32_t m_nPriority; // 0x20
-	uint32_t m_nVertexMapHash; // 0x24
+	int32_t m_nPriority; // 0x18
 };
 
 // Aligment: 1
@@ -911,51 +918,6 @@ struct FeSourceEdge_t
 {
 public:
 	uint16[2] nNode; // 0x0
-};
-
-// Aligment: 4
-// Size: 32
-struct FeEffectDesc_t
-{
-public:
-	CUtlString sName; // 0x0
-	uint32_t nNameHash; // 0x8
-	int32_t nType; // 0xc
-	KeyValues3 m_Params; // 0x10
-};
-
-// Aligment: 3
-// Size: 40
-struct FeVertexMapBuild_t
-{
-public:
-	CUtlString m_VertexMapName; // 0x0
-	uint32_t m_nNameHash; // 0x8
-	CUtlVector< float32 > m_Weights; // 0x10
-};
-
-// Aligment: 2
-// Size: 16
-struct FeProxyVertexMap_t
-{
-public:
-	CUtlString m_Name; // 0x0
-	float m_flWeight; // 0x8
-};
-
-// Aligment: 8
-// Size: 32
-struct FeVertexMapDesc_t
-{
-public:
-	CUtlString sName; // 0x0
-	uint32_t nNameHash; // 0x8
-	uint32_t nFlags; // 0xc
-	uint16_t nVertexBase; // 0x10
-	uint16_t nVertexCount; // 0x12
-	uint32_t nMapOffset; // 0x14
-	uint32_t nNodeListOffset; // 0x18
-	uint16_t nNodeListCount; // 0x1c
 };
 
 // Aligment: 8
@@ -1207,29 +1169,37 @@ public:
 	CUtlVector< uint16 > m_CollisionAttributeIndices; // 0x60
 };
 
-// Aligment: 10
-// Size: 160
+// Aligment: 11
+// Size: 184
 struct VPhysXBodyPart_t
 {
 public:
 	uint32_t m_nFlags; // 0x0
 	float m_flMass; // 0x4
 	VPhysics2ShapeDef_t m_rnShape; // 0x8
-	uint16_t m_nCollisionAttributeIndex; // 0x80
-	uint16_t m_nReserved; // 0x82
-	float m_flInertiaScale; // 0x84
-	float m_flLinearDamping; // 0x88
-	float m_flAngularDamping; // 0x8c
-	bool m_bOverrideMassCenter; // 0x90
-	Vector m_vMassCenterOverride; // 0x94
+	CUtlVector< uint8 > m_nSurfacepropertyIndices; // 0x80
+	uint16_t m_nCollisionAttributeIndex; // 0x98
+	uint16_t m_nReserved; // 0x9a
+	float m_flInertiaScale; // 0x9c
+	float m_flLinearDamping; // 0xa0
+	float m_flAngularDamping; // 0xa4
+	bool m_bOverrideMassCenter; // 0xa8
+	Vector m_vMassCenterOverride; // 0xac
 };
 
-// Aligment: 1
-// Size: 24
+// Aligment: 8
+// Size: 160
 struct VPhysXCollisionAttributes_t
 {
 public:
-	CUtlVector< CUtlString > m_PhysicsTagStrings; // 0x0
+	uint32_t m_CollisionGroup; // 0x0
+	CUtlVector< uint32 > m_InteractAs; // 0x8
+	CUtlVector< uint32 > m_InteractWith; // 0x20
+	CUtlVector< uint32 > m_InteractExclude; // 0x38
+	CUtlString m_CollisionGroupString; // 0x50
+	CUtlVector< CUtlString > m_InteractAsStrings; // 0x58
+	CUtlVector< CUtlString > m_InteractWithStrings; // 0x70
+	CUtlVector< CUtlString > m_InteractExcludeStrings; // 0x88
 };
 
 // Aligment: 2
@@ -1371,8 +1341,8 @@ public:
 	CUtlString m_embeddedKeyvalues; // 0x130
 };
 
-// Aligment: 6
-// Size: 24
+// Aligment: 5
+// Size: 20
 class CPhysSurfacePropertiesPhysics
 {
 public:
@@ -1382,22 +1352,21 @@ public:
 	// MDefaultString
 	float m_thickness; // 0xc
 	float m_dampening; // 0x10
-	// MDefaultString
-	float m_bouncethreshold; // 0x14
 };
 
-// Aligment: 6
-// Size: 24
+// Aligment: 7
+// Size: 28
 class CPhysSurfacePropertiesAudio
 {
 public:
-	float m_hardnessFactor; // 0x0
-	float m_roughnessFactor; // 0x4
-	float m_roughThreshold; // 0x8
-	float m_hardThreshold; // 0xc
+	float m_reflectivity; // 0x0
+	float m_hardnessFactor; // 0x4
+	float m_roughnessFactor; // 0x8
+	float m_roughThreshold; // 0xc
+	float m_hardThreshold; // 0x10
 	// MDefaultString
-	float m_hardVelocityThreshold; // 0x10
-	float m_flStaticImpactVolume; // 0x14
+	float m_hardVelocityThreshold; // 0x14
+	float m_flStaticImpactVolume; // 0x18
 };
 
 // Aligment: 8
@@ -1416,7 +1385,7 @@ public:
 };
 
 // Aligment: 8
-// Size: 184
+// Size: 160
 class CPhysSurfaceProperties
 {
 public:
@@ -1436,6 +1405,44 @@ class CVPhysXSurfacePropertiesList
 {
 public:
 	CUtlVector< CPhysSurfaceProperties* > m_surfacePropertiesList; // 0x0
+};
+
+// Aligment: 2
+// Size: 4
+struct VPhysXDiskShapeHeader_t
+{
+public:
+	uint8_t m_nType; // 0x0
+	uint16_t m_nCollisionAttribute; // 0x2
+};
+
+// Aligment: 4
+// Size: 28
+struct VPhysXDiskMesh2_t : public VPhysXDiskShapeHeader_t
+{
+public:
+	CResourceArray< uint8 > m_shape; // 0x4
+	float m_flSkinWidth; // 0xc
+	float m_flMaxVelocity; // 0x10
+	uint32[2] m_nReserved2; // 0x14
+};
+
+// Aligment: 2
+// Size: 20
+struct VPhysXShapeCompoundHeader2_t : public VPhysXDiskShapeHeader_t
+{
+public:
+	CResourceArray< CResourceArray< uint8 > > m_components; // 0x4
+	CResourceArray< uint8 > m_types; // 0xc
+};
+
+// Aligment: 2
+// Size: 32
+struct VPhysXDiskCapsule_t : public VPhysXDiskShapeHeader_t
+{
+public:
+	Vector[2] m_vEnds; // 0x4
+	float m_flRadius; // 0x1c
 };
 
 // Aligment: 2
@@ -1510,8 +1517,8 @@ public:
 	CUtlVector< ModelBoneFlexDriverControl_t > m_controls; // 0x10
 };
 
-// Aligment: 20
-// Size: 632
+// Aligment: 21
+// Size: 640
 struct PermModelData_t
 {
 public:
@@ -1534,7 +1541,111 @@ public:
 	CUtlVector< int16 > m_remappingTable; // 0x218
 	CUtlVector< uint16 > m_remappingTableStarts; // 0x230
 	CUtlVector< ModelBoneFlexDriver_t > m_boneFlexDrivers; // 0x248
-	CUtlVector< CUtlString > m_BodyGroupsHiddenInTools; // 0x260
+	CModelConfigList* m_pModelConfigList; // 0x260
+	CUtlVector< CUtlString > m_BodyGroupsHiddenInTools; // 0x268
+};
+
+// Aligment: 2
+// Size: 72
+class CModelConfigElement
+{
+public:
+	CUtlString m_ElementName; // 0x8
+	CUtlVector< CModelConfigElement* > m_NestedElements; // 0x10
+};
+
+// Aligment: 9
+// Size: 208
+class CModelConfigElement_AttachedModel : public CModelConfigElement
+{
+public:
+	CUtlString m_InstanceName; // 0x48
+	CUtlString m_EntityClass; // 0x50
+	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x58
+	Vector m_vOffset; // 0x60
+	QAngle m_aAngOffset; // 0x6c
+	CUtlString m_AttachmentName; // 0x78
+	ModelConfigAttachmentType_t m_AttachmentType; // 0x80
+	bool m_bUserSpecifiedColor; // 0x84
+	bool m_bUserSpecifiedMaterialGroup; // 0x85
+};
+
+// Aligment: 1
+// Size: 96
+class CModelConfigElement_UserPick : public CModelConfigElement
+{
+public:
+	CUtlVector< CUtlString > m_Choices; // 0x48
+};
+
+// Aligment: 1
+// Size: 96
+class CModelConfigElement_RandomPick : public CModelConfigElement
+{
+public:
+	CUtlVector< CUtlString > m_Choices; // 0x48
+};
+
+// Aligment: 1
+// Size: 80
+class CModelConfigElement_SetMaterialGroup : public CModelConfigElement
+{
+public:
+	CUtlString m_MaterialGroupName; // 0x48
+};
+
+// Aligment: 1
+// Size: 80
+class CModelConfigElement_SetRenderColor : public CModelConfigElement
+{
+public:
+	Color m_Color; // 0x48
+};
+
+// Aligment: 1
+// Size: 96
+class CModelConfigElement_RandomColor : public CModelConfigElement
+{
+public:
+	CColorGradient m_Gradient; // 0x48
+};
+
+// Aligment: 2
+// Size: 88
+class CModelConfigElement_SetBodygroup : public CModelConfigElement
+{
+public:
+	CUtlString m_GroupName; // 0x48
+	int32_t m_nChoice; // 0x50
+};
+
+// Aligment: 2
+// Size: 96
+class CModelConfigElement_Command : public CModelConfigElement
+{
+public:
+	CUtlString m_Command; // 0x48
+	KeyValues3 m_Args; // 0x50
+};
+
+// Aligment: 3
+// Size: 40
+class CModelConfig
+{
+public:
+	CUtlString m_ConfigName; // 0x0
+	CUtlVector< CModelConfigElement* > m_Elements; // 0x8
+	bool m_bTopLevel; // 0x20
+};
+
+// Aligment: 3
+// Size: 32
+class CModelConfigList
+{
+public:
+	bool m_bHideMaterialGroupInTools; // 0x0
+	bool m_bHideRenderColorInTools; // 0x1
+	CUtlVector< CModelConfig* > m_Configs; // 0x8
 };
 
 // Aligment: 2
@@ -1587,8 +1698,8 @@ public:
 	int8_t m_ConeCutoff; // 0xf
 };
 
-// Aligment: 13
-// Size: 192
+// Aligment: 12
+// Size: 208
 class CMaterialDrawDescriptor
 {
 public:
@@ -1602,10 +1713,9 @@ public:
 	float m_flUvDensity; // 0x1c
 	// MDefaultString
 	Vector m_vTintColor; // 0x24
-	int16_t m_CullDataIndex; // 0x32
-	int32_t m_nMeshID; // 0x34
-	CRenderBufferBinding m_indexBuffer; // 0xa0
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_material; // 0xb8
+	int8_t m_CullDataIndex; // 0x32
+	CRenderBufferBinding m_indexBuffer; // 0xb0
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_material; // 0xc8
 };
 
 // Aligment: 5
@@ -1635,25 +1745,23 @@ public:
 	bool m_bIgnoreRotation; // 0x84
 };
 
-// Aligment: 14
-// Size: 112
+// Aligment: 12
+// Size: 120
 class CHitBox
 {
 public:
-	Vector m_vMinBounds; // 0x20
-	Vector m_vMaxBounds; // 0x2c
-	CUtlString m_name; // 0x38
-	CUtlString m_sSurfaceProperty; // 0x40
-	CUtlString m_sBoneName; // 0x48
-	float m_flShapeRadius; // 0x50
-	uint32_t m_nBoneNameHash; // 0x54
-	int32_t m_nGroupId; // 0x58
-	Color m_cRenderColor; // 0x5c
-	uint16_t m_nHitBoxIndex; // 0x60
-	uint8_t m_nShapeType; // 0x62
-	bool m_bTranslationOnly; // 0x64
-	bool m_bVisible; // 0x65
-	bool m_bSelected; // 0x66
+	CUtlString m_name; // 0x30
+	CUtlString m_sSurfaceProperty; // 0x38
+	CUtlString m_sBoneName; // 0x40
+	uint32_t m_nBoneNameHash; // 0x48
+	int32_t m_nGroupId; // 0x4c
+	Color m_cRenderColor; // 0x50
+	uint16_t m_nHitBoxIndex; // 0x54
+	Vector m_vMinBounds; // 0x58
+	Vector m_vMaxBounds; // 0x64
+	bool m_bTranslationOnly; // 0x71
+	bool m_bVisible; // 0x72
+	bool m_bSelected; // 0x73
 };
 
 // Aligment: 4
@@ -1676,7 +1784,7 @@ public:
 };
 
 // Aligment: 3
-// Size: 448
+// Size: 456
 class CRenderMesh
 {
 public:
@@ -1686,7 +1794,7 @@ public:
 };
 
 // Aligment: 6
-// Size: 112
+// Size: 80
 class CConstraintTarget
 {
 public:
@@ -1773,15 +1881,17 @@ public:
 	int32_t m_nSlaveAxis; // 0x74
 };
 
-// Aligment: 4
-// Size: 144
+// Aligment: 6
+// Size: 176
 class CMorphConstraint : public CBaseConstraint, CBoneConstraintBase
 {
 public:
-	CUtlString m_sTargetMorph; // 0x70
-	int32_t m_nSlaveChannel; // 0x78
-	float m_flMin; // 0x7c
-	float m_flMax; // 0x80
+	bool m_bCacheAttempted; // 0x70
+	bool m_bCacheOk; // 0x71
+	CUtlString m_sTargetMorph; // 0x78
+	int32_t m_nSlaveChannel; // 0x80
+	float m_flMin; // 0x84
+	float m_flMax; // 0x88
 };
 
 // Aligment: 0
@@ -1802,7 +1912,7 @@ public:
 };
 
 // Aligment: 5
-// Size: 168
+// Size: 160
 class CBoneConstraintPoseSpaceMorph : public CBoneConstraintBase
 {
 public:
@@ -1932,6 +2042,70 @@ public:
 	float m_flTraceRadius; // 0x3c
 };
 
+// Aligment: 2
+// Size: 8
+class CFingerSource
+{
+public:
+	AnimVRFinger_t m_nFingerIndex; // 0x0
+	float m_flFingerWeight; // 0x4
+};
+
+// Aligment: 7
+// Size: 56
+class CFingerBone
+{
+public:
+	CUtlString m_boneName; // 0x0
+	Vector m_hingeAxis; // 0x8
+	Vector m_vCapsulePos1; // 0x14
+	Vector m_vCapsulePos2; // 0x20
+	float m_flMinAngle; // 0x2c
+	float m_flMaxAngle; // 0x30
+	float m_flRadius; // 0x34
+};
+
+// Aligment: 10
+// Size: 112
+class CFingerChain
+{
+public:
+	CUtlVector< CFingerSource > m_targets; // 0x0
+	CUtlVector< CFingerBone > m_bones; // 0x18
+	CUtlString m_name; // 0x30
+	CUtlString m_tipParentBoneName; // 0x38
+	Vector m_vTipOffset; // 0x40
+	CUtlString m_metacarpalBoneName; // 0x50
+	Vector m_vSplayHingeAxis; // 0x58
+	float m_flSplayMinAngle; // 0x64
+	float m_flSplayMaxAngle; // 0x68
+	float m_flFingerScaleRatio; // 0x6c
+};
+
+// Aligment: 4
+// Size: 48
+class CWristBone
+{
+public:
+	CUtlString m_name; // 0x0
+	Vector m_vForwardLS; // 0x8
+	Vector m_vUpLS; // 0x14
+	Vector m_vOffset; // 0x20
+};
+
+// Aligment: 6
+// Size: 80
+class CVrSkeletalInputSettings
+{
+public:
+	CUtlVector< CWristBone > m_wristBones; // 0x0
+	CUtlVector< CFingerChain > m_fingers; // 0x18
+	CUtlString m_name; // 0x30
+	CUtlString m_outerKnuckle1; // 0x38
+	CUtlString m_outerKnuckle2; // 0x40
+	AnimVRHand_t m_eHand; // 0x48
+};
+
 // Aligment: 1
 // Size: 4
 class CCycleBase
@@ -2010,69 +2184,5 @@ public:
 	CUtlVector< CFootStride > m_strides; // 0x0
 	CUtlString m_name; // 0x18
 	bool m_bAdditive; // 0x20
-};
-
-// Aligment: 2
-// Size: 8
-class CFingerSource
-{
-public:
-	AnimVRFinger_t m_nFingerIndex; // 0x0
-	float m_flFingerWeight; // 0x4
-};
-
-// Aligment: 7
-// Size: 56
-class CFingerBone
-{
-public:
-	CUtlString m_boneName; // 0x0
-	Vector m_hingeAxis; // 0x8
-	Vector m_vCapsulePos1; // 0x14
-	Vector m_vCapsulePos2; // 0x20
-	float m_flMinAngle; // 0x2c
-	float m_flMaxAngle; // 0x30
-	float m_flRadius; // 0x34
-};
-
-// Aligment: 10
-// Size: 112
-class CFingerChain
-{
-public:
-	CUtlVector< CFingerSource > m_targets; // 0x0
-	CUtlVector< CFingerBone > m_bones; // 0x18
-	CUtlString m_name; // 0x30
-	CUtlString m_tipParentBoneName; // 0x38
-	Vector m_vTipOffset; // 0x40
-	CUtlString m_metacarpalBoneName; // 0x50
-	Vector m_vSplayHingeAxis; // 0x58
-	float m_flSplayMinAngle; // 0x64
-	float m_flSplayMaxAngle; // 0x68
-	float m_flFingerScaleRatio; // 0x6c
-};
-
-// Aligment: 4
-// Size: 48
-class CWristBone
-{
-public:
-	CUtlString m_name; // 0x0
-	Vector m_vForwardLS; // 0x8
-	Vector m_vUpLS; // 0x14
-	Vector m_vOffset; // 0x20
-};
-
-// Aligment: 6
-// Size: 80
-class CVrSkeletalInputSettings
-{
-public:
-	CUtlVector< CWristBone > m_wristBones; // 0x0
-	CUtlVector< CFingerChain > m_fingers; // 0x18
-	CUtlString m_name; // 0x30
-	CUtlString m_outerKnuckle1; // 0x38
-	CUtlString m_outerKnuckle2; // 0x40
-	AnimVRHand_t m_eHand; // 0x48
 };
 

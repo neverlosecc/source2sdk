@@ -4,7 +4,7 @@
 
 ///////////////////////////////////////////
 // Binary: soundsystem.dll
-// Class Count: 16
+// Class Count: 15
 // Enum Count: 7
 ///////////////////////////////////////////
 
@@ -69,7 +69,7 @@ enum class vmix_filter_type_t : uint16_t
 };
 
 // Aligment: 2
-// Size: 13
+// Size: 12
 enum class vmix_processor_type_t : uint16_t
 {
 	VPROCESSOR_UNKNOWN = 0,
@@ -84,7 +84,6 @@ enum class vmix_processor_type_t : uint16_t
 	VPROCESSOR_STEAMAUDIO_PATHING = 9,
 	VPROCESSOR_EQ8 = 10,
 	VPROCESSOR_ENVELOPE = 11,
-	VPROCESSOR_VOCODER = 12,
 };
 
 // Aligment: 3
@@ -269,31 +268,12 @@ public:
 	float m_flReleaseTimeMS; // 0x8
 };
 
-// Aligment: 4
-// Size: 16
+// Aligment: 2
+// Size: 8
 struct vmix_pitch_shift_desc_t
 {
 public:
 	int32_t m_nGrainSampleCount; // 0x0
 	float m_flPitchShift; // 0x4
-	int32_t m_nQuality; // 0x8
-	int32_t m_nProcType; // 0xc
-};
-
-// Aligment: 10
-// Size: 40
-struct vmix_vocoder_desc_t
-{
-public:
-	int32_t m_nBandCount; // 0x0
-	float m_flBandwidth; // 0x4
-	float m_fldBModGain; // 0x8
-	float m_flFreqRangeStart; // 0xc
-	float m_flFreqRangeEnd; // 0x10
-	float m_fldBUnvoicedGain; // 0x14
-	float m_flAttackTimeMS; // 0x18
-	float m_flReleaseTimeMS; // 0x1c
-	int32_t m_nDebugBand; // 0x20
-	bool m_bPeakMode; // 0x24
 };
 

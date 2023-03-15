@@ -4,8 +4,8 @@
 
 ///////////////////////////////////////////
 // Binary: animationsystem.dll
-// Class Count: 192
-// Enum Count: 47
+// Class Count: 175
+// Enum Count: 44
 ///////////////////////////////////////////
 
 // Aligment: 4
@@ -67,7 +67,7 @@ enum class SeqPoseSetting_t : uint32_t
 };
 
 // Aligment: 1
-// Size: 69
+// Size: 67
 enum class fieldtype_t : uint8_t
 {
 	FIELD_VOID = 0,
@@ -113,32 +113,30 @@ enum class fieldtype_t : uint8_t
 	FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTOR = 40,
 	FIELD_HMATERIAL = 41,
 	FIELD_HMODEL = 42,
-	FIELD_HANIMATIONGRAPH = 43,
-	FIELD_NETWORK_QUANTIZED_VECTOR = 44,
-	FIELD_NETWORK_QUANTIZED_FLOAT = 45,
-	FIELD_DIRECTION_VECTOR_WORLDSPACE = 46,
-	FIELD_QANGLE_WORLDSPACE = 47,
-	FIELD_QUATERNION_WORLDSPACE = 48,
-	FIELD_HSCRIPT_LIGHTBINDING = 49,
-	FIELD_V8_VALUE = 50,
-	FIELD_V8_OBJECT = 51,
-	FIELD_V8_ARRAY = 52,
-	FIELD_V8_CALLBACK_INFO = 53,
-	FIELD_UTLSTRING = 54,
-	FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_POSITION_VECTOR = 55,
-	FIELD_HRENDERTEXTURE = 56,
-	FIELD_HPARTICLESYSTEMDEFINITION = 57,
-	FIELD_UINT8 = 58,
-	FIELD_UINT16 = 59,
-	FIELD_CTRANSFORM = 60,
-	FIELD_CTRANSFORM_WORLDSPACE = 61,
-	FIELD_HPOSTPROCESSING = 62,
-	FIELD_MATRIX3X4 = 63,
-	FIELD_SHIM = 64,
-	FIELD_CMOTIONTRANSFORM = 65,
-	FIELD_CMOTIONTRANSFORM_WORLDSPACE = 66,
-	FIELD_ATTACHMENT_HANDLE = 67,
-	FIELD_TYPECOUNT = 68,
+	FIELD_NETWORK_QUANTIZED_VECTOR = 43,
+	FIELD_NETWORK_QUANTIZED_FLOAT = 44,
+	FIELD_DIRECTION_VECTOR_WORLDSPACE = 45,
+	FIELD_QANGLE_WORLDSPACE = 46,
+	FIELD_QUATERNION_WORLDSPACE = 47,
+	FIELD_HSCRIPT_LIGHTBINDING = 48,
+	FIELD_V8_VALUE = 49,
+	FIELD_V8_OBJECT = 50,
+	FIELD_V8_ARRAY = 51,
+	FIELD_V8_CALLBACK_INFO = 52,
+	FIELD_UTLSTRING = 53,
+	FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_POSITION_VECTOR = 54,
+	FIELD_HRENDERTEXTURE = 55,
+	FIELD_HPARTICLESYSTEMDEFINITION = 56,
+	FIELD_UINT8 = 57,
+	FIELD_UINT16 = 58,
+	FIELD_CTRANSFORM = 59,
+	FIELD_CTRANSFORM_WORLDSPACE = 60,
+	FIELD_HPOSTPROCESSING = 61,
+	FIELD_MATRIX3X4 = 62,
+	FIELD_SHIM = 63,
+	FIELD_CMOTIONTRANSFORM = 64,
+	FIELD_CMOTIONTRANSFORM_WORLDSPACE = 65,
+	FIELD_TYPECOUNT = 66,
 };
 
 // Aligment: 4
@@ -172,30 +170,12 @@ enum class AnimParamButton_t : uint32_t
 };
 
 // Aligment: 4
-// Size: 4
-enum class BoneTransformSpace_t : uint32_t
-{
-	BoneTransformSpace_Invalid = 0xffffffffffffffff,
-	BoneTransformSpace_Parent = 0x0,
-	BoneTransformSpace_Model = 0x1,
-	BoneTransformSpace_World = 0x2,
-};
-
-// Aligment: 4
 // Size: 3
 enum class AnimNodeNetworkMode : uint32_t
 {
 	ServerAuthoritative = 0x0,
 	ClientSimulate = 0x1,
 	ClientPredicted = 0x2,
-};
-
-// Aligment: 4
-// Size: 2
-enum class SolveIKChainAnimNodeSettingSource : uint32_t
-{
-	SOLVEIKCHAINANIMNODESETTINGSOURCE_Default = 0x0,
-	SOLVEIKCHAINANIMNODESETTINGSOURCE_Override = 0x1,
 };
 
 // Aligment: 4
@@ -244,14 +224,6 @@ enum class AnimVrFingerSplay_t : uint32_t
 };
 
 // Aligment: 4
-// Size: 2
-enum class AnimVrBoneTransformSource_t : uint32_t
-{
-	AnimVrBoneTransformSource_LiveStream = 0x0,
-	AnimVrBoneTransformSource_GripLimit = 0x1,
-};
-
-// Aligment: 4
 // Size: 6
 enum class IKSolverType : uint32_t
 {
@@ -282,7 +254,7 @@ enum class IKTargetCoordinateSystem : uint32_t
 };
 
 // Aligment: 4
-// Size: 36
+// Size: 35
 enum class AnimValueSource : uint32_t
 {
 	MoveHeading = 0x0,
@@ -290,41 +262,40 @@ enum class AnimValueSource : uint32_t
 	ForwardSpeed = 0x2,
 	StrafeSpeed = 0x3,
 	FacingHeading = 0x4,
-	ManualFacingHeading = 0x5,
-	LookHeading = 0x6,
-	LookPitch = 0x7,
-	Parameter = 0x8,
-	WayPointHeading = 0x9,
-	WayPointDistance = 0xa,
-	BoundaryRadius = 0xb,
-	TargetMoveHeading = 0xc,
-	TargetMoveSpeed = 0xd,
-	AccelerationHeading = 0xe,
-	AccelerationSpeed = 0xf,
-	SlopeHeading = 0x10,
-	SlopeAngle = 0x11,
-	SlopePitch = 0x12,
-	SlopeYaw = 0x13,
-	GoalDistance = 0x14,
-	AccelerationLeftRight = 0x15,
-	AccelerationFrontBack = 0x16,
-	RootMotionSpeed = 0x17,
-	RootMotionTurnSpeed = 0x18,
-	MoveHeadingRelativeToLookHeading = 0x19,
-	MaxMoveSpeed = 0x1a,
-	FingerCurl_Thumb = 0x1b,
-	FingerCurl_Index = 0x1c,
-	FingerCurl_Middle = 0x1d,
-	FingerCurl_Ring = 0x1e,
-	FingerCurl_Pinky = 0x1f,
-	FingerSplay_Thumb_Index = 0x20,
-	FingerSplay_Index_Middle = 0x21,
-	FingerSplay_Middle_Ring = 0x22,
-	FingerSplay_Ring_Pinky = 0x23,
+	LookHeading = 0x5,
+	LookPitch = 0x6,
+	Parameter = 0x7,
+	WayPointHeading = 0x8,
+	WayPointDistance = 0x9,
+	BoundaryRadius = 0xa,
+	TargetMoveHeading = 0xb,
+	TargetMoveSpeed = 0xc,
+	AccelerationHeading = 0xd,
+	AccelerationSpeed = 0xe,
+	SlopeHeading = 0xf,
+	SlopeAngle = 0x10,
+	SlopePitch = 0x11,
+	SlopeYaw = 0x12,
+	GoalDistance = 0x13,
+	AccelerationLeftRight = 0x14,
+	AccelerationFrontBack = 0x15,
+	RootMotionSpeed = 0x16,
+	RootMotionTurnSpeed = 0x17,
+	MoveHeadingRelativeToLookHeading = 0x18,
+	MaxMoveSpeed = 0x19,
+	FingerCurl_Thumb = 0x1a,
+	FingerCurl_Index = 0x1b,
+	FingerCurl_Middle = 0x1c,
+	FingerCurl_Ring = 0x1d,
+	FingerCurl_Pinky = 0x1e,
+	FingerSplay_Thumb_Index = 0x1f,
+	FingerSplay_Index_Middle = 0x20,
+	FingerSplay_Middle_Ring = 0x21,
+	FingerSplay_Ring_Pinky = 0x22,
 };
 
 // Aligment: 4
-// Size: 13
+// Size: 14
 enum class AnimVectorSource : uint32_t
 {
 	MoveDirection = 0x0,
@@ -332,14 +303,15 @@ enum class AnimVectorSource : uint32_t
 	LookDirection = 0x2,
 	VectorParameter = 0x3,
 	WayPointDirection = 0x4,
-	Acceleration = 0x5,
-	SlopeNormal = 0x6,
-	SlopeNormal_WorldSpace = 0x7,
-	LookTarget = 0x8,
-	LookTarget_WorldSpace = 0x9,
-	WayPointPosition = 0xa,
-	GoalPosition = 0xb,
-	RootMotionVelocity = 0xc,
+	TargetMoveDirection = 0x5,
+	Acceleration = 0x6,
+	SlopeNormal = 0x7,
+	SlopeNormal_WorldSpace = 0x8,
+	LookTarget = 0x9,
+	LookTarget_WorldSpace = 0xa,
+	WayPointPosition = 0xb,
+	GoalPosition = 0xc,
+	RootMotionVelocity = 0xd,
 };
 
 // Aligment: 4
@@ -433,6 +405,14 @@ enum class CGroundIKSolveAnimNode::DebugSkeletonBoneType_t : uint32_t
 	CGroundIKSolveAnimNode::FLAG_PROCEDURAL = 0x400000,
 	CGroundIKSolveAnimNode::FLAG_IK = 0x800000,
 	CGroundIKSolveAnimNode::FLAG_ALL_BONE_FLAGS = 0xffffff,
+};
+
+// Aligment: 4
+// Size: 2
+enum class SolveIKChainAnimNodeSettingSource : uint32_t
+{
+	SOLVEIKCHAINANIMNODESETTINGSOURCE_Default = 0x0,
+	SOLVEIKCHAINANIMNODESETTINGSOURCE_Override = 0x1,
 };
 
 // Aligment: 4
@@ -579,14 +559,6 @@ enum class FootLockSubVisualization : uint32_t
 {
 	FOOTLOCKSUBVISUALIZATION_ReachabilityAnalysis = 0x0,
 	FOOTLOCKSUBVISUALIZATION_IKSolve = 0x1,
-};
-
-// Aligment: 4
-// Size: 2
-enum class StepPhase : uint32_t
-{
-	StepPhase_OnGround = 0x0,
-	StepPhase_InAir = 0x1,
 };
 
 // Aligment: 4
@@ -823,8 +795,8 @@ public:
 	CAnimEncodeDifference m_usageDifferences; // 0x30
 };
 
-// Aligment: 6
-// Size: 6
+// Aligment: 5
+// Size: 5
 class CAnimDesc_Flag
 {
 public:
@@ -833,7 +805,6 @@ public:
 	bool m_bHidden; // 0x2
 	bool m_bDelta; // 0x3
 	bool m_bLegacyWorldspace; // 0x4
-	bool m_bModelDoc; // 0x5
 };
 
 // Aligment: 2
@@ -1078,8 +1049,8 @@ public:
 	bool m_bCalculatePoseParameters; // 0x64
 };
 
-// Aligment: 11
-// Size: 11
+// Aligment: 10
+// Size: 10
 class CSeqSeqDescFlag
 {
 public:
@@ -1093,7 +1064,6 @@ public:
 	bool m_bLegacyWorldspace; // 0x7
 	bool m_bLegacyCyclepose; // 0x8
 	bool m_bLegacyRealtime; // 0x9
-	bool m_bModelDoc; // 0xa
 };
 
 // Aligment: 2
@@ -1310,14 +1280,6 @@ public:
 
 // Aligment: 1
 // Size: 4
-class AnimOutputID
-{
-public:
-	uint32_t m_id; // 0x0
-};
-
-// Aligment: 1
-// Size: 4
 class AnimStateID
 {
 public:
@@ -1393,46 +1355,26 @@ public:
 	IKTargetCoordinateSystem m_TargetCoordSystem; // 0x1c
 };
 
-// Aligment: 2
-// Size: 16
-class CBoneMergeModel
-{
-public:
-	// MPropertyHideField
-	CUtlString m_name; // 0x0
-	// MPropertyHideField
-	bool m_bEnabled; // 0x8
-};
-
-// Aligment: 8
-// Size: 144
+// Aligment: 7
+// Size: 256
 class CAnimationGraph
 {
 public:
-	CSmartPtr< CAnimNodeManager > m_nodeManager; // 0x8
-	CSmartPtr< CAnimParameterList > m_pParameterList; // 0x10
-	CSmartPtr< CAnimTagManager > m_pTagManager; // 0x18
-	CSmartPtr< CAnimMovementManager > m_pMovementManager; // 0x20
-	CSmartPtr< CAnimGraphSettingsManager > m_pSettingsManager; // 0x28
-	CSmartPtr< CActivityValueList > m_pActivityValuesList; // 0x40
-	CUtlVector< CUtlString > m_previewModels; // 0x48
-	CUtlVector< CBoneMergeModel > m_boneMergeModels; // 0x60
+	CSmartPtr< CAnimParameterList > m_pParameterList; // 0x28
+	CSmartPtr< CAnimTagManager > m_pTagManager; // 0x30
+	CSmartPtr< CAnimMovementManager > m_pMovementManager; // 0x38
+	CSmartPtr< CAnimGraphSettingsManager > m_pSettingsManager; // 0x40
+	CSmartPtr< CActivityValueList > m_pActivityValuesList; // 0x48
+	AnimNodeID m_rootNodeID; // 0x50
+	CUtlString m_filePath; // 0x58
 };
 
 // Aligment: 1
-// Size: 72
-class CAnimationSubGraph
-{
-public:
-	CSmartPtr< CAnimNodeManager > m_nodeManager; // 0x8
-};
-
-// Aligment: 1
-// Size: 48
+// Size: 200
 class CAnimParameterList
 {
 public:
-	CUtlVector< CSmartPtr< CAnimParameterBase > > m_Parameters; // 0x18
+	CUtlVector< CSmartPtr< CAnimParameterBase > > m_Parameters; // 0xb0
 };
 
 // Aligment: 2
@@ -1467,14 +1409,6 @@ class CAnimNodeList
 {
 public:
 	CUtlVector< CAnimNodeBase* > m_nodes; // 0x10
-};
-
-// Aligment: 0
-// Size: 104
-class CAnimNodeManager
-{
-public:
-// <no members described>
 };
 
 // Aligment: 1
@@ -1516,59 +1450,29 @@ public:
 // <no members described>
 };
 
-// Aligment: 1
-// Size: 40
+// Aligment: 0
+// Size: 32
 class CAnimGraphGeneralSettings : public CAnimGraphSettingsGroup
 {
 public:
-	// MPropertyFriendlyName "Grid Snapping"
-	int32_t m_iGridSnap; // 0x20
+// <no members described>
 };
 
-// Aligment: 2
+// Aligment: 1
 // Size: 40
 class CAnimGraphNetworkSettings : public CAnimGraphSettingsGroup
 {
 public:
-	// MPropertyFriendlyName "Enable Networking"
+	// MPropertyFriendlyName "Enable Networking "
 	bool m_bNetworkingEnabled; // 0x20
-	// MPropertyFriendlyName "Default Network Mode"
-	AnimNodeNetworkMode m_defaultNetworkMode; // 0x24
-};
-
-// Aligment: 4
-// Size: 48
-class CClipProperties
-{
-public:
-	// MPropertyFriendlyName "Name"
-	// MPropertyAttrStateCallback
-	CUtlString m_name; // 0x18
-	// MPropertyFriendlyName "Frame Count"
-	// MPropertyAttrStateCallback
-	int32_t m_frames; // 0x20
-	// MPropertyFriendlyName "Frame Rate"
-	// MPropertyAttrStateCallback
-	float m_flFrameRate; // 0x24
-	// MPropertyFriendlyName "Duration"
-	// MPropertyAttrStateCallback
-	float m_flDuration; // 0x28
 };
 
 // Aligment: 1
-// Size: 48
-class CAnimClipPropertiesManager
-{
-public:
-	CUtlVector< CSmartPtr< CClipProperties > > m_Clips; // 0x18
-};
-
-// Aligment: 1
-// Size: 32
+// Size: 184
 class CAnimMotorList
 {
 public:
-	CUtlVector< CSmartPtr< CAnimMotorBase > > m_motors; // 0x8
+	CUtlVector< CSmartPtr< CBaseAnimMotor > > m_motors; // 0x8
 };
 
 // Aligment: 1
@@ -1581,7 +1485,7 @@ public:
 
 // Aligment: 2
 // Size: 40
-class CAnimMotorBase
+class CBaseAnimMotor
 {
 public:
 	// MPropertyFriendlyName "Name"
@@ -1593,7 +1497,7 @@ public:
 
 // Aligment: 2
 // Size: 72
-class CPathAnimMotorBase : public CAnimMotorBase
+class CBasePathAnimMotor : public CBaseAnimMotor
 {
 public:
 	// MPropertyFriendlyName "Facing Damping"
@@ -1606,7 +1510,7 @@ public:
 
 // Aligment: 0
 // Size: 72
-class CPathAnimMotor : public CPathAnimMotorBase, CAnimMotorBase
+class CPathAnimMotor : public CBasePathAnimMotor, CBaseAnimMotor
 {
 public:
 // <no members described>
@@ -1614,7 +1518,7 @@ public:
 
 // Aligment: 6
 // Size: 96
-class CDampedPathAnimMotor : public CPathAnimMotorBase, CAnimMotorBase
+class CDampedPathAnimMotor : public CBasePathAnimMotor, CBaseAnimMotor
 {
 public:
 	// MPropertyFriendlyName "Anticipation Time"
@@ -1637,26 +1541,27 @@ public:
 };
 
 // Aligment: 6
-// Size: 88
-class CPlayerInputAnimMotor : public CAnimMotorBase
+// Size: 96
+class CPlayerInputAnimMotor : public CBasePathAnimMotor, CBaseAnimMotor
 {
 public:
-	// MPropertyFriendlyName "Sample Times"
-	CUtlVector< float32 > m_sampleTimes; // 0x28
-	// MPropertyFriendlyName "Use Acceleration"
-	// MPropertyAttrChangeCallback
-	bool m_bUseAcceleraion; // 0x40
-	// MPropertyFriendlyName "Spring Constant"
-	// MPropertyAttrStateCallback
-	float m_flSpringConstant; // 0x44
-	// MPropertyFriendlyName "Anticipation Distance"
-	float m_flAnticipationDistance; // 0x48
+	// MPropertyFriendlyName "Anticipation Time"
+	float m_flAnticipationTime; // 0x48
 	// MPropertyFriendlyName "Anticipation Position Parameter"
 	// MPropertyAttributeChoiceName "VectorParameter"
 	AnimParamID m_anticipationPosParam; // 0x4c
 	// MPropertyFriendlyName "Anticipation Heading Parameter"
 	// MPropertyAttributeChoiceName "FloatParameter"
 	AnimParamID m_anticipationHeadingParam; // 0x50
+	// MPropertyFriendlyName "Spring Constant"
+	// MPropertyGroupName "+Stopping:Arrival Damping"
+	float m_flSpringConstant; // 0x54
+	// MPropertyFriendlyName "Min Tension"
+	// MPropertyGroupName "+Stopping:Arrival Damping"
+	float m_flMinSpringTension; // 0x58
+	// MPropertyFriendlyName "Max Tension"
+	// MPropertyGroupName "+Stopping:Arrival Damping"
+	float m_flMaxSpringTension; // 0x5c
 };
 
 // Aligment: 7
@@ -1740,30 +1645,8 @@ public:
 	bool m_bInterpolate; // 0x3c
 };
 
-// Aligment: 2
-// Size: 72
-class CQuaternionAnimParameter : public CAnimParameterBase
-{
-public:
-	// MPropertyFriendlyName "Default Value"
-	Quaternion m_defaultValue; // 0x30
-	// MPropertyFriendlyName "Interpolate"
-	bool m_bInterpolate; // 0x40
-};
-
-// Aligment: 2
-// Size: 8
-class CNodeConnection
-{
-public:
-	// MPropertySuppressField
-	AnimNodeID m_nodeID; // 0x0
-	// MPropertySuppressField
-	AnimOutputID m_outputID; // 0x4
-};
-
-// Aligment: 5
-// Size: 64
+// Aligment: 4
+// Size: 56
 class CAnimNodeBase
 {
 public:
@@ -1775,26 +1658,23 @@ public:
 	// MPropertyHideField
 	AnimNodeID m_nNodeID; // 0x30
 	// MPropertyFriendlyName "Network Mode"
-	// MPropertyAttrStateCallback
 	AnimNodeNetworkMode m_networkMode; // 0x34
-	// MPropertyHideField
-	CUtlString m_sNote; // 0x38
 };
 
 // Aligment: 4
-// Size: 120
+// Size: 104
 class CSequenceAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertySuppressField
-	CUtlVector< CSmartPtr< CAnimTagSpan > > m_tagSpans; // 0x50
+	CUtlVector< CSmartPtr< CAnimTagSpan > > m_tagSpans; // 0x40
 	// MPropertyFriendlyName "Sequence"
 	// MPropertyAttributeChoiceName "Sequence"
-	CUtlString m_sequenceName; // 0x68
+	CUtlString m_sequenceName; // 0x58
 	// MPropertyFriendlyName "Playback Speed"
-	float m_playbackSpeed; // 0x70
+	float m_playbackSpeed; // 0x60
 	// MPropertyFriendlyName "Loop"
-	bool m_bLoop; // 0x74
+	bool m_bLoop; // 0x64
 };
 
 // Aligment: 3
@@ -1803,7 +1683,7 @@ class CBlendNodeChild
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x0
+	AnimNodeID m_nodeID; // 0x0
 	// MPropertyFriendlyName "Name"
 	CUtlString m_name; // 0x8
 	// MPropertyFriendlyName "Blend Value"
@@ -1811,54 +1691,52 @@ public:
 };
 
 // Aligment: 9
-// Size: 136
+// Size: 128
 class CBlendAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyFriendlyName "Blend Items"
 	// MPropertyAutoExpandGroup
-	CUtlVector< CBlendNodeChild > m_children; // 0x48
+	CUtlVector< CBlendNodeChild > m_children; // 0x40
 	// MPropertyFriendlyName "Blend Source"
 	// MPropertyAttrChangeCallback
-	AnimValueSource m_blendValueSource; // 0x60
+	AnimValueSource m_blendValueSource; // 0x58
 	// MPropertyFriendlyName "Parameter"
 	// MPropertyAttributeChoiceName "FloatParameter"
 	// MPropertyAttrStateCallback
-	AnimParamID m_param; // 0x64
+	AnimParamID m_param; // 0x5c
 	// MPropertyFriendlyName "Blend Key Values"
-	BlendKeyType m_blendKeyType; // 0x68
+	BlendKeyType m_blendKeyType; // 0x60
 	// MPropertyFriendlyName "Lock Blend on Reset"
-	bool m_bLockBlendOnReset; // 0x6c
+	bool m_bLockBlendOnReset; // 0x64
 	// MPropertyFriendlyName "Sync Cycles"
-	bool m_bSyncCycles; // 0x6d
+	bool m_bSyncCycles; // 0x65
 	// MPropertyFriendlyName "Loop"
-	bool m_bLoop; // 0x6e
+	bool m_bLoop; // 0x66
 	// MPropertyFriendlyName "Lock Blend When Waning"
-	bool m_bLockWhenWaning; // 0x6f
+	bool m_bLockWhenWaning; // 0x67
 	// MPropertyFriendlyName "Damping"
-	CAnimInputDamping m_damping; // 0x70
+	CAnimInputDamping m_damping; // 0x68
 };
 
-// Aligment: 3
-// Size: 112
+// Aligment: 2
+// Size: 104
 class CStateMachineAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertySuppressField
-	CUtlVector< CSmartPtr< CAnimState > > m_states; // 0x50
+	CUtlVector< CSmartPtr< CAnimState > > m_states; // 0x48
 	// MPropertyFriendlyName "Block Tags from Waning States"
-	bool m_bBlockWaningTags; // 0x68
-	// MPropertyFriendlyName "Lock State when Waning"
-	bool m_bLockStateWhenWaning; // 0x69
+	bool m_bBlockWaningTags; // 0x60
 };
 
 // Aligment: 1
-// Size: 72
+// Size: 64
 class CRootAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 };
 
 // Aligment: 4
@@ -1867,7 +1745,7 @@ class CChoiceNodeChild
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x0
+	AnimNodeID m_nodeID; // 0x0
 	// MPropertyFriendlyName "Name"
 	CUtlString m_name; // 0x8
 	// MPropertyFriendlyName "Weight"
@@ -1876,441 +1754,427 @@ public:
 	float m_blendTime; // 0x14
 };
 
-// Aligment: 9
-// Size: 120
+// Aligment: 7
+// Size: 112
 class CChoiceAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyFriendlyName "Options"
 	// MPropertyAutoExpandGroup
-	CUtlVector< CChoiceNodeChild > m_children; // 0x48
+	CUtlVector< CChoiceNodeChild > m_children; // 0x40
 	// MPropertyHideField
-	int32_t m_seed; // 0x60
+	int32_t m_seed; // 0x58
 	// MPropertyFriendlyName "Method"
-	ChoiceMethod m_choiceMethod; // 0x64
+	ChoiceMethod m_choiceMethod; // 0x5c
 	// MPropertyFriendlyName "Change Selection"
-	ChoiceChangeMethod m_choiceChangeMethod; // 0x68
+	ChoiceChangeMethod m_choiceChangeMethod; // 0x60
 	// MPropertyGroupName "Blending"
 	// MPropertyFriendlyName "Blend Method"
 	// MPropertyAttrChangeCallback
-	ChoiceBlendMethod m_blendMethod; // 0x6c
+	ChoiceBlendMethod m_blendMethod; // 0x64
 	// MPropertyGroupName "Blending"
 	// MPropertyFriendlyName "Blend Duration"
 	// MPropertyAttrStateCallback
-	float m_blendTime; // 0x70
-	// MPropertyGroupName "Blending"
-	// MPropertyFriendlyName "Cross Fade"
-	bool m_bCrossFade; // 0x74
+	float m_blendTime; // 0x68
 	// MPropertyFriendlyName "Reset On Selection"
-	// MPropertyAttrChangeCallback
-	bool m_bResetChosen; // 0x75
-	// MPropertyFriendlyName "Don't Reset Same Selection"
-	// MPropertyAttrStateCallback
-	bool m_bDontResetSameSelection; // 0x76
+	bool m_bResetChosen; // 0x6c
 };
 
 // Aligment: 3
-// Size: 80
+// Size: 72
 class CCycleControlAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Blend Source"
-	AnimValueSource m_valueSource; // 0x48
+	AnimValueSource m_valueSource; // 0x3c
 	// MPropertyFriendlyName "Parameter"
 	// MPropertyAttributeChoiceName "FloatParameter"
-	AnimParamID m_param; // 0x4c
+	AnimParamID m_param; // 0x40
 };
 
 // Aligment: 8
-// Size: 96
+// Size: 80
 class CAddAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_baseInput; // 0x40
+	AnimNodeID m_baseChildID; // 0x38
 	// MPropertyHideField
-	CNodeConnection m_additiveInput; // 0x48
+	AnimNodeID m_additiveChildID; // 0x3c
 	// MPropertyFriendlyName "Timing Control"
 	// MPropertyAttrChangeCallback
-	BinaryNodeTiming m_timingBehavior; // 0x50
+	BinaryNodeTiming m_timingBehavior; // 0x40
 	// MPropertyFriendlyName "Timing Blend"
 	// MPropertyAttributeRange "0 1"
 	// MPropertyAttrStateCallback
-	float m_flTimingBlend; // 0x54
+	float m_flTimingBlend; // 0x44
 	// MPropertyFriendlyName "Foot Motion Timing"
-	BinaryNodeChildOption m_footMotionTiming; // 0x58
+	BinaryNodeChildOption m_footMotionTiming; // 0x48
 	// MPropertyFriendlyName "Reset Base Child"
-	bool m_bResetBase; // 0x5c
+	bool m_bResetBase; // 0x4c
 	// MPropertyFriendlyName "Reset Additive Child"
-	bool m_bResetAdditive; // 0x5d
+	bool m_bResetAdditive; // 0x4d
 	// MPropertyFriendlyName "Treat Translation Separately"
-	bool m_bApplyChannelsSeparately; // 0x5e
+	bool m_bApplyChannelsSeparately; // 0x4e
 };
 
 // Aligment: 8
-// Size: 96
+// Size: 80
 class CSubtractAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_baseInputConnection; // 0x40
+	AnimNodeID m_baseChildID; // 0x38
 	// MPropertyHideField
-	CNodeConnection m_subtractInputConnection; // 0x48
+	AnimNodeID m_subtractChildID; // 0x3c
 	// MPropertyFriendlyName "Timing Control"
 	// MPropertyAttrChangeCallback
-	BinaryNodeTiming m_timingBehavior; // 0x50
+	BinaryNodeTiming m_timingBehavior; // 0x40
 	// MPropertyFriendlyName "Timing Blend"
 	// MPropertyAttributeRange "0 1"
 	// MPropertyAttrStateCallback
-	float m_flTimingBlend; // 0x54
+	float m_flTimingBlend; // 0x44
 	// MPropertyFriendlyName "Foot Motion Timing"
-	BinaryNodeChildOption m_footMotionTiming; // 0x58
+	BinaryNodeChildOption m_footMotionTiming; // 0x48
 	// MPropertyFriendlyName "Reset Base Child"
-	bool m_bResetBase; // 0x5c
+	bool m_bResetBase; // 0x4c
 	// MPropertyFriendlyName "Reset Subtracted Child"
-	bool m_bResetSubtract; // 0x5d
+	bool m_bResetSubtract; // 0x4d
 	// MPropertyFriendlyName "Treat Translation Separately"
-	bool m_bApplyChannelsSeparately; // 0x5e
+	bool m_bApplyChannelsSeparately; // 0x4e
 };
 
 // Aligment: 8
-// Size: 112
+// Size: 96
 class CMoverAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Generate Movement"
-	bool m_bApplyMovement; // 0x48
+	bool m_bApplyMovement; // 0x3c
 	// MPropertyFriendlyName "Orient Movement"
-	bool m_bOrientMovement; // 0x49
+	bool m_bOrientMovement; // 0x3d
 	// MPropertyFriendlyName "Additive"
-	bool m_bAdditive; // 0x4a
+	bool m_bAdditive; // 0x3e
 	// MPropertyFriendlyName "Turn to Face"
-	bool m_bTurnToFace; // 0x4b
+	bool m_bTurnToFace; // 0x3f
 	// MPropertyFriendlyName "Turn to Face Offset"
 	// MPropertyAttributeRange "-180 180"
-	float m_flTurnToFaceOffset; // 0x4c
+	float m_flTurnToFaceOffset; // 0x40
 	// MPropertyFriendlyName "Face Direction"
-	AnimValueSource m_facingTarget; // 0x50
+	AnimValueSource m_facingTarget; // 0x44
 	// MPropertyFriendlyName "Damping"
-	CAnimInputDamping m_damping; // 0x58
+	CAnimInputDamping m_damping; // 0x48
 };
 
 // Aligment: 2
-// Size: 80
+// Size: 64
 class CSlowDownOnSlopesAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Slow Down Strength"
 	// MPropertyAttributeRange "0.1 2"
-	float m_flSlowDownStrength; // 0x48
+	float m_flSlowDownStrength; // 0x3c
 };
 
 // Aligment: 7
-// Size: 96
+// Size: 80
 class CTurnHelperAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Turn to Face"
-	AnimValueSource m_facingTarget; // 0x48
+	AnimValueSource m_facingTarget; // 0x3c
 	// MPropertyFriendlyName "Turn Start Time"
-	float m_turnStartTime; // 0x4c
+	float m_turnStartTime; // 0x40
 	// MPropertyFriendlyName "Turn Duration"
-	float m_turnDuration; // 0x50
+	float m_turnDuration; // 0x44
 	// MPropertyFriendlyName "Match Child Duration"
-	bool m_bMatchChildDuration; // 0x54
+	bool m_bMatchChildDuration; // 0x48
 	// MPropertyFriendlyName "Use Manual Turn Offset"
-	bool m_bUseManualTurnOffset; // 0x55
+	bool m_bUseManualTurnOffset; // 0x49
 	// MPropertyFriendlyName "Manual Turn Offset"
-	float m_manualTurnOffset; // 0x58
+	float m_manualTurnOffset; // 0x4c
 };
 
-// Aligment: 12
-// Size: 160
+// Aligment: 11
+// Size: 144
 class CAimMatrixAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x48
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Sequence"
 	// MPropertyAttributeChoiceName "Sequence"
-	CUtlString m_sequenceName; // 0x50
+	CUtlString m_sequenceName; // 0x40
 	// MPropertyFriendlyName "Angle Increment"
-	float m_fAngleIncrement; // 0x58
-	// MPropertyFriendlyName "Can Look Straight Down"
-	bool m_bCanLookStraightDown; // 0x5c
+	float m_fAngleIncrement; // 0x48
 	// MPropertyFriendlyName "Target"
-	AnimVectorSource m_target; // 0x60
+	AnimVectorSource m_target; // 0x4c
 	// MPropertyFriendlyName "Parameter"
 	// MPropertyAttributeChoiceName "VectorParameter"
-	AnimParamID m_param; // 0x64
+	AnimParamID m_param; // 0x50
 	// MPropertyFriendlyName "Aim Attachment"
 	// MPropertyAttributeChoiceName "Attachment"
-	CUtlString m_attachmentName; // 0x68
+	CUtlString m_attachmentName; // 0x58
 	// MPropertyFriendlyName "Blend Mode"
-	AimMatrixBlendMode m_blendMode; // 0x70
+	AimMatrixBlendMode m_blendMode; // 0x60
 	// MPropertyFriendlyName "Bone Mask"
 	// MPropertyAttributeChoiceName "BoneMask"
-	CUtlString m_boneMaskName; // 0x78
+	CUtlString m_boneMaskName; // 0x68
 	// MPropertyFriendlyName "Reset Child"
-	bool m_bResetBase; // 0x80
+	bool m_bResetBase; // 0x70
 	// MPropertyFriendlyName "Lock Blend When Waning"
-	bool m_bLockWhenWaning; // 0x81
+	bool m_bLockWhenWaning; // 0x71
 	// MPropertyFriendlyName "Damping"
-	CAnimInputDamping m_damping; // 0x88
+	CAnimInputDamping m_damping; // 0x78
 };
 
 // Aligment: 2
-// Size: 80
+// Size: 64
 class CSpeedScaleAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Parameter"
 	// MPropertyAttributeChoiceName "FloatParameter"
-	AnimParamID m_param; // 0x48
+	AnimParamID m_param; // 0x3c
 };
 
 // Aligment: 7
-// Size: 112
+// Size: 104
 class CDirectionalBlendAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyFriendlyName "Sequence Names Prefix"
-	CUtlString m_animNamePrefix; // 0x40
+	CUtlString m_animNamePrefix; // 0x38
 	// MPropertyFriendlyName "Blend Source"
 	// MPropertyAttrChangeCallback
-	AnimValueSource m_blendValueSource; // 0x48
+	AnimValueSource m_blendValueSource; // 0x40
 	// MPropertyFriendlyName "Parameter"
 	// MPropertyAttributeChoiceName "FloatParameter"
 	// MPropertyAttrStateCallback
-	AnimParamID m_param; // 0x4c
+	AnimParamID m_param; // 0x44
 	// MPropertyFriendlyName "Loop"
-	bool m_bLoop; // 0x50
+	bool m_bLoop; // 0x48
 	// MPropertyFriendlyName "Lock Blend on Reset"
-	bool m_bLockBlendOnReset; // 0x51
+	bool m_bLockBlendOnReset; // 0x49
 	// MPropertyFriendlyName "Playback Speed"
-	float m_playbackSpeed; // 0x54
+	float m_playbackSpeed; // 0x4c
 	// MPropertyFriendlyName "Damping"
-	CAnimInputDamping m_damping; // 0x58
+	CAnimInputDamping m_damping; // 0x50
 };
 
 // Aligment: 6
-// Size: 88
+// Size: 72
 class CWayPointHelperAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Start Cycle"
 	// MPropertyAttributeRange "0 1"
-	float m_flStartCycle; // 0x48
+	float m_flStartCycle; // 0x3c
 	// MPropertyFriendlyName "End Cycle"
 	// MPropertyAttributeRange "0 1"
-	float m_flEndCycle; // 0x4c
+	float m_flEndCycle; // 0x40
 	// MPropertyFriendlyName "Only align to Goals"
-	bool m_bOnlyGoals; // 0x50
+	bool m_bOnlyGoals; // 0x44
 	// MPropertyFriendlyName "Prevent Overshoot"
-	bool m_bPreventOvershoot; // 0x51
+	bool m_bPreventOvershoot; // 0x45
 	// MPropertyFriendlyName "Prevent Undershoot"
-	bool m_bPreventUndershoot; // 0x52
+	bool m_bPreventUndershoot; // 0x46
 };
 
 // Aligment: 13
-// Size: 128
+// Size: 112
 class CBoneMaskAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyFriendlyName "Bone Mask"
 	// MPropertyAttributeChoiceName "BoneMask"
-	CUtlString m_weightListName; // 0x40
+	CUtlString m_weightListName; // 0x38
 	// MPropertyHideField
-	CNodeConnection m_inputConnection1; // 0x48
+	AnimNodeID m_child1ID; // 0x40
 	// MPropertyHideField
-	CNodeConnection m_inputConnection2; // 0x50
+	AnimNodeID m_child2ID; // 0x44
 	// MPropertyFriendlyName "Blend Space"
-	BoneMaskBlendSpace m_blendSpace; // 0x58
+	BoneMaskBlendSpace m_blendSpace; // 0x48
 	// MPropertyFriendlyName "Use Blend Source"
 	// MPropertyAttrChangeCallback
-	bool m_bUseBlendScale; // 0x5c
+	bool m_bUseBlendScale; // 0x4c
 	// MPropertyFriendlyName "Blend Source"
 	// MPropertyAttrChangeCallback
 	// MPropertyAttrStateCallback
-	AnimValueSource m_blendValueSource; // 0x60
+	AnimValueSource m_blendValueSource; // 0x50
 	// MPropertyFriendlyName "Blend Parameter"
 	// MPropertyAttributeChoiceName "FloatParameter"
 	// MPropertyAttrStateCallback
-	AnimParamID m_blendParameter; // 0x64
+	AnimParamID m_blendParameter; // 0x54
 	// MPropertyFriendlyName "Timing Control"
 	// MPropertyAttrChangeCallback
-	BinaryNodeTiming m_timingBehavior; // 0x68
+	BinaryNodeTiming m_timingBehavior; // 0x58
 	// MPropertyFriendlyName "Timing Blend"
 	// MPropertyAttributeRange "0 1"
 	// MPropertyAttrStateCallback
-	float m_flTimingBlend; // 0x6c
+	float m_flTimingBlend; // 0x5c
 	// MPropertyFriendlyName "Root Motion Blend"
 	// MPropertyAttributeRange "0 1"
-	float m_flRootMotionBlend; // 0x70
+	float m_flRootMotionBlend; // 0x60
 	// MPropertyFriendlyName "Foot Motion Timing"
-	BinaryNodeChildOption m_footMotionTiming; // 0x74
+	BinaryNodeChildOption m_footMotionTiming; // 0x64
 	// MPropertyFriendlyName "Reset Child1"
-	bool m_bResetChild1; // 0x78
+	bool m_bResetChild1; // 0x68
 	// MPropertyFriendlyName "Reset Child2"
-	bool m_bResetChild2; // 0x79
+	bool m_bResetChild2; // 0x69
 };
 
 // Aligment: 1
-// Size: 72
+// Size: 64
 class CChoreoAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 };
 
 // Aligment: 3
-// Size: 80
+// Size: 64
 class CDirectPlaybackAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Finish Early"
-	bool m_bFinishEarly; // 0x48
+	bool m_bFinishEarly; // 0x3c
 	// MPropertyFriendlyName "Reset Child On Finish"
-	bool m_bResetOnFinish; // 0x49
+	bool m_bResetOnFinish; // 0x3d
 };
 
 // Aligment: 7
-// Size: 144
+// Size: 128
 class CLeanMatrixAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyFriendlyName "Sequence"
 	// MPropertyAttributeChoiceName "Sequence"
-	CUtlString m_sequenceName; // 0x48
+	CUtlString m_sequenceName; // 0x38
 	// MPropertyFriendlyName "Max Value"
-	float m_flMaxValue; // 0x50
+	float m_flMaxValue; // 0x40
 	// MPropertyFriendlyName "Blend Source"
-	AnimVectorSource m_blendSource; // 0x54
+	AnimVectorSource m_blendSource; // 0x44
 	// MPropertyFriendlyName "Parameter"
 	// MPropertyAttributeChoiceName "VectorParameter"
-	AnimParamID m_param; // 0x58
+	AnimParamID m_param; // 0x48
 	// MPropertyFriendlyName "Vertical Axis"
-	Vector m_verticalAxisDirection; // 0x5c
+	Vector m_verticalAxisDirection; // 0x4c
 	// MPropertyFriendlyName "Horizontal Axis"
-	Vector m_horizontalAxisDirection; // 0x68
+	Vector m_horizontalAxisDirection; // 0x58
 	// MPropertyFriendlyName "Damping"
-	CAnimInputDamping m_damping; // 0x78
+	CAnimInputDamping m_damping; // 0x68
 };
 
-// Aligment: 10
-// Size: 136
+// Aligment: 9
+// Size: 120
 class CTwoBoneIKAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "IK Chain"
 	// MPropertyAttributeChoiceName "IKChain"
-	CUtlString m_ikChainName; // 0x48
+	CUtlString m_ikChainName; // 0x40
 	// MPropertyGroupName "End Effector"
 	// MPropertyFriendlyName "End Effector Type"
 	// MPropertyAttrChangeCallback
-	IkEndEffectorType m_endEffectorType; // 0x50
+	IkEndEffectorType m_endEffectorType; // 0x48
 	// MPropertyGroupName "End Effector"
 	// MPropertyFriendlyName "Attachment"
 	// MPropertyAttributeChoiceName "Attachment"
 	// MPropertyAttrStateCallback
-	CUtlString m_endEffectorAttachmentName; // 0x58
+	CUtlString m_endEffectorAttachmentName; // 0x50
 	// MPropertyGroupName "Target"
 	// MPropertyFriendlyName "Target Type"
 	// MPropertyAttrChangeCallback
-	IkTargetType m_targetType; // 0x60
+	IkTargetType m_targetType; // 0x58
 	// MPropertyGroupName "Target"
 	// MPropertyFriendlyName "Attachment"
 	// MPropertyAttributeChoiceName "Attachment"
 	// MPropertyAttrStateCallback
-	CUtlString m_attachmentName; // 0x68
+	CUtlString m_attachmentName; // 0x60
 	// MPropertyGroupName "Target"
 	// MPropertyFriendlyName "Bone"
 	// MPropertyAttributeChoiceName "Bone"
 	// MPropertyAttrStateCallback
-	CUtlString m_targetBoneName; // 0x70
+	CUtlString m_targetBoneName; // 0x68
 	// MPropertyGroupName "Target"
-	// MPropertyFriendlyName "Position Parameter"
+	// MPropertyFriendlyName "Parameter"
 	// MPropertyAttributeChoiceName "VectorParameter"
 	// MPropertyAttrStateCallback
-	AnimParamID m_targetParam; // 0x78
+	AnimParamID m_targetParam; // 0x70
 	// MPropertyGroupName "Target"
 	// MPropertyFriendlyName "Match Target Orientation"
-	// MPropertyAttrChangeCallback
-	bool m_bMatchTargetOrientation; // 0x7c
-	// MPropertyGroupName "Target"
-	// MPropertyFriendlyName "Rotation Parameter"
-	// MPropertyAttributeChoiceName "QuaternionParameter"
 	// MPropertyAttrStateCallback
-	AnimParamID m_rotationParam; // 0x80
+	bool m_bMatchTargetOrientation; // 0x74
 };
 
 // Aligment: 16
-// Size: 176
+// Size: 168
 class CGroundIKSolveAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "IK Chains"
 	// MPropertyAttributeChoiceName "IKChainOld"
-	CUtlVector< CUtlString > m_IkChains; // 0x48
+	CUtlVector< CUtlString > m_IkChains; // 0x40
 	// MPropertyFriendlyName "Tilt Source"
 	// MPropertyAttributeChoiceEnumName
-	GroundIKTiltSource_t m_TiltSource; // 0x60
+	GroundIKTiltSource_t m_TiltSource; // 0x58
 	// MPropertyFriendlyName "Override Tilt Root"
 	// MPropertyAttributeChoiceName "Bone"
-	CUtlString m_OverrideTiltRoot; // 0x68
+	CUtlString m_OverrideTiltRoot; // 0x60
 	// MPropertyFriendlyName "Tilt Attachment"
 	// MPropertyAttributeChoiceName "Attachment"
-	CUtlString m_TiltAttachment; // 0x70
+	CUtlString m_TiltAttachment; // 0x68
 	// MPropertyFriendlyName "Override Tilt Spring Strength"
-	float m_flOverrideTiltSpringStrength; // 0x78
+	float m_flOverrideTiltSpringStrength; // 0x70
 	// MPropertyFriendlyName "Apply Locks"
-	bool m_bApplyLocks; // 0x7c
+	bool m_bApplyLocks; // 0x74
 	// MPropertyFriendlyName "Enabled"
-	bool m_bEnabled; // 0x7d
+	bool m_bEnabled; // 0x75
 	// MPropertyFriendlyName "Target Blend Parameter"
 	// MPropertyAttributeChoiceName "FloatParameter"
-	AnimParamID m_TargetBlendParameter; // 0x80
+	AnimParamID m_TargetBlendParameter; // 0x78
 	// MPropertyGroupName "Debug"
 	// MPropertyFriendlyName "Debug Bone Types to Draw"
 	// MPropertyAttributeChoiceEnumName
-	CUtlVector< CGroundIKSolveAnimNode::DebugSkeletonBoneType_t > m_DebugDrawBoneTypes; // 0x88
+	CUtlVector< CGroundIKSolveAnimNode::DebugSkeletonBoneType_t > m_DebugDrawBoneTypes; // 0x80
 	// MPropertyGroupName "Debug"
 	// MPropertyFriendlyName "Debug Draw Lock Values"
-	bool m_bDebugDrawLockValues; // 0xa0
+	bool m_bDebugDrawLockValues; // 0x98
 	// MPropertyGroupName "Debug"
 	// MPropertyFriendlyName "Debug Lock Values Color"
-	Color m_DebugDrawLockValuesColor; // 0xa1
+	Color m_DebugDrawLockValuesColor; // 0x99
 	// MPropertyGroupName "Debug"
 	// MPropertyFriendlyName "Debug Draw Before"
-	bool m_bDebugDrawBefore; // 0xa5
+	bool m_bDebugDrawBefore; // 0x9d
 	// MPropertyGroupName "Debug"
 	// MPropertyFriendlyName "Debug Before IK Color"
-	Color m_DebugDrawBeforeColor; // 0xa6
+	Color m_DebugDrawBeforeColor; // 0x9e
 	// MPropertyGroupName "Debug"
 	// MPropertyFriendlyName "Debug Draw After"
-	bool m_bDebugDrawAfter; // 0xaa
+	bool m_bDebugDrawAfter; // 0xa2
 	// MPropertyGroupName "Debug"
 	// MPropertyFriendlyName "Debug After IK Color"
-	Color m_DebugDrawAfterColor; // 0xab
+	Color m_DebugDrawAfterColor; // 0xa3
 };
 
 // Aligment: 8
@@ -2349,268 +2213,263 @@ public:
 };
 
 // Aligment: 2
-// Size: 104
+// Size: 88
 class CSolveIKChainAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x48
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "IK Chains"
 	// MPropertyAutoExpandGroup
-	CUtlVector< CSolveIKChainAnimNodeChainData > m_IkChains; // 0x50
+	CUtlVector< CSolveIKChainAnimNodeChainData > m_IkChains; // 0x40
 };
 
 // Aligment: 14
-// Size: 152
+// Size: 136
 class CLookAtAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Target"
-	AnimVectorSource m_target; // 0x48
+	AnimVectorSource m_target; // 0x3c
 	// MPropertyFriendlyName "Target Parameter"
 	// MPropertyAttributeChoiceName "VectorParameter"
-	AnimParamID m_param; // 0x4c
+	AnimParamID m_param; // 0x40
 	// MPropertyFriendlyName "Weight Parameter"
 	// MPropertyAttributeChoiceName "FloatParameter"
-	AnimParamID m_weightParam; // 0x50
+	AnimParamID m_weightParam; // 0x44
 	// MPropertyFriendlyName "LookAt Chain"
 	// MPropertyAttributeChoiceName "LookAtChain"
-	CUtlString m_lookatChainName; // 0x58
+	CUtlString m_lookatChainName; // 0x48
 	// MPropertyFriendlyName "Aim Attachment"
 	// MPropertyAttributeChoiceName "Attachment"
-	CUtlString m_attachmentName; // 0x60
+	CUtlString m_attachmentName; // 0x50
 	// MPropertyFriendlyName "Yaw Limit"
 	// MPropertyAttributeRange "0 180"
-	float m_flYawLimit; // 0x68
+	float m_flYawLimit; // 0x58
 	// MPropertyFriendlyName "Pitch Limit"
 	// MPropertyAttributeRange "0 180"
-	float m_flPitchLimit; // 0x6c
+	float m_flPitchLimit; // 0x5c
 	// MPropertyFriendlyName "Reset Child"
-	bool m_bResetBase; // 0x70
+	bool m_bResetBase; // 0x60
 	// MPropertyFriendlyName "Lock Blend When Waning"
-	bool m_bLockWhenWaning; // 0x71
+	bool m_bLockWhenWaning; // 0x61
 	// MPropertyFriendlyName "Use Hysteresis"
 	// MPropertyGroupName "Hysteresis"
-	bool m_bUseHysteresis; // 0x72
+	bool m_bUseHysteresis; // 0x62
 	// MPropertyFriendlyName "Inner Angle"
 	// MPropertyGroupName "Hysteresis"
-	float m_flHysteresisInnerAngle; // 0x74
+	float m_flHysteresisInnerAngle; // 0x64
 	// MPropertyFriendlyName "Outer Angle"
 	// MPropertyGroupName "Hysteresis"
-	float m_flHysteresisOuterAngle; // 0x78
+	float m_flHysteresisOuterAngle; // 0x68
 	// MPropertyFriendlyName "Damping"
-	CAnimInputDamping m_damping; // 0x80
+	CAnimInputDamping m_damping; // 0x70
 };
 
 // Aligment: 4
-// Size: 120
+// Size: 112
 class CNeuralNetAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyFriendlyName "Weights File"
-	CUtlString m_weightsFile; // 0x40
+	CUtlString m_weightsFile; // 0x38
 	// MPropertyFriendlyName "Test Input File"
-	CUtlString m_testInputFile; // 0x48
+	CUtlString m_testInputFile; // 0x40
 	// MPropertyFriendlyName "Bone Map File"
-	CUtlString m_boneMapFile; // 0x50
+	CUtlString m_boneMapFile; // 0x48
 	// MPropertyFriendlyName "Sensor Range File"
-	CUtlString m_sensorRangeFile; // 0x58
+	CUtlString m_sensorRangeFile; // 0x50
 };
 
 // Aligment: 3
-// Size: 80
+// Size: 72
 class CPathHelperAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Stopping Radius"
-	float m_flStoppingRadius; // 0x48
+	float m_flStoppingRadius; // 0x3c
 	// MPropertyFriendlyName "Stopping Min Speed Scale"
-	float m_flStoppingSpeedScale; // 0x4c
+	float m_flStoppingSpeedScale; // 0x40
 };
 
 // Aligment: 5
-// Size: 96
+// Size: 88
 class CFollowAttachmentAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Bone"
 	// MPropertyAttributeChoiceName "Bone"
-	CUtlString m_boneName; // 0x48
+	CUtlString m_boneName; // 0x40
 	// MPropertyFriendlyName "Target Attachment"
 	// MPropertyAttributeChoiceName "Attachment"
-	CUtlString m_attachmentName; // 0x50
+	CUtlString m_attachmentName; // 0x48
 	// MPropertyFriendlyName "Match Translation"
-	bool m_bMatchTranslation; // 0x58
+	bool m_bMatchTranslation; // 0x50
 	// MPropertyFriendlyName "Match Rotation"
-	bool m_bMatchRotation; // 0x59
-};
-
-// Aligment: 4
-// Size: 80
-class CSkeletalInputAnimNode : public CAnimNodeBase
-{
-public:
-	// MPropertyFriendlyName "Data Source"
-	// MPropertyAttrChangeCallback
-	AnimVrBoneTransformSource_t m_transformSource; // 0x40
-	// MPropertyFriendlyName "Motion Range"
-	// MPropertyAttrStateCallback
-	AnimVRHandMotionRange_t m_motionRange; // 0x44
-	// MPropertyFriendlyName "Enable IK"
-	// MPropertyGroupName "+Retargetting"
-	bool m_bEnableIK; // 0x48
-	// MPropertyFriendlyName "Enable Collision"
-	// MPropertyGroupName "+Retargetting"
-	bool m_bEnableCollision; // 0x49
-};
-
-// Aligment: 10
-// Size: 160
-class CSelectorAnimNode : public CAnimNodeBase
-{
-public:
-	// MPropertySuppressField
-	CUtlVector< CNodeConnection > m_children; // 0x48
-	// MPropertySuppressField
-	CUtlVector< AnimTagID > m_tags; // 0x60
-	// MPropertyFriendlyName "Selection Source"
-	// MPropertyAttrChangeCallback
-	SelectionSource_t m_selectionSource; // 0x78
-	// MPropertyFriendlyName "Bool Parameter"
-	// MPropertyAttributeChoiceName "BoolParameter"
-	// MPropertyAttrChangeCallback
-	// MPropertyAttrStateCallback
-	AnimParamID m_boolParamID; // 0x7c
-	// MPropertyFriendlyName "Enum Parameter"
-	// MPropertyAttributeChoiceName "EnumParameter"
-	// MPropertyAttrChangeCallback
-	// MPropertyAttrStateCallback
-	AnimParamID m_enumParamID; // 0x80
-	// MPropertyFriendlyName "Blend Duration"
-	float m_blendDuration; // 0x84
-	// MPropertyFriendlyName "Tag Behavior"
-	SelectorTagBehavior_t m_tagBehavior; // 0x88
-	// MPropertyFriendlyName "Reset On Change"
-	bool m_bResetOnChange; // 0x8c
-	// MPropertyFriendlyName "Start new option at same cycle"
-	bool m_bSyncCyclesOnChange; // 0x8d
-	// MPropertySuppressField
-	CBlendCurve m_blendCurve; // 0x90
-};
-
-// Aligment: 24
-// Size: 176
-class CHitReactAnimNode : public CAnimNodeBase
-{
-public:
-	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
-	// MPropertyFriendlyName "Minimum Delay Between Hits"
-	float m_flMinDelayBetweenHits; // 0x48
-	// MPropertyFriendlyName "Trigger Parameter"
-	// MPropertyAttributeChoiceName "BoolParameter"
-	AnimParamID m_triggerParam; // 0x4c
-	// MPropertyFriendlyName "Hit Bone Parameter"
-	// MPropertyAttributeChoiceName "IntParameter"
-	AnimParamID m_hitBoneParam; // 0x50
-	// MPropertyFriendlyName "Hit Offset Parameter"
-	// MPropertyAttributeChoiceName "VectorParameter"
-	AnimParamID m_hitOffsetParam; // 0x54
-	// MPropertyFriendlyName "Hit Direction Parameter"
-	// MPropertyAttributeChoiceName "VectorParameter"
-	AnimParamID m_hitDirectionParam; // 0x58
-	// MPropertyFriendlyName "Hit Strength Parameter"
-	// MPropertyAttributeChoiceName "FloatParameter"
-	AnimParamID m_hitStrengthParam; // 0x5c
-	// MPropertyFriendlyName "Bone Weights"
-	// MPropertyAttributeChoiceName "BoneMask"
-	CUtlString m_weightListName; // 0x60
-	// MPropertyFriendlyName "Hip Bone"
-	// MPropertyAttributeChoiceName "Bone"
-	CUtlString m_hipBoneName; // 0x68
-	// MPropertyFriendlyName "Hip Translation Scale"
-	float m_flHipBoneTranslationScale; // 0x70
-	// MPropertyFriendlyName "Number of bone effected"
-	int32_t m_nEffectedBoneCount; // 0x74
-	// MPropertyFriendlyName "Max Impact Force"
-	float m_flMaxImpactForce; // 0x78
-	// MPropertyFriendlyName "Min Impact Force"
-	float m_flMinImpactForce; // 0x7c
-	// MPropertyFriendlyName "Whip Impact Scale"
-	float m_flWhipImpactScale; // 0x80
-	// MPropertyFriendlyName "Counter Rotation Scale"
-	float m_flCounterRotationScale; // 0x84
-	// MPropertyFriendlyName "Distance Fade Scale"
-	float m_flDistanceFadeScale; // 0x88
-	// MPropertyFriendlyName "Propagation Scale"
-	float m_flPropagationScale; // 0x8c
-	// MPropertyFriendlyName "Whip Delay Time"
-	float m_flWhipDelay; // 0x90
-	// MPropertyFriendlyName "Spring Strength"
-	float m_flSpringStrength; // 0x94
-	// MPropertyFriendlyName "Whip Spring Strength"
-	float m_flWhipSpringStrength; // 0x98
-	// MPropertyFriendlyName "Hip Dip Spring Strength"
-	float m_flHipDipSpringStrength; // 0x9c
-	// MPropertyFriendlyName "Hip Dip Scale"
-	float m_flHipDipImpactScale; // 0xa0
-	// MPropertyFriendlyName "Hip Dip Delay Time"
-	float m_flHipDipDelay; // 0xa4
-	// MPropertyFriendlyName "Reset Child"
-	bool m_bResetBase; // 0xa8
+	bool m_bMatchRotation; // 0x51
 };
 
 // Aligment: 3
 // Size: 64
-class CBlend2DItem
+class CSkeletalInputAnimNode : public CAnimNodeBase
 {
 public:
-	// MPropertySuppressField
-	CUtlVector< CSmartPtr< CAnimTagSpan > > m_tagSpans; // 0x10
-	// MPropertyFriendlyName "Sequence"
-	// MPropertyAttributeChoiceName "Sequence"
-	CUtlString m_sequenceName; // 0x28
-	// MPropertyFriendlyName "Blend Value"
-	Vector2D m_blendValue; // 0x30
+	// MPropertyFriendlyName "Motion Range"
+	AnimVRHandMotionRange_t m_motionRange; // 0x38
+	// MPropertyFriendlyName "Enable IK"
+	// MPropertyGroupName "+Retargetting"
+	bool m_bEnableIK; // 0x3c
+	// MPropertyFriendlyName "Enable Collision"
+	// MPropertyGroupName "+Retargetting"
+	bool m_bEnableCollision; // 0x3d
 };
 
 // Aligment: 10
 // Size: 152
-class CBlend2DAnimNode : public CAnimNodeBase
+class CSelectorAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertySuppressField
-	CUtlVector< CBlend2DItem > m_items; // 0x50
-	// MPropertyFriendlyName "Horizontal Axis"
+	CUtlVector< AnimNodeID > m_children; // 0x40
+	// MPropertySuppressField
+	CUtlVector< AnimTagID > m_tags; // 0x58
+	// MPropertyFriendlyName "Selection Source"
 	// MPropertyAttrChangeCallback
-	AnimValueSource m_blendSourceX; // 0x68
-	// MPropertyFriendlyName "Horizontal Parameter"
-	// MPropertyAttributeChoiceName "FloatParameter"
-	// MPropertyAttrStateCallback
-	AnimParamID m_paramX; // 0x6c
-	// MPropertyFriendlyName "Vertical Axis"
+	SelectionSource_t m_selectionSource; // 0x70
+	// MPropertyFriendlyName "Bool Parameter"
+	// MPropertyAttributeChoiceName "BoolParameter"
 	// MPropertyAttrChangeCallback
-	AnimValueSource m_blendSourceY; // 0x70
-	// MPropertyFriendlyName "Vertical Parameter"
-	// MPropertyAttributeChoiceName "FloatParameter"
 	// MPropertyAttrStateCallback
-	AnimParamID m_paramY; // 0x74
+	AnimParamID m_boolParamID; // 0x74
+	// MPropertyFriendlyName "Enum Parameter"
+	// MPropertyAttributeChoiceName "EnumParameter"
+	// MPropertyAttrChangeCallback
+	// MPropertyAttrStateCallback
+	AnimParamID m_enumParamID; // 0x78
+	// MPropertyFriendlyName "Blend Duration"
+	float m_blendDuration; // 0x7c
+	// MPropertyFriendlyName "Tag Behavior"
+	SelectorTagBehavior_t m_tagBehavior; // 0x80
+	// MPropertyFriendlyName "Reset On Change"
+	bool m_bResetOnChange; // 0x84
+	// MPropertyFriendlyName "Start new option at same cycle"
+	bool m_bSyncCyclesOnChange; // 0x85
+	// MPropertySuppressField
+	CBlendCurve m_blendCurve; // 0x88
+};
+
+// Aligment: 24
+// Size: 168
+class CHitReactAnimNode : public CAnimNodeBase
+{
+public:
+	// MPropertyHideField
+	AnimNodeID m_childID; // 0x38
+	// MPropertyFriendlyName "Minimum Delay Between Hits"
+	float m_flMinDelayBetweenHits; // 0x3c
+	// MPropertyFriendlyName "Trigger Parameter"
+	// MPropertyAttributeChoiceName "BoolParameter"
+	AnimParamID m_triggerParam; // 0x40
+	// MPropertyFriendlyName "Hit Bone Parameter"
+	// MPropertyAttributeChoiceName "IntParameter"
+	AnimParamID m_hitBoneParam; // 0x44
+	// MPropertyFriendlyName "Hit Offset Parameter"
+	// MPropertyAttributeChoiceName "VectorParameter"
+	AnimParamID m_hitOffsetParam; // 0x48
+	// MPropertyFriendlyName "Hit Direction Parameter"
+	// MPropertyAttributeChoiceName "VectorParameter"
+	AnimParamID m_hitDirectionParam; // 0x4c
+	// MPropertyFriendlyName "Hit Strength Parameter"
+	// MPropertyAttributeChoiceName "FloatParameter"
+	AnimParamID m_hitStrengthParam; // 0x50
+	// MPropertyFriendlyName "Bone Weights"
+	// MPropertyAttributeChoiceName "BoneMask"
+	CUtlString m_weightListName; // 0x58
+	// MPropertyFriendlyName "Hip Bone"
+	// MPropertyAttributeChoiceName "Bone"
+	CUtlString m_hipBoneName; // 0x60
+	// MPropertyFriendlyName "Hip Translation Scale"
+	float m_flHipBoneTranslationScale; // 0x68
+	// MPropertyFriendlyName "Number of bone effected"
+	int32_t m_nEffectedBoneCount; // 0x6c
+	// MPropertyFriendlyName "Max Impact Force"
+	float m_flMaxImpactForce; // 0x70
+	// MPropertyFriendlyName "Min Impact Force"
+	float m_flMinImpactForce; // 0x74
+	// MPropertyFriendlyName "Whip Impact Scale"
+	float m_flWhipImpactScale; // 0x78
+	// MPropertyFriendlyName "Counter Rotation Scale"
+	float m_flCounterRotationScale; // 0x7c
+	// MPropertyFriendlyName "Distance Fade Scale"
+	float m_flDistanceFadeScale; // 0x80
+	// MPropertyFriendlyName "Propagation Scale"
+	float m_flPropagationScale; // 0x84
+	// MPropertyFriendlyName "Whip Delay Time"
+	float m_flWhipDelay; // 0x88
+	// MPropertyFriendlyName "Spring Strength"
+	float m_flSpringStrength; // 0x8c
+	// MPropertyFriendlyName "Whip Spring Strength"
+	float m_flWhipSpringStrength; // 0x90
+	// MPropertyFriendlyName "Hip Dip Spring Strength"
+	float m_flHipDipSpringStrength; // 0x94
+	// MPropertyFriendlyName "Hip Dip Scale"
+	float m_flHipDipImpactScale; // 0x98
+	// MPropertyFriendlyName "Hip Dip Delay Time"
+	float m_flHipDipDelay; // 0x9c
+	// MPropertyFriendlyName "Reset Child"
+	bool m_bResetBase; // 0xa0
+};
+
+// Aligment: 2
+// Size: 16
+class CBlend2DItem
+{
+public:
+	// MPropertyFriendlyName "Sequence"
+	// MPropertyAttributeChoiceName "Sequence"
+	CUtlString m_sequenceName; // 0x0
+	// MPropertyFriendlyName "Blend Value"
+	Vector2D m_blendValue; // 0x8
+};
+
+// Aligment: 10
+// Size: 136
+class CBlend2DAnimNode : public CAnimNodeBase
+{
+public:
+	// MPropertyFriendlyName "Blend Items"
+	// MPropertyAutoExpandGroup
+	CUtlVector< CBlend2DItem > m_items; // 0x38
+	// MPropertyFriendlyName "Blend Source"
+	// MPropertyGroupName "Horizontal Axis"
+	AnimValueSource m_blendSourceX; // 0x50
+	// MPropertyFriendlyName "Parameter"
+	// MPropertyAttributeChoiceName "FloatParameter"
+	// MPropertyGroupName "Horizontal Axis"
+	AnimParamID m_paramX; // 0x54
+	// MPropertyFriendlyName "Blend Source"
+	// MPropertyGroupName "Vertical Axis"
+	AnimValueSource m_blendSourceY; // 0x58
+	// MPropertyFriendlyName "Parameter"
+	// MPropertyAttributeChoiceName "FloatParameter"
+	// MPropertyGroupName "Vertical Axis"
+	AnimParamID m_paramY; // 0x5c
+	// MPropertyFriendlyName "Blend Mode"
+	Blend2DMode m_eBlendNode; // 0x60
 	// MPropertyFriendlyName "Loop"
-	bool m_bLoop; // 0x78
+	bool m_bLoop; // 0x64
 	// MPropertyFriendlyName "Lock Blend on Reset"
-	bool m_bLockBlendOnReset; // 0x79
-	// MPropertyFriendlyName "Lock Blend When Waning"
-	bool m_bLockWhenWaning; // 0x7a
+	bool m_bLockBlendOnReset; // 0x65
 	// MPropertyFriendlyName "Playback Speed"
-	float m_playbackSpeed; // 0x7c
+	float m_playbackSpeed; // 0x68
 	// MPropertyFriendlyName "Damping"
-	CAnimInputDamping m_damping; // 0x80
+	CAnimInputDamping m_damping; // 0x70
 };
 
 // Aligment: 7
@@ -2641,312 +2500,291 @@ public:
 	AnimTagID m_footstepLandedTag; // 0x24
 };
 
-// Aligment: 36
-// Size: 296
+// Aligment: 31
+// Size: 248
 class CFootLockAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Feet"
 	// MPropertyAutoExpandGroup
-	CUtlVector< CFootLockItem > m_items; // 0x48
+	CUtlVector< CFootLockItem > m_items; // 0x40
 	// MPropertyFriendlyName "Hip Bone"
 	// MPropertyAttributeChoiceName "Bone"
-	CUtlString m_hipBoneName; // 0x60
+	CUtlString m_hipBoneName; // 0x58
 	// MPropertyFriendlyName "Blend Time"
-	float m_flBlendTime; // 0x68
+	float m_flBlendTime; // 0x60
 	// MPropertyFriendlyName "Apply Foot Rotation Limits"
-	bool m_bApplyFootRotationLimits; // 0x6c
+	bool m_bApplyFootRotationLimits; // 0x64
 	// MPropertyFriendlyName "Reset Child"
-	bool m_bResetChild; // 0x6d
+	bool m_bResetChild; // 0x65
 	// MPropertyFriendlyName "IK Solver Type"
 	// MPropertyGroupName "IK"
 	// MPropertyAttrChangeCallback
-	IKSolverType m_ikSolverType; // 0x70
+	IKSolverType m_ikSolverType; // 0x68
 	// MPropertyFriendlyName "Always use fallback hinge"
 	// MPropertyGroupName "IK"
 	// MPropertyAttrStateCallback
-	bool m_bAlwaysUseFallbackHinge; // 0x74
+	bool m_bAlwaysUseFallbackHinge; // 0x6c
 	// MPropertyFriendlyName "Curve Foot Paths"
 	// MPropertyGroupName "Curve Paths"
 	// MPropertyAttributeRange "0 1"
-	float m_flStrideCurveScale; // 0x78
+	float m_flStrideCurveScale; // 0x70
 	// MPropertyFriendlyName "Curve Paths Limit"
 	// MPropertyGroupName "Curve Paths"
 	// MPropertyAttributeRange "0 1"
-	float m_flStrideCurveLimitScale; // 0x7c
+	float m_flStrideCurveLimitScale; // 0x74
 	// MPropertyFriendlyName "Enable Vertical Curved Paths"
 	// MPropertyGroupName "Curve Paths"
-	bool m_bEnableVerticalCurvedPaths; // 0x80
+	bool m_bEnableVerticalCurvedPaths; // 0x78
 	// MPropertyFriendlyName "Modulate Step Height"
 	// MPropertyGroupName "Step Height"
 	// MPropertyAttrChangeCallback
-	bool m_bModulateStepHeight; // 0x81
+	bool m_bModulateStepHeight; // 0x79
 	// MPropertyFriendlyName "Height Increase Scale"
 	// MPropertyGroupName "Step Height"
 	// MPropertyAttrStateCallback
-	float m_flStepHeightIncreaseScale; // 0x84
+	float m_flStepHeightIncreaseScale; // 0x7c
 	// MPropertyFriendlyName "Height Decrease Scale"
 	// MPropertyGroupName "Step Height"
 	// MPropertyAttrStateCallback
-	float m_flStepHeightDecreaseScale; // 0x88
+	float m_flStepHeightDecreaseScale; // 0x80
 	// MPropertyFriendlyName "Enable Hip Shift"
 	// MPropertyGroupName "Hip Shift"
-	bool m_bEnableHipShift; // 0x8c
+	bool m_bEnableHipShift; // 0x84
 	// MPropertyFriendlyName "Hip Shift Scale"
 	// MPropertyGroupName "Hip Shift"
 	// MPropertyAttributeRange "0 1"
-	float m_flHipShiftScale; // 0x90
+	float m_flHipShiftScale; // 0x88
 	// MPropertyFriendlyName "Damping"
 	// MPropertyGroupName "Hip Shift"
-	CAnimInputDamping m_hipShiftDamping; // 0x98
+	CAnimInputDamping m_hipShiftDamping; // 0x90
 	// MPropertyFriendlyName "Apply Tilt"
 	// MPropertyGroupName "Tilt"
-	bool m_bApplyTilt; // 0xb0
+	bool m_bApplyTilt; // 0xa8
 	// MPropertyFriendlyName "Tilt Plane Pitch Spring Strength"
 	// MPropertyGroupName "Tilt"
-	float m_flTiltPlanePitchSpringStrength; // 0xb4
+	float m_flTiltPlanePitchSpringStrength; // 0xac
 	// MPropertyFriendlyName "Tilt Plane Roll Spring Strength"
 	// MPropertyGroupName "Tilt"
-	float m_flTiltPlaneRollSpringStrength; // 0xb8
+	float m_flTiltPlaneRollSpringStrength; // 0xb0
 	// MPropertyFriendlyName "Enable Lock Breaking"
 	// MPropertyGroupName "Lock Breaking"
-	bool m_bEnableLockBreaking; // 0xbc
-	// MPropertyFriendlyName "Tolerance"
-	// MPropertyGroupName "Lock Breaking"
-	float m_flLockBreakTolerance; // 0xc0
+	bool m_bEnableLockBreaking; // 0xb4
 	// MPropertyFriendlyName "Blend Time"
 	// MPropertyGroupName "Lock Breaking"
-	float m_flLockBreakBlendTime; // 0xc4
+	float m_flLockBreakBlendTime; // 0xb8
 	// MPropertyFriendlyName "Enable Stretching"
 	// MPropertyGroupName "Stretch"
-	bool m_bEnableStretching; // 0xc8
+	bool m_bEnableStretching; // 0xbc
 	// MPropertyFriendlyName "Max Stretch Amount"
 	// MPropertyGroupName "Stretch"
-	float m_flMaxStretchAmount; // 0xcc
+	float m_flMaxStretchAmount; // 0xc0
 	// MPropertyFriendlyName "Extension Scale"
 	// MPropertyGroupName "Stretch"
 	// MPropertyAttributeRange "0 1"
-	float m_flStretchExtensionScale; // 0xd0
+	float m_flStretchExtensionScale; // 0xc4
 	// MPropertyFriendlyName "Enable Ground Tracing"
 	// MPropertyGroupName "Ground IK"
 	// MPropertyAttrChangeCallback
-	bool m_bEnableGroundTracing; // 0xd4
+	bool m_bEnableGroundTracing; // 0xc8
 	// MPropertyFriendlyName "Angle Traces with Slope"
 	// MPropertyGroupName "Ground IK"
 	// MPropertyAttributeRange "0 1"
 	// MPropertyAttrStateCallback
-	float m_flTraceAngleBlend; // 0xd8
+	float m_flTraceAngleBlend; // 0xcc
 	// MPropertyFriendlyName "Apply Hip Drop"
 	// MPropertyGroupName "Ground IK"
 	// MPropertyAttrChangeCallback
 	// MPropertyAttrStateCallback
-	bool m_bApplyHipDrop; // 0xdc
+	bool m_bApplyHipDrop; // 0xd0
 	// MPropertyFriendlyName "Max Foot Lift"
 	// MPropertyGroupName "Ground IK"
 	// MPropertyAttrStateCallback
-	float m_flMaxFootHeight; // 0xe0
+	float m_flMaxFootHeight; // 0xd4
 	// MPropertyFriendlyName "Leg Extension Scale"
 	// MPropertyGroupName "Ground IK"
 	// MPropertyAttrStateCallback
-	float m_flExtensionScale; // 0xe4
+	float m_flExtensionScale; // 0xd8
 	// MPropertyFriendlyName "Hip Damping"
 	// MPropertyGroupName "Ground IK"
 	// MPropertyAttrStateCallback
-	CAnimInputDamping m_hipDampingSettings; // 0xe8
-	// MPropertyFriendlyName "Enable Root Height Damping"
-	// MPropertyGroupName "Root Height Damping"
-	// MPropertyAttrChangeCallback
-	bool m_bEnableRootHeightDamping; // 0x100
-	// MPropertyFriendlyName "Damping Settings"
-	// MPropertyGroupName "Root Height Damping"
-	// MPropertyAttrStateCallback
-	CAnimInputDamping m_rootHeightDamping; // 0x108
-	// MPropertyFriendlyName "Max Offset"
-	// MPropertyGroupName "Root Height Damping"
-	// MPropertyAttrStateCallback
-	float m_flMaxRootHeightOffset; // 0x120
-	// MPropertyFriendlyName "Min Offset"
-	// MPropertyGroupName "Root Height Damping"
-	// MPropertyAttrStateCallback
-	float m_flMinRootHeightOffset; // 0x124
+	CAnimInputDamping m_hipDampingSettings; // 0xe0
 };
 
-// Aligment: 14
-// Size: 136
+// Aligment: 13
+// Size: 128
 class CFollowPathAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Blend Out Time"
-	float m_flBlendOutTime; // 0x48
+	float m_flBlendOutTime; // 0x3c
 	// MPropertyFriendlyName "Block Non-Path Movement"
-	bool m_bBlockNonPathMovement; // 0x4c
-	// MPropertyFriendlyName "Stop Feet at Goal"
-	bool m_bStopFeetAtGoal; // 0x4d
+	bool m_bBlockNonPathMovement; // 0x40
 	// MPropertyFriendlyName "Enable Speed Scaling"
 	// MPropertyGroupName "Speed Scaling"
 	// MPropertyAttrChangeCallback
-	bool m_bScaleSpeed; // 0x4e
+	bool m_bScaleSpeed; // 0x41
 	// MPropertyFriendlyName "Scale"
 	// MPropertyGroupName "Speed Scaling"
 	// MPropertyAttributeRange "0 1"
 	// MPropertyAttrStateCallback
-	float m_flScale; // 0x50
+	float m_flScale; // 0x44
 	// MPropertyFriendlyName "Min Angle"
 	// MPropertyGroupName "Speed Scaling"
 	// MPropertyAttributeRange "0 180"
 	// MPropertyAttrStateCallback
-	float m_flMinAngle; // 0x54
+	float m_flMinAngle; // 0x48
 	// MPropertyFriendlyName "Max Angle"
 	// MPropertyGroupName "Speed Scaling"
 	// MPropertyAttributeRange "0 180"
 	// MPropertyAttrStateCallback
-	float m_flMaxAngle; // 0x58
+	float m_flMaxAngle; // 0x4c
 	// MPropertyFriendlyName "Blend Time"
 	// MPropertyGroupName "Speed Scaling"
 	// MPropertyAttrStateCallback
-	float m_flSpeedScaleBlending; // 0x5c
+	float m_flSpeedScaleBlending; // 0x50
 	// MPropertyFriendlyName "Enable Turn to Face"
 	// MPropertyGroupName "Turn to Face"
 	// MPropertyAttrChangeCallback
-	bool m_bTurnToFace; // 0x60
+	bool m_bTurnToFace; // 0x54
 	// MPropertyFriendlyName "Target"
 	// MPropertyGroupName "Turn to Face"
 	// MPropertyAttrChangeCallback
 	// MPropertyAttrStateCallback
-	AnimValueSource m_facingTarget; // 0x64
+	AnimValueSource m_facingTarget; // 0x58
 	// MPropertyFriendlyName "Parameter"
 	// MPropertyGroupName "Turn to Face"
 	// MPropertyAttributeChoiceName "FloatParameter"
 	// MPropertyAttrStateCallback
-	AnimParamID m_param; // 0x68
+	AnimParamID m_param; // 0x5c
 	// MPropertyFriendlyName "Offset"
 	// MPropertyGroupName "Turn to Face"
 	// MPropertyAttributeRange "-180 180"
 	// MPropertyAttrStateCallback
-	float m_flTurnToFaceOffset; // 0x6c
+	float m_flTurnToFaceOffset; // 0x60
 	// MPropertyFriendlyName "Damping"
 	// MPropertyGroupName "Turn to Face"
 	// MPropertyAttrStateCallback
-	CAnimInputDamping m_damping; // 0x70
+	CAnimInputDamping m_damping; // 0x68
 };
 
 // Aligment: 24
-// Size: 232
+// Size: 216
 class CMotionMatchingAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertySuppressField
-	CUtlVector< CSmartPtr< CMotionClipGroup > > m_clipGroups; // 0x50
+	CUtlVector< CSmartPtr< CMotionClipGroup > > m_clipGroups; // 0x40
 	// MPropertySuppressField
-	CUtlVector< CSmartPtr< CMotionMetricBase > > m_metrics; // 0x68
+	CUtlVector< CSmartPtr< CMotionMetricBase > > m_metrics; // 0x58
 	// MPropertySuppressField
-	CBlendCurve m_blendCurve; // 0x80
+	CBlendCurve m_blendCurve; // 0x70
 	// MPropertyFriendlyName "Prediction Time"
-	float m_flPredictionTime; // 0x90
+	float m_flPredictionTime; // 0x80
 	// MPropertyFriendlyName "Sampling Method"
 	// MPropertyAttrChangeCallback
-	MotionSamplingMethod m_samplingMethod; // 0x94
+	MotionSamplingMethod m_samplingMethod; // 0x84
 	// MPropertyFriendlyName "Sample Rate"
 	// MPropertyAttrStateCallback
-	float m_flSampleRate; // 0x98
+	float m_flSampleRate; // 0x88
 	// MPropertyFriendlyName "Search at fixed interval"
 	// MPropertyGroupName "Search Triggers"
 	// MPropertyAttrChangeCallback
-	bool m_bSearchAtInterval; // 0x9c
+	bool m_bSearchAtInterval; // 0x8c
 	// MPropertyFriendlyName "Search Interval"
 	// MPropertyGroupName "Search Triggers"
 	// MPropertyAttrStateCallback
-	float m_flSearchInterval; // 0xa0
+	float m_flSearchInterval; // 0x90
 	// MPropertyFriendlyName "Search on Steps"
 	// MPropertyGroupName "Search Triggers"
-	bool m_bSearchOnSteps; // 0xa4
+	bool m_bSearchOnSteps; // 0x94
 	// MPropertyFriendlyName "Search when tags change"
 	// MPropertyGroupName "Search Triggers"
-	bool m_bForceSearchWhenTagsChange; // 0xa5
+	bool m_bForceSearchWhenTagsChange; // 0x95
 	// MPropertyFriendlyName "Search when clip ends"
 	// MPropertyGroupName "Search Triggers"
-	bool m_bSearchWhenClipEnds; // 0xa6
+	bool m_bSearchWhenClipEnds; // 0x96
 	// MPropertyFriendlyName "Search when goal changes"
 	// MPropertyGroupName "Search Triggers"
-	bool m_bSearchWhenGoalChanges; // 0xa7
+	bool m_bSearchWhenGoalChanges; // 0x97
 	// MPropertyFriendlyName "Blend Time"
-	float m_flBlendTime; // 0xa8
+	float m_flBlendTime; // 0x98
 	// MPropertyFriendlyName "Selection Threshold"
-	float m_flSelectionThreshold; // 0xac
+	float m_flSelectionThreshold; // 0x9c
 	// MPropertyFriendlyName "Lock Clip When Waning"
-	bool m_bLockClipWhenWaning; // 0xb0
+	bool m_bLockClipWhenWaning; // 0xa0
 	// MPropertyFriendlyName "Enable Goal Assist"
 	// MPropertyGroupName "Goal Assist"
 	// MPropertyAttrChangeCallback
-	bool m_bGoalAssist; // 0xb1
+	bool m_bGoalAssist; // 0xa1
 	// MPropertyFriendlyName "Goal Assist Distance"
 	// MPropertyGroupName "Goal Assist"
 	// MPropertyAttrStateCallback
-	float m_flGoalAssistDistance; // 0xb4
+	float m_flGoalAssistDistance; // 0xa4
 	// MPropertyFriendlyName "Goal Assist Tolerance"
 	// MPropertyGroupName "Goal Assist"
 	// MPropertyAttrStateCallback
-	float m_flGoalAssistTolerance; // 0xb8
+	float m_flGoalAssistTolerance; // 0xa8
 	// MPropertyFriendlyName "Enable Distance Scaling"
 	// MPropertyGroupName "Distance Scaling"
 	// MPropertyAttrChangeCallback
-	bool m_bEnableDistanceScaling; // 0xbc
+	bool m_bEnableDistanceScaling; // 0xac
 	// MPropertyFriendlyName "Outer Stopping Radius"
 	// MPropertyGroupName "Distance Scaling"
 	// MPropertyAttrStateCallback
-	float m_flDistanceScale_OuterRadius; // 0xc0
+	float m_flDistanceScale_OuterRadius; // 0xb0
 	// MPropertyFriendlyName "Inner Stopping Radius"
 	// MPropertyGroupName "Distance Scaling"
 	// MPropertyAttrStateCallback
-	float m_flDistanceScale_InnerRadius; // 0xc4
+	float m_flDistanceScale_InnerRadius; // 0xb4
 	// MPropertyFriendlyName "Maximum Speed Scale"
 	// MPropertyGroupName "Distance Scaling"
 	// MPropertyAttrStateCallback
-	float m_flDistanceScale_MaxScale; // 0xc8
+	float m_flDistanceScale_MaxScale; // 0xb8
 	// MPropertyFriendlyName "Minimum Speed Scale"
 	// MPropertyGroupName "Distance Scaling"
 	// MPropertyAttrStateCallback
-	float m_flDistanceScale_MinScale; // 0xcc
+	float m_flDistanceScale_MinScale; // 0xbc
 	// MPropertyFriendlyName "Damping"
 	// MPropertyGroupName "Distance Scaling"
 	// MPropertyAttrStateCallback
-	CAnimInputDamping m_distanceScale_Damping; // 0xd0
+	CAnimInputDamping m_distanceScale_Damping; // 0xc0
 };
 
 // Aligment: 3
-// Size: 80
+// Size: 72
 class CSetFacingAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Facing Mode"
-	FacingMode m_facingMode; // 0x48
+	FacingMode m_facingMode; // 0x3c
 	// MPropertyFriendlyName "Reset Child"
-	bool m_bResetChild; // 0x4c
+	bool m_bResetChild; // 0x40
 };
 
 // Aligment: 6
-// Size: 112
+// Size: 104
 class CStopAtGoalAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Outer Stopping Radius"
-	float m_flOuterRadius; // 0x48
+	float m_flOuterRadius; // 0x3c
 	// MPropertyFriendlyName "Inner Stopping Radius"
-	float m_flInnerRadius; // 0x4c
+	float m_flInnerRadius; // 0x40
 	// MPropertyFriendlyName "Maximum Speed Scale"
-	float m_flMaxScale; // 0x50
+	float m_flMaxScale; // 0x44
 	// MPropertyFriendlyName "Minimum Speed Scale"
-	float m_flMinScale; // 0x54
+	float m_flMinScale; // 0x48
 	// MPropertyFriendlyName "Damping"
-	CAnimInputDamping m_damping; // 0x58
+	CAnimInputDamping m_damping; // 0x50
 };
 
 // Aligment: 7
@@ -2975,145 +2813,31 @@ public:
 };
 
 // Aligment: 2
-// Size: 96
+// Size: 88
 class CJiggleBoneAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
+	AnimNodeID m_childID; // 0x38
 	// MPropertyFriendlyName "Jiggle Bones"
 	// MPropertyAutoExpandGroup
-	CUtlVector< CJiggleBoneItem > m_items; // 0x48
+	CUtlVector< CJiggleBoneItem > m_items; // 0x40
 };
 
-// Aligment: 3
-// Size: 120
+// Aligment: 2
+// Size: 72
 class CSingleFrameAnimNode : public CAnimNodeBase
 {
 public:
 	// MPropertyFriendlyName "Sequence"
 	// MPropertyAttributeChoiceName "Sequence"
-	CUtlString m_sequenceName; // 0x50
+	CUtlString m_sequenceName; // 0x38
 	// MPropertyFriendlyName "Frame"
-	int32_t m_nFrameIndex; // 0x58
-	// MPropertySuppressField
-	CUtlVector< CSmartPtr< CAnimTagSpan > > m_tagSpans; // 0x60
+	int32_t m_nFrameIndex; // 0x40
 };
 
-// Aligment: 3
-// Size: 96
-class CCommentAnimNode : public CAnimNodeBase
-{
-public:
-	// MPropertySuppressField
-	CUtlString m_commentText; // 0x48
-	// MPropertySuppressField
-	Vector2D m_size; // 0x50
-	// MPropertyFriendlyName "Color"
-	// MPropertyColorWithNoAlpha
-	Color m_color; // 0x58
-};
-
-// Aligment: 0
-// Size: 64
-class CInputStreamAnimNode : public CAnimNodeBase
-{
-public:
-// <no members described>
-};
-
-// Aligment: 3
-// Size: 40
-class CFootStepTriggerItem
-{
-public:
-	// MPropertyFriendlyName "Foot"
-	// MPropertyAttributeChoiceName "Foot"
-	CUtlString m_footName; // 0x0
-	// MPropertyFriendlyName "Trigger Phase"
-	StepPhase m_triggerPhase; // 0x8
-	// MPropertyFriendlyName "Tags"
-	// MPropertyAttributeChoiceName "Tag"
-	CUtlVector< AnimTagID > m_tags; // 0x10
-};
-
-// Aligment: 3
-// Size: 104
-class CFootStepTriggerAnimNode : public CAnimNodeBase
-{
-public:
-	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x40
-	// MPropertyFriendlyName "Tolerance"
-	float m_flTolerance; // 0x48
-	// MPropertyFriendlyName "Feet"
-	// MPropertyAutoExpandGroup
-	CUtlVector< CFootStepTriggerItem > m_items; // 0x50
-};
-
-// Aligment: 3
-// Size: 24
-class CConnectionProxyItem
-{
-public:
-	// MPropertyFriendlyName "Name"
-	CUtlString m_name; // 0x0
-	// MPropertyHideField
-	AnimOutputID m_outputID; // 0x8
-	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0xc
-};
-
-// Aligment: 2
-// Size: 128
-class CGroupAnimNode : public CAnimNodeBase
-{
-public:
-	// MPropertyHideField
-	AnimNodeID m_inputNodeID; // 0x48
-	// MPropertyHideField
-	AnimNodeID m_outputNodeID; // 0x4c
-};
-
-// Aligment: 1
-// Size: 88
-class CGroupInputAnimNode : public CAnimNodeBase
-{
-public:
-	// MPropertyFriendlyName "External Connections"
-	// MPropertyAutoExpandGroup
-	// MPropertyAttrStateCallback
-	CUtlVector< CConnectionProxyItem > m_proxyItems; // 0x40
-};
-
-// Aligment: 1
-// Size: 88
-class CGroupOutputAnimNode : public CAnimNodeBase
-{
-public:
-	// MPropertyFriendlyName "External Connections"
-	// MPropertyAutoExpandGroup
-	// MPropertyAttrStateCallback
-	CUtlVector< CConnectionProxyItem > m_proxyItems; // 0x40
-};
-
-// Aligment: 3
-// Size: 152
-class CSubGraphAnimNode : public CAnimNodeBase
-{
-public:
-	// MPropertyHideField
-	AnimNodeID m_inputNodeID; // 0x48
-	// MPropertyHideField
-	AnimNodeID m_outputNodeID; // 0x4c
-	// MPropertyAttributeEditor "AssetBrowse( vsubgrph )"
-	// MPropertyFriendlyName "SubGraph File"
-	// MPropertyAttrChangeCallback
-	CUtlString m_subGraphFilename; // 0x70
-};
-
-// Aligment: 12
-// Size: 144
+// Aligment: 11
+// Size: 136
 class CAnimState
 {
 public:
@@ -3127,21 +2851,19 @@ public:
 	// MPropertySortPriority "100"
 	CUtlString m_name; // 0x68
 	// MPropertyHideField
-	CNodeConnection m_inputConnection; // 0x70
+	AnimNodeID m_childNodeID; // 0x70
 	// MPropertyHideField
-	AnimStateID m_stateID; // 0x78
+	AnimStateID m_stateID; // 0x74
 	// MPropertyHideField
-	Vector2D m_position; // 0x7c
+	Vector2D m_position; // 0x78
 	// MPropertyFriendlyName "Start State"
-	bool m_bIsStartState; // 0x84
+	bool m_bIsStartState; // 0x80
 	// MPropertyFriendlyName "End State"
-	bool m_bIsEndtState; // 0x85
+	bool m_bIsEndtState; // 0x81
 	// MPropertyFriendlyName "Passthrough"
-	bool m_bIsPassthrough; // 0x86
+	bool m_bIsPassthrough; // 0x82
 	// MPropertyFriendlyName "Exclusive Root Motion"
-	bool m_bIsRootMotionExclusive; // 0x87
-	// MPropertyFriendlyName "Always Evaluate"
-	bool m_bAlwaysEvaluate; // 0x88
+	bool m_bIsRootMotionExclusive; // 0x83
 };
 
 // Aligment: 9
@@ -3178,7 +2900,7 @@ public:
 };
 
 // Aligment: 2
-// Size: 72
+// Size: 64
 class CParameterAnimCondition : public CAnimStateConditionBase
 {
 public:
@@ -3316,16 +3038,16 @@ public:
 };
 
 // Aligment: 2
-// Size: 72
+// Size: 224
 class CAnimMovementManager
 {
 public:
 	CAnimMotorList m_MotorList; // 0x18
-	CAnimMovementSettings m_MovementSettings; // 0x38
+	CAnimMovementSettings m_MovementSettings; // 0xd0
 };
 
 // Aligment: 1
-// Size: 48
+// Size: 200
 class CAnimTagManager
 {
 public:
@@ -3681,14 +3403,15 @@ public:
 	bool m_bIgnoreSlope; // 0x40
 };
 
-// Aligment: 3
-// Size: 96
+// Aligment: 4
+// Size: 112
 class CAnimReplayFrame
 {
 public:
 	CUtlBinaryBlock m_instanceData; // 0x10
-	CTransform m_localToWorldTransform; // 0x30
-	float m_timeStamp; // 0x50
+	CUtlBinaryBlock m_poseRecipeInstanceData; // 0x28
+	CTransform m_localToWorldTransform; // 0x40
+	float m_timeStamp; // 0x60
 };
 
 // Aligment: 5
