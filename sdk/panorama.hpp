@@ -2,16 +2,16 @@
 #include <cstdint>
 #include "!GlobalTypes.hpp"
 
-///////////////////////////////////////////
+// /////////////////////////////////////////
 // Binary: panorama.dll
-// Class Count: 0
-// Enum Count: 2
-///////////////////////////////////////////
+// Classes count: 0
+// Enums count: 2
+// /////////////////////////////////////////
 
-// Aligment: 4
-// Size: 13
+// Alignment: 4
+// Size: 0xd
 enum class ELayoutNodeType : uint32_t
-{
+{ 
 	ROOT = 0x0,
 	STYLES = 0x1,
 	SCRIPT_BODY = 0x2,
@@ -27,10 +27,10 @@ enum class ELayoutNodeType : uint32_t
 	REFERENCE_PASSTHROUGH = 0xc,
 };
 
-// Aligment: 4
-// Size: 15
+// Alignment: 4
+// Size: 0xf
 enum class EStyleNodeType : uint32_t
-{
+{ 
 	ROOT = 0x0,
 	EXPRESSION = 0x1,
 	PROPERTY = 0x2,

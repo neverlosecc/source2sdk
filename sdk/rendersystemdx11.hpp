@@ -2,25 +2,25 @@
 #include <cstdint>
 #include "!GlobalTypes.hpp"
 
-///////////////////////////////////////////
+// /////////////////////////////////////////
 // Binary: rendersystemdx11.dll
-// Class Count: 3
-// Enum Count: 5
-///////////////////////////////////////////
+// Classes count: 3
+// Enums count: 5
+// /////////////////////////////////////////
 
-// Aligment: 4
-// Size: 3
+// Alignment: 4
+// Size: 0x3
 enum class RenderSlotType_t : uint32_t
-{
+{ 
 	RENDER_SLOT_INVALID = 0xffffffffffffffff,
 	RENDER_SLOT_PER_VERTEX = 0x0,
 	RENDER_SLOT_PER_INSTANCE = 0x1,
 };
 
-// Aligment: 4
-// Size: 9
+// Alignment: 4
+// Size: 0x9
 enum class RenderBufferFlags_t : uint32_t
-{
+{ 
 	RENDER_BUFFER_USAGE_VERTEX_BUFFER = 0x1,
 	RENDER_BUFFER_USAGE_INDEX_BUFFER = 0x2,
 	RENDER_BUFFER_USAGE_SHADER_RESOURCE = 0x4,
@@ -32,10 +32,10 @@ enum class RenderBufferFlags_t : uint32_t
 	RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS = 0x100,
 };
 
-// Aligment: 4
-// Size: 45
+// Alignment: 4
+// Size: 0x2d
 enum class RenderPrimitiveType_t : uint32_t
-{
+{ 
 	RENDER_PRIM_POINTS = 0x0,
 	RENDER_PRIM_LINES = 0x1,
 	RENDER_PRIM_LINES_WITH_ADJACENCY = 0x2,
@@ -83,20 +83,20 @@ enum class RenderPrimitiveType_t : uint32_t
 	RENDER_PRIM_TYPE_COUNT = 0x2c,
 };
 
-// Aligment: 4
-// Size: 4
+// Alignment: 4
+// Size: 0x4
 enum class InputLayoutVariation_t : uint32_t
-{
+{ 
 	INPUT_LAYOUT_VARIATION_DEFAULT = 0x0,
 	INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID = 0x1,
 	INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID = 0x2,
 	INPUT_LAYOUT_VARIATION_MAX = 0x3,
 };
 
-// Aligment: 4
-// Size: 8
+// Alignment: 4
+// Size: 0x8
 enum class RenderMultisampleType_t : uint32_t
-{
+{ 
 	RENDER_MULTISAMPLE_INVALID = 0xffffffffffffffff,
 	RENDER_MULTISAMPLE_NONE = 0x0,
 	RENDER_MULTISAMPLE_2X = 0x1,
@@ -107,36 +107,36 @@ enum class RenderMultisampleType_t : uint32_t
 	RENDER_MULTISAMPLE_TYPE_COUNT = 0x6,
 };
 
-// Aligment: 7
-// Size: 56
-struct RenderInputLayoutField_t
-{
+// Alignment: 7
+// Size: 0x38
+struct RenderInputLayoutField_t : public 
+{ 
 public:
-	uint8[32] m_pSemanticName; // 0x0
-	int32_t m_nSemanticIndex; // 0x20
-	uint32_t m_Format; // 0x24
-	int32_t m_nOffset; // 0x28
-	int32_t m_nSlot; // 0x2c
-	RenderSlotType_t m_nSlotType; // 0x30
-	int32_t m_nInstanceStepRate; // 0x34
+	uint8[32] m_pSemanticName; 	// 0x0
+	int32_t m_nSemanticIndex; 	// 0x20
+	uint32_t m_Format; 	// 0x24
+	int32_t m_nOffset; 	// 0x28
+	int32_t m_nSlot; 	// 0x2c
+	RenderSlotType_t m_nSlotType; 	// 0x30
+	int32_t m_nInstanceStepRate; 	// 0x34
 };
 
-// Aligment: 4
-// Size: 196
-struct VsInputSignatureElement_t
-{
+// Alignment: 4
+// Size: 0xc4
+struct VsInputSignatureElement_t : public 
+{ 
 public:
-	char[64] m_pName; // 0x0
-	char[64] m_pSemantic; // 0x40
-	char[64] m_pD3DSemanticName; // 0x80
-	int32_t m_nD3DSemanticIndex; // 0xc0
+	char[64] m_pName; 	// 0x0
+	char[64] m_pSemantic; 	// 0x40
+	char[64] m_pD3DSemanticName; 	// 0x80
+	int32_t m_nD3DSemanticIndex; 	// 0xc0
 };
 
-// Aligment: 1
-// Size: 24
-struct VsInputSignature_t
-{
+// Alignment: 1
+// Size: 0x18
+struct VsInputSignature_t : public 
+{ 
 public:
-	CUtlVector< VsInputSignatureElement_t > m_elems; // 0x0
+	CUtlVector< VsInputSignatureElement_t > m_elems; 	// 0x0
 };
 

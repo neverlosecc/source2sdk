@@ -2,110 +2,110 @@
 #include <cstdint>
 #include "!GlobalTypes.hpp"
 
-///////////////////////////////////////////
+// /////////////////////////////////////////
 // Binary: scenesystem.dll
-// Class Count: 9
-// Enum Count: 1
-///////////////////////////////////////////
+// Classes count: 9
+// Enums count: 1
+// /////////////////////////////////////////
 
-// Aligment: 1
-// Size: 4
+// Alignment: 1
+// Size: 0x4
 enum class DisableShadows_t : uint8_t
-{
-	kDisableShadows_None = 0,
-	kDisableShadows_All = 1,
-	kDisableShadows_Baked = 2,
-	kDisableShadows_Realtime = 3,
+{ 
+	kDisableShadows_None = 0x0,
+	kDisableShadows_All = 0x1,
+	kDisableShadows_Baked = 0x2,
+	kDisableShadows_Realtime = 0x3,
 };
 
-// Aligment: 2
-// Size: 16
-class CSSDSEndFrameViewInfo
-{
+// Alignment: 2
+// Size: 0x10
+class CSSDSEndFrameViewInfo : public 
+{ 
 public:
-	uint64_t m_nViewId; // 0x0
-	CUtlString m_ViewName; // 0x8
+	uint64_t m_nViewId; 	// 0x0
+	CUtlString m_ViewName; 	// 0x8
 };
 
-// Aligment: 1
-// Size: 24
-class CSSDSMsg_EndFrame
-{
+// Alignment: 1
+// Size: 0x18
+class CSSDSMsg_EndFrame : public 
+{ 
 public:
-	CUtlVector< CSSDSEndFrameViewInfo > m_Views; // 0x0
+	CUtlVector< CSSDSEndFrameViewInfo > m_Views; 	// 0x0
 };
 
-// Aligment: 2
-// Size: 16
-struct SceneViewId_t
-{
+// Alignment: 2
+// Size: 0x10
+struct SceneViewId_t : public 
+{ 
 public:
-	uint64_t m_nViewId; // 0x0
-	uint64_t m_nFrameCount; // 0x8
+	uint64_t m_nViewId; 	// 0x0
+	uint64_t m_nFrameCount; 	// 0x8
 };
 
-// Aligment: 2
-// Size: 24
-class CSSDSMsg_ViewRender
-{
+// Alignment: 2
+// Size: 0x18
+class CSSDSMsg_ViewRender : public 
+{ 
 public:
-	SceneViewId_t m_viewId; // 0x0
-	CUtlString m_ViewName; // 0x10
+	SceneViewId_t m_viewId; 	// 0x0
+	CUtlString m_ViewName; 	// 0x10
 };
 
-// Aligment: 6
-// Size: 56
-class CSSDSMsg_LayerBase
-{
+// Alignment: 6
+// Size: 0x38
+class CSSDSMsg_LayerBase : public 
+{ 
 public:
-	SceneViewId_t m_viewId; // 0x0
-	CUtlString m_ViewName; // 0x10
-	int32_t m_nLayerIndex; // 0x18
-	uint64_t m_nLayerId; // 0x20
-	CUtlString m_LayerName; // 0x28
-	CUtlString m_displayText; // 0x30
+	SceneViewId_t m_viewId; 	// 0x0
+	CUtlString m_ViewName; 	// 0x10
+	int32_t m_nLayerIndex; 	// 0x18
+	uint64_t m_nLayerId; 	// 0x20
+	CUtlString m_LayerName; 	// 0x28
+	CUtlString m_displayText; 	// 0x30
 };
 
-// Aligment: 10
-// Size: 48
-class CSSDSMsg_ViewTarget
-{
+// Alignment: 10
+// Size: 0x30
+class CSSDSMsg_ViewTarget : public 
+{ 
 public:
-	CUtlString m_Name; // 0x0
-	uint64_t m_TextureId; // 0x8
-	int32_t m_nWidth; // 0x10
-	int32_t m_nHeight; // 0x14
-	int32_t m_nRequestedWidth; // 0x18
-	int32_t m_nRequestedHeight; // 0x1c
-	int32_t m_nNumMipLevels; // 0x20
-	int32_t m_nDepth; // 0x24
-	int32_t m_nMultisampleNumSamples; // 0x28
-	int32_t m_nFormat; // 0x2c
+	CUtlString m_Name; 	// 0x0
+	uint64_t m_TextureId; 	// 0x8
+	int32_t m_nWidth; 	// 0x10
+	int32_t m_nHeight; 	// 0x14
+	int32_t m_nRequestedWidth; 	// 0x18
+	int32_t m_nRequestedHeight; 	// 0x1c
+	int32_t m_nNumMipLevels; 	// 0x20
+	int32_t m_nDepth; 	// 0x24
+	int32_t m_nMultisampleNumSamples; 	// 0x28
+	int32_t m_nFormat; 	// 0x2c
 };
 
-// Aligment: 3
-// Size: 48
-class CSSDSMsg_ViewTargetList
-{
+// Alignment: 3
+// Size: 0x30
+class CSSDSMsg_ViewTargetList : public 
+{ 
 public:
-	SceneViewId_t m_viewId; // 0x0
-	CUtlString m_ViewName; // 0x10
-	CUtlVector< CSSDSMsg_ViewTarget > m_Targets; // 0x18
+	SceneViewId_t m_viewId; 	// 0x0
+	CUtlString m_ViewName; 	// 0x10
+	CUtlVector< CSSDSMsg_ViewTarget > m_Targets; 	// 0x18
 };
 
-// Aligment: 0
-// Size: 56
+// Alignment: 0
+// Size: 0x38
 class CSSDSMsg_PreLayer : public CSSDSMsg_LayerBase
-{
+{ 
 public:
-// <no members described>
+	// no members available
 };
 
-// Aligment: 0
-// Size: 56
+// Alignment: 0
+// Size: 0x38
 class CSSDSMsg_PostLayer : public CSSDSMsg_LayerBase
-{
+{ 
 public:
-// <no members described>
+	// no members available
 };
 
