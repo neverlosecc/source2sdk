@@ -2,14 +2,15 @@
 #include <cstdint>
 #include "!GlobalTypes.hpp"
 
-///////////////////////////////////////////
+// /////////////////////////////////////////////////////////////
 // Binary: panorama.dll
-// Class Count: 0
-// Enum Count: 2
-///////////////////////////////////////////
+// Classes count: 0
+// Enums count: 2
+// Created using source2gen - github.com/neverlosecc/source2gen
+// /////////////////////////////////////////////////////////////
 
-// Aligment: 4
-// Size: 13
+// Alignment: 4
+// Size: 0xd
 enum class ELayoutNodeType : uint32_t
 {
 	ROOT = 0x0,
@@ -27,8 +28,8 @@ enum class ELayoutNodeType : uint32_t
 	REFERENCE_PASSTHROUGH = 0xc,
 };
 
-// Aligment: 4
-// Size: 14
+// Alignment: 4
+// Size: 0xe
 enum class EStyleNodeType : uint32_t
 {
 	ROOT = 0x0,
