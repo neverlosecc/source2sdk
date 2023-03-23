@@ -2,16 +2,17 @@
 #include <cstdint>
 #include "!GlobalTypes.hpp"
 
-// /////////////////////////////////////////
+// /////////////////////////////////////////////////////////////
 // Binary: schemasystem.dll
 // Classes count: 7
 // Enums count: 2
-// /////////////////////////////////////////
+// Created using source2gen - github.com/neverlosecc/source2gen
+// /////////////////////////////////////////////////////////////
 
 // Alignment: 4
 // Size: 0x3
 enum class ThreeState_t : uint32_t
-{ 
+{
 	TRS_FALSE = 0x0,
 	TRS_TRUE = 0x1,
 	TRS_NONE = 0x2,
@@ -20,7 +21,7 @@ enum class ThreeState_t : uint32_t
 // Alignment: 1
 // Size: 0x50
 enum class fieldtype_t : uint8_t
-{ 
+{
 	FIELD_VOID = 0x0,
 	FIELD_FLOAT32 = 0x1,
 	FIELD_STRING = 0x2,
@@ -105,79 +106,88 @@ enum class fieldtype_t : uint8_t
 
 // Alignment: 22
 // Size: 0x180
-class CSchemaSystemInternalRegistration : public 
-{ 
+class CSchemaSystemInternalRegistration
+{
 public:
-	Vector2D m_Vector2D; 	// 0x0
-	Vector m_Vector; 	// 0x8
-	VectorAligned m_VectorAligned; 	// 0x20
-	Quaternion m_Quaternion; 	// 0x30
-	QAngle m_QAngle; 	// 0x40
-	RotationVector m_RotationVector; 	// 0x4c
-	RadianEuler m_RadianEuler; 	// 0x58
-	DegreeEuler m_DegreeEuler; 	// 0x64
-	QuaternionStorage m_QuaternionStorage; 	// 0x70
-	matrix3x4_t m_matrix3x4_t; 	// 0x80
-	matrix3x4a_t m_matrix3x4a_t; 	// 0xb0
-	Color m_Color; 	// 0xe0
-	Vector4D m_Vector4D; 	// 0xe4
-	CTransform m_CTransform; 	// 0x100
-	KeyValues* m_pKeyValues; 	// 0x120
-	CUtlBinaryBlock m_CUtlBinaryBlock; 	// 0x128
-	CUtlString m_CUtlString; 	// 0x140
-	CUtlSymbol m_CUtlSymbol; 	// 0x148
-	CUtlStringToken m_stringToken; 	// 0x14c
-	CUtlStringTokenWithStorage m_stringTokenWithStorage; 	// 0x150
-	CResourceArray< CResourcePointer< CResourceString > > m_ResourceTypes; 	// 0x168
-	KeyValues3 m_KV3; 	// 0x170
+	Vector2D m_Vector2D; // 0x0	
+	Vector m_Vector; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad0014[0xc]; 	// 0x14
+public:
+	VectorAligned m_VectorAligned; // 0x20	
+	Quaternion m_Quaternion; // 0x30	
+	QAngle m_QAngle; // 0x40	
+	RotationVector m_RotationVector; // 0x4c	
+	RadianEuler m_RadianEuler; // 0x58	
+	DegreeEuler m_DegreeEuler; // 0x64	
+	QuaternionStorage m_QuaternionStorage; // 0x70	
+	matrix3x4_t m_matrix3x4_t; // 0x80	
+	matrix3x4a_t m_matrix3x4a_t; // 0xb0	
+	Color m_Color; // 0xe0	
+	Vector4D m_Vector4D; // 0xe4	
+private:
+	[[maybe_unused]] uint8_t __pad00f4[0xc]; 	// 0xf4
+public:
+	CTransform m_CTransform; // 0x100	
+	KeyValues* m_pKeyValues; // 0x120	
+	CUtlBinaryBlock m_CUtlBinaryBlock; // 0x128	
+	CUtlString m_CUtlString; // 0x140	
+	CUtlSymbol m_CUtlSymbol; // 0x148	
+private:
+	[[maybe_unused]] uint8_t __pad014a[0x2]; 	// 0x14a
+public:
+	CUtlStringToken m_stringToken; // 0x14c	
+	CUtlStringTokenWithStorage m_stringTokenWithStorage; // 0x150	
+	CResourceArray< CResourcePointer< CResourceString > > m_ResourceTypes; // 0x168	
+	KeyValues3 m_KV3; // 0x170	
 };
 
 // Alignment: 0
 // Size: 0x1
-class InfoForResourceTypeCResourceManifestInternal : public 
-{ 
+class InfoForResourceTypeCResourceManifestInternal
+{
 public:
 	// no members available
 };
 
 // Alignment: 1
 // Size: 0x8
-struct ResourceId_t : public 
-{ 
+struct ResourceId_t
+{
 public:
-	uint64_t m_Value; 	// 0x0
+	uint64_t m_Value; // 0x0	
 };
 
 // Alignment: 2
 // Size: 0x8
-class CExampleSchemaVData_Monomorphic : public 
-{ 
+class CExampleSchemaVData_Monomorphic
+{
 public:
-	int32_t m_nExample1; 	// 0x0
-	int32_t m_nExample2; 	// 0x4
+	int32_t m_nExample1; // 0x0	
+	int32_t m_nExample2; // 0x4	
 };
 
 // Alignment: 1
 // Size: 0x10
-class CExampleSchemaVData_PolymorphicBase : public 
-{ 
+class CExampleSchemaVData_PolymorphicBase
+{
 public:
-	int32_t m_nBase; 	// 0x8
+	int32_t m_nBase; // 0x8	
 };
 
 // Alignment: 1
 // Size: 0x18
 class CExampleSchemaVData_PolymorphicDerivedA : public CExampleSchemaVData_PolymorphicBase
-{ 
+{
 public:
-	int32_t m_nDerivedA; 	// 0x10
+	int32_t m_nDerivedA; // 0x10	
 };
 
 // Alignment: 1
 // Size: 0x18
 class CExampleSchemaVData_PolymorphicDerivedB : public CExampleSchemaVData_PolymorphicBase
-{ 
+{
 public:
-	int32_t m_nDerivedB; 	// 0x10
+	int32_t m_nDerivedB; // 0x10	
 };
 
