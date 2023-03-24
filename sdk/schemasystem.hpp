@@ -141,7 +141,7 @@ public:
 class InfoForResourceTypeCResourceManifestInternal
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 1

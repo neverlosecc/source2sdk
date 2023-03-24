@@ -3274,7 +3274,7 @@ public:
 class CPhysicsComponent
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -3421,7 +3421,7 @@ public:
 class CPlayer_AutoaimServices : public CPlayerComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -3443,57 +3443,27 @@ public:
 	int32_t soundscapeEntityListIndex; // 0x70	
 };
 
-// Alignment: 17
-// Size: 0x178
-class CPlayer_CameraServices : public CPlayerComponent
+// Alignment: 14
+// Size: 0x40
+struct fogplayerparams_t
 {
 public:
 	// MNetworkEnable
-	uint32_t m_iFOV; // 0x30	
-	// MNetworkEnable
-	uint32_t m_iFOVStart; // 0x34	
-	// MNetworkEnable
-	float m_flFOVTime; // 0x38	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	float m_flFOVRate; // 0x3c	
-	// MNetworkEnable
-	uint32_t m_iDefaultFOV; // 0x40	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	// MNetworkPriority "32"
-	// MNetworkBitCount "32"
-	QAngle m_vecPunchAngle; // 0x44	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	// MNetworkBitCount "32"
-	QAngle m_vecPunchAngleVel; // 0x50	
-	// MNetworkEnable
-	CHandle< CBaseEntity > m_hZoomOwner; // 0x5c	
-	// MNetworkEnable
-	fogplayerparams_t m_PlayerFog; // 0x60	
-	// MNetworkEnable
-	CHandle< CColorCorrection > m_hColorCorrectionCtrl; // 0xa0	
-	// MNetworkEnable
-	CHandle< CBaseEntity > m_hViewEntity; // 0xa4	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	CHandle< CTonemapController2 > m_hTonemapController; // 0xa8	
-private:
-	[[maybe_unused]] uint8_t __pad00ac[0x4]; 	// 0xac
-public:
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	audioparams_t m_audio; // 0xb0	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	CNetworkUtlVectorBase< CHandle< CPostProcessingVolume > > m_PostProcessingVolumes; // 0x128	
-	float m_flOldPlayerZ; // 0x140	
-	float m_flOldPlayerViewOffsetZ; // 0x144	
-private:
-	[[maybe_unused]] uint8_t __pad0148[0x18]; 	// 0x148
-public:
-	CUtlVector< CHandle< CEnvSoundscapeTriggerable > > m_hTriggerSoundscapeList; // 0x160	
+	// MNetworkUserGroup "PlayerFogController"
+	CHandle< CFogController > m_hCtrl; // 0x8	
+	float m_flTransitionTime; // 0xc	
+	Color m_OldColor; // 0x10	
+	float m_flOldStart; // 0x14	
+	float m_flOldEnd; // 0x18	
+	float m_flOldMaxDensity; // 0x1c	
+	float m_flOldHDRColorScale; // 0x20	
+	float m_flOldFarZ; // 0x24	
+	Color m_NewColor; // 0x28	
+	float m_flNewStart; // 0x2c	
+	float m_flNewEnd; // 0x30	
+	float m_flNewMaxDensity; // 0x34	
+	float m_flNewHDRColorScale; // 0x38	
+	float m_flNewFarZ; // 0x3c	
 };
 
 // Alignment: 0
@@ -3501,7 +3471,7 @@ public:
 class CPlayer_FlashlightServices : public CPlayerComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3509,7 +3479,7 @@ public:
 class CPlayer_ItemServices : public CPlayerComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 16
@@ -3635,76 +3605,63 @@ public:
 	bool m_bPreventWeaponPickup; // 0x90	
 };
 
-// Alignment: 5
-// Size: 0x38
-struct AmmoTypeInfo_t
+// Alignment: 1
+// Size: 0x8
+class CRangeFloat
 {
 public:
-	int32_t m_nMaxCarry; // 0x10	
-private:
-	[[maybe_unused]] uint8_t __pad0014[0x8]; 	// 0x14
-public:
-	CRangeInt m_nSplashSize; // 0x1c	
-	AmmoFlags_t m_nFlags; // 0x24	
-	float m_flMass; // 0x28	
-	CRangeFloat m_flSpeed; // 0x2c	
+	float m_pValue[2]; // 0x0	
 };
 
-// Alignment: 15
-// Size: 0xb8
-class CAnimationLayer
+// Alignment: 8
+// Size: 0x40
+class CNetworkedSequenceOperation
 {
 public:
 	// MNetworkEnable
-	// MNetworkChangeCallback "animationLayerOpChanged"
-	CNetworkedSequenceOperation m_op; // 0x20	
+	// MNetworkSerializer "minusone"
+	// MNetworkChangeCallback "sequenceOpSequenceChanged"
+	// MNetworkPriority "32"
+	HSequence m_hSequence; // 0x8	
 	// MNetworkEnable
-	// MNetworkChangeCallback "animationLayerOrderChanged"
-	int32_t m_nOrder; // 0x60	
+	// MNetworkBitCount "15"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1"
+	// MNetworkEncodeFlags
+	// MNetworkPriority "32"
+	// MNetworkSendProxyRecipientsFilter
+	// MNetworkUserGroup "m_flCycle"
+	float m_flPrevCycle; // 0xc	
+	// MNetworkEnable
+	// MNetworkBitCount "15"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1"
+	// MNetworkEncodeFlags
+	// MNetworkPriority "32"
+	// MNetworkSendProxyRecipientsFilter
+	// MNetworkUserGroup "m_flCycle"
+	// MNetworkChangeCallback "sequenceOpCycleChanged"
+	float m_flCycle; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad0064[0x4]; 	// 0x64
+	[[maybe_unused]] uint8_t __pad0014[0x4]; 	// 0x14
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "-4"
-	// MNetworkMaxValue "12"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1"
 	// MNetworkEncodeFlags
-	// MNetworkSendProxyRecipientsFilter
-	CNetworkedQuantizedFloat m_flPlaybackRate; // 0x68	
-	// MNetworkEnable
-	// MNetworkSendProxyRecipientsFilter
-	bool m_bLooping; // 0x80	
-private:
-	[[maybe_unused]] uint8_t __pad0081[0x3]; 	// 0x81
-public:
-	// MNetworkEnable
-	// MNetworkPriority "32"
-	// MNetworkChangeCallback "animationLayerCycleReset"
-	// MNetworkSendProxyRecipientsFilter
-	int32_t m_nNewSequenceParity; // 0x84	
+	CNetworkedQuantizedFloat m_flWeight; // 0x18	
 	// MNetworkDisable
-	int32_t m_nFlags; // 0x88	
+	bool m_bSequenceChangeNetworked; // 0x30	
 	// MNetworkDisable
-	bool m_bSequenceFinished; // 0x8c	
+	bool m_bDiscontinuity; // 0x31	
 private:
-	[[maybe_unused]] uint8_t __pad008d[0x3]; 	// 0x8d
+	[[maybe_unused]] uint8_t __pad0032[0x2]; 	// 0x32
 public:
 	// MNetworkDisable
-	float m_flKillRate; // 0x90	
+	float m_flPrevCycleFromDiscontinuity; // 0x34	
 	// MNetworkDisable
-	float m_flKillDelay; // 0x94	
-	// MNetworkDisable
-	float m_flLayerAnimtime; // 0x98	
-	// MNetworkDisable
-	float m_flLayerFadeOuttime; // 0x9c	
-	// MNetworkDisable
-	int32_t m_nActivity; // 0xa0	
-	// MNetworkDisable
-	int32_t m_nPriority; // 0xa4	
-	// MNetworkDisable
-	float m_flLastEventCycle; // 0xa8	
-	// MNetworkDisable
-	float m_flLastAccess; // 0xac	
+	float m_flPrevCycleForAnimEventDetection; // 0x38	
 };
 
 // Alignment: 2
@@ -4008,7 +3965,7 @@ public:
 class IChoreoServices
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 10
@@ -4033,7 +3990,7 @@ public:
 class CJiggleBones
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x20]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -4045,55 +4002,61 @@ public:
 	CSkeletonInstance* m_pSkeletonInstance; // 0x8	
 };
 
-// Alignment: 8
-// Size: 0x40
-class CNetworkedSequenceOperation
+// Alignment: 15
+// Size: 0xb8
+class CAnimationLayer
 {
 public:
 	// MNetworkEnable
-	// MNetworkSerializer "minusone"
-	// MNetworkChangeCallback "sequenceOpSequenceChanged"
-	// MNetworkPriority "32"
-	HSequence m_hSequence; // 0x8	
+	// MNetworkChangeCallback "animationLayerOpChanged"
+	CNetworkedSequenceOperation m_op; // 0x20	
 	// MNetworkEnable
-	// MNetworkBitCount "15"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
-	// MNetworkEncodeFlags
-	// MNetworkPriority "32"
-	// MNetworkSendProxyRecipientsFilter
-	// MNetworkUserGroup "m_flCycle"
-	float m_flPrevCycle; // 0xc	
-	// MNetworkEnable
-	// MNetworkBitCount "15"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
-	// MNetworkEncodeFlags
-	// MNetworkPriority "32"
-	// MNetworkSendProxyRecipientsFilter
-	// MNetworkUserGroup "m_flCycle"
-	// MNetworkChangeCallback "sequenceOpCycleChanged"
-	float m_flCycle; // 0x10	
+	// MNetworkChangeCallback "animationLayerOrderChanged"
+	int32_t m_nOrder; // 0x60	
 private:
-	[[maybe_unused]] uint8_t __pad0014[0x4]; 	// 0x14
+	[[maybe_unused]] uint8_t __pad0064[0x4]; 	// 0x64
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "-4"
+	// MNetworkMaxValue "12"
 	// MNetworkEncodeFlags
-	CNetworkedQuantizedFloat m_flWeight; // 0x18	
-	// MNetworkDisable
-	bool m_bSequenceChangeNetworked; // 0x30	
-	// MNetworkDisable
-	bool m_bDiscontinuity; // 0x31	
+	// MNetworkSendProxyRecipientsFilter
+	CNetworkedQuantizedFloat m_flPlaybackRate; // 0x68	
+	// MNetworkEnable
+	// MNetworkSendProxyRecipientsFilter
+	bool m_bLooping; // 0x80	
 private:
-	[[maybe_unused]] uint8_t __pad0032[0x2]; 	// 0x32
+	[[maybe_unused]] uint8_t __pad0081[0x3]; 	// 0x81
+public:
+	// MNetworkEnable
+	// MNetworkPriority "32"
+	// MNetworkChangeCallback "animationLayerCycleReset"
+	// MNetworkSendProxyRecipientsFilter
+	int32_t m_nNewSequenceParity; // 0x84	
+	// MNetworkDisable
+	int32_t m_nFlags; // 0x88	
+	// MNetworkDisable
+	bool m_bSequenceFinished; // 0x8c	
+private:
+	[[maybe_unused]] uint8_t __pad008d[0x3]; 	// 0x8d
 public:
 	// MNetworkDisable
-	float m_flPrevCycleFromDiscontinuity; // 0x34	
+	float m_flKillRate; // 0x90	
 	// MNetworkDisable
-	float m_flPrevCycleForAnimEventDetection; // 0x38	
+	float m_flKillDelay; // 0x94	
+	// MNetworkDisable
+	float m_flLayerAnimtime; // 0x98	
+	// MNetworkDisable
+	float m_flLayerFadeOuttime; // 0x9c	
+	// MNetworkDisable
+	int32_t m_nActivity; // 0xa0	
+	// MNetworkDisable
+	int32_t m_nPriority; // 0xa4	
+	// MNetworkDisable
+	float m_flLastEventCycle; // 0xa8	
+	// MNetworkDisable
+	float m_flLastAccess; // 0xac	
 };
 
 // Alignment: 6
@@ -4387,7 +4350,7 @@ public:
 class CFootstepTableHandle
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 8
@@ -4717,7 +4680,7 @@ public:
 struct dynpitchvol_t : public dynpitchvol_base_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -4895,20 +4858,12 @@ public:
 	bool m_bHasOwner; // 0x30	
 };
 
-// Alignment: 6
-// Size: 0x34
-struct lerpdata_t
+// Alignment: 1
+// Size: 0x4
+struct ParticleIndex_t
 {
 public:
-	CHandle< CBaseEntity > m_hEnt; // 0x0	
-	MoveType_t m_MoveType; // 0x4	
-private:
-	[[maybe_unused]] uint8_t __pad0005[0x3]; 	// 0x5
-public:
-	float m_flStartTime; // 0x8	
-	Vector m_vecStartOrigin; // 0xc	
-	Quaternion m_qStartRot; // 0x18	
-	ParticleIndex_t m_nFXIndex; // 0x28	
+	int32_t m_nBoxedTypeSafeInt; // 0x0	
 };
 
 // Alignment: 5
@@ -5393,7 +5348,7 @@ public:
 class IVehicle
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5401,7 +5356,7 @@ public:
 class CMultiplayRules : public CGameRules
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 24
@@ -5471,27 +5426,57 @@ public:
 	bool m_bPadding; // 0x63	
 };
 
-// Alignment: 14
-// Size: 0x40
-struct fogplayerparams_t
+// Alignment: 17
+// Size: 0x178
+class CPlayer_CameraServices : public CPlayerComponent
 {
 public:
 	// MNetworkEnable
-	// MNetworkUserGroup "PlayerFogController"
-	CHandle< CFogController > m_hCtrl; // 0x8	
-	float m_flTransitionTime; // 0xc	
-	Color m_OldColor; // 0x10	
-	float m_flOldStart; // 0x14	
-	float m_flOldEnd; // 0x18	
-	float m_flOldMaxDensity; // 0x1c	
-	float m_flOldHDRColorScale; // 0x20	
-	float m_flOldFarZ; // 0x24	
-	Color m_NewColor; // 0x28	
-	float m_flNewStart; // 0x2c	
-	float m_flNewEnd; // 0x30	
-	float m_flNewMaxDensity; // 0x34	
-	float m_flNewHDRColorScale; // 0x38	
-	float m_flNewFarZ; // 0x3c	
+	uint32_t m_iFOV; // 0x30	
+	// MNetworkEnable
+	uint32_t m_iFOVStart; // 0x34	
+	// MNetworkEnable
+	float m_flFOVTime; // 0x38	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	float m_flFOVRate; // 0x3c	
+	// MNetworkEnable
+	uint32_t m_iDefaultFOV; // 0x40	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	// MNetworkPriority "32"
+	// MNetworkBitCount "32"
+	QAngle m_vecPunchAngle; // 0x44	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	// MNetworkBitCount "32"
+	QAngle m_vecPunchAngleVel; // 0x50	
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hZoomOwner; // 0x5c	
+	// MNetworkEnable
+	fogplayerparams_t m_PlayerFog; // 0x60	
+	// MNetworkEnable
+	CHandle< CColorCorrection > m_hColorCorrectionCtrl; // 0xa0	
+	// MNetworkEnable
+	CHandle< CBaseEntity > m_hViewEntity; // 0xa4	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	CHandle< CTonemapController2 > m_hTonemapController; // 0xa8	
+private:
+	[[maybe_unused]] uint8_t __pad00ac[0x4]; 	// 0xac
+public:
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	audioparams_t m_audio; // 0xb0	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	CNetworkUtlVectorBase< CHandle< CPostProcessingVolume > > m_PostProcessingVolumes; // 0x128	
+	float m_flOldPlayerZ; // 0x140	
+	float m_flOldPlayerViewOffsetZ; // 0x144	
+private:
+	[[maybe_unused]] uint8_t __pad0148[0x18]; 	// 0x148
+public:
+	CUtlVector< CHandle< CEnvSoundscapeTriggerable > > m_hTriggerSoundscapeList; // 0x160	
 };
 
 // Alignment: 6
@@ -5525,7 +5510,7 @@ public:
 class IRagdoll
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 3
@@ -5619,12 +5604,20 @@ public:
 	CBaseAnimatingController* m_pOwner; // 0x1d0	
 };
 
-// Alignment: 1
-// Size: 0x4
-struct ParticleIndex_t
+// Alignment: 6
+// Size: 0x34
+struct lerpdata_t
 {
 public:
-	int32_t m_nBoxedTypeSafeInt; // 0x0	
+	CHandle< CBaseEntity > m_hEnt; // 0x0	
+	MoveType_t m_MoveType; // 0x4	
+private:
+	[[maybe_unused]] uint8_t __pad0005[0x3]; 	// 0x5
+public:
+	float m_flStartTime; // 0x8	
+	Vector m_vecStartOrigin; // 0xc	
+	Quaternion m_qStartRot; // 0x18	
+	ParticleIndex_t m_nFXIndex; // 0x28	
 };
 
 // Alignment: 1
@@ -5640,7 +5633,7 @@ public:
 class CEntitySubclassVDataBase
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x28]; 	// @note: autoaligned
 };
 
 // Alignment: 4
@@ -5810,7 +5803,7 @@ public:
 class CTeamplayRules : public CMultiplayRules
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -5958,7 +5951,7 @@ public:
 class CAI_Component
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x18]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -5974,7 +5967,7 @@ public:
 class CAI_ScheduleBits
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x20]; 	// @note: autoaligned
 };
 
 // Alignment: 6
@@ -7206,23 +7199,12 @@ public:
 	CEmbeddedSubclass< CBaseModifier > m_ModifierOnHit; // 0x408	
 };
 
-// Alignment: 4
-// Size: 0x3d8
-class CNPCAbilitySpawnVData : public CBaseNPCAbilityVData
+// Alignment: 1
+// Size: 0x8
+class CRangeInt
 {
 public:
-	// MPropertyAttributeEditor "VDataChoice( scripts/npc_units.vdata )"
-	// MPropertyGroupName "Using"
-	CSubclassNameGeneric m_sSubclassToSpawn; // 0x3b8	
-	// MPropertyGroupName "Using"
-	CRangeInt m_nNumToSpawn; // 0x3c8	
-	// MPropertyGroupName "Using"
-	bool m_bSpawnInRagdoll; // 0x3d0	
-private:
-	[[maybe_unused]] uint8_t __pad03d1[0x3]; 	// 0x3d1
-public:
-	// MPropertyGroupName "Using"
-	float m_flRagdollSpawnForceMultiplier; // 0x3d4	
+	int32_t m_pValue[2]; // 0x0	
 };
 
 // Alignment: 8
@@ -7393,7 +7375,7 @@ public:
 struct ModifierTrackedSound_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 2
@@ -7466,37 +7448,12 @@ public:
 	ModifierDebuffType_t m_eDebuffType; // 0x378	
 };
 
-// Alignment: 20
-// Size: 0x80
-class CBaseModifier
+// Alignment: 1
+// Size: 0x4
+struct ModifierSerialNumber_t
 {
 public:
-	ModifierSerialNumber_t m_nSerialNumber; // 0x24	
-	float m_flLastAppliedTime; // 0x28	
-	float m_flDuration; // 0x2c	
-	CHandle< CBaseEntity > m_hCaster; // 0x30	
-	CHandle< CBaseEntity > m_hAbility; // 0x34	
-	CModifierHandleBase m_hAuraProvider; // 0x38	
-	ModifierQueuedRefreshHandle_t m_nQueuedModifierRefreshHandle; // 0x50	
-	uint8_t m_iAttributes; // 0x52	
-	uint8_t m_iTeam; // 0x53	
-	int16_t m_iStackCount; // 0x54	
-	int16_t m_iMaxStackCount; // 0x56	
-	uint8_t m_eDestroyReason; // 0x58	
-	bool m_bDisabled; // 0x59	
-private:
-	[[maybe_unused]] uint8_t __pad005a[0x2]; 	// 0x5a
-public:
-	float m_flPreviousTick; // 0x5c	
-	float m_flThinkInterval; // 0x60	
-	float m_flThinkIntervalStartTime; // 0x64	
-	float m_flTimeScale; // 0x68	
-private:
-	[[maybe_unused]] uint8_t __pad006c[0x4]; 	// 0x6c
-public:
-	CUtlVector< IModifierTrackedObject* >* m_pVecTrackedObjects; // 0x70	
-	ModifierRuntimeHandle_t m_hModifierListHandle; // 0x78	
-	int32_t m_iStringIndex; // 0x7c	
+	int32_t m_nBoxedTypeSafeInt; // 0x0	
 };
 
 // Alignment: 3
@@ -7556,14 +7513,6 @@ public:
 
 // Alignment: 1
 // Size: 0x4
-struct ModifierSerialNumber_t
-{
-public:
-	int32_t m_nBoxedTypeSafeInt; // 0x0	
-};
-
-// Alignment: 1
-// Size: 0x4
 struct ModifierRuntimeHandle_t
 {
 public:
@@ -7580,6 +7529,39 @@ public:
 	uint64_t m_hStableHandle; // 0x8	
 };
 
+// Alignment: 20
+// Size: 0x80
+class CBaseModifier
+{
+public:
+	ModifierSerialNumber_t m_nSerialNumber; // 0x24	
+	float m_flLastAppliedTime; // 0x28	
+	float m_flDuration; // 0x2c	
+	CHandle< CBaseEntity > m_hCaster; // 0x30	
+	CHandle< CBaseEntity > m_hAbility; // 0x34	
+	CModifierHandleBase m_hAuraProvider; // 0x38	
+	ModifierQueuedRefreshHandle_t m_nQueuedModifierRefreshHandle; // 0x50	
+	uint8_t m_iAttributes; // 0x52	
+	uint8_t m_iTeam; // 0x53	
+	int16_t m_iStackCount; // 0x54	
+	int16_t m_iMaxStackCount; // 0x56	
+	uint8_t m_eDestroyReason; // 0x58	
+	bool m_bDisabled; // 0x59	
+private:
+	[[maybe_unused]] uint8_t __pad005a[0x2]; 	// 0x5a
+public:
+	float m_flPreviousTick; // 0x5c	
+	float m_flThinkInterval; // 0x60	
+	float m_flThinkIntervalStartTime; // 0x64	
+	float m_flTimeScale; // 0x68	
+private:
+	[[maybe_unused]] uint8_t __pad006c[0x4]; 	// 0x6c
+public:
+	CUtlVector< IModifierTrackedObject* >* m_pVecTrackedObjects; // 0x70	
+	ModifierRuntimeHandle_t m_hModifierListHandle; // 0x78	
+	int32_t m_iStringIndex; // 0x7c	
+};
+
 // Alignment: 1
 // Size: 0x18
 struct ModifierVariant_t
@@ -7593,7 +7575,7 @@ public:
 class IModifierTrackedObject
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 4
@@ -7619,7 +7601,7 @@ public:
 class CSteamPalPlayer_MovementServices : public CPlayer_MovementServices
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -7647,7 +7629,7 @@ public:
 class CSteamPalModifier : public CBaseModifier
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7655,7 +7637,7 @@ public:
 class CSteamPalModifier_Base : public CSteamPalModifier
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7663,7 +7645,7 @@ public:
 class CSteamPalModifierAuraVData : public CModifierVData_BaseAura
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -8153,20 +8135,38 @@ public:
 	float m_flInstantKillMultiplier; // 0x284	
 };
 
-// Alignment: 1
-// Size: 0x8
-class CRangeFloat
+// Alignment: 5
+// Size: 0x38
+struct AmmoTypeInfo_t
 {
 public:
-	float m_pValue[2]; // 0x0	
+	int32_t m_nMaxCarry; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0014[0x8]; 	// 0x14
+public:
+	CRangeInt m_nSplashSize; // 0x1c	
+	AmmoFlags_t m_nFlags; // 0x24	
+	float m_flMass; // 0x28	
+	CRangeFloat m_flSpeed; // 0x2c	
 };
 
-// Alignment: 1
-// Size: 0x8
-class CRangeInt
+// Alignment: 4
+// Size: 0x3d8
+class CNPCAbilitySpawnVData : public CBaseNPCAbilityVData
 {
 public:
-	int32_t m_pValue[2]; // 0x0	
+	// MPropertyAttributeEditor "VDataChoice( scripts/npc_units.vdata )"
+	// MPropertyGroupName "Using"
+	CSubclassNameGeneric m_sSubclassToSpawn; // 0x3b8	
+	// MPropertyGroupName "Using"
+	CRangeInt m_nNumToSpawn; // 0x3c8	
+	// MPropertyGroupName "Using"
+	bool m_bSpawnInRagdoll; // 0x3d0	
+private:
+	[[maybe_unused]] uint8_t __pad03d1[0x3]; 	// 0x3d1
+public:
+	// MPropertyGroupName "Using"
+	float m_flRagdollSpawnForceMultiplier; // 0x3d4	
 };
 
 // Alignment: 2
@@ -8183,7 +8183,7 @@ public:
 class CNavVolume
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x70]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -8199,7 +8199,7 @@ public:
 class CNavVolumeAll : public CNavVolumeVector
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -8797,7 +8797,7 @@ class CTouchExpansionComponent : public CEntityComponent
 public:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CTouchExpansionComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_referenced_but_impl_is_contained(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CTouchExpansionComponent")->m_static_fields[1]->m_instance);};
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -9027,7 +9027,7 @@ public:
 class CServerOnlyEntity : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9035,7 +9035,7 @@ public:
 class CServerOnlyPointEntity : public CServerOnlyEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9043,7 +9043,7 @@ public:
 class CLogicalEntity : public CServerOnlyEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 17
@@ -9150,7 +9150,7 @@ public:
 class CFilterLOS : public CBaseFilter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -9209,7 +9209,7 @@ public:
 class CInfoData : public CServerOnlyEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9217,7 +9217,7 @@ public:
 class IServerVehicle : public IVehicle
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -9314,7 +9314,7 @@ public:
 class CEnvSoundscapeTriggerable : public CEnvSoundscape
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 27
@@ -9409,7 +9409,7 @@ public:
 class CNavVolumeMarkupVolume : public CNavVolume
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9417,7 +9417,7 @@ public:
 class CNavVolumeCalculatedVector : public CNavVolume
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -9476,7 +9476,7 @@ public:
 class CInfoLadderDismount : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9484,7 +9484,7 @@ public:
 class CGameRulesProxy : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -9677,7 +9677,7 @@ public:
 class CSoundOpvarSetOBBEntity : public CSoundOpvarSetAABBEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -10153,7 +10153,7 @@ public:
 class CNPCAbilityAddModifier : public CBaseNPCAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -10161,7 +10161,7 @@ public:
 class CNPCAbilityRemoveModifier : public CBaseNPCAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -10169,7 +10169,7 @@ public:
 class CNPCAbilityBaseRanged : public CBaseNPCAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -10177,7 +10177,7 @@ public:
 class CNPCAbilityMeleeAttack : public CBaseNPCAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -10273,7 +10273,7 @@ public:
 class CSteamPalModifierAura : public CBaseModifierAura
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -10281,7 +10281,7 @@ public:
 class CSteamPalModifierAura_Default : public CSteamPalModifierAura
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -10773,7 +10773,7 @@ public:
 class CPointEntity : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 20
@@ -10900,7 +10900,7 @@ public:
 class CEnvCubemapBox : public CEnvCubemap
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 18
@@ -11125,7 +11125,7 @@ public:
 class CInfoTarget : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11133,7 +11133,7 @@ public:
 class CInfoParticleTarget : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -11487,7 +11487,7 @@ public:
 class CServerOnlyModelEntity : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11495,7 +11495,7 @@ public:
 class CModelPointEntity : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -11613,7 +11613,7 @@ public:
 class CFuncWallToggle : public CFuncWall
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11621,7 +11621,7 @@ public:
 class CFuncVehicleClip : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11629,7 +11629,7 @@ public:
 class CFuncIllusionary : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -11658,7 +11658,7 @@ public:
 class CPointClientCommand : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11666,7 +11666,7 @@ public:
 class CPointServerCommand : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11674,7 +11674,7 @@ public:
 class CPointBroadcastClientCommand : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -11763,7 +11763,7 @@ public:
 class CEnvFunnel : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -11783,7 +11783,7 @@ public:
 class CPrecipitationBlocker : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -11907,7 +11907,7 @@ public:
 class CInfoInstructorHintTarget : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 24
@@ -12084,7 +12084,7 @@ public:
 class CShower : public CModelPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 15
@@ -12493,7 +12493,7 @@ public:
 class CLogicNPCCounterOBB : public CLogicNPCCounterAABB
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -12534,7 +12534,7 @@ public:
 class CLogicScript : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 12
@@ -12773,7 +12773,7 @@ public:
 class CRuleBrushEntity : public CRuleEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -13002,7 +13002,7 @@ public:
 class CPhysHingeAlias_phys_hinge_local : public CPhysHinge
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -13155,7 +13155,7 @@ public:
 class CSplineConstraint : public CPhysConstraint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -13208,7 +13208,7 @@ public:
 class CSimplePhysicsBrush : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -13246,7 +13246,7 @@ public:
 class CSprayCan : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -13307,7 +13307,7 @@ public:
 class CPointHMDAnchorOverride : public CPointHMDAnchor
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 44
@@ -13536,7 +13536,7 @@ public:
 class CEnableMotionFixup : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13544,7 +13544,7 @@ public:
 class CFuncPropRespawnZone : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -13853,7 +13853,7 @@ public:
 class CSoundEventEntityAlias_snd_event_point : public CSoundEventEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -13892,7 +13892,7 @@ public:
 class CEnvSoundscapeProxyAlias_snd_soundscape_proxy : public CEnvSoundscapeProxy
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13900,7 +13900,7 @@ public:
 class CEnvSoundscapeAlias_snd_soundscape : public CEnvSoundscape
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13908,7 +13908,7 @@ public:
 class CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable : public CEnvSoundscapeTriggerable
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13916,7 +13916,7 @@ public:
 class CNullEntity : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -13932,7 +13932,7 @@ public:
 class CInfoLandmark : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -14031,7 +14031,7 @@ public:
 class CHandleDummy : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14039,7 +14039,7 @@ public:
 class CFuncTrainControls : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -14056,7 +14056,7 @@ public:
 class CInfoTeleportDestination : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -14086,7 +14086,7 @@ public:
 class CLogicProximity : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14094,7 +14094,7 @@ public:
 class CInfoSpawnGroupLandmark : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -14224,7 +14224,7 @@ public:
 class CPhysicalButton : public CBaseButton
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14232,7 +14232,7 @@ public:
 class CRotButton : public CBaseButton
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 15
@@ -14322,7 +14322,7 @@ public:
 class CEntityBlocker : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -14939,7 +14939,7 @@ public:
 class CTriggerHurtGhost : public CTriggerHurt
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14947,7 +14947,7 @@ public:
 class CTriggerCallback : public CBaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 12
@@ -15326,7 +15326,7 @@ public:
 class CSpriteOriented : public CSprite
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -15441,7 +15441,7 @@ public:
 class CPointHintUi : public CPointClientUIWorldPanel
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -15483,7 +15483,7 @@ public:
 class CNodeEnt_InfoHint : public CNodeEnt
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -15491,7 +15491,7 @@ public:
 class CNodeEnt_InfoNodeHint : public CNodeEnt
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -15499,7 +15499,7 @@ public:
 class CNodeEnt_InfoNodeAir : public CNodeEnt
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -15507,7 +15507,7 @@ public:
 class CNodeEnt_InfoNodeAirHint : public CNodeEnt
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -15515,7 +15515,7 @@ public:
 class CNodeEnt_InfoNodeClimb : public CNodeEnt
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -15540,7 +15540,7 @@ class CAI_NetworkManager : public CPointEntity
 public:
 	static CUtlVector< uint32 > &Get_m_SpawnGroupsContributingToNodeList(){return *reinterpret_cast<CUtlVector< uint32 >*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_NetworkManager")->m_static_fields[0]->m_instance);};
 	static CUtlVector< CNodeEnt* > &Get_m_SpawningNodes(){return *reinterpret_cast<CUtlVector< CNodeEnt* >*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_NetworkManager")->m_static_fields[1]->m_instance);};
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -16048,7 +16048,7 @@ public:
 class CTonemapController2Alias_env_tonemap_controller2 : public CTonemapController2
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -16085,7 +16085,7 @@ public:
 class CLightSpotEntity : public CLightEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16093,7 +16093,7 @@ public:
 class CLightOrthoEntity : public CLightEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16101,7 +16101,7 @@ public:
 class CLightDirectionalEntity : public CLightEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16109,7 +16109,7 @@ public:
 class CLightEnvironmentEntity : public CLightDirectionalEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 12
@@ -16191,7 +16191,7 @@ public:
 class CWorld : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -16246,7 +16246,7 @@ public:
 class CBaseAnimatingOverlay : public CBaseAnimating
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -16385,7 +16385,7 @@ public:
 class CDynamicPropAlias_dynamic_prop : public CDynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16393,7 +16393,7 @@ public:
 class CDynamicPropAlias_prop_dynamic_override : public CDynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16401,7 +16401,7 @@ public:
 class CDynamicPropAlias_cable_dynamic : public CDynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -16496,7 +16496,7 @@ public:
 class CCommentaryViewPosition : public CSprite
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16504,7 +16504,7 @@ public:
 class CFuncWater : public CBaseDoor
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -16520,7 +16520,7 @@ public:
 class CItemSoda : public CBaseAnimating
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16528,7 +16528,7 @@ public:
 class CPrecipitation : public CBaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -16600,7 +16600,7 @@ public:
 class CPushable : public CBreakable
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16608,7 +16608,7 @@ public:
 class CFuncLadderAlias_func_useableladder : public CFuncLadder
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -16643,7 +16643,7 @@ public:
 class CFuncMoveLinearAlias_momentary_door : public CFuncMoveLinear
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16651,7 +16651,7 @@ public:
 class CFuncWaterAnalog : public CFuncMoveLinear
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -16672,7 +16672,7 @@ public:
 class CSimpleMarkupVolumeTagged : public CMarkupVolumeTagged
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16680,7 +16680,7 @@ public:
 class CMarkupVolumeTagged_Nav : public CMarkupVolumeTagged
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16688,7 +16688,7 @@ public:
 class CMarkupVolumeTagged_NavGame : public CMarkupVolumeWithRef
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -16708,7 +16708,7 @@ public:
 class CPathCornerCrash : public CPathCorner
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -16724,7 +16724,7 @@ public:
 class CSimplePhysicsProp : public CBaseProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -16740,7 +16740,7 @@ public:
 class CRopeKeyframeAlias_move_rope : public CRopeKeyframe
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16748,7 +16748,7 @@ public:
 class CSceneEntityAlias_logic_choreographed_scene : public CSceneEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -16785,7 +16785,7 @@ public:
 class CSpriteAlias_env_glow : public CSprite
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -16868,7 +16868,7 @@ public:
 class CFuncTrackAuto : public CFuncTrackChange
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -16900,7 +16900,7 @@ public:
 class CTriggerOnce : public CTriggerMultiple
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -16986,7 +16986,7 @@ public:
 class CTriggerGravity : public CBaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -17023,7 +17023,7 @@ public:
 class CTriggerPlayerMovement : public CBaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17031,7 +17031,7 @@ public:
 class CServerRagdollTrigger : public CBaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -17487,7 +17487,7 @@ public:
 class CPhysicsPropOverride : public CPhysicsProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -17588,7 +17588,7 @@ public:
 class CWaterBullet : public CBaseAnimating
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -18040,7 +18040,7 @@ public:
 class CSteamPal_Trackball : public CBaseAnimating
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18048,7 +18048,7 @@ public:
 class CSteamPal_TouchScreen : public CBaseAnimating
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 20
@@ -18143,7 +18143,7 @@ public:
 class CNPCApplianceProjectile : public CPhysicsProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -18208,7 +18208,7 @@ public:
 class CDevtestHierarchyChild : public CDynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18216,7 +18216,7 @@ public:
 class CDevtestHierarchy2 : public CBaseAnimating
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -18255,7 +18255,7 @@ public:
 class CBaseFlexAlias_funCBaseFlex : public CBaseFlex
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18263,7 +18263,7 @@ public:
 class CGenericFlexCyclerAlias_cycler : public CGenericFlexCycler
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -18280,7 +18280,7 @@ public:
 class CRagdollPropAlias_physics_prop_ragdoll : public CRagdollProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -18586,8 +18586,8 @@ public:
 		uint8_t m_bInvokingBehaviorFValidateHintType: 1; 		
 		uint8_t m_bInvokingBehaviorShouldAlwaysThink: 1; 		
 		uint8_t m_bInvokingBehaviorAimGun: 1; 		
-		uint16_t __pad2: 12; // @note: autoaligned
-	}; // 24 bits
+		uint8_t __pad2: 4; // @note: autoaligned
+	}; // 16 bits
 	static CUtlSymbolLarge &Get_sm_iszPlayerSquad(){return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_BaseNPC")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_sm_nDebugBits(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_BaseNPC")->m_static_fields[1]->m_instance);};
 	static int32_t &Get_sm_nDebugPauseIndex(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_BaseNPC")->m_static_fields[2]->m_instance);};
@@ -19052,7 +19052,7 @@ public:
 class CGhostSpeaker : public CNPC_Furniture
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 21

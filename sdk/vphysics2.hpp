@@ -80,7 +80,7 @@ public:
 class IPhysicsPlayerController
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 10
@@ -608,16 +608,13 @@ public:
 	float flStickiness; // 0x14	
 };
 
-// Alignment: 5
-// Size: 0x1c
-struct FeCollisionPlane_t
+// Alignment: 2
+// Size: 0x10
+struct RnPlane_t
 {
 public:
-	uint16_t nCtrlParent; // 0x0	
-	uint16_t nChildNode; // 0x2	
-	RnPlane_t m_Plane; // 0x4	
-	float flStickiness; // 0x14	
-	float flStrength; // 0x18	
+	Vector m_vNormal; // 0x0	
+	float m_flOffset; // 0xc	
 };
 
 // Alignment: 4
@@ -910,13 +907,16 @@ public:
 	float m_flRadius; // 0x18	
 };
 
-// Alignment: 2
-// Size: 0x10
-struct RnPlane_t
+// Alignment: 5
+// Size: 0x1c
+struct FeCollisionPlane_t
 {
 public:
-	Vector m_vNormal; // 0x0	
-	float m_flOffset; // 0xc	
+	uint16_t nCtrlParent; // 0x0	
+	uint16_t nChildNode; // 0x2	
+	RnPlane_t m_Plane; // 0x4	
+	float flStickiness; // 0x14	
+	float flStrength; // 0x18	
 };
 
 // Alignment: 4

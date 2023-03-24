@@ -172,7 +172,7 @@ public:
 class CPlayer_AutoaimServices : public CPlayerComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -194,78 +194,71 @@ public:
 	int32_t soundscapeEntityListIndex; // 0x70	
 };
 
-// Alignment: 25
-// Size: 0x238
-class CPlayer_CameraServices : public CPlayerComponent
+// Alignment: 24
+// Size: 0x68
+struct fogparams_t
 {
 public:
 	// MNetworkEnable
-	uint32_t m_iFOV; // 0x30	
+	// MNetworkEncoder
+	Vector dirPrimary; // 0x8	
 	// MNetworkEnable
-	uint32_t m_iFOVStart; // 0x34	
+	Color colorPrimary; // 0x14	
 	// MNetworkEnable
-	float m_flFOVTime; // 0x38	
+	Color colorSecondary; // 0x18	
 	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	float m_flFOVRate; // 0x3c	
+	// MNetworkUserGroup "FogController"
+	Color colorPrimaryLerpTo; // 0x1c	
 	// MNetworkEnable
-	uint32_t m_iDefaultFOV; // 0x40	
-private:
-	[[maybe_unused]] uint8_t __pad0044[0x4]; 	// 0x44
-public:
-	// MNetworkUserGroup "LocalPlayerExclusive"
+	// MNetworkUserGroup "FogController"
+	Color colorSecondaryLerpTo; // 0x20	
 	// MNetworkEnable
-	// MNetworkPriority "32"
-	// MNetworkBitCount "32"
-	// MNetworkChangeCallback "OnPunchChanged"
-	QAngle m_vecPunchAngle; // 0x48	
-private:
-	[[maybe_unused]] uint8_t __pad0054[0xc]; 	// 0x54
-public:
-	// MNetworkUserGroup "LocalPlayerExclusive"
+	float start; // 0x24	
 	// MNetworkEnable
-	// MNetworkBitCount "32"
-	QAngle m_vecPunchAngleVel; // 0x60	
-private:
-	[[maybe_unused]] uint8_t __pad006c[0xc]; 	// 0x6c
-public:
+	float end; // 0x28	
 	// MNetworkEnable
-	CHandle< C_BaseEntity > m_hZoomOwner; // 0x78	
-private:
-	[[maybe_unused]] uint8_t __pad007c[0x4]; 	// 0x7c
-public:
+	// MNetworkUserGroup "FogController"
+	float farz; // 0x2c	
 	// MNetworkEnable
-	C_fogplayerparams_t m_PlayerFog; // 0x80	
+	float maxdensity; // 0x30	
 	// MNetworkEnable
-	CHandle< C_ColorCorrection > m_hColorCorrectionCtrl; // 0xc0	
+	float exponent; // 0x34	
 	// MNetworkEnable
-	CHandle< C_BaseEntity > m_hViewEntity; // 0xc4	
+	float HDRColorScale; // 0x38	
 	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	CHandle< C_TonemapController2 > m_hTonemapController; // 0xc8	
-private:
-	[[maybe_unused]] uint8_t __pad00cc[0x4]; 	// 0xcc
-public:
+	// MNetworkUserGroup "FogController"
+	float skyboxFogFactor; // 0x3c	
 	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	audioparams_t m_audio; // 0xd0	
+	// MNetworkUserGroup "FogController"
+	float skyboxFogFactorLerpTo; // 0x40	
 	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	C_NetworkUtlVectorBase< CHandle< C_PostProcessingVolume > > m_PostProcessingVolumes; // 0x148	
-	float m_flOldPlayerZ; // 0x160	
-	float m_flOldPlayerViewOffsetZ; // 0x164	
-	fogparams_t m_CurrentFog; // 0x168	
-	CHandle< C_FogController > m_hOldFogController; // 0x1d0	
-	bool m_bOverrideFogColor[5]; // 0x1d4	
-	Color m_OverrideFogColor[5]; // 0x1d9	
-	bool m_bOverrideFogStartEnd[5]; // 0x1ed	
-private:
-	[[maybe_unused]] uint8_t __pad01f2[0x2]; 	// 0x1f2
-public:
-	float m_fOverrideFogStart[5]; // 0x1f4	
-	float m_fOverrideFogEnd[5]; // 0x208	
-	CHandle< C_PostProcessingVolume > m_hActivePostProcessingVolume; // 0x21c	
-	QAngle m_angDemoViewAngles; // 0x220	
+	// MNetworkUserGroup "FogController"
+	float startLerpTo; // 0x44	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float endLerpTo; // 0x48	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float maxdensityLerpTo; // 0x4c	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float lerptime; // 0x50	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float duration; // 0x54	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float blendtobackground; // 0x58	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float scattering; // 0x5c	
+	// MNetworkEnable
+	bool enable; // 0x60	
+	// MNetworkEnable
+	bool blend; // 0x61	
+	// MNetworkEnable
+	bool m_bNoReflectionFog; // 0x62	
+	bool m_bPadding; // 0x63	
 };
 
 // Alignment: 0
@@ -273,7 +266,7 @@ public:
 class CPlayer_FlashlightServices : public CPlayerComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -281,7 +274,7 @@ public:
 class CPlayer_ItemServices : public CPlayerComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -377,26 +370,13 @@ public:
 	float m_flVehicleViewFOV; // 0x54	
 };
 
-// Alignment: 8
-// Size: 0x60
-class CPlayer_WaterServices : public CPlayerComponent
+// Alignment: 2
+// Size: 0x8
+class TimedEvent
 {
 public:
-	// MNetworkEnable
-	float m_AirFinishedTime; // 0x30	
-	float m_flWaterJumpTime; // 0x34	
-	Vector m_vecWaterJumpVel; // 0x38	
-	float m_flSwimSoundTime; // 0x44	
-	bool m_bPlayerUnderwater; // 0x48	
-private:
-	[[maybe_unused]] uint8_t __pad0049[0x3]; 	// 0x49
-public:
-	float m_flWaterSurfaceZ; // 0x4c	
-	bool m_bResampleWaterSurface; // 0x50	
-private:
-	[[maybe_unused]] uint8_t __pad0051[0x3]; 	// 0x51
-public:
-	TimedEvent m_tWaterParticleTimer; // 0x54	
+	float m_TimeBetweenEvents; // 0x0	
+	float m_fNextEvent; // 0x4	
 };
 
 // Alignment: 4
@@ -416,61 +396,55 @@ public:
 	uint16_t m_iAmmo[32]; // 0x50	
 };
 
-// Alignment: 15
-// Size: 0xb8
-class CAnimationLayer
+// Alignment: 8
+// Size: 0x40
+class CNetworkedSequenceOperation
 {
 public:
 	// MNetworkEnable
-	// MNetworkChangeCallback "animationLayerOpChanged"
-	CNetworkedSequenceOperation m_op; // 0x20	
+	// MNetworkSerializer "minusone"
+	// MNetworkChangeCallback "sequenceOpSequenceChanged"
+	// MNetworkPriority "32"
+	HSequence m_hSequence; // 0x8	
 	// MNetworkEnable
-	// MNetworkChangeCallback "animationLayerOrderChanged"
-	int32_t m_nOrder; // 0x60	
+	// MNetworkBitCount "15"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1"
+	// MNetworkEncodeFlags
+	// MNetworkPriority "32"
+	// MNetworkSendProxyRecipientsFilter
+	// MNetworkUserGroup "m_flCycle"
+	float m_flPrevCycle; // 0xc	
+	// MNetworkEnable
+	// MNetworkBitCount "15"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1"
+	// MNetworkEncodeFlags
+	// MNetworkPriority "32"
+	// MNetworkSendProxyRecipientsFilter
+	// MNetworkUserGroup "m_flCycle"
+	// MNetworkChangeCallback "sequenceOpCycleChanged"
+	float m_flCycle; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad0064[0x4]; 	// 0x64
+	[[maybe_unused]] uint8_t __pad0014[0x4]; 	// 0x14
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "-4"
-	// MNetworkMaxValue "12"
+	// MNetworkMinValue "0"
+	// MNetworkMaxValue "1"
 	// MNetworkEncodeFlags
-	// MNetworkSendProxyRecipientsFilter
-	CNetworkedQuantizedFloat m_flPlaybackRate; // 0x68	
-	// MNetworkEnable
-	// MNetworkSendProxyRecipientsFilter
-	bool m_bLooping; // 0x80	
-private:
-	[[maybe_unused]] uint8_t __pad0081[0x3]; 	// 0x81
-public:
-	// MNetworkEnable
-	// MNetworkPriority "32"
-	// MNetworkChangeCallback "animationLayerCycleReset"
-	// MNetworkSendProxyRecipientsFilter
-	int32_t m_nNewSequenceParity; // 0x84	
+	CNetworkedQuantizedFloat m_flWeight; // 0x18	
 	// MNetworkDisable
-	int32_t m_nFlags; // 0x88	
+	bool m_bSequenceChangeNetworked; // 0x30	
 	// MNetworkDisable
-	bool m_bSequenceFinished; // 0x8c	
+	bool m_bDiscontinuity; // 0x31	
 private:
-	[[maybe_unused]] uint8_t __pad008d[0x3]; 	// 0x8d
+	[[maybe_unused]] uint8_t __pad0032[0x2]; 	// 0x32
 public:
 	// MNetworkDisable
-	float m_flKillRate; // 0x90	
+	float m_flPrevCycleFromDiscontinuity; // 0x34	
 	// MNetworkDisable
-	float m_flKillDelay; // 0x94	
-	// MNetworkDisable
-	float m_flLayerAnimtime; // 0x98	
-	// MNetworkDisable
-	float m_flLayerFadeOuttime; // 0x9c	
-	// MNetworkDisable
-	int32_t m_nActivity; // 0xa0	
-	// MNetworkDisable
-	int32_t m_nPriority; // 0xa4	
-	// MNetworkDisable
-	float m_flLastEventCycle; // 0xa8	
-	// MNetworkDisable
-	float m_flLastAccess; // 0xac	
+	float m_flPrevCycleForAnimEventDetection; // 0x38	
 };
 
 // Alignment: 2
@@ -638,55 +612,61 @@ public:
 	Vector m_vRenderOrigin; // 0x148	
 };
 
-// Alignment: 8
-// Size: 0x40
-class CNetworkedSequenceOperation
+// Alignment: 15
+// Size: 0xb8
+class CAnimationLayer
 {
 public:
 	// MNetworkEnable
-	// MNetworkSerializer "minusone"
-	// MNetworkChangeCallback "sequenceOpSequenceChanged"
-	// MNetworkPriority "32"
-	HSequence m_hSequence; // 0x8	
+	// MNetworkChangeCallback "animationLayerOpChanged"
+	CNetworkedSequenceOperation m_op; // 0x20	
 	// MNetworkEnable
-	// MNetworkBitCount "15"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
-	// MNetworkEncodeFlags
-	// MNetworkPriority "32"
-	// MNetworkSendProxyRecipientsFilter
-	// MNetworkUserGroup "m_flCycle"
-	float m_flPrevCycle; // 0xc	
-	// MNetworkEnable
-	// MNetworkBitCount "15"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
-	// MNetworkEncodeFlags
-	// MNetworkPriority "32"
-	// MNetworkSendProxyRecipientsFilter
-	// MNetworkUserGroup "m_flCycle"
-	// MNetworkChangeCallback "sequenceOpCycleChanged"
-	float m_flCycle; // 0x10	
+	// MNetworkChangeCallback "animationLayerOrderChanged"
+	int32_t m_nOrder; // 0x60	
 private:
-	[[maybe_unused]] uint8_t __pad0014[0x4]; 	// 0x14
+	[[maybe_unused]] uint8_t __pad0064[0x4]; 	// 0x64
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "-4"
+	// MNetworkMaxValue "12"
 	// MNetworkEncodeFlags
-	CNetworkedQuantizedFloat m_flWeight; // 0x18	
-	// MNetworkDisable
-	bool m_bSequenceChangeNetworked; // 0x30	
-	// MNetworkDisable
-	bool m_bDiscontinuity; // 0x31	
+	// MNetworkSendProxyRecipientsFilter
+	CNetworkedQuantizedFloat m_flPlaybackRate; // 0x68	
+	// MNetworkEnable
+	// MNetworkSendProxyRecipientsFilter
+	bool m_bLooping; // 0x80	
 private:
-	[[maybe_unused]] uint8_t __pad0032[0x2]; 	// 0x32
+	[[maybe_unused]] uint8_t __pad0081[0x3]; 	// 0x81
+public:
+	// MNetworkEnable
+	// MNetworkPriority "32"
+	// MNetworkChangeCallback "animationLayerCycleReset"
+	// MNetworkSendProxyRecipientsFilter
+	int32_t m_nNewSequenceParity; // 0x84	
+	// MNetworkDisable
+	int32_t m_nFlags; // 0x88	
+	// MNetworkDisable
+	bool m_bSequenceFinished; // 0x8c	
+private:
+	[[maybe_unused]] uint8_t __pad008d[0x3]; 	// 0x8d
 public:
 	// MNetworkDisable
-	float m_flPrevCycleFromDiscontinuity; // 0x34	
+	float m_flKillRate; // 0x90	
 	// MNetworkDisable
-	float m_flPrevCycleForAnimEventDetection; // 0x38	
+	float m_flKillDelay; // 0x94	
+	// MNetworkDisable
+	float m_flLayerAnimtime; // 0x98	
+	// MNetworkDisable
+	float m_flLayerFadeOuttime; // 0x9c	
+	// MNetworkDisable
+	int32_t m_nActivity; // 0xa0	
+	// MNetworkDisable
+	int32_t m_nPriority; // 0xa4	
+	// MNetworkDisable
+	float m_flLastEventCycle; // 0xa8	
+	// MNetworkDisable
+	float m_flLastAccess; // 0xac	
 };
 
 // Alignment: 6
@@ -1186,16 +1166,29 @@ public:
 class IClientAlphaProperty
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
-// Alignment: 2
-// Size: 0x8
-class TimedEvent
+// Alignment: 8
+// Size: 0x60
+class CPlayer_WaterServices : public CPlayerComponent
 {
 public:
-	float m_TimeBetweenEvents; // 0x0	
-	float m_fNextEvent; // 0x4	
+	// MNetworkEnable
+	float m_AirFinishedTime; // 0x30	
+	float m_flWaterJumpTime; // 0x34	
+	Vector m_vecWaterJumpVel; // 0x38	
+	float m_flSwimSoundTime; // 0x44	
+	bool m_bPlayerUnderwater; // 0x48	
+private:
+	[[maybe_unused]] uint8_t __pad0049[0x3]; 	// 0x49
+public:
+	float m_flWaterSurfaceZ; // 0x4c	
+	bool m_bResampleWaterSurface; // 0x50	
+private:
+	[[maybe_unused]] uint8_t __pad0051[0x3]; 	// 0x51
+public:
+	TimedEvent m_tWaterParticleTimer; // 0x54	
 };
 
 // Alignment: 8
@@ -1489,7 +1482,7 @@ public:
 class C_GameRules
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 10
@@ -1529,74 +1522,7 @@ public:
 class C_MultiplayRules : public C_GameRules
 {
 public:
-	// no members available
-};
-
-// Alignment: 24
-// Size: 0x68
-struct fogparams_t
-{
-public:
-	// MNetworkEnable
-	// MNetworkEncoder
-	Vector dirPrimary; // 0x8	
-	// MNetworkEnable
-	Color colorPrimary; // 0x14	
-	// MNetworkEnable
-	Color colorSecondary; // 0x18	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	Color colorPrimaryLerpTo; // 0x1c	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	Color colorSecondaryLerpTo; // 0x20	
-	// MNetworkEnable
-	float start; // 0x24	
-	// MNetworkEnable
-	float end; // 0x28	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float farz; // 0x2c	
-	// MNetworkEnable
-	float maxdensity; // 0x30	
-	// MNetworkEnable
-	float exponent; // 0x34	
-	// MNetworkEnable
-	float HDRColorScale; // 0x38	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float skyboxFogFactor; // 0x3c	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float skyboxFogFactorLerpTo; // 0x40	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float startLerpTo; // 0x44	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float endLerpTo; // 0x48	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float maxdensityLerpTo; // 0x4c	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float lerptime; // 0x50	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float duration; // 0x54	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float blendtobackground; // 0x58	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float scattering; // 0x5c	
-	// MNetworkEnable
-	bool enable; // 0x60	
-	// MNetworkEnable
-	bool blend; // 0x61	
-	// MNetworkEnable
-	bool m_bNoReflectionFog; // 0x62	
-	bool m_bPadding; // 0x63	
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -1620,6 +1546,80 @@ public:
 	float m_flNewMaxDensity; // 0x34	
 	float m_flNewHDRColorScale; // 0x38	
 	float m_flNewFarZ; // 0x3c	
+};
+
+// Alignment: 25
+// Size: 0x238
+class CPlayer_CameraServices : public CPlayerComponent
+{
+public:
+	// MNetworkEnable
+	uint32_t m_iFOV; // 0x30	
+	// MNetworkEnable
+	uint32_t m_iFOVStart; // 0x34	
+	// MNetworkEnable
+	float m_flFOVTime; // 0x38	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	float m_flFOVRate; // 0x3c	
+	// MNetworkEnable
+	uint32_t m_iDefaultFOV; // 0x40	
+private:
+	[[maybe_unused]] uint8_t __pad0044[0x4]; 	// 0x44
+public:
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	// MNetworkEnable
+	// MNetworkPriority "32"
+	// MNetworkBitCount "32"
+	// MNetworkChangeCallback "OnPunchChanged"
+	QAngle m_vecPunchAngle; // 0x48	
+private:
+	[[maybe_unused]] uint8_t __pad0054[0xc]; 	// 0x54
+public:
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	// MNetworkEnable
+	// MNetworkBitCount "32"
+	QAngle m_vecPunchAngleVel; // 0x60	
+private:
+	[[maybe_unused]] uint8_t __pad006c[0xc]; 	// 0x6c
+public:
+	// MNetworkEnable
+	CHandle< C_BaseEntity > m_hZoomOwner; // 0x78	
+private:
+	[[maybe_unused]] uint8_t __pad007c[0x4]; 	// 0x7c
+public:
+	// MNetworkEnable
+	C_fogplayerparams_t m_PlayerFog; // 0x80	
+	// MNetworkEnable
+	CHandle< C_ColorCorrection > m_hColorCorrectionCtrl; // 0xc0	
+	// MNetworkEnable
+	CHandle< C_BaseEntity > m_hViewEntity; // 0xc4	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	CHandle< C_TonemapController2 > m_hTonemapController; // 0xc8	
+private:
+	[[maybe_unused]] uint8_t __pad00cc[0x4]; 	// 0xcc
+public:
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	audioparams_t m_audio; // 0xd0	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	C_NetworkUtlVectorBase< CHandle< C_PostProcessingVolume > > m_PostProcessingVolumes; // 0x148	
+	float m_flOldPlayerZ; // 0x160	
+	float m_flOldPlayerViewOffsetZ; // 0x164	
+	fogparams_t m_CurrentFog; // 0x168	
+	CHandle< C_FogController > m_hOldFogController; // 0x1d0	
+	bool m_bOverrideFogColor[5]; // 0x1d4	
+	Color m_OverrideFogColor[5]; // 0x1d9	
+	bool m_bOverrideFogStartEnd[5]; // 0x1ed	
+private:
+	[[maybe_unused]] uint8_t __pad01f2[0x2]; 	// 0x1f2
+public:
+	float m_fOverrideFogStart[5]; // 0x1f4	
+	float m_fOverrideFogEnd[5]; // 0x208	
+	CHandle< C_PostProcessingVolume > m_hActivePostProcessingVolume; // 0x21c	
+	QAngle m_angDemoViewAngles; // 0x220	
 };
 
 // Alignment: 6
@@ -1693,7 +1693,7 @@ public:
 class C_SingleplayRules : public C_GameRules
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -1701,7 +1701,7 @@ public:
 class C_TeamplayRules : public C_MultiplayRules
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 18
@@ -2287,29 +2287,14 @@ public:
 	ModifierDebuffType_t m_eDebuffType; // 0x378	
 };
 
-// Alignment: 18
-// Size: 0x78
-class CBaseModifier
+// Alignment: 1
+// Size: 0x18
+class CModifierHandleBase
 {
 public:
-	ModifierSerialNumber_t m_nSerialNumber; // 0x24	
-	float m_flLastAppliedTime; // 0x28	
-	float m_flDuration; // 0x2c	
-	CHandle< C_BaseEntity > m_hCaster; // 0x30	
-	CHandle< C_BaseEntity > m_hAbility; // 0x34	
-	CModifierHandleBase m_hAuraProvider; // 0x38	
-	uint8_t m_iAttributes; // 0x50	
-	uint8_t m_iTeam; // 0x51	
-	int16_t m_iStackCount; // 0x52	
-	int16_t m_iMaxStackCount; // 0x54	
-	uint8_t m_eDestroyReason; // 0x56	
-	bool m_bDisabled; // 0x57	
-	float m_flPreviousTick; // 0x58	
-	float m_flThinkInterval; // 0x5c	
-	float m_flThinkIntervalStartTime; // 0x60	
-	float m_flTimeScale; // 0x64	
-	CUtlVector< IModifierTrackedObject* >* m_pVecTrackedObjects; // 0x68	
-	ModifierRuntimeHandle_t m_hModifierListHandle; // 0x70	
+	// MNetworkEnable
+	// MNetworkSerializer "modifier_handle"
+	uint64_t m_hStableHandle; // 0x8	
 };
 
 // Alignment: 3
@@ -2359,14 +2344,29 @@ public:
 	uint32_t m_bvEnabledStateMask[1]; // 0xbc	
 };
 
-// Alignment: 1
-// Size: 0x18
-class CModifierHandleBase
+// Alignment: 18
+// Size: 0x78
+class CBaseModifier
 {
 public:
-	// MNetworkEnable
-	// MNetworkSerializer "modifier_handle"
-	uint64_t m_hStableHandle; // 0x8	
+	ModifierSerialNumber_t m_nSerialNumber; // 0x24	
+	float m_flLastAppliedTime; // 0x28	
+	float m_flDuration; // 0x2c	
+	CHandle< C_BaseEntity > m_hCaster; // 0x30	
+	CHandle< C_BaseEntity > m_hAbility; // 0x34	
+	CModifierHandleBase m_hAuraProvider; // 0x38	
+	uint8_t m_iAttributes; // 0x50	
+	uint8_t m_iTeam; // 0x51	
+	int16_t m_iStackCount; // 0x52	
+	int16_t m_iMaxStackCount; // 0x54	
+	uint8_t m_eDestroyReason; // 0x56	
+	bool m_bDisabled; // 0x57	
+	float m_flPreviousTick; // 0x58	
+	float m_flThinkInterval; // 0x5c	
+	float m_flThinkIntervalStartTime; // 0x60	
+	float m_flTimeScale; // 0x64	
+	CUtlVector< IModifierTrackedObject* >* m_pVecTrackedObjects; // 0x68	
+	ModifierRuntimeHandle_t m_hModifierListHandle; // 0x70	
 };
 
 // Alignment: 5
@@ -2393,7 +2393,7 @@ public:
 class CSteamPalPlayer_MovementServices : public CPlayer_MovementServices
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -2409,7 +2409,7 @@ public:
 class CSteamPalModifier : public CBaseModifier
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -2417,7 +2417,7 @@ public:
 class CSteamPalModifier_Base : public CSteamPalModifier
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -2425,7 +2425,7 @@ public:
 class CSteamPalModifierAuraVData : public CModifierVData_BaseAura
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -3613,7 +3613,7 @@ public:
 class CLogicalEntity : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 18
@@ -3750,7 +3750,7 @@ public:
 class C_TintController : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3758,7 +3758,7 @@ public:
 class C_TriggerCamera : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -3848,7 +3848,7 @@ public:
 class C_InfoLadderDismount : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3856,7 +3856,7 @@ public:
 class C_GameRulesProxy : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 15
@@ -3961,7 +3961,7 @@ public:
 class C_SoundOpvarSetPointEntity : public C_SoundOpvarSetPointBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3969,7 +3969,7 @@ public:
 class C_SoundOpvarSetAABBEntity : public C_SoundOpvarSetPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3977,7 +3977,7 @@ public:
 class C_SoundOpvarSetOBBEntity : public C_SoundOpvarSetAABBEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3985,7 +3985,7 @@ public:
 class C_SoundOpvarSetPathCornerEntity : public C_SoundOpvarSetPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3993,7 +3993,7 @@ public:
 class C_SoundOpvarSetOBBWindEntity : public C_SoundOpvarSetPointBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 30
@@ -4093,7 +4093,7 @@ public:
 class CNPCAbilityAddModifier : public CBaseNPCAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4101,7 +4101,7 @@ public:
 class CNPCAbilityRemoveModifier : public CBaseNPCAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4109,7 +4109,7 @@ public:
 class CNPCAbilityBaseRanged : public CBaseNPCAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4117,7 +4117,7 @@ public:
 class CNPCAbilityMeleeAttack : public CBaseNPCAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4125,7 +4125,7 @@ public:
 class CNPCAbilitySpawn : public CBaseNPCAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -4168,7 +4168,7 @@ public:
 class CSteamPalModifierAura : public CBaseModifierAura
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4176,7 +4176,7 @@ public:
 class CSteamPalModifierAura_Default : public CSteamPalModifierAura
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4184,7 +4184,7 @@ public:
 class CSteampal_Turret_Manager : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4192,7 +4192,7 @@ public:
 class CSteamPal_Sequencer : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 16
@@ -4349,7 +4349,7 @@ public:
 class CSteamPal_Projectile_Tag_Marker : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -4397,7 +4397,7 @@ public:
 class CNPCApplianceWeaponProjectiles : public CBaseNPCAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4405,7 +4405,7 @@ public:
 class C_SteampalKillVolume : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -4443,7 +4443,7 @@ public:
 class C_PointEntity : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 20
@@ -4570,7 +4570,7 @@ public:
 class C_EnvCubemapBox : public C_EnvCubemap
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 18
@@ -4795,7 +4795,7 @@ public:
 class CInfoTarget : public C_PointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4803,7 +4803,7 @@ public:
 class CInfoParticleTarget : public C_PointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -5118,7 +5118,7 @@ public:
 class CServerOnlyModelEntity : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5126,7 +5126,7 @@ public:
 class C_ModelPointEntity : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -5377,7 +5377,7 @@ public:
 class C_PointHMDAnchorOverride : public C_PointHMDAnchor
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 25
@@ -5502,7 +5502,7 @@ public:
 class C_BaseToggle : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -5526,7 +5526,7 @@ public:
 class C_PrecipitationBlocker : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -5564,7 +5564,7 @@ public:
 class C_EnvProjectedTexture : public C_ModelPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5572,7 +5572,7 @@ public:
 class C_FuncBrush : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -5595,7 +5595,7 @@ public:
 class C_FuncRotating : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5603,7 +5603,7 @@ public:
 class C_Breakable : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5611,7 +5611,7 @@ public:
 class C_PhysBox : public C_Breakable
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 41
@@ -5817,7 +5817,7 @@ public:
 class C_TriggerVolume : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5825,7 +5825,7 @@ public:
 class C_TriggerLerpObject : public C_BaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -6034,7 +6034,7 @@ public:
 class C_SpriteOriented : public C_Sprite
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -6526,7 +6526,7 @@ public:
 class CSteamPalConveyorPathNode : public C_PointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -6634,7 +6634,7 @@ public:
 class C_TonemapController2Alias_env_tonemap_controller2 : public C_TonemapController2
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -6654,7 +6654,7 @@ public:
 class C_LightSpotEntity : public C_LightEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6662,7 +6662,7 @@ public:
 class C_LightOrthoEntity : public C_LightEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6670,7 +6670,7 @@ public:
 class C_LightDirectionalEntity : public C_LightEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6678,7 +6678,7 @@ public:
 class C_LightEnvironmentEntity : public C_LightDirectionalEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 12
@@ -6760,7 +6760,7 @@ public:
 class C_World : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 16
@@ -6817,7 +6817,7 @@ public:
 class C_BaseAnimatingOverlay : public C_BaseAnimating
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -6941,7 +6941,7 @@ public:
 class C_DynamicPropAlias_dynamic_prop : public C_DynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6949,7 +6949,7 @@ public:
 class C_DynamicPropAlias_prop_dynamic_override : public C_DynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6957,7 +6957,7 @@ public:
 class C_DynamicPropAlias_cable_dynamic : public C_DynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -7015,7 +7015,7 @@ public:
 class C_FuncMoveLinear : public C_BaseToggle
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -7068,7 +7068,7 @@ public:
 class C_WaterBullet : public C_BaseAnimating
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -7208,7 +7208,7 @@ public:
 class C_FireFromAboveSprite : public C_Sprite
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 23
@@ -7600,7 +7600,7 @@ public:
 class CNPCAbilityModel : public C_BaseAnimating
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -7878,7 +7878,7 @@ public:
 class CSteamPal_Ultra_Toilet_Rocket : public C_BaseAnimating
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7886,7 +7886,7 @@ public:
 class CSteamPal_Ultra_Toilet_Attachment : public C_BaseAnimating
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7894,7 +7894,7 @@ public:
 class CSteamPal_Ultra_Toilet : public CSteamPal_Turret
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7902,7 +7902,7 @@ public:
 class CSteamPal_Trackball : public C_BaseAnimating
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7910,7 +7910,7 @@ public:
 class CSteamPal_TouchScreen : public C_BaseAnimating
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 20
@@ -7962,7 +7962,7 @@ public:
 class CNPCApplianceProjectile : public C_PhysicsProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 19
@@ -8011,7 +8011,7 @@ public:
 class C_DevtestHierarchyChild : public C_DynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -8019,7 +8019,7 @@ public:
 class C_DevtestHierarchy2 : public C_BaseAnimating
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -8058,7 +8058,7 @@ public:
 class C_GenericFlexCyclerAlias_cycler : public C_GenericFlexCycler
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -8157,7 +8157,7 @@ public:
 class C_AI_BaseActor : public C_AI_DefaultNPC
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -8193,7 +8193,7 @@ public:
 class C_NetTestBaseCombatCharacter : public C_BaseCombatCharacter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 31

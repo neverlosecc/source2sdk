@@ -717,6 +717,14 @@ struct CPathParameters;
 struct CPerParticleVecInput;
 struct ControlPointReference_t;
 
+// Alignment: 1
+// Size: 0x4
+struct ParticleAttributeIndex_t
+{
+public:
+	int32_t m_nBoxedTypeSafeInt; // 0x0	
+};
+
 // Alignment: 3
 // Size: 0x10
 struct MaterialVariable_t
@@ -729,14 +737,6 @@ public:
 	ParticleAttributeIndex_t m_nVariableField; // 0x8	
 	// MPropertyFriendlyName "scale"
 	float m_flScale; // 0xc	
-};
-
-// Alignment: 1
-// Size: 0x4
-struct ParticleAttributeIndex_t
-{
-public:
-	int32_t m_nBoxedTypeSafeInt; // 0x0	
 };
 
 // Alignment: 2
@@ -801,7 +801,7 @@ public:
 class IParticleCollection
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x10]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -809,7 +809,7 @@ public:
 class IControlPointEditorData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -817,7 +817,7 @@ public:
 class IParticleSystemDefinition
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 18
@@ -1196,6 +1196,74 @@ public:
 	bool m_bShouldHitboxesFallbackToRenderBounds; // 0x32a	
 };
 
+// Alignment: 0
+// Size: 0x40
+class CPiecewiseCurveSchemaWrapper
+{
+public:
+	uint8_t __pad0000[0x40]; 	// @note: autoaligned
+};
+
+// Alignment: 36
+// Size: 0xe8
+class CParticleFloatInput
+{
+public:
+	ParticleFloatType_t m_nType; // 0x0	
+	ParticleFloatMapType_t m_nMapType; // 0x4	
+	float m_flLiteralValue; // 0x8	
+	int32_t m_nControlPoint; // 0xc	
+	ParticleAttributeIndex_t m_nScalarAttribute; // 0x10	
+	ParticleAttributeIndex_t m_nVectorAttribute; // 0x14	
+	int32_t m_nVectorComponent; // 0x18	
+	float m_flRandomMin; // 0x1c	
+	float m_flRandomMax; // 0x20	
+	ParticleFloatRandomMode_t m_nRandomMode; // 0x24	
+private:
+	[[maybe_unused]] uint8_t __pad0028[0x4]; 	// 0x28
+public:
+	float m_flLOD0; // 0x2c	
+	float m_flLOD1; // 0x30	
+	float m_flLOD2; // 0x34	
+	float m_flLOD3; // 0x38	
+	float m_flNoiseOutputMin; // 0x3c	
+	float m_flNoiseOutputMax; // 0x40	
+	float m_flNoiseScale; // 0x44	
+	Vector m_vecNoiseOffsetRate; // 0x48	
+	float m_flNoiseOffset; // 0x54	
+	int32_t m_nNoiseOctaves; // 0x58	
+	PFNoiseTurbulence_t m_nNoiseTurbulence; // 0x5c	
+	PFNoiseType_t m_nNoiseType; // 0x60	
+	PFNoiseModifier_t m_nNoiseModifier; // 0x64	
+	float m_flNoiseTurbulenceScale; // 0x68	
+	float m_flNoiseTurbulenceMix; // 0x6c	
+	float m_flNoiseImgPreviewScale; // 0x70	
+	bool m_bNoiseImgPreviewLive; // 0x74	
+private:
+	[[maybe_unused]] uint8_t __pad0075[0x7]; 	// 0x75
+public:
+	ParticleFloatInputMode_t m_nInputMode; // 0x7c	
+	float m_flMultFactor; // 0x80	
+	float m_flInput0; // 0x84	
+	float m_flInput1; // 0x88	
+	float m_flOutput0; // 0x8c	
+	float m_flOutput1; // 0x90	
+	ParticleFloatBiasType_t m_nBiasType; // 0x94	
+	float m_flBiasParameter; // 0x98	
+private:
+	[[maybe_unused]] uint8_t __pad009c[0x4]; 	// 0x9c
+public:
+	CPiecewiseCurveSchemaWrapper m_Curve; // 0xa0	
+};
+
+// Alignment: 0
+// Size: 0xe8
+class CParticleCollectionFloatInput : public CParticleFloatInput
+{
+public:
+	// @note: no members available
+};
+
 // Alignment: 16
 // Size: 0x180
 class CParticleFunction
@@ -1281,34 +1349,10 @@ public:
 
 // Alignment: 0
 // Size: 0x180
-class CParticleFunctionInitializer : public CParticleFunction
-{
-public:
-	// no members available
-};
-
-// Alignment: 0
-// Size: 0x180
-class CParticleFunctionEmitter : public CParticleFunction
-{
-public:
-	// no members available
-};
-
-// Alignment: 0
-// Size: 0x180
-class CParticleFunctionConstraint : public CParticleFunction
-{
-public:
-	// no members available
-};
-
-// Alignment: 0
-// Size: 0x180
 class CParticleFunctionForce : public CParticleFunction
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -1316,7 +1360,7 @@ public:
 class CParticleFunctionOperator : public CParticleFunction
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -1421,6 +1465,169 @@ public:
 	// MPropertyFriendlyName "Texture Controls"
 	// MPropertySuppressExpr "( m_nTextureType == SPRITECARD_TEXTURE_NORMALMAP || m_nTextureType == SPRITECARD_TEXTURE_ANIMMOTIONVEC || m_nTextureType == SPRITECARD_TEXTURE_6POINT_XYZ_A || m_nTextureType == SPRITECARD_TEXTURE_6POINT_NEGXYZ_E )"
 	TextureControls_t m_TextureControls; // 0x120	
+};
+
+// Alignment: 18
+// Size: 0x430
+class CParticleVecInput
+{
+public:
+	ParticleVecType_t m_nType; // 0x0	
+	Vector m_vLiteralValue; // 0x4	
+	Color m_LiteralColor; // 0x10	
+	ParticleAttributeIndex_t m_nVectorAttribute; // 0x14	
+	Vector m_vVectorAttributeScale; // 0x18	
+	int32_t m_nControlPoint; // 0x24	
+	Vector m_vCPValueScale; // 0x28	
+	Vector m_vCPRelativePosition; // 0x34	
+	Vector m_vCPRelativeDir; // 0x40	
+private:
+	[[maybe_unused]] uint8_t __pad004c[0x4]; 	// 0x4c
+public:
+	CParticleFloatInput m_FloatComponentX; // 0x50	
+	CParticleFloatInput m_FloatComponentY; // 0x138	
+	CParticleFloatInput m_FloatComponentZ; // 0x220	
+	CParticleFloatInput m_FloatInterp; // 0x308	
+	float m_flInterpInput0; // 0x3f0	
+	float m_flInterpInput1; // 0x3f4	
+	Vector m_vInterpOutput0; // 0x3f8	
+	Vector m_vInterpOutput1; // 0x404	
+	CColorGradient m_Gradient; // 0x410	
+};
+
+// Alignment: 0
+// Size: 0x430
+class CParticleCollectionVecInput : public CParticleVecInput
+{
+public:
+	// @note: no members available
+};
+
+// Alignment: 2
+// Size: 0xf0
+struct FloatInputMaterialVariable_t
+{
+public:
+	// MPropertyFriendlyName "material variable"
+	CUtlString m_strVariable; // 0x0	
+	// MPropertyFriendlyName "input"
+	CParticleCollectionFloatInput m_flInput; // 0x8	
+};
+
+// Alignment: 2
+// Size: 0x438
+struct VecInputMaterialVariable_t
+{
+public:
+	// MPropertyFriendlyName "material variable"
+	CUtlString m_strVariable; // 0x0	
+	// MPropertyFriendlyName "input"
+	CParticleCollectionVecInput m_vecInput; // 0x8	
+};
+
+// Alignment: 21
+// Size: 0xde0
+class C_OP_RenderCables : public CParticleFunctionRenderer
+{
+public:
+	// MPropertyStartGroup "Renderer Modifiers"
+	// MPropertyFriendlyName "Radius Scale"
+	// MPropertySortPriority "700"
+	CParticleCollectionFloatInput m_flRadiusScale; // 0x1d0	
+	// MPropertyFriendlyName "alpha scale"
+	// MPropertySortPriority "700"
+	CParticleCollectionFloatInput m_flAlphaScale; // 0x2b8	
+	// MPropertyFriendlyName "color blend"
+	// MPropertySortPriority "700"
+	CParticleCollectionVecInput m_vecColorScale; // 0x3a0	
+	// MPropertyFriendlyName "color blend type"
+	// MPropertySortPriority "700"
+	ParticleColorBlendType_t m_nColorBlendType; // 0x7d0	
+private:
+	[[maybe_unused]] uint8_t __pad07d4[0x4]; 	// 0x7d4
+public:
+	// MPropertyStartGroup
+	// MPropertyFriendlyName "material"
+	// MPropertyAttributeEditor "AssetBrowse( vmat )"
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hMaterial; // 0x7d8	
+	// MPropertyFriendlyName "texture repetition mode"
+	TextureRepetitionMode_t m_nTextureRepetitionMode; // 0x7e0	
+private:
+	[[maybe_unused]] uint8_t __pad07e4[0x4]; 	// 0x7e4
+public:
+	// MPropertyFriendlyName "texture repetitions"
+	CParticleCollectionFloatInput m_flTextureRepeatsPerSegment; // 0x7e8	
+	// MPropertyFriendlyName "texture repetitions around cable"
+	CParticleCollectionFloatInput m_flTextureRepeatsCircumference; // 0x8d0	
+	// MPropertyFriendlyName "color map offset along path"
+	CParticleCollectionFloatInput m_flColorMapOffsetV; // 0x9b8	
+	// MPropertyFriendlyName "color map offset around cable"
+	CParticleCollectionFloatInput m_flColorMapOffsetU; // 0xaa0	
+	// MPropertyFriendlyName "normal map offset along path"
+	CParticleCollectionFloatInput m_flNormalMapOffsetV; // 0xb88	
+	// MPropertyFriendlyName "normal map offset around cable"
+	CParticleCollectionFloatInput m_flNormalMapOffsetU; // 0xc70	
+	// MPropertyFriendlyName "draw caps at each end of the cable"
+	bool m_bDrawCableCaps; // 0xd58	
+private:
+	[[maybe_unused]] uint8_t __pad0d59[0x3]; 	// 0xd59
+public:
+	// MPropertyFriendlyName "cable end cap shape factor"
+	// MPropertyAttributeRange "0 2"
+	float m_flCapRoundness; // 0xd5c	
+	// MPropertyFriendlyName "cable end cap offset amount"
+	// MPropertyAttributeRange "0 2"
+	float m_flCapOffsetAmount; // 0xd60	
+	// MPropertyFriendlyName "tessellation scale factor"
+	float m_flTessScale; // 0xd64	
+	// MPropertyFriendlyName "minimum steps between particles"
+	int32_t m_nMinTesselation; // 0xd68	
+	// MPropertyFriendlyName "maximum steps between particles"
+	int32_t m_nMaxTesselation; // 0xd6c	
+	// MPropertyFriendlyName "roundness factor"
+	int32_t m_nRoundness; // 0xd70	
+private:
+	[[maybe_unused]] uint8_t __pad0d74[0x4]; 	// 0xd74
+public:
+	// MPropertyFriendlyName "material float variables"
+	CUtlVector< FloatInputMaterialVariable_t > m_MaterialFloatVars; // 0xd78	
+private:
+	[[maybe_unused]] uint8_t __pad0d90[0x18]; 	// 0xd90
+public:
+	// MPropertyFriendlyName "material vector variables"
+	CUtlVector< VecInputMaterialVariable_t > m_MaterialVecVars; // 0xda8	
+};
+
+// Alignment: 0
+// Size: 0x180
+class CParticleFunctionConstraint : public CParticleFunction
+{
+public:
+	// @note: no members available
+};
+
+// Alignment: 0
+// Size: 0x180
+class CParticleFunctionEmitter : public CParticleFunction
+{
+public:
+	// @note: no members available
+};
+
+// Alignment: 0
+// Size: 0xe8
+class CPerParticleFloatInput : public CParticleFloatInput
+{
+public:
+	// @note: no members available
+};
+
+// Alignment: 0
+// Size: 0x180
+class CParticleFunctionInitializer : public CParticleFunction
+{
+public:
+	// @note: no members available
 };
 
 // Alignment: 57
@@ -1652,6 +1859,14 @@ public:
 	bool m_bMaxLuminanceBlendingSequence0; // 0x153b	
 };
 
+// Alignment: 0
+// Size: 0x430
+class CPerParticleVecInput : public CParticleVecInput
+{
+public:
+	// @note: no members available
+};
+
 // Alignment: 24
 // Size: 0x1a00
 class C_OP_RenderSprites : public CBaseRendererSource2
@@ -1764,221 +1979,6 @@ public:
 	float m_flShadowDensity; // 0x19f4	
 };
 
-// Alignment: 2
-// Size: 0xf0
-struct FloatInputMaterialVariable_t
-{
-public:
-	// MPropertyFriendlyName "material variable"
-	CUtlString m_strVariable; // 0x0	
-	// MPropertyFriendlyName "input"
-	CParticleCollectionFloatInput m_flInput; // 0x8	
-};
-
-// Alignment: 2
-// Size: 0x438
-struct VecInputMaterialVariable_t
-{
-public:
-	// MPropertyFriendlyName "material variable"
-	CUtlString m_strVariable; // 0x0	
-	// MPropertyFriendlyName "input"
-	CParticleCollectionVecInput m_vecInput; // 0x8	
-};
-
-// Alignment: 21
-// Size: 0xde0
-class C_OP_RenderCables : public CParticleFunctionRenderer
-{
-public:
-	// MPropertyStartGroup "Renderer Modifiers"
-	// MPropertyFriendlyName "Radius Scale"
-	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flRadiusScale; // 0x1d0	
-	// MPropertyFriendlyName "alpha scale"
-	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flAlphaScale; // 0x2b8	
-	// MPropertyFriendlyName "color blend"
-	// MPropertySortPriority "700"
-	CParticleCollectionVecInput m_vecColorScale; // 0x3a0	
-	// MPropertyFriendlyName "color blend type"
-	// MPropertySortPriority "700"
-	ParticleColorBlendType_t m_nColorBlendType; // 0x7d0	
-private:
-	[[maybe_unused]] uint8_t __pad07d4[0x4]; 	// 0x7d4
-public:
-	// MPropertyStartGroup
-	// MPropertyFriendlyName "material"
-	// MPropertyAttributeEditor "AssetBrowse( vmat )"
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hMaterial; // 0x7d8	
-	// MPropertyFriendlyName "texture repetition mode"
-	TextureRepetitionMode_t m_nTextureRepetitionMode; // 0x7e0	
-private:
-	[[maybe_unused]] uint8_t __pad07e4[0x4]; 	// 0x7e4
-public:
-	// MPropertyFriendlyName "texture repetitions"
-	CParticleCollectionFloatInput m_flTextureRepeatsPerSegment; // 0x7e8	
-	// MPropertyFriendlyName "texture repetitions around cable"
-	CParticleCollectionFloatInput m_flTextureRepeatsCircumference; // 0x8d0	
-	// MPropertyFriendlyName "color map offset along path"
-	CParticleCollectionFloatInput m_flColorMapOffsetV; // 0x9b8	
-	// MPropertyFriendlyName "color map offset around cable"
-	CParticleCollectionFloatInput m_flColorMapOffsetU; // 0xaa0	
-	// MPropertyFriendlyName "normal map offset along path"
-	CParticleCollectionFloatInput m_flNormalMapOffsetV; // 0xb88	
-	// MPropertyFriendlyName "normal map offset around cable"
-	CParticleCollectionFloatInput m_flNormalMapOffsetU; // 0xc70	
-	// MPropertyFriendlyName "draw caps at each end of the cable"
-	bool m_bDrawCableCaps; // 0xd58	
-private:
-	[[maybe_unused]] uint8_t __pad0d59[0x3]; 	// 0xd59
-public:
-	// MPropertyFriendlyName "cable end cap shape factor"
-	// MPropertyAttributeRange "0 2"
-	float m_flCapRoundness; // 0xd5c	
-	// MPropertyFriendlyName "cable end cap offset amount"
-	// MPropertyAttributeRange "0 2"
-	float m_flCapOffsetAmount; // 0xd60	
-	// MPropertyFriendlyName "tessellation scale factor"
-	float m_flTessScale; // 0xd64	
-	// MPropertyFriendlyName "minimum steps between particles"
-	int32_t m_nMinTesselation; // 0xd68	
-	// MPropertyFriendlyName "maximum steps between particles"
-	int32_t m_nMaxTesselation; // 0xd6c	
-	// MPropertyFriendlyName "roundness factor"
-	int32_t m_nRoundness; // 0xd70	
-private:
-	[[maybe_unused]] uint8_t __pad0d74[0x4]; 	// 0xd74
-public:
-	// MPropertyFriendlyName "material float variables"
-	CUtlVector< FloatInputMaterialVariable_t > m_MaterialFloatVars; // 0xd78	
-private:
-	[[maybe_unused]] uint8_t __pad0d90[0x18]; 	// 0xd90
-public:
-	// MPropertyFriendlyName "material vector variables"
-	CUtlVector< VecInputMaterialVariable_t > m_MaterialVecVars; // 0xda8	
-};
-
-// Alignment: 0
-// Size: 0x40
-class CPiecewiseCurveSchemaWrapper
-{
-public:
-	// no members available
-};
-
-// Alignment: 36
-// Size: 0xe8
-class CParticleFloatInput
-{
-public:
-	ParticleFloatType_t m_nType; // 0x0	
-	ParticleFloatMapType_t m_nMapType; // 0x4	
-	float m_flLiteralValue; // 0x8	
-	int32_t m_nControlPoint; // 0xc	
-	ParticleAttributeIndex_t m_nScalarAttribute; // 0x10	
-	ParticleAttributeIndex_t m_nVectorAttribute; // 0x14	
-	int32_t m_nVectorComponent; // 0x18	
-	float m_flRandomMin; // 0x1c	
-	float m_flRandomMax; // 0x20	
-	ParticleFloatRandomMode_t m_nRandomMode; // 0x24	
-private:
-	[[maybe_unused]] uint8_t __pad0028[0x4]; 	// 0x28
-public:
-	float m_flLOD0; // 0x2c	
-	float m_flLOD1; // 0x30	
-	float m_flLOD2; // 0x34	
-	float m_flLOD3; // 0x38	
-	float m_flNoiseOutputMin; // 0x3c	
-	float m_flNoiseOutputMax; // 0x40	
-	float m_flNoiseScale; // 0x44	
-	Vector m_vecNoiseOffsetRate; // 0x48	
-	float m_flNoiseOffset; // 0x54	
-	int32_t m_nNoiseOctaves; // 0x58	
-	PFNoiseTurbulence_t m_nNoiseTurbulence; // 0x5c	
-	PFNoiseType_t m_nNoiseType; // 0x60	
-	PFNoiseModifier_t m_nNoiseModifier; // 0x64	
-	float m_flNoiseTurbulenceScale; // 0x68	
-	float m_flNoiseTurbulenceMix; // 0x6c	
-	float m_flNoiseImgPreviewScale; // 0x70	
-	bool m_bNoiseImgPreviewLive; // 0x74	
-private:
-	[[maybe_unused]] uint8_t __pad0075[0x7]; 	// 0x75
-public:
-	ParticleFloatInputMode_t m_nInputMode; // 0x7c	
-	float m_flMultFactor; // 0x80	
-	float m_flInput0; // 0x84	
-	float m_flInput1; // 0x88	
-	float m_flOutput0; // 0x8c	
-	float m_flOutput1; // 0x90	
-	ParticleFloatBiasType_t m_nBiasType; // 0x94	
-	float m_flBiasParameter; // 0x98	
-private:
-	[[maybe_unused]] uint8_t __pad009c[0x4]; 	// 0x9c
-public:
-	CPiecewiseCurveSchemaWrapper m_Curve; // 0xa0	
-};
-
-// Alignment: 0
-// Size: 0xe8
-class CPerParticleFloatInput : public CParticleFloatInput
-{
-public:
-	// no members available
-};
-
-// Alignment: 0
-// Size: 0xe8
-class CParticleCollectionFloatInput : public CParticleFloatInput
-{
-public:
-	// no members available
-};
-
-// Alignment: 18
-// Size: 0x430
-class CParticleVecInput
-{
-public:
-	ParticleVecType_t m_nType; // 0x0	
-	Vector m_vLiteralValue; // 0x4	
-	Color m_LiteralColor; // 0x10	
-	ParticleAttributeIndex_t m_nVectorAttribute; // 0x14	
-	Vector m_vVectorAttributeScale; // 0x18	
-	int32_t m_nControlPoint; // 0x24	
-	Vector m_vCPValueScale; // 0x28	
-	Vector m_vCPRelativePosition; // 0x34	
-	Vector m_vCPRelativeDir; // 0x40	
-private:
-	[[maybe_unused]] uint8_t __pad004c[0x4]; 	// 0x4c
-public:
-	CParticleFloatInput m_FloatComponentX; // 0x50	
-	CParticleFloatInput m_FloatComponentY; // 0x138	
-	CParticleFloatInput m_FloatComponentZ; // 0x220	
-	CParticleFloatInput m_FloatInterp; // 0x308	
-	float m_flInterpInput0; // 0x3f0	
-	float m_flInterpInput1; // 0x3f4	
-	Vector m_vInterpOutput0; // 0x3f8	
-	Vector m_vInterpOutput1; // 0x404	
-	CColorGradient m_Gradient; // 0x410	
-};
-
-// Alignment: 0
-// Size: 0x430
-class CPerParticleVecInput : public CParticleVecInput
-{
-public:
-	// no members available
-};
-
-// Alignment: 0
-// Size: 0x430
-class CParticleCollectionVecInput : public CParticleVecInput
-{
-public:
-	// no members available
-};
-
 // Alignment: 1
 // Size: 0x4
 class PARTICLE_EHANDLE__
@@ -2000,7 +2000,7 @@ public:
 class IParticleEffect
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -2008,7 +2008,7 @@ public:
 class CParticleProperty
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x28]; 	// @note: autoaligned
 };
 
 // Alignment: 25
@@ -2167,7 +2167,7 @@ public:
 class C_OP_WorldCollideConstraint : public CParticleFunctionConstraint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 23
@@ -2999,7 +2999,7 @@ public:
 class C_INIT_RandomRotation : public CGeneralRandomRotation
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -3021,7 +3021,7 @@ public:
 class C_INIT_RandomRotationSpeed : public CGeneralRandomRotation
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3029,7 +3029,7 @@ public:
 class C_INIT_RandomYaw : public CGeneralRandomRotation
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -3374,7 +3374,7 @@ public:
 class C_INIT_RemapParticleCountToNamedModelSequenceScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3382,7 +3382,7 @@ public:
 class C_INIT_RemapParticleCountToNamedModelBodyPartScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3390,7 +3390,7 @@ public:
 class C_INIT_RemapParticleCountToNamedModelMeshGroupScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -4299,7 +4299,7 @@ public:
 class C_INIT_RandomNamedModelSequence : public C_INIT_RandomNamedModelElement
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4307,7 +4307,7 @@ public:
 class C_INIT_RandomNamedModelBodyPart : public C_INIT_RandomNamedModelElement
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4315,7 +4315,7 @@ public:
 class C_INIT_RandomNamedModelMeshGroup : public C_INIT_RandomNamedModelElement
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -4347,7 +4347,7 @@ public:
 class C_INIT_RemapNamedModelSequenceToScalar : public C_INIT_RemapNamedModelElementToScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4355,7 +4355,7 @@ public:
 class C_INIT_RemapNamedModelBodyPartToScalar : public C_INIT_RemapNamedModelElementToScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4363,7 +4363,7 @@ public:
 class C_INIT_RemapNamedModelMeshGroupToScalar : public C_INIT_RemapNamedModelElementToScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 18
@@ -5767,7 +5767,7 @@ public:
 class C_OP_EndCapDecay : public CParticleFunctionOperator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -5857,7 +5857,7 @@ public:
 class CSpinUpdateBase : public CParticleFunctionOperator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5865,7 +5865,7 @@ public:
 class C_OP_Spin : public CGeneralSpin
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5873,7 +5873,7 @@ public:
 class C_OP_SpinUpdate : public CSpinUpdateBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5881,7 +5881,7 @@ public:
 class C_OP_SpinYaw : public CGeneralSpin
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -7563,7 +7563,7 @@ public:
 class C_OP_RemapNamedModelSequenceOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7571,7 +7571,7 @@ public:
 class C_OP_RemapNamedModelBodyPartOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7579,7 +7579,7 @@ public:
 class C_OP_RemapNamedModelMeshGroupOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -7614,7 +7614,7 @@ public:
 class C_OP_RemapNamedModelSequenceEndCap : public C_OP_RemapNamedModelElementEndCap
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7622,7 +7622,7 @@ public:
 class C_OP_RemapNamedModelBodyPartEndCap : public C_OP_RemapNamedModelElementEndCap
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7630,7 +7630,7 @@ public:
 class C_OP_RemapNamedModelMeshGroupEndCap : public C_OP_RemapNamedModelElementEndCap
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -9543,7 +9543,7 @@ public:
 class C_OP_RenderClothForce : public CParticleFunctionRenderer
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9551,7 +9551,7 @@ public:
 class C_OP_Callback : public CParticleFunctionRenderer
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9

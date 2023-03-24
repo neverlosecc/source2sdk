@@ -1843,17 +1843,13 @@ public:
 	IKTargetCoordinateSystem m_TargetCoordSystem; // 0x1c	
 };
 
-// Alignment: 6
-// Size: 0xf8
-class CAnimationSubGraph
+// Alignment: 1
+// Size: 0x48
+class CAnimNodeManager
 {
 public:
-	CAnimNodeManager m_nodeManager; // 0x10	
-	CAnimComponentManager m_componentManager; // 0x58	
-	CUtlVector< CSmartPtr< CAnimParameterBase > > m_localParameters; // 0x80	
-	CUtlVector< CSmartPtr< CAnimTagBase > > m_localTags; // 0x98	
-	CUtlVector< CUtlString > m_referencedParamGroups; // 0xb0	
-	CUtlVector< CUtlString > m_referencedTagGroups; // 0xc8	
+	// MPropertyHideField
+	CUtlHashtable< AnimNodeID, CSmartPtr< CAnimNodeBase > > m_nodes; // 0x8	
 };
 
 // Alignment: 2
@@ -1902,12 +1898,11 @@ public:
 };
 
 // Alignment: 1
-// Size: 0x48
-class CAnimNodeManager
+// Size: 0x28
+class CAnimComponentManager
 {
 public:
-	// MPropertyHideField
-	CUtlHashtable< AnimNodeID, CSmartPtr< CAnimNodeBase > > m_nodes; // 0x8	
+	CUtlVector< CSmartPtr< CAnimComponentBase > > m_components; // 0x8	
 };
 
 // Alignment: 1
@@ -1933,21 +1928,12 @@ public:
 	float m_fMaxTension; // 0x14	
 };
 
-// Alignment: 10
-// Size: 0xe8
-class CAnimUpdateSharedData
+// Alignment: 1
+// Size: 0x30
+class CAnimGraphSettingsManager
 {
 public:
-	CUtlVector< CSmartPtr< CAnimUpdateNodeBase > > m_nodes; // 0x10	
-	CUtlHashtable< CAnimNodePath, int32 > m_nodeIndexMap; // 0x28	
-	CUtlVector< CSmartPtr< CAnimComponentUpdater > > m_components; // 0x48	
-	CSmartPtr< CAnimParameterListUpdater > m_pParamListUpdater; // 0x60	
-	CSmartPtr< CAnimTagManagerUpdater > m_pTagManagerUpdater; // 0x68	
-	CSmartPtr< CAnimScriptManager > m_scriptManager; // 0x70	
-	CAnimGraphSettingsManager m_settings; // 0x78	
-	CSmartPtr< CStaticPoseCacheBuilder > m_pStaticPoseCache; // 0xa8	
-	CSmartPtr< CAnimSkeleton > m_pSkeleton; // 0xb0	
-	CAnimNodePath m_rootNodePath; // 0xb8	
+	CUtlVector< CSmartPtr< CAnimGraphSettingsGroup > > m_settingsGroups; // 0x18	
 };
 
 // Alignment: 4
@@ -1976,15 +1962,24 @@ public:
 class CStaticPoseCacheBuilder : public CStaticPoseCache
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
-// Alignment: 1
-// Size: 0x30
-class CAnimGraphSettingsManager
+// Alignment: 10
+// Size: 0xe8
+class CAnimUpdateSharedData
 {
 public:
-	CUtlVector< CSmartPtr< CAnimGraphSettingsGroup > > m_settingsGroups; // 0x18	
+	CUtlVector< CSmartPtr< CAnimUpdateNodeBase > > m_nodes; // 0x10	
+	CUtlHashtable< CAnimNodePath, int32 > m_nodeIndexMap; // 0x28	
+	CUtlVector< CSmartPtr< CAnimComponentUpdater > > m_components; // 0x48	
+	CSmartPtr< CAnimParameterListUpdater > m_pParamListUpdater; // 0x60	
+	CSmartPtr< CAnimTagManagerUpdater > m_pTagManagerUpdater; // 0x68	
+	CSmartPtr< CAnimScriptManager > m_scriptManager; // 0x70	
+	CAnimGraphSettingsManager m_settings; // 0x78	
+	CSmartPtr< CStaticPoseCacheBuilder > m_pStaticPoseCache; // 0xa8	
+	CSmartPtr< CAnimSkeleton > m_pSkeleton; // 0xb0	
+	CAnimNodePath m_rootNodePath; // 0xb8	
 };
 
 // Alignment: 0
@@ -1992,7 +1987,7 @@ public:
 class CAnimGraphSettingsGroup
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x20]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -2027,12 +2022,17 @@ public:
 	AnimNodeNetworkMode m_networkMode; // 0x34	
 };
 
-// Alignment: 1
-// Size: 0x28
-class CAnimComponentManager
+// Alignment: 6
+// Size: 0xf8
+class CAnimationSubGraph
 {
 public:
-	CUtlVector< CSmartPtr< CAnimComponentBase > > m_components; // 0x8	
+	CAnimNodeManager m_nodeManager; // 0x10	
+	CAnimComponentManager m_componentManager; // 0x58	
+	CUtlVector< CSmartPtr< CAnimParameterBase > > m_localParameters; // 0x80	
+	CUtlVector< CSmartPtr< CAnimTagBase > > m_localTags; // 0x98	
+	CUtlVector< CUtlString > m_referencedParamGroups; // 0xb0	
+	CUtlVector< CUtlString > m_referencedTagGroups; // 0xc8	
 };
 
 // Alignment: 2
@@ -2098,14 +2098,13 @@ public:
 	CUtlVector< CDampedValueItem > m_items; // 0x38	
 };
 
-// Alignment: 3
-// Size: 0x30
-class CDampedValueUpdateItem
+// Alignment: 2
+// Size: 0x8
+class CAnimParamHandle
 {
 public:
-	CAnimInputDamping m_damping; // 0x0	
-	CAnimParamHandle m_hParamIn; // 0x20	
-	CAnimParamHandle m_hParamOut; // 0x28	
+	AnimParamType_t m_type; // 0x0	
+	uint8_t m_index; // 0x4	
 };
 
 // Alignment: 7
@@ -2252,7 +2251,7 @@ public:
 class CAnimActionBase
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x38]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -2324,7 +2323,7 @@ public:
 class CPathAnimMotor : public CPathAnimMotorBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -3970,7 +3969,7 @@ public:
 class CInputStreamAnimNode : public CAnimNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -4303,7 +4302,7 @@ public:
 class CStringAnimTag : public CAnimTagBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -4546,7 +4545,7 @@ public:
 class CCurrentVelocityMetric : public CMotionMetricBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -4735,13 +4734,14 @@ public:
 	CUtlVector< CSmartPtr< CScriptModule > > m_compiledModules; // 0x10	
 };
 
-// Alignment: 2
-// Size: 0x8
-class CAnimParamHandle
+// Alignment: 3
+// Size: 0x30
+class CDampedValueUpdateItem
 {
 public:
-	AnimParamType_t m_type; // 0x0	
-	uint8_t m_index; // 0x4	
+	CAnimInputDamping m_damping; // 0x0	
+	CAnimParamHandle m_hParamIn; // 0x20	
+	CAnimParamHandle m_hParamOut; // 0x28	
 };
 
 // Alignment: 3
@@ -4863,7 +4863,7 @@ public:
 class CAnimActionUpdater
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x18]; 	// @note: autoaligned
 };
 
 // Alignment: 2
@@ -4888,7 +4888,7 @@ public:
 class CPathAnimMotorUpdater : public CPathAnimMotorUpdaterBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -4938,6 +4938,14 @@ public:
 	}; // 10 bits
 };
 
+// Alignment: 1
+// Size: 0x10
+class CAnimUpdateNodeRef
+{
+public:
+	int32_t m_nodeIndex; // 0x8	
+};
+
 // Alignment: 2
 // Size: 0x18
 class CStateNodeStateData
@@ -4949,14 +4957,6 @@ public:
 		uint8_t m_bExclusiveRootMotion: 1; 		
 		uint8_t __pad3: 1; // @note: autoaligned
 	}; // 2 bits
-};
-
-// Alignment: 1
-// Size: 0x10
-class CAnimUpdateNodeRef
-{
-public:
-	int32_t m_nodeIndex; // 0x8	
 };
 
 // Alignment: 3
@@ -5024,15 +5024,23 @@ public:
 class CLeafUpdateNode : public CAnimUpdateNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
-// Alignment: 1
-// Size: 0xa8
-class CSkeletalInputUpdateNode : public CLeafUpdateNode
+// Alignment: 9
+// Size: 0x48
+struct SkeletalInputOpFixedSettings_t
 {
 public:
-	SkeletalInputOpFixedSettings_t m_fixedOpData; // 0x58	
+	CUtlVector< WristBone_t > m_wristBones; // 0x0	
+	CUtlVector< FingerChain_t > m_fingers; // 0x18	
+	int32_t m_outerKnuckle1; // 0x30	
+	int32_t m_outerKnuckle2; // 0x34	
+	AnimVRHand_t m_eHand; // 0x38	
+	AnimVRHandMotionRange_t m_eMotionRange; // 0x3c	
+	AnimVrBoneTransformSource_t m_eTransformSource; // 0x40	
+	bool m_bEnableIK; // 0x44	
+	bool m_bEnableCollision; // 0x45	
 };
 
 // Alignment: 8
@@ -5053,22 +5061,28 @@ public:
 	bool m_bSyncCyclesOnChange; // 0xa5	
 };
 
-// Alignment: 8
-// Size: 0xe8
-class CHitReactUpdateNode : public CUnaryUpdateNode
+// Alignment: 17
+// Size: 0x44
+struct HitReactFixedSettings_t
 {
 public:
-	HitReactFixedSettings_t m_opFixedSettings; // 0x68	
-private:
-	[[maybe_unused]] uint8_t __pad00ac[0x8]; 	// 0xac
-public:
-	CAnimParamHandle m_triggerParam; // 0xb4	
-	CAnimParamHandle m_hitBoneParam; // 0xbc	
-	CAnimParamHandle m_hitOffsetParam; // 0xc4	
-	CAnimParamHandle m_hitDirectionParam; // 0xcc	
-	CAnimParamHandle m_hitStrengthParam; // 0xd4	
-	float m_flMinDelayBetweenHits; // 0xdc	
-	bool m_bResetChild; // 0xe0	
+	int32_t m_nWeightListIndex; // 0x0	
+	int32_t m_nEffectedBoneCount; // 0x4	
+	float m_flMaxImpactForce; // 0x8	
+	float m_flMinImpactForce; // 0xc	
+	float m_flWhipImpactScale; // 0x10	
+	float m_flCounterRotationScale; // 0x14	
+	float m_flDistanceFadeScale; // 0x18	
+	float m_flPropagationScale; // 0x1c	
+	float m_flWhipDelay; // 0x20	
+	float m_flSpringStrength; // 0x24	
+	float m_flWhipSpringStrength; // 0x28	
+	float m_flMaxAngleRadians; // 0x2c	
+	int32_t m_nHipBoneIndex; // 0x30	
+	float m_flHipBoneTranslationScale; // 0x34	
+	float m_flHipDipSpringStrength; // 0x38	
+	float m_flHipDipImpactScale; // 0x3c	
+	float m_flHipDipDelay; // 0x40	
 };
 
 // Alignment: 6
@@ -5148,34 +5162,35 @@ public:
 	int32_t m_nFootIndex; // 0x3c	
 };
 
-// Alignment: 20
-// Size: 0x148
-class CFootLockUpdateNode : public CUnaryUpdateNode
+// Alignment: 15
+// Size: 0x60
+class FootLockPoseOpFixedSettings
 {
 public:
-	FootLockPoseOpFixedSettings m_opFixedSettings; // 0x68	
+	CUtlVector< FootOpFixedInfo > m_footInfo; // 0x0	
+	CAnimInputDamping m_hipDampingSettings; // 0x18	
+	int32_t m_nHipBoneIndex; // 0x30	
+	IKSolverType m_ikSolverType; // 0x34	
+	bool m_bApplyTilt; // 0x38	
+	bool m_bApplyHipDrop; // 0x39	
+	bool m_bAlwaysUseFallbackHinge; // 0x3a	
 private:
-	[[maybe_unused]] uint8_t __pad00c8[0x8]; 	// 0xc8
+	[[maybe_unused]] uint8_t __pad003b[0x1]; 	// 0x3b
 public:
-	CUtlVector< FootFixedSettings > m_footSettings; // 0xd0	
-	CAnimInputDamping m_hipShiftDamping; // 0xe8	
-	CAnimInputDamping m_rootHeightDamping; // 0x100	
-	float m_flStrideCurveScale; // 0x118	
-	float m_flStrideCurveLimitScale; // 0x11c	
-	float m_flStepHeightIncreaseScale; // 0x120	
-	float m_flStepHeightDecreaseScale; // 0x124	
-	float m_flHipShiftScale; // 0x128	
-	float m_flBlendTime; // 0x12c	
-	float m_flMaxRootHeightOffset; // 0x130	
-	float m_flMinRootHeightOffset; // 0x134	
-	float m_flTiltPlanePitchSpringStrength; // 0x138	
-	float m_flTiltPlaneRollSpringStrength; // 0x13c	
-	bool m_bApplyFootRotationLimits; // 0x140	
-	bool m_bApplyHipShift; // 0x141	
-	bool m_bModulateStepHeight; // 0x142	
-	bool m_bResetChild; // 0x143	
-	bool m_bEnableVerticalCurvedPaths; // 0x144	
-	bool m_bEnableRootHeightDamping; // 0x145	
+	float m_flMaxFootHeight; // 0x3c	
+	float m_flExtensionScale; // 0x40	
+	bool m_bEnableLockBreaking; // 0x44	
+private:
+	[[maybe_unused]] uint8_t __pad0045[0x3]; 	// 0x45
+public:
+	float m_flLockBreakTolerance; // 0x48	
+	float m_flLockBlendTime; // 0x4c	
+	bool m_bEnableStretching; // 0x50	
+private:
+	[[maybe_unused]] uint8_t __pad0051[0x3]; 	// 0x51
+public:
+	float m_flMaxStretchAmount; // 0x54	
+	float m_flStretchExtensionScale; // 0x58	
 };
 
 // Alignment: 13
@@ -5204,49 +5219,13 @@ public:
 	bool m_bTurnToFace; // 0xb0	
 };
 
-// Alignment: 23
-// Size: 0x100
-class CMotionMatchingUpdateNode : public CLeafUpdateNode
+// Alignment: 2
+// Size: 0x20
+class CMotionDataSet
 {
 public:
-	CMotionDataSet m_dataSet; // 0x58	
-	CUtlVector< CSmartPtr< CMotionMetricEvaluator > > m_metrics; // 0x78	
-private:
-	[[maybe_unused]] uint8_t __pad0090[0x8]; 	// 0x90
-public:
-	bool m_bSearchAtInterval; // 0x98	
-private:
-	[[maybe_unused]] uint8_t __pad0099[0x3]; 	// 0x99
-public:
-	float m_flSearchInterval; // 0x9c	
-	bool m_bSearchOnSteps; // 0xa0	
-	bool m_bForceSearchWhenTagsChange; // 0xa1	
-	bool m_bSearchWhenClipEnds; // 0xa2	
-	bool m_bSearchWhenGoalChanges; // 0xa3	
-	CBlendCurve m_blendCurve; // 0xa4	
-	float m_flPredictionTime; // 0xac	
-	float m_flSampleRate; // 0xb0	
-	float m_flBlendTime; // 0xb4	
-	bool m_bLockClipWhenWaning; // 0xb8	
-private:
-	[[maybe_unused]] uint8_t __pad00b9[0x3]; 	// 0xb9
-public:
-	float m_flSelectionThreshold; // 0xbc	
-	bool m_bGoalAssist; // 0xc0	
-private:
-	[[maybe_unused]] uint8_t __pad00c1[0x3]; 	// 0xc1
-public:
-	float m_flGoalAssistDistance; // 0xc4	
-	float m_flGoalAssistTolerance; // 0xc8	
-private:
-	[[maybe_unused]] uint8_t __pad00cc[0x4]; 	// 0xcc
-public:
-	CAnimInputDamping m_distanceScale_Damping; // 0xd0	
-	float m_flDistanceScale_OuterRadius; // 0xe8	
-	float m_flDistanceScale_InnerRadius; // 0xec	
-	float m_flDistanceScale_MaxScale; // 0xf0	
-	float m_flDistanceScale_MinScale; // 0xf4	
-	bool m_bEnableDistanceScaling; // 0xf8	
+	CUtlVector< CMotionClipGroupData > m_clipGroups; // 0x0	
+	int32_t m_nDimensionCount; // 0x18	
 };
 
 // Alignment: 2
@@ -5274,11 +5253,11 @@ public:
 };
 
 // Alignment: 1
-// Size: 0x88
-class CJiggleBoneUpdateNode : public CUnaryUpdateNode
+// Size: 0x18
+struct JiggleBoneSettingsList_t
 {
 public:
-	JiggleBoneSettingsList_t m_opFixedData; // 0x68	
+	CUtlVector< JiggleBoneSettings_t > m_boneSettings; // 0x0	
 };
 
 // Alignment: 1
@@ -5294,7 +5273,7 @@ public:
 class CInputStreamUpdateNode : public CLeafUpdateNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -5334,7 +5313,7 @@ public:
 class ConditionUpdater
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x10]; 	// @note: autoaligned
 };
 
 // Alignment: 3
@@ -5490,13 +5469,49 @@ public:
 	int32_t m_activeTagIndex; // 0x48	
 };
 
-// Alignment: 2
-// Size: 0x20
-class CMotionDataSet
+// Alignment: 23
+// Size: 0x100
+class CMotionMatchingUpdateNode : public CLeafUpdateNode
 {
 public:
-	CUtlVector< CMotionClipGroupData > m_clipGroups; // 0x0	
-	int32_t m_nDimensionCount; // 0x18	
+	CMotionDataSet m_dataSet; // 0x58	
+	CUtlVector< CSmartPtr< CMotionMetricEvaluator > > m_metrics; // 0x78	
+private:
+	[[maybe_unused]] uint8_t __pad0090[0x8]; 	// 0x90
+public:
+	bool m_bSearchAtInterval; // 0x98	
+private:
+	[[maybe_unused]] uint8_t __pad0099[0x3]; 	// 0x99
+public:
+	float m_flSearchInterval; // 0x9c	
+	bool m_bSearchOnSteps; // 0xa0	
+	bool m_bForceSearchWhenTagsChange; // 0xa1	
+	bool m_bSearchWhenClipEnds; // 0xa2	
+	bool m_bSearchWhenGoalChanges; // 0xa3	
+	CBlendCurve m_blendCurve; // 0xa4	
+	float m_flPredictionTime; // 0xac	
+	float m_flSampleRate; // 0xb0	
+	float m_flBlendTime; // 0xb4	
+	bool m_bLockClipWhenWaning; // 0xb8	
+private:
+	[[maybe_unused]] uint8_t __pad00b9[0x3]; 	// 0xb9
+public:
+	float m_flSelectionThreshold; // 0xbc	
+	bool m_bGoalAssist; // 0xc0	
+private:
+	[[maybe_unused]] uint8_t __pad00c1[0x3]; 	// 0xc1
+public:
+	float m_flGoalAssistDistance; // 0xc4	
+	float m_flGoalAssistTolerance; // 0xc8	
+private:
+	[[maybe_unused]] uint8_t __pad00cc[0x4]; 	// 0xcc
+public:
+	CAnimInputDamping m_distanceScale_Damping; // 0xd0	
+	float m_flDistanceScale_OuterRadius; // 0xe8	
+	float m_flDistanceScale_InnerRadius; // 0xec	
+	float m_flDistanceScale_MaxScale; // 0xf0	
+	float m_flDistanceScale_MinScale; // 0xf4	
+	bool m_bEnableDistanceScaling; // 0xf8	
 };
 
 // Alignment: 3
@@ -5522,7 +5537,7 @@ public:
 class CCurrentVelocityMetricEvaluator : public CMotionMetricEvaluator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -5722,44 +5737,30 @@ public:
 	int32_t m_boneIndex; // 0x20	
 };
 
-// Alignment: 9
-// Size: 0x48
-struct SkeletalInputOpFixedSettings_t
+// Alignment: 1
+// Size: 0xa8
+class CSkeletalInputUpdateNode : public CLeafUpdateNode
 {
 public:
-	CUtlVector< WristBone_t > m_wristBones; // 0x0	
-	CUtlVector< FingerChain_t > m_fingers; // 0x18	
-	int32_t m_outerKnuckle1; // 0x30	
-	int32_t m_outerKnuckle2; // 0x34	
-	AnimVRHand_t m_eHand; // 0x38	
-	AnimVRHandMotionRange_t m_eMotionRange; // 0x3c	
-	AnimVrBoneTransformSource_t m_eTransformSource; // 0x40	
-	bool m_bEnableIK; // 0x44	
-	bool m_bEnableCollision; // 0x45	
+	SkeletalInputOpFixedSettings_t m_fixedOpData; // 0x58	
 };
 
-// Alignment: 17
-// Size: 0x44
-struct HitReactFixedSettings_t
+// Alignment: 8
+// Size: 0xe8
+class CHitReactUpdateNode : public CUnaryUpdateNode
 {
 public:
-	int32_t m_nWeightListIndex; // 0x0	
-	int32_t m_nEffectedBoneCount; // 0x4	
-	float m_flMaxImpactForce; // 0x8	
-	float m_flMinImpactForce; // 0xc	
-	float m_flWhipImpactScale; // 0x10	
-	float m_flCounterRotationScale; // 0x14	
-	float m_flDistanceFadeScale; // 0x18	
-	float m_flPropagationScale; // 0x1c	
-	float m_flWhipDelay; // 0x20	
-	float m_flSpringStrength; // 0x24	
-	float m_flWhipSpringStrength; // 0x28	
-	float m_flMaxAngleRadians; // 0x2c	
-	int32_t m_nHipBoneIndex; // 0x30	
-	float m_flHipBoneTranslationScale; // 0x34	
-	float m_flHipDipSpringStrength; // 0x38	
-	float m_flHipDipImpactScale; // 0x3c	
-	float m_flHipDipDelay; // 0x40	
+	HitReactFixedSettings_t m_opFixedSettings; // 0x68	
+private:
+	[[maybe_unused]] uint8_t __pad00ac[0x8]; 	// 0xac
+public:
+	CAnimParamHandle m_triggerParam; // 0xb4	
+	CAnimParamHandle m_hitBoneParam; // 0xbc	
+	CAnimParamHandle m_hitOffsetParam; // 0xc4	
+	CAnimParamHandle m_hitDirectionParam; // 0xcc	
+	CAnimParamHandle m_hitStrengthParam; // 0xd4	
+	float m_flMinDelayBetweenHits; // 0xdc	
+	bool m_bResetChild; // 0xe0	
 };
 
 // Alignment: 7
@@ -5776,35 +5777,34 @@ public:
 	float m_flMaxIKLength; // 0x30	
 };
 
-// Alignment: 15
-// Size: 0x60
-class FootLockPoseOpFixedSettings
+// Alignment: 20
+// Size: 0x148
+class CFootLockUpdateNode : public CUnaryUpdateNode
 {
 public:
-	CUtlVector< FootOpFixedInfo > m_footInfo; // 0x0	
-	CAnimInputDamping m_hipDampingSettings; // 0x18	
-	int32_t m_nHipBoneIndex; // 0x30	
-	IKSolverType m_ikSolverType; // 0x34	
-	bool m_bApplyTilt; // 0x38	
-	bool m_bApplyHipDrop; // 0x39	
-	bool m_bAlwaysUseFallbackHinge; // 0x3a	
+	FootLockPoseOpFixedSettings m_opFixedSettings; // 0x68	
 private:
-	[[maybe_unused]] uint8_t __pad003b[0x1]; 	// 0x3b
+	[[maybe_unused]] uint8_t __pad00c8[0x8]; 	// 0xc8
 public:
-	float m_flMaxFootHeight; // 0x3c	
-	float m_flExtensionScale; // 0x40	
-	bool m_bEnableLockBreaking; // 0x44	
-private:
-	[[maybe_unused]] uint8_t __pad0045[0x3]; 	// 0x45
-public:
-	float m_flLockBreakTolerance; // 0x48	
-	float m_flLockBlendTime; // 0x4c	
-	bool m_bEnableStretching; // 0x50	
-private:
-	[[maybe_unused]] uint8_t __pad0051[0x3]; 	// 0x51
-public:
-	float m_flMaxStretchAmount; // 0x54	
-	float m_flStretchExtensionScale; // 0x58	
+	CUtlVector< FootFixedSettings > m_footSettings; // 0xd0	
+	CAnimInputDamping m_hipShiftDamping; // 0xe8	
+	CAnimInputDamping m_rootHeightDamping; // 0x100	
+	float m_flStrideCurveScale; // 0x118	
+	float m_flStrideCurveLimitScale; // 0x11c	
+	float m_flStepHeightIncreaseScale; // 0x120	
+	float m_flStepHeightDecreaseScale; // 0x124	
+	float m_flHipShiftScale; // 0x128	
+	float m_flBlendTime; // 0x12c	
+	float m_flMaxRootHeightOffset; // 0x130	
+	float m_flMinRootHeightOffset; // 0x134	
+	float m_flTiltPlanePitchSpringStrength; // 0x138	
+	float m_flTiltPlaneRollSpringStrength; // 0x13c	
+	bool m_bApplyFootRotationLimits; // 0x140	
+	bool m_bApplyHipShift; // 0x141	
+	bool m_bModulateStepHeight; // 0x142	
+	bool m_bResetChild; // 0x143	
+	bool m_bEnableVerticalCurvedPaths; // 0x144	
+	bool m_bEnableRootHeightDamping; // 0x145	
 };
 
 // Alignment: 6
@@ -5849,11 +5849,11 @@ public:
 };
 
 // Alignment: 1
-// Size: 0x18
-struct JiggleBoneSettingsList_t
+// Size: 0x88
+class CJiggleBoneUpdateNode : public CUnaryUpdateNode
 {
 public:
-	CUtlVector< JiggleBoneSettings_t > m_boneSettings; // 0x0	
+	JiggleBoneSettingsList_t m_opFixedData; // 0x68	
 };
 
 // Alignment: 5
@@ -6621,7 +6621,7 @@ public:
 class CBoneConstraintBase
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x28]; 	// @note: autoaligned
 };
 
 // Alignment: 4
@@ -6643,7 +6643,7 @@ public:
 class CPointConstraint : public CBaseConstraint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6651,7 +6651,7 @@ public:
 class COrientConstraint : public CBaseConstraint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -6701,7 +6701,7 @@ public:
 class CParentConstraint : public CBaseConstraint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -6885,7 +6885,7 @@ public:
 class CAnimCycle : public CCycleBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6893,7 +6893,7 @@ public:
 class CFootCycle : public CCycleBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -7083,7 +7083,7 @@ public:
 class CAnimComponentStateTransition : public CAnimStateTransition
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7091,7 +7091,7 @@ public:
 class CAnimComponentState : public CAnimState
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -7230,7 +7230,7 @@ public:
 class CGroupInputAnimNode : public CProxyAnimNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7238,7 +7238,7 @@ public:
 class CGroupOutputAnimNode : public CProxyAnimNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7246,7 +7246,7 @@ public:
 class CRootUpdateNode : public CUnaryUpdateNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -7477,7 +7477,7 @@ public:
 class CChoreoUpdateNode : public CUnaryUpdateNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2

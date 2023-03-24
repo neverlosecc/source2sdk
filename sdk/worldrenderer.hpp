@@ -352,7 +352,7 @@ public:
 struct VMapResourceData_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -360,7 +360,7 @@ public:
 struct InfoForResourceTypeVMapResourceData_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 11
