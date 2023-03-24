@@ -46,7 +46,7 @@ public:
 	CUtlString m_outputName; // 0x0	
 	uint32_t m_targetType; // 0x8	
 private:
-	[[maybe_unused]] uint8_t __pad000c[0x4]; 	// 0xc
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
 public:
 	CUtlString m_targetName; // 0x10	
 	CUtlString m_inputName; // 0x18	
@@ -86,7 +86,7 @@ public:
 	float m_flFadeEndDistance; // 0x38	
 	Vector4D m_vTintColor; // 0x3c	
 private:
-	[[maybe_unused]] uint8_t __pad004c[0x4]; 	// 0x4c
+	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
 public:
 	CUtlString m_skin; // 0x50	
 	ObjectTypeFlags_t m_nObjectTypeFlags; // 0x58	
@@ -97,7 +97,7 @@ public:
 	int32_t m_nCubeMapPrecomputedHandshake; // 0x70	
 	int32_t m_nLightProbeVolumePrecomputedHandshake; // 0x74	
 private:
-	[[maybe_unused]] uint8_t __pad0078[0x8]; 	// 0x78
+	[[maybe_unused]] uint8_t __pad0078[0x8]; // 0x78
 public:
 	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x80	
 	CStrongHandle< InfoForResourceTypeCRenderMesh > m_renderable; // 0x88	
@@ -130,7 +130,7 @@ public:
 	uint32_t m_nSubSceneObject; // 0x4	
 	uint32_t m_nDrawCallIndex; // 0x8	
 private:
-	[[maybe_unused]] uint8_t __pad000c[0x4]; 	// 0xc
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
 public:
 	CStrongHandle< InfoForResourceTypeIMaterial2 > m_pMaterial; // 0x10	
 };
@@ -147,7 +147,7 @@ public:
 	Vector2D m_vUVStart; // 0x3c	
 	Vector2D m_vUVEnd; // 0x44	
 private:
-	[[maybe_unused]] uint8_t __pad004c[0x4]; 	// 0x4c
+	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
 public:
 	CStrongHandle< InfoForResourceTypeIMaterial2 > m_pMaterial; // 0x50	
 	int32_t m_nRenderOrder; // 0x58	
@@ -165,7 +165,7 @@ public:
 	Vector2D m_vLightmapUvScale; // 0x8	
 	bool m_bHasLightmaps; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad0011[0x7]; 	// 0x11
+	[[maybe_unused]] uint8_t __pad0011[0x7]; // 0x11
 public:
 	CUtlVector< CStrongHandle< InfoForResourceTypeCTextureBase > > m_lightMaps; // 0x18	
 };
@@ -193,7 +193,7 @@ public:
 	Color m_vTintColor; // 0x8	
 	uint8_t m_nLODGroupMask; // 0xc	
 private:
-	[[maybe_unused]] uint8_t __pad000d[0x3]; 	// 0xd
+	[[maybe_unused]] uint8_t __pad000d[0x3]; // 0xd
 public:
 	ObjectTypeFlags_t m_objectFlags; // 0x10	
 	Vector m_vLODOrigin; // 0x14	
@@ -212,7 +212,7 @@ public:
 	ObjectTypeFlags_t m_anyFlags; // 0x4	
 	int16_t m_nLayer; // 0x8	
 private:
-	[[maybe_unused]] uint8_t __pad000a[0x6]; 	// 0xa
+	[[maybe_unused]] uint8_t __pad000a[0x6]; // 0xa
 public:
 	CUtlVector< AggregateMeshInfo_t > m_aggregateMeshes; // 0x10	
 	CUtlVector< uint16 > m_visClusterMembership; // 0x28	
@@ -247,7 +247,7 @@ public:
 	float m_flMinDrawVolumeSize; // 0x0	
 	bool m_bBuildBakedLighting; // 0x4	
 private:
-	[[maybe_unused]] uint8_t __pad0005[0x3]; 	// 0x5
+	[[maybe_unused]] uint8_t __pad0005[0x3]; // 0x5
 public:
 	Vector2D m_vLightmapUvScale; // 0x8	
 	uint64_t m_nCompileTimestamp; // 0x10	
@@ -265,7 +265,7 @@ public:
 	Vector m_vMaxBounds; // 0x1c	
 	float m_flMinimumDistance; // 0x28	
 private:
-	[[maybe_unused]] uint8_t __pad002c[0x4]; 	// 0x2c
+	[[maybe_unused]] uint8_t __pad002c[0x4]; // 0x2c
 public:
 	CUtlVector< int32 > m_ChildNodeIndices; // 0x30	
 	CUtlString m_worldNodePrefix; // 0x48	
@@ -316,7 +316,7 @@ public:
 struct VMapResourceData_t
 {
 public:
-	uint8_t __pad0000[0x1]; 	// @note: autoaligned
+	uint8_t __pad0000[0x1]; // Autoaligned
 };
 
 // Alignment: 0
@@ -324,7 +324,7 @@ public:
 struct InfoForResourceTypeVMapResourceData_t
 {
 public:
-	uint8_t __pad0000[0x1]; 	// @note: autoaligned
+	uint8_t __pad0000[0x1]; // Autoaligned
 };
 
 // Alignment: 11
@@ -338,11 +338,11 @@ public:
 	CUtlSymbolLarge m_name; // 0x18	
 	CUtlSymbolLarge m_designerName; // 0x20	
 private:
-	[[maybe_unused]] uint8_t __pad0028[0x8]; 	// 0x28
+	[[maybe_unused]] uint8_t __pad0028[0x8]; // 0x28
 public:
 	uint32_t m_flags; // 0x30	
 private:
-	[[maybe_unused]] uint8_t __pad0034[0x4]; 	// 0x34
+	[[maybe_unused]] uint8_t __pad0034[0x4]; // 0x34
 public:
 	// MNetworkDisable
 	WorldGroupId_t m_worldGroupId; // 0x38	
@@ -351,7 +351,7 @@ public:
 	// MNetworkChangeAccessorFieldPathIndex
 	ChangeAccessorFieldPathIndex_t m_PathIndex; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0042[0x16]; 	// 0x42
+	[[maybe_unused]] uint8_t __pad0042[0x16]; // 0x42
 public:
 	CEntityIdentity* m_pPrev; // 0x58	
 	CEntityIdentity* m_pNext; // 0x60	
@@ -370,7 +370,7 @@ public:
 	// MNetworkPriority "56"
 	CEntityIdentity* m_pEntity; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad0018[0x10]; 	// 0x18
+	[[maybe_unused]] uint8_t __pad0018[0x10]; // 0x18
 public:
 	// MNetworkEnable
 	// MNetworkDisable

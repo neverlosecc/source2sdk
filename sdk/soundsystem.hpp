@@ -282,21 +282,21 @@ public:
 	// MPropertyFriendlyName "Blocks Events"
 	bool m_bIsBlocking; // 0xc	
 private:
-	[[maybe_unused]] uint8_t __pad000d[0x3]; 	// 0xd
+	[[maybe_unused]] uint8_t __pad000d[0x3]; // 0xd
 public:
 	// MPropertyFriendlyName "Block Max Count"
 	int32_t m_nBlockMaxCount; // 0x10	
 	// MPropertyFriendlyName "Invert Match"
 	bool m_bInvertMatch; // 0x14	
 private:
-	[[maybe_unused]] uint8_t __pad0015[0x3]; 	// 0x15
+	[[maybe_unused]] uint8_t __pad0015[0x3]; // 0x15
 public:
 	// MPropertyFriendlyName "Match Rules"
 	CSosGroupMatchPattern m_matchPattern; // 0x18	
 	// MPropertyFriendlyName "Branch Rules"
 	CSosGroupBranchPattern m_branchPattern; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0050[0x60]; 	// 0x50
+	[[maybe_unused]] uint8_t __pad0050[0x60]; // 0x50
 public:
 	// MPropertyFriendlyName "Actions"
 	CSosGroupActionSchema* m_vActions[4]; // 0xb0	
@@ -321,7 +321,7 @@ public:
 	CUtlString itemName; // 0x8	
 	CUtlString itemTypeName; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad0018[0x8]; 	// 0x18
+	[[maybe_unused]] uint8_t __pad0018[0x8]; // 0x18
 public:
 	CUtlString itemKVString; // 0x20	
 	Vector2D itemPos; // 0x28	
@@ -420,7 +420,7 @@ public:
 	VMixFilterDesc_t m_feedbackFilter; // 0x0	
 	bool m_bEnableFilter; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad0011[0x3]; 	// 0x11
+	[[maybe_unused]] uint8_t __pad0011[0x3]; // 0x11
 public:
 	float m_flDelay; // 0x14	
 	float m_flDirectGain; // 0x18	
@@ -446,7 +446,7 @@ public:
 	VMixFilterDesc_t m_feedbackFilter; // 0x0	
 	bool m_bPhaseInvert; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad0011[0x3]; 	// 0x11
+	[[maybe_unused]] uint8_t __pad0011[0x3]; // 0x11
 public:
 	float m_flGlideTime; // 0x14	
 	float m_flDelay; // 0x18	
@@ -481,7 +481,7 @@ public:
 	float m_flModRate; // 0x14	
 	bool m_bParallel; // 0x18	
 private:
-	[[maybe_unused]] uint8_t __pad0019[0x3]; 	// 0x19
+	[[maybe_unused]] uint8_t __pad0019[0x3]; // 0x19
 public:
 	VMixFilterDesc_t m_filterType; // 0x1c	
 	float m_flWidth; // 0x2c	
@@ -606,7 +606,7 @@ public:
 	float m_flHighCutoffFreq; // 0x1c	
 	bool m_bPeakMode; // 0x20	
 private:
-	[[maybe_unused]] uint8_t __pad0021[0x3]; 	// 0x21
+	[[maybe_unused]] uint8_t __pad0021[0x3]; // 0x21
 public:
 	VMixDynamicsBand_t m_bandDesc[3]; // 0x24	
 };
@@ -714,7 +714,7 @@ public:
 	float m_fldbOutputGain; // 0xc	
 	bool m_bBassMono; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad0011[0x3]; 	// 0x11
+	[[maybe_unused]] uint8_t __pad0011[0x3]; // 0x11
 public:
 	float m_flBassFreq; // 0x14	
 };
@@ -767,7 +767,7 @@ public:
 	VMixSubgraphSwitchInterpolationType_t m_interpolationMode; // 0x0	
 	bool m_bOnlyTailsOnFadeOut; // 0x4	
 private:
-	[[maybe_unused]] uint8_t __pad0005[0x3]; 	// 0x5
+	[[maybe_unused]] uint8_t __pad0005[0x3]; // 0x5
 public:
 	float m_flInterpolationTime; // 0x8	
 };

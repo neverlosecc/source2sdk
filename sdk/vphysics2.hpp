@@ -80,7 +80,7 @@ public:
 class IPhysicsPlayerController
 {
 public:
-	uint8_t __pad0000[0x8]; 	// @note: autoaligned
+	uint8_t __pad0000[0x8]; // Autoaligned
 };
 
 // Alignment: 35
@@ -172,7 +172,7 @@ public:
 	uint16_t m_nNodeBaseJiggleboneDependsCount; // 0x58	
 	uint16_t m_nRopeCount; // 0x5a	
 private:
-	[[maybe_unused]] uint8_t __pad005c[0x4]; 	// 0x5c
+	[[maybe_unused]] uint8_t __pad005c[0x4]; // 0x5c
 public:
 	CUtlVector< uint16 > m_Ropes; // 0x60	
 	CUtlVector< FeNodeBase_t > m_NodeBases; // 0x78	
@@ -843,7 +843,7 @@ public:
 	CUtlString m_Name; // 0x0	
 	uint32_t m_nNameHash; // 0x8	
 private:
-	[[maybe_unused]] uint8_t __pad000c[0x4]; 	// 0xc
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
 public:
 	CUtlVector< uint16 > m_Nodes; // 0x10	
 	CUtlVector< Vector > m_InitPos; // 0x28	
@@ -861,7 +861,7 @@ public:
 	CUtlString m_Name; // 0x0	
 	uint32_t m_nNameHash; // 0x8	
 private:
-	[[maybe_unused]] uint8_t __pad000c[0x4]; 	// 0xc
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
 public:
 	CUtlVector< uint16 > m_Nodes; // 0x10	
 	CUtlVector< Vector > m_InitPos; // 0x28	
@@ -953,7 +953,7 @@ public:
 	CUtlVector< RnPlane_t > m_Planes; // 0xb0	
 	uint32_t m_nFlags; // 0xc8	
 private:
-	[[maybe_unused]] uint8_t __pad00cc[0x4]; 	// 0xcc
+	[[maybe_unused]] uint8_t __pad00cc[0x4]; // 0xcc
 public:
 	CRegionSVM* m_pRegionSVM; // 0xd0	
 };
@@ -1095,7 +1095,7 @@ public:
 	float m_flMaxFraction; // 0x1c	
 	float m_flScale; // 0x20	
 private:
-	[[maybe_unused]] uint8_t __pad0024[0x4]; 	// 0x24
+	[[maybe_unused]] uint8_t __pad0024[0x4]; // 0x24
 public:
 	RnHull_t* m_pHull; // 0x28	
 };
