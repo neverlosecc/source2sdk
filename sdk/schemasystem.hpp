@@ -112,7 +112,7 @@ public:
 	Vector2D m_Vector2D; // 0x0	
 	Vector m_Vector; // 0x8	
 private:
-	[[maybe_unused]] uint8_t __pad0014[0xc]; 	// 0x14
+	[[maybe_unused]] uint8_t __pad0014[0xc]; // 0x14
 public:
 	VectorAligned m_VectorAligned; // 0x20	
 	Quaternion m_Quaternion; // 0x30	
@@ -126,7 +126,7 @@ public:
 	Color m_Color; // 0xe0	
 	Vector4D m_Vector4D; // 0xe4	
 private:
-	[[maybe_unused]] uint8_t __pad00f4[0xc]; 	// 0xf4
+	[[maybe_unused]] uint8_t __pad00f4[0xc]; // 0xf4
 public:
 	CTransform m_CTransform; // 0x100	
 	KeyValues* m_pKeyValues; // 0x120	
@@ -134,7 +134,7 @@ public:
 	CUtlString m_CUtlString; // 0x140	
 	CUtlSymbol m_CUtlSymbol; // 0x148	
 private:
-	[[maybe_unused]] uint8_t __pad014a[0x2]; 	// 0x14a
+	[[maybe_unused]] uint8_t __pad014a[0x2]; // 0x14a
 public:
 	CUtlStringToken m_stringToken; // 0x14c	
 	CUtlStringTokenWithStorage m_stringTokenWithStorage; // 0x150	
@@ -147,7 +147,7 @@ public:
 class InfoForResourceTypeCResourceManifestInternal
 {
 public:
-	uint8_t __pad0000[0x1]; 	// @note: autoaligned
+	uint8_t __pad0000[0x1]; // Autoaligned
 };
 
 // Alignment: 1

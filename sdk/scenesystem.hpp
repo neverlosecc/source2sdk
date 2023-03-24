@@ -65,7 +65,7 @@ public:
 	CUtlString m_ViewName; // 0x10	
 	int32_t m_nLayerIndex; // 0x18	
 private:
-	[[maybe_unused]] uint8_t __pad001c[0x4]; 	// 0x1c
+	[[maybe_unused]] uint8_t __pad001c[0x4]; // 0x1c
 public:
 	uint64_t m_nLayerId; // 0x20	
 	CUtlString m_LayerName; // 0x28	
@@ -104,7 +104,7 @@ public:
 class CSSDSMsg_PreLayer : public CSSDSMsg_LayerBase
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -112,6 +112,6 @@ public:
 class CSSDSMsg_PostLayer : public CSSDSMsg_LayerBase
 {
 public:
-	// @note: no members available
+	// No members available
 };
 

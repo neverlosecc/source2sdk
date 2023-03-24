@@ -71,7 +71,7 @@ public:
 struct EventModInitialized_t
 {
 public:
-	uint8_t __pad0000[0x1]; 	// @note: autoaligned
+	uint8_t __pad0000[0x1]; // Autoaligned
 };
 
 // Alignment: 1
@@ -95,7 +95,7 @@ public:
 struct EventSplitScreenStateChanged_t
 {
 public:
-	uint8_t __pad0000[0x1]; 	// @note: autoaligned
+	uint8_t __pad0000[0x1]; // Autoaligned
 };
 
 // Alignment: 8
@@ -106,7 +106,7 @@ public:
 	EngineLoopState_t m_LoopState; // 0x0	
 	int32_t m_nClientOutputFrames; // 0x28	
 private:
-	[[maybe_unused]] uint8_t __pad002c[0x4]; 	// 0x2c
+	[[maybe_unused]] uint8_t __pad002c[0x4]; // 0x2c
 public:
 	double m_flRealTime; // 0x30	
 	double m_flRenderTime; // 0x38	
@@ -246,7 +246,7 @@ public:
 struct EventServerAdvanceTick_t : public EventAdvanceTick_t
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -254,7 +254,7 @@ public:
 struct EventServerPostAdvanceTick_t : public EventPostAdvanceTick_t
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -262,7 +262,7 @@ public:
 struct EventClientAdvanceTick_t : public EventAdvanceTick_t
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -270,7 +270,7 @@ public:
 struct EventClientPostAdvanceTick_t : public EventPostAdvanceTick_t
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 2
@@ -287,7 +287,7 @@ public:
 struct EventClientPredictionPostNetupdate_t
 {
 public:
-	uint8_t __pad0000[0x1]; 	// @note: autoaligned
+	uint8_t __pad0000[0x1]; // Autoaligned
 };
 
 // Alignment: 1
@@ -303,7 +303,7 @@ public:
 struct EventClientProcessNetworking_t
 {
 public:
-	uint8_t __pad0000[0x1]; 	// @note: autoaligned
+	uint8_t __pad0000[0x1]; // Autoaligned
 };
 
 // Alignment: 0
@@ -311,7 +311,7 @@ public:
 struct EventClientPreSimulate_t : public EventSimulate_t
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -319,7 +319,7 @@ public:
 struct EventClientSimulate_t : public EventSimulate_t
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -327,7 +327,7 @@ public:
 struct EventServerPollNetworking_t : public EventSimulate_t
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -335,7 +335,7 @@ public:
 struct EventServerProcessNetworking_t : public EventSimulate_t
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -343,7 +343,7 @@ public:
 struct EventServerSimulate_t : public EventSimulate_t
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -351,7 +351,7 @@ public:
 struct EventServerPostSimulate_t : public EventSimulate_t
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -359,7 +359,7 @@ public:
 struct EventClientPostSimulate_t : public EventSimulate_t
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -367,7 +367,7 @@ public:
 struct EventClientPauseSimulate_t : public EventSimulate_t
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 1
@@ -399,7 +399,7 @@ public:
 class IHandleEntity
 {
 public:
-	uint8_t __pad0000[0x8]; 	// @note: autoaligned
+	uint8_t __pad0000[0x8]; // Autoaligned
 };
 
 // Alignment: 1
@@ -417,7 +417,7 @@ public:
 class CVariantDefaultAllocator
 {
 public:
-	uint8_t __pad0000[0x1]; 	// @note: autoaligned
+	uint8_t __pad0000[0x1]; // Autoaligned
 };
 
 // Alignment: 0
@@ -425,7 +425,7 @@ public:
 struct EntOutput_t
 {
 public:
-	uint8_t __pad0000[0x10]; 	// @note: autoaligned
+	uint8_t __pad0000[0x10]; // Autoaligned
 };
 
 // Alignment: 8
@@ -441,7 +441,7 @@ public:
 	int32_t m_nRuntimeIndex; // 0x30	
 	uint32_t m_nFlags; // 0x34	
 private:
-	[[maybe_unused]] uint8_t __pad0038[0x38]; 	// 0x38
+	[[maybe_unused]] uint8_t __pad0038[0x38]; // 0x38
 public:
 	CEntityComponentHelper* m_pBaseClassComponentHelper; // 0x70	
 };
@@ -451,7 +451,7 @@ public:
 class CEntityComponent
 {
 public:
-	uint8_t __pad0000[0x8]; 	// @note: autoaligned
+	uint8_t __pad0000[0x8]; // Autoaligned
 };
 
 // Alignment: 0
@@ -459,7 +459,7 @@ public:
 struct EntInput_t
 {
 public:
-	uint8_t __pad0000[0x30]; 	// @note: autoaligned
+	uint8_t __pad0000[0x30]; // Autoaligned
 };
 
 // Alignment: 4
@@ -469,12 +469,12 @@ class CEntityComponentHelper
 public:
 	uint32_t m_flags; // 0x8	
 private:
-	[[maybe_unused]] uint8_t __pad000c[0x4]; 	// 0xc
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
 public:
 	EntComponentInfo_t* m_pInfo; // 0x10	
 	int32_t m_nPriority; // 0x18	
 private:
-	[[maybe_unused]] uint8_t __pad001c[0x4]; 	// 0x1c
+	[[maybe_unused]] uint8_t __pad001c[0x4]; // 0x1c
 public:
 	CEntityComponentHelper* m_pNext; // 0x20	
 };
@@ -490,11 +490,11 @@ public:
 	CUtlSymbolLarge m_name; // 0x18	
 	CUtlSymbolLarge m_designerName; // 0x20	
 private:
-	[[maybe_unused]] uint8_t __pad0028[0x8]; 	// 0x28
+	[[maybe_unused]] uint8_t __pad0028[0x8]; // 0x28
 public:
 	uint32_t m_flags; // 0x30	
 private:
-	[[maybe_unused]] uint8_t __pad0034[0x4]; 	// 0x34
+	[[maybe_unused]] uint8_t __pad0034[0x4]; // 0x34
 public:
 	// MNetworkDisable
 	WorldGroupId_t m_worldGroupId; // 0x38	
@@ -503,7 +503,7 @@ public:
 	// MNetworkChangeAccessorFieldPathIndex
 	ChangeAccessorFieldPathIndex_t m_PathIndex; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0042[0x16]; 	// 0x42
+	[[maybe_unused]] uint8_t __pad0042[0x16]; // 0x42
 public:
 	CEntityIdentity* m_pPrev; // 0x58	
 	CEntityIdentity* m_pNext; // 0x60	
@@ -516,7 +516,7 @@ public:
 class CEmptyEntityInstance
 {
 public:
-	uint8_t __pad0000[0x8]; 	// @note: autoaligned
+	uint8_t __pad0000[0x8]; // Autoaligned
 };
 
 // Alignment: 3
@@ -530,7 +530,7 @@ public:
 	// MNetworkPriority "56"
 	CEntityIdentity* m_pEntity; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad0018[0x10]; 	// 0x18
+	[[maybe_unused]] uint8_t __pad0018[0x10]; // 0x18
 public:
 	// MNetworkEnable
 	// MNetworkDisable
