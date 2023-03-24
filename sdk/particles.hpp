@@ -759,7 +759,7 @@ public:
 	CUtlString m_sequenceName; // 0x10	
 	int32_t m_nFireParticleOnSequenceFrame; // 0x18	
 private:
-	[[maybe_unused]] uint8_t __pad001c[0x4]; 	// 0x1c
+	[[maybe_unused]] uint8_t __pad001c[0x4]; // 0x1c
 public:
 	CUtlString m_hitboxSetName; // 0x20	
 	CUtlString m_materialGroupName; // 0x28	
@@ -801,7 +801,7 @@ public:
 class IParticleCollection
 {
 public:
-	uint8_t __pad0000[0x10]; 	// @note: autoaligned
+	uint8_t __pad0000[0x10]; // Autoaligned
 };
 
 // Alignment: 0
@@ -809,7 +809,7 @@ public:
 class IControlPointEditorData
 {
 public:
-	uint8_t __pad0000[0x8]; 	// @note: autoaligned
+	uint8_t __pad0000[0x8]; // Autoaligned
 };
 
 // Alignment: 0
@@ -817,7 +817,7 @@ public:
 class IParticleSystemDefinition
 {
 public:
-	uint8_t __pad0000[0x8]; 	// @note: autoaligned
+	uint8_t __pad0000[0x8]; // Autoaligned
 };
 
 // Alignment: 18
@@ -871,7 +871,7 @@ public:
 	// MParticleAdvancedField
 	bool m_bDotCameraAngles; // 0x35	
 private:
-	[[maybe_unused]] uint8_t __pad0036[0x2]; 	// 0x36
+	[[maybe_unused]] uint8_t __pad0036[0x2]; // 0x36
 public:
 	// MPropertyFriendlyName "visibility unsupported hardware fallback value"
 	// MParticleAdvancedField
@@ -920,7 +920,7 @@ public:
 	// MPropertyFriendlyName "delay"
 	float m_flDelay; // 0x8	
 private:
-	[[maybe_unused]] uint8_t __pad000c[0x2]; 	// 0xc
+	[[maybe_unused]] uint8_t __pad000c[0x2]; // 0xc
 public:
 	// MPropertyFriendlyName "end cap effect"
 	bool m_bEndCap; // 0xe	
@@ -985,7 +985,7 @@ public:
 	// MPropertyFriendlyName "Use local coordinates for offset"
 	bool m_bLocalCoords; // 0x4	
 private:
-	[[maybe_unused]] uint8_t __pad0005[0x3]; 	// 0x5
+	[[maybe_unused]] uint8_t __pad0005[0x3]; // 0x5
 public:
 	// MPropertyFriendlyName "Offset from control point"
 	Vector m_vOffset; // 0x8	
@@ -1009,7 +1009,7 @@ public:
 	// MPropertySuppressField
 	int32_t m_nBehaviorVersion; // 0x8	
 private:
-	[[maybe_unused]] uint8_t __pad000c[0x4]; 	// 0xc
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
 public:
 	// MPropertySuppressField
 	CUtlVector< CParticleFunctionPreEmission* > m_PreEmissionOperators; // 0x10	
@@ -1028,7 +1028,7 @@ public:
 	// MPropertySuppressField
 	CUtlVector< ParticleChildrenInfo_t > m_Children; // 0xb8	
 private:
-	[[maybe_unused]] uint8_t __pad00d0[0xa8]; 	// 0xd0
+	[[maybe_unused]] uint8_t __pad00d0[0xa8]; // 0xd0
 public:
 	// MPropertySuppressField
 	int32_t m_nFirstMultipleOverride_BackwardCompat; // 0x178	
@@ -1037,7 +1037,7 @@ public:
 	// MPropertyFriendlyName "max particles"
 	int32_t m_nMaxParticles; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x3c]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x3c]; // 0x184
 public:
 	// MPropertyFriendlyName "bounding box min"
 	// MVectorIsCoordinate
@@ -1048,7 +1048,7 @@ public:
 	// MPropertyFriendlyName "snapshot control point"
 	int32_t m_nSnapshotControlPoint; // 0x1d8	
 private:
-	[[maybe_unused]] uint8_t __pad01dc[0x4]; 	// 0x1dc
+	[[maybe_unused]] uint8_t __pad01dc[0x4]; // 0x1dc
 public:
 	// MPropertyFriendlyName "snapshot"
 	// MPropertyAttributeEditor "AssetBrowse( vsnap )"
@@ -1056,7 +1056,7 @@ public:
 	// MPropertyFriendlyName "target layer ID for rendering"
 	CUtlSymbolLarge m_pszTargetLayerID; // 0x1e8	
 private:
-	[[maybe_unused]] uint8_t __pad01f0[0x18]; 	// 0x1f0
+	[[maybe_unused]] uint8_t __pad01f0[0x18]; // 0x1f0
 public:
 	// MPropertyFriendlyName "reference replacement definition"
 	// MPropertyAttributeEditor "AssetBrowse( vpcf )"
@@ -1076,7 +1076,7 @@ public:
 	// MParticleAdvancedField
 	int32_t m_nCullControlPoint; // 0x220	
 private:
-	[[maybe_unused]] uint8_t __pad0224[0xc]; 	// 0x224
+	[[maybe_unused]] uint8_t __pad0224[0xc]; // 0x224
 public:
 	// MPropertyFriendlyName "fallback replacement definition"
 	// MPropertyAttributeEditor "AssetBrowse( vpcf )"
@@ -1086,7 +1086,7 @@ public:
 	// MParticleAdvancedField
 	int32_t m_nFallbackMaxCount; // 0x238	
 private:
-	[[maybe_unused]] uint8_t __pad023c[0x4]; 	// 0x23c
+	[[maybe_unused]] uint8_t __pad023c[0x4]; // 0x23c
 public:
 	// MPropertyFriendlyName "low violence definition"
 	// MPropertyAttributeEditor "AssetBrowse( vpcf )"
@@ -1143,7 +1143,7 @@ public:
 	// MParticleAdvancedField
 	bool m_bScreenSpaceEffect; // 0x291	
 private:
-	[[maybe_unused]] uint8_t __pad0292[0x16]; 	// 0x292
+	[[maybe_unused]] uint8_t __pad0292[0x16]; // 0x292
 public:
 	// MPropertySuppressField
 	CUtlVector< ParticleControlPointConfiguration_t > m_controlPointConfigurations; // 0x2a8	
@@ -1174,7 +1174,7 @@ public:
 	// MParticleAdvancedField
 	float m_flPreSimulationTime; // 0x2e4	
 private:
-	[[maybe_unused]] uint8_t __pad02e8[0x38]; 	// 0x2e8
+	[[maybe_unused]] uint8_t __pad02e8[0x38]; // 0x2e8
 public:
 	// MPropertyFriendlyName "sort particles (DEPRECATED - USE RENDERER OPTION)"
 	bool m_bShouldSort; // 0x320	
@@ -1182,14 +1182,14 @@ public:
 	// MParticleAdvancedField
 	bool m_bShouldBatch; // 0x321	
 private:
-	[[maybe_unused]] uint8_t __pad0322[0x2]; 	// 0x322
+	[[maybe_unused]] uint8_t __pad0322[0x2]; // 0x322
 public:
 	// MPropertyFriendlyName "depth sort bias"
 	float m_flDepthSortBias; // 0x324	
 	// MPropertyFriendlyName "infinite bounds - don't cull"
 	bool m_bInfiniteBounds; // 0x328	
 private:
-	[[maybe_unused]] uint8_t __pad0329[0x1]; 	// 0x329
+	[[maybe_unused]] uint8_t __pad0329[0x1]; // 0x329
 public:
 	// MPropertyFriendlyName "Hitboxes fall back to render bounds"
 	// MParticleAdvancedField
@@ -1201,7 +1201,7 @@ public:
 class CPiecewiseCurveSchemaWrapper
 {
 public:
-	uint8_t __pad0000[0x40]; 	// @note: autoaligned
+	uint8_t __pad0000[0x40]; // Autoaligned
 };
 
 // Alignment: 36
@@ -1220,7 +1220,7 @@ public:
 	float m_flRandomMax; // 0x20	
 	ParticleFloatRandomMode_t m_nRandomMode; // 0x24	
 private:
-	[[maybe_unused]] uint8_t __pad0028[0x4]; 	// 0x28
+	[[maybe_unused]] uint8_t __pad0028[0x4]; // 0x28
 public:
 	float m_flLOD0; // 0x2c	
 	float m_flLOD1; // 0x30	
@@ -1240,7 +1240,7 @@ public:
 	float m_flNoiseImgPreviewScale; // 0x70	
 	bool m_bNoiseImgPreviewLive; // 0x74	
 private:
-	[[maybe_unused]] uint8_t __pad0075[0x7]; 	// 0x75
+	[[maybe_unused]] uint8_t __pad0075[0x7]; // 0x75
 public:
 	ParticleFloatInputMode_t m_nInputMode; // 0x7c	
 	float m_flMultFactor; // 0x80	
@@ -1251,7 +1251,7 @@ public:
 	ParticleFloatBiasType_t m_nBiasType; // 0x94	
 	float m_flBiasParameter; // 0x98	
 private:
-	[[maybe_unused]] uint8_t __pad009c[0x4]; 	// 0x9c
+	[[maybe_unused]] uint8_t __pad009c[0x4]; // 0x9c
 public:
 	CPiecewiseCurveSchemaWrapper m_Curve; // 0xa0	
 };
@@ -1261,7 +1261,7 @@ public:
 class CParticleCollectionFloatInput : public CParticleFloatInput
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 16
@@ -1295,7 +1295,7 @@ public:
 	// MPropertySortPriority "-100"
 	bool m_bNormalizeToStopTime; // 0x1c	
 private:
-	[[maybe_unused]] uint8_t __pad001d[0x3]; 	// 0x1d
+	[[maybe_unused]] uint8_t __pad001d[0x3]; // 0x1d
 public:
 	// MPropertyStartGroup "Time Offset"
 	// MPropertyFriendlyName "operator time offset min"
@@ -1324,13 +1324,13 @@ public:
 	// MPropertySortPriority "-100"
 	float m_flOpTimeScaleMax; // 0x34	
 private:
-	[[maybe_unused]] uint8_t __pad0038[0x1]; 	// 0x38
+	[[maybe_unused]] uint8_t __pad0038[0x1]; // 0x38
 public:
 	// MPropertyStartGroup
 	// MPropertySuppressField
 	bool m_bDisableOperator; // 0x39	
 private:
-	[[maybe_unused]] uint8_t __pad003a[0x2]; 	// 0x3a
+	[[maybe_unused]] uint8_t __pad003a[0x2]; // 0x3a
 public:
 	// MPropertyFriendlyName "operator end cap state"
 	// MPropertySortPriority "-100"
@@ -1352,7 +1352,7 @@ public:
 class CParticleFunctionForce : public CParticleFunction
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -1360,7 +1360,7 @@ public:
 class CParticleFunctionOperator : public CParticleFunction
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 1
@@ -1413,7 +1413,7 @@ public:
 	// MPropertyFriendlyName "Clamp UVs"
 	bool m_bClampUVs; // 0x659	
 private:
-	[[maybe_unused]] uint8_t __pad065a[0x2]; 	// 0x65a
+	[[maybe_unused]] uint8_t __pad065a[0x2]; // 0x65a
 public:
 	// MPropertyFriendlyName "per-particle scalar for scale"
 	SpriteCardPerParticleScale_t m_nPerParticleScale; // 0x65c	
@@ -1439,7 +1439,7 @@ public:
 	// MPropertyFriendlyName "Author Texture As Gradient"
 	bool m_bReplaceTextureWithGradient; // 0x1	
 private:
-	[[maybe_unused]] uint8_t __pad0002[0x6]; 	// 0x2
+	[[maybe_unused]] uint8_t __pad0002[0x6]; // 0x2
 public:
 	// MPropertyFriendlyName "Texture"
 	// MPropertySuppressExpr "m_bReplaceTextureWithGradient"
@@ -1457,7 +1457,7 @@ public:
 	// MPropertySuppressExpr "( m_nTextureType == SPRITECARD_TEXTURE_NORMALMAP || m_nTextureType == SPRITECARD_TEXTURE_ANIMMOTIONVEC || m_nTextureType == SPRITECARD_TEXTURE_6POINT_XYZ_A || m_nTextureType == SPRITECARD_TEXTURE_6POINT_NEGXYZ_E )"
 	ParticleTextureLayerBlendType_t m_nTextureBlendMode; // 0x30	
 private:
-	[[maybe_unused]] uint8_t __pad0034[0x4]; 	// 0x34
+	[[maybe_unused]] uint8_t __pad0034[0x4]; // 0x34
 public:
 	// MPropertyFriendlyName "Blend Amount"
 	// MPropertySuppressExpr "( m_nTextureType == SPRITECARD_TEXTURE_NORMALMAP || m_nTextureType == SPRITECARD_TEXTURE_ANIMMOTIONVEC || m_nTextureType == SPRITECARD_TEXTURE_6POINT_XYZ_A || m_nTextureType == SPRITECARD_TEXTURE_6POINT_NEGXYZ_E )"
@@ -1482,7 +1482,7 @@ public:
 	Vector m_vCPRelativePosition; // 0x34	
 	Vector m_vCPRelativeDir; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad004c[0x4]; 	// 0x4c
+	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
 public:
 	CParticleFloatInput m_FloatComponentX; // 0x50	
 	CParticleFloatInput m_FloatComponentY; // 0x138	
@@ -1500,7 +1500,7 @@ public:
 class CParticleCollectionVecInput : public CParticleVecInput
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 2
@@ -1544,7 +1544,7 @@ public:
 	// MPropertySortPriority "700"
 	ParticleColorBlendType_t m_nColorBlendType; // 0x7d0	
 private:
-	[[maybe_unused]] uint8_t __pad07d4[0x4]; 	// 0x7d4
+	[[maybe_unused]] uint8_t __pad07d4[0x4]; // 0x7d4
 public:
 	// MPropertyStartGroup
 	// MPropertyFriendlyName "material"
@@ -1553,7 +1553,7 @@ public:
 	// MPropertyFriendlyName "texture repetition mode"
 	TextureRepetitionMode_t m_nTextureRepetitionMode; // 0x7e0	
 private:
-	[[maybe_unused]] uint8_t __pad07e4[0x4]; 	// 0x7e4
+	[[maybe_unused]] uint8_t __pad07e4[0x4]; // 0x7e4
 public:
 	// MPropertyFriendlyName "texture repetitions"
 	CParticleCollectionFloatInput m_flTextureRepeatsPerSegment; // 0x7e8	
@@ -1570,7 +1570,7 @@ public:
 	// MPropertyFriendlyName "draw caps at each end of the cable"
 	bool m_bDrawCableCaps; // 0xd58	
 private:
-	[[maybe_unused]] uint8_t __pad0d59[0x3]; 	// 0xd59
+	[[maybe_unused]] uint8_t __pad0d59[0x3]; // 0xd59
 public:
 	// MPropertyFriendlyName "cable end cap shape factor"
 	// MPropertyAttributeRange "0 2"
@@ -1587,12 +1587,12 @@ public:
 	// MPropertyFriendlyName "roundness factor"
 	int32_t m_nRoundness; // 0xd70	
 private:
-	[[maybe_unused]] uint8_t __pad0d74[0x4]; 	// 0xd74
+	[[maybe_unused]] uint8_t __pad0d74[0x4]; // 0xd74
 public:
 	// MPropertyFriendlyName "material float variables"
 	CUtlVector< FloatInputMaterialVariable_t > m_MaterialFloatVars; // 0xd78	
 private:
-	[[maybe_unused]] uint8_t __pad0d90[0x18]; 	// 0xd90
+	[[maybe_unused]] uint8_t __pad0d90[0x18]; // 0xd90
 public:
 	// MPropertyFriendlyName "material vector variables"
 	CUtlVector< VecInputMaterialVariable_t > m_MaterialVecVars; // 0xda8	
@@ -1603,7 +1603,7 @@ public:
 class CParticleFunctionConstraint : public CParticleFunction
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -1611,7 +1611,7 @@ public:
 class CParticleFunctionEmitter : public CParticleFunction
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -1619,7 +1619,7 @@ public:
 class CPerParticleFloatInput : public CParticleFloatInput
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -1627,7 +1627,7 @@ public:
 class CParticleFunctionInitializer : public CParticleFunction
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 57
@@ -1647,7 +1647,7 @@ public:
 	// MPropertySortPriority "700"
 	ParticleAttributeIndex_t m_nAlpha2Field; // 0x3a0	
 private:
-	[[maybe_unused]] uint8_t __pad03a4[0x4]; 	// 0x3a4
+	[[maybe_unused]] uint8_t __pad03a4[0x4]; // 0x3a4
 public:
 	// MPropertyFriendlyName "color blend"
 	// MPropertySortPriority "700"
@@ -1692,7 +1692,7 @@ public:
 	// MPropertySortPriority "500"
 	bool m_bAnimateInFPS; // 0x9e0	
 private:
-	[[maybe_unused]] uint8_t __pad09e1[0x7]; 	// 0x9e1
+	[[maybe_unused]] uint8_t __pad09e1[0x7]; // 0x9e1
 public:
 	// MPropertyStartGroup "Lighting and Shadows"
 	// MPropertyFriendlyName "self illum amount"
@@ -1724,7 +1724,7 @@ public:
 	// MPropertySortPriority "300"
 	bool m_bSaturateColorPreAlphaBlend; // 0xbc9	
 private:
-	[[maybe_unused]] uint8_t __pad0bca[0x6]; 	// 0xbca
+	[[maybe_unused]] uint8_t __pad0bca[0x6]; // 0xbca
 public:
 	// MPropertyFriendlyName "add self amount over alphablend"
 	// MPropertySortPriority "300"
@@ -1753,7 +1753,7 @@ public:
 	// MPropertySortPriority "300"
 	ParticleAlphaReferenceType_t m_nAlphaReferenceType; // 0xe98	
 private:
-	[[maybe_unused]] uint8_t __pad0e9c[0x4]; 	// 0xe9c
+	[[maybe_unused]] uint8_t __pad0e9c[0x4]; // 0xe9c
 public:
 	// MPropertyFriendlyName "alpha reference softness"
 	// MPropertyAttributeRange "0 1"
@@ -1776,7 +1776,7 @@ public:
 	// MPropertySuppressExpr "!m_bRefract"
 	bool m_bRefractSolid; // 0x1159	
 private:
-	[[maybe_unused]] uint8_t __pad115a[0x6]; 	// 0x115a
+	[[maybe_unused]] uint8_t __pad115a[0x6]; // 0x115a
 public:
 	// MPropertyFriendlyName "refract amount"
 	// MPropertyAttributeRange "-2 2"
@@ -1822,13 +1822,13 @@ public:
 	// MPropertySortPriority "900"
 	bool m_bDisableZBuffering; // 0x1356	
 private:
-	[[maybe_unused]] uint8_t __pad1357[0x1]; 	// 0x1357
+	[[maybe_unused]] uint8_t __pad1357[0x1]; // 0x1357
 public:
 	// MPropertyFriendlyName "Depth feathering mode"
 	// MPropertySortPriority "900"
 	ParticleDepthFeatheringMode_t m_nFeatheringMode; // 0x1358	
 private:
-	[[maybe_unused]] uint8_t __pad135c[0x4]; 	// 0x135c
+	[[maybe_unused]] uint8_t __pad135c[0x4]; // 0x135c
 public:
 	// MPropertyFriendlyName "particle feathering closest distance to surface"
 	// MPropertySortPriority "900"
@@ -1864,7 +1864,7 @@ public:
 class CPerParticleVecInput : public CParticleVecInput
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 24
@@ -1889,7 +1889,7 @@ public:
 	// MPropertySuppressExpr "m_nOrientationType != PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL && m_nOrientationType != PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL"
 	bool m_bUseYawWithNormalAligned; // 0x17e0	
 private:
-	[[maybe_unused]] uint8_t __pad17e1[0x3]; 	// 0x17e1
+	[[maybe_unused]] uint8_t __pad17e1[0x3]; // 0x17e1
 public:
 	// MPropertyStartGroup "Fading and culling"
 	// MPropertyFriendlyName "minimum visual size"
@@ -1924,7 +1924,7 @@ public:
 	// MPropertySuppressExpr "!m_bDistanceAlpha"
 	bool m_bSoftEdges; // 0x19c9	
 private:
-	[[maybe_unused]] uint8_t __pad19ca[0x2]; 	// 0x19ca
+	[[maybe_unused]] uint8_t __pad19ca[0x2]; // 0x19ca
 public:
 	// MPropertyFriendlyName "start value for soft edges for distance alpha"
 	// MPropertySortPriority "0"
@@ -1943,7 +1943,7 @@ public:
 	// MPropertySuppressExpr "!m_bOutline"
 	Color m_OutlineColor; // 0x19d5	
 private:
-	[[maybe_unused]] uint8_t __pad19d9[0x3]; 	// 0x19d9
+	[[maybe_unused]] uint8_t __pad19d9[0x3]; // 0x19d9
 public:
 	// MPropertyFriendlyName "outline alpha"
 	// MPropertyAttributeRange "0 255"
@@ -1971,7 +1971,7 @@ public:
 	// MPropertySortPriority "400"
 	bool m_bParticleShadows; // 0x19f0	
 private:
-	[[maybe_unused]] uint8_t __pad19f1[0x3]; 	// 0x19f1
+	[[maybe_unused]] uint8_t __pad19f1[0x3]; // 0x19f1
 public:
 	// MPropertyFriendlyName "Shadow Density"
 	// MPropertySortPriority "400"
@@ -2000,7 +2000,7 @@ public:
 class IParticleEffect
 {
 public:
-	uint8_t __pad0000[0x8]; 	// @note: autoaligned
+	uint8_t __pad0000[0x8]; // Autoaligned
 };
 
 // Alignment: 0
@@ -2008,7 +2008,7 @@ public:
 class CParticleProperty
 {
 public:
-	uint8_t __pad0000[0x28]; 	// @note: autoaligned
+	uint8_t __pad0000[0x28]; // Autoaligned
 };
 
 // Alignment: 25
@@ -2041,14 +2041,14 @@ public:
 	PARTICLE_EHANDLE__* m_hOwner; // 0x50	
 	CParticleProperty* m_pOwningParticleProperty; // 0x58	
 private:
-	[[maybe_unused]] uint8_t __pad0060[0x10]; 	// 0x60
+	[[maybe_unused]] uint8_t __pad0060[0x10]; // 0x60
 public:
 	Vector m_LastMin; // 0x70	
 	Vector m_LastMax; // 0x7c	
 	CSplitScreenSlot m_nSplitScreenUser; // 0x88	
 	Vector m_vecAggregationCenter; // 0x8c	
 private:
-	[[maybe_unused]] uint8_t __pad0098[0x18]; 	// 0x98
+	[[maybe_unused]] uint8_t __pad0098[0x18]; // 0x98
 public:
 	int32_t m_RefCount; // 0xb0	
 };
@@ -2131,7 +2131,7 @@ public:
 	// MPropertyFriendlyName "Treat path as a loop"
 	bool m_bLoopedPath; // 0x18c	
 private:
-	[[maybe_unused]] uint8_t __pad018d[0x3]; 	// 0x18d
+	[[maybe_unused]] uint8_t __pad018d[0x3]; // 0x18d
 public:
 	// MPropertyFriendlyName "path points"
 	CUtlVector< PointDefinitionWithTimeValues_t > m_pointList; // 0x190	
@@ -2154,7 +2154,7 @@ public:
 	// MPropertyFriendlyName "global normal"
 	bool m_bGlobalNormal; // 0x19d	
 private:
-	[[maybe_unused]] uint8_t __pad019e[0x2]; 	// 0x19e
+	[[maybe_unused]] uint8_t __pad019e[0x2]; // 0x19e
 public:
 	// MPropertyFriendlyName "radius scale"
 	CPerParticleFloatInput m_flRadiusScale; // 0x1a0	
@@ -2167,7 +2167,7 @@ public:
 class C_OP_WorldCollideConstraint : public CParticleFunctionConstraint
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 23
@@ -2187,7 +2187,7 @@ public:
 	// MPropertyFriendlyName "Trace Set"
 	ParticleTraceSet_t m_nTraceSet; // 0x198	
 private:
-	[[maybe_unused]] uint8_t __pad019c[0x4]; 	// 0x19c
+	[[maybe_unused]] uint8_t __pad019c[0x4]; // 0x19c
 public:
 	// MPropertyFriendlyName "amount of bounce"
 	CPerParticleFloatInput m_flBounceAmount; // 0x1a0	
@@ -2208,20 +2208,20 @@ public:
 	// MPropertyFriendlyName "kill particle on collision"
 	bool m_bKillonContact; // 0x54d	
 private:
-	[[maybe_unused]] uint8_t __pad054e[0x2]; 	// 0x54e
+	[[maybe_unused]] uint8_t __pad054e[0x2]; // 0x54e
 public:
 	// MPropertyFriendlyName "Confirm Collision Speed Threshold"
 	float m_flCollisionConfirmationSpeed; // 0x550	
 	// MPropertyFriendlyName "Set Normal"
 	bool m_bSetNormal; // 0x554	
 private:
-	[[maybe_unused]] uint8_t __pad0555[0x3]; 	// 0x555
+	[[maybe_unused]] uint8_t __pad0555[0x3]; // 0x555
 public:
 	// MPropertyFriendlyName "Stick On Collision Cache Field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
 	ParticleAttributeIndex_t m_nStickOnCollisionField; // 0x558	
 private:
-	[[maybe_unused]] uint8_t __pad055c[0x4]; 	// 0x55c
+	[[maybe_unused]] uint8_t __pad055c[0x4]; // 0x55c
 public:
 	// MPropertyFriendlyName "Speed to stop when sticking"
 	CPerParticleFloatInput m_flStopSpeed; // 0x560	
@@ -2231,7 +2231,7 @@ public:
 	// MPropertyFriendlyName "World Only"
 	bool m_bWorldOnly; // 0x64c	
 private:
-	[[maybe_unused]] uint8_t __pad064d[0x3]; 	// 0x64d
+	[[maybe_unused]] uint8_t __pad064d[0x3]; // 0x64d
 public:
 	// MPropertyFriendlyName "CP Entity to Ignore for Collisions"
 	int32_t m_nIgnoreCP; // 0x650	
@@ -2270,7 +2270,7 @@ public:
 	// MPropertyFriendlyName "scale factor for spring correction"
 	float m_flAdjustmentScale; // 0x438	
 private:
-	[[maybe_unused]] uint8_t __pad043c[0x4]; 	// 0x43c
+	[[maybe_unused]] uint8_t __pad043c[0x4]; // 0x43c
 public:
 	// MPropertyFriendlyName "manual resting spacing"
 	CParticleCollectionFloatInput m_flInitialRestingLength; // 0x440	
@@ -2312,7 +2312,7 @@ public:
 	// MPropertyFriendlyName "control point number"
 	int32_t m_nControlPointNumber; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "even distribution count"
 	CParticleCollectionFloatInput m_flParticlesPerOrbit; // 0x188	
@@ -2371,7 +2371,7 @@ public:
 	// MPropertyFriendlyName "control point number"
 	int32_t m_nControlPointNumber; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad018c[0x4]; 	// 0x18c
+	[[maybe_unused]] uint8_t __pad018c[0x4]; // 0x18c
 public:
 	// MPropertyFriendlyName "particle density"
 	CPerParticleFloatInput m_flParticleDensity; // 0x190	
@@ -2465,7 +2465,7 @@ public:
 	// MPropertyFriendlyName "force creation height to desired height"
 	bool m_bForceZ; // 0x181	
 private:
-	[[maybe_unused]] uint8_t __pad0182[0x2]; 	// 0x182
+	[[maybe_unused]] uint8_t __pad0182[0x2]; // 0x182
 public:
 	// MPropertyFriendlyName "control point number"
 	int32_t m_nControlPointNumber; // 0x184	
@@ -2474,7 +2474,7 @@ public:
 	// MPropertyFriendlyName "desired height is relative to water"
 	bool m_bUseWaterHeight; // 0x18c	
 private:
-	[[maybe_unused]] uint8_t __pad018d[0x3]; 	// 0x18d
+	[[maybe_unused]] uint8_t __pad018d[0x3]; // 0x18d
 public:
 	// MPropertyFriendlyName "relative desired height"
 	CParticleCollectionFloatInput m_flDesiredHeight; // 0x190	
@@ -2492,7 +2492,7 @@ public:
 	// MPropertyFriendlyName "hitbox set"
 	char m_HitboxSetName[128]; // 0xade	
 private:
-	[[maybe_unused]] uint8_t __pad0b5e[0x2]; 	// 0xb5e
+	[[maybe_unused]] uint8_t __pad0b5e[0x2]; // 0xb5e
 public:
 	// MPropertyFriendlyName "hitbox velocity inherited scale"
 	CParticleCollectionFloatInput m_flHitboxVelocityScale; // 0xb60	
@@ -2518,7 +2518,7 @@ public:
 	// MPropertyFriendlyName "get closest point on closest hitbox"
 	bool m_bUseClosestPointOnHitbox; // 0x639	
 private:
-	[[maybe_unused]] uint8_t __pad063a[0x2]; 	// 0x63a
+	[[maybe_unused]] uint8_t __pad063a[0x2]; // 0x63a
 public:
 	// MPropertyFriendlyName "closest point test type"
 	ClosestPointTestType_t m_nTestType; // 0x63c	
@@ -2540,7 +2540,7 @@ public:
 	// MPropertyFriendlyName "desired hitbox"
 	int32_t m_nDesiredHitbox; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad018c[0x4]; 	// 0x18c
+	[[maybe_unused]] uint8_t __pad018c[0x4]; // 0x18c
 public:
 	// MPropertyFriendlyName "model hitbox scale"
 	CParticleCollectionVecInput m_vecHitBoxScale; // 0x190	
@@ -2573,7 +2573,7 @@ public:
 	// MPropertyFriendlyName "randomly distribute between the control point and control point max"
 	bool m_bDistributeInCPRange; // 0x78c	
 private:
-	[[maybe_unused]] uint8_t __pad078d[0x3]; 	// 0x78d
+	[[maybe_unused]] uint8_t __pad078d[0x3]; // 0x78d
 public:
 	// MPropertyFriendlyName "control point number"
 	int32_t m_nControlPointNumber; // 0x790	
@@ -2589,18 +2589,18 @@ public:
 	// MPropertyFriendlyName "bias in local system"
 	bool m_bLocalCoords; // 0x96c	
 private:
-	[[maybe_unused]] uint8_t __pad096d[0x1]; 	// 0x96d
+	[[maybe_unused]] uint8_t __pad096d[0x1]; // 0x96d
 public:
 	// MPropertyFriendlyName "randomly distribute to highest supplied control point"
 	// MParticleMaxVersion
 	bool m_bUseHighestEndCP; // 0x96e	
 private:
-	[[maybe_unused]] uint8_t __pad096f[0x1]; 	// 0x96f
+	[[maybe_unused]] uint8_t __pad096f[0x1]; // 0x96f
 public:
 	// MPropertyFriendlyName "randomly distribution growth time"
 	float m_flEndCPGrowthTime; // 0x970	
 private:
-	[[maybe_unused]] uint8_t __pad0974[0x4]; 	// 0x974
+	[[maybe_unused]] uint8_t __pad0974[0x4]; // 0x974
 public:
 	// MPropertyFriendlyName "speed in local coordinate system min"
 	// MVectorIsCoordinate
@@ -2706,7 +2706,7 @@ public:
 	// MPropertyFriendlyName "Trace Set"
 	ParticleTraceSet_t m_nTraceSet; // 0x3d0	
 private:
-	[[maybe_unused]] uint8_t __pad03d4[0xc]; 	// 0x3d4
+	[[maybe_unused]] uint8_t __pad03d4[0xc]; // 0x3d4
 public:
 	// MPropertyFriendlyName "No Collision Behavior"
 	ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x3e0	
@@ -2721,7 +2721,7 @@ public:
 	// MPropertyFriendlyName "Offset only if trace hit"
 	bool m_bOffsetonColOnly; // 0x3e8	
 private:
-	[[maybe_unused]] uint8_t __pad03e9[0x3]; 	// 0x3e9
+	[[maybe_unused]] uint8_t __pad03e9[0x3]; // 0x3e9
 public:
 	// MPropertyFriendlyName "offset final position by this fraction of the particle radius"
 	float m_flOffsetByRadiusFactor; // 0x3ec	
@@ -2752,7 +2752,7 @@ public:
 	// MPropertyFriendlyName "control point number"
 	int32_t m_nControlPointNumber; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "random speed min"
 	CPerParticleFloatInput m_fSpeedMin; // 0x188	
@@ -2831,7 +2831,7 @@ public:
 	// MPropertyFriendlyName "local space scale"
 	Vector m_vecLocalCoordinateSystemSpeedScale; // 0x18c	
 private:
-	[[maybe_unused]] uint8_t __pad0198[0x1]; 	// 0x198
+	[[maybe_unused]] uint8_t __pad0198[0x1]; // 0x198
 public:
 	// MPropertyFriendlyName "ignore delta time"
 	bool m_bIgnoreDelta; // 0x199	
@@ -2965,7 +2965,7 @@ public:
 	// MPropertyAttributeRange "0 255"
 	int32_t m_nAlphaMax; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad018c[0x8]; 	// 0x18c
+	[[maybe_unused]] uint8_t __pad018c[0x8]; // 0x18c
 public:
 	// MPropertyFriendlyName "alpha random exponent"
 	float m_flAlphaRandExponent; // 0x194	
@@ -2986,7 +2986,7 @@ public:
 	// MPropertyAttributeChoiceName "particlefield_rotation"
 	ParticleAttributeIndex_t m_nFieldOutput; // 0x18c	
 private:
-	[[maybe_unused]] uint8_t __pad0190[0xc]; 	// 0x190
+	[[maybe_unused]] uint8_t __pad0190[0xc]; // 0x190
 public:
 	// MPropertyFriendlyName "yaw random exponent"
 	float m_flRotationRandExponent; // 0x19c	
@@ -2999,7 +2999,7 @@ public:
 class C_INIT_RandomRotation : public CGeneralRandomRotation
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 3
@@ -3021,7 +3021,7 @@ public:
 class C_INIT_RandomRotationSpeed : public CGeneralRandomRotation
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -3029,7 +3029,7 @@ public:
 class C_INIT_RandomYaw : public CGeneralRandomRotation
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 10
@@ -3110,7 +3110,7 @@ public:
 	// MPropertyFriendlyName "linear"
 	bool m_bLinear; // 0x189	
 private:
-	[[maybe_unused]] uint8_t __pad018a[0x6]; 	// 0x18a
+	[[maybe_unused]] uint8_t __pad018a[0x6]; // 0x18a
 public:
 	// MPropertyFriendlyName "weighted list"
 	CUtlVector< SequenceWeightedList_t > m_WeightedList; // 0x190	
@@ -3126,7 +3126,7 @@ public:
 	// MPropertyFriendlyName "offset propotional to radius"
 	bool m_bRadiusScale; // 0x181	
 private:
-	[[maybe_unused]] uint8_t __pad0182[0x2]; 	// 0x182
+	[[maybe_unused]] uint8_t __pad0182[0x2]; // 0x182
 public:
 	// MPropertyFriendlyName "control point"
 	int32_t m_nCP; // 0x184	
@@ -3220,7 +3220,7 @@ public:
 	// MPropertyFriendlyName "invert absolute value"
 	bool m_bAbsValInv; // 0x185	
 private:
-	[[maybe_unused]] uint8_t __pad0186[0x2]; 	// 0x186
+	[[maybe_unused]] uint8_t __pad0186[0x2]; // 0x186
 public:
 	// MPropertyFriendlyName "time coordinate offset"
 	float m_flOffset; // 0x188	
@@ -3247,13 +3247,13 @@ public:
 	// MPropertyFriendlyName "maximum distance"
 	float m_fMaxDistance; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0xc]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0xc]; // 0x184
 public:
 	CPathParameters m_PathParams; // 0x190	
 	// MPropertyFriendlyName "randomly select sequential CP pairs between start and end points"
 	bool m_bUseRandomCPs; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01d1[0x3]; 	// 0x1d1
+	[[maybe_unused]] uint8_t __pad01d1[0x3]; // 0x1d1
 public:
 	// MPropertyFriendlyName "Offset from control point for path end"
 	// MVectorIsCoordinate
@@ -3311,7 +3311,7 @@ public:
 	// MPropertyFriendlyName "only active within specified input range"
 	bool m_bActiveRange; // 0x1a4	
 private:
-	[[maybe_unused]] uint8_t __pad01a5[0x3]; 	// 0x1a5
+	[[maybe_unused]] uint8_t __pad01a5[0x3]; // 0x1a5
 public:
 	// MPropertyFriendlyName "remap bias"
 	float m_flRemapBias; // 0x1a8	
@@ -3347,7 +3347,7 @@ public:
 	// MPropertyFriendlyName "wrap input"
 	bool m_bWrap; // 0x1a2	
 private:
-	[[maybe_unused]] uint8_t __pad01a3[0x1]; 	// 0x1a3
+	[[maybe_unused]] uint8_t __pad01a3[0x1]; // 0x1a3
 public:
 	// MPropertyFriendlyName "remap bias"
 	float m_flRemapBias; // 0x1a4	
@@ -3374,7 +3374,7 @@ public:
 class C_INIT_RemapParticleCountToNamedModelSequenceScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -3382,7 +3382,7 @@ public:
 class C_INIT_RemapParticleCountToNamedModelBodyPartScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -3390,7 +3390,7 @@ public:
 class C_INIT_RemapParticleCountToNamedModelMeshGroupScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 2
@@ -3431,7 +3431,7 @@ public:
 	// MPropertyFriendlyName "invert absolute value"
 	bool m_bAbsValInv; // 0x181	
 private:
-	[[maybe_unused]] uint8_t __pad0182[0x2]; 	// 0x182
+	[[maybe_unused]] uint8_t __pad0182[0x2]; // 0x182
 public:
 	// MPropertyFriendlyName "time coordinate offset"
 	float m_flOffset; // 0x184	
@@ -3489,7 +3489,7 @@ public:
 	// MPropertyFriendlyName "use local system"
 	bool m_bLocalCoords; // 0x1b8	
 private:
-	[[maybe_unused]] uint8_t __pad01b9[0x3]; 	// 0x1b9
+	[[maybe_unused]] uint8_t __pad01b9[0x3]; // 0x1b9
 public:
 	// MPropertyFriendlyName "remap bias"
 	float m_flRemapBias; // 0x1bc	
@@ -3530,7 +3530,7 @@ public:
 	// MPropertyFriendlyName "save offset"
 	bool m_bSaveOffset; // 0x18a	
 private:
-	[[maybe_unused]] uint8_t __pad018b[0x5]; 	// 0x18b
+	[[maybe_unused]] uint8_t __pad018b[0x5]; // 0x18b
 public:
 	CPathParameters m_PathParams; // 0x190	
 };
@@ -3551,7 +3551,7 @@ public:
 	// MPropertyFriendlyName "save offset"
 	bool m_bSaveOffset; // 0x18a	
 private:
-	[[maybe_unused]] uint8_t __pad018b[0x5]; 	// 0x18b
+	[[maybe_unused]] uint8_t __pad018b[0x5]; // 0x18b
 public:
 	CPathParameters m_PathParams; // 0x190	
 };
@@ -3580,7 +3580,7 @@ public:
 	// MPropertyFriendlyName "offset proportional to radius 0/1"
 	bool m_bProportional; // 0x222	
 private:
-	[[maybe_unused]] uint8_t __pad0223[0x1]; 	// 0x223
+	[[maybe_unused]] uint8_t __pad0223[0x1]; // 0x223
 public:
 	// MPropertyFriendlyName "trace length"
 	float m_flTraceLength; // 0x224	
@@ -3589,7 +3589,7 @@ public:
 	// MPropertyFriendlyName "inherit from parent"
 	bool m_bInherit; // 0x229	
 private:
-	[[maybe_unused]] uint8_t __pad022a[0x2]; 	// 0x22a
+	[[maybe_unused]] uint8_t __pad022a[0x2]; // 0x22a
 public:
 	// MPropertyFriendlyName "control points to broadcast to children (n + 1)"
 	int32_t m_nChildCP; // 0x22c	
@@ -3683,7 +3683,7 @@ public:
 	// MPropertyFriendlyName "accelerate position"
 	bool m_bAccelerate; // 0x1c5	
 private:
-	[[maybe_unused]] uint8_t __pad01c6[0x2]; 	// 0x1c6
+	[[maybe_unused]] uint8_t __pad01c6[0x2]; // 0x1c6
 public:
 	// MPropertyFriendlyName "local space CP"
 	int32_t m_nLocalSpaceCP; // 0x1c8	
@@ -3728,7 +3728,7 @@ public:
 	// MPropertyFriendlyName "random parent particle distribution"
 	bool m_bRandomDistribution; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad0189[0x3]; 	// 0x189
+	[[maybe_unused]] uint8_t __pad0189[0x3]; // 0x189
 public:
 	// MPropertyFriendlyName "random seed"
 	int32_t m_nRandomSeed; // 0x18c	
@@ -3751,7 +3751,7 @@ public:
 	// MPropertyFriendlyName "random parent particle distribution"
 	bool m_bRandomDistribution; // 0x18c	
 private:
-	[[maybe_unused]] uint8_t __pad018d[0x3]; 	// 0x18d
+	[[maybe_unused]] uint8_t __pad018d[0x3]; // 0x18d
 public:
 	// MPropertyFriendlyName "random seed"
 	int32_t m_nRandomSeed; // 0x190	
@@ -3770,7 +3770,7 @@ public:
 	// MParticleMinVersion
 	int32_t m_nMaxCP; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad018c[0x4]; 	// 0x18c
+	[[maybe_unused]] uint8_t __pad018c[0x4]; // 0x18c
 public:
 	// MPropertyFriendlyName "dynamic control point count"
 	CParticleCollectionFloatInput m_nDynamicCPCount; // 0x190	
@@ -3785,7 +3785,7 @@ public:
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	ParticleAttributeIndex_t m_nFieldOutput; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "distance minimum"
 	CPerParticleFloatInput m_flInputMin; // 0x188	
@@ -3802,12 +3802,12 @@ public:
 	// MPropertyFriendlyName "LOS collision group"
 	char m_CollisionGroupName[128]; // 0x52d	
 private:
-	[[maybe_unused]] uint8_t __pad05ad[0x3]; 	// 0x5ad
+	[[maybe_unused]] uint8_t __pad05ad[0x3]; // 0x5ad
 public:
 	// MPropertyFriendlyName "Trace Set"
 	ParticleTraceSet_t m_nTraceSet; // 0x5b0	
 private:
-	[[maybe_unused]] uint8_t __pad05b4[0x4]; 	// 0x5b4
+	[[maybe_unused]] uint8_t __pad05b4[0x4]; // 0x5b4
 public:
 	// MPropertyFriendlyName "Maximum Trace Length"
 	CPerParticleFloatInput m_flMaxTraceLength; // 0x5b8	
@@ -3818,7 +3818,7 @@ public:
 	// MPropertyFriendlyName "only active within specified distance"
 	bool m_bActiveRange; // 0x6a8	
 private:
-	[[maybe_unused]] uint8_t __pad06a9[0x3]; 	// 0x6a9
+	[[maybe_unused]] uint8_t __pad06a9[0x3]; // 0x6a9
 public:
 	// MPropertyFriendlyName "distance component scale"
 	Vector m_vecDistanceScale; // 0x6ac	
@@ -3843,14 +3843,14 @@ public:
 	// MPropertyFriendlyName "maximum points to cache"
 	int32_t m_nMaxPlanes; // 0x198	
 private:
-	[[maybe_unused]] uint8_t __pad019c[0x4]; 	// 0x19c
+	[[maybe_unused]] uint8_t __pad019c[0x4]; // 0x19c
 public:
 	// MPropertyFriendlyName "trace collision group"
 	char m_CollisionGroupName[128]; // 0x1a0	
 	// MPropertyFriendlyName "Trace Set"
 	ParticleTraceSet_t m_nTraceSet; // 0x220	
 private:
-	[[maybe_unused]] uint8_t __pad0224[0xc]; 	// 0x224
+	[[maybe_unused]] uint8_t __pad0224[0xc]; // 0x224
 public:
 	// MPropertyFriendlyName "collide with water"
 	bool m_bIncludeWater; // 0x230	
@@ -3868,7 +3868,7 @@ public:
 	// MVectorIsCoordinate
 	Vector m_vecOffsetMax; // 0x18c	
 private:
-	[[maybe_unused]] uint8_t __pad0198[0x1]; 	// 0x198
+	[[maybe_unused]] uint8_t __pad0198[0x1]; // 0x198
 public:
 	// MPropertyFriendlyName "set normal"
 	bool m_bUseNormal; // 0x199	
@@ -3899,7 +3899,7 @@ public:
 	// MPropertyFriendlyName "control point"
 	int32_t m_nControlPoint; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "cull distance"
 	CParticleCollectionFloatInput m_flDistance; // 0x188	
@@ -3915,7 +3915,7 @@ public:
 	// MPropertyFriendlyName "control point of plane"
 	int32_t m_nControlPoint; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "cull offset"
 	CParticleCollectionFloatInput m_flDistance; // 0x188	
@@ -3943,7 +3943,7 @@ public:
 	// MPropertyFriendlyName "ray trace environment name"
 	char m_RtEnvName[128]; // 0x19b	
 private:
-	[[maybe_unused]] uint8_t __pad021b[0x1]; 	// 0x21b
+	[[maybe_unused]] uint8_t __pad021b[0x1]; // 0x21b
 public:
 	// MPropertyFriendlyName "ray trace environment cp"
 	int32_t m_nRTEnvCP; // 0x21c	
@@ -4030,7 +4030,7 @@ public:
 	// MPropertyFriendlyName "reverse order"
 	bool m_bReverse; // 0x191	
 private:
-	[[maybe_unused]] uint8_t __pad0192[0x2]; 	// 0x192
+	[[maybe_unused]] uint8_t __pad0192[0x2]; // 0x192
 public:
 	// MPropertyFriendlyName "random seed"
 	int32_t m_nRandomSeed; // 0x194	
@@ -4050,7 +4050,7 @@ public:
 	// MPropertyFriendlyName "random order"
 	bool m_bRandom; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad0189[0x3]; 	// 0x189
+	[[maybe_unused]] uint8_t __pad0189[0x3]; // 0x189
 public:
 	// MPropertyFriendlyName "random seed"
 	int32_t m_nRandomSeed; // 0x18c	
@@ -4061,7 +4061,7 @@ public:
 	// MPropertyFriendlyName "normal velocity ignore delta time"
 	bool m_bIgnoreDt; // 0x192	
 private:
-	[[maybe_unused]] uint8_t __pad0193[0x1]; 	// 0x193
+	[[maybe_unused]] uint8_t __pad0193[0x1]; // 0x193
 public:
 	// MPropertyFriendlyName "normal velocity min"
 	float m_flMinNormalVelocity; // 0x194	
@@ -4255,7 +4255,7 @@ public:
 	// MPropertyAttributeChoiceName "particlefield_vector"
 	ParticleAttributeIndex_t m_nFieldOutput; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "point list"
 	CUtlVector< PointDefinition_t > m_pointList; // 0x188	
@@ -4264,7 +4264,7 @@ public:
 	// MPropertyFriendlyName "Treat path as a loop"
 	bool m_bClosedLoop; // 0x1a1	
 private:
-	[[maybe_unused]] uint8_t __pad01a2[0x2]; 	// 0x1a2
+	[[maybe_unused]] uint8_t __pad01a2[0x2]; // 0x1a2
 public:
 	// MPropertyFriendlyName "Numer of points along path"
 	int32_t m_nNumPointsAlongPath; // 0x1a4	
@@ -4287,7 +4287,7 @@ public:
 	// MPropertyFriendlyName "model from renderer"
 	bool m_bModelFromRenderer; // 0x1a2	
 private:
-	[[maybe_unused]] uint8_t __pad01a3[0x1]; 	// 0x1a3
+	[[maybe_unused]] uint8_t __pad01a3[0x1]; // 0x1a3
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -4299,7 +4299,7 @@ public:
 class C_INIT_RandomNamedModelSequence : public C_INIT_RandomNamedModelElement
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -4307,7 +4307,7 @@ public:
 class C_INIT_RandomNamedModelBodyPart : public C_INIT_RandomNamedModelElement
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -4315,7 +4315,7 @@ public:
 class C_INIT_RandomNamedModelMeshGroup : public C_INIT_RandomNamedModelElement
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 7
@@ -4347,7 +4347,7 @@ public:
 class C_INIT_RemapNamedModelSequenceToScalar : public C_INIT_RemapNamedModelElementToScalar
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -4355,7 +4355,7 @@ public:
 class C_INIT_RemapNamedModelBodyPartToScalar : public C_INIT_RemapNamedModelElementToScalar
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -4363,7 +4363,7 @@ public:
 class C_INIT_RemapNamedModelMeshGroupToScalar : public C_INIT_RemapNamedModelElementToScalar
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 18
@@ -4464,7 +4464,7 @@ public:
 	// MPropertyFriendlyName "force falloff function"
 	ParticleFalloffFunction_t m_nFalloffFunction; // 0x350	
 private:
-	[[maybe_unused]] uint8_t __pad0354[0x4]; 	// 0x354
+	[[maybe_unused]] uint8_t __pad0354[0x4]; // 0x354
 public:
 	// MPropertyFriendlyName "exponential falloff exponent"
 	CPerParticleFloatInput m_InputFalloffExp; // 0x358	
@@ -4598,7 +4598,7 @@ public:
 	// MPropertyFriendlyName "invert absolute value"
 	bool m_bAbsValInv; // 0x199	
 private:
-	[[maybe_unused]] uint8_t __pad019a[0x2]; 	// 0x19a
+	[[maybe_unused]] uint8_t __pad019a[0x2]; // 0x19a
 public:
 	// MPropertyFriendlyName "time coordinate offset"
 	float m_flOffset; // 0x19c	
@@ -4659,7 +4659,7 @@ public:
 	// MPropertyFriendlyName "control point"
 	int32_t m_nControlPointNumber; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "velocity scale"
 	CPerParticleFloatInput m_flScale; // 0x188	
@@ -4692,7 +4692,7 @@ public:
 	// MPropertyFriendlyName "object local space axis 0/1"
 	bool m_bLocalSpace; // 0x190	
 private:
-	[[maybe_unused]] uint8_t __pad0191[0x3]; 	// 0x191
+	[[maybe_unused]] uint8_t __pad0191[0x3]; // 0x191
 public:
 	// MPropertyFriendlyName "control point"
 	int32_t m_nControlPointNumber; // 0x194	
@@ -4707,7 +4707,7 @@ public:
 	// MVectorIsCoordinate
 	Vector m_vecComponentScale; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad018c[0x4]; 	// 0x18c
+	[[maybe_unused]] uint8_t __pad018c[0x4]; // 0x18c
 public:
 	// MPropertyFriendlyName "amount of force (or Max Force)"
 	CPerParticleFloatInput m_fForceAmount; // 0x190	
@@ -4718,7 +4718,7 @@ public:
 	// MPropertyFriendlyName "scale in local space"
 	bool m_bScaleLocal; // 0x280	
 private:
-	[[maybe_unused]] uint8_t __pad0281[0x7]; 	// 0x281
+	[[maybe_unused]] uint8_t __pad0281[0x7]; // 0x281
 public:
 	// MPropertyFriendlyName "Min Pullforce"
 	CPerParticleFloatInput m_fForceAmountMin; // 0x288	
@@ -4802,7 +4802,7 @@ public:
 	// MPropertyFriendlyName "noise type"
 	ParticleDirectionNoiseType_t m_nNoiseType; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "noise frequency"
 	// MVectorIsCoordinate
@@ -4994,7 +4994,7 @@ public:
 	// MPropertyFriendlyName "fade bias"
 	float m_flFadeBias; // 0x18c	
 private:
-	[[maybe_unused]] uint8_t __pad0190[0x30]; 	// 0x190
+	[[maybe_unused]] uint8_t __pad0190[0x30]; // 0x190
 public:
 	// MPropertyFriendlyName "proportional 0/1"
 	bool m_bProportional; // 0x1c0	
@@ -5077,7 +5077,7 @@ public:
 	// MPropertyFriendlyName "start/end proportional"
 	bool m_bProportionalOp; // 0x195	
 private:
-	[[maybe_unused]] uint8_t __pad0196[0x2]; 	// 0x196
+	[[maybe_unused]] uint8_t __pad0196[0x2]; // 0x196
 public:
 	// MPropertyFriendlyName "start time min"
 	float m_flStartTime_min; // 0x198	
@@ -5138,7 +5138,7 @@ public:
 	// MPropertyFriendlyName "offset instead of accelerate position"
 	bool m_bOffset; // 0x1b6	
 private:
-	[[maybe_unused]] uint8_t __pad01b7[0x1]; 	// 0x1b7
+	[[maybe_unused]] uint8_t __pad01b7[0x1]; // 0x1b7
 public:
 	// MPropertyFriendlyName "start time min"
 	float m_flStartTime_min; // 0x1b8	
@@ -5211,7 +5211,7 @@ public:
 	// MPropertyAttributeChoiceName "particlefield_vector"
 	ParticleAttributeIndex_t m_nFieldOutput; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "Interpolation"
 	CPerParticleFloatInput m_flInterpolation; // 0x188	
@@ -5281,7 +5281,7 @@ public:
 	// MPropertyFriendlyName "remap time proportional"
 	bool m_bProportional; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0181[0x3]; 	// 0x181
+	[[maybe_unused]] uint8_t __pad0181[0x3]; // 0x181
 public:
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -5320,7 +5320,7 @@ public:
 	// MPropertyFriendlyName "count back from last particle"
 	bool m_bBackwards; // 0x194	
 private:
-	[[maybe_unused]] uint8_t __pad0195[0x3]; 	// 0x195
+	[[maybe_unused]] uint8_t __pad0195[0x3]; // 0x195
 public:
 	// MPropertyFriendlyName "set value method"
 	ParticleSetMethod_t m_nSetMethod; // 0x198	
@@ -5335,7 +5335,7 @@ public:
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	ParticleAttributeIndex_t m_nFieldOutput; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "input minimum"
 	CParticleCollectionFloatInput m_nInputMin; // 0x188	
@@ -5348,7 +5348,7 @@ public:
 	// MPropertyFriendlyName
 	bool m_bActiveRange; // 0x528	
 private:
-	[[maybe_unused]] uint8_t __pad0529[0x3]; 	// 0x529
+	[[maybe_unused]] uint8_t __pad0529[0x3]; // 0x529
 public:
 	// MPropertyFriendlyName "set value method"
 	ParticleSetMethod_t m_nSetMethod; // 0x52c	
@@ -5434,7 +5434,7 @@ public:
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	ParticleAttributeIndex_t m_nFieldOutput; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "value to lerp to"
 	CPerParticleFloatInput m_flOutput; // 0x188	
@@ -5565,7 +5565,7 @@ public:
 	// MPropertyFriendlyName "end time max"
 	float m_flEndTime_max; // 0x194	
 private:
-	[[maybe_unused]] uint8_t __pad0198[0x28]; 	// 0x198
+	[[maybe_unused]] uint8_t __pad0198[0x28]; // 0x198
 public:
 	// MPropertyFriendlyName "ramp field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -5594,7 +5594,7 @@ public:
 	// MPropertyFriendlyName "bias"
 	float m_flBias; // 0x198	
 private:
-	[[maybe_unused]] uint8_t __pad019c[0x24]; 	// 0x19c
+	[[maybe_unused]] uint8_t __pad019c[0x24]; // 0x19c
 public:
 	// MPropertyFriendlyName "ramp field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -5617,7 +5617,7 @@ public:
 	// MPropertyFriendlyName "end time"
 	float m_flEndTime; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad018c[0x24]; 	// 0x18c
+	[[maybe_unused]] uint8_t __pad018c[0x24]; // 0x18c
 public:
 	// MPropertyFriendlyName "ramp field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -5636,7 +5636,7 @@ public:
 	// MPropertyFriendlyName "end time"
 	float m_flEndTime; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad018c[0x24]; 	// 0x18c
+	[[maybe_unused]] uint8_t __pad018c[0x24]; // 0x18c
 public:
 	// MPropertyFriendlyName "ramp field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -5654,7 +5654,7 @@ public:
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	ParticleAttributeIndex_t m_nFieldOutput; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "wave minimum"
 	CPerParticleFloatInput m_flInputMin; // 0x188	
@@ -5693,7 +5693,7 @@ public:
 	// MPropertyFriendlyName "additive"
 	bool m_bAdditive; // 0x190	
 private:
-	[[maybe_unused]] uint8_t __pad0191[0x3]; 	// 0x191
+	[[maybe_unused]] uint8_t __pad0191[0x3]; // 0x191
 public:
 	// MPropertyFriendlyName "Noise animation time scale"
 	float m_flNoiseAnimationTimeScale; // 0x194	
@@ -5720,7 +5720,7 @@ public:
 	// MPropertyFriendlyName "offset instead of accelerate position"
 	bool m_bOffset; // 0x1a1	
 private:
-	[[maybe_unused]] uint8_t __pad01a2[0x2]; 	// 0x1a2
+	[[maybe_unused]] uint8_t __pad01a2[0x2]; // 0x1a2
 public:
 	// MPropertyFriendlyName "Noise animation time scale"
 	float m_flNoiseAnimationTimeScale; // 0x1a4	
@@ -5767,7 +5767,7 @@ public:
 class C_OP_EndCapDecay : public CParticleFunctionOperator
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 1
@@ -5846,7 +5846,7 @@ public:
 	// MPropertyFriendlyName "spin rate min"
 	int32_t m_nSpinRateMinDegrees; // 0x184	
 private:
-	[[maybe_unused]] uint8_t __pad0188[0x4]; 	// 0x188
+	[[maybe_unused]] uint8_t __pad0188[0x4]; // 0x188
 public:
 	// MPropertyFriendlyName "spin stop time"
 	float m_fSpinRateStopTime; // 0x18c	
@@ -5857,7 +5857,7 @@ public:
 class CSpinUpdateBase : public CParticleFunctionOperator
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -5865,7 +5865,7 @@ public:
 class C_OP_Spin : public CGeneralSpin
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -5873,7 +5873,7 @@ public:
 class C_OP_SpinUpdate : public CSpinUpdateBase
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -5881,7 +5881,7 @@ public:
 class C_OP_SpinYaw : public CGeneralSpin
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 6
@@ -5900,7 +5900,7 @@ public:
 	// MPropertyFriendlyName "ease in and out"
 	bool m_bEaseInAndOut; // 0x190	
 private:
-	[[maybe_unused]] uint8_t __pad0191[0x3]; 	// 0x191
+	[[maybe_unused]] uint8_t __pad0191[0x3]; // 0x191
 public:
 	// MPropertyFriendlyName "scale bias"
 	float m_flBias; // 0x194	
@@ -5914,7 +5914,7 @@ public:
 	// MPropertyFriendlyName "color fade"
 	Color m_ColorFade; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0xc]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0xc]; // 0x184
 public:
 	// MPropertyFriendlyName "fade start time"
 	float m_flFadeStartTime; // 0x190	
@@ -5935,12 +5935,12 @@ public:
 	// MPropertyFriendlyName "color fade min"
 	Color m_ColorFadeMin; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x18]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x18]; // 0x184
 public:
 	// MPropertyFriendlyName "color fade max"
 	Color m_ColorFadeMax; // 0x19c	
 private:
-	[[maybe_unused]] uint8_t __pad01a0[0xc]; 	// 0x1a0
+	[[maybe_unused]] uint8_t __pad01a0[0xc]; // 0x1a0
 public:
 	// MPropertyFriendlyName "fade start time"
 	float m_flFadeStartTime; // 0x1ac	
@@ -5983,7 +5983,7 @@ public:
 	// MPropertyFriendlyName "lock rotation"
 	bool m_bLockRot; // 0x290	
 private:
-	[[maybe_unused]] uint8_t __pad0291[0x7]; 	// 0x291
+	[[maybe_unused]] uint8_t __pad0291[0x7]; // 0x291
 public:
 	// MPropertyFriendlyName "component scale"
 	CParticleCollectionVecInput m_vecScale; // 0x298	
@@ -6003,7 +6003,7 @@ public:
 	// MPropertyFriendlyName "initial color bias"
 	float m_flScale; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x480]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x480]; // 0x184
 public:
 	// MPropertyFriendlyName "light 1 control point"
 	int32_t m_nControlPoint1; // 0x604	
@@ -6066,7 +6066,7 @@ public:
 	// MPropertyFriendlyName "half-lambert normals"
 	bool m_bUseHLambert; // 0x67d	
 private:
-	[[maybe_unused]] uint8_t __pad067e[0x4]; 	// 0x67e
+	[[maybe_unused]] uint8_t __pad067e[0x4]; // 0x67e
 public:
 	// MPropertyFriendlyName "clamp minimum light value to initial color"
 	bool m_bClampLowerRange; // 0x682	
@@ -6099,7 +6099,7 @@ public:
 	// MPropertyFriendlyName "# of control points to set"
 	int32_t m_nNumControlPoints; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad018c[0x4]; 	// 0x18c
+	[[maybe_unused]] uint8_t __pad018c[0x4]; // 0x18c
 public:
 	// MPropertyFriendlyName "first particle to copy"
 	CParticleCollectionFloatInput m_nFirstSourcePoint; // 0x190	
@@ -6123,7 +6123,7 @@ public:
 	// MPropertyFriendlyName "set orientation"
 	bool m_bSetOrientation; // 0x190	
 private:
-	[[maybe_unused]] uint8_t __pad0191[0x3]; 	// 0x191
+	[[maybe_unused]] uint8_t __pad0191[0x3]; // 0x191
 public:
 	// MPropertyFriendlyName "orientation style"
 	ParticleOrientationSetMode_t m_nOrientationMode; // 0x194	
@@ -6162,7 +6162,7 @@ public:
 	// MPropertyFriendlyName "# of children to set"
 	int32_t m_nNumControlPoints; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad018c[0x4]; 	// 0x18c
+	[[maybe_unused]] uint8_t __pad018c[0x4]; // 0x18c
 public:
 	// MPropertyFriendlyName "particle increment amount"
 	CParticleCollectionFloatInput m_nParticleIncrement; // 0x190	
@@ -6171,7 +6171,7 @@ public:
 	// MPropertyFriendlyName "set orientation from velocity"
 	bool m_bSetOrientation; // 0x360	
 private:
-	[[maybe_unused]] uint8_t __pad0361[0x3]; 	// 0x361
+	[[maybe_unused]] uint8_t __pad0361[0x3]; // 0x361
 public:
 	// MPropertyFriendlyName "orientation vector"
 	// MPropertyAttributeChoiceName "particlefield_vector"
@@ -6198,7 +6198,7 @@ public:
 	// MPropertyFriendlyName "set number of children based on particle count"
 	bool m_bNumBasedOnParticleCount; // 0x194	
 private:
-	[[maybe_unused]] uint8_t __pad0195[0x3]; 	// 0x195
+	[[maybe_unused]] uint8_t __pad0195[0x3]; // 0x195
 public:
 	// MPropertyFriendlyName "field to read"
 	// MPropertyAttributeChoiceName "particlefield"
@@ -6258,14 +6258,14 @@ public:
 	// MPropertyFriendlyName "control point number"
 	int32_t m_nControlPointNumber; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "offset"
 	CParticleCollectionVecInput m_vecOffset; // 0x188	
 	// MPropertyFriendlyName "offset in local space"
 	bool m_bOffsetLocal; // 0x5b8	
 private:
-	[[maybe_unused]] uint8_t __pad05b9[0x3]; 	// 0x5b9
+	[[maybe_unused]] uint8_t __pad05b9[0x3]; // 0x5b9
 public:
 	// MPropertyFriendlyName "particle to use"
 	ParticleSelection_t m_nParticleSelection; // 0x5bc	
@@ -6274,7 +6274,7 @@ public:
 	// MPropertyFriendlyName "pin break type"
 	ParticlePinDistance_t m_nPinBreakType; // 0x6a8	
 private:
-	[[maybe_unused]] uint8_t __pad06ac[0x4]; 	// 0x6ac
+	[[maybe_unused]] uint8_t __pad06ac[0x4]; // 0x6ac
 public:
 	// MPropertyFriendlyName "break length %"
 	CParticleCollectionFloatInput m_flBreakDistance; // 0x6b0	
@@ -6320,7 +6320,7 @@ public:
 	// MPropertyFriendlyName "control point number"
 	int32_t m_nControlPointNumber; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "Interpolation"
 	CPerParticleFloatInput m_flInterpolation; // 0x188	
@@ -6328,7 +6328,7 @@ public:
 	// MPropertyAttributeChoiceName "particlefield_vector"
 	ParticleAttributeIndex_t m_nCacheField; // 0x270	
 private:
-	[[maybe_unused]] uint8_t __pad0274[0x4]; 	// 0x274
+	[[maybe_unused]] uint8_t __pad0274[0x4]; // 0x274
 public:
 	// MPropertyFriendlyName "scale"
 	CParticleCollectionFloatInput m_flScale; // 0x278	
@@ -6347,7 +6347,7 @@ public:
 	// MPropertyFriendlyName "ending control point"
 	int32_t m_nEndCP; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad018c[0x4]; 	// 0x18c
+	[[maybe_unused]] uint8_t __pad018c[0x4]; // 0x18c
 public:
 	// MPropertyFriendlyName "distance minimum"
 	CPerParticleFloatInput m_flInputMin; // 0x190	
@@ -6368,7 +6368,7 @@ public:
 	// MPropertyFriendlyName "ensure line of sight"
 	bool m_bLOS; // 0x5bc	
 private:
-	[[maybe_unused]] uint8_t __pad05bd[0x3]; 	// 0x5bd
+	[[maybe_unused]] uint8_t __pad05bd[0x3]; // 0x5bd
 public:
 	// MPropertyFriendlyName "set value method"
 	ParticleSetMethod_t m_nSetMethod; // 0x5c0	
@@ -6473,7 +6473,7 @@ public:
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	ParticleAttributeIndex_t m_nFieldOutput; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "first vector"
 	CPerParticleVecInput m_vecPoint1; // 0x188	
@@ -6502,7 +6502,7 @@ public:
 	// MPropertyAttributeChoiceName "particlefield_vector"
 	ParticleAttributeIndex_t m_nFieldOutput; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "first vector"
 	CPerParticleVecInput m_vecPoint1; // 0x188	
@@ -6533,7 +6533,7 @@ public:
 	// MPropertyFriendlyName "LOS collision group"
 	char m_CollisionGroupName[128]; // 0x199	
 private:
-	[[maybe_unused]] uint8_t __pad0219[0x3]; 	// 0x219
+	[[maybe_unused]] uint8_t __pad0219[0x3]; // 0x219
 public:
 	// MPropertyFriendlyName "Trace Set"
 	ParticleTraceSet_t m_nTraceSet; // 0x21c	
@@ -6548,7 +6548,7 @@ public:
 	// MPropertyFriendlyName "output is additive"
 	bool m_bAdditive; // 0x22d	
 private:
-	[[maybe_unused]] uint8_t __pad022e[0x2]; 	// 0x22e
+	[[maybe_unused]] uint8_t __pad022e[0x2]; // 0x22e
 public:
 	// MPropertyFriendlyName "component scale"
 	CPerParticleVecInput m_vecComponentScale; // 0x230	
@@ -6563,7 +6563,7 @@ public:
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	ParticleAttributeIndex_t m_nFieldOutput; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "cylinder inner radius"
 	CPerParticleFloatInput m_flInputMin; // 0x188	
@@ -6605,7 +6605,7 @@ public:
 	// MPropertyFriendlyName "ray trace environment name"
 	char m_RtEnvName[128]; // 0x19a	
 private:
-	[[maybe_unused]] uint8_t __pad021a[0x2]; 	// 0x21a
+	[[maybe_unused]] uint8_t __pad021a[0x2]; // 0x21a
 public:
 	// MPropertyFriendlyName "ray trace environment cp"
 	int32_t m_nRTEnvCP; // 0x21c	
@@ -6622,7 +6622,7 @@ public:
 	// MPropertyFriendlyName "control point"
 	int32_t m_nCP; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "distance maximum"
 	CParticleCollectionFloatInput m_flDistance; // 0x188	
@@ -6641,7 +6641,7 @@ public:
 	// MPropertyFriendlyName "control point number"
 	int32_t m_nControlPointNumber; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "lifetime lerp start"
 	float m_flLifeTimeLerpStart; // 0x188	
@@ -6654,12 +6654,12 @@ public:
 	// MPropertyFriendlyName "use bones instead of hitboxes"
 	bool m_bUseBones; // 0x214	
 private:
-	[[maybe_unused]] uint8_t __pad0215[0x3]; 	// 0x215
+	[[maybe_unused]] uint8_t __pad0215[0x3]; // 0x215
 public:
 	// MPropertyFriendlyName "lerp type"
 	HitboxLerpType_t m_nLerpType; // 0x218	
 private:
-	[[maybe_unused]] uint8_t __pad021c[0x4]; 	// 0x21c
+	[[maybe_unused]] uint8_t __pad021c[0x4]; // 0x21c
 public:
 	// MPropertyFriendlyName "Constant Interpolation"
 	CPerParticleFloatInput m_flInterpolation; // 0x220	
@@ -6687,7 +6687,7 @@ public:
 	// MPropertyFriendlyName "use bones instead of hitboxes"
 	bool m_bUseBones; // 0x215	
 private:
-	[[maybe_unused]] uint8_t __pad0216[0x2]; 	// 0x216
+	[[maybe_unused]] uint8_t __pad0216[0x2]; // 0x216
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
@@ -6701,7 +6701,7 @@ public:
 	// MPropertyFriendlyName "rigid set rotation from bones"
 	bool m_bRigidRotationLock; // 0x224	
 private:
-	[[maybe_unused]] uint8_t __pad0225[0x3]; 	// 0x225
+	[[maybe_unused]] uint8_t __pad0225[0x3]; // 0x225
 public:
 	// MPropertyFriendlyName "rigid rotation offset pitch/yaw/roll"
 	CPerParticleVecInput m_vecRotation; // 0x228	
@@ -6717,7 +6717,7 @@ public:
 	// MPropertyFriendlyName "rotate normals"
 	bool m_bTransformNormals; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0181[0x3]; 	// 0x181
+	[[maybe_unused]] uint8_t __pad0181[0x3]; // 0x181
 public:
 	// MPropertyFriendlyName "control point number"
 	int32_t m_nControlPointNumber; // 0x184	
@@ -6731,7 +6731,7 @@ public:
 	// MPropertyFriendlyName "rotate normals"
 	bool m_bTransformNormals; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0181[0x3]; 	// 0x181
+	[[maybe_unused]] uint8_t __pad0181[0x3]; // 0x181
 public:
 	// MPropertyFriendlyName "control point number"
 	int32_t m_nControlPointNumber; // 0x184	
@@ -6771,7 +6771,7 @@ public:
 	// MPropertyFriendlyName "treat offset as scale of total distance"
 	bool m_bScaleOffset; // 0x1a1	
 private:
-	[[maybe_unused]] uint8_t __pad01a2[0x2]; 	// 0x1a2
+	[[maybe_unused]] uint8_t __pad01a2[0x2]; // 0x1a2
 public:
 	// MPropertyFriendlyName "offset amount"
 	// MVectorIsCoordinate
@@ -6791,7 +6791,7 @@ public:
 	// MPropertyFriendlyName "use local space"
 	bool m_bLocalSpace; // 0x190	
 private:
-	[[maybe_unused]] uint8_t __pad0191[0x3]; 	// 0x191
+	[[maybe_unused]] uint8_t __pad0191[0x3]; // 0x191
 public:
 	// MPropertyFriendlyName "cull plane offset"
 	float m_flPlaneOffset; // 0x194	
@@ -6908,21 +6908,21 @@ public:
 	// MPropertyFriendlyName "interploation distance tolerance cp"
 	int32_t m_nLerpCP; // 0x304	
 private:
-	[[maybe_unused]] uint8_t __pad0308[0x8]; 	// 0x308
+	[[maybe_unused]] uint8_t __pad0308[0x8]; // 0x308
 public:
 	// MPropertyFriendlyName "No Collision Behavior"
 	ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x310	
 	// MPropertyFriendlyName "include water"
 	bool m_bIncludeWater; // 0x314	
 private:
-	[[maybe_unused]] uint8_t __pad0315[0x2]; 	// 0x315
+	[[maybe_unused]] uint8_t __pad0315[0x2]; // 0x315
 public:
 	// MPropertyFriendlyName "set normal"
 	bool m_bSetNormal; // 0x317	
 	// MPropertyFriendlyName "treat offset as scalar of particle radius"
 	bool m_bScaleOffset; // 0x318	
 private:
-	[[maybe_unused]] uint8_t __pad0319[0x3]; 	// 0x319
+	[[maybe_unused]] uint8_t __pad0319[0x3]; // 0x319
 public:
 	// MPropertyFriendlyName "preserve initial Z-offset relative to cp"
 	int32_t m_nPreserveOffsetCP; // 0x31c	
@@ -6961,7 +6961,7 @@ public:
 	// MPropertyFriendlyName "random parent particle distribution"
 	bool m_bRandomDistribution; // 0x18c	
 private:
-	[[maybe_unused]] uint8_t __pad018d[0x3]; 	// 0x18d
+	[[maybe_unused]] uint8_t __pad018d[0x3]; // 0x18d
 public:
 	// MPropertyFriendlyName "behavior if parent particle dies"
 	MissingParentInheritBehavior_t m_nMissingParentBehavior; // 0x190	
@@ -6981,7 +6981,7 @@ public:
 	// MPropertyFriendlyName "particle increment amount"
 	int32_t m_nIncrement; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad018c[0x4]; 	// 0x18c
+	[[maybe_unused]] uint8_t __pad018c[0x4]; // 0x18c
 public:
 	// MPropertyFriendlyName "maximum distance"
 	CPerParticleFloatInput m_DistanceCheck; // 0x190	
@@ -7109,7 +7109,7 @@ public:
 	// MPropertyFriendlyName "normalize output"
 	bool m_bNormalize; // 0x1a4	
 private:
-	[[maybe_unused]] uint8_t __pad01a5[0x3]; 	// 0x1a5
+	[[maybe_unused]] uint8_t __pad01a5[0x3]; // 0x1a5
 public:
 	// MPropertyFriendlyName "per particle scale"
 	CPerParticleFloatInput m_flScale; // 0x1a8	
@@ -7161,7 +7161,7 @@ public:
 	// MPropertyFriendlyName "use existing particle count"
 	bool m_bUseParticleCount; // 0x191	
 private:
-	[[maybe_unused]] uint8_t __pad0192[0xe]; 	// 0x192
+	[[maybe_unused]] uint8_t __pad0192[0xe]; // 0x192
 public:
 	CPathParameters m_PathParams; // 0x1a0	
 };
@@ -7178,7 +7178,7 @@ public:
 	// MPropertyFriendlyName "Use sequential CP pairs between start and end point"
 	bool m_bCPPairs; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad0189[0x7]; 	// 0x189
+	[[maybe_unused]] uint8_t __pad0189[0x7]; // 0x189
 public:
 	CPathParameters m_PathParams; // 0x190	
 };
@@ -7195,7 +7195,7 @@ public:
 	// MPropertyFriendlyName "Use sequential CP pairs between start and end point"
 	bool m_bCPPairs; // 0x18c	
 private:
-	[[maybe_unused]] uint8_t __pad018d[0x3]; 	// 0x18d
+	[[maybe_unused]] uint8_t __pad018d[0x3]; // 0x18d
 public:
 	CPathParameters m_PathParams; // 0x190	
 };
@@ -7223,7 +7223,7 @@ public:
 	// MPropertyFriendlyName "use particle velocity for first input"
 	bool m_bUseParticleVelocity; // 0x19c	
 private:
-	[[maybe_unused]] uint8_t __pad019d[0x3]; 	// 0x19d
+	[[maybe_unused]] uint8_t __pad019d[0x3]; // 0x19d
 public:
 	// MPropertyFriendlyName "set value method"
 	ParticleSetMethod_t m_nSetMethod; // 0x1a0	
@@ -7393,7 +7393,7 @@ public:
 	// MPropertyFriendlyName "normalize"
 	bool m_bNormalize; // 0x19c	
 private:
-	[[maybe_unused]] uint8_t __pad019d[0x3]; 	// 0x19d
+	[[maybe_unused]] uint8_t __pad019d[0x3]; // 0x19d
 public:
 	// MPropertyFriendlyName "strength field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -7464,7 +7464,7 @@ public:
 	// MPropertyFriendlyName "CP to set"
 	int32_t m_nOutputCP; // 0x218	
 private:
-	[[maybe_unused]] uint8_t __pad021c[0xc]; 	// 0x21c
+	[[maybe_unused]] uint8_t __pad021c[0xc]; // 0x21c
 public:
 	// MPropertyFriendlyName "include water"
 	bool m_bIncludeWater; // 0x228	
@@ -7512,7 +7512,7 @@ public:
 	// MPropertyAttributeChoiceName "particlefield_vector"
 	ParticleAttributeIndex_t m_nFieldOutput; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "point list"
 	CUtlVector< PointDefinition_t > m_pointList; // 0x188	
@@ -7521,7 +7521,7 @@ public:
 	// MPropertyFriendlyName "Treat path as a loop"
 	bool m_bClosedLoop; // 0x1a1	
 private:
-	[[maybe_unused]] uint8_t __pad01a2[0x2]; 	// 0x1a2
+	[[maybe_unused]] uint8_t __pad01a2[0x2]; // 0x1a2
 public:
 	// MPropertyFriendlyName "Numer of points along path"
 	int32_t m_nNumPointsAlongPath; // 0x1a4	
@@ -7546,7 +7546,7 @@ public:
 	// MPropertyFriendlyName "remap time proportional"
 	bool m_bProportional; // 0x1d1	
 private:
-	[[maybe_unused]] uint8_t __pad01d2[0x2]; 	// 0x1d2
+	[[maybe_unused]] uint8_t __pad01d2[0x2]; // 0x1d2
 public:
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -7563,7 +7563,7 @@ public:
 class C_OP_RemapNamedModelSequenceOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -7571,7 +7571,7 @@ public:
 class C_OP_RemapNamedModelBodyPartOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -7579,7 +7579,7 @@ public:
 class C_OP_RemapNamedModelMeshGroupOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 7
@@ -7599,7 +7599,7 @@ public:
 	// MPropertyFriendlyName "model from renderer"
 	bool m_bModelFromRenderer; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01d1[0x3]; 	// 0x1d1
+	[[maybe_unused]] uint8_t __pad01d1[0x3]; // 0x1d1
 public:
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -7614,7 +7614,7 @@ public:
 class C_OP_RemapNamedModelSequenceEndCap : public C_OP_RemapNamedModelElementEndCap
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -7622,7 +7622,7 @@ public:
 class C_OP_RemapNamedModelBodyPartEndCap : public C_OP_RemapNamedModelElementEndCap
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -7630,7 +7630,7 @@ public:
 class C_OP_RemapNamedModelMeshGroupEndCap : public C_OP_RemapNamedModelElementEndCap
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 10
@@ -7653,7 +7653,7 @@ public:
 	// MPropertyFriendlyName "reverse order"
 	bool m_bReverse; // 0x191	
 private:
-	[[maybe_unused]] uint8_t __pad0192[0x2]; 	// 0x192
+	[[maybe_unused]] uint8_t __pad0192[0x2]; // 0x192
 public:
 	// MPropertyFriendlyName "random seed"
 	int32_t m_nRandomSeed; // 0x194	
@@ -7673,7 +7673,7 @@ public:
 	// MPropertyFriendlyName "expression"
 	ScalarExpressionType_t m_nExpression; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; 	// 0x184
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MPropertyFriendlyName "input 1"
 	CPerParticleFloatInput m_flInput1; // 0x188	
@@ -7698,14 +7698,14 @@ public:
 	// MPropertyFriendlyName "random order"
 	bool m_bRandom; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad0189[0x3]; 	// 0x189
+	[[maybe_unused]] uint8_t __pad0189[0x3]; // 0x189
 public:
 	// MPropertyFriendlyName "random seed"
 	int32_t m_nRandomSeed; // 0x18c	
 	// MPropertyFriendlyName "set normal"
 	bool m_bSetNormal; // 0x190	
 private:
-	[[maybe_unused]] uint8_t __pad0191[0x7]; 	// 0x191
+	[[maybe_unused]] uint8_t __pad0191[0x7]; // 0x191
 public:
 	// MPropertyFriendlyName "particle increment amount"
 	CParticleCollectionFloatInput m_flIncrement; // 0x198	
@@ -7729,7 +7729,7 @@ public:
 	// MPropertyFriendlyName "set normal"
 	bool m_bSetNormal; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad0189[0x7]; 	// 0x189
+	[[maybe_unused]] uint8_t __pad0189[0x7]; // 0x189
 public:
 	// MPropertyFriendlyName "Interpolation"
 	CPerParticleFloatInput m_flInterpolation; // 0x190	
@@ -7909,7 +7909,7 @@ public:
 	// MPropertyFriendlyName "Synchronize particles"
 	bool m_bSynchronizeParticles; // 0x191	
 private:
-	[[maybe_unused]] uint8_t __pad0192[0x2]; 	// 0x192
+	[[maybe_unused]] uint8_t __pad0192[0x2]; // 0x192
 public:
 	// MPropertyFriendlyName "Scale Start/End Control Point"
 	int32_t m_nCPScale; // 0x194	
@@ -8035,7 +8035,7 @@ public:
 	// MPropertyAttributeChoiceName "vector_component"
 	int32_t m_nField; // 0x198	
 private:
-	[[maybe_unused]] uint8_t __pad019c[0x4]; 	// 0x19c
+	[[maybe_unused]] uint8_t __pad019c[0x4]; // 0x19c
 public:
 	// MPropertyFriendlyName "input minimum"
 	CParticleCollectionFloatInput m_flInputMin; // 0x1a0	
@@ -8088,7 +8088,7 @@ public:
 	// MPropertyAttributeChoiceName "vector_component"
 	int32_t m_nOutVectorField; // 0x198	
 private:
-	[[maybe_unused]] uint8_t __pad019c[0x4]; 	// 0x19c
+	[[maybe_unused]] uint8_t __pad019c[0x4]; // 0x19c
 public:
 	// MPropertyFriendlyName "input 1"
 	CParticleCollectionFloatInput m_flInput1; // 0x1a0	
@@ -8215,7 +8215,7 @@ public:
 	// MPropertyFriendlyName "only set position once"
 	bool m_bSetOnce; // 0x192	
 private:
-	[[maybe_unused]] uint8_t __pad0193[0x1]; 	// 0x193
+	[[maybe_unused]] uint8_t __pad0193[0x1]; // 0x193
 public:
 	// MPropertyFriendlyName "first control point number"
 	int32_t m_nCP1; // 0x194	
@@ -8251,7 +8251,7 @@ public:
 	// MPropertyFriendlyName "only set position once"
 	bool m_bSetOnce; // 0x191	
 private:
-	[[maybe_unused]] uint8_t __pad0192[0x2]; 	// 0x192
+	[[maybe_unused]] uint8_t __pad0192[0x2]; // 0x192
 public:
 	// MPropertyFriendlyName "control point number"
 	int32_t m_nCP1; // 0x194	
@@ -8271,14 +8271,14 @@ public:
 	// MPropertyFriendlyName "inherit CP orientation"
 	bool m_bOrient; // 0x191	
 private:
-	[[maybe_unused]] uint8_t __pad0192[0x2]; 	// 0x192
+	[[maybe_unused]] uint8_t __pad0192[0x2]; // 0x192
 public:
 	// MPropertyFriendlyName "control point number"
 	int32_t m_nCP1; // 0x194	
 	// MPropertyFriendlyName "control point to offset positions from"
 	int32_t m_nHeadLocation; // 0x198	
 private:
-	[[maybe_unused]] uint8_t __pad019c[0x4]; 	// 0x19c
+	[[maybe_unused]] uint8_t __pad019c[0x4]; // 0x19c
 public:
 	// MPropertyFriendlyName "re-randomize rate (-1 for once only)"
 	CParticleCollectionFloatInput m_flReRandomRate; // 0x1a0	
@@ -8298,7 +8298,7 @@ public:
 	// MPropertyFriendlyName "set orientation in world space"
 	bool m_bUseWorldLocation; // 0x190	
 private:
-	[[maybe_unused]] uint8_t __pad0191[0x1]; 	// 0x191
+	[[maybe_unused]] uint8_t __pad0191[0x1]; // 0x191
 public:
 	// MPropertyFriendlyName "randomize"
 	bool m_bRandomize; // 0x192	
@@ -8313,7 +8313,7 @@ public:
 	// MPropertyFriendlyName "pitch yaw roll max"
 	QAngle m_vecRotationB; // 0x1a8	
 private:
-	[[maybe_unused]] uint8_t __pad01b4[0x4]; 	// 0x1b4
+	[[maybe_unused]] uint8_t __pad01b4[0x4]; // 0x1b4
 public:
 	// MPropertyFriendlyName "interpolation"
 	CParticleCollectionFloatInput m_flInterpolation; // 0x1b8	
@@ -8346,7 +8346,7 @@ public:
 	// MPropertyFriendlyName "only set distance once"
 	bool m_bSetOnce; // 0x1a0	
 private:
-	[[maybe_unused]] uint8_t __pad01a1[0x3]; 	// 0x1a1
+	[[maybe_unused]] uint8_t __pad01a1[0x3]; // 0x1a1
 public:
 	// MPropertyFriendlyName "distance minimum"
 	float m_flInputMin; // 0x1a4	
@@ -8365,7 +8365,7 @@ public:
 	// MPropertyFriendlyName "LOS collision group"
 	char m_CollisionGroupName[128]; // 0x1bd	
 private:
-	[[maybe_unused]] uint8_t __pad023d[0x3]; 	// 0x23d
+	[[maybe_unused]] uint8_t __pad023d[0x3]; // 0x23d
 public:
 	// MPropertyFriendlyName "Trace Set"
 	ParticleTraceSet_t m_nTraceSet; // 0x240	
@@ -8452,7 +8452,7 @@ public:
 	// MPropertyFriendlyName "normalize output"
 	bool m_bNormalize; // 0x198	
 private:
-	[[maybe_unused]] uint8_t __pad0199[0x3]; 	// 0x199
+	[[maybe_unused]] uint8_t __pad0199[0x3]; // 0x199
 public:
 	// MPropertyFriendlyName "control point number to set magnitude"
 	int32_t m_nCPOutputMag; // 0x19c	
@@ -8527,7 +8527,7 @@ public:
 	// MPropertyFriendlyName "use the derivative"
 	bool m_bDerivative; // 0x1b0	
 private:
-	[[maybe_unused]] uint8_t __pad01b1[0x3]; 	// 0x1b1
+	[[maybe_unused]] uint8_t __pad01b1[0x3]; // 0x1b1
 public:
 	// MPropertyFriendlyName "interpolation"
 	float m_flInterpRate; // 0x1b4	
@@ -8695,7 +8695,7 @@ public:
 	// MPropertyFriendlyName "group ID to affect"
 	int32_t m_nChildGroupID; // 0x190	
 private:
-	[[maybe_unused]] uint8_t __pad0194[0x4]; 	// 0x194
+	[[maybe_unused]] uint8_t __pad0194[0x4]; // 0x194
 public:
 	// MPropertyFriendlyName "Within-Cluster Refire Time"
 	CParticleCollectionFloatInput m_flClusterRefireTime; // 0x198	
@@ -8715,7 +8715,7 @@ public:
 	// MPropertyFriendlyName "group ID to affect"
 	int32_t m_nChildGroupID; // 0x190	
 private:
-	[[maybe_unused]] uint8_t __pad0194[0x4]; 	// 0x194
+	[[maybe_unused]] uint8_t __pad0194[0x4]; // 0x194
 public:
 	// MPropertyFriendlyName "Number of Children to Use"
 	CParticleCollectionFloatInput m_flNumberOfChildren; // 0x198	
@@ -8761,7 +8761,7 @@ public:
 	// MPropertyFriendlyName "end control point number"
 	int32_t m_nCPEndPnt; // 0x198	
 private:
-	[[maybe_unused]] uint8_t __pad019c[0x4]; 	// 0x19c
+	[[maybe_unused]] uint8_t __pad019c[0x4]; // 0x19c
 public:
 	// MPropertyFriendlyName "Recursion Depth"
 	CParticleCollectionFloatInput m_flSegments; // 0x1a0	
@@ -8782,7 +8782,7 @@ public:
 	// MPropertyFriendlyName "Branch Behavior"
 	ParticleLightnintBranchBehavior_t m_nBranchBehavior; // 0x8e0	
 private:
-	[[maybe_unused]] uint8_t __pad08e4[0x4]; 	// 0x8e4
+	[[maybe_unused]] uint8_t __pad08e4[0x4]; // 0x8e4
 public:
 	// MPropertyFriendlyName "Start Radius"
 	CParticleCollectionFloatInput m_flRadiusStart; // 0x8e8	
@@ -8806,7 +8806,7 @@ public:
 	// MPropertyFriendlyName "set magnitude instead of vector"
 	bool m_bSetMagnitude; // 0x5c8	
 private:
-	[[maybe_unused]] uint8_t __pad05c9[0x3]; 	// 0x5c9
+	[[maybe_unused]] uint8_t __pad05c9[0x3]; // 0x5c9
 public:
 	// MPropertyFriendlyName "magnitude output component"
 	// MPropertyAttributeChoiceName "vector_component"
@@ -8882,7 +8882,7 @@ public:
 	// MPropertySortPriority "1000"
 	bool m_bEnableFadingAndClamping; // 0x18e0	
 private:
-	[[maybe_unused]] uint8_t __pad18e1[0x3]; 	// 0x18e1
+	[[maybe_unused]] uint8_t __pad18e1[0x3]; // 0x18e1
 public:
 	// MPropertyStartGroup "+Trail Length"
 	// MPropertyFriendlyName "Anchor point source"
@@ -8899,7 +8899,7 @@ public:
 	// MPropertySortPriority "800"
 	bool m_bIgnoreDT; // 0x18f0	
 private:
-	[[maybe_unused]] uint8_t __pad18f1[0x3]; 	// 0x18f1
+	[[maybe_unused]] uint8_t __pad18f1[0x3]; // 0x18f1
 public:
 	// MPropertyFriendlyName "constrain radius to no more than this times the length"
 	// MPropertySortPriority "800"
@@ -8946,7 +8946,7 @@ public:
 	// MPropertySortPriority "1000"
 	bool m_bEnableFadingAndClamping; // 0x16f0	
 private:
-	[[maybe_unused]] uint8_t __pad16f1[0x3]; 	// 0x16f1
+	[[maybe_unused]] uint8_t __pad16f1[0x3]; // 0x16f1
 public:
 	// MPropertyFriendlyName "minimum visual screen-size"
 	// MPropertySuppressExpr "!m_bEnableFadingAndClamping"
@@ -8971,7 +8971,7 @@ public:
 	// MPropertyFriendlyName "tesselation resolution scale factor"
 	float m_flTessScale; // 0x1710	
 private:
-	[[maybe_unused]] uint8_t __pad1714[0x4]; 	// 0x1714
+	[[maybe_unused]] uint8_t __pad1714[0x4]; // 0x1714
 public:
 	// MPropertyStartGroup "+Rope Global UV Controls"
 	// MPropertyFriendlyName "global texture V World Size"
@@ -8986,7 +8986,7 @@ public:
 	// MPropertyFriendlyName "Clamp Non-Sheet texture V coords"
 	bool m_bClampV; // 0x19d4	
 private:
-	[[maybe_unused]] uint8_t __pad19d5[0x3]; 	// 0x19d5
+	[[maybe_unused]] uint8_t __pad19d5[0x3]; // 0x19d5
 public:
 	// MPropertyStartGroup "Rope Global UV Controls/CP Scaling"
 	// MPropertyFriendlyName "scale CP start"
@@ -9000,13 +9000,13 @@ public:
 	// MPropertyFriendlyName "scale V offset by CP distance"
 	float m_flScaleVOffsetByControlPointDistance; // 0x19e8	
 private:
-	[[maybe_unused]] uint8_t __pad19ec[0x1]; 	// 0x19ec
+	[[maybe_unused]] uint8_t __pad19ec[0x1]; // 0x19ec
 public:
 	// MPropertyStartGroup "Rope Global UV Controls"
 	// MPropertyFriendlyName "Use scalar attribute for texture coordinate"
 	bool m_bUseScalarForTextureCoordinate; // 0x19ed	
 private:
-	[[maybe_unused]] uint8_t __pad19ee[0x2]; 	// 0x19ee
+	[[maybe_unused]] uint8_t __pad19ee[0x2]; // 0x19ee
 public:
 	// MPropertyFriendlyName "scalar to use for texture coordinate"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -9022,7 +9022,7 @@ public:
 	// MPropertyFriendlyName "Closed loop"
 	bool m_bClosedLoop; // 0x19f9	
 private:
-	[[maybe_unused]] uint8_t __pad19fa[0x2]; 	// 0x19fa
+	[[maybe_unused]] uint8_t __pad19fa[0x2]; // 0x19fa
 public:
 	// MPropertyStartGroup "Orientation"
 	// MPropertyFriendlyName "orientation_type"
@@ -9050,7 +9050,7 @@ public:
 	// MParticleRequireDefaultArrayEntry
 	CUtlVector< ModelReference_t > m_ModelList; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01e8[0x4]; 	// 0x1e8
+	[[maybe_unused]] uint8_t __pad01e8[0x4]; // 0x1e8
 public:
 	// MPropertyFriendlyName "scale factor for radius"
 	float m_flModelScale; // 0x1ec	
@@ -9059,7 +9059,7 @@ public:
 	// MPropertyFriendlyName "non-uniform scaling"
 	bool m_bNonUniformScaling; // 0x1f1	
 private:
-	[[maybe_unused]] uint8_t __pad01f2[0x2]; 	// 0x1f2
+	[[maybe_unused]] uint8_t __pad01f2[0x2]; // 0x1f2
 public:
 	// MPropertyFriendlyName "X axis scaling scalar field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -9087,7 +9087,7 @@ public:
 	// MPropertyFriendlyName "set animation value in FPS"
 	bool m_bAnimateInFPS; // 0x1e8	
 private:
-	[[maybe_unused]] uint8_t __pad01e9[0x3]; 	// 0x1e9
+	[[maybe_unused]] uint8_t __pad01e9[0x3]; // 0x1e9
 public:
 	// MPropertyFriendlyName "minimum visual size"
 	float m_flMinSize; // 0x1ec	
@@ -9113,7 +9113,7 @@ public:
 	// MPropertyFriendlyName "scale CP (cube width/cutoff/render = x/y/z)"
 	int32_t m_nScaleCP; // 0x488	
 private:
-	[[maybe_unused]] uint8_t __pad048c[0x4]; 	// 0x48c
+	[[maybe_unused]] uint8_t __pad048c[0x4]; // 0x48c
 public:
 	// MPropertyFriendlyName "material"
 	// MPropertyAttributeEditor "AssetBrowse( vmat )"
@@ -9143,7 +9143,7 @@ public:
 	// MPropertySortPriority "1200"
 	bool m_bUseMixedResolutionRendering; // 0x1d1	
 private:
-	[[maybe_unused]] uint8_t __pad01d2[0x6]; 	// 0x1d2
+	[[maybe_unused]] uint8_t __pad01d2[0x6]; // 0x1d2
 public:
 	// MPropertyFriendlyName "models"
 	// MParticleRequireDefaultArrayEntry
@@ -9151,7 +9151,7 @@ public:
 	// MPropertySortPriority "775"
 	CUtlVector< ModelReference_t > m_ModelList; // 0x1d8	
 private:
-	[[maybe_unused]] uint8_t __pad01f0[0x4]; 	// 0x1f0
+	[[maybe_unused]] uint8_t __pad01f0[0x4]; // 0x1f0
 public:
 	// MPropertyFriendlyName "bodygroup field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -9168,7 +9168,7 @@ public:
 	// MPropertySuppressExpr "m_bIgnoreNormal"
 	bool m_bOrientZ; // 0x1fd	
 private:
-	[[maybe_unused]] uint8_t __pad01fe[0x2]; 	// 0x1fe
+	[[maybe_unused]] uint8_t __pad01fe[0x2]; // 0x1fe
 public:
 	// MPropertyFriendlyName "model local offset"
 	// MPropertySortPriority "750"
@@ -9181,7 +9181,7 @@ public:
 	// MPropertySortPriority "450"
 	bool m_bIgnoreRadius; // 0xa60	
 private:
-	[[maybe_unused]] uint8_t __pad0a61[0x3]; 	// 0xa61
+	[[maybe_unused]] uint8_t __pad0a61[0x3]; // 0xa61
 public:
 	// MPropertyFriendlyName "model scale CP"
 	// MPropertySortPriority "450"
@@ -9194,7 +9194,7 @@ public:
 	// MPropertySortPriority "500"
 	bool m_bAnimated; // 0xe98	
 private:
-	[[maybe_unused]] uint8_t __pad0e99[0x3]; 	// 0xe99
+	[[maybe_unused]] uint8_t __pad0e99[0x3]; // 0xe99
 public:
 	// MPropertyFriendlyName "animation rate"
 	// MPropertySortPriority "500"
@@ -9237,7 +9237,7 @@ public:
 	// MPropertyFriendlyName "Enable Cloth Simulation"
 	bool m_bEnableClothSimulation; // 0xfb0	
 private:
-	[[maybe_unused]] uint8_t __pad0fb1[0x7]; 	// 0xfb1
+	[[maybe_unused]] uint8_t __pad0fb1[0x7]; // 0xfb1
 public:
 	// MPropertyStartGroup "Material"
 	// MPropertyFriendlyName "material override"
@@ -9248,7 +9248,7 @@ public:
 	// MPropertySortPriority "600"
 	bool m_bOverrideTranslucentMaterials; // 0xfc0	
 private:
-	[[maybe_unused]] uint8_t __pad0fc1[0x3]; 	// 0xfc1
+	[[maybe_unused]] uint8_t __pad0fc1[0x3]; // 0xfc1
 public:
 	// MPropertyFriendlyName "skin number"
 	// MPropertySortPriority "600"
@@ -9257,7 +9257,7 @@ public:
 	// MPropertySortPriority "600"
 	int32_t m_nSkinCP; // 0xfc8	
 private:
-	[[maybe_unused]] uint8_t __pad0fcc[0x4]; 	// 0xfcc
+	[[maybe_unused]] uint8_t __pad0fcc[0x4]; // 0xfcc
 public:
 	// MPropertyFriendlyName "material variables"
 	// MPropertyAutoExpandSelf
@@ -9283,7 +9283,7 @@ public:
 	// MPropertyFriendlyName "render attribute"
 	char m_szRenderAttribute[260]; // 0x10f5	
 private:
-	[[maybe_unused]] uint8_t __pad11f9[0x7]; 	// 0x11f9
+	[[maybe_unused]] uint8_t __pad11f9[0x7]; // 0x11f9
 public:
 	// MPropertyStartGroup "+Renderer Modifiers"
 	// MPropertyFriendlyName "Radius Scale"
@@ -9297,7 +9297,7 @@ public:
 	// MPropertySortPriority "700"
 	ParticleAttributeIndex_t m_nAlpha2Field; // 0x13d0	
 private:
-	[[maybe_unused]] uint8_t __pad13d4[0x4]; 	// 0x13d4
+	[[maybe_unused]] uint8_t __pad13d4[0x4]; // 0x13d4
 public:
 	// MPropertyFriendlyName "color blend"
 	// MPropertySortPriority "700"
@@ -9348,7 +9348,7 @@ public:
 	// MPropertyFriendlyName "enable projected depth controls"
 	bool m_bEnableProjectedDepthControls; // 0x1d4	
 private:
-	[[maybe_unused]] uint8_t __pad01d5[0x3]; 	// 0x1d5
+	[[maybe_unused]] uint8_t __pad01d5[0x3]; // 0x1d5
 public:
 	// MPropertyFriendlyName "min projection depth"
 	// MPropertySuppressExpr "!m_bEnableProjectedDepthControls"
@@ -9364,7 +9364,7 @@ public:
 	// MPropertyFriendlyName "orient to normal"
 	bool m_bOrientToNormal; // 0x1ec	
 private:
-	[[maybe_unused]] uint8_t __pad01ed[0x3]; 	// 0x1ed
+	[[maybe_unused]] uint8_t __pad01ed[0x3]; // 0x1ed
 public:
 	// MPropertyFriendlyName "material variables"
 	// MPropertyAutoExpandSelf
@@ -9382,7 +9382,7 @@ public:
 	// MPropertyFriendlyName "projected texture light"
 	bool m_bUseTexture; // 0x1d1	
 private:
-	[[maybe_unused]] uint8_t __pad01d2[0x2]; 	// 0x1d2
+	[[maybe_unused]] uint8_t __pad01d2[0x2]; // 0x1d2
 public:
 	// MPropertyStartGroup "+Renderer Modifiers"
 	// MPropertyFriendlyName "radius scale"
@@ -9438,14 +9438,14 @@ public:
 	// MPropertyFriendlyName "light type"
 	ParticleLightTypeChoiceList_t m_nLightType; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01d4[0x4]; 	// 0x1d4
+	[[maybe_unused]] uint8_t __pad01d4[0x4]; // 0x1d4
 public:
 	// MPropertyFriendlyName "color blend"
 	CParticleCollectionVecInput m_vecColorScale; // 0x1d8	
 	// MPropertyFriendlyName "color blend type"
 	ParticleColorBlendType_t m_nColorBlendType; // 0x608	
 private:
-	[[maybe_unused]] uint8_t __pad060c[0x4]; 	// 0x60c
+	[[maybe_unused]] uint8_t __pad060c[0x4]; // 0x60c
 public:
 	// MPropertyFriendlyName "intensity"
 	CParticleCollectionFloatInput m_flIntensity; // 0x610	
@@ -9453,7 +9453,7 @@ public:
 	// MPropertySuppressExpr "m_nLightType == PARTICLE_LIGHT_TYPE_FX"
 	bool m_bCastShadows; // 0x6f8	
 private:
-	[[maybe_unused]] uint8_t __pad06f9[0x7]; 	// 0x6f9
+	[[maybe_unused]] uint8_t __pad06f9[0x7]; // 0x6f9
 public:
 	// MPropertyFriendlyName "inner cone angle"
 	// MPropertySuppressExpr "m_nLightType != PARTICLE_LIGHT_TYPE_SPOT"
@@ -9466,7 +9466,7 @@ public:
 	// MPropertyFriendlyName "attenuation type"
 	StandardLightingAttenuationStyle_t m_nAttenuationStyle; // 0x9b8	
 private:
-	[[maybe_unused]] uint8_t __pad09bc[0x4]; 	// 0x9bc
+	[[maybe_unused]] uint8_t __pad09bc[0x4]; // 0x9bc
 public:
 	// MPropertyFriendlyName "falloff linearity"
 	// MPropertySuppressExpr "m_nAttenuationStyle == LIGHT_STYLE_NEW || ( m_nAttenuationStyle == LIGHT_STYLE_OLD && m_nLightType == PARTICLE_LIGHT_TYPE_FX )"
@@ -9484,7 +9484,7 @@ public:
 	// MPropertySuppressExpr "m_nLightType == PARTICLE_LIGHT_TYPE_FX"
 	bool m_bRenderSpecular; // 0xc79	
 private:
-	[[maybe_unused]] uint8_t __pad0c7a[0x6]; 	// 0xc7a
+	[[maybe_unused]] uint8_t __pad0c7a[0x6]; // 0xc7a
 public:
 	// MPropertyFriendlyName "light cookie string"
 	CUtlString m_lightCookie; // 0xc80	
@@ -9509,7 +9509,7 @@ public:
 	// MPropertySuppressExpr "m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION || m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_TRAILS"
 	bool m_bClosedLoop; // 0xd81	
 private:
-	[[maybe_unused]] uint8_t __pad0d82[0x2]; 	// 0xd82
+	[[maybe_unused]] uint8_t __pad0d82[0x2]; // 0xd82
 public:
 	// MPropertyFriendlyName "Anchor point source"
 	// MPropertyAttributeChoiceName "particlefield_vector"
@@ -9525,7 +9525,7 @@ public:
 	// MPropertySuppressExpr "m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION || m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_ROPE"
 	bool m_bIgnoreDT; // 0xd90	
 private:
-	[[maybe_unused]] uint8_t __pad0d91[0x3]; 	// 0xd91
+	[[maybe_unused]] uint8_t __pad0d91[0x3]; // 0xd91
 public:
 	// MPropertyFriendlyName "constrain radius to no more than this times the length"
 	// MPropertySuppressExpr "m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION || m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_ROPE"
@@ -9543,7 +9543,7 @@ public:
 class C_OP_RenderClothForce : public CParticleFunctionRenderer
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -9551,7 +9551,7 @@ public:
 class C_OP_Callback : public CParticleFunctionRenderer
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 9
@@ -9755,7 +9755,7 @@ public:
 	// MPropertyFriendlyName "outline color"
 	Color m_OutlineColor; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01d4[0x4]; 	// 0x1d4
+	[[maybe_unused]] uint8_t __pad01d4[0x4]; // 0x1d4
 public:
 	// MPropertyFriendlyName "default text"
 	CUtlString m_DefaultText; // 0x1d8	
@@ -9774,7 +9774,7 @@ public:
 	// MPropertyAttributeChoiceName "vector_component"
 	int32_t m_nOutputField; // 0x1d8	
 private:
-	[[maybe_unused]] uint8_t __pad01dc[0x4]; 	// 0x1dc
+	[[maybe_unused]] uint8_t __pad01dc[0x4]; // 0x1dc
 public:
 	// MPropertyFriendlyName "amplitude"
 	CPerParticleFloatInput m_flAmplitude; // 0x1e0	

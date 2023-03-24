@@ -916,7 +916,7 @@ public:
 	// MPropertyDescription "Sets the mood's animation buckets to be active when the character is talking"
 	bool m_bActiveTalking; // 0x9	
 private:
-	[[maybe_unused]] uint8_t __pad000a[0x6]; 	// 0xa
+	[[maybe_unused]] uint8_t __pad000a[0x6]; // 0xa
 public:
 	// MPropertyDescription "List of animations to choose from"
 	CUtlVector< MoodAnimation_t > m_layerAnimations; // 0x10	
@@ -928,7 +928,7 @@ public:
 	// MPropertyDescription "When scaling an animation, grab the scale value as in int. Used for gestures/postures to control number of looping sections"
 	bool m_bScaleWithInts; // 0x38	
 private:
-	[[maybe_unused]] uint8_t __pad0039[0x3]; 	// 0x39
+	[[maybe_unused]] uint8_t __pad0039[0x3]; // 0x39
 public:
 	// MPropertyDescription "Time before the next animation can start"
 	CRangeFloat m_flNextStart; // 0x3c	
@@ -953,7 +953,7 @@ public:
 	// MPropertyDescription "Type of mood"
 	MoodType_t m_nMoodType; // 0xe0	
 private:
-	[[maybe_unused]] uint8_t __pad00e4[0x4]; 	// 0xe4
+	[[maybe_unused]] uint8_t __pad00e4[0x4]; // 0xe4
 public:
 	// MPropertyDescription "Layers for this mood"
 	CUtlVector< MoodAnimationLayer_t > m_animationLayers; // 0xe8	
@@ -990,7 +990,7 @@ public:
 	matrix3x4a_t m_rootToWorld; // 0x10	
 	bool m_bBonesInWorldSpace; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0041[0x7]; 	// 0x41
+	[[maybe_unused]] uint8_t __pad0041[0x7]; // 0x41
 public:
 	CUtlVector< uint32 > m_boneSetupMask; // 0x48	
 	CUtlVector< matrix3x4a_t > m_boneTransforms; // 0x60	
@@ -998,7 +998,7 @@ public:
 	AnimationSnapshotType_t m_SnapshotType; // 0x90	
 	bool m_bHasDecodeDump; // 0x94	
 private:
-	[[maybe_unused]] uint8_t __pad0095[0x3]; 	// 0x95
+	[[maybe_unused]] uint8_t __pad0095[0x3]; // 0x95
 public:
 	AnimationDecodeDebugDumpElement_t m_DecodeDump; // 0x98	
 };
@@ -1010,7 +1010,7 @@ struct AnimationSnapshot_t : public AnimationSnapshotBase_t
 public:
 	int32_t m_nEntIndex; // 0x110	
 private:
-	[[maybe_unused]] uint8_t __pad0114[0x4]; 	// 0x114
+	[[maybe_unused]] uint8_t __pad0114[0x4]; // 0x114
 public:
 	CUtlString m_modelName; // 0x118	
 };
@@ -1130,7 +1130,7 @@ public:
 	uint32_t m_nLocalElementMasks; // 0x4	
 	int32_t m_nLocalChannel; // 0x8	
 private:
-	[[maybe_unused]] uint8_t __pad000c[0x4]; 	// 0xc
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
 public:
 	CUtlBinaryBlock m_container; // 0x10	
 };
@@ -1188,11 +1188,11 @@ public:
 	CBufferString m_name; // 0x0	
 	CAnimDesc_Flag m_flags; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad0017[0x1]; 	// 0x17
+	[[maybe_unused]] uint8_t __pad0017[0x1]; // 0x17
 public:
 	float fps; // 0x18	
 private:
-	[[maybe_unused]] uint8_t __pad001c[0x4]; 	// 0x1c
+	[[maybe_unused]] uint8_t __pad001c[0x4]; // 0x1c
 public:
 	// MKV3TransferName "m_pData"
 	CAnimEncodedFrames m_Data; // 0x20	
@@ -1204,7 +1204,7 @@ public:
 	Vector m_vecRootMin; // 0x15c	
 	Vector m_vecRootMax; // 0x168	
 private:
-	[[maybe_unused]] uint8_t __pad0174[0x4]; 	// 0x174
+	[[maybe_unused]] uint8_t __pad0174[0x4]; // 0x174
 public:
 	CUtlVector< Vector > m_vecBoneWorldMin; // 0x178	
 	CUtlVector< Vector > m_vecBoneWorldMax; // 0x190	
@@ -1232,7 +1232,7 @@ public:
 	CUtlVector< CAnimDecoder > m_decoderArray; // 0x38	
 	int32_t m_nMaxUniqueFrameIndex; // 0x50	
 private:
-	[[maybe_unused]] uint8_t __pad0054[0x4]; 	// 0x54
+	[[maybe_unused]] uint8_t __pad0054[0x4]; // 0x54
 public:
 	CUtlVector< CAnimFrameSegment > m_segmentArray; // 0x58	
 };
@@ -1286,7 +1286,7 @@ public:
 	CUtlVector< CBufferString > m_morphArray; // 0x40	
 	int32_t m_nChannelElements; // 0x58	
 private:
-	[[maybe_unused]] uint8_t __pad005c[0x4]; 	// 0x5c
+	[[maybe_unused]] uint8_t __pad005c[0x4]; // 0x5c
 public:
 	CUtlVector< CAnimDataChannelDesc > m_dataChannelArray; // 0x60	
 };
@@ -1341,11 +1341,11 @@ class CAnimationGroup
 public:
 	uint32_t m_nFlags; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad0014[0x4]; 	// 0x14
+	[[maybe_unused]] uint8_t __pad0014[0x4]; // 0x14
 public:
 	CBufferString m_name; // 0x18	
 private:
-	[[maybe_unused]] uint8_t __pad0028[0x38]; 	// 0x28
+	[[maybe_unused]] uint8_t __pad0028[0x38]; // 0x28
 public:
 	// MKV3TransferName "m_localHAnimArray"
 	CUtlVector< CStrongHandle< InfoForResourceTypeCAnimData > > m_localHAnimArray_Handle; // 0x60	
@@ -1408,7 +1408,7 @@ public:
 	CUtlVector< float32 > m_flBoneWeightArray; // 0x28	
 	float m_flDefaultMorphCtrlWeight; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0044[0x4]; 	// 0x44
+	[[maybe_unused]] uint8_t __pad0044[0x4]; // 0x44
 public:
 	CUtlVector< CUtlPair< CBufferString, float32 > > m_morphCtrlWeightArray; // 0x48	
 };
@@ -1476,12 +1476,12 @@ public:
 	CBufferString m_sName; // 0x0	
 	CSeqSeqDescFlag m_flags; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad001b[0x5]; 	// 0x1b
+	[[maybe_unused]] uint8_t __pad001b[0x5]; // 0x1b
 public:
 	CSeqMultiFetch m_fetch; // 0x20	
 	int32_t m_nLocalWeightlist; // 0x88	
 private:
-	[[maybe_unused]] uint8_t __pad008c[0x4]; 	// 0x8c
+	[[maybe_unused]] uint8_t __pad008c[0x4]; // 0x8c
 public:
 	CUtlVector< CSeqAutoLayer > m_autoLayerArray; // 0x90	
 	CUtlVector< CSeqIKLock > m_IKLockArray; // 0xa8	
@@ -1501,7 +1501,7 @@ public:
 	CBufferString m_sName; // 0x0	
 	CSeqSeqDescFlag m_flags; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad001b[0x1]; 	// 0x1b
+	[[maybe_unused]] uint8_t __pad001b[0x1]; // 0x1b
 public:
 	CSeqTransition m_transition; // 0x1c	
 	int16_t m_nLocalBaseReference; // 0x24	
@@ -1521,7 +1521,7 @@ public:
 	int16_t m_nSrcResult; // 0x8	
 	bool m_bSpline; // 0xa	
 private:
-	[[maybe_unused]] uint8_t __pad000b[0x1]; 	// 0xb
+	[[maybe_unused]] uint8_t __pad000b[0x1]; // 0xb
 public:
 	float m_flVar1; // 0xc	
 	float m_flVar2; // 0x10	
@@ -1541,7 +1541,7 @@ public:
 	bool m_bY; // 0x35	
 	bool m_bZ; // 0x36	
 private:
-	[[maybe_unused]] uint8_t __pad0037[0x1]; 	// 0x37
+	[[maybe_unused]] uint8_t __pad0037[0x1]; // 0x37
 public:
 	int32_t m_eType; // 0x38	
 };
@@ -1554,7 +1554,7 @@ public:
 	CBufferString m_sName; // 0x0	
 	CSeqSeqDescFlag m_flags; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad001b[0x1]; 	// 0x1b
+	[[maybe_unused]] uint8_t __pad001b[0x1]; // 0x1b
 public:
 	CSeqTransition m_transition; // 0x1c	
 	int16_t m_nFrameRangeSequence; // 0x24	
@@ -1588,7 +1588,7 @@ public:
 	CBufferString m_sName; // 0x10	
 	uint32_t m_nFlags; // 0x20	
 private:
-	[[maybe_unused]] uint8_t __pad0024[0x4]; 	// 0x24
+	[[maybe_unused]] uint8_t __pad0024[0x4]; // 0x24
 public:
 	CUtlVector< CBufferString > m_localSequenceNameArray; // 0x28	
 	CUtlVector< CSeqS1SeqDesc > m_localS1SeqDescArray; // 0x40	
@@ -1619,7 +1619,7 @@ public:
 	CUtlVector< CUtlVector< int32 > > m_nElementUniqueID; // 0xb0	
 	CUtlVector< uint32 > m_nElementMask; // 0xc8	
 private:
-	[[maybe_unused]] uint8_t __pad00e0[0x18]; 	// 0xe0
+	[[maybe_unused]] uint8_t __pad00e0[0x18]; // 0xe0
 public:
 	CUtlVector< CCompressor< Vector >* > m_vectorCompressor; // 0xf8	
 	CUtlVector< CCompressor< Quaternion >* > m_quaternionCompressor; // 0x110	
@@ -1654,7 +1654,7 @@ public:
 	VectorAligned m_vWsPosition; // 0x10	
 	Color m_Color; // 0x20	
 private:
-	[[maybe_unused]] uint8_t __pad0024[0x4]; 	// 0x24
+	[[maybe_unused]] uint8_t __pad0024[0x4]; // 0x24
 public:
 	CUtlString m_Text; // 0x28	
 };
@@ -1962,7 +1962,7 @@ public:
 class CStaticPoseCacheBuilder : public CStaticPoseCache
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 10
@@ -1987,7 +1987,7 @@ public:
 class CAnimGraphSettingsGroup
 {
 public:
-	uint8_t __pad0000[0x20]; 	// @note: autoaligned
+	uint8_t __pad0000[0x20]; // Autoaligned
 };
 
 // Alignment: 1
@@ -2007,14 +2007,14 @@ public:
 	// MPropertyHideField
 	CUtlString m_group; // 0x18	
 private:
-	[[maybe_unused]] uint8_t __pad0020[0x8]; 	// 0x20
+	[[maybe_unused]] uint8_t __pad0020[0x8]; // 0x20
 public:
 	// MPropertyHideField
 	AnimComponentID m_id; // 0x28	
 	// MPropertyFriendlyName "Start Enabled"
 	bool m_bStartEnabled; // 0x2c	
 private:
-	[[maybe_unused]] uint8_t __pad002d[0x3]; 	// 0x2d
+	[[maybe_unused]] uint8_t __pad002d[0x3]; // 0x2d
 public:
 	// MPropertyFriendlyName "Priority"
 	int32_t m_nPriority; // 0x30	
@@ -2082,7 +2082,7 @@ public:
 	// MPropertyAttrStateCallback
 	AnimParamID m_vectorParamOut; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad0014[0x4]; 	// 0x14
+	[[maybe_unused]] uint8_t __pad0014[0x4]; // 0x14
 public:
 	// MPropertyFriendlyName "Damping"
 	CAnimInputDamping m_damping; // 0x18	
@@ -2119,7 +2119,7 @@ public:
 	// MPropertyFriendlyName "Network Path"
 	bool m_bNetworkPath; // 0x78	
 private:
-	[[maybe_unused]] uint8_t __pad0079[0x3]; 	// 0x79
+	[[maybe_unused]] uint8_t __pad0079[0x3]; // 0x79
 public:
 	// MPropertyGroupName "+Facing"
 	// MPropertyFriendlyName "Default Mode"
@@ -2131,7 +2131,7 @@ public:
 	// MPropertyFriendlyName "Network Facing"
 	bool m_bNetworkFacing; // 0x98	
 private:
-	[[maybe_unused]] uint8_t __pad0099[0x3]; 	// 0x99
+	[[maybe_unused]] uint8_t __pad0099[0x3]; // 0x99
 public:
 	// MPropertyHideField
 	AnimParamID m_paramIDs[27]; // 0x9c	
@@ -2153,7 +2153,7 @@ public:
 	// MPropertyFriendlyName "Network Look Target"
 	bool m_bNetworkLookTarget; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0041[0x3]; 	// 0x41
+	[[maybe_unused]] uint8_t __pad0041[0x3]; // 0x41
 public:
 	// MPropertyHideField
 	AnimParamID m_lookHeadingID; // 0x44	
@@ -2251,7 +2251,7 @@ public:
 class CAnimActionBase
 {
 public:
-	uint8_t __pad0000[0x38]; 	// @note: autoaligned
+	uint8_t __pad0000[0x38]; // Autoaligned
 };
 
 // Alignment: 1
@@ -2323,7 +2323,7 @@ public:
 class CPathAnimMotor : public CPathAnimMotorBase
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 7
@@ -2363,7 +2363,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bUseAcceleration; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0041[0x3]; 	// 0x41
+	[[maybe_unused]] uint8_t __pad0041[0x3]; // 0x41
 public:
 	// MPropertyFriendlyName "Spring Constant"
 	// MPropertyAttrStateCallback
@@ -2391,13 +2391,13 @@ public:
 	// MPropertyHideField
 	AnimParamID m_id; // 0x28	
 private:
-	[[maybe_unused]] uint8_t __pad002c[0x4]; 	// 0x2c
+	[[maybe_unused]] uint8_t __pad002c[0x4]; // 0x2c
 public:
 	// MPropertyHideField
 	// MPropertyAttrChangeCallback
 	CUtlString m_componentName; // 0x30	
 private:
-	[[maybe_unused]] uint8_t __pad0038[0x4]; 	// 0x38
+	[[maybe_unused]] uint8_t __pad0038[0x4]; // 0x38
 public:
 	// MPropertyFriendlyName "Preview Button"
 	AnimParamButton_t m_previewButton; // 0x3c	
@@ -2433,7 +2433,7 @@ public:
 	// MPropertyFriendlyName "Default Value"
 	uint8_t m_defaultValue; // 0x50	
 private:
-	[[maybe_unused]] uint8_t __pad0051[0x7]; 	// 0x51
+	[[maybe_unused]] uint8_t __pad0051[0x7]; // 0x51
 public:
 	// MPropertyFriendlyName "Values"
 	CUtlVector< CUtlString > m_enumOptions; // 0x58	
@@ -2730,7 +2730,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bApplyMovement; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0041[0x3]; 	// 0x41
+	[[maybe_unused]] uint8_t __pad0041[0x3]; // 0x41
 public:
 	// MPropertyFriendlyName "Movement Velocity Parameter"
 	// MPropertyGroupName "Generate Movement"
@@ -2742,7 +2742,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bOrientMovement; // 0x48	
 private:
-	[[maybe_unused]] uint8_t __pad0049[0x3]; 	// 0x49
+	[[maybe_unused]] uint8_t __pad0049[0x3]; // 0x49
 public:
 	// MPropertyFriendlyName "Movement Heading Parameter"
 	// MPropertyGroupName "Orient Movement"
@@ -2756,7 +2756,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bTurnToFace; // 0x51	
 private:
-	[[maybe_unused]] uint8_t __pad0052[0x2]; 	// 0x52
+	[[maybe_unused]] uint8_t __pad0052[0x2]; // 0x52
 public:
 	// MPropertyFriendlyName "Turn to Face Offset"
 	// MPropertyAttributeRange "-180 180"
@@ -2779,7 +2779,7 @@ public:
 	// MPropertyAttrStateCallback
 	AnimParamID m_param; // 0x60	
 private:
-	[[maybe_unused]] uint8_t __pad0064[0x4]; 	// 0x64
+	[[maybe_unused]] uint8_t __pad0064[0x4]; // 0x64
 public:
 	// MPropertyFriendlyName "Damping"
 	// MPropertyGroupName "Turn to Face"
@@ -2817,7 +2817,7 @@ public:
 	// MPropertyFriendlyName "Use Manual Turn Offset"
 	bool m_bUseManualTurnOffset; // 0x4d	
 private:
-	[[maybe_unused]] uint8_t __pad004e[0x2]; 	// 0x4e
+	[[maybe_unused]] uint8_t __pad004e[0x2]; // 0x4e
 public:
 	// MPropertyFriendlyName "Manual Turn Offset"
 	float m_manualTurnOffset; // 0x50	
@@ -2841,7 +2841,7 @@ public:
 	// MPropertyAttributeChoiceName "VectorParameter"
 	AnimParamID m_param; // 0x58	
 private:
-	[[maybe_unused]] uint8_t __pad005c[0x4]; 	// 0x5c
+	[[maybe_unused]] uint8_t __pad005c[0x4]; // 0x5c
 public:
 	// MPropertyFriendlyName "Aim Attachment"
 	// MPropertyAttributeChoiceName "Attachment"
@@ -2850,7 +2850,7 @@ public:
 	// MPropertyAttrChangeCallback
 	AimMatrixBlendMode m_blendMode; // 0x68	
 private:
-	[[maybe_unused]] uint8_t __pad006c[0x4]; 	// 0x6c
+	[[maybe_unused]] uint8_t __pad006c[0x4]; // 0x6c
 public:
 	// MPropertyFriendlyName "Bone Mask"
 	// MPropertyAttributeChoiceName "BoneMask"
@@ -2861,7 +2861,7 @@ public:
 	// MPropertyFriendlyName "Lock Blend When Waning"
 	bool m_bLockWhenWaning; // 0x79	
 private:
-	[[maybe_unused]] uint8_t __pad007a[0x6]; 	// 0x7a
+	[[maybe_unused]] uint8_t __pad007a[0x6]; // 0x7a
 public:
 	// MPropertyFriendlyName "Damping"
 	CAnimInputDamping m_damping; // 0x80	
@@ -2898,7 +2898,7 @@ public:
 	// MPropertyFriendlyName "Lock Blend on Reset"
 	bool m_bLockBlendOnReset; // 0x51	
 private:
-	[[maybe_unused]] uint8_t __pad0052[0x2]; 	// 0x52
+	[[maybe_unused]] uint8_t __pad0052[0x2]; // 0x52
 public:
 	// MPropertyFriendlyName "Playback Speed"
 	float m_playbackSpeed; // 0x54	
@@ -2945,7 +2945,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bUseBlendScale; // 0x54	
 private:
-	[[maybe_unused]] uint8_t __pad0055[0x3]; 	// 0x55
+	[[maybe_unused]] uint8_t __pad0055[0x3]; // 0x55
 public:
 	// MPropertyFriendlyName "Blend Source"
 	// MPropertyAttrChangeCallback
@@ -3015,7 +3015,7 @@ public:
 	// MPropertyFriendlyName "Horizontal Axis"
 	Vector m_horizontalAxisDirection; // 0x60	
 private:
-	[[maybe_unused]] uint8_t __pad006c[0x4]; 	// 0x6c
+	[[maybe_unused]] uint8_t __pad006c[0x4]; // 0x6c
 public:
 	// MPropertyFriendlyName "Damping"
 	CAnimInputDamping m_damping; // 0x70	
@@ -3036,7 +3036,7 @@ public:
 	// MPropertyAttrChangeCallback
 	IkEndEffectorType m_endEffectorType; // 0x48	
 private:
-	[[maybe_unused]] uint8_t __pad004c[0x4]; 	// 0x4c
+	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
 public:
 	// MPropertyGroupName "End Effector"
 	// MPropertyFriendlyName "Attachment"
@@ -3048,7 +3048,7 @@ public:
 	// MPropertyAttrChangeCallback
 	IkTargetType m_targetType; // 0x58	
 private:
-	[[maybe_unused]] uint8_t __pad005c[0x4]; 	// 0x5c
+	[[maybe_unused]] uint8_t __pad005c[0x4]; // 0x5c
 public:
 	// MPropertyGroupName "Target"
 	// MPropertyFriendlyName "Attachment"
@@ -3070,7 +3070,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bMatchTargetOrientation; // 0x74	
 private:
-	[[maybe_unused]] uint8_t __pad0075[0x3]; 	// 0x75
+	[[maybe_unused]] uint8_t __pad0075[0x3]; // 0x75
 public:
 	// MPropertyGroupName "Target"
 	// MPropertyFriendlyName "Rotation Parameter"
@@ -3142,7 +3142,7 @@ public:
 	// MPropertyAttributeChoiceName "FloatParameter"
 	AnimParamID m_weightParam; // 0x48	
 private:
-	[[maybe_unused]] uint8_t __pad004c[0x4]; 	// 0x4c
+	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
 public:
 	// MPropertyFriendlyName "LookAt Chain"
 	// MPropertyAttributeChoiceName "LookAtChain"
@@ -3164,7 +3164,7 @@ public:
 	// MPropertyGroupName "Hysteresis"
 	bool m_bUseHysteresis; // 0x6a	
 private:
-	[[maybe_unused]] uint8_t __pad006b[0x1]; 	// 0x6b
+	[[maybe_unused]] uint8_t __pad006b[0x1]; // 0x6b
 public:
 	// MPropertyFriendlyName "Inner Angle"
 	// MPropertyGroupName "Hysteresis"
@@ -3173,7 +3173,7 @@ public:
 	// MPropertyGroupName "Hysteresis"
 	float m_flHysteresisOuterAngle; // 0x70	
 private:
-	[[maybe_unused]] uint8_t __pad0074[0x4]; 	// 0x74
+	[[maybe_unused]] uint8_t __pad0074[0x4]; // 0x74
 public:
 	// MPropertyFriendlyName "Damping"
 	CAnimInputDamping m_damping; // 0x78	
@@ -3285,7 +3285,7 @@ public:
 	// MPropertyFriendlyName "Start new option at same cycle"
 	bool m_bSyncCyclesOnChange; // 0x8d	
 private:
-	[[maybe_unused]] uint8_t __pad008e[0x2]; 	// 0x8e
+	[[maybe_unused]] uint8_t __pad008e[0x2]; // 0x8e
 public:
 	// MPropertySuppressField
 	CBlendCurve m_blendCurve; // 0x90	
@@ -3361,14 +3361,14 @@ public:
 	// MPropertyFriendlyName "Blend Value"
 	Vector2D m_blendValue; // 0x18	
 private:
-	[[maybe_unused]] uint8_t __pad0020[0x8]; 	// 0x20
+	[[maybe_unused]] uint8_t __pad0020[0x8]; // 0x20
 public:
 	// MPropertyGroupName "+Duration Override"
 	// MPropertyFriendlyName "Use Custom Duration"
 	// MPropertyAttrChangeCallback
 	bool m_bUseCustomDuration; // 0x28	
 private:
-	[[maybe_unused]] uint8_t __pad0029[0x3]; 	// 0x29
+	[[maybe_unused]] uint8_t __pad0029[0x3]; // 0x29
 public:
 	// MPropertyGroupName "+Duration Override"
 	// MPropertyFriendlyName "Custom Duration"
@@ -3427,7 +3427,7 @@ public:
 	// MPropertyFriendlyName "Lock Blend When Waning"
 	bool m_bLockWhenWaning; // 0x7a	
 private:
-	[[maybe_unused]] uint8_t __pad007b[0x1]; 	// 0x7b
+	[[maybe_unused]] uint8_t __pad007b[0x1]; // 0x7b
 public:
 	// MPropertyFriendlyName "Playback Speed"
 	float m_playbackSpeed; // 0x7c	
@@ -3451,7 +3451,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bAnimationDriven; // 0x45	
 private:
-	[[maybe_unused]] uint8_t __pad0046[0x2]; 	// 0x46
+	[[maybe_unused]] uint8_t __pad0046[0x2]; // 0x46
 public:
 	// MPropertyFriendlyName "Base Anim Clips"
 	// MPropertyGroupName "Anim Driven Settings"
@@ -3529,7 +3529,7 @@ public:
 	// MPropertyFriendlyName "Reset Child"
 	bool m_bResetChild; // 0x65	
 private:
-	[[maybe_unused]] uint8_t __pad0066[0x2]; 	// 0x66
+	[[maybe_unused]] uint8_t __pad0066[0x2]; // 0x66
 public:
 	// MPropertyFriendlyName "IK Solver Type"
 	// MPropertyGroupName "IK"
@@ -3540,7 +3540,7 @@ public:
 	// MPropertyAttrStateCallback
 	bool m_bAlwaysUseFallbackHinge; // 0x6c	
 private:
-	[[maybe_unused]] uint8_t __pad006d[0x3]; 	// 0x6d
+	[[maybe_unused]] uint8_t __pad006d[0x3]; // 0x6d
 public:
 	// MPropertyFriendlyName "Curve Foot Paths"
 	// MPropertyGroupName "Curve Paths"
@@ -3558,7 +3558,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bModulateStepHeight; // 0x79	
 private:
-	[[maybe_unused]] uint8_t __pad007a[0x2]; 	// 0x7a
+	[[maybe_unused]] uint8_t __pad007a[0x2]; // 0x7a
 public:
 	// MPropertyFriendlyName "Height Increase Scale"
 	// MPropertyGroupName "Step Height"
@@ -3572,14 +3572,14 @@ public:
 	// MPropertyGroupName "Hip Shift"
 	bool m_bEnableHipShift; // 0x84	
 private:
-	[[maybe_unused]] uint8_t __pad0085[0x3]; 	// 0x85
+	[[maybe_unused]] uint8_t __pad0085[0x3]; // 0x85
 public:
 	// MPropertyFriendlyName "Hip Shift Scale"
 	// MPropertyGroupName "Hip Shift"
 	// MPropertyAttributeRange "0 1"
 	float m_flHipShiftScale; // 0x88	
 private:
-	[[maybe_unused]] uint8_t __pad008c[0x4]; 	// 0x8c
+	[[maybe_unused]] uint8_t __pad008c[0x4]; // 0x8c
 public:
 	// MPropertyFriendlyName "Damping"
 	// MPropertyGroupName "Hip Shift"
@@ -3588,7 +3588,7 @@ public:
 	// MPropertyGroupName "Tilt"
 	bool m_bApplyTilt; // 0xa8	
 private:
-	[[maybe_unused]] uint8_t __pad00a9[0x3]; 	// 0xa9
+	[[maybe_unused]] uint8_t __pad00a9[0x3]; // 0xa9
 public:
 	// MPropertyFriendlyName "Tilt Plane Pitch Spring Strength"
 	// MPropertyGroupName "Tilt"
@@ -3600,7 +3600,7 @@ public:
 	// MPropertyGroupName "Lock Breaking"
 	bool m_bEnableLockBreaking; // 0xb4	
 private:
-	[[maybe_unused]] uint8_t __pad00b5[0x3]; 	// 0xb5
+	[[maybe_unused]] uint8_t __pad00b5[0x3]; // 0xb5
 public:
 	// MPropertyFriendlyName "Tolerance"
 	// MPropertyGroupName "Lock Breaking"
@@ -3612,7 +3612,7 @@ public:
 	// MPropertyGroupName "Stretch"
 	bool m_bEnableStretching; // 0xc0	
 private:
-	[[maybe_unused]] uint8_t __pad00c1[0x3]; 	// 0xc1
+	[[maybe_unused]] uint8_t __pad00c1[0x3]; // 0xc1
 public:
 	// MPropertyFriendlyName "Max Stretch Amount"
 	// MPropertyGroupName "Stretch"
@@ -3626,7 +3626,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bEnableGroundTracing; // 0xcc	
 private:
-	[[maybe_unused]] uint8_t __pad00cd[0x3]; 	// 0xcd
+	[[maybe_unused]] uint8_t __pad00cd[0x3]; // 0xcd
 public:
 	// MPropertyFriendlyName "Angle Traces with Slope"
 	// MPropertyGroupName "Ground IK"
@@ -3639,7 +3639,7 @@ public:
 	// MPropertyAttrStateCallback
 	bool m_bApplyHipDrop; // 0xd4	
 private:
-	[[maybe_unused]] uint8_t __pad00d5[0x3]; 	// 0xd5
+	[[maybe_unused]] uint8_t __pad00d5[0x3]; // 0xd5
 public:
 	// MPropertyFriendlyName "Max Foot Lift"
 	// MPropertyGroupName "Ground IK"
@@ -3658,7 +3658,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bEnableRootHeightDamping; // 0xf8	
 private:
-	[[maybe_unused]] uint8_t __pad00f9[0x7]; 	// 0xf9
+	[[maybe_unused]] uint8_t __pad00f9[0x7]; // 0xf9
 public:
 	// MPropertyFriendlyName "Damping Settings"
 	// MPropertyGroupName "Root Height Damping"
@@ -3692,7 +3692,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bScaleSpeed; // 0x46	
 private:
-	[[maybe_unused]] uint8_t __pad0047[0x1]; 	// 0x47
+	[[maybe_unused]] uint8_t __pad0047[0x1]; // 0x47
 public:
 	// MPropertyFriendlyName "Scale"
 	// MPropertyGroupName "Speed Scaling"
@@ -3718,7 +3718,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bTurnToFace; // 0x58	
 private:
-	[[maybe_unused]] uint8_t __pad0059[0x3]; 	// 0x59
+	[[maybe_unused]] uint8_t __pad0059[0x3]; // 0x59
 public:
 	// MPropertyFriendlyName "Target"
 	// MPropertyGroupName "Turn to Face"
@@ -3765,7 +3765,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bSearchAtInterval; // 0x94	
 private:
-	[[maybe_unused]] uint8_t __pad0095[0x3]; 	// 0x95
+	[[maybe_unused]] uint8_t __pad0095[0x3]; // 0x95
 public:
 	// MPropertyFriendlyName "Search Interval"
 	// MPropertyGroupName "Search Triggers"
@@ -3794,7 +3794,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bGoalAssist; // 0xa9	
 private:
-	[[maybe_unused]] uint8_t __pad00aa[0x2]; 	// 0xaa
+	[[maybe_unused]] uint8_t __pad00aa[0x2]; // 0xaa
 public:
 	// MPropertyFriendlyName "Goal Assist Distance"
 	// MPropertyGroupName "Goal Assist"
@@ -3809,7 +3809,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bEnableDistanceScaling; // 0xb4	
 private:
-	[[maybe_unused]] uint8_t __pad00b5[0x3]; 	// 0xb5
+	[[maybe_unused]] uint8_t __pad00b5[0x3]; // 0xb5
 public:
 	// MPropertyFriendlyName "Outer Stopping Radius"
 	// MPropertyGroupName "Distance Scaling"
@@ -3969,7 +3969,7 @@ public:
 class CInputStreamAnimNode : public CAnimNodeBase
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 3
@@ -3983,7 +3983,7 @@ public:
 	// MPropertyFriendlyName "Trigger Phase"
 	StepPhase m_triggerPhase; // 0x8	
 private:
-	[[maybe_unused]] uint8_t __pad000c[0x4]; 	// 0xc
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
 public:
 	// MPropertyFriendlyName "Tags"
 	// MPropertyAttributeChoiceName "Tag"
@@ -4000,7 +4000,7 @@ public:
 	// MPropertyFriendlyName "Tolerance"
 	float m_flTolerance; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0044[0x4]; 	// 0x44
+	[[maybe_unused]] uint8_t __pad0044[0x4]; // 0x44
 public:
 	// MPropertyFriendlyName "Feet"
 	// MPropertyAutoExpandSelf
@@ -4095,7 +4095,7 @@ public:
 	struct 
 	{
 		uint8_t m_bDisabled: 1; 		
-		uint8_t __pad0: 1; // @note: autoaligned
+		uint8_t __pad0: 1; // Autoaligned
 	}; // 2 bits
 };
 
@@ -4113,7 +4113,7 @@ public:
 		uint8_t m_bIsStartState: 1; 		
 		uint8_t m_bIsEndState: 1; 		
 		uint8_t m_bIsPassthrough: 1; 		
-		uint8_t __pad1: 3; // @note: autoaligned
+		uint8_t __pad1: 3; // Autoaligned
 	}; // 6 bits
 };
 
@@ -4125,7 +4125,7 @@ public:
 	CUtlVector< CStateUpdateData > m_states; // 0x8	
 	CUtlVector< CTransitionUpdateData > m_transitions; // 0x20	
 private:
-	[[maybe_unused]] uint8_t __pad0038[0x18]; 	// 0x38
+	[[maybe_unused]] uint8_t __pad0038[0x18]; // 0x38
 public:
 	int32_t m_startStateIndex; // 0x50	
 };
@@ -4302,7 +4302,7 @@ public:
 class CStringAnimTag : public CAnimTagBase
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 1
@@ -4354,7 +4354,7 @@ public:
 	// MPropertyFriendlyName "Footstep Type"
 	FootstepLandedFootSoundType_t m_FootstepType; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0044[0x4]; 	// 0x44
+	[[maybe_unused]] uint8_t __pad0044[0x4]; // 0x44
 public:
 	// MPropertyFriendlyName "Override Sound"
 	// MPropertyAttributeChoiceName "Sound"
@@ -4400,7 +4400,7 @@ public:
 	// MPropertyAttributeRange "0 1"
 	float m_flEaseOut; // 0x48	
 private:
-	[[maybe_unused]] uint8_t __pad004c[0x4]; 	// 0x4c
+	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
 public:
 	// MPropertyFriendlyName "VertexSet"
 	CUtlString m_nVertexSet; // 0x50	
@@ -4486,7 +4486,7 @@ public:
 	// MPropertyFriendlyName "Priority"
 	int32_t m_nPriority; // 0x48	
 private:
-	[[maybe_unused]] uint8_t __pad004c[0x4]; 	// 0x4c
+	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
 public:
 	// MPropertyFriendlyName "Body Group Settings"
 	CUtlVector< CBodyGroupSetting > m_bodyGroupSettings; // 0x50	
@@ -4545,7 +4545,7 @@ public:
 class CCurrentVelocityMetric : public CMotionMetricBase
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 4
@@ -4556,7 +4556,7 @@ public:
 	// MPropertyFriendlyName "Distance"
 	float m_flDistance; // 0x28	
 private:
-	[[maybe_unused]] uint8_t __pad002c[0x4]; 	// 0x2c
+	[[maybe_unused]] uint8_t __pad002c[0x4]; // 0x2c
 public:
 	// MPropertyFriendlyName "Samples Times"
 	CUtlVector< float32 > m_pathSamples; // 0x30	
@@ -4564,7 +4564,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bExtrapolateMovement; // 0x48	
 private:
-	[[maybe_unused]] uint8_t __pad0049[0x3]; 	// 0x49
+	[[maybe_unused]] uint8_t __pad0049[0x3]; // 0x49
 public:
 	// MPropertyFriendlyName "Min Extrapolation Speed"
 	// MPropertyAttrStateCallback
@@ -4595,7 +4595,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bAutoTargetSpeed; // 0x31	
 private:
-	[[maybe_unused]] uint8_t __pad0032[0x2]; 	// 0x32
+	[[maybe_unused]] uint8_t __pad0032[0x2]; // 0x32
 public:
 	// MPropertyFriendlyName "Target Speed"
 	// MPropertyAttrStateCallback
@@ -4633,7 +4633,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bFilterFixedMinDistance; // 0x2c	
 private:
-	[[maybe_unused]] uint8_t __pad002d[0x3]; 	// 0x2d
+	[[maybe_unused]] uint8_t __pad002d[0x3]; // 0x2d
 public:
 	// MPropertyFriendlyName "Min Distance"
 	// MPropertyAttrStateCallback
@@ -4642,7 +4642,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bFilterGoalDistance; // 0x34	
 private:
-	[[maybe_unused]] uint8_t __pad0035[0x3]; 	// 0x35
+	[[maybe_unused]] uint8_t __pad0035[0x3]; // 0x35
 public:
 	// MPropertyFriendlyName "Goal Filter Start Distance"
 	// MPropertyAttrStateCallback
@@ -4652,7 +4652,7 @@ public:
 	// MPropertyAttrStateCallback
 	bool m_bFilterGoalOvershoot; // 0x3c	
 private:
-	[[maybe_unused]] uint8_t __pad003d[0x3]; 	// 0x3d
+	[[maybe_unused]] uint8_t __pad003d[0x3]; // 0x3d
 public:
 	// MPropertyFriendlyName "Max Goal Overshoot Scale"
 	// MPropertyAttrStateCallback
@@ -4682,7 +4682,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bMatchByTimeRemaining; // 0x28	
 private:
-	[[maybe_unused]] uint8_t __pad0029[0x3]; 	// 0x29
+	[[maybe_unused]] uint8_t __pad0029[0x3]; // 0x29
 public:
 	// MPropertyFriendlyName "Max Time Remaining"
 	// MPropertyAttrStateCallback
@@ -4691,7 +4691,7 @@ public:
 	// MPropertyAttrChangeCallback
 	bool m_bFilterByTimeRemaining; // 0x30	
 private:
-	[[maybe_unused]] uint8_t __pad0031[0x3]; 	// 0x31
+	[[maybe_unused]] uint8_t __pad0031[0x3]; // 0x31
 public:
 	// MPropertyFriendlyName "Min Time Remaining"
 	// MPropertyAttrStateCallback
@@ -4721,7 +4721,7 @@ public:
 	CAnimNodePath m_nodePath; // 0x20	
 	AnimComponentID m_componentID; // 0x50	
 private:
-	[[maybe_unused]] uint8_t __pad0054[0x4]; 	// 0x54
+	[[maybe_unused]] uint8_t __pad0054[0x4]; // 0x54
 public:
 	CUtlVector< char > m_byteCode; // 0x58	
 };
@@ -4751,7 +4751,7 @@ class CAnimReplayFrame
 public:
 	CUtlBinaryBlock m_instanceData; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad0028[0x8]; 	// 0x28
+	[[maybe_unused]] uint8_t __pad0028[0x8]; // 0x28
 public:
 	CTransform m_localToWorldTransform; // 0x30	
 	float m_timeStamp; // 0x50	
@@ -4820,14 +4820,14 @@ public:
 	CAnimInputDamping m_facingDamping; // 0x58	
 	FacingMode m_eDefaultFacingMode; // 0x70	
 private:
-	[[maybe_unused]] uint8_t __pad0074[0x8]; 	// 0x74
+	[[maybe_unused]] uint8_t __pad0074[0x8]; // 0x74
 public:
 	int32_t m_nDefaultMotorIndex; // 0x7c	
 	bool m_bMoveVarsDisabled; // 0x80	
 	bool m_bNetworkPath; // 0x81	
 	bool m_bNetworkFacing; // 0x82	
 private:
-	[[maybe_unused]] uint8_t __pad0083[0x1]; 	// 0x83
+	[[maybe_unused]] uint8_t __pad0083[0x1]; // 0x83
 public:
 	CAnimParamHandle m_paramHandles[27]; // 0x84	
 };
@@ -4863,7 +4863,7 @@ public:
 class CAnimActionUpdater
 {
 public:
-	uint8_t __pad0000[0x18]; 	// @note: autoaligned
+	uint8_t __pad0000[0x18]; // Autoaligned
 };
 
 // Alignment: 2
@@ -4888,7 +4888,7 @@ public:
 class CPathAnimMotorUpdater : public CPathAnimMotorUpdaterBase
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 7
@@ -4912,7 +4912,7 @@ class CPlayerInputAnimMotorUpdater : public CAnimMotorUpdaterBase
 public:
 	CUtlVector< float32 > m_sampleTimes; // 0x20	
 private:
-	[[maybe_unused]] uint8_t __pad0038[0x4]; 	// 0x38
+	[[maybe_unused]] uint8_t __pad0038[0x4]; // 0x38
 public:
 	float m_flSpringConstant; // 0x3c	
 	float m_flAnticipationDistance; // 0x40	
@@ -4934,7 +4934,7 @@ public:
 		uint8_t m_bReset: 1; 		
 		uint8_t m_resetCycleOption: 3; 		
 		uint8_t m_bForceFootPlant: 1; 		
-		uint8_t __pad2: 5; // @note: autoaligned
+		uint8_t __pad2: 5; // Autoaligned
 	}; // 10 bits
 };
 
@@ -4955,7 +4955,7 @@ public:
 	struct 
 	{
 		uint8_t m_bExclusiveRootMotion: 1; 		
-		uint8_t __pad3: 1; // @note: autoaligned
+		uint8_t __pad3: 1; // Autoaligned
 	}; // 2 bits
 };
 
@@ -4978,11 +4978,11 @@ public:
 	CAnimAttachment m_endEffectorAttachment; // 0x10	
 	IkTargetType m_targetType; // 0x90	
 private:
-	[[maybe_unused]] uint8_t __pad0094[0xc]; 	// 0x94
+	[[maybe_unused]] uint8_t __pad0094[0xc]; // 0x94
 public:
 	CAnimAttachment m_targetAttachment; // 0xa0	
 private:
-	[[maybe_unused]] uint8_t __pad0094[0x8c]; 	// 0x94
+	[[maybe_unused]] uint8_t __pad0094[0x8c]; // 0x94
 public:
 	int32_t m_targetBoneIndex; // 0x120	
 	CAnimParamHandle m_hPositionParam; // 0x124	
@@ -4990,7 +4990,7 @@ public:
 	bool m_bMatchTargetOrientation; // 0x134	
 	bool m_bAlwaysUseFallbackHinge; // 0x135	
 private:
-	[[maybe_unused]] uint8_t __pad0136[0xa]; 	// 0x136
+	[[maybe_unused]] uint8_t __pad0136[0xa]; // 0x136
 public:
 	VectorAligned m_vFallbackHingeAxis; // 0x140	
 	int32_t m_nFixedBoneIndex; // 0x150	
@@ -5024,7 +5024,7 @@ public:
 class CLeafUpdateNode : public CAnimUpdateNodeBase
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 9
@@ -5051,7 +5051,7 @@ public:
 	CUtlVector< CAnimUpdateNodeRef > m_children; // 0x58	
 	CUtlVector< int8 > m_tags; // 0x70	
 private:
-	[[maybe_unused]] uint8_t __pad0088[0x4]; 	// 0x88
+	[[maybe_unused]] uint8_t __pad0088[0x4]; // 0x88
 public:
 	CBlendCurve m_blendCurve; // 0x8c	
 	float m_flBlendTime; // 0x94	
@@ -5155,7 +5155,7 @@ public:
 	int32_t m_footstepLandedTagIndex; // 0x2c	
 	bool m_bEnableTracing; // 0x30	
 private:
-	[[maybe_unused]] uint8_t __pad0031[0x3]; 	// 0x31
+	[[maybe_unused]] uint8_t __pad0031[0x3]; // 0x31
 public:
 	float m_flTraceAngleBlend; // 0x34	
 	int32_t m_nDisableTagIndex; // 0x38	
@@ -5175,19 +5175,19 @@ public:
 	bool m_bApplyHipDrop; // 0x39	
 	bool m_bAlwaysUseFallbackHinge; // 0x3a	
 private:
-	[[maybe_unused]] uint8_t __pad003b[0x1]; 	// 0x3b
+	[[maybe_unused]] uint8_t __pad003b[0x1]; // 0x3b
 public:
 	float m_flMaxFootHeight; // 0x3c	
 	float m_flExtensionScale; // 0x40	
 	bool m_bEnableLockBreaking; // 0x44	
 private:
-	[[maybe_unused]] uint8_t __pad0045[0x3]; 	// 0x45
+	[[maybe_unused]] uint8_t __pad0045[0x3]; // 0x45
 public:
 	float m_flLockBreakTolerance; // 0x48	
 	float m_flLockBlendTime; // 0x4c	
 	bool m_bEnableStretching; // 0x50	
 private:
-	[[maybe_unused]] uint8_t __pad0051[0x3]; 	// 0x51
+	[[maybe_unused]] uint8_t __pad0051[0x3]; // 0x51
 public:
 	float m_flMaxStretchAmount; // 0x54	
 	float m_flStretchExtensionScale; // 0x58	
@@ -5203,14 +5203,14 @@ public:
 	bool m_bStopFeetAtGoal; // 0x71	
 	bool m_bScaleSpeed; // 0x72	
 private:
-	[[maybe_unused]] uint8_t __pad0073[0x1]; 	// 0x73
+	[[maybe_unused]] uint8_t __pad0073[0x1]; // 0x73
 public:
 	float m_flScale; // 0x74	
 	float m_flMinAngle; // 0x78	
 	float m_flMaxAngle; // 0x7c	
 	float m_flSpeedScaleBlending; // 0x80	
 private:
-	[[maybe_unused]] uint8_t __pad0084[0x4]; 	// 0x84
+	[[maybe_unused]] uint8_t __pad0084[0x4]; // 0x84
 public:
 	CAnimInputDamping m_turnDamping; // 0x88	
 	AnimValueSource m_facingTarget; // 0xa0	
@@ -5247,7 +5247,7 @@ public:
 	float m_flMaxScale; // 0x74	
 	float m_flMinScale; // 0x78	
 private:
-	[[maybe_unused]] uint8_t __pad007c[0x4]; 	// 0x7c
+	[[maybe_unused]] uint8_t __pad007c[0x4]; // 0x7c
 public:
 	CAnimInputDamping m_damping; // 0x80	
 };
@@ -5273,7 +5273,7 @@ public:
 class CInputStreamUpdateNode : public CLeafUpdateNode
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 3
@@ -5293,7 +5293,7 @@ class CFootStepTriggerUpdateNode : public CUnaryUpdateNode
 public:
 	CUtlVector< FootStepTrigger > m_triggers; // 0x68	
 private:
-	[[maybe_unused]] uint8_t __pad0080[0x4]; 	// 0x80
+	[[maybe_unused]] uint8_t __pad0080[0x4]; // 0x80
 public:
 	float m_flTolerance; // 0x84	
 };
@@ -5313,7 +5313,7 @@ public:
 class ConditionUpdater
 {
 public:
-	uint8_t __pad0000[0x10]; 	// @note: autoaligned
+	uint8_t __pad0000[0x10]; // Autoaligned
 };
 
 // Alignment: 3
@@ -5477,11 +5477,11 @@ public:
 	CMotionDataSet m_dataSet; // 0x58	
 	CUtlVector< CSmartPtr< CMotionMetricEvaluator > > m_metrics; // 0x78	
 private:
-	[[maybe_unused]] uint8_t __pad0090[0x8]; 	// 0x90
+	[[maybe_unused]] uint8_t __pad0090[0x8]; // 0x90
 public:
 	bool m_bSearchAtInterval; // 0x98	
 private:
-	[[maybe_unused]] uint8_t __pad0099[0x3]; 	// 0x99
+	[[maybe_unused]] uint8_t __pad0099[0x3]; // 0x99
 public:
 	float m_flSearchInterval; // 0x9c	
 	bool m_bSearchOnSteps; // 0xa0	
@@ -5494,17 +5494,17 @@ public:
 	float m_flBlendTime; // 0xb4	
 	bool m_bLockClipWhenWaning; // 0xb8	
 private:
-	[[maybe_unused]] uint8_t __pad00b9[0x3]; 	// 0xb9
+	[[maybe_unused]] uint8_t __pad00b9[0x3]; // 0xb9
 public:
 	float m_flSelectionThreshold; // 0xbc	
 	bool m_bGoalAssist; // 0xc0	
 private:
-	[[maybe_unused]] uint8_t __pad00c1[0x3]; 	// 0xc1
+	[[maybe_unused]] uint8_t __pad00c1[0x3]; // 0xc1
 public:
 	float m_flGoalAssistDistance; // 0xc4	
 	float m_flGoalAssistTolerance; // 0xc8	
 private:
-	[[maybe_unused]] uint8_t __pad00cc[0x4]; 	// 0xcc
+	[[maybe_unused]] uint8_t __pad00cc[0x4]; // 0xcc
 public:
 	CAnimInputDamping m_distanceScale_Damping; // 0xd0	
 	float m_flDistanceScale_OuterRadius; // 0xe8	
@@ -5537,7 +5537,7 @@ public:
 class CCurrentVelocityMetricEvaluator : public CMotionMetricEvaluator
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 4
@@ -5549,7 +5549,7 @@ public:
 	float m_flDistance; // 0x68	
 	bool m_bExtrapolateMovement; // 0x6c	
 private:
-	[[maybe_unused]] uint8_t __pad006d[0x3]; 	// 0x6d
+	[[maybe_unused]] uint8_t __pad006d[0x3]; // 0x6d
 public:
 	float m_flMinExtrapolationSpeed; // 0x70	
 };
@@ -5619,12 +5619,12 @@ class CTimeRemainingMetricEvaluator : public CMotionMetricEvaluator
 public:
 	bool m_bMatchByTimeRemaining; // 0x50	
 private:
-	[[maybe_unused]] uint8_t __pad0051[0x3]; 	// 0x51
+	[[maybe_unused]] uint8_t __pad0051[0x3]; // 0x51
 public:
 	float m_flMaxTimeRemaining; // 0x54	
 	bool m_bFilterByTimeRemaining; // 0x58	
 private:
-	[[maybe_unused]] uint8_t __pad0059[0x3]; 	// 0x59
+	[[maybe_unused]] uint8_t __pad0059[0x3]; // 0x59
 public:
 	float m_flMinTimeRemaining; // 0x5c	
 };
@@ -5752,7 +5752,7 @@ class CHitReactUpdateNode : public CUnaryUpdateNode
 public:
 	HitReactFixedSettings_t m_opFixedSettings; // 0x68	
 private:
-	[[maybe_unused]] uint8_t __pad00ac[0x8]; 	// 0xac
+	[[maybe_unused]] uint8_t __pad00ac[0x8]; // 0xac
 public:
 	CAnimParamHandle m_triggerParam; // 0xb4	
 	CAnimParamHandle m_hitBoneParam; // 0xbc	
@@ -5784,7 +5784,7 @@ class CFootLockUpdateNode : public CUnaryUpdateNode
 public:
 	FootLockPoseOpFixedSettings m_opFixedSettings; // 0x68	
 private:
-	[[maybe_unused]] uint8_t __pad00c8[0x8]; 	// 0xc8
+	[[maybe_unused]] uint8_t __pad00c8[0x8]; // 0xc8
 public:
 	CUtlVector< FootFixedSettings > m_footSettings; // 0xd0	
 	CAnimInputDamping m_hipShiftDamping; // 0xe8	
@@ -5815,13 +5815,13 @@ public:
 	int32_t m_nChainIndex; // 0x0	
 	IKSolverSettings_t m_SolverSettings; // 0x4	
 private:
-	[[maybe_unused]] uint8_t __pad000c[0x4]; 	// 0xc
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
 public:
 	IKTargetSettings_t m_TargetSettings; // 0x10	
 	SolveIKChainAnimNodeDebugSetting m_DebugSetting; // 0x30	
 	float m_flDebugNormalizedValue; // 0x34	
 private:
-	[[maybe_unused]] uint8_t __pad0038[0x8]; 	// 0x38
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	VectorAligned m_vDebugOffset; // 0x40	
 };
@@ -5883,7 +5883,7 @@ public:
 	float m_flAngularDamping; // 0x8c	
 	bool m_bOverrideMassCenter; // 0x90	
 private:
-	[[maybe_unused]] uint8_t __pad0091[0x3]; 	// 0x91
+	[[maybe_unused]] uint8_t __pad0091[0x3]; // 0x91
 public:
 	Vector m_vMassCenterOverride; // 0x94	
 };
@@ -5986,35 +5986,35 @@ public:
 	uint16_t m_nBody2; // 0x4	
 	uint16_t m_nFlags; // 0x6	
 private:
-	[[maybe_unused]] uint8_t __pad0008[0x8]; 	// 0x8
+	[[maybe_unused]] uint8_t __pad0008[0x8]; // 0x8
 public:
 	CTransform m_Frame1; // 0x10	
 	CTransform m_Frame2; // 0x30	
 	bool m_bEnableCollision; // 0x50	
 	bool m_bEnableLinearLimit; // 0x51	
 private:
-	[[maybe_unused]] uint8_t __pad0052[0x2]; 	// 0x52
+	[[maybe_unused]] uint8_t __pad0052[0x2]; // 0x52
 public:
 	VPhysXRange_t m_LinearLimit; // 0x54	
 	bool m_bEnableLinearMotor; // 0x5c	
 private:
-	[[maybe_unused]] uint8_t __pad005d[0x3]; 	// 0x5d
+	[[maybe_unused]] uint8_t __pad005d[0x3]; // 0x5d
 public:
 	Vector m_vLinearTargetVelocity; // 0x60	
 	float m_flMaxForce; // 0x6c	
 	bool m_bEnableSwingLimit; // 0x70	
 private:
-	[[maybe_unused]] uint8_t __pad0071[0x3]; 	// 0x71
+	[[maybe_unused]] uint8_t __pad0071[0x3]; // 0x71
 public:
 	VPhysXRange_t m_SwingLimit; // 0x74	
 	bool m_bEnableTwistLimit; // 0x7c	
 private:
-	[[maybe_unused]] uint8_t __pad007d[0x3]; 	// 0x7d
+	[[maybe_unused]] uint8_t __pad007d[0x3]; // 0x7d
 public:
 	VPhysXRange_t m_TwistLimit; // 0x80	
 	bool m_bEnableAngularMotor; // 0x88	
 private:
-	[[maybe_unused]] uint8_t __pad0089[0x3]; 	// 0x89
+	[[maybe_unused]] uint8_t __pad0089[0x3]; // 0x89
 public:
 	Vector m_vAngularTargetVelocity; // 0x8c	
 	float m_flMaxTorque; // 0x98	
@@ -6045,7 +6045,7 @@ public:
 	uint16_t m_nFlags; // 0x0	
 	uint16_t m_nRefCounter; // 0x2	
 private:
-	[[maybe_unused]] uint8_t __pad0004[0x4]; 	// 0x4
+	[[maybe_unused]] uint8_t __pad0004[0x4]; // 0x4
 public:
 	CUtlVector< uint32 > m_bonesHash; // 0x8	
 	CUtlVector< CUtlString > m_boneNames; // 0x20	
@@ -6140,19 +6140,19 @@ public:
 	uint32_t m_nameHash; // 0x8	
 	uint32_t m_baseNameHash; // 0xc	
 private:
-	[[maybe_unused]] uint8_t __pad0010[0x8]; 	// 0x10
+	[[maybe_unused]] uint8_t __pad0010[0x8]; // 0x10
 public:
 	// MKV3TransferName "hidden"
 	bool m_bHidden; // 0x18	
 private:
-	[[maybe_unused]] uint8_t __pad0019[0x7]; 	// 0x19
+	[[maybe_unused]] uint8_t __pad0019[0x7]; // 0x19
 public:
 	// MKV3TransferName "description"
 	CUtlString m_description; // 0x20	
 	// MKV3TransferName "physics"
 	CPhysSurfacePropertiesPhysics m_physics; // 0x28	
 private:
-	[[maybe_unused]] uint8_t __pad003c[0x4]; 	// 0x3c
+	[[maybe_unused]] uint8_t __pad003c[0x4]; // 0x3c
 public:
 	// MKV3TransferName "audiosounds"
 	CPhysSurfacePropertiesSoundNames m_audioSounds; // 0x40	
@@ -6217,7 +6217,7 @@ public:
 	CUtlString m_Name; // 0x20	
 	int32_t m_nParent; // 0x28	
 private:
-	[[maybe_unused]] uint8_t __pad002c[0x4]; 	// 0x2c
+	[[maybe_unused]] uint8_t __pad002c[0x4]; // 0x2c
 public:
 	CStrongHandle< InfoForResourceTypeCModel > m_refModel; // 0x30	
 };
@@ -6242,7 +6242,7 @@ public:
 	CUtlString m_boneName; // 0x0	
 	uint32_t m_boneNameToken; // 0x8	
 private:
-	[[maybe_unused]] uint8_t __pad000c[0x4]; 	// 0xc
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
 public:
 	CUtlVector< ModelBoneFlexDriverControl_t > m_controls; // 0x10	
 };
@@ -6417,7 +6417,7 @@ public:
 	bool m_bHideMaterialGroupInTools; // 0x0	
 	bool m_bHideRenderColorInTools; // 0x1	
 private:
-	[[maybe_unused]] uint8_t __pad0002[0x6]; 	// 0x2
+	[[maybe_unused]] uint8_t __pad0002[0x6]; // 0x2
 public:
 	CUtlVector< CModelConfig* > m_Configs; // 0x8	
 };
@@ -6488,16 +6488,16 @@ public:
 	Vector m_vTintColor; // 0x20	
 	float m_flAlpha; // 0x2c	
 private:
-	[[maybe_unused]] uint8_t __pad0030[0x6]; 	// 0x30
+	[[maybe_unused]] uint8_t __pad0030[0x6]; // 0x30
 public:
 	int16_t m_CullDataIndex; // 0x36	
 	int32_t m_nMeshID; // 0x38	
 private:
-	[[maybe_unused]] uint8_t __pad003c[0x6c]; 	// 0x3c
+	[[maybe_unused]] uint8_t __pad003c[0x6c]; // 0x3c
 public:
 	CRenderBufferBinding m_indexBuffer; // 0xa8	
 private:
-	[[maybe_unused]] uint8_t __pad00b8[0x10]; 	// 0xb8
+	[[maybe_unused]] uint8_t __pad00b8[0x10]; // 0xb8
 public:
 	CStrongHandle< InfoForResourceTypeIMaterial2 > m_material; // 0xc8	
 };
@@ -6546,7 +6546,7 @@ public:
 	uint16_t m_nHitBoxIndex; // 0x60	
 	uint8_t m_nShapeType; // 0x62	
 private:
-	[[maybe_unused]] uint8_t __pad0063[0x1]; 	// 0x63
+	[[maybe_unused]] uint8_t __pad0063[0x1]; // 0x63
 public:
 	bool m_bTranslationOnly; // 0x64	
 	bool m_bVisible; // 0x65	
@@ -6561,7 +6561,7 @@ public:
 	CUtlString m_name; // 0x0	
 	uint32_t m_nNameHash; // 0x8	
 private:
-	[[maybe_unused]] uint8_t __pad000c[0x4]; 	// 0xc
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
 public:
 	CUtlVector< CHitBox > m_HitBoxes; // 0x10	
 	CUtlString m_SourceFilename; // 0x28	
@@ -6596,7 +6596,7 @@ public:
 	Quaternion m_qOffset; // 0x14	
 	bool m_bIsAttachment; // 0x24	
 private:
-	[[maybe_unused]] uint8_t __pad0025[0x3]; 	// 0x25
+	[[maybe_unused]] uint8_t __pad0025[0x3]; // 0x25
 public:
 	CUtlString m_sName; // 0x28	
 };
@@ -6611,7 +6611,7 @@ public:
 	Vector m_vBasePosition; // 0x8	
 	Quaternion m_qBaseOrientation; // 0x14	
 private:
-	[[maybe_unused]] uint8_t __pad0024[0x4]; 	// 0x24
+	[[maybe_unused]] uint8_t __pad0024[0x4]; // 0x24
 public:
 	CUtlString m_sName; // 0x28	
 };
@@ -6621,7 +6621,7 @@ public:
 class CBoneConstraintBase
 {
 public:
-	uint8_t __pad0000[0x28]; 	// @note: autoaligned
+	uint8_t __pad0000[0x28]; // Autoaligned
 };
 
 // Alignment: 4
@@ -6632,7 +6632,7 @@ public:
 	CUtlString m_name; // 0x28	
 	Vector m_vUpVector; // 0x30	
 private:
-	[[maybe_unused]] uint8_t __pad003c[0x4]; 	// 0x3c
+	[[maybe_unused]] uint8_t __pad003c[0x4]; // 0x3c
 public:
 	CUtlVector< CConstraintSlave > m_slaves; // 0x40	
 	CUtlVector< CConstraintTarget > m_targets; // 0x58	
@@ -6643,7 +6643,7 @@ public:
 class CPointConstraint : public CBaseConstraint
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -6651,7 +6651,7 @@ public:
 class COrientConstraint : public CBaseConstraint
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 2
@@ -6670,7 +6670,7 @@ class CTwistConstraint : public CBaseConstraint
 public:
 	bool m_bInverse; // 0x70	
 private:
-	[[maybe_unused]] uint8_t __pad0071[0x3]; 	// 0x71
+	[[maybe_unused]] uint8_t __pad0071[0x3]; // 0x71
 public:
 	Quaternion m_qParentBindRotation; // 0x74	
 	Quaternion m_qChildBindRotation; // 0x84	
@@ -6701,7 +6701,7 @@ public:
 class CParentConstraint : public CBaseConstraint
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 5
@@ -6800,7 +6800,7 @@ public:
 	float m_flUWidthSrc; // 0x4	
 	float m_flVHeightSrc; // 0x8	
 private:
-	[[maybe_unused]] uint8_t __pad000c[0x4]; 	// 0xc
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
 public:
 	CUtlVector< CMorphBundleData > m_bundleDatas; // 0x10	
 };
@@ -6885,7 +6885,7 @@ public:
 class CAnimCycle : public CCycleBase
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -6893,7 +6893,7 @@ public:
 class CFootCycle : public CCycleBase
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 9
@@ -6984,7 +6984,7 @@ public:
 	CUtlString m_tipParentBoneName; // 0x38	
 	Vector m_vTipOffset; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad004c[0x4]; 	// 0x4c
+	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
 public:
 	CUtlString m_metacarpalBoneName; // 0x50	
 	Vector m_vSplayHingeAxis; // 0x58	
@@ -7024,11 +7024,11 @@ class CAnimationGraph : public CAnimationSubGraph
 public:
 	CSmartPtr< CAnimGraphSettingsManager > m_pSettingsManager; // 0xf8	
 private:
-	[[maybe_unused]] uint8_t __pad0100[0x8]; 	// 0x100
+	[[maybe_unused]] uint8_t __pad0100[0x8]; // 0x100
 public:
 	CAnimClipDataManager m_clipDataManager; // 0x108	
 private:
-	[[maybe_unused]] uint8_t __pad0140[0x10]; 	// 0x140
+	[[maybe_unused]] uint8_t __pad0140[0x10]; // 0x140
 public:
 	CUtlString m_modelName; // 0x150	
 	CUtlString m_previewModelName; // 0x158	
@@ -7083,7 +7083,7 @@ public:
 class CAnimComponentStateTransition : public CAnimStateTransition
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -7091,7 +7091,7 @@ public:
 class CAnimComponentState : public CAnimState
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 1
@@ -7173,7 +7173,7 @@ public:
 	// MPropertyFriendlyName "Reset Destination"
 	bool m_bReset; // 0x54	
 private:
-	[[maybe_unused]] uint8_t __pad0055[0x3]; 	// 0x55
+	[[maybe_unused]] uint8_t __pad0055[0x3]; // 0x55
 public:
 	// MPropertyFriendlyName "Start Cycle At"
 	ResetCycleOption m_resetCycleOption; // 0x58	
@@ -7230,7 +7230,7 @@ public:
 class CGroupInputAnimNode : public CProxyAnimNodeBase
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -7238,7 +7238,7 @@ public:
 class CGroupOutputAnimNode : public CProxyAnimNodeBase
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 0
@@ -7246,7 +7246,7 @@ public:
 class CRootUpdateNode : public CUnaryUpdateNode
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 5
@@ -7256,7 +7256,7 @@ class CSequenceUpdateNode : public CLeafUpdateNode
 public:
 	CUtlVector< TagSpan_t > m_tags; // 0x60	
 private:
-	[[maybe_unused]] uint8_t __pad0078[0x4]; 	// 0x78
+	[[maybe_unused]] uint8_t __pad0078[0x4]; // 0x78
 public:
 	HSequence m_hSequence; // 0x7c	
 	float m_playbackSpeed; // 0x80	
@@ -7273,7 +7273,7 @@ public:
 	CUtlVector< uint8 > m_sortedOrder; // 0x78	
 	CUtlVector< float32 > m_targetValues; // 0x90	
 private:
-	[[maybe_unused]] uint8_t __pad00a8[0x4]; 	// 0xa8
+	[[maybe_unused]] uint8_t __pad00a8[0x4]; // 0xa8
 public:
 	AnimValueSource m_blendValueSource; // 0xac	
 	CAnimParamHandle m_paramIndex; // 0xb0	
@@ -7294,7 +7294,7 @@ public:
 	CUtlVector< CStateNodeStateData > m_stateData; // 0xc0	
 	CUtlVector< CStateNodeTransitionData > m_transitionData; // 0xd8	
 private:
-	[[maybe_unused]] uint8_t __pad00f0[0x4]; 	// 0xf0
+	[[maybe_unused]] uint8_t __pad00f0[0x4]; // 0xf0
 public:
 	bool m_bBlockWaningTags; // 0xf4	
 	bool m_bLockStateWhenWaning; // 0xf5	
@@ -7333,7 +7333,7 @@ class CCycleControlClipUpdateNode : public CLeafUpdateNode
 public:
 	CUtlVector< TagSpan_t > m_tags; // 0x60	
 private:
-	[[maybe_unused]] uint8_t __pad0078[0x4]; 	// 0x78
+	[[maybe_unused]] uint8_t __pad0078[0x4]; // 0x78
 public:
 	HSequence m_hSequence; // 0x7c	
 	float m_duration; // 0x80	
@@ -7395,7 +7395,7 @@ public:
 	float m_turnDuration; // 0x74	
 	bool m_bMatchChildDuration; // 0x78	
 private:
-	[[maybe_unused]] uint8_t __pad0079[0x3]; 	// 0x79
+	[[maybe_unused]] uint8_t __pad0079[0x3]; // 0x79
 public:
 	float m_manualTurnOffset; // 0x7c	
 	bool m_bUseManualTurnOffset; // 0x80	
@@ -7408,7 +7408,7 @@ class CAimMatrixUpdateNode : public CUnaryUpdateNode
 public:
 	AimMatrixOpFixedSettings_t m_opFixedSettings; // 0x70	
 private:
-	[[maybe_unused]] uint8_t __pad0150[0x8]; 	// 0x150
+	[[maybe_unused]] uint8_t __pad0150[0x8]; // 0x150
 public:
 	AnimVectorSource m_target; // 0x158	
 	CAnimParamHandle m_paramIndex; // 0x15c	
@@ -7432,7 +7432,7 @@ class CDirectionalBlendUpdateNode : public CLeafUpdateNode
 public:
 	HSequence m_hSequences[8]; // 0x5c	
 private:
-	[[maybe_unused]] uint8_t __pad007c[0x4]; 	// 0x7c
+	[[maybe_unused]] uint8_t __pad007c[0x4]; // 0x7c
 public:
 	CAnimInputDamping m_damping; // 0x80	
 	AnimValueSource m_blendValueSource; // 0x98	
@@ -7466,7 +7466,7 @@ public:
 	BinaryNodeChildOption m_footMotionTiming; // 0x98	
 	bool m_bUseBlendScale; // 0x9c	
 private:
-	[[maybe_unused]] uint8_t __pad009d[0x3]; 	// 0x9d
+	[[maybe_unused]] uint8_t __pad009d[0x3]; // 0x9d
 public:
 	AnimValueSource m_blendValueSource; // 0xa0	
 	CAnimParamHandle m_hBlendParameter; // 0xa4	
@@ -7477,7 +7477,7 @@ public:
 class CChoreoUpdateNode : public CUnaryUpdateNode
 {
 public:
-	// @note: no members available
+	// No members available
 };
 
 // Alignment: 2
@@ -7497,7 +7497,7 @@ public:
 	int32_t m_frameCorners[3][3]; // 0x5c	
 	StaticPoseCacheHandle m_poses[9]; // 0x80	
 private:
-	[[maybe_unused]] uint8_t __pad00a4[0x4]; 	// 0xa4
+	[[maybe_unused]] uint8_t __pad00a4[0x4]; // 0xa4
 public:
 	CAnimInputDamping m_damping; // 0xa8	
 	AnimVectorSource m_blendSource; // 0xc0	
@@ -7533,7 +7533,7 @@ class CLookAtUpdateNode : public CUnaryUpdateNode
 public:
 	LookAtOpFixedSettings_t m_opFixedSettings; // 0x70	
 private:
-	[[maybe_unused]] uint8_t __pad0140[0x8]; 	// 0x140
+	[[maybe_unused]] uint8_t __pad0140[0x8]; // 0x140
 public:
 	AnimVectorSource m_target; // 0x148	
 	CAnimParamHandle m_paramIndex; // 0x14c	

@@ -204,22 +204,22 @@ public:
 	PostProcessingTonemapParameters_t m_toneMapParams; // 0x4	
 	bool m_bHasBloomParams; // 0x24	
 private:
-	[[maybe_unused]] uint8_t __pad0025[0x3]; 	// 0x25
+	[[maybe_unused]] uint8_t __pad0025[0x3]; // 0x25
 public:
 	PostProcessingBloomParameters_t m_bloomParams; // 0x28	
 	bool m_bHasVignetteParams; // 0x98	
 private:
-	[[maybe_unused]] uint8_t __pad0099[0x3]; 	// 0x99
+	[[maybe_unused]] uint8_t __pad0099[0x3]; // 0x99
 public:
 	PostProcessingVignetteParameters_t m_vignetteParams; // 0x9c	
 	bool m_bHasLocalContrastParams; // 0xc0	
 private:
-	[[maybe_unused]] uint8_t __pad00c1[0x3]; 	// 0xc1
+	[[maybe_unused]] uint8_t __pad00c1[0x3]; // 0xc1
 public:
 	PostProcessingLocalContrastParameters_t m_localConstrastParams; // 0xc4	
 	int32_t m_nColorCorrectionVolumeDim; // 0xd8	
 private:
-	[[maybe_unused]] uint8_t __pad00dc[0x4]; 	// 0xdc
+	[[maybe_unused]] uint8_t __pad00dc[0x4]; // 0xdc
 public:
 	CUtlBinaryBlock m_colorCorrectionVolumeData; // 0xe0	
 	bool m_bHasColorCorrection; // 0xf8	
