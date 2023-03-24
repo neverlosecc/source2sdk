@@ -49,7 +49,7 @@ public:
 struct InfoForResourceTypeTestResource_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -57,7 +57,7 @@ public:
 struct InfoForResourceTypeProceduralTestResource_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -65,7 +65,7 @@ public:
 struct InfoForResourceTypeManifestTestResource_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 2
@@ -84,7 +84,7 @@ public:
 class InfoForResourceTypeCVDataResource
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -92,7 +92,7 @@ public:
 class InfoForResourceTypeIParticleSystemDefinition
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -100,7 +100,7 @@ public:
 class InfoForResourceTypeIParticleSnapshot
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -108,7 +108,7 @@ public:
 class InfoForResourceTypeCAnimData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -116,7 +116,7 @@ public:
 class InfoForResourceTypeCAnimationGroup
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -124,7 +124,7 @@ public:
 class InfoForResourceTypeCSequenceGroupData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -132,7 +132,7 @@ public:
 class InfoForResourceTypeIMaterial2
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -140,7 +140,7 @@ public:
 class InfoForResourceTypeCMorphSetData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -148,7 +148,7 @@ public:
 class InfoForResourceTypeCRenderMesh
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -156,7 +156,7 @@ public:
 class InfoForResourceTypeCModel
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -164,7 +164,7 @@ public:
 class InfoForResourceTypeCTextureBase
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -172,7 +172,7 @@ public:
 class InfoForResourceTypeIVectorGraphic
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -180,7 +180,7 @@ public:
 class InfoForResourceTypeCVSoundEventScriptList
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -188,7 +188,7 @@ public:
 class InfoForResourceTypeCVSoundStackScriptList
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -196,7 +196,7 @@ public:
 struct InfoForResourceTypeVSound_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -204,7 +204,7 @@ public:
 class InfoForResourceTypeCVMixListResource
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -212,7 +212,7 @@ public:
 class InfoForResourceTypeCPhysAggregateData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -220,7 +220,7 @@ public:
 class InfoForResourceTypeCVPhysXSurfacePropertiesList
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -228,7 +228,7 @@ public:
 class InfoForResourceTypeCEntityLump
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -236,7 +236,7 @@ public:
 class InfoForResourceTypeCWorldNode
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -244,7 +244,7 @@ public:
 struct InfoForResourceTypeWorld_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -252,7 +252,7 @@ public:
 class InfoForResourceTypeCVoxelVisibility
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -260,7 +260,7 @@ public:
 class InfoForResourceTypeCPostProcessingResource
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -268,7 +268,7 @@ public:
 class InfoForResourceTypeCPanoramaStyle
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -276,7 +276,7 @@ public:
 class InfoForResourceTypeCPanoramaLayout
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -284,7 +284,7 @@ public:
 class InfoForResourceTypeCPanoramaDynamicImages
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -292,7 +292,7 @@ public:
 class InfoForResourceTypeCDotaItemDefinitionResource
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -300,7 +300,7 @@ public:
 class InfoForResourceTypeCPanoramaScript
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -308,7 +308,7 @@ public:
 class InfoForResourceTypeCPanoramaTypeScript
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -316,7 +316,7 @@ public:
 class InfoForResourceTypeCDOTAPatchNotesList
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -324,7 +324,7 @@ public:
 class InfoForResourceTypeIAnimGraphModelBinding
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -332,7 +332,7 @@ public:
 class InfoForResourceTypeCChoreoSceneFileData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -340,7 +340,7 @@ public:
 class InfoForResourceTypeCDACGameDefsData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -348,7 +348,7 @@ public:
 class InfoForResourceTypeCCompositeMaterialKit
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -356,7 +356,7 @@ public:
 class InfoForResourceTypeCSmartProp
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -364,7 +364,7 @@ public:
 class InfoForResourceTypeCCSGOEconItem
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -372,7 +372,7 @@ public:
 class InfoForResourceTypeCResponseRulesList
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 1

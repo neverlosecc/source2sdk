@@ -5260,7 +5260,7 @@ public:
 class InfoForResourceTypeCResourceManifestInternal
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5268,7 +5268,7 @@ public:
 class InfoForResourceTypeCDOTAPatchNotesList
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5276,7 +5276,7 @@ public:
 class InfoForResourceTypeCEntityLump
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 2
@@ -5295,7 +5295,7 @@ public:
 class InfoForResourceTypeCSequenceGroupData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5303,7 +5303,7 @@ public:
 class InfoForResourceTypeIParticleSystemDefinition
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -5319,7 +5319,7 @@ public:
 class InfoForResourceTypeCTextureBase
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5327,7 +5327,7 @@ public:
 class InfoForResourceTypeCModel
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5335,7 +5335,7 @@ public:
 class InfoForResourceTypeCVDataResource
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -5351,7 +5351,7 @@ public:
 class InfoForResourceTypeCPanoramaDynamicImages
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5359,7 +5359,7 @@ public:
 class InfoForResourceTypeIVectorGraphic
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5367,7 +5367,7 @@ public:
 class InfoForResourceTypeIMaterial2
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5375,7 +5375,7 @@ public:
 class InfoForResourceTypeCAnimData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5383,7 +5383,7 @@ public:
 class InfoForResourceTypeCVMixListResource
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5391,7 +5391,7 @@ public:
 class InfoForResourceTypeCCompositeMaterialKit
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 4
@@ -5410,7 +5410,7 @@ public:
 class InfoForResourceTypeCSmartProp
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5418,7 +5418,7 @@ public:
 class InfoForResourceTypeCCSGOEconItem
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5426,7 +5426,7 @@ public:
 class InfoForResourceTypeCWorldNode
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5434,7 +5434,7 @@ public:
 class InfoForResourceTypeCPanoramaStyle
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5442,7 +5442,7 @@ public:
 class InfoForResourceTypeCDACGameDefsData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5450,7 +5450,7 @@ public:
 class InfoForResourceTypeCVSoundEventScriptList
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5458,7 +5458,7 @@ public:
 class InfoForResourceTypeCAnimationGroup
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5466,7 +5466,7 @@ public:
 struct InfoForResourceTypeVSound_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5474,7 +5474,7 @@ public:
 struct InfoForResourceTypeTestResource_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5482,7 +5482,7 @@ public:
 class InfoForResourceTypeCPanoramaLayout
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 4
@@ -5501,7 +5501,7 @@ public:
 class InfoForResourceTypeIParticleSnapshot
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 6
@@ -5522,7 +5522,7 @@ public:
 class InfoForResourceTypeCPostProcessingResource
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 2
@@ -5539,7 +5539,7 @@ public:
 struct InfoForResourceTypeProceduralTestResource_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5547,7 +5547,7 @@ public:
 struct InfoForResourceTypeWorld_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5555,7 +5555,7 @@ public:
 class InfoForResourceTypeCPhysAggregateData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -5572,7 +5572,7 @@ public:
 class InfoForResourceTypeCVoxelVisibility
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5580,7 +5580,7 @@ public:
 class InfoForResourceTypeCRenderMesh
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 3
@@ -5598,7 +5598,7 @@ public:
 class InfoForResourceTypeIAnimGraphModelBinding
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 5
@@ -5628,7 +5628,7 @@ public:
 struct InfoForResourceTypeManifestTestResource_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5636,7 +5636,7 @@ public:
 class InfoForResourceTypeCPanoramaTypeScript
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5644,7 +5644,7 @@ public:
 class InfoForResourceTypeCVPhysXSurfacePropertiesList
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 2
@@ -5661,7 +5661,7 @@ public:
 class InfoForResourceTypeCVSoundStackScriptList
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5669,7 +5669,7 @@ public:
 class InfoForResourceTypeCPanoramaScript
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5677,7 +5677,7 @@ public:
 class InfoForResourceTypeCChoreoSceneFileData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5685,7 +5685,7 @@ public:
 class InfoForResourceTypeCMorphSetData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5693,7 +5693,7 @@ public:
 class InfoForResourceTypeCDotaItemDefinitionResource
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5701,7 +5701,7 @@ public:
 class InfoForResourceTypeCResponseRulesList
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 7
@@ -5798,7 +5798,7 @@ public:
 class CEmptyEntityInstance
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5806,7 +5806,7 @@ public:
 struct EventServerProcessNetworking_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5814,7 +5814,7 @@ public:
 struct EventServerPollNetworking_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5822,7 +5822,7 @@ public:
 struct EntOutput_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x10]; 	// @note: autoaligned
 };
 
 // Alignment: 8
@@ -5891,7 +5891,7 @@ public:
 struct EventModInitialized_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5899,7 +5899,7 @@ public:
 class CVariantDefaultAllocator
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 4
@@ -5918,7 +5918,7 @@ public:
 struct EventSplitScreenStateChanged_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5926,7 +5926,7 @@ public:
 struct EventServerAdvanceTick_t : public EventAdvanceTick_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5934,7 +5934,7 @@ public:
 struct EventClientProcessNetworking_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5942,7 +5942,7 @@ public:
 class IHandleEntity
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5950,7 +5950,7 @@ public:
 struct EventClientPauseSimulate_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5958,7 +5958,7 @@ public:
 struct EventClientPreSimulate_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -5982,7 +5982,7 @@ public:
 struct EventServerPostAdvanceTick_t : public EventPostAdvanceTick_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5990,7 +5990,7 @@ public:
 struct EventServerSimulate_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -6024,7 +6024,7 @@ public:
 struct EventClientPredictionPostNetupdate_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -6061,7 +6061,7 @@ public:
 struct EventClientSimulate_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -6077,7 +6077,7 @@ public:
 struct EntInput_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x30]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -6085,7 +6085,7 @@ public:
 struct EventClientAdvanceTick_t : public EventAdvanceTick_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6093,7 +6093,7 @@ public:
 class CEntityComponent
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 4
@@ -6118,7 +6118,7 @@ public:
 struct EventServerPostSimulate_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -6154,7 +6154,7 @@ public:
 struct EventClientPostAdvanceTick_t : public EventPostAdvanceTick_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -6172,7 +6172,7 @@ public:
 struct EventClientPostSimulate_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -6689,7 +6689,7 @@ public:
 class CBoneConstraintBase
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x28]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -7354,7 +7354,7 @@ public:
 class CStringAnimTag : public CAnimTagBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -7450,7 +7450,7 @@ public:
 class CLeafUpdateNode : public CAnimUpdateNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -7615,7 +7615,7 @@ public:
 class CConditionBase
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x28]; 	// @note: autoaligned
 };
 
 // Alignment: 46
@@ -7705,7 +7705,7 @@ public:
 class CPointConstraint : public CBaseConstraint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -7742,7 +7742,7 @@ public:
 class CGroupOutputAnimNode : public CProxyAnimNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -7843,7 +7843,7 @@ public:
 class CZeroPoseAnimNode : public CAnimNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -7947,7 +7947,7 @@ public:
 class CBindPoseAnimNode : public CAnimNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -8038,7 +8038,7 @@ public:
 class CAnimActionBase
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x28]; 	// @note: autoaligned
 };
 
 // Alignment: 3
@@ -8225,7 +8225,7 @@ public:
 class CMotionNodeManager : public CAnimNodeManager
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -8365,7 +8365,7 @@ public:
 class CGroupInputAnimNode : public CProxyAnimNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -8419,7 +8419,7 @@ public:
 class CBindPoseUpdateNode : public CLeafUpdateNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -8494,7 +8494,7 @@ public:
 class CAnimActionUpdater
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x18]; 	// @note: autoaligned
 };
 
 // Alignment: 3
@@ -8910,7 +8910,7 @@ public:
 class COrCondition : public CConditionBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -8957,7 +8957,7 @@ public:
 class CCurrentRotationVelocityMetricEvaluator : public CMotionMetricEvaluator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -9237,7 +9237,7 @@ public:
 class CFootCycle : public CCycleBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -9389,7 +9389,7 @@ public:
 class CPathAnimMotorUpdater : public CPathAnimMotorUpdaterBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -9460,7 +9460,7 @@ public:
 class CCurrentVelocityMetricEvaluator : public CMotionMetricEvaluator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -9805,7 +9805,7 @@ public:
 class CStaticPoseCacheBuilder : public CStaticPoseCache
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -9951,7 +9951,7 @@ public:
 class CParentConstraint : public CBaseConstraint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -10597,7 +10597,7 @@ public:
 class CCurrentRotationVelocityMetric : public CMotionMetricBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -10618,7 +10618,7 @@ public:
 class CAnimCycle : public CCycleBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -10920,7 +10920,7 @@ public:
 class CInputStreamAnimNode : public CAnimNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -11026,7 +11026,7 @@ public:
 class COrientConstraint : public CBaseConstraint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -11367,7 +11367,7 @@ public:
 class CAnimComponentStateTransition : public CAnimStateTransition
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -11383,7 +11383,7 @@ public:
 class CAnimComponentState : public CAnimState
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -11549,7 +11549,7 @@ public:
 class CChoreoUpdateNode : public CUnaryUpdateNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -11894,7 +11894,7 @@ public:
 class CPathAnimMotor : public CPathAnimMotorBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -12566,7 +12566,7 @@ public:
 class CBlockSelectionMetricEvaluator : public CMotionMetricEvaluator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -12585,7 +12585,7 @@ public:
 class CAnimGraphSettingsGroup
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x20]; 	// @note: autoaligned
 };
 
 // Alignment: 7
@@ -12619,7 +12619,7 @@ public:
 class CBlockSelectionMetric : public CMotionMetricBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -12694,7 +12694,7 @@ public:
 class CRootUpdateNode : public CUnaryUpdateNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -12835,7 +12835,7 @@ public:
 class CEditableMotionGraph : public CMotionGraph
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -12991,7 +12991,7 @@ public:
 class CAndCondition : public CConditionBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -13085,7 +13085,7 @@ public:
 class CCurrentVelocityMetric : public CMotionMetricBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -13305,7 +13305,7 @@ public:
 class CInputStreamUpdateNode : public CLeafUpdateNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -13471,7 +13471,7 @@ public:
 class CZeroPoseUpdateNode : public CLeafUpdateNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -13784,7 +13784,7 @@ public:
 class IPhysicsPlayerController
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 3
@@ -15178,7 +15178,7 @@ public:
 class CSSDSMsg_PreLayer : public CSSDSMsg_LayerBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -15186,7 +15186,7 @@ public:
 class CSSDSMsg_PostLayer : public CSSDSMsg_LayerBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -15323,7 +15323,7 @@ public:
 struct InfoForResourceTypeVMapResourceData_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 13
@@ -15437,7 +15437,7 @@ public:
 struct VMapResourceData_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 7
@@ -15518,7 +15518,7 @@ public:
 class CParticleProperty
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x28]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -15596,7 +15596,7 @@ public:
 class CParticleCollectionFloatInput : public CParticleFloatInput
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 16
@@ -15694,7 +15694,7 @@ public:
 class CPerParticleFloatInput : public CParticleFloatInput
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 12
@@ -15738,7 +15738,7 @@ public:
 class CParticleFunctionOperator : public CParticleFunction
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 18
@@ -15862,7 +15862,7 @@ public:
 class CParticleFunctionConstraint : public CParticleFunction
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -15989,7 +15989,7 @@ public:
 class CParticleFunctionForce : public CParticleFunction
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -16029,7 +16029,7 @@ public:
 class CParticleCollectionVecInput : public CParticleVecInput
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -16126,7 +16126,7 @@ public:
 class IParticleCollection
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x10]; 	// @note: autoaligned
 };
 
 // Alignment: 7
@@ -16253,7 +16253,7 @@ public:
 class CPerParticleVecInput : public CParticleVecInput
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -16283,7 +16283,7 @@ public:
 class C_OP_WorldCollideConstraint : public CParticleFunctionConstraint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -16391,7 +16391,7 @@ public:
 class C_OP_EndCapDecay : public CParticleFunctionOperator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 15
@@ -17203,7 +17203,7 @@ public:
 class C_INIT_RemapNamedModelBodyPartToScalar : public C_INIT_RemapNamedModelElementToScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -17583,7 +17583,7 @@ public:
 class IControlPointEditorData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 4
@@ -17901,7 +17901,7 @@ public:
 class IParticleSystemDefinition
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 11
@@ -17984,7 +17984,7 @@ public:
 class C_INIT_RemapNamedModelMeshGroupToScalar : public C_INIT_RemapNamedModelElementToScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -18018,7 +18018,7 @@ public:
 class C_OP_SpinYaw : public CGeneralSpin
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -18039,7 +18039,7 @@ public:
 class C_OP_RemapNamedModelBodyPartEndCap : public C_OP_RemapNamedModelElementEndCap
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -18458,7 +18458,7 @@ public:
 class CParticleRemapFloatInput : public CParticleFloatInput
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 12
@@ -18960,7 +18960,7 @@ public:
 class C_OP_RemapNamedModelSequenceEndCap : public C_OP_RemapNamedModelElementEndCap
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -19403,7 +19403,7 @@ public:
 class C_INIT_RemapParticleCountToNamedModelBodyPartScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -19500,7 +19500,7 @@ public:
 class C_INIT_RandomNamedModelBodyPart : public C_INIT_RandomNamedModelElement
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -19508,7 +19508,7 @@ public:
 class IParticleEffect
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 5
@@ -19568,7 +19568,7 @@ public:
 class C_OP_RemapNamedModelBodyPartOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -19850,7 +19850,7 @@ public:
 class C_INIT_RandomRotationSpeed : public CGeneralRandomRotation
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -20017,7 +20017,7 @@ public:
 class C_INIT_RandomRotation : public CGeneralRandomRotation
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -20238,7 +20238,7 @@ public:
 class C_OP_RenderClothForce : public CParticleFunctionRenderer
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -20463,7 +20463,7 @@ public:
 class C_INIT_RemapNamedModelSequenceToScalar : public C_INIT_RemapNamedModelElementToScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -21543,7 +21543,7 @@ public:
 class C_OP_RemapNamedModelMeshGroupEndCap : public C_OP_RemapNamedModelElementEndCap
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 60
@@ -21825,7 +21825,7 @@ public:
 class C_INIT_RandomYaw : public CGeneralRandomRotation
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -22004,7 +22004,7 @@ public:
 class C_OP_RemapNamedModelSequenceOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -22440,7 +22440,7 @@ public:
 class C_OP_Spin : public CGeneralSpin
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -22547,7 +22547,7 @@ public:
 class CSpinUpdateBase : public CParticleFunctionOperator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -22894,7 +22894,7 @@ public:
 class C_OP_RemapNamedModelMeshGroupOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 15
@@ -23085,7 +23085,7 @@ public:
 class C_INIT_RemapParticleCountToNamedModelSequenceScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -23297,7 +23297,7 @@ public:
 class C_OP_Callback : public CParticleFunctionRenderer
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -23315,7 +23315,7 @@ public:
 class C_INIT_RandomNamedModelMeshGroup : public C_INIT_RandomNamedModelElement
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -24112,7 +24112,7 @@ public:
 class C_INIT_RemapParticleCountToNamedModelMeshGroupScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -24158,7 +24158,7 @@ public:
 class C_OP_SpinUpdate : public CSpinUpdateBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 27
@@ -24436,7 +24436,7 @@ public:
 class C_INIT_RandomNamedModelSequence : public C_INIT_RandomNamedModelElement
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -25105,7 +25105,7 @@ public:
 class CNavVolume
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x70]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -25162,7 +25162,7 @@ public:
 class IRagdoll
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 5
@@ -25214,7 +25214,7 @@ public:
 class CNavVolumeCalculatedVector : public CNavVolume
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -25231,7 +25231,7 @@ public:
 class CEntitySubclassVDataBase
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x28]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -25278,7 +25278,7 @@ public:
 class CBtNode
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x58]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -25303,7 +25303,7 @@ public:
 class CMultiplayRules : public CGameRules
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -25359,7 +25359,7 @@ public:
 class QuestProgress
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 2
@@ -25398,7 +25398,7 @@ public:
 class IEconItemInterface
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 2
@@ -25415,7 +25415,7 @@ public:
 class CBtNodeComposite : public CBtNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -25548,7 +25548,7 @@ public:
 class IHasAttributes
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 5
@@ -25588,7 +25588,7 @@ public:
 class CBtNodeDecorator : public CBtNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -25876,7 +25876,7 @@ class IChoreoServices
 {
 public:
 	static uint32_t &Get_ms_uSequenceId(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("IChoreoServices")->m_static_fields[0]->m_instance);};
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 10
@@ -26082,7 +26082,7 @@ public:
 class CTeamplayRules : public CMultiplayRules
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -26090,7 +26090,7 @@ public:
 class CNavVolumeAll : public CNavVolumeVector
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -26098,7 +26098,7 @@ public:
 class CSimpleStopwatch : public CStopwatchBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -26106,7 +26106,7 @@ public:
 struct dynpitchvol_t : public dynpitchvol_base_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -26214,7 +26214,7 @@ public:
 class CNavVolumeMarkupVolume : public CNavVolume
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -26257,7 +26257,7 @@ public:
 class CCSGOPlayerAnimGraphState
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x120]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -26348,7 +26348,7 @@ public:
 class IVehicle
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 2
@@ -26461,7 +26461,7 @@ public:
 class CFootstepTableHandle
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 9
@@ -26629,7 +26629,7 @@ public:
 class IClientAlphaProperty
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 43
@@ -26863,7 +26863,7 @@ public:
 class C_GameRules
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -26871,7 +26871,7 @@ public:
 class C_MultiplayRules : public C_GameRules
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -26935,7 +26935,7 @@ public:
 class CPlayerSprayDecalRenderHelper
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x30]; 	// @note: autoaligned
 };
 
 // Alignment: 8
@@ -26991,7 +26991,7 @@ public:
 class C_SingleplayRules : public C_GameRules
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -27250,7 +27250,7 @@ public:
 class C_TeamplayRules : public C_MultiplayRules
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1

@@ -2888,7 +2888,7 @@ public:
 class CNavVolume
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x70]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -2904,7 +2904,7 @@ public:
 class CNavVolumeAll : public CNavVolumeVector
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -3236,7 +3236,7 @@ public:
 class CPlayer_AutoaimServices : public CPlayerPawnComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -3274,7 +3274,7 @@ public:
 class CPlayer_FlashlightServices : public CPlayerPawnComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3282,7 +3282,7 @@ public:
 class CPlayer_ItemServices : public CPlayerPawnComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -3351,7 +3351,7 @@ public:
 class CPlayer_UseServices : public CPlayerPawnComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3359,7 +3359,7 @@ public:
 class CPlayer_WaterServices : public CPlayerPawnComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -3951,7 +3951,7 @@ class IChoreoServices
 {
 public:
 	static uint32_t &Get_ms_uSequenceId(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("IChoreoServices")->m_static_fields[0]->m_instance);};
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 14
@@ -4296,7 +4296,7 @@ public:
 class CFootstepTableHandle
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 8
@@ -4599,7 +4599,7 @@ class CTouchExpansionComponent : public CEntityComponent
 public:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CTouchExpansionComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_referenced_but_impl_is_contained(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CTouchExpansionComponent")->m_static_fields[1]->m_instance);};
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 25
@@ -4639,7 +4639,7 @@ public:
 struct dynpitchvol_t : public dynpitchvol_base_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -4879,7 +4879,7 @@ public:
 class CServerOnlyEntity : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4887,7 +4887,7 @@ public:
 class CServerOnlyPointEntity : public CServerOnlyEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4895,7 +4895,7 @@ public:
 class CLogicalEntity : public CServerOnlyEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 17
@@ -5002,7 +5002,7 @@ public:
 class CFilterLOS : public CBaseFilter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -5061,7 +5061,7 @@ public:
 class CInfoData : public CServerOnlyEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -5314,7 +5314,7 @@ public:
 class CEnvSoundscapeTriggerable : public CEnvSoundscape
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 27
@@ -5401,7 +5401,7 @@ public:
 class CNavVolumeMarkupVolume : public CNavVolume
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5409,7 +5409,7 @@ public:
 class CNavVolumeCalculatedVector : public CNavVolume
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -5658,7 +5658,7 @@ public:
 class CInfoLadderDismount : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -5769,7 +5769,7 @@ public:
 class CGameRulesProxy : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -5821,7 +5821,7 @@ public:
 class IVehicle
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5829,7 +5829,7 @@ public:
 class CMultiplayRules : public CGameRules
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -5931,7 +5931,7 @@ public:
 class IRagdoll
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 3
@@ -6030,7 +6030,7 @@ public:
 class CEntitySubclassVDataBase
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x28]; 	// @note: autoaligned
 };
 
 // Alignment: 4
@@ -6108,7 +6108,7 @@ public:
 class CSimpleStopwatch : public CStopwatchBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -6227,7 +6227,7 @@ public:
 class CSoundOpvarSetOBBEntity : public CSoundOpvarSetAABBEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -6322,7 +6322,7 @@ public:
 class CTeamplayRules : public CMultiplayRules
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -6362,7 +6362,7 @@ public:
 class IEconItemInterface
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 6
@@ -6442,7 +6442,7 @@ public:
 class IHasAttributes
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 2
@@ -6621,7 +6621,7 @@ public:
 class QuestProgress
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 13
@@ -6717,7 +6717,7 @@ public:
 class CCSGO_TeamSelectCharacterPosition : public CCSGO_TeamPreviewCharacterPosition
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6725,7 +6725,7 @@ public:
 class CCSGO_TeamSelectTerroristPosition : public CCSGO_TeamSelectCharacterPosition
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6733,7 +6733,7 @@ public:
 class CCSGO_TeamSelectCounterTerroristPosition : public CCSGO_TeamSelectCharacterPosition
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6741,7 +6741,7 @@ public:
 class CCSGO_TeamIntroCharacterPosition : public CCSGO_TeamPreviewCharacterPosition
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6749,7 +6749,7 @@ public:
 class CCSGO_TeamIntroTerroristPosition : public CCSGO_TeamIntroCharacterPosition
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6757,7 +6757,7 @@ public:
 class CCSGO_TeamIntroCounterTerroristPosition : public CCSGO_TeamIntroCharacterPosition
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6765,7 +6765,7 @@ public:
 class CCSGOPlayerAnimGraphState
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x120]; 	// @note: autoaligned
 };
 
 // Alignment: 4
@@ -6976,7 +6976,7 @@ public:
 class CCSPlayer_ObserverServices : public CPlayer_ObserverServices
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -7737,7 +7737,7 @@ public:
 class CCSPlayer_DamageReactServices : public CPlayerPawnComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7745,7 +7745,7 @@ public:
 class CCSPlayer_ParachuteServices : public CPlayerPawnComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -7854,7 +7854,7 @@ public:
 class CPointDZItemSpawn : public CServerOnlyPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -7884,7 +7884,7 @@ public:
 class CPointDZWeaponSpawnGroup : public CPointDZItemSpawnGroup
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -7900,7 +7900,7 @@ public:
 class CPointDZParachuteSpawn : public CServerOnlyPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -7957,7 +7957,7 @@ public:
 class CBtNode
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x58]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -7965,7 +7965,7 @@ public:
 class CBtNodeDecorator : public CBtNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7973,7 +7973,7 @@ public:
 class CBtNodeComposite : public CBtNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 12
@@ -8073,7 +8073,7 @@ public:
 class CPointEntity : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 25
@@ -8206,7 +8206,7 @@ public:
 class CEnvCubemapBox : public CEnvCubemap
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 18
@@ -8499,7 +8499,7 @@ public:
 class CInfoTarget : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -8507,7 +8507,7 @@ public:
 class CInfoParticleTarget : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -9031,7 +9031,7 @@ public:
 class CServerOnlyModelEntity : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9039,7 +9039,7 @@ public:
 class CModelPointEntity : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -9158,7 +9158,7 @@ public:
 class CPathParticleRopeAlias_path_particle_rope_clientside : public CPathParticleRope
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -9174,7 +9174,7 @@ public:
 class CFuncWallToggle : public CFuncWall
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9182,7 +9182,7 @@ public:
 class CFuncVehicleClip : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9190,7 +9190,7 @@ public:
 class CFuncIllusionary : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -9219,7 +9219,7 @@ public:
 class CPointClientCommand : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9227,7 +9227,7 @@ public:
 class CPointServerCommand : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9235,7 +9235,7 @@ public:
 class CPointBroadcastClientCommand : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -9324,7 +9324,7 @@ public:
 class CEnvFunnel : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -9344,7 +9344,7 @@ public:
 class CPrecipitationBlocker : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -9436,7 +9436,7 @@ public:
 class CInfoInstructorHintTarget : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 24
@@ -9613,7 +9613,7 @@ public:
 class CShower : public CModelPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 15
@@ -9997,7 +9997,7 @@ public:
 class CLogicNPCCounterOBB : public CLogicNPCCounterAABB
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -10038,7 +10038,7 @@ public:
 class CLogicScript : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -10281,7 +10281,7 @@ public:
 class CRuleBrushEntity : public CRuleEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -10289,7 +10289,7 @@ public:
 class CGameEnd : public CRulePointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -10520,7 +10520,7 @@ public:
 class CPhysHingeAlias_phys_hinge_local : public CPhysHinge
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -10684,7 +10684,7 @@ public:
 class CSplineConstraint : public CPhysConstraint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -10765,7 +10765,7 @@ public:
 class CSprayCan : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -10817,7 +10817,7 @@ public:
 class CPointHMDAnchorOverride : public CPointHMDAnchor
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 44
@@ -11046,7 +11046,7 @@ public:
 class CEnableMotionFixup : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11054,7 +11054,7 @@ public:
 class CFuncPropRespawnZone : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -11354,7 +11354,7 @@ public:
 class CSoundEventEntityAlias_snd_event_point : public CSoundEventEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -11393,7 +11393,7 @@ public:
 class CEnvSoundscapeProxyAlias_snd_soundscape_proxy : public CEnvSoundscapeProxy
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11401,7 +11401,7 @@ public:
 class CEnvSoundscapeAlias_snd_soundscape : public CEnvSoundscape
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11409,7 +11409,7 @@ public:
 class CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable : public CEnvSoundscapeTriggerable
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11417,7 +11417,7 @@ public:
 class CNullEntity : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -11433,7 +11433,7 @@ public:
 class CInfoLandmark : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -11532,7 +11532,7 @@ public:
 class CHandleDummy : public CBaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -11548,7 +11548,7 @@ public:
 class CFuncTrainControls : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -11565,7 +11565,7 @@ public:
 class CInfoTeleportDestination : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -11595,7 +11595,7 @@ public:
 class CLogicProximity : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11603,7 +11603,7 @@ public:
 class CInfoSpawnGroupLandmark : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -11744,7 +11744,7 @@ public:
 class CPhysicalButton : public CBaseButton
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11752,7 +11752,7 @@ public:
 class CRotButton : public CBaseButton
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -11839,7 +11839,7 @@ public:
 class CEntityBlocker : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -12489,7 +12489,7 @@ public:
 class CTriggerHurtGhost : public CTriggerHurt
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -12497,7 +12497,7 @@ public:
 class CTriggerCallback : public CBaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 12
@@ -12588,7 +12588,7 @@ public:
 class CNavWalkable : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -12921,7 +12921,7 @@ public:
 class CSpriteOriented : public CSprite
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -13036,7 +13036,7 @@ public:
 class CPointHintUi : public CPointClientUIWorldPanel
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -13087,7 +13087,7 @@ public:
 class CInfoPlayerTerrorist : public SpawnPoint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13095,7 +13095,7 @@ public:
 class CInfoPlayerCounterterrorist : public SpawnPoint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13103,7 +13103,7 @@ public:
 class CInfoDeathmatchSpawn : public SpawnPoint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13111,7 +13111,7 @@ public:
 class CInfoArmsRaceCounterterrorist : public SpawnPoint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13119,7 +13119,7 @@ public:
 class CInfoArmsRaceTerrorist : public SpawnPoint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13127,7 +13127,7 @@ public:
 class CInfoEnemyTerroristSpawn : public SpawnPointCoopEnemy
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -13362,7 +13362,7 @@ public:
 class CInfoGasCanisterLaunchPoint : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -13526,7 +13526,7 @@ public:
 class CTabletBlockerShim : public CBaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13534,7 +13534,7 @@ public:
 class CTabletBlocker : public CTabletBlockerShim
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13542,7 +13542,7 @@ public:
 class CTriggerTripWire : public CBaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13550,7 +13550,7 @@ public:
 class CCSSprite : public CSprite
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -13593,7 +13593,7 @@ public:
 class CInfoInstructorHintBombTargetA : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13601,7 +13601,7 @@ public:
 class CInfoInstructorHintBombTargetB : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13609,7 +13609,7 @@ public:
 class CHostageRescueZoneShim : public CBaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13617,7 +13617,7 @@ public:
 class CHostageRescueZone : public CHostageRescueZoneShim
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13625,7 +13625,7 @@ public:
 class CInfoInstructorHintHostageRescueZone : public CPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -13666,7 +13666,7 @@ public:
 class CTriggerBombReset : public CBaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -13720,7 +13720,7 @@ public:
 class CTriggerCustomBounds : public CBaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13728,7 +13728,7 @@ public:
 class CTriggerSurvivalPlayArea : public CTriggerCustomBounds
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -13809,7 +13809,7 @@ public:
 class CFireCrackerBlast : public CInferno
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 52
@@ -14430,7 +14430,7 @@ public:
 class CTonemapController2Alias_env_tonemap_controller2 : public CTonemapController2
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -14467,7 +14467,7 @@ public:
 class CLightSpotEntity : public CLightEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14475,7 +14475,7 @@ public:
 class CLightOrthoEntity : public CLightEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14483,7 +14483,7 @@ public:
 class CLightDirectionalEntity : public CLightEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14491,7 +14491,7 @@ public:
 class CLightEnvironmentEntity : public CLightDirectionalEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 16
@@ -14584,7 +14584,7 @@ public:
 class CWorld : public CBaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -14733,7 +14733,7 @@ public:
 class CDynamicPropAlias_dynamic_prop : public CDynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14741,7 +14741,7 @@ public:
 class CDynamicPropAlias_prop_dynamic_override : public CDynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14749,7 +14749,7 @@ public:
 class CDynamicPropAlias_cable_dynamic : public CDynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -14844,7 +14844,7 @@ public:
 class CCommentaryViewPosition : public CSprite
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14852,7 +14852,7 @@ public:
 class CFuncWater : public CBaseDoor
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -14868,7 +14868,7 @@ public:
 class CItemSoda : public CBaseAnimGraph
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14876,7 +14876,7 @@ public:
 class CPrecipitation : public CBaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 19
@@ -14922,7 +14922,7 @@ public:
 class CPushable : public CBreakable
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14930,7 +14930,7 @@ public:
 class CFuncLadderAlias_func_useableladder : public CFuncLadder
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -14965,7 +14965,7 @@ public:
 class CFuncMoveLinearAlias_momentary_door : public CFuncMoveLinear
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14973,7 +14973,7 @@ public:
 class CFuncWaterAnalog : public CFuncMoveLinear
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -15007,7 +15007,7 @@ public:
 class CSimpleMarkupVolumeTagged : public CMarkupVolumeTagged
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -15015,7 +15015,7 @@ public:
 class CMarkupVolumeTagged_Nav : public CMarkupVolumeTagged
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -15043,7 +15043,7 @@ public:
 class CPathCornerCrash : public CPathCorner
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -15067,7 +15067,7 @@ public:
 class CRopeKeyframeAlias_move_rope : public CRopeKeyframe
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -15075,7 +15075,7 @@ public:
 class CSceneEntityAlias_logic_choreographed_scene : public CSceneEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -15111,7 +15111,7 @@ public:
 class CSpriteAlias_env_glow : public CSprite
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -15194,7 +15194,7 @@ public:
 class CFuncTrackAuto : public CFuncTrackChange
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -15226,7 +15226,7 @@ public:
 class CTriggerOnce : public CTriggerMultiple
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -15312,7 +15312,7 @@ public:
 class CTriggerGravity : public CBaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -15349,7 +15349,7 @@ public:
 class CServerRagdollTrigger : public CBaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -15732,7 +15732,7 @@ public:
 class CPhysicsPropOverride : public CPhysicsProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -15752,7 +15752,7 @@ public:
 class CWaterBullet : public CBaseAnimGraph
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -15852,7 +15852,7 @@ public:
 class CCoopBonusCoin : public CDynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -16206,7 +16206,7 @@ public:
 class CPredictedViewModel : public CBaseViewModel
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 28
@@ -16411,7 +16411,7 @@ public:
 class CPhysicsPropMultiplayer : public CPhysicsProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16419,7 +16419,7 @@ public:
 class CBrBaseItem : public CPhysicsPropMultiplayer
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -16454,7 +16454,7 @@ public:
 class CPhysPropMetalCrate : public CPhysPropLootCrate
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -16533,7 +16533,7 @@ public:
 class CHEGrenadeProjectile : public CBaseCSGrenadeProjectile
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16541,7 +16541,7 @@ public:
 class CPlantedC4Survival : public CPlantedC4
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 33
@@ -16624,7 +16624,7 @@ public:
 class CHostageCarriableProp : public CBaseAnimGraph
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16632,7 +16632,7 @@ public:
 class CItemAssaultSuit : public CItem
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16640,7 +16640,7 @@ public:
 class CItemHeavyAssaultSuit : public CItemAssaultSuit
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16648,7 +16648,7 @@ public:
 class CItemKevlar : public CItem
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -16703,7 +16703,7 @@ public:
 class CBaseFlexAlias_funCBaseFlex : public CBaseFlex
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -16720,7 +16720,7 @@ public:
 class CRagdollPropAlias_physics_prop_ragdoll : public CRagdollProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -17131,7 +17131,7 @@ public:
 class CDEagle : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17139,7 +17139,7 @@ public:
 class CWeaponElite : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17147,7 +17147,7 @@ public:
 class CWeaponNOVA : public CWeaponCSBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17155,7 +17155,7 @@ public:
 class CWeaponSawedoff : public CWeaponCSBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -17172,7 +17172,7 @@ public:
 class CWeaponXM1014 : public CWeaponCSBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17180,7 +17180,7 @@ public:
 class CKnife : public CWeaponCSBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17188,7 +17188,7 @@ public:
 class CKnifeGG : public CKnife
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -17207,7 +17207,7 @@ public:
 class CWeaponZoneRepulsor : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -17324,7 +17324,7 @@ public:
 class CItem_Healthshot : public CWeaponBaseItem
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -17408,7 +17408,7 @@ public:
 class CBreachCharge : public CWeaponCSBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17416,7 +17416,7 @@ public:
 class CBumpMine : public CWeaponCSBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17424,7 +17424,7 @@ public:
 class CTripWireFire : public CBaseCSGrenade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17432,7 +17432,7 @@ public:
 class CPhysPropWeaponRefillHeavyArmor : public CPhysPropWeaponUpgrade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17440,7 +17440,7 @@ public:
 class CPhysPropWeaponUpgradeArmor : public CPhysPropWeaponUpgrade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17448,7 +17448,7 @@ public:
 class CPhysPropWeaponUpgradeHelmet : public CPhysPropWeaponUpgrade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17456,7 +17456,7 @@ public:
 class CPhysPropWeaponUpgradeArmorHelmet : public CPhysPropWeaponUpgrade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17464,7 +17464,7 @@ public:
 class CPhysPropWeaponUpgradeExoJump : public CPhysPropWeaponUpgrade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17472,7 +17472,7 @@ public:
 class CPhysPropWeaponUpgradeParachute : public CPhysPropWeaponUpgrade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17480,7 +17480,7 @@ public:
 class CPhysPropWeaponUpgradeContractKill : public CPhysPropWeaponUpgrade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -17503,7 +17503,7 @@ public:
 class CPhysPropWeaponUpgradeTablet : public CPhysPropWeaponUpgrade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17511,7 +17511,7 @@ public:
 class CPhysPropWeaponUpgradeTabletHighres : public CPhysPropWeaponUpgradeTablet
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17519,7 +17519,7 @@ public:
 class CPhysPropWeaponUpgradeTabletZoneIntel : public CPhysPropWeaponUpgradeTablet
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17527,7 +17527,7 @@ public:
 class CPhysPropWeaponUpgradeTabletDroneIntel : public CPhysPropWeaponUpgradeTablet
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17535,7 +17535,7 @@ public:
 class CSensorGrenade : public CBaseCSGrenade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 189
@@ -17927,7 +17927,7 @@ public:
 class CCSObserverPawn : public CCSPlayerPawnBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 25
@@ -18122,7 +18122,7 @@ public:
 class CHostageAlias_info_hostage_spawn : public CHostage
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18130,7 +18130,7 @@ public:
 class CItemDefuserAlias_item_defuser : public CItemDefuser
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18138,7 +18138,7 @@ public:
 class CAK47 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18146,7 +18146,7 @@ public:
 class CWeaponAug : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18154,7 +18154,7 @@ public:
 class CWeaponAWP : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18162,7 +18162,7 @@ public:
 class CWeaponBizon : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18170,7 +18170,7 @@ public:
 class CWeaponFamas : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18178,7 +18178,7 @@ public:
 class CWeaponFiveSeven : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18186,7 +18186,7 @@ public:
 class CWeaponG3SG1 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18194,7 +18194,7 @@ public:
 class CWeaponGalilAR : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18202,7 +18202,7 @@ public:
 class CWeaponGlock : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18210,7 +18210,7 @@ public:
 class CWeaponHKP2000 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18218,7 +18218,7 @@ public:
 class CWeaponM4A1 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18226,7 +18226,7 @@ public:
 class CWeaponMAC10 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18234,7 +18234,7 @@ public:
 class CWeaponMag7 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18242,7 +18242,7 @@ public:
 class CWeaponMP7 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18250,7 +18250,7 @@ public:
 class CWeaponMP9 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18258,7 +18258,7 @@ public:
 class CWeaponNegev : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18266,7 +18266,7 @@ public:
 class CWeaponP250 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18274,7 +18274,7 @@ public:
 class CWeaponP90 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18282,7 +18282,7 @@ public:
 class CWeaponSCAR20 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18290,7 +18290,7 @@ public:
 class CWeaponSG556 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18298,7 +18298,7 @@ public:
 class CWeaponSSG08 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18306,7 +18306,7 @@ public:
 class CWeaponTec9 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18314,7 +18314,7 @@ public:
 class CWeaponUMP45 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18322,7 +18322,7 @@ public:
 class CWeaponM249 : public CWeaponCSBaseGun
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18330,7 +18330,7 @@ public:
 class CMolotovGrenade : public CBaseCSGrenade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18338,7 +18338,7 @@ public:
 class CIncendiaryGrenade : public CMolotovGrenade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18346,7 +18346,7 @@ public:
 class CDecoyGrenade : public CBaseCSGrenade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18354,7 +18354,7 @@ public:
 class CFlashbang : public CBaseCSGrenade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18362,7 +18362,7 @@ public:
 class CHEGrenade : public CBaseCSGrenade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18370,6 +18370,6 @@ public:
 class CSmokeGrenade : public CBaseCSGrenade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 

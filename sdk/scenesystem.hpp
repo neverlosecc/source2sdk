@@ -104,7 +104,7 @@ public:
 class CSSDSMsg_PreLayer : public CSSDSMsg_LayerBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -112,6 +112,6 @@ public:
 class CSSDSMsg_PostLayer : public CSSDSMsg_LayerBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 

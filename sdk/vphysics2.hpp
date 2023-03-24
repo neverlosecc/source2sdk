@@ -80,7 +80,7 @@ public:
 class IPhysicsPlayerController
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 35

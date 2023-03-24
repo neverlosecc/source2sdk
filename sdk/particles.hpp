@@ -860,7 +860,7 @@ public:
 class IParticleCollection
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x10]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -868,7 +868,7 @@ public:
 class IControlPointEditorData
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -876,7 +876,7 @@ public:
 class IParticleSystemDefinition
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 18
@@ -1297,7 +1297,7 @@ public:
 class CParticleCollectionFloatInput : public CParticleFloatInput
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 16
@@ -1386,7 +1386,7 @@ public:
 class CParticleFunctionConstraint : public CParticleFunction
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -1394,7 +1394,7 @@ public:
 class CParticleFunctionForce : public CParticleFunction
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -1402,7 +1402,7 @@ public:
 class CParticleFunctionOperator : public CParticleFunction
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -1554,7 +1554,7 @@ public:
 class CParticleCollectionVecInput : public CParticleVecInput
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -1611,7 +1611,7 @@ public:
 class CPerParticleFloatInput : public CParticleFloatInput
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -1628,7 +1628,7 @@ public:
 class CParticleRemapFloatInput : public CParticleFloatInput
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 22
@@ -1949,7 +1949,7 @@ public:
 class CPerParticleVecInput : public CParticleVecInput
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 27
@@ -2099,7 +2099,7 @@ public:
 class IParticleEffect
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -2107,7 +2107,7 @@ public:
 class CParticleProperty
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x28]; 	// @note: autoaligned
 };
 
 // Alignment: 32
@@ -2276,7 +2276,7 @@ public:
 class C_OP_WorldCollideConstraint : public CParticleFunctionConstraint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 26
@@ -3126,7 +3126,7 @@ public:
 class C_INIT_RandomRotation : public CGeneralRandomRotation
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -3148,7 +3148,7 @@ public:
 class C_INIT_RandomRotationSpeed : public CGeneralRandomRotation
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3156,7 +3156,7 @@ public:
 class C_INIT_RandomYaw : public CGeneralRandomRotation
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -3502,7 +3502,7 @@ public:
 class C_INIT_RemapParticleCountToNamedModelSequenceScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3510,7 +3510,7 @@ public:
 class C_INIT_RemapParticleCountToNamedModelBodyPartScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3518,7 +3518,7 @@ public:
 class C_INIT_RemapParticleCountToNamedModelMeshGroupScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -4462,7 +4462,7 @@ public:
 class C_INIT_RandomNamedModelSequence : public C_INIT_RandomNamedModelElement
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4470,7 +4470,7 @@ public:
 class C_INIT_RandomNamedModelBodyPart : public C_INIT_RandomNamedModelElement
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4478,7 +4478,7 @@ public:
 class C_INIT_RandomNamedModelMeshGroup : public C_INIT_RandomNamedModelElement
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -4508,7 +4508,7 @@ public:
 class C_INIT_RemapNamedModelSequenceToScalar : public C_INIT_RemapNamedModelElementToScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4516,7 +4516,7 @@ public:
 class C_INIT_RemapNamedModelBodyPartToScalar : public C_INIT_RemapNamedModelElementToScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4524,7 +4524,7 @@ public:
 class C_INIT_RemapNamedModelMeshGroupToScalar : public C_INIT_RemapNamedModelElementToScalar
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 18
@@ -6022,7 +6022,7 @@ public:
 class C_OP_EndCapDecay : public CParticleFunctionOperator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -6119,7 +6119,7 @@ public:
 class CSpinUpdateBase : public CParticleFunctionOperator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6127,7 +6127,7 @@ public:
 class C_OP_Spin : public CGeneralSpin
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6135,7 +6135,7 @@ public:
 class C_OP_SpinUpdate : public CSpinUpdateBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6143,7 +6143,7 @@ public:
 class C_OP_SpinYaw : public CGeneralSpin
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -7874,7 +7874,7 @@ public:
 class C_OP_RemapNamedModelSequenceOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7882,7 +7882,7 @@ public:
 class C_OP_RemapNamedModelBodyPartOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7890,7 +7890,7 @@ public:
 class C_OP_RemapNamedModelMeshGroupOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -7923,7 +7923,7 @@ public:
 class C_OP_RemapNamedModelSequenceEndCap : public C_OP_RemapNamedModelElementEndCap
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7931,7 +7931,7 @@ public:
 class C_OP_RemapNamedModelBodyPartEndCap : public C_OP_RemapNamedModelElementEndCap
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7939,7 +7939,7 @@ public:
 class C_OP_RemapNamedModelMeshGroupEndCap : public C_OP_RemapNamedModelElementEndCap
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -10105,7 +10105,7 @@ public:
 class C_OP_RenderClothForce : public CParticleFunctionRenderer
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -10113,7 +10113,7 @@ public:
 class C_OP_Callback : public CParticleFunctionRenderer
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
