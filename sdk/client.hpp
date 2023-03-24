@@ -1801,7 +1801,7 @@ public:
 class CPlayer_AutoaimServices : public CPlayerPawnComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -1900,7 +1900,7 @@ public:
 class CPlayer_FlashlightServices : public CPlayerPawnComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -1908,7 +1908,7 @@ public:
 class CPlayer_ItemServices : public CPlayerPawnComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -2017,7 +2017,7 @@ public:
 class CPlayer_UseServices : public CPlayerPawnComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -2025,7 +2025,7 @@ public:
 class CPlayer_WaterServices : public CPlayerPawnComponent
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -2780,7 +2780,7 @@ public:
 class CLogicalEntity : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -3018,7 +3018,7 @@ public:
 class C_TintController : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3026,7 +3026,7 @@ public:
 class C_TriggerCamera : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -3126,7 +3126,7 @@ public:
 class IClientAlphaProperty
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 2
@@ -3381,7 +3381,7 @@ public:
 class C_GameRulesProxy : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3389,7 +3389,7 @@ public:
 class C_GameRules
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 10
@@ -3430,7 +3430,7 @@ public:
 class C_MultiplayRules : public C_GameRules
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -3544,7 +3544,7 @@ public:
 class C_SingleplayRules : public C_GameRules
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -3569,7 +3569,7 @@ public:
 class C_SoundOpvarSetPointEntity : public C_SoundOpvarSetPointBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3577,7 +3577,7 @@ public:
 class C_SoundOpvarSetAABBEntity : public C_SoundOpvarSetPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3585,7 +3585,7 @@ public:
 class C_SoundOpvarSetOBBEntity : public C_SoundOpvarSetAABBEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3593,7 +3593,7 @@ public:
 class C_SoundOpvarSetPathCornerEntity : public C_SoundOpvarSetPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -3601,7 +3601,7 @@ public:
 class C_SoundOpvarSetOBBWindEntity : public C_SoundOpvarSetPointBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -4580,7 +4580,7 @@ public:
 class C_DOTABaseCustomHeroPickRules : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -4833,7 +4833,7 @@ public:
 class C_DOTATurboGameMode : public C_DOTABaseGameMode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4841,7 +4841,7 @@ public:
 class C_DOTANewPlayerPoolGameMode : public C_DOTABaseGameMode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4849,7 +4849,7 @@ public:
 class C_DOTAMutationGameMode : public C_DOTABaseGameMode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -5152,7 +5152,7 @@ public:
 class C_IngameEvent_FM2015 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5160,7 +5160,7 @@ public:
 class C_IngameEvent_WM2016 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5168,7 +5168,7 @@ public:
 class C_IngameEvent_TI6 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5176,7 +5176,7 @@ public:
 class C_IngameEvent_FM2016 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5184,7 +5184,7 @@ public:
 class C_IngameEvent_WM2017 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5192,7 +5192,7 @@ public:
 class C_IngameEvent_TI7 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5200,7 +5200,7 @@ public:
 class C_IngameEvent_TI8 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5208,7 +5208,7 @@ public:
 class C_IngameEvent_DotaPlus : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5216,7 +5216,7 @@ public:
 class C_IngameEvent_DotaPrime : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5224,7 +5224,7 @@ public:
 class C_IngameEvent_FV2018 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5232,7 +5232,7 @@ public:
 class CIngameEvent_NewBloom2019 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5240,7 +5240,7 @@ public:
 class C_IngameEvent_TI9 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5248,7 +5248,7 @@ public:
 class C_IngameEvent_FV2019 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5256,7 +5256,7 @@ public:
 class C_IngameEvent_NB2020 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5264,7 +5264,7 @@ public:
 class CIngameEvent_TI2020 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5272,7 +5272,7 @@ public:
 class CIngameEvent_Diretide2020 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5280,7 +5280,7 @@ public:
 class CIngameEvent_Spring2021 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5288,7 +5288,7 @@ public:
 class CIngameEvent_Fall2021 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5296,7 +5296,7 @@ public:
 class CIngameEvent_TI2022 : public C_IngameEvent_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -5344,7 +5344,7 @@ public:
 class C_HorizontalMotionController
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x10]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5352,7 +5352,7 @@ public:
 class C_VerticalMotionController
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x10]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -5360,7 +5360,7 @@ public:
 class CDOTA_Buff_Item : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5368,7 +5368,7 @@ public:
 class CDOTA_Modifier_Stacking_Base : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5376,7 +5376,7 @@ public:
 class CDOTA_Modifier_Stacking_Multiple_Buff_Base : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5384,7 +5384,7 @@ public:
 class CDOTA_Modifier_Glyph_Reset : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5392,7 +5392,7 @@ public:
 class CDOTA_Modifier_StackedNeutral : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -5409,7 +5409,7 @@ public:
 class CDOTA_Modifier_Filler_Buff_Icon : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -5448,7 +5448,7 @@ public:
 class CDOTA_Modifier_Building_DispelsSmoke : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -5464,7 +5464,7 @@ public:
 class CDOTA_Modifier_Tower_Truesight_Aura : public CDOTA_Modifier_Truesight_Aura
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5472,7 +5472,7 @@ public:
 class CDOTA_Modifier_Fountain_Truesight_Aura : public CDOTA_Modifier_Truesight_Aura
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -5518,7 +5518,7 @@ public:
 class CDOTA_Modifier_BackdoorProtection : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5526,7 +5526,7 @@ public:
 class CDOTA_Modifier_BackdoorProtectionInBase : public CDOTA_Modifier_BackdoorProtection
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5534,7 +5534,7 @@ public:
 class CDOTA_Modifier_BackdoorProtectionActive : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5542,7 +5542,7 @@ public:
 class CDOTA_Modifier_ProjectileVision : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5550,7 +5550,7 @@ public:
 class CDOTA_Modifier_ProjectileVisionOnMinimap : public CDOTA_Modifier_ProjectileVision
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5558,7 +5558,7 @@ public:
 class CDOTA_Modifier_Pet : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -5575,7 +5575,7 @@ public:
 class CDOTA_Modifier_HeroStatuePedestal : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5583,7 +5583,7 @@ public:
 class CDOTA_Modifier_BattleCupEffigy : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5591,7 +5591,7 @@ public:
 class CDOTA_Modifier_Hidden_NoDamage : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5599,7 +5599,7 @@ public:
 class CDOTA_Modifier_Tutorial_Disable_Healing : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -5633,7 +5633,7 @@ public:
 class CDOTA_Modifier_Tutorial_LowAttackPriority : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -5649,7 +5649,7 @@ public:
 class CDOTA_Modifier_Creep_Slow : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5657,7 +5657,7 @@ public:
 class CDOTA_Modifier_Creep_Haste : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5665,7 +5665,7 @@ public:
 class CDOTA_Modifier_Buyback_Gold_Penalty : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5673,7 +5673,7 @@ public:
 class CDOTA_Modifier_Provide_Vision : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -5692,7 +5692,7 @@ public:
 class CDOTA_VR_Modifier_Statue_Mode : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5700,7 +5700,7 @@ public:
 class CDOTA_Modifier_Generic_Hidden : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5708,7 +5708,7 @@ public:
 class CDOTA_Modifier_Disable_Healing : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5716,7 +5716,7 @@ public:
 class CDOTA_Modifier_MagicImmune : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5724,7 +5724,7 @@ public:
 class CDOTA_Modifier_CameraFollow : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5732,7 +5732,7 @@ public:
 class CDOTA_Modifier_Hexed : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5740,7 +5740,7 @@ public:
 class CDOTA_Modifier_Item_Editor : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5748,7 +5748,7 @@ public:
 class CDOTA_Modifier_Prosperous_Soul : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -5764,7 +5764,7 @@ public:
 class CDOTA_Modifier_Kill : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5772,7 +5772,7 @@ public:
 class CDOTA_Modifier_Phased : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5780,7 +5780,7 @@ public:
 class CDOTA_Modifier_Dominated : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5788,7 +5788,7 @@ public:
 class CDOTA_Modifier_TrueSight : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5796,7 +5796,7 @@ public:
 class CDOTA_Modifier_TrueSightFoW : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5804,7 +5804,7 @@ public:
 class CDOTA_Modifier_TrueSightAll : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5812,7 +5812,7 @@ public:
 class CDOTA_Modifier_Stunned : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5820,7 +5820,7 @@ public:
 class CDOTA_Modifier_Bashed : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5828,7 +5828,7 @@ public:
 class CDOTA_Modifier_Taunt : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -5859,7 +5859,7 @@ public:
 class CDOTA_Modifier_InvisibleTrueSightImmune : public CDOTA_Modifier_Invisible
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5867,7 +5867,7 @@ public:
 class CDOTA_Modifier_Followthrough : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5875,7 +5875,7 @@ public:
 class CDOTA_Modifier_Silence : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5883,7 +5883,7 @@ public:
 class CDOTA_Modifier_Fear : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5891,7 +5891,7 @@ public:
 class CDOTA_Modifier_Invulnerable : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5899,7 +5899,7 @@ public:
 class CDOTA_Modifier_AttackImmune : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5907,7 +5907,7 @@ public:
 class CDOTA_Modifier_Disarmed : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5915,7 +5915,7 @@ public:
 class CDOTA_Modifier_Break : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5923,7 +5923,7 @@ public:
 class CDOTA_Modifier_Muted : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5931,7 +5931,7 @@ public:
 class CDOTA_Modifier_Rooted : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5939,7 +5939,7 @@ public:
 class CDOTA_Modifier_NoHealthBar : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5947,7 +5947,7 @@ public:
 class CDOTA_Modifier_NotOnMinimap : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5955,7 +5955,7 @@ public:
 class CDOTA_Modifier_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5963,7 +5963,7 @@ public:
 class CDOTA_Modifier_FountainAura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5971,7 +5971,7 @@ public:
 class CDOTA_Modifier_FountainAuraBuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -5994,7 +5994,7 @@ public:
 class CDOTA_Modifier_Rune_DoubleDamage : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -6010,7 +6010,7 @@ public:
 class CDOTA_Modifier_Rune_Illusion : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6018,7 +6018,7 @@ public:
 class CDOTA_Modifier_Rune_Haste : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6026,7 +6026,7 @@ public:
 class CDOTA_Modifier_Rune_FlyingHaste : public CDOTA_Modifier_Rune_Haste
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6034,7 +6034,7 @@ public:
 class CDOTA_Modifier_Rune_Invisibility : public CDOTA_Modifier_Invisible
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6042,7 +6042,7 @@ public:
 class CDOTA_Modifier_Rune_Super_Invisibility : public CDOTA_Modifier_PersistentInvisibility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6050,7 +6050,7 @@ public:
 class CDOTA_Modifier_Rune_Regen : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6058,7 +6058,7 @@ public:
 class CDOTA_Modifier_Rune_SuperRegen : public CDOTA_Modifier_Rune_Regen
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -6075,7 +6075,7 @@ public:
 class CDOTA_Modifier_Rune_SuperArcane : public CDOTA_Modifier_Rune_Arcane
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -6093,7 +6093,7 @@ public:
 class CDOTA_Modifier_Teleporting_Root_Logic : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -6143,7 +6143,7 @@ public:
 class CDOTA_Modifier_TeamShowcase_Global : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6151,7 +6151,7 @@ public:
 class CDOTA_Modifier_TeamShowcase_Showcase : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -6170,7 +6170,7 @@ public:
 class CDOTA_Modifier_DisableTauntAnimationCancel : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6178,7 +6178,7 @@ public:
 class CDOTA_Modifier_PreventTaunts : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -6194,7 +6194,7 @@ public:
 class CDOTA_Modifier_SecondaryUnit_Taunt : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -6219,7 +6219,7 @@ public:
 class CDOTA_Modifier_BookOfStrength : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6227,7 +6227,7 @@ public:
 class CDOTA_Modifier_BookOfAgility : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6235,7 +6235,7 @@ public:
 class CDOTA_Modifier_BookOfIntelligence : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6243,7 +6243,7 @@ public:
 class CDOTA_Modifier_No_Invisibility : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -6259,7 +6259,7 @@ public:
 class CDOTA_Modifier_ChangeTreeModel_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6267,7 +6267,7 @@ public:
 class CDOTA_Modifier_LegacyChargeCounter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -6388,7 +6388,7 @@ public:
 class CDOTA_Modifier_Lua_Horizontal_Motion : public CDOTA_Modifier_Lua
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6396,7 +6396,7 @@ public:
 class CDOTA_Modifier_Lua_Vertical_Motion : public CDOTA_Modifier_Lua
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6404,7 +6404,7 @@ public:
 class CDOTA_Modifier_Lua_Motion_Both : public CDOTA_Modifier_Lua
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -6525,7 +6525,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Disruptor_StaticStormMute : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -6550,7 +6550,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Special_Disruptor_ThunderStrike_Int_Increase_Counter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6558,7 +6558,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Magnataur_Horn_Toss : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6566,7 +6566,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Magnataur_Horn_Toss_Slow : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -6653,7 +6653,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Magnataur_ReversePolarity : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6661,7 +6661,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Magnataur_ReversePolarity_Stun : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -6678,7 +6678,7 @@ public:
 class CDOTA_Modifier_AghsFort_Special_Magnataur_Reverse_Polarity_Polarity_Dummy : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -6765,7 +6765,7 @@ public:
 class CDOTA_Modifier_Aghsfort_PhantomAssassin_MarkedForDeath : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -6921,7 +6921,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Snapfire_Scatterblast_Disarm : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -6939,7 +6939,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Snapfire_FiresnapCookie_ShortHop : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6947,7 +6947,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Snapfire_FiresnapCookie_AllyFlailAnim : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6955,7 +6955,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Snapfire_FiresnapCookie_LandingGesture : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -7038,7 +7038,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Snapfire_MortimerKisses_VisionSource : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -7070,7 +7070,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Snapfire_GobbleUp_Creep : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -7133,7 +7133,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Tusk_Snowball_Target : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7141,7 +7141,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Tusk_Snowball_Visible : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7149,7 +7149,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Tusk_Snowball_Movement : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7157,7 +7157,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Tusk_Snowball_Movement_Friendly : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -7236,7 +7236,7 @@ public:
 class CDOTA_Modifier_AghsFort_Special_Tusk_Ice_Shards_Explode_Dummy : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -7265,7 +7265,7 @@ public:
 class CDOTA_Modifier_AghsFort_Ursa_Earthshock_Move : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -7306,7 +7306,7 @@ public:
 class CDOTA_Modifier_AghsFort_Ursa_Earthshock_DeepInvis_Visual : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -7388,7 +7388,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Mars_Spear_Impale : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7396,7 +7396,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Mars_Spear_Stun : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -7423,7 +7423,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Mars_ArenaOfBlood_Animation : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -7466,7 +7466,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Mars_ArenaOfBlood_Spear : public CDOTA_Modifier_Knockback
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -7492,7 +7492,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Mars_ArenaOfBlood_Marker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -7730,7 +7730,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Viper_NethertoxinMute : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -7747,7 +7747,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Viper_CorrosiveSkin_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -7806,7 +7806,7 @@ public:
 class CDOTA_Modifier_AghsFort_VoidSpiritBoss_Passive : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -7879,7 +7879,7 @@ public:
 class CDOTA_Modifier_AghsFort_VoidSpiritBoss_AstralStep_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -7937,7 +7937,7 @@ public:
 class CDOTA_Modifier_AghsFort_VoidSpiritBoss_Dissimilate_Invis : public CDOTA_Modifier_Invisible
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -7981,7 +7981,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Sniper_TakeAim_Artillery_Thinker : public CDOTA_Modifier_AghsFort_Sniper_Shrapnel_Thinker
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -8000,7 +8000,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Sniper_TakeAim_Artillery_Slow : public CDOTA_Modifier_AghsFort_Sniper_Shrapnel_Slow
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -8018,7 +8018,7 @@ public:
 class CDOTA_Modifier_AghsFort_Sniper_Shrapnel_AttackSpeed_Decrementer : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -8044,7 +8044,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Sniper_Shotgun : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -8102,7 +8102,7 @@ public:
 class CDOTA_Modifier_AghsFort_Sniper_TakeAim_AOE_Marked : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -8110,7 +8110,7 @@ public:
 class CDOTA_Modifier_AghsFort_Sniper_TakeAim_HopBackwards : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -8118,7 +8118,7 @@ public:
 class CDOTA_Modifier_AghsFort_Sniper_Assassinate : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -8126,7 +8126,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Special_Sniper_Assassinate_Killshot : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -8174,7 +8174,7 @@ public:
 class CDOTA_Modifier_AghsFort_EarthSpiritBoss_RollingBoulder_Caster : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -8190,7 +8190,7 @@ public:
 class CDOTA_Modifier_AghsFort_EarthSpiritBoss_GeogmagneticGrip_Debuff : public CDOTA_Modifier_Silence
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -8258,7 +8258,7 @@ public:
 class CDOTA_Modifier_AghsFort_Special_Omniknight_Purification_Multicast : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -8318,7 +8318,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Omniknight_Repel_Knockback : public CDOTA_Modifier_Knockback
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -8326,7 +8326,7 @@ public:
 class CDOTA_Modifier_AghsFort_Special_Omniknight_Guardian_Angel_Single_Target_Dummy : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -8343,7 +8343,7 @@ public:
 class CDOTA_Modifier_Aghsfort_WitchDoctor_Voodoo_Restoration_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -8363,7 +8363,7 @@ public:
 class CDOTA_Modifier_Aghsfort_WitchDoctor_MaledictDoT : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -8417,7 +8417,7 @@ public:
 class CDOTA_Aghsfort_Modifier_WitchDoctor_ForceKill : public CDOTA_Modifier_Invisible
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -8425,7 +8425,7 @@ public:
 class CDOTA_Modifier_AghsFort_Special_Witch_Doctor_Death_Ward_No_Channel : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -8550,7 +8550,7 @@ public:
 class CDOTA_Modifier_AghsFort_Special_Templar_Assassin_Trap_Illusion : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -8558,7 +8558,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Slark_DarkPact : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -8690,7 +8690,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Special_Slark_Pounce_Projectiles : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -8744,7 +8744,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Special_QueenOfPain_ShadowStrike_On_Attack : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -8752,7 +8752,7 @@ public:
 class CDOTA_Modifier_Aghsfort_QueenOfPain_Blink_Scream_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -8760,7 +8760,7 @@ public:
 class CDOTA_Modifier_Aghsfort_QueenOfPain_Scream_Knockback : public CDOTA_Modifier_Knockback
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -8788,7 +8788,7 @@ public:
 class CDOTA_Modifier_Aghsfort_TuskBoss_Snowball_Target : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -8796,7 +8796,7 @@ public:
 class CDOTA_Modifier_Aghsfort_TuskBoss_Snowball_Visible : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -8804,7 +8804,7 @@ public:
 class CDOTA_Modifier_Aghsfort_TuskBoss_Snowball_Movement : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -8812,7 +8812,7 @@ public:
 class CDOTA_Modifier_Aghsfort_TuskBoss_Snowball_Movement_Friendly : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -8883,7 +8883,7 @@ public:
 class CDOTA_Modifier_AghsFort_Special_TuskBoss_Ice_Shards_Explode_Dummy : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -8938,7 +8938,7 @@ public:
 class CDOTA_Modifier_AghsFort_Undying_Tombstone_Bunker_Friendly : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -8977,7 +8977,7 @@ public:
 class CDOTA_Modifier_Undying_Decay_On_Attack : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -9030,7 +9030,7 @@ public:
 class CDOTA_Modifier_AghsFort_Undying_Tombstone_Zombie_Modifier : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9038,7 +9038,7 @@ public:
 class CDOTA_Modifier_AghsFort_Undying_Exploding_Zombie : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9046,7 +9046,7 @@ public:
 class CDOTA_Modifier_AghsFort_Undying_ConsumeZombies_Counter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -9091,7 +9091,7 @@ public:
 class CDOTA_Modifier_AghsFort_Undying_Tombstone_Death_Trigger : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9099,7 +9099,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Special_Undying_ConsumeZombies_Dummy : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -9188,7 +9188,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Lina_LagunaBlade : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -9244,7 +9244,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Lina_LightStrikeArray_Stun : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -9411,7 +9411,7 @@ public:
 class CDOTA_modifier_aghsfort_juggernaut_omnislash_Invulnerability : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -9428,7 +9428,7 @@ public:
 class CDOTA_Modifier_AghsFort_Juggernaut_Omnislash_Ignite_Invuln : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9436,7 +9436,7 @@ public:
 class CDOTA_Modifier_AghsFort_Juggernaut_Omnislash_Ignite_Disarm : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -9452,7 +9452,7 @@ public:
 class CDOTA_Modifier_AghsFort2_DrowRanger_FrostArrows_Slow : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -9482,7 +9482,7 @@ public:
 class CDOTA_Modifier_AghsFort2_DrowRanger_WaveOfSilence_Knockback : public CDOTA_Modifier_Knockback
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -9568,7 +9568,7 @@ public:
 class CDOTA_Modifier_AghsFort2_DrowRanger_Multishot_Buff_Knockback : public CDOTA_Modifier_Knockback
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9576,7 +9576,7 @@ public:
 class CDOTA_Modifier_Aghsfort2_DrowRanger_Multishot_Refire : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -9617,7 +9617,7 @@ public:
 class CDOTA_Modifier_AghsFort2_DrowRanger_Marksmanship_AoE : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -9660,7 +9660,7 @@ public:
 class CDOTA_Modifier_AghsFort_Luna_MoonGlaive_Active : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -9668,7 +9668,7 @@ public:
 class CDOTA_Modifier_AghsFort_Luna_MoonGlaive_Knockback_Buff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -9685,7 +9685,7 @@ public:
 class CDOTA_Modifier_AghsFort_Luna_MoonGlaive_Knockback_Bounce : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -9737,7 +9737,7 @@ public:
 class CDOTA_Modifier_AghsFort_Luna_LunarBlessing_LunarPower : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -9753,7 +9753,7 @@ public:
 class CDOTA_Modifier_AghsFort_Luna_LunarBlessingAura_MoonShield_Trigger : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -9849,7 +9849,7 @@ public:
 class CDOTA_Modifier_AghsFort_Luna_Eclipse_IntoTheNight : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -9973,7 +9973,7 @@ public:
 class CDOTA_AghsFort_Modifier_Lich_Frost_Shield_Magic_Immune : public CDOTA_Modifier_MagicImmune
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -10055,7 +10055,7 @@ public:
 class CDOTA_Modifier_AghsFort_Kunkka_Tidebringer_Slow : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -10110,7 +10110,7 @@ public:
 class CDOTA_Modifier_AghsFort_Kunkka_XMarksTheSpotMarker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -10175,7 +10175,7 @@ public:
 class CDOTA_Modifier_AghsFort_Kunkka_GhostShip_Knockback : public CDOTA_Modifier_Knockback
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -10183,7 +10183,7 @@ public:
 class CDOTA_Modifier_AghsFort_Kunkka_GhostShip_Loaded : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -10257,7 +10257,7 @@ public:
 class CDOTA_Modifier_Kunkka_No_Quarter_Buff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -10331,7 +10331,7 @@ public:
 class CDOTA_Modifier_AghsFort_VoidSpirit_AstralStep_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -10403,7 +10403,7 @@ public:
 class CDOTA_Modifier_AghsFort_VoidSpirit_Dissimilate_Invis : public CDOTA_Modifier_Invisible
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -10436,7 +10436,7 @@ public:
 class CDOTA_Modifier_AghsFort_VoidSpirit_AetherRemnant_Push : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -10505,7 +10505,7 @@ public:
 class CDOTA_Modifier_AghsFort_Special_VoidSpirit_ResonantPulse_Suppression_MagicImmunity : public CDOTA_Modifier_MagicImmune
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -10523,7 +10523,7 @@ public:
 class CDOTA_Modifier_AghsFort_Special_VoidSpirit_AstralStep_Attacks : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -10667,7 +10667,7 @@ public:
 class CDOTA_Modifier_AghsFort_Gyrocopter_Rocket_Barrage_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -10685,7 +10685,7 @@ public:
 class CDOTA_Modifier_AghsFort_Special_Gyrocopter_Homing_Missile_Ride_LoadedUnit_Timeout : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -10737,7 +10737,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Special_Gyrocopter_Call_Down_Wingman : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -10769,7 +10769,7 @@ public:
 class CDOTA_Modifier_AghsFort_Dawnbreaker_Solar_Guardian_AirTime : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -10786,7 +10786,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Dawnbreaker_Solar_Guardian_After_Land : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -10862,7 +10862,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Dawnbreaker_Celestial_Hammer_Caster : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -10952,7 +10952,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Dawnbreaker_CelestialFire_Thinker : public CDOTA_Modifier_Aghsfort_Dawnbreaker_Converge_Thinker
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -10960,7 +10960,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Dawnbreaker_CelestialFire_Debuff : public CDOTA_Modifier_Aghsfort_Dawnbreaker_Converge
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -10968,7 +10968,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Dawnbreaker_BrightFoundry_Debuff : public CDOTA_Modifier_Aghsfort_Dawnbreaker_Converge
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -10987,7 +10987,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Dawnbreaker_Luminosity_Lightbringer : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -10995,7 +10995,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Dawnbreaker_SunSentinelLuminosity_Attack_Buff : public CDOTA_Modifier_Aghsfort_Dawnbreaker_Luminosity_Attack_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11003,7 +11003,7 @@ public:
 class CDOTA_Modifier_AghsFort_Special_Dawnbreaker_Solar_Guardian_DeathOfAStar : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -11024,7 +11024,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Dawnbreaker_SolarFlare_Debuff : public CDOTA_Modifier_Aghsfort_Dawnbreaker_Converge
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -11042,7 +11042,7 @@ public:
 class CDOTA_Modifier_AghsFort_Dawnbreaker_Starbreaker_CounterOrbital_Marker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11050,7 +11050,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Bane_Enfeeble : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -11120,7 +11120,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Bane_FiendsGrip_Self : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11128,7 +11128,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Bane_FiendsGrip_Illusion_Can_Only_Channel : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11136,7 +11136,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Bane_FiendsGrip_Illusion : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -11205,7 +11205,7 @@ public:
 class CDOTA_Modifier_AghsFort_Phoenix_SunRayVision : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 21
@@ -11299,7 +11299,7 @@ public:
 class CDOTA_Modifier_AghsFort_Phoenix_SupernovaHiding : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -11362,7 +11362,7 @@ public:
 class CDOTA_Modifier_AghsFort_Special_Phoenix_IcarusDive_Savior_Caster : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -11395,7 +11395,7 @@ public:
 class CDOTA_Modifier_AghsFort_Phoenix_FlameRevenant_Passive : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -11640,7 +11640,7 @@ public:
 class CDOTA_Modifier_Aghsfort_ArcWardenBoss_SparkWraith_Missile_Target : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -11658,7 +11658,7 @@ public:
 class CDOTA_Modifier_AghsFort_BossEarthshaker_Fissure_Shard_Pathing : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11666,7 +11666,7 @@ public:
 class CDOTA_Modifier_AghsFort_BossEarthshaker_Fissure_Stun : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11674,7 +11674,7 @@ public:
 class CDOTA_Modifier_AghsFort_BossEarthshaker_Fissure_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11682,7 +11682,7 @@ public:
 class CDOTA_Modifier_AghsFort_BossEarthshaker_EnchantTotem_Leap : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11690,7 +11690,7 @@ public:
 class CDOTA_Modifier_AghsFort_BossEarthshaker_EnchantTotem_Animation : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -11822,7 +11822,7 @@ public:
 class CDOTA_Modifier_Aghsfort_PrimalBeast_Boss_Pummel_End_Knockback : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11830,7 +11830,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Pummel_LootDrop_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -11875,7 +11875,7 @@ public:
 class CDOTA_Modifier_Aghsfort_PrimalBeast_Boss_Onslaught_Knockback : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -11960,7 +11960,7 @@ public:
 class CDOTA_Modifier_Aghsfort_PrimalBeast_Boss_PrimalRoar_Stun : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -11985,7 +11985,7 @@ public:
 class CDOTA_Modifier_Aghsfort_PrimalBeast_Boss_InAbilityPhaseStart : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -11993,7 +11993,7 @@ public:
 class CDOTA_Modifier_Aghsfort_PrimalBeast_Boss_TectonicShift_CastTracker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -12001,7 +12001,7 @@ public:
 class CDOTA_Modifier_Aghsfort_PrimalBeast_Boss_TectonicShift_TimeOut : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -12051,7 +12051,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Sand_King_Impale : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -12172,7 +12172,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Sand_King_CausticFinale_Active : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -12282,7 +12282,7 @@ public:
 class CDOTA_Modifier_AghsFort_Clinkz_BurningBarrage_Singe : public CDOTA_Modifier_Knockback
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -12382,7 +12382,7 @@ public:
 class CDOTA_Modifier_AghsFort_Clinkz_BurningArmy_StunningSkeleton_Debuff : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -12419,7 +12419,7 @@ public:
 class CDOTA_Modifier_AghsFort_Clinkz_SkeletalColossus_BigSkeletons_Ministun : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -12469,7 +12469,7 @@ public:
 class CDOTA_Modifier_AncientApparition_ColdFeet_Freeze : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -12555,7 +12555,7 @@ public:
 class CDOTA_Modifier_AntiMage_Blink_Illusion : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -12571,7 +12571,7 @@ public:
 class CDOTA_Modifier_Antimage_DampenMagic_Bonus : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -12613,7 +12613,7 @@ public:
 class CDOTA_Modifier_AntiMage_ManaVoid : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -12621,7 +12621,7 @@ public:
 class CDOTA_Modifier_Bane_Enfeeble : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -12648,7 +12648,7 @@ public:
 class CDOTA_Modifier_Bane_Nightmare_Invulnerable : public CDOTA_Modifier_Invulnerable
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -12674,7 +12674,7 @@ public:
 class CDOTA_Modifier_Bane_FiendsGrip_Self : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -12682,7 +12682,7 @@ public:
 class CDOTA_Modifier_Bane_FiendsGrip_Illusion_Can_Only_Channel : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -12690,7 +12690,7 @@ public:
 class CDOTA_Modifier_Bane_FiendsGrip_Illusion : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -12717,7 +12717,7 @@ public:
 class CDOTA_Modifier_Pudge_Swallow_Effect : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -12725,7 +12725,7 @@ public:
 class CDOTA_Modifier_Pudge_Meat_Hook_PathingFix : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -12733,7 +12733,7 @@ public:
 class CDOTA_Modifier_Pudge_Meat_Hook : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -12832,7 +12832,7 @@ public:
 class CDOTA_Modifier_Juggernaut_Healing_Ward_Tracker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -12886,7 +12886,7 @@ public:
 class CDOTA_Modifier_Juggernaut_Omnislash_Invulnerability : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -12917,7 +12917,7 @@ public:
 class CDOTA_Modifier_Juggernaut_Holdout_Omnislash_FollowupAttack : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -12983,7 +12983,7 @@ public:
 class CDOTA_Modifier_Nevermore_Requiem_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -12991,7 +12991,7 @@ public:
 class CDOTA_Modifier_Nevermore_Requiem_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -13007,7 +13007,7 @@ public:
 class CDOTA_Modifier_Nevermore_Necromastery_Fear : public CDOTA_Modifier_Nevermore_Requiem_Fear
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -13047,7 +13047,7 @@ public:
 class CDOTA_Modifier_SandKing_Impale : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -13154,7 +13154,7 @@ public:
 class CDOTA_Modifier_Mirana_Leap_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -13208,7 +13208,7 @@ public:
 class CDOTA_Modifier_Mirana_MoonlightShadow_KillTracker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -13346,7 +13346,7 @@ public:
 class CDOTA_Modifier_SkeletonKing_Reincarnation_SpawnSkeletons : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -13371,7 +13371,7 @@ public:
 class CDOTA_Modifier_Skeleton_King_Scepter_Tracker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13379,7 +13379,7 @@ public:
 class CDOTA_Modifier_Skeleton_King_Arcana : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -13428,7 +13428,7 @@ public:
 class CDOTA_Modifier_StormSpirit_ElectricVortex_NoStack : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13436,7 +13436,7 @@ public:
 class CDOTA_Modifier_StormSpirit_Overload_Passive : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -13461,7 +13461,7 @@ public:
 class CDOTA_Modifier_StormSpirit_BallLightning : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -13481,7 +13481,7 @@ public:
 class CDOTA_Modifier_StormSpirit_StaticRemnant_Talent : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -13497,7 +13497,7 @@ public:
 class CDOTA_Modifier_DrowRanger_WaveOfSilence : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13505,7 +13505,7 @@ public:
 class CDOTA_Modifier_DrowRanger_WaveOfSilence_Knockback : public CDOTA_Modifier_Knockback
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13513,7 +13513,7 @@ public:
 class CDOTA_Modifier_DrowRanger_Trueshot : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13521,7 +13521,7 @@ public:
 class CDOTA_Modifier_DrowRanger_Trueshot_Global : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -13614,7 +13614,7 @@ public:
 class CDOTA_Modifier_DrowRanger_FrostArrows_Hypothermia_Active : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -13650,7 +13650,7 @@ public:
 class CDOTA_Modifier_DrowRanger_ArcanaKill_Delay : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13658,7 +13658,7 @@ public:
 class CDOTA_Modifier_DrowRanger_Arcana : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13666,7 +13666,7 @@ public:
 class CDOTA_Modifier_Earthshaker_Shard : public CDOTA_Buff_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -13697,7 +13697,7 @@ public:
 class CDOTA_Modifier_Earthshaker_Fissure_Shard_Pathing : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13705,7 +13705,7 @@ public:
 class CDOTA_Modifier_Earthshaker_Fissure_Stun : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13713,7 +13713,7 @@ public:
 class CDOTA_Modifier_Earthshaker_Fissure_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13721,7 +13721,7 @@ public:
 class CDOTA_Modifier_Fissure_Rooted : public CDOTA_Modifier_Rooted
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13729,7 +13729,7 @@ public:
 class CDOTA_Modifier_Earthshaker_EnchantTotem_Leap : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13737,7 +13737,7 @@ public:
 class CDOTA_Modifier_Earthshaker_EnchantTotem_Animation : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -13766,7 +13766,7 @@ public:
 class CDOTA_Modifier_Earthshaker_EchoSlam_Delay : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13774,7 +13774,7 @@ public:
 class CDOTA_Modifier_Earthshaker_Echoslam_Debuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13782,7 +13782,7 @@ public:
 class CDOTA_Modifier_Earthshaker_Echoslam_Heating_Up : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -13799,7 +13799,7 @@ public:
 class CDOTA_Modifier_VengefulSpirit_WaveOfTerror_Fear : public CDOTA_Modifier_Fear
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -13865,7 +13865,7 @@ public:
 class CDOTA_Modifier_VengefulSpirit_Nether_Swap_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -13882,7 +13882,7 @@ public:
 class CDOTA_Modifier_VengefulSpirit_Nether_Swap_PathingFix : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -13898,7 +13898,7 @@ public:
 class CDOTA_Modifier_VengefulSpirit_XP_Earn : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -13915,7 +13915,7 @@ public:
 class CDOTA_Modifier_CrystalMaiden_Let_It_Go_Bonus : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -13923,7 +13923,7 @@ public:
 class CDOTA_Modifier_CrystalMaiden_Let_It_Go_Slow : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -13951,7 +13951,7 @@ public:
 class CDOTA_Modifier_CrystalMaiden_BrillianceAura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -14009,7 +14009,7 @@ public:
 class CDOTA_Modifier_CrystalMaiden_FreezingField_Tracker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -14045,7 +14045,7 @@ public:
 class CDOTA_Modifier_CDOTA_Modifier_CrystalMaiden_IceRink_Movement_Ricochet : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -14114,7 +14114,7 @@ public:
 class CDOTA_Modifier_Axe_Culling_Blade_NoMinHealth : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14122,7 +14122,7 @@ public:
 class CDOTA_Modifier_Axe_Culling_Blade_Charge : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -14147,7 +14147,7 @@ public:
 class CDOTA_Modifier_Axe_CullingBlade_JungleWeaponGesture : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -14219,7 +14219,7 @@ public:
 class CDOTA_Modifier_Bloodseeker_Rupture_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -14415,7 +14415,7 @@ public:
 class CDOTA_Modifier_Razor_Link_Vision : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -14484,7 +14484,7 @@ public:
 class CDOTA_Modifier_Razor_EyeOfTheStorm_Armor : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -14570,7 +14570,7 @@ public:
 class CDOTA_Modifier_Morphling_Waveform_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14578,7 +14578,7 @@ public:
 class CDOTA_Modifier_Morphling_Waveform : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -14594,7 +14594,7 @@ public:
 class CDOTA_Modifier_Morphling_Adaptive_Strike : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -14694,7 +14694,7 @@ public:
 class CDOTA_Modifier_Morphling_Replicate_Manager : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 15
@@ -14730,7 +14730,7 @@ public:
 class CDOTA_Modifier_Morphling_Replicate_MorphedIllusionsEffect : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14738,7 +14738,7 @@ public:
 class CDOTA_Modifier_Morphling_Scepter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14746,7 +14746,7 @@ public:
 class CDOTA_Modifier_Zuus_Static_Field : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -14778,7 +14778,7 @@ public:
 class CDOTA_Modifier_Zuus_ArcLightningSlow : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14786,7 +14786,7 @@ public:
 class CDOTA_Modifier_Zuus_LightningBoltThinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14794,7 +14794,7 @@ public:
 class CDOTA_Modifier_Zuus_ThundergodsWrathThinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -14812,7 +14812,7 @@ public:
 class CDOTA_Modifier_Zuus_Heavenly_Jump : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -14898,7 +14898,7 @@ public:
 class CDOTA_Modifier_Kunkka_XMarksTheSpotMarker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -14929,7 +14929,7 @@ public:
 class CDOTA_Modifier_Kunkka_GhostShip_Knockback : public CDOTA_Modifier_Knockback
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -14937,7 +14937,7 @@ public:
 class CDOTA_Modifier_Kunkka_GhostShip_Loaded : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -14974,7 +14974,7 @@ public:
 class CDOTA_Modifier_Tiny_Avalanche_Stun : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -14997,7 +14997,7 @@ public:
 class CDOTA_Modifier_Tiny_Toss_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -15081,7 +15081,7 @@ public:
 class CDOTA_Modifier_Puck_PhaseShift : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -15112,7 +15112,7 @@ public:
 class CDOTA_Modifier_Windrunner_ShackleShot : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -15120,7 +15120,7 @@ public:
 class CDOTA_Modifier_Windrunner_Windrun_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -15128,7 +15128,7 @@ public:
 class CDOTA_Modifier_Windrunner_Windrun_Invis : public CDOTA_Modifier_Invisible
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -15144,7 +15144,7 @@ public:
 class CDOTA_Modifier_Windrunner_Windrun_Passive : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -15173,7 +15173,7 @@ public:
 class CDOTA_Modifier_Windrunner_Arcana : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -15227,7 +15227,7 @@ public:
 class CDOTA_Modifier_Windrunner_GaleForce : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -15246,7 +15246,7 @@ public:
 class CDOTA_Modifier_Lich_Sinister_Gaze_Self : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -15309,7 +15309,7 @@ public:
 class CDOTA_Modifier_Lich_FrostArmor_Autocast : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -15433,7 +15433,7 @@ public:
 class CDOTA_Modifier_Tidehunter_Ravage : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -15441,7 +15441,7 @@ public:
 class CDOTA_Modifier_ShadowShaman_EtherShock : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -15492,7 +15492,7 @@ public:
 class CDOTA_Modifier_Riki_BlinkStrike_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -15500,7 +15500,7 @@ public:
 class CDOTA_Modifier_Riki_BlinkStrike : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -15508,7 +15508,7 @@ public:
 class CDOTA_Modifier_Riki_BlinkStrike_Slow : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -15707,7 +15707,7 @@ public:
 class CDOTA_Modifier_Tinker_Rearm : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -15723,7 +15723,7 @@ public:
 class CDOTA_Modifier_WitchDoctor_Voodoo_Restoration_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -15742,7 +15742,7 @@ public:
 class CDOTA_Modifier_WitchDoctor_MaledictDoT : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -15784,7 +15784,7 @@ public:
 class CDOTA_Modifier_Sniper_Shrapnel_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -15857,7 +15857,7 @@ public:
 class CDOTA_Modifier_Sniper_Assassinate : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -15961,7 +15961,7 @@ public:
 class CDOTA_Modifier_Slardar_Puddle : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -15969,7 +15969,7 @@ public:
 class CDOTA_Modifier_Slardar_Sprint_Passive : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -16061,7 +16061,7 @@ public:
 class CDOTA_Modifier_Ursa_Earthshock_Move : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -16077,7 +16077,7 @@ public:
 class CDOTA_Modifier_Lion_Impale : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -16093,7 +16093,7 @@ public:
 class CDOTA_Modifier_Lion_ManaDrain_Immunity : public CDOTA_Modifier_MagicImmune
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -16113,7 +16113,7 @@ public:
 class CDOTA_Modifier_Lion_ManaDrain_Buff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16121,7 +16121,7 @@ public:
 class CDOTA_Modifier_Lion_ManaDrain_Debuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16129,7 +16129,7 @@ public:
 class CDOTA_Modifier_Lion_FingerOfDeath_Kill_Counter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -16145,7 +16145,7 @@ public:
 class CDOTA_Modifier_Lion_FingerOfDeath_Delay : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -16173,7 +16173,7 @@ public:
 class CDOTA_Modifier_Courier_Morph_Effect : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16181,7 +16181,7 @@ public:
 class CDOTA_Modifier_Courier_Flying : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -16227,7 +16227,7 @@ public:
 class CDOTA_Modifier_Courier_Shield : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16235,7 +16235,7 @@ public:
 class CDOTA_Modifier_Courier_Passive_Bonus : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -16255,7 +16255,7 @@ public:
 class CDOTA_Modifier_Fountain_Fury_Swipes_Damage_Increase : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16263,7 +16263,7 @@ public:
 class CDOTA_Modifier_Roshan_SpellBlock : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -16289,7 +16289,7 @@ public:
 class CDOTA_Modifier_Roshan_InherentBuffs : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -16305,7 +16305,7 @@ public:
 class CDOTA_Modifier_Roshan_Devotion : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -16411,7 +16411,7 @@ public:
 class CDOTA_Modifier_Nian_Roar : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16419,7 +16419,7 @@ public:
 class CDOTA_Modifier_Nian_Invulnerable : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16427,7 +16427,7 @@ public:
 class CDOTA_Modifier_Nian_Intrinsic : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16435,7 +16435,7 @@ public:
 class CDOTA_Modifier_Nian_Attachment : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16443,7 +16443,7 @@ public:
 class CDOTA_Modifier_Nian_Attachment_Regrow : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -16484,7 +16484,7 @@ public:
 class CDOTA_Modifier_Nian_Big_Flinch : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -16535,7 +16535,7 @@ public:
 class CDOTA_Modifier_Nian_Tail_Swipe_Wall : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16543,7 +16543,7 @@ public:
 class CDOTA_Modifier_Nian_Tail_Swipe_AirTime : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -16565,7 +16565,7 @@ public:
 class CDOTA_Modifier_Nian_Torrent_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -16746,7 +16746,7 @@ public:
 class CDOTA_Modifier_Warlock_Rain_Of_Chaos_Death_Trigger : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -16837,7 +16837,7 @@ public:
 class CDOTA_Modifier_Beastmaster_Axe_Invulnerable : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -16871,7 +16871,7 @@ public:
 class CDOTA_Modifier_CallOfTheWild_Boar_Poison : public CDOTA_Modifier_CallOfTheWild_Boar_PoisonBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -16896,7 +16896,7 @@ public:
 class CDOTA_Modifier_Beastmaster_InnerBeast : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -16929,7 +16929,7 @@ public:
 class CDOTA_Modifier_Beastmaster_Mark_Of_The_Beast : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -16937,7 +16937,7 @@ public:
 class CDOTA_Modifier_CallOfTheWild_Hawk_Reveal : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -16971,7 +16971,7 @@ public:
 class CDOTA_Modifier_Special_Bonus_Unique_Beastmaster_5_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -16987,7 +16987,7 @@ public:
 class CDOTA_Modifier_Special_Bonus_Unique_Beastmaster_6_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -17036,7 +17036,7 @@ public:
 class CDOTA_Modifier_QueenOfPain_SonicWave_Effect : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17044,7 +17044,7 @@ public:
 class CDOTA_Modifier_QueenOfPain_SonicWave_Delay : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17052,7 +17052,7 @@ public:
 class CDOTA_Modifier_QueenOfPain_Arcana_Kill_Effect : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -17092,7 +17092,7 @@ public:
 class CDOTA_Modifier_Venomancer_PoisonSting : public CDOTA_Modifier_Venomancer_PoisonStingBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -17192,7 +17192,7 @@ public:
 class CDOTA_Modifier_FacelessVoid_TimeLock_Freeze : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17200,7 +17200,7 @@ public:
 class CDOTA_Modifier_FacelessVoid_Timelock_TimeWalk_Proc_Marker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17208,7 +17208,7 @@ public:
 class CDOTA_Modifier_FacelessVoid_Timelock_Basic_Proc_Marker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -17230,7 +17230,7 @@ public:
 class CDOTA_Modifier_FacelessVoid_TimeWalk_Tracker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -17266,7 +17266,7 @@ public:
 class CDOTA_Modifier_FacelessVoid_TimeWalk : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -17282,7 +17282,7 @@ public:
 class CDOTA_Modifier_FacelessVoid_ArcanaDamageRouter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17290,7 +17290,7 @@ public:
 class CDOTA_Modifier_FacelessVoid_Chronosphere_Freeze : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -17314,7 +17314,7 @@ public:
 class CDOTA_Modifier_FacelessVoid_Arcana : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -17330,7 +17330,7 @@ public:
 class CDOTA_Modifier_DeathProphet_Silence : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17338,7 +17338,7 @@ public:
 class CDOTA_Modifier_DeathProphet_Silence_Debuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -17354,7 +17354,7 @@ public:
 class CDOTA_Modifier_DeathProphet_SpiritSiphon_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -17402,7 +17402,7 @@ public:
 class CDOTA_Modifier_DeathProphet_SpiritSiphon_Buff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17410,7 +17410,7 @@ public:
 class CDOTA_Modifier_DeathProphet_SpiritSiphon_Debuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 18
@@ -17476,7 +17476,7 @@ public:
 class CDOTA_Modifier_Death_Prophet_Slow : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17484,7 +17484,7 @@ public:
 class CDOTA_Modifier_Death_Prophet_Attack_Scepter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -17492,7 +17492,7 @@ public:
 class CDOTA_Modifier_Pugna_NetherBlast_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -17565,7 +17565,7 @@ public:
 class CDOTA_Modifier_Phantom_Assassin_GroundDagger : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -17606,7 +17606,7 @@ public:
 class CDOTA_Modifier_PhantomAssassin_Fan_Of_Knives : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -17673,7 +17673,7 @@ public:
 class CDOTA_Modifier_PhantomAssassin_ScreenSplatter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -17748,7 +17748,7 @@ public:
 class CDOTA_Modifier_TemplarAssassin_PsionicTrap_Counter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -17833,7 +17833,7 @@ public:
 class CDOTA_Modifier_Viper_NethertoxinMute : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -17894,7 +17894,7 @@ public:
 class CDOTA_Modifier_Luna_LucentBeam_Damage_Buff_Counter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -18079,7 +18079,7 @@ public:
 class CDOTA_Modifier_DragonKnight_BlackDragon_Tooltip : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -18280,7 +18280,7 @@ public:
 class CDOTA_Modifier_Rattletrap_BatteryAssault : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -18297,7 +18297,7 @@ public:
 class CDOTA_Modifier_Rattletrap_Cog_Marker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -18331,7 +18331,7 @@ public:
 class CDOTA_Modifier_Rattletrap_Cog_Immune : public CDOTA_Modifier_MagicImmune
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -18348,7 +18348,7 @@ public:
 class CDOTA_Modifier_Rattletrap_Cog_Self_Bonuses : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -18395,7 +18395,7 @@ public:
 class CDOTA_Modifier_Rattletrap_RocketFlare : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -18444,7 +18444,7 @@ public:
 class CDOTA_Modifier_Furion_Sprout_Blind_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -18460,7 +18460,7 @@ public:
 class CDOTA_Modifier_Furion_Sprout_Tether_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18468,7 +18468,7 @@ public:
 class CDOTA_Modifier_Furion_Sprout_Tether : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -18484,7 +18484,7 @@ public:
 class CDOTA_Modifier_Furion_Sprout_Marker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18492,7 +18492,7 @@ public:
 class CDOTA_Modifier_Furion_Sprout_Entangle : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -18512,7 +18512,7 @@ public:
 class CDOTA_Modifier_Furion_WrathOfNature_Buff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18520,7 +18520,7 @@ public:
 class CDOTA_Modifier_Furion_WrathOfNature_BuffCounter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18528,7 +18528,7 @@ public:
 class CDOTA_Modifier_Furion_WrathOfNature_Spawn : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -18650,7 +18650,7 @@ public:
 class CDOTA_Modifier_Life_Stealer_Assimilate_Effect : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -18705,7 +18705,7 @@ public:
 class CDOTA_Modifier_IonShell_Slow : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -18806,7 +18806,7 @@ public:
 class CDOTA_Modifier_Clinkz_DeathPact_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18814,7 +18814,7 @@ public:
 class CDOTA_Modifier_Clinkz_DeathPact_Passive : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18822,7 +18822,7 @@ public:
 class CDOTA_Modifier_Clinkz_DeathPact_Debuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -18841,7 +18841,7 @@ public:
 class CDOTA_Modifier_Clinkz_DeathPact_Permanent_Buff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -18849,7 +18849,7 @@ public:
 class CDOTA_Modifier_Clinkz_Scepter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -18892,7 +18892,7 @@ public:
 class CDOTA_Modifier_Clinkz_PiercingArrow_DamageReduction : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -19027,7 +19027,7 @@ public:
 class CDOTA_Modifier_Enchantress_Bunny_Hop : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -19035,7 +19035,7 @@ public:
 class CDOTA_Modifier_Enchantress_Untouchable : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -19052,7 +19052,7 @@ public:
 class CDOTA_Modifier_Enchantress_Enchant : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -19202,7 +19202,7 @@ public:
 class CDOTA_Modifier_Huskar_Life_Break_Charge : public CDOTA_Modifier_MagicImmune
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -19210,7 +19210,7 @@ public:
 class CDOTA_Modifier_Huskar_Life_Break : public CDOTA_Modifier_MoveSpeed_Percentage
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -19236,7 +19236,7 @@ public:
 class CDOTA_Modifier_NightStalker_CripplingFear : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -19326,7 +19326,7 @@ public:
 class CDOTA_Modifier_Broodmother_SpinWeb_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -19343,7 +19343,7 @@ public:
 class CDOTA_Modifier_Broodmother_SpinWebInvisibleApplier : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -19371,7 +19371,7 @@ public:
 class CDOTA_Modifier_Broodmother_SpinWeb_NoTreeWalking : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -19457,7 +19457,7 @@ public:
 class CDOTA_Modifier_Broodmother_Tough : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -19565,7 +19565,7 @@ public:
 class CDOTA_Modifier_Weaver_Shukuchi_GeminateAttackMark : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -19634,7 +19634,7 @@ public:
 class CDOTA_Modifier_Jakiro_IcePath_Stun : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -19751,7 +19751,7 @@ public:
 class CDOTA_Ability_Batrider_Flamebreak_Knockback : public CDOTA_Modifier_Knockback
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -19801,7 +19801,7 @@ public:
 class CDOTA_Modifier_Batrider_FlamingLasso_Self : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -19890,7 +19890,7 @@ public:
 class CDOTA_Modifier_Spectre_Arcana : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -19940,7 +19940,7 @@ public:
 class CDOTA_Modifier_Spectre_SpectralDaggerPathPhased : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -19948,7 +19948,7 @@ public:
 class CDOTA_Modifier_Spectre_SpectralDaggerPath_ActivityModifierOnly : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -19979,7 +19979,7 @@ public:
 class CDOTA_Modifier_Spectre_Dispersion_Memory : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -19996,7 +19996,7 @@ public:
 class CDOTA_Modifier_Spectre_Spectral_Dagger_Illusions : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -20012,7 +20012,7 @@ public:
 class CDOTA_Modifier_DoomBringer_Devour_Hero_Debuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -20029,7 +20029,7 @@ public:
 class CDOTA_Modifier_DoomBringer_Devour_Hero_Ability : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -20037,7 +20037,7 @@ public:
 class CDOTA_Modifier_DoomBringer_ScorchedEarth_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -20118,7 +20118,7 @@ public:
 class CDOTA_Modifier_DoomBringer_Doom_Break : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -20136,7 +20136,7 @@ public:
 class CDOTA_Modifier_SpiritBreaker_GreaterBash_Break : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -20245,7 +20245,7 @@ public:
 class CDOTA_Modifier_SpiritBreaker_PlanarPocket : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -20262,7 +20262,7 @@ public:
 class CDOTA_Modifier_Gyrocopter_HomingMissile_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 17
@@ -20407,7 +20407,7 @@ public:
 class CDOTA_Modifier_Alchemist_ChemicalRageTransform : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -20458,7 +20458,7 @@ public:
 class CDOTA_Modifier_Invoker_ColdSnap_Freeze : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -20484,7 +20484,7 @@ public:
 class CDOTA_Modifier_Invoker_Tornado : public CDOTA_Modifier_Cyclone
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -20511,7 +20511,7 @@ public:
 class CDOTA_Modifier_Invoker_ChaosMeteor_Land : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -20519,7 +20519,7 @@ public:
 class CDOTA_Modifier_Invoker_ChaosMeteor_Burn : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -20617,7 +20617,7 @@ public:
 class CDOTA_Modifier_Invoker_DeafeningBlast_Disarm : public CDOTA_Modifier_Disarmed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -20625,7 +20625,7 @@ public:
 class CDOTA_Modifier_Invoker_Instance : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -20633,7 +20633,7 @@ public:
 class CDOTA_Modifier_Invoker_QuasInstance : public CDOTA_Modifier_Invoker_Instance
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -20641,7 +20641,7 @@ public:
 class CDOTA_Modifier_Invoker_WexInstance : public CDOTA_Modifier_Invoker_Instance
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -20649,7 +20649,7 @@ public:
 class CDOTA_Modifier_Invoker_ExortInstance : public CDOTA_Modifier_Invoker_Instance
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -20657,7 +20657,7 @@ public:
 class CDOTA_Modifier_Invoker_AttackVisuals : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -20692,7 +20692,7 @@ public:
 class CDOTA_Modifier_Silencer_GlaivesOfWisdom_AttackCounter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -20708,7 +20708,7 @@ public:
 class CDOTA_Modifier_Silencer_GlaivesOfWisdom_DebuffCounter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -20724,7 +20724,7 @@ public:
 class CDOTA_Modifier_Silencer_GlaivesOfWisdom_BuffCounter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -20748,7 +20748,7 @@ public:
 class CDOTA_Modifier_Silencer_LastWord_Disarm : public CDOTA_Modifier_Silence
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -20756,7 +20756,7 @@ public:
 class CDOTA_Modifier_Silencer_GlobalSilence : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -20804,7 +20804,7 @@ public:
 class CDOTA_Modifier_Obsidian_Destroyer_Sanity_Eclipse_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -20850,7 +20850,7 @@ public:
 class CDOTA_Modifier_Obsidian_Destroyer_Equilibrium_Debuff_Counter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -20858,7 +20858,7 @@ public:
 class CDOTA_Modifier_Obsidian_Destroyer_Equilibrium_Buff_Counter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -20884,7 +20884,7 @@ public:
 class CDOTA_Modifier_Brewmaster_BrewUp : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -20955,7 +20955,7 @@ public:
 class CDOTA_Modifier_Brewmaster_PrimalSplit_Scepter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -21008,7 +21008,7 @@ public:
 class CDOTA_Modifier_Brewmaster_Void_Void_Strike : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -21016,7 +21016,7 @@ public:
 class CDOTA_Modifier_Brewmaster_SpellImmunity : public CDOTA_Modifier_MagicImmune
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -21032,7 +21032,7 @@ public:
 class CDOTA_Modifier_Brewmaster_Cyclone : public CDOTA_Modifier_Cyclone
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -21065,7 +21065,7 @@ public:
 class CDOTA_Modifier_Brewmaster_Fear : public CDOTA_Modifier_Fear
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -21117,7 +21117,7 @@ public:
 class CDOTA_Modifier_Lycan_Wolf_Uncontrollable : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -21170,7 +21170,7 @@ public:
 class CDOTA_Modifier_Lycan_SummonWolves_PermanentInvisibility : public CDOTA_Modifier_PersistentInvisibility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -21205,7 +21205,7 @@ public:
 class CDOTA_Modifier_Lycan_Shapeshift_Transform : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -21213,7 +21213,7 @@ public:
 class CDOTA_Modifier_Lycan_Shapeshift_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -21242,7 +21242,7 @@ public:
 class CDOTA_Modifier_Lycan_Fear : public CDOTA_Modifier_Fear
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -21250,7 +21250,7 @@ public:
 class CDOTA_Modifier_Shadow_Demon_Disruption_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -21304,7 +21304,7 @@ public:
 class CDOTA_Modifier_Shadow_Demon_DemonicPurge_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -21312,7 +21312,7 @@ public:
 class CDOTA_Modifier_Shadow_Demon_Purge_Slow : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -21344,7 +21344,7 @@ public:
 class CDOTA_Modifier_LoneDruid_SpiritBear_Talent_Logic : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -21352,7 +21352,7 @@ public:
 class CDOTA_Modifier_Spirit_Bear_Attack_Damage : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -21360,7 +21360,7 @@ public:
 class CDOTA_Modifier_LoneDruid_SpiritBear_Defender_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -21435,7 +21435,7 @@ public:
 class CDOTA_Modifier_LoneDruid_TrueForm_Transform : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -21453,7 +21453,7 @@ public:
 class CDOTA_Modifier_LoneDruid_DruidForm_Transform : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -21478,7 +21478,7 @@ public:
 class CDOTA_Modifier_LoneDruid_SpiritBear_TowerKillTracker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -21515,7 +21515,7 @@ public:
 class CDOTA_Modifier_ChaosKnight_Phantasm : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -21523,7 +21523,7 @@ public:
 class CDOTA_Modifier_ChaosKnight_Phantasm_Illusion : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -21531,7 +21531,7 @@ public:
 class CDOTA_Modifier_ChaosKnight_Phantasm_Illusion_Shard : public CDOTA_Modifier_ChaosKnight_Phantasm_Illusion
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -21548,7 +21548,7 @@ public:
 class CDOTA_Modifier_Meepo_Earthbind : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -21556,7 +21556,7 @@ public:
 class CDOTA_Modifier_Meepo_Earthbind_ChainDuration : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -21564,7 +21564,7 @@ public:
 class CDOTA_Modifier_Meepo_Self_Geostrike : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -21623,7 +21623,7 @@ public:
 class CDOTA_Modifier_Special_Bonus_Unique_Meepo_5 : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -21631,7 +21631,7 @@ public:
 class CDOTA_Modifier_Treant_EyesInTheForest_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -21678,7 +21678,7 @@ public:
 class CDOTA_Modifier_Treant_NaturesGrasp_Damage_Bonus : public CDOTA_Modifier_Treant_NaturesGrasp_Damage
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -21713,7 +21713,7 @@ public:
 class CDOTA_Modifier_Treant_NaturesGuise_Invis : public CDOTA_Modifier_Invisible
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -21721,7 +21721,7 @@ public:
 class CDOTA_Modifier_Treant_NaturesGuise_NearTreeDisplay : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -21776,7 +21776,7 @@ public:
 class CDOTA_Modifier_Ogre_Magi_Arcana : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -21784,7 +21784,7 @@ public:
 class CDOTA_Modifier_Ogre_Magi_Fireblast_Attack_Proc : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -21822,7 +21822,7 @@ public:
 class CDOTA_Modifier_Ogre_Magi_Bloodlust_Autocast : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -21841,7 +21841,7 @@ public:
 class CDOTA_Modifier_Ogre_Magi_Item_Multicast : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -21880,7 +21880,7 @@ public:
 class CDOTA_Modifier_Undying_Decay_DebuffCounter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -21888,7 +21888,7 @@ public:
 class CDOTA_Modifier_Undying_Decay_BuffCounter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -21932,7 +21932,7 @@ public:
 class CDOTA_Modifier_Undying_Tombstone_Zombie_Modifier : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -21986,7 +21986,7 @@ public:
 class CDOTA_Modifier_Undying_Tombstone_Death_Trigger : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -22028,7 +22028,7 @@ public:
 class CDOTA_Modifier_Rubick_Telekinesis_Stun : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -22044,7 +22044,7 @@ public:
 class CDOTA_Modifier_Rubick_FadeBolt_BuffCounter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -22193,7 +22193,7 @@ public:
 class CDOTA_Modifier_Disruptor_StaticStormMute : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -22251,7 +22251,7 @@ public:
 class CDOTA_Modifier_Nyx_Assassin_Vendetta_Break : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -22259,7 +22259,7 @@ public:
 class CDOTA_Modifier_NagaSiren_MirrorImage : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -22267,7 +22267,7 @@ public:
 class CDOTA_Modifier_NagaSiren_Ensnare : public CDOTA_Modifier_Rooted
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -22275,7 +22275,7 @@ public:
 class CDOTA_Modifier_NagaSiren_RipTide_Passive : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -22283,7 +22283,7 @@ public:
 class CDOTA_Modifier_NagaSiren_RipTideCounter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -22299,7 +22299,7 @@ public:
 class CDOTA_Modifier_NagaSiren_RipTide_Slow : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -22334,7 +22334,7 @@ public:
 class CDOTA_Modifier_NagaSiren_SongOfTheSiren_IgnoreMe : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -22504,7 +22504,7 @@ public:
 class CDOTA_Modifier_BlindingLight_Knockback : public CDOTA_Modifier_Knockback
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -22556,7 +22556,7 @@ public:
 class CDOTA_Modifier_Wisp_Tether_Stun_Tracker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -22581,7 +22581,7 @@ public:
 class CDOTA_Modifier_Wisp_Tether_Scepter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -22589,7 +22589,7 @@ public:
 class CDOTA_Modifier_Wisp_Spirit_Invulnerable : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -22738,7 +22738,7 @@ public:
 class CDOTA_Modifier_Visage_SummonFamiliars_Talents : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -22746,7 +22746,7 @@ public:
 class CDOTA_Modifier_Visage_Amor_Reduction : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -22768,7 +22768,7 @@ public:
 class CDOTA_Modifier_Visage_Stone_Form_Self_Cast_Cooldown_Manager : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -22840,7 +22840,7 @@ public:
 class CDOTA_Modifier_Slark_DarkPact : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -22860,7 +22860,7 @@ public:
 class CDOTA_Modifier_Slark_Pounce_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -22893,7 +22893,7 @@ public:
 class CDOTA_Modifier_Slark_EssenceShift_DebuffCounter : public CDOTA_Modifier_Stacking_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -22909,7 +22909,7 @@ public:
 class CDOTA_Modifier_Slark_EssenceShift_Buff : public CDOTA_Modifier_Stacking_Multiple_Buff_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -22917,7 +22917,7 @@ public:
 class CDOTA_Modifier_Slark_EssenceShift_Permanent_Buff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -22925,7 +22925,7 @@ public:
 class CDOTA_Modifier_Slark_EssenceShift_Permanent_Debuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -23113,7 +23113,7 @@ public:
 class CDOTA_Modifier_Medusa_Cold_Blooded : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -23144,7 +23144,7 @@ public:
 class CDOTA_Modifier_TrollWarlord_BerserkersRage_Ensnare : public CDOTA_Modifier_Rooted
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -23197,7 +23197,7 @@ public:
 class CDOTA_Modifier_TrollWarlord_Axe_Invulnerable : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -23234,7 +23234,7 @@ public:
 class CDOTA_Modifier_TrollWarlord_BattleTrance_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -23242,7 +23242,7 @@ public:
 class CDOTA_Modifier_TrollWarlord_BattleTrance_Vision : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -23283,7 +23283,7 @@ public:
 class CDOTA_Modifier_Centaur_Return_Counter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -23338,7 +23338,7 @@ public:
 class CDOTA_Modifier_Centaur_Hitched_Into_Cart : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -23346,7 +23346,7 @@ public:
 class CDOTA_Modifier_Centaur_Mount_Toss : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -23362,7 +23362,7 @@ public:
 class CDOTA_Modifier_Magnataur_Horn_Toss : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -23460,7 +23460,7 @@ public:
 class CDOTA_Modifier_Magnataur_ReversePolarity : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -23538,7 +23538,7 @@ public:
 class CDOTA_Modifier_Shredder_Chakram_Debuff_2 : public CDOTA_Modifier_Shredder_Chakram_Debuff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -23546,7 +23546,7 @@ public:
 class CDOTA_Modifier_Shredder_Chakram_Disarm : public CDOTA_Modifier_Disarmed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -23603,7 +23603,7 @@ public:
 class CDOTA_Modifier_Bristleback_QuillSpray_AutoCast : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -23632,7 +23632,7 @@ public:
 class CDOTA_Modifier_Bristleback_QuillSprayStack : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -23670,7 +23670,7 @@ public:
 class CDOTA_Modifier_Bristleback_Warpath_Stack : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -23678,7 +23678,7 @@ public:
 class CDOTA_Modifier_Tusk_IceShard_Slow_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -23686,7 +23686,7 @@ public:
 class CDOTA_Modifier_Tusk_IceShard : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -23694,7 +23694,7 @@ public:
 class CDOTA_Modifier_Tusk_Snowball_Target : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -23702,7 +23702,7 @@ public:
 class CDOTA_Modifier_Tusk_Snowball_Visible : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -23710,7 +23710,7 @@ public:
 class CDOTA_Modifier_Tusk_Snowball_Movement : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -23718,7 +23718,7 @@ public:
 class CDOTA_Modifier_Tusk_Snowball_Movement_Friendly : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -23878,7 +23878,7 @@ public:
 class CDOTA_Modifier_Skywrath_Mystic_Flare_Aura_Effect : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -23994,7 +23994,7 @@ public:
 class CDOTA_Modifier_Special_Bonus_Unique_Elder_Titan_4 : public CDOTA_Modifier_MagicImmune
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -24002,7 +24002,7 @@ public:
 class CDOTA_Modifier_Elder_Titan_AncestralSpirit_Hidden : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -24010,7 +24010,7 @@ public:
 class CDOTA_Modifier_Elder_Titan_AncestralSpirit_CastTime : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -24112,7 +24112,7 @@ public:
 class CDOTA_Modifier_Elder_Titan_EarthSplitterScepter : public CDOTA_Modifier_Elder_Titan_EarthSplitter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -24120,7 +24120,7 @@ public:
 class CDOTA_Modifier_Legion_Commander_OverwhelmingOdds_Armor : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -24175,7 +24175,7 @@ public:
 class CDOTA_Modifier_Legion_Commander_Duel_DamageBoost : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -24211,7 +24211,7 @@ public:
 class CDOTA_Modifier_Techies_LandMines_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -24231,7 +24231,7 @@ public:
 class CDOTA_Modifier_Techies_ReactiveTazer_Disarm : public CDOTA_Modifier_Disarmed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -24326,7 +24326,7 @@ public:
 class CDOTA_Modifier_Techies_StasisTrap_Stunned : public CDOTA_Modifier_Rooted
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -24334,7 +24334,7 @@ public:
 class CDOTA_Modifier_Techies_Suicide_Leap_Animation : public CDOTA_Modifier_Disarmed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -24342,7 +24342,7 @@ public:
 class CDOTA_Modifier_Techies_Suicide_Leap : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -24350,7 +24350,7 @@ public:
 class CDOTA_Modifier_Techies_DeployRemoteMine : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -24381,7 +24381,7 @@ public:
 class CDOTA_Modifier_Techies_Minefield_Sign_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -24389,7 +24389,7 @@ public:
 class CDOTA_Modifier_Techies_Arcana_DamageListener : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -24408,7 +24408,7 @@ public:
 class CDOTA_Modifier_EmberSpirit_SlightOfFist_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -24416,7 +24416,7 @@ public:
 class CDOTA_Modifier_EmberSpirit_SleightOfFist_Marker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -24424,7 +24424,7 @@ public:
 class CDOTA_Modifier_EmberSpirit_SleightOfFist_InProgress : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -24443,7 +24443,7 @@ public:
 class CDOTA_Modifier_EmberSpirit_SleightOfFist_Caster_Invulnerability : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -24473,7 +24473,7 @@ public:
 class CDOTA_Modifier_EmberSpirit_FireRemnant_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -24516,7 +24516,7 @@ public:
 class CDOTA_Modifier_EmberSpirit_FireRemnant_Timer : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -24524,7 +24524,7 @@ public:
 class CDOTA_Modifier_EmberSpirit_FireRemnant : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -24532,7 +24532,7 @@ public:
 class CDOTA_Modifier_Earth_Spirit_StoneCaller_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -24582,7 +24582,7 @@ public:
 class CDOTA_Modifier_EarthSpirit_Geogmagnetic_Grip_Debuff : public CDOTA_Modifier_Silence
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -24654,7 +24654,7 @@ public:
 class CDOTA_Modifier_EarthSpirit_Polarization_Damage_Timer : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -24699,7 +24699,7 @@ public:
 class CDOTA_Modifier_AbyssalUnderlord_PitOfMalice_Ensnare : public CDOTA_Modifier_Rooted
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -24715,7 +24715,7 @@ public:
 class CDOTA_Modifier_AbyssalUnderlord_PitOfMalice_Buff_Placer : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -24754,7 +24754,7 @@ public:
 class CDOTA_Modifier_AbyssalUnderlord_AtrophyAura_Permanent_HeroDmgBuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -24772,7 +24772,7 @@ public:
 class CDOTA_Modifier_AbyssalUnderlord_AtrophyAura_DmgBuffCounter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -24868,7 +24868,7 @@ public:
 class CDOTA_Modifier_Terrorblade_ConjureImage : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -24894,7 +24894,7 @@ public:
 class CDOTA_Modifier_Terrorblade_Metamorphosis_Transform_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -24902,7 +24902,7 @@ public:
 class CDOTA_Modifier_Terrorblade_Metamorphosis_Transform_Aura_Applier : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -24910,7 +24910,7 @@ public:
 class CDOTA_Modifier_Terrorblade_Metamorphosis_Transform : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -24957,7 +24957,7 @@ public:
 class CDOTA_Modifier_Phoenix_SunRayVision : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 21
@@ -25053,7 +25053,7 @@ public:
 class CDOTA_Modifier_Phoenix_SupernovaHiding : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -25083,7 +25083,7 @@ public:
 class CDOTA_Modifier_Oracle_FortunesEndChannelTarget : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -25091,7 +25091,7 @@ public:
 class CDOTA_Modifier_Oracle_FortunesEndPurge : public CDOTA_Modifier_Rooted
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -25099,7 +25099,7 @@ public:
 class CDOTA_Modifier_Oracle_FatesEdict : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -25116,7 +25116,7 @@ public:
 class CDOTA_Modifier_Oracle_FalsePromiseTimer : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -25124,7 +25124,7 @@ public:
 class CDOTA_Modifier_Oracle_FalsePromise_Invis : public CDOTA_Modifier_PersistentInvisibility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -25397,7 +25397,7 @@ public:
 class CDOTA_Modifier_MonkeyKing_Strike_Stun : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -25442,7 +25442,7 @@ public:
 class CDOTA_Modifier_MonkeyKing_RightClickJump_Activity : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -25467,7 +25467,7 @@ public:
 class CDOTA_Modifier_MonkeyKing_TreeJump_Hidden : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -25475,7 +25475,7 @@ public:
 class CDOTA_Modifier_MonkeyKing_UnperchedStunned : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -25571,7 +25571,7 @@ public:
 class CDOTA_Modifier_MonkeyKing_FurArmy_SoldierInactive : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -25579,7 +25579,7 @@ public:
 class CDOTA_Modifier_MonkeyKing_FurArmy_SoldierHidden : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -25587,7 +25587,7 @@ public:
 class CDOTA_Modifier_ObliterateSoldier : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -25634,7 +25634,7 @@ public:
 class CDOTA_Modifier_MonkeyKing_CloudRun : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -25642,7 +25642,7 @@ public:
 class CDOTA_Modifier_MonkeyKing_CloudRunStart : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -25712,7 +25712,7 @@ public:
 class CDOTA_Modifier_Pangolier_ShieldCrash_Jump : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -25736,7 +25736,7 @@ public:
 class CDOTA_Modifier_Pangolier_Swashbuckle_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -25764,7 +25764,7 @@ public:
 class CDOTA_Modifier_Pangolier_Swashbuckle_Stunned : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 20
@@ -25805,7 +25805,7 @@ public:
 class CDOTA_Modifier_Pangolier_Gyroshell_Ricochet : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -25813,7 +25813,7 @@ public:
 class CDOTA_Modifier_Pangolier_GyroshellTimeout : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -25821,7 +25821,7 @@ public:
 class CDOTA_Modifier_Pangolier_GyroshellBounce : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -25829,7 +25829,7 @@ public:
 class CDOTA_Modifier_Pangolier_Gyroshell_Stun : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 22
@@ -25899,7 +25899,7 @@ public:
 class CDOTA_Modifier_DarkWillow_BrambleMaze : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -25907,7 +25907,7 @@ public:
 class CDOTA_Modifier_DarkWillow_ShadowRealm_FadeTime : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -26004,7 +26004,7 @@ public:
 class CDOTA_Modifier_DarkWillow_Creature_Invulnerable : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -26163,7 +26163,7 @@ public:
 class CDOTA_Modifier_Mars_Spear_Impale : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -26192,7 +26192,7 @@ public:
 class CDOTA_Modifier_Mars_Spear_Stun : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -26219,7 +26219,7 @@ public:
 class CDOTA_Modifier_Mars_ArenaOfBlood_Animation : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -26260,7 +26260,7 @@ public:
 class CDOTA_Modifier_Mars_ArenaOfBlood_Spear : public CDOTA_Modifier_Knockback
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -26278,7 +26278,7 @@ public:
 class CDOTA_Modifier_Mars_ArenaOfBlood_Marker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -26344,7 +26344,7 @@ public:
 class CDOTA_Modifier_Mars_Scepter_Damage_Tracker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -26418,7 +26418,7 @@ public:
 class CDOTA_Modifier_Snapfire_MortimerKisses_VisionSource : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -26463,7 +26463,7 @@ public:
 class CDOTA_Modifier_Snapfire_Scatterblast_Disarm : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -26479,7 +26479,7 @@ public:
 class CDOTA_Modifier_Snapfire_FiresnapCookie_ShortHop : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -26487,7 +26487,7 @@ public:
 class CDOTA_Modifier_Snapfire_FiresnapCookie_AllyFlailAnim : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -26495,7 +26495,7 @@ public:
 class CDOTA_Modifier_Snapfire_FiresnapCookie_LandingGesture : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -26538,7 +26538,7 @@ public:
 class CDOTA_Modifier_Snapfire_GobbleUp_Creep : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -26647,7 +26647,7 @@ public:
 class CDOTA_Modifier_VoidSpirit_AstralStep_ChargeCounter : public CDOTA_Modifier_LegacyChargeCounter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -26715,7 +26715,7 @@ public:
 class CDOTA_Modifier_VoidSpirit_Dissimilate_Invis : public CDOTA_Modifier_Invisible
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -26747,7 +26747,7 @@ public:
 class CDOTA_Modifier_Hoodwink_AcornShot_DelayThinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -26755,7 +26755,7 @@ public:
 class CDOTA_Modifier_Hoodwink_AcornShot_TreeThinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -26835,7 +26835,7 @@ public:
 class CDOTA_Modifier_Hoodwink_Sharpshooter_Recoil : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -26843,7 +26843,7 @@ public:
 class CDOTA_Modifier_Hoodwink_Sharpshooter_Recoil_EndAnim : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -26877,7 +26877,7 @@ public:
 class CDOTA_Modifier_Hoodwink_Caltrops : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -26956,7 +26956,7 @@ public:
 class CDOTA_Modifier_Hoodwink_Boomerang_Invulnerable : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -26964,7 +26964,7 @@ public:
 class CDOTA_Modifier_Hoodwink_ArcingBoomerang : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -26992,7 +26992,7 @@ public:
 class CDOTA_Modifier_Dawnbreaker_Solar_Guardian_AirTime : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -27009,7 +27009,7 @@ public:
 class CDOTA_Modifier_Dawnbreaker_Solar_Guardian_After_Land : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -27086,7 +27086,7 @@ public:
 class CDOTA_Modifier_Dawnbreaker_Celestial_Hammer_Caster : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -27094,7 +27094,7 @@ public:
 class CDOTA_Modifier_Dawnbreaker_Fire_Wreath_Magic_Immunity_Tooltip : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 20
@@ -27229,7 +27229,7 @@ public:
 class CDOTA_Modifier_Marci_Lunge_LandingAnim : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -27334,7 +27334,7 @@ public:
 class CDOTA_Modifier_Marci_Guardian_MagicImmunity : public CDOTA_Modifier_MagicImmune
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -27342,7 +27342,7 @@ public:
 class CDOTA_Modifier_Marci_Unleash_Pulse_Silence : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -27422,7 +27422,7 @@ public:
 class CDOTA_Modifier_PrimalBeast_Onslaught_Knockback : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 12
@@ -27523,7 +27523,7 @@ public:
 class CDOTA_Modifier_Muerta_PierceTheVeilTransform : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -27544,7 +27544,7 @@ public:
 class CDOTA_Modifier_Muerta_PierceTheVeil_MagicImmunityDamageCancel : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -27552,7 +27552,7 @@ public:
 class CDOTA_Modifier_Muerta_TheCalling_Invulnerable : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -27589,7 +27589,7 @@ public:
 class CDOTA_Modifier_Muerta_TheCalling_Silence : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -27715,7 +27715,7 @@ public:
 class CDOTA_Modifier_Item_BootsOfTravel_2 : public CDOTA_Modifier_Item_BootsOfTravel
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -27723,7 +27723,7 @@ public:
 class CDOTA_Modifier_BootsOfTravel_Incoming : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -27835,7 +27835,7 @@ public:
 class CDOTA_Modifier_Item_EmptyBottle : public CDOTA_Buff_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -28105,7 +28105,7 @@ public:
 class CDOTA_Modifier_Item_SuperBlinkDagger : public CDOTA_Modifier_Item_BlinkDagger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -28236,7 +28236,7 @@ public:
 class CDOTA_Buff_Wards : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -28244,7 +28244,7 @@ public:
 class CDOTA_Modifier_Item_ObserverWard : public CDOTA_Buff_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -28252,7 +28252,7 @@ public:
 class CDOTA_Modifier_Item_SentryWard : public CDOTA_Buff_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -28411,7 +28411,7 @@ public:
 class CDOTA_Modifier_Manta_Phase : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -28419,7 +28419,7 @@ public:
 class CDOTA_Modifier_Manta : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -28533,7 +28533,7 @@ public:
 class CDOTA_Modifier_RodOfAtos_Debuff : public CDOTA_Modifier_Rooted
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -28559,7 +28559,7 @@ public:
 class CDOTA_Modifier_Eul_Cyclone_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -28584,7 +28584,7 @@ public:
 class CDOTA_Modifier_Dagon : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -28622,7 +28622,7 @@ public:
 class CDOTA_Modifier_Item_UltimateScepter_Consumed : public CDOTA_Buff_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -28641,7 +28641,7 @@ public:
 class CDOTA_Modifier_Item_Assault_Cuirass_Positive_Aura : public CDOTA_Buff_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -28658,7 +28658,7 @@ public:
 class CDOTA_Modifier_Item_Assault_Cuirass_Negative_Armor_Aura : public CDOTA_Buff_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -28719,7 +28719,7 @@ public:
 class CDOTA_Modifier_Aegis_Regen : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -28769,7 +28769,7 @@ public:
 class CDOTA_Modifier_Item_Bloodstone_Active : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -28788,7 +28788,7 @@ public:
 class CDOTA_Modifier_Item_Bloodstone_Drained : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -28919,7 +28919,7 @@ public:
 class CDOTA_Modifier_Item_Crimson_Guard_NoStack : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -28927,7 +28927,7 @@ public:
 class CDOTA_Modifier_Item_Blade_Mail_Reflect : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -28992,7 +28992,7 @@ public:
 class CDOTA_Modifier_Item_Mekansm_Noheal : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -29088,7 +29088,7 @@ public:
 class CDOTA_Modifier_Item_Pipe_Debuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -29170,7 +29170,7 @@ public:
 class CDOTA_Modifier_Item_HelmOfTheDominator_2 : public CDOTA_Modifier_Item_HelmOfTheDominator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -29234,7 +29234,7 @@ public:
 class CDOTA_Modifier_Item_Revenants_Brooch_InternalCD : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -29250,7 +29250,7 @@ public:
 class CDOTA_Modifier_Misery_Debuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -29801,7 +29801,7 @@ public:
 class CDOTA_Modifier_HeavensHalberd_Debuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -29897,7 +29897,7 @@ public:
 class CDOTA_Modifier_Silver_Edge_Debuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -29905,7 +29905,7 @@ public:
 class CDOTA_Modifier_Item_GlimmerCape_Building_Limit : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -29969,7 +29969,7 @@ public:
 class CDOTA_Modifier_Ward_Delay : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -30036,7 +30036,7 @@ public:
 class CDOTA_Modifier_Lotus_Orb_Delay : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -30186,7 +30186,7 @@ public:
 class CDOTA_Modifier_Tome_Of_Knowledge : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -30194,7 +30194,7 @@ public:
 class CDOTA_Modifier_Tome_Of_Knowledge_Consumed : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -30619,7 +30619,7 @@ public:
 class CDOTA_Modifier_Mirror_Shield_Delay : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -30652,7 +30652,7 @@ public:
 class CDOTA_Modifier_Tome_of_Aghanim : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -30708,7 +30708,7 @@ public:
 class CDOTA_Modifier_Spell_Prism_Active : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -30835,7 +30835,7 @@ public:
 class CDOTA_Modifier_Item_Flicker_Damaged : public CDOTA_Buff_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -30934,7 +30934,7 @@ public:
 class CDOTA_Modifier_Clumsy_Net_Ensnare : public CDOTA_Modifier_Rooted
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -30970,7 +30970,7 @@ public:
 class CDOTA_Modifier_Illusionsts_Cape_Marker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -31381,7 +31381,7 @@ public:
 class CDOTA_Modifier_Item_Trickster_Cloak_Invis : public CDOTA_Modifier_Invisible
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -31421,7 +31421,7 @@ public:
 class CDOTA_Modifier_Item_Gladiator_Helm : public CDOTA_Buff_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -31577,7 +31577,7 @@ public:
 class CDOTA_Modifier_Mechanical_Arm_Counter : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -31649,7 +31649,7 @@ public:
 class CDOTA_Modifier_Item_UnstableWand_Critter : public CDOTA_Modifier_Hexed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -31674,7 +31674,7 @@ public:
 class CDOTA_Modifier_Item_Force_Field_Bonus : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -31862,7 +31862,7 @@ public:
 class CDOTA_Modifier_Item_SuperOverwhelming_Blink : public CDOTA_Modifier_Item_Overwhelming_Blink
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -31888,7 +31888,7 @@ public:
 class CDOTA_Modifier_Item_SuperSwift_Blink : public CDOTA_Modifier_Item_Swift_Blink
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -31914,7 +31914,7 @@ public:
 class CDOTA_Modifier_Item_SuperArcane_Blink : public CDOTA_Modifier_Item_Arcane_Blink
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -31953,7 +31953,7 @@ public:
 class CDOTA_Modifier_Eul_Wind_Waker_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -31961,7 +31961,7 @@ public:
 class CDOTA_Modifier_Aghanims_Shard : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -32055,7 +32055,7 @@ public:
 class CDOTA_Modifier_Gungnir_Debuff : public CDOTA_Modifier_Rooted
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -32203,7 +32203,7 @@ public:
 class CDOTA_Modifier_Item_Book_Of_Shadows_Buff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -32233,7 +32233,7 @@ public:
 class CDOTA_Modifier_Vengeances_Shadow_Illusions : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -32508,7 +32508,7 @@ public:
 class CDOTA_Modifier_Item_Arcane_Scout_Self_Vision : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -32536,7 +32536,7 @@ public:
 class CDOTA_Modifier_Item_Barricade_Blocker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -32956,7 +32956,7 @@ public:
 class CDOTAPlayer_CameraServices : public CPlayer_CameraServices
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -32964,7 +32964,7 @@ public:
 class CDOTAPlayer_MovementServices : public CPlayer_MovementServices
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 17
@@ -33012,7 +33012,7 @@ public:
 class C_DOTAReflectionSkybox : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 36
@@ -34005,7 +34005,7 @@ public:
 class C_DOTA_DataRadiant : public C_DOTA_DataNonSpectator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34013,7 +34013,7 @@ public:
 class C_DOTA_DataDire : public C_DOTA_DataNonSpectator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34021,7 +34021,7 @@ public:
 class C_DOTA_DataCustomTeam : public C_DOTA_DataNonSpectator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 16
@@ -34097,7 +34097,7 @@ public:
 class C_CaptureCallbackHandler : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 100
@@ -34233,7 +34233,7 @@ public:
 class C_DOTA_LightInfo : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -34352,7 +34352,7 @@ public:
 class C_PortraitWorldCallbackHandler : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -34402,7 +34402,7 @@ public:
 class C_FoWBlockerEntity : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -34457,7 +34457,7 @@ public:
 class C_DOTA_Ability_AttributeBonus : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34465,7 +34465,7 @@ public:
 class CDOTA_Modifier_AttributeBonus : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34473,7 +34473,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Base : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34481,7 +34481,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Undefined : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34489,7 +34489,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_Ability_Draft : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34497,7 +34497,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_lvl15_r : public C_DOTA_Ability_Special_Bonus_Gold_Ability_Draft
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34505,7 +34505,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_lvl20_r : public C_DOTA_Ability_Special_Bonus_Gold_Ability_Draft
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34513,7 +34513,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_lvl25_r : public C_DOTA_Ability_Special_Bonus_Gold_Ability_Draft
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34521,7 +34521,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_lvl10_l : public C_DOTA_Ability_Special_Bonus_Gold_Ability_Draft
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34529,7 +34529,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_lvl15_l : public C_DOTA_Ability_Special_Bonus_Gold_Ability_Draft
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34537,7 +34537,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_lvl20_l : public C_DOTA_Ability_Special_Bonus_Gold_Ability_Draft
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34545,7 +34545,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_lvl25_l : public C_DOTA_Ability_Special_Bonus_Gold_Ability_Draft
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34553,7 +34553,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_100 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34561,7 +34561,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_125 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34569,7 +34569,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_150 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34577,7 +34577,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_175 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34585,7 +34585,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_200 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34593,7 +34593,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_225 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34601,7 +34601,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_250 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34609,7 +34609,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_275 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34617,7 +34617,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_300 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34625,7 +34625,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_325 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34633,7 +34633,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_350 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34641,7 +34641,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_375 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34649,7 +34649,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_400 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34657,7 +34657,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_450 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34665,7 +34665,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_475 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34673,7 +34673,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_500 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34681,7 +34681,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_600 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34689,7 +34689,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_650 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34697,7 +34697,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_700 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34705,7 +34705,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_800 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34713,7 +34713,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_900 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34721,7 +34721,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_1000 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34729,7 +34729,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_100 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34737,7 +34737,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_125 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34745,7 +34745,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_150 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34753,7 +34753,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_175 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34761,7 +34761,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_200 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34769,7 +34769,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_225 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34777,7 +34777,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_250 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34785,7 +34785,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_275 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34793,7 +34793,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_300 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34801,7 +34801,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_350 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34809,7 +34809,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_400 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34817,7 +34817,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_500 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34825,7 +34825,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_600 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34833,7 +34833,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_700 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34841,7 +34841,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_800 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34849,7 +34849,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_1000 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34857,7 +34857,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Base_Attack_Rate_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34865,7 +34865,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34873,7 +34873,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34881,7 +34881,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34889,7 +34889,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34897,7 +34897,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34905,7 +34905,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_35 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34913,7 +34913,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34921,7 +34921,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_45 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34929,7 +34929,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_50 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34937,7 +34937,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_55 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34945,7 +34945,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_60 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34953,7 +34953,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_70 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34961,7 +34961,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_80 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34969,7 +34969,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_100 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34977,7 +34977,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_110 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34985,7 +34985,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_120 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -34993,7 +34993,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_140 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35001,7 +35001,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_160 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35009,7 +35009,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_175 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35017,7 +35017,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_200 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35025,7 +35025,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Speed_250 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35033,7 +35033,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Corruption_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35041,7 +35041,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Corruption_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35049,7 +35049,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Corruption_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35057,7 +35057,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Corruption_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35065,7 +35065,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cleave_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35073,7 +35073,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cleave_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35081,7 +35081,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cleave_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35089,7 +35089,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cleave_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35097,7 +35097,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cleave_35 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35105,7 +35105,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cleave_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35113,7 +35113,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cleave_60 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35121,7 +35121,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cleave_100 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35129,7 +35129,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cleave_130 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35137,7 +35137,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cleave_140 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35145,7 +35145,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cleave_150 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35153,7 +35153,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cleave_175 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35161,7 +35161,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Haste : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35169,7 +35169,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_TrueStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35177,7 +35177,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Reincarnation_200 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35185,7 +35185,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Reincarnation_250 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35193,7 +35193,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Reincarnation_300 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35201,7 +35201,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Block_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35209,7 +35209,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Block_18 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35217,7 +35217,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Block_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35225,7 +35225,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Mana_Break_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35233,7 +35233,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Mana_Break_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35241,7 +35241,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Mana_Break_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35249,7 +35249,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Mana_Break_35 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35257,7 +35257,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Mana_Break_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35265,7 +35265,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Immunity : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35273,7 +35273,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35281,7 +35281,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35289,7 +35289,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35297,7 +35297,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35305,7 +35305,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35313,7 +35313,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35321,7 +35321,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35329,7 +35329,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_14 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35337,7 +35337,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35345,7 +35345,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_16 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35353,7 +35353,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35361,7 +35361,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35369,7 +35369,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35377,7 +35377,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_35 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35385,7 +35385,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35393,7 +35393,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_50 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35401,7 +35401,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_HP_Regen_80 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35409,7 +35409,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_Regen_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35417,7 +35417,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_Regen_125 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35425,7 +35425,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_Regen_150 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35433,7 +35433,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_Regen_175 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35441,7 +35441,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_Regen_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35449,7 +35449,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_Regen_250 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35457,7 +35457,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_Regen_Amp_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35465,7 +35465,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Mana_Reduction_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35473,7 +35473,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Mana_Reduction_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35481,7 +35481,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Mana_Reduction_11 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35489,7 +35489,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_Regen_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35497,7 +35497,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_Regen_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35505,7 +35505,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_Regen_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35513,7 +35513,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_Regen_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35521,7 +35521,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_Regen_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35529,7 +35529,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_Regen_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35537,7 +35537,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_MP_Regen_14 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35545,7 +35545,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_Percentage_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35553,7 +35553,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_Percentage_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35561,7 +35561,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_Percentage_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35569,7 +35569,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_Percentage_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35577,7 +35577,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_Percentage_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35585,7 +35585,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_Percentage_14 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35593,7 +35593,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_Percentage_16 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35601,7 +35601,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Speed_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35609,7 +35609,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35617,7 +35617,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35625,7 +35625,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35633,7 +35633,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35641,7 +35641,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35649,7 +35649,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_35 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35657,7 +35657,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35665,7 +35665,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_45 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35673,7 +35673,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_50 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35681,7 +35681,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_60 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35689,7 +35689,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_65 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35697,7 +35697,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_75 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35705,7 +35705,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_90 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35713,7 +35713,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Movement_Speed_100 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35721,7 +35721,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_All_Stats_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35729,7 +35729,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_All_Stats_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35737,7 +35737,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_All_Stats_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35745,7 +35745,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_All_Stats_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35753,7 +35753,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_All_Stats_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35761,7 +35761,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_All_Stats_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35769,7 +35769,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_All_Stats_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35777,7 +35777,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_All_Stats_14 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35785,7 +35785,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_All_Stats_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35793,7 +35793,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_All_Stats_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35801,7 +35801,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attributes : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35809,7 +35809,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_And_Intelligence_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35817,7 +35817,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Intelligence_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35825,7 +35825,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Intelligence_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35833,7 +35833,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Intelligence_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35841,7 +35841,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Intelligence_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35849,7 +35849,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Intelligence_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35857,7 +35857,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Intelligence_13 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35865,7 +35865,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Intelligence_14 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35873,7 +35873,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Intelligence_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35881,7 +35881,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Intelligence_16 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35889,7 +35889,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Intelligence_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35897,7 +35897,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Intelligence_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35905,7 +35905,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Intelligence_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35913,7 +35913,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Intelligence_35 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35921,7 +35921,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Intelligence_75 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35929,7 +35929,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35937,7 +35937,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35945,7 +35945,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35953,7 +35953,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35961,7 +35961,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35969,7 +35969,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35977,7 +35977,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35985,7 +35985,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -35993,7 +35993,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_11 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36001,7 +36001,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36009,7 +36009,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_13 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36017,7 +36017,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_14 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36025,7 +36025,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36033,7 +36033,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_16 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36041,7 +36041,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_18 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36049,7 +36049,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36057,7 +36057,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36065,7 +36065,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36073,7 +36073,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Strength_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36081,7 +36081,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36089,7 +36089,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36097,7 +36097,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36105,7 +36105,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36113,7 +36113,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36121,7 +36121,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36129,7 +36129,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36137,7 +36137,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_13 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36145,7 +36145,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_14 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36153,7 +36153,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36161,7 +36161,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_16 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36169,7 +36169,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36177,7 +36177,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36185,7 +36185,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36193,7 +36193,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36201,7 +36201,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_80 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36209,7 +36209,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Agility_100 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36217,7 +36217,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Armor_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36225,7 +36225,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Armor_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36233,7 +36233,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Armor_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36241,7 +36241,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Armor_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36249,7 +36249,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Armor_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36257,7 +36257,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Armor_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36265,7 +36265,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Armor_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36273,7 +36273,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Armor_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36281,7 +36281,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Armor_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36289,7 +36289,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Armor_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36297,7 +36297,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Armor_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36305,7 +36305,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Armor_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36313,7 +36313,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Armor_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36321,7 +36321,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Status_Resistance_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36329,7 +36329,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Status_Resistance_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36337,7 +36337,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Status_Resistance_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36345,7 +36345,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Status_Resistance_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36353,7 +36353,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36361,7 +36361,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36369,7 +36369,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36377,7 +36377,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36385,7 +36385,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36393,7 +36393,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_14 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36401,7 +36401,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36409,7 +36409,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36417,7 +36417,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36425,7 +36425,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36433,7 +36433,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_35 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36441,7 +36441,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36449,7 +36449,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_50 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36457,7 +36457,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_80 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36465,7 +36465,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Magic_Resistance_100 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36473,7 +36473,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Day_Vision_400 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36481,7 +36481,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Night_Vision_400 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36489,7 +36489,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Night_Vision_500 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36497,7 +36497,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Night_Vision_600 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36505,7 +36505,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Night_Vision_800 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36513,7 +36513,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Night_Vision_1000 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36521,7 +36521,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Vision_200 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36529,7 +36529,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36537,7 +36537,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36545,7 +36545,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36553,7 +36553,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36561,7 +36561,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36569,7 +36569,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_45 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36577,7 +36577,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_50 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36585,7 +36585,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_100 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36593,7 +36593,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36601,7 +36601,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36609,7 +36609,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36617,7 +36617,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_16 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36625,7 +36625,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_18 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36633,7 +36633,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36641,7 +36641,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36649,7 +36649,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36657,7 +36657,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_35 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36665,7 +36665,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36673,7 +36673,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_45 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36681,7 +36681,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_50 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36689,7 +36689,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_55 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36697,7 +36697,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_60 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36705,7 +36705,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_65 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36713,7 +36713,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_70 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36721,7 +36721,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_75 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36729,7 +36729,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_80 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36737,7 +36737,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_90 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36745,7 +36745,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_100 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36753,7 +36753,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_120 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36761,7 +36761,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_150 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36769,7 +36769,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_160 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36777,7 +36777,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_200 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36785,7 +36785,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_250 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36793,7 +36793,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_251 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36801,7 +36801,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_252 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36809,7 +36809,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Damage_400 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36817,7 +36817,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Range_50 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36825,7 +36825,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Range_75 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36833,7 +36833,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Range_100 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36841,7 +36841,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Range_125 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36849,7 +36849,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Range_150 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36857,7 +36857,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Range_175 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36865,7 +36865,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Range_200 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36873,7 +36873,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Range_250 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36881,7 +36881,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Range_275 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36889,7 +36889,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Range_300 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36897,7 +36897,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Range_325 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36905,7 +36905,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Attack_Range_400 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36913,7 +36913,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_50 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36921,7 +36921,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_60 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36929,7 +36929,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_75 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36937,7 +36937,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_100 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36945,7 +36945,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_125 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36953,7 +36953,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_150 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36961,7 +36961,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_175 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36969,7 +36969,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_200 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36977,7 +36977,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_225 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36985,7 +36985,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_250 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -36993,7 +36993,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_275 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37001,7 +37001,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_300 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37009,7 +37009,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_325 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37017,7 +37017,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_350 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37025,7 +37025,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cast_Range_400 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37033,7 +37033,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37041,7 +37041,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37049,7 +37049,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37057,7 +37057,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37065,7 +37065,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37073,7 +37073,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37081,7 +37081,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37089,7 +37089,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37097,7 +37097,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_11 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37105,7 +37105,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37113,7 +37113,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_14 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37121,7 +37121,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37129,7 +37129,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_16 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37137,7 +37137,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_18 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37145,7 +37145,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37153,7 +37153,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Amplify_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37161,7 +37161,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cooldown_Reduction_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37169,7 +37169,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cooldown_Reduction_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37177,7 +37177,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cooldown_Reduction_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37185,7 +37185,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cooldown_Reduction_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37193,7 +37193,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cooldown_Reduction_14 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37201,7 +37201,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cooldown_Reduction_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37209,7 +37209,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cooldown_Reduction_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37217,7 +37217,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cooldown_Reduction_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37225,7 +37225,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cooldown_Reduction_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37233,7 +37233,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cooldown_Reduction_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37241,7 +37241,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cooldown_Reduction_50 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37249,7 +37249,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Cooldown_Reduction_65 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37257,7 +37257,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Respawn_Reduction_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37265,7 +37265,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Respawn_Reduction_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37273,7 +37273,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Respawn_Reduction_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37281,7 +37281,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Respawn_Reduction_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37289,7 +37289,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Respawn_Reduction_35 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37297,7 +37297,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Respawn_Reduction_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37305,7 +37305,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Respawn_Reduction_45 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37313,7 +37313,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Respawn_Reduction_50 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37321,7 +37321,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Respawn_Reduction_60 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37329,7 +37329,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_Income_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37337,7 +37337,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_Income_60 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37345,7 +37345,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_Income_90 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37353,7 +37353,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_Income_120 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37361,7 +37361,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_Income_150 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37369,7 +37369,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_Income_180 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37377,7 +37377,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_Income_210 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37385,7 +37385,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_Income_240 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37393,7 +37393,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_Income_300 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37401,7 +37401,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Gold_Income_420 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37409,7 +37409,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Evasion_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37417,7 +37417,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Evasion_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37425,7 +37425,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Evasion_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37433,7 +37433,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Evasion_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37441,7 +37441,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Evasion_16 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37449,7 +37449,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Evasion_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37457,7 +37457,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Evasion_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37465,7 +37465,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Evasion_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37473,7 +37473,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Evasion_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37481,7 +37481,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Evasion_50 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37489,7 +37489,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Evasion_75 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37497,7 +37497,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Lifesteal_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37505,7 +37505,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Lifesteal_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37513,7 +37513,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Lifesteal_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37521,7 +37521,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Lifesteal_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37529,7 +37529,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Lifesteal_13 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37537,7 +37537,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Lifesteal_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37545,7 +37545,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Lifesteal_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37553,7 +37553,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Lifesteal_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37561,7 +37561,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Lifesteal_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37569,7 +37569,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Lifesteal_50 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37577,7 +37577,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Lifesteal_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37585,7 +37585,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Lifesteal_60 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37593,7 +37593,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Spell_Lifesteal_70 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37601,7 +37601,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Lifesteal_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37609,7 +37609,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Lifesteal_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37617,7 +37617,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Lifesteal_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37625,7 +37625,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Lifesteal_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37633,7 +37633,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Lifesteal_18 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37641,7 +37641,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Lifesteal_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37649,7 +37649,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Lifesteal_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37657,7 +37657,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Lifesteal_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37665,7 +37665,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Lifesteal_35 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37673,7 +37673,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Lifesteal_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37681,7 +37681,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Lifesteal_100 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37689,7 +37689,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_20_Bash_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37697,7 +37697,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_24_Crit_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37705,7 +37705,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_30_Crit_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37713,7 +37713,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_20_Crit_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37721,7 +37721,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_50_Crit_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37729,7 +37729,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Exp_Boost_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37737,7 +37737,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Exp_Boost_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37745,7 +37745,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Exp_Boost_15 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37753,7 +37753,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Exp_Boost_20 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37761,7 +37761,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Exp_Boost_25 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37769,7 +37769,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Exp_Boost_30 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37777,7 +37777,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Exp_Boost_35 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37785,7 +37785,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Exp_Boost_40 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37793,7 +37793,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Exp_Boost_50 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37801,7 +37801,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Exp_Boost_60 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37809,7 +37809,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Queen_Of_Pain : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37817,7 +37817,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Queen_Of_Pain_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37825,7 +37825,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Queen_Of_Pain_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37833,7 +37833,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Queen_Of_Pain_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37841,7 +37841,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Queen_Of_Pain_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37849,7 +37849,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Queen_Of_Pain_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37857,7 +37857,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Broodmother_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37865,7 +37865,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Broodmother_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37873,7 +37873,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Broodmother_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37881,7 +37881,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Broodmother_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37889,7 +37889,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Broodmother_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37897,7 +37897,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lone_Druid_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37905,7 +37905,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lone_Druid_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37913,7 +37913,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lone_Druid_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37921,7 +37921,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lone_Druid_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37929,7 +37929,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lone_Druid_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37937,7 +37937,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lone_Druid_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37945,7 +37945,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lone_Druid_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37953,7 +37953,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lone_Druid_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37961,7 +37961,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lone_Druid_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37969,7 +37969,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lone_Druid_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37977,7 +37977,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lone_Druid_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37985,7 +37985,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lone_Druid_11 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -37993,7 +37993,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wisp : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38001,7 +38001,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wisp_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38009,7 +38009,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wisp_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38017,7 +38017,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wisp_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38025,7 +38025,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wisp_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38033,7 +38033,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wisp_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38041,7 +38041,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wisp_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38049,7 +38049,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wisp_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38057,7 +38057,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wisp_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38065,7 +38065,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wisp_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38073,7 +38073,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Techies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38081,7 +38081,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Techies_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38089,7 +38089,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Techies_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38097,7 +38097,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Techies_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38105,7 +38105,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Techies_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38113,7 +38113,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Arc_Warden : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38121,7 +38121,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Arc_Warden_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38129,7 +38129,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Arc_Warden_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38137,7 +38137,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Arc_Warden_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38145,7 +38145,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Arc_Warden_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38153,7 +38153,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Arc_Warden_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38161,7 +38161,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Invoker_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38169,7 +38169,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Invoker_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38177,7 +38177,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Invoker_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38185,7 +38185,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Invoker_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38193,7 +38193,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Invoker_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38201,7 +38201,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Invoker_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38209,7 +38209,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Invoker_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38217,7 +38217,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Invoker_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38225,7 +38225,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Invoker_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38233,7 +38233,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Invoker_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38241,7 +38241,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Invoker_11 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38249,7 +38249,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Invoker_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38257,7 +38257,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Invoker_13 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38265,7 +38265,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ancient_Apparition_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38273,7 +38273,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ancient_Apparition_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38281,7 +38281,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ancient_Apparition_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38289,7 +38289,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ancient_Apparition_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38297,7 +38297,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ancient_Apparition_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38305,7 +38305,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ancient_Apparition_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38313,7 +38313,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ancient_Apparition_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38321,7 +38321,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Gyrocopter_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38329,7 +38329,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Gyrocopter_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38337,7 +38337,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Gyrocopter_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38345,7 +38345,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Gyrocopter_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38353,7 +38353,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Gyrocopter_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38361,7 +38361,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Gyrocopter_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38369,7 +38369,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Legion_Commander : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38377,7 +38377,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Legion_Commander_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38385,7 +38385,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Legion_Commander_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38393,7 +38393,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Legion_Commander_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38401,7 +38401,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Legion_Commander_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38409,7 +38409,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Legion_Commander_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38417,7 +38417,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Legion_Commander_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38425,7 +38425,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pugna_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38433,7 +38433,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pugna_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38441,7 +38441,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pugna_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38449,7 +38449,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pugna_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38457,7 +38457,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pugna_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38465,7 +38465,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pugna_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38473,7 +38473,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Windranger : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38481,7 +38481,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Windranger_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38489,7 +38489,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Windranger_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38497,7 +38497,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Windranger_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38505,7 +38505,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Windranger_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38513,7 +38513,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Windranger_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38521,7 +38521,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Windranger_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38529,7 +38529,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Windranger_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38537,7 +38537,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Windranger_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38545,7 +38545,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Windranger_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38553,7 +38553,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Death_Prophet : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38561,7 +38561,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Death_Prophet_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38569,7 +38569,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Death_Prophet_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38577,7 +38577,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Death_Prophet_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38585,7 +38585,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Death_Prophet_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38593,7 +38593,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sniper_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38601,7 +38601,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sniper_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38609,7 +38609,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sniper_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38617,7 +38617,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sniper_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38625,7 +38625,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sniper_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38633,7 +38633,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sniper_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38641,7 +38641,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Monkey_King : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38649,7 +38649,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Monkey_King_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38657,7 +38657,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Monkey_King_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38665,7 +38665,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Monkey_King_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38673,7 +38673,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Monkey_King_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38681,7 +38681,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Monkey_King_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38689,7 +38689,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Monkey_King_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38697,7 +38697,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Monkey_King_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38705,7 +38705,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Monkey_King_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38713,7 +38713,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Monkey_King_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38721,7 +38721,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Monkey_King_11 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38729,7 +38729,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Riki_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38737,7 +38737,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Riki_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38745,7 +38745,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Riki_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38753,7 +38753,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Riki_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38761,7 +38761,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Riki_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38769,7 +38769,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Riki_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38777,7 +38777,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Riki_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38785,7 +38785,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Riki_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38793,7 +38793,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Riki_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38801,7 +38801,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tusk : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38809,7 +38809,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tusk_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38817,7 +38817,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tusk_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38825,7 +38825,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tusk_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38833,7 +38833,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tusk_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38841,7 +38841,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tusk_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38849,7 +38849,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tusk_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38857,7 +38857,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Medusa : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38865,7 +38865,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Medusa_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38873,7 +38873,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Medusa_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38881,7 +38881,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Medusa_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38889,7 +38889,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Medusa_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38897,7 +38897,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ogre_Magi : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38905,7 +38905,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ogre_Magi_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38913,7 +38913,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ogre_Magi_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38921,7 +38921,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ogre_Magi_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38929,7 +38929,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ogre_Magi_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38937,7 +38937,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Silencer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38945,7 +38945,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Silencer_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38953,7 +38953,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Silencer_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38961,7 +38961,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Silencer_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38969,7 +38969,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Silencer_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38977,7 +38977,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Silencer_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38985,7 +38985,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Silencer_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -38993,7 +38993,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Elder_Titan : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39001,7 +39001,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Elder_Titan_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39009,7 +39009,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Elder_Titan_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39017,7 +39017,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Elder_Titan_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39025,7 +39025,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ember_Spirit_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39033,7 +39033,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ember_Spirit_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39041,7 +39041,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ember_Spirit_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39049,7 +39049,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ember_Spirit_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39057,7 +39057,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ember_Spirit_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39065,7 +39065,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ember_Spirit_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39073,7 +39073,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ember_Spirit_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39081,7 +39081,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lifestealer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39089,7 +39089,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lifestealer_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39097,7 +39097,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lifestealer_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39105,7 +39105,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lifestealer_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39113,7 +39113,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lifestealer_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39121,7 +39121,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lifestealer_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39129,7 +39129,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lifestealer_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39137,7 +39137,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slark : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39145,7 +39145,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slark_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39153,7 +39153,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slark_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39161,7 +39161,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slark_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39169,7 +39169,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slark_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39177,7 +39177,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slark_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39185,7 +39185,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slark_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39193,7 +39193,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Spectre : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39201,7 +39201,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Spectre_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39209,7 +39209,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Spectre_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39217,7 +39217,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Spectre_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39225,7 +39225,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Spectre_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39233,7 +39233,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Spectre_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39241,7 +39241,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Spirit_Breaker_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39249,7 +39249,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Spirit_Breaker_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39257,7 +39257,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Spirit_Breaker_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39265,7 +39265,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Spirit_Breaker_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39273,7 +39273,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Storm_Spirit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39281,7 +39281,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Storm_Spirit_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39289,7 +39289,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Storm_Spirit_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39297,7 +39297,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Storm_Spirit_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39305,7 +39305,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Storm_Spirit_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39313,7 +39313,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Storm_Spirit_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39321,7 +39321,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Storm_Spirit_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39329,7 +39329,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Storm_Spirit_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39337,7 +39337,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tidehunter : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39345,7 +39345,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tidehunter_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39353,7 +39353,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tidehunter_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39361,7 +39361,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tidehunter_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39369,7 +39369,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tidehunter_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39377,7 +39377,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tidehunter_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39385,7 +39385,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tidehunter_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39393,7 +39393,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tidehunter_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39401,7 +39401,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tinker : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39409,7 +39409,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tinker_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39417,7 +39417,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tinker_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39425,7 +39425,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tinker_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39433,7 +39433,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tinker_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39441,7 +39441,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tinker_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39449,7 +39449,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tinker_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39457,7 +39457,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Troll_Warlord : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39465,7 +39465,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Troll_Warlord_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39473,7 +39473,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Troll_Warlord_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39481,7 +39481,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Troll_Warlord_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39489,7 +39489,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Troll_Warlord_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39497,7 +39497,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Troll_Warlord_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39505,7 +39505,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Troll_Warlord_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39513,7 +39513,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Viper_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39521,7 +39521,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Viper_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39529,7 +39529,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Viper_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39537,7 +39537,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Viper_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39545,7 +39545,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Viper_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39553,7 +39553,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Viper_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39561,7 +39561,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Brewmaster : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39569,7 +39569,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Brewmaster_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39577,7 +39577,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Brewmaster_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39585,7 +39585,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Brewmaster_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39593,7 +39593,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Brewmaster_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39601,7 +39601,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Brewmaster_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39609,7 +39609,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Brewmaster_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39617,7 +39617,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Luna_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39625,7 +39625,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Luna_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39633,7 +39633,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Luna_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39641,7 +39641,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Luna_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39649,7 +39649,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Luna_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39657,7 +39657,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Luna_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39665,7 +39665,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Luna_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39673,7 +39673,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Luna_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39681,7 +39681,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Faceless_Void : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39689,7 +39689,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Faceless_Void_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39697,7 +39697,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Faceless_Void_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39705,7 +39705,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Faceless_Void_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39713,7 +39713,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Faceless_Void_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39721,7 +39721,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Faceless_Void_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39729,7 +39729,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Faceless_Void_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39737,7 +39737,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Faceless_Void_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39745,7 +39745,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Nyx : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39753,7 +39753,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Nyx_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39761,7 +39761,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Nyx_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39769,7 +39769,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Nyx_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39777,7 +39777,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Nyx_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39785,7 +39785,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Nyx_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39793,7 +39793,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Weaver_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39801,7 +39801,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Weaver_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39809,7 +39809,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Weaver_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39817,7 +39817,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Weaver_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39825,7 +39825,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Weaver_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39833,7 +39833,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Weaver_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39841,7 +39841,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ursa : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39849,7 +39849,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ursa_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39857,7 +39857,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ursa_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39865,7 +39865,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ursa_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39873,7 +39873,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ursa_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39881,7 +39881,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ursa_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39889,7 +39889,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ursa_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39897,7 +39897,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Ursa_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39905,7 +39905,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lycan_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39913,7 +39913,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lycan_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39921,7 +39921,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lycan_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39929,7 +39929,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lycan_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39937,7 +39937,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lycan_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39945,7 +39945,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lycan_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39953,7 +39953,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lycan_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39961,7 +39961,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lycan_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39969,7 +39969,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bristleback : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39977,7 +39977,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bristleback_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39985,7 +39985,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bristleback_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -39993,7 +39993,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bristleback_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40001,7 +40001,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Abaddon : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40009,7 +40009,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Abaddon_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40017,7 +40017,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Abaddon_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40025,7 +40025,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Abaddon_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40033,7 +40033,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Abaddon_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40041,7 +40041,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Alchemist : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40049,7 +40049,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Alchemist_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40057,7 +40057,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Alchemist_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40065,7 +40065,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Alchemist_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40073,7 +40073,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Alchemist_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40081,7 +40081,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Alchemist_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40089,7 +40089,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Juggernaut : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40097,7 +40097,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Juggernaut_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40105,7 +40105,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Juggernaut_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40113,7 +40113,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Juggernaut_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40121,7 +40121,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Juggernaut_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40129,7 +40129,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Winter_Wyvern_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40137,7 +40137,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Winter_Wyvern_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40145,7 +40145,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Winter_Wyvern_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40153,7 +40153,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Winter_Wyvern_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40161,7 +40161,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Winter_Wyvern_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40169,7 +40169,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Winter_Wyvern_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40177,7 +40177,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Winter_Wyvern_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40185,7 +40185,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Terrorblade : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40193,7 +40193,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Terrorblade_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40201,7 +40201,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Terrorblade_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40209,7 +40209,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Terrorblade_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40217,7 +40217,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Terrorblade_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40225,7 +40225,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phoenix_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40233,7 +40233,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phoenix_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40241,7 +40241,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phoenix_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40249,7 +40249,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phoenix_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40257,7 +40257,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phoenix_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40265,7 +40265,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phoenix_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40273,7 +40273,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phoenix_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40281,7 +40281,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phoenix_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40289,7 +40289,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Enchantress_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40297,7 +40297,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Enchantress_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40305,7 +40305,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Enchantress_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40313,7 +40313,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Enchantress_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40321,7 +40321,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Enchantress_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40329,7 +40329,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wraith_King_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40337,7 +40337,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wraith_King_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40345,7 +40345,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wraith_King_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40353,7 +40353,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wraith_King_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40361,7 +40361,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wraith_King_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40369,7 +40369,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wraith_King_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40377,7 +40377,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wraith_King_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40385,7 +40385,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wraith_King_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40393,7 +40393,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wraith_King_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40401,7 +40401,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wraith_King_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40409,7 +40409,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Wraith_King_11 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40417,7 +40417,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Kunkka : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40425,7 +40425,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Kunkka_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40433,7 +40433,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Kunkka_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40441,7 +40441,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Kunkka_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40449,7 +40449,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Kunkka_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40457,7 +40457,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Kunkka_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40465,7 +40465,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Kunkka_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40473,7 +40473,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bloodseeker : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40481,7 +40481,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bloodseeker_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40489,7 +40489,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bloodseeker_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40497,7 +40497,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bloodseeker_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40505,7 +40505,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bloodseeker_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40513,7 +40513,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bloodseeker_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40521,7 +40521,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bloodseeker_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40529,7 +40529,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Earth_Spirit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40537,7 +40537,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Earth_Spirit_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40545,7 +40545,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Earth_Spirit_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40553,7 +40553,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Earth_Spirit_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40561,7 +40561,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Earth_Spirit_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40569,7 +40569,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Earth_Spirit_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40577,7 +40577,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Earth_Spirit_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40585,7 +40585,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Timbersaw : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40593,7 +40593,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Timbersaw_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40601,7 +40601,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Timbersaw_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40609,7 +40609,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Timbersaw_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40617,7 +40617,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Huskar : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40625,7 +40625,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Huskar_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40633,7 +40633,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Huskar_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40641,7 +40641,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Huskar_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40649,7 +40649,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Huskar_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40657,7 +40657,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Huskar_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40665,7 +40665,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Huskar_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40673,7 +40673,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Naga_Siren : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40681,7 +40681,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Naga_Siren_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40689,7 +40689,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Naga_Siren_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40697,7 +40697,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Naga_Siren_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40705,7 +40705,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Naga_Siren_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40713,7 +40713,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Naga_Siren_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40721,7 +40721,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Naga_Siren_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40729,7 +40729,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sand_King : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40737,7 +40737,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sand_King_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40745,7 +40745,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sand_King_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40753,7 +40753,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sand_King_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40761,7 +40761,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sand_King_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40769,7 +40769,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sand_King_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40777,7 +40777,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sand_King_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40785,7 +40785,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sand_King_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40793,7 +40793,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Demon_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40801,7 +40801,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Demon_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40809,7 +40809,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Demon_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40817,7 +40817,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Demon_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40825,7 +40825,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Demon_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40833,7 +40833,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Demon_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40841,7 +40841,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Demon_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40849,7 +40849,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Demon_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40857,7 +40857,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Demon_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40865,7 +40865,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dragon_Knight : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40873,7 +40873,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dragon_Knight_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40881,7 +40881,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dragon_Knight_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40889,7 +40889,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dragon_Knight_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40897,7 +40897,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dragon_Knight_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40905,7 +40905,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dragon_Knight_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40913,7 +40913,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dragon_Knight_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40921,7 +40921,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dragon_Knight_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40929,7 +40929,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Morphling_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40937,7 +40937,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Morphling_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40945,7 +40945,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Morphling_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40953,7 +40953,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Morphling_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40961,7 +40961,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Morphling_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40969,7 +40969,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Morphling_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40977,7 +40977,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Morphling_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40985,7 +40985,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Morphling_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -40993,7 +40993,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Morphling_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41001,7 +41001,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Morphling_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41009,7 +41009,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bane_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41017,7 +41017,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bane_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41025,7 +41025,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bane_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41033,7 +41033,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bane_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41041,7 +41041,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bane_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41049,7 +41049,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bane_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41057,7 +41057,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bane_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41065,7 +41065,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bane_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41073,7 +41073,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bane_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41081,7 +41081,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Nevermore_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41089,7 +41089,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Nevermore_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41097,7 +41097,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Nevermore_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41105,7 +41105,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Nevermore_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41113,7 +41113,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Nevermore_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41121,7 +41121,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Nevermore_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41129,7 +41129,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Templar_Assassin : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41137,7 +41137,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Templar_Assassin_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41145,7 +41145,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Templar_Assassin_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41153,7 +41153,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Templar_Assassin_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41161,7 +41161,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Templar_Assassin_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41169,7 +41169,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Templar_Assassin_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41177,7 +41177,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Templar_Assassin_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41185,7 +41185,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Templar_Assassin_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41193,7 +41193,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Crystal_Maiden_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41201,7 +41201,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Crystal_Maiden_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41209,7 +41209,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Crystal_Maiden_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41217,7 +41217,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Crystal_Maiden_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41225,7 +41225,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Crystal_Maiden_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41233,7 +41233,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Crystal_Maiden_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41241,7 +41241,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Doom_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41249,7 +41249,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Doom_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41257,7 +41257,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Doom_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41265,7 +41265,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Doom_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41273,7 +41273,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Doom_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41281,7 +41281,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Doom_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41289,7 +41289,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Doom_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41297,7 +41297,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Doom_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41305,7 +41305,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Doom_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41313,7 +41313,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Vengeful_Spirit_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41321,7 +41321,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Vengeful_Spirit_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41329,7 +41329,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Vengeful_Spirit_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41337,7 +41337,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Vengeful_Spirit_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41345,7 +41345,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Vengeful_Spirit_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41353,7 +41353,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Vengeful_Spirit_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41361,7 +41361,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Vengeful_Spirit_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41369,7 +41369,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Vengeful_Spirit_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41377,7 +41377,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Vengeful_Spirit_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41385,7 +41385,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Venomancer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41393,7 +41393,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Venomancer_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41401,7 +41401,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Venomancer_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41409,7 +41409,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Venomancer_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41417,7 +41417,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Venomancer_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41425,7 +41425,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Venomancer_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41433,7 +41433,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Venomancer_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41441,7 +41441,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Venomancer_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41449,7 +41449,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Earthshaker : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41457,7 +41457,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Earthshaker_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41465,7 +41465,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Earthshaker_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41473,7 +41473,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Earthshaker_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41481,7 +41481,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Earthshaker_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41489,7 +41489,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Earthshaker_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41497,7 +41497,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Shaman_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41505,7 +41505,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Shaman_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41513,7 +41513,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Shaman_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41521,7 +41521,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Shaman_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41529,7 +41529,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Shaman_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41537,7 +41537,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Shaman_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41545,7 +41545,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Shaman_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41553,7 +41553,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Shadow_Shaman_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41561,7 +41561,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Warlock_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41569,7 +41569,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Warlock_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41577,7 +41577,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Warlock_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41585,7 +41585,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Warlock_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41593,7 +41593,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Warlock_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41601,7 +41601,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Warlock_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41609,7 +41609,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Warlock_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41617,7 +41617,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Warlock_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41625,7 +41625,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Warlock_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41633,7 +41633,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Warlock_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41641,7 +41641,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dazzle_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41649,7 +41649,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dazzle_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41657,7 +41657,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dazzle_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41665,7 +41665,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dazzle_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41673,7 +41673,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dazzle_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41681,7 +41681,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Visage_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41689,7 +41689,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Visage_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41697,7 +41697,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Visage_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41705,7 +41705,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Visage_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41713,7 +41713,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Visage_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41721,7 +41721,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Visage_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41729,7 +41729,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Visage_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41737,7 +41737,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Visage_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41745,7 +41745,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Omniknight_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41753,7 +41753,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Omniknight_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41761,7 +41761,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Omniknight_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41769,7 +41769,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Omniknight_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41777,7 +41777,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Omniknight_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41785,7 +41785,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Omniknight_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41793,7 +41793,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Omniknight_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41801,7 +41801,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Necrophos : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41809,7 +41809,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Necrophos_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41817,7 +41817,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Necrophos_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41825,7 +41825,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Necrophos_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41833,7 +41833,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Necrophos_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41841,7 +41841,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Necrophos_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41849,7 +41849,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Antimage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41857,7 +41857,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Antimage_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41865,7 +41865,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Antimage_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41873,7 +41873,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Antimage_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41881,7 +41881,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Antimage_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41889,7 +41889,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Antimage_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41897,7 +41897,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Antimage_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41905,7 +41905,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Antimage_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41913,7 +41913,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Mirana_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41921,7 +41921,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Mirana_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41929,7 +41929,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Mirana_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41937,7 +41937,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Mirana_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41945,7 +41945,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Mirana_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41953,7 +41953,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Mirana_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41961,7 +41961,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Mirana_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41969,7 +41969,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bounty_Hunter : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41977,7 +41977,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bounty_Hunter_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41985,7 +41985,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bounty_Hunter_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -41993,7 +41993,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bounty_Hunter_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42001,7 +42001,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bounty_Hunter_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42009,7 +42009,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bounty_Hunter_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42017,7 +42017,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bounty_Hunter_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42025,7 +42025,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Bounty_Hunter_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42033,7 +42033,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Treant : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42041,7 +42041,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Treant_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42049,7 +42049,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Treant_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42057,7 +42057,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Treant_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42065,7 +42065,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Treant_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42073,7 +42073,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Treant_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42081,7 +42081,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Treant_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42089,7 +42089,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Treant_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42097,7 +42097,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Treant_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42105,7 +42105,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Treant_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42113,7 +42113,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Treant_11 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42121,7 +42121,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Treant_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42129,7 +42129,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Treant_13 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -42401,7 +42401,7 @@ public:
 class CDOTA_Modifier_Special_Bonus_Unique_Morphling_4 : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42409,7 +42409,7 @@ public:
 class CDOTA_Modifier_Special_Bonus_Unique_Treant_3 : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -42435,7 +42435,7 @@ public:
 class CDOTA_Modifier_Special_Bonus_Tree_Walking : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -42498,7 +42498,7 @@ public:
 class CDOTA_Modifier_Special_Bonus_Spell_Immunity : public CDOTA_Modifier_MagicImmune
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -42514,7 +42514,7 @@ public:
 class CDOTA_Modifier_Special_Bonus_TrueStrike : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -42548,7 +42548,7 @@ public:
 class CDOTA_Modifier_Stacking_Gold_Rate_Boost : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42556,7 +42556,7 @@ public:
 class CDOTA_Modifier_Stacking_Exp_Rate_Boost : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42564,7 +42564,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pangolier : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42572,7 +42572,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pangolier_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42580,7 +42580,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pangolier_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42588,7 +42588,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pangolier_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42596,7 +42596,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pangolier_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42604,7 +42604,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pangolier_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42612,7 +42612,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pangolier_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -42748,7 +42748,7 @@ public:
 class CDOTA_Ability_Consumable_Hidden : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -42766,7 +42766,7 @@ public:
 class C_DOTA_Ability_Throw_Snowball : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42774,7 +42774,7 @@ public:
 class C_DOTA_Ability_Throw_Coal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42782,7 +42782,7 @@ public:
 class C_DOTA_Ability_Healing_Campfire : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42790,7 +42790,7 @@ public:
 class CDOTA_Ability_ShootFirework : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42798,7 +42798,7 @@ public:
 class CDOTA_Modifier_Healing_Campfire_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -42814,7 +42814,7 @@ public:
 class C_DOTA_Ability_Seasonal_Throw_Snowball : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42822,7 +42822,7 @@ public:
 class C_DOTA_Ability_Seasonal_Summon_Snowman : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -42892,7 +42892,7 @@ public:
 class C_DOTA_Ability_Seasonal_Decorate_Tree : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42900,7 +42900,7 @@ public:
 class C_DOTA_Ability_Seasonal_Festive_Firework : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42908,7 +42908,7 @@ public:
 class CDOTA_Modifier_Seasonal_FestiveFirework : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42916,7 +42916,7 @@ public:
 class CDOTA_Ability_Seasonal_Firecrackers : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42924,7 +42924,7 @@ public:
 class CDOTA_Modifier_Seasonal_Firecrackers : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42932,7 +42932,7 @@ public:
 class CDOTA_Ability_Seasonal_Summon_Dragon : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -42950,7 +42950,7 @@ public:
 class CDOTA_Ability_Seasonal_Summon_CNY_Tree : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -42958,7 +42958,7 @@ public:
 class CDOTA_Ability_Seasonal_Summon_CNY_Balloon : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -42987,7 +42987,7 @@ public:
 class CDOTA_Ability_Seasonal_Summon_TI9_Balloon : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -43016,7 +43016,7 @@ public:
 class CDOTA_Ability_Seasonal_TI9_Banner : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -43024,7 +43024,7 @@ public:
 class CDOTA_Modifier_Seasonal_TI9_Drums_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -43032,7 +43032,7 @@ public:
 class CDOTA_Ability_Seasonal_TI9_Instruments : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -43048,7 +43048,7 @@ public:
 class CDOTA_Ability_Seasonal_TI9_Shovel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -43069,7 +43069,7 @@ public:
 class CDOTA_Modifier_Seasonal_TI9_Monkey_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -43077,7 +43077,7 @@ public:
 class CDOTA_Modifier_Seasonal_TI9_MonkeyPoop : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -43085,7 +43085,7 @@ public:
 class CDOTA_Ability_Seasonal_TI9_Monkey : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -43093,7 +43093,7 @@ public:
 class C_DOTA_Ability_Lesser_NightCrawler_Pounce : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -43114,7 +43114,7 @@ public:
 class C_DOTA_Ability_Zombie_Berserk : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -43131,7 +43131,7 @@ public:
 class C_DOTA_Ability_Corspselord_Revive : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -43151,7 +43151,7 @@ public:
 class C_DOTA_Ability_Slithereen_Riptide : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -43193,7 +43193,7 @@ public:
 class CDOTA_Ability_Creature_IceSlam : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -43210,7 +43210,7 @@ public:
 class C_DOTA_Item_GreaterClarity : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -43226,7 +43226,7 @@ public:
 class C_DOTA_Item_UpgradedMortar : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -43242,7 +43242,7 @@ public:
 class C_DOTA_Item_UpgradedBarricade : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -43275,7 +43275,7 @@ public:
 class C_DOTA_Item_BagOfGold : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -43283,7 +43283,7 @@ public:
 class CDOTA_Modifier_LootDrop_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -43291,7 +43291,7 @@ public:
 class CDOTA_Modifier_ItemWiggle_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -43299,7 +43299,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_Throw_Snowball : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -43307,7 +43307,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_Summon_Snowman : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -43334,7 +43334,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_Decorate_Tree : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -43352,7 +43352,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_Festive_Firework : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -43360,7 +43360,7 @@ public:
 class CDOTA_Modifier_Frostivus2018_FestiveFirework : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -43396,7 +43396,7 @@ public:
 class CDOTA_Ability_Frostivus2018_FacelessVoid_TimeLock : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -43452,7 +43452,7 @@ public:
 class CDOTA_Ability_Frostivus2018_Luna_Eclipse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 15
@@ -43488,7 +43488,7 @@ public:
 class CDOTA_Ability_Frostivus2018_Clinkz_Strafe : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -43507,7 +43507,7 @@ public:
 class CDOTA_Ability_Frostivus2018_Clinkz_SearingArrows : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -43531,7 +43531,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_Clinkz_WindWalk : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -43598,7 +43598,7 @@ public:
 class CDOTA_Modifier_Frostivus2018_BroodBaby_Launch : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -43620,7 +43620,7 @@ public:
 class CDOTA_Modifier_Tusk_SnowballMeteor_Land : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -43628,7 +43628,7 @@ public:
 class CDOTA_Modifier_Tusk_SnowballMeteor_Burn : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -43674,7 +43674,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_DarkWillow_ShadowRealm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -43706,7 +43706,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_DarkWillow_BrambleMaze : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -43746,7 +43746,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_DarkWillow_Bedlam : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -43797,7 +43797,7 @@ public:
 class CDOTA_Modifier_Frostivus2018_Puck_Coiled : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -43886,7 +43886,7 @@ public:
 class CDOTA_Ability_Frostivus2018_Centaur_Return : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -43921,7 +43921,7 @@ public:
 class CDOTA_Ability_Frostivus2018_Centaur_DoubleEdge : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -43929,7 +43929,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_Huskar_Inner_Fire : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -43937,7 +43937,7 @@ public:
 class CDOTA_Modifier_Frostivus2018_Huskar_Inner_Fire_Disarm : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -43955,7 +43955,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_Huskar_Burning_Spear : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -43994,7 +43994,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_Omniknight_Purification : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -44002,7 +44002,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_Omniknight_Degen_Aura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -44027,7 +44027,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_Omniknight_Repel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -44063,7 +44063,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_Pangolier_ShieldCrash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -44071,7 +44071,7 @@ public:
 class CDOTA_Modifier_Frostivus2018_Pangolier_ShieldCrash_Jump : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -44105,7 +44105,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_TrollWarlord_Fervor : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -44147,7 +44147,7 @@ public:
 class C_DOTA_Ability_Frostivus2018_Weaver_GeminateAttack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -44183,7 +44183,7 @@ public:
 class CDOTA_Ability_Diretide_Portal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -44191,7 +44191,7 @@ public:
 class CDOTA_Modifier_Diretide_Portal_Channeling : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -44219,7 +44219,7 @@ public:
 class CDOTA_Ability_Diretide2020_HighFive : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -44251,7 +44251,7 @@ public:
 class CDOTA_Modifier_Spring2021_BombHolder : public CDOTA_Buff_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -44259,7 +44259,7 @@ public:
 class CDOTA_Modifier_Spring2021_BombPlantable : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -44286,7 +44286,7 @@ public:
 class CDOTA_Ability_Spring2021_TowerDeathRing : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -44318,7 +44318,7 @@ public:
 class CDOTA_Modifier_Winter2022_EnableFeedableRoshanInteract : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -44356,7 +44356,7 @@ public:
 class CDOTA_Ability_Aghsfort_TempBuff_CorpseExplosion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -44382,7 +44382,7 @@ public:
 class CDOTA_Ability_Aghsfort_Reward_HPAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -44406,7 +44406,7 @@ public:
 class CDOTA_Ability_Aghsfort_Reward_CritAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -44431,7 +44431,7 @@ public:
 class CDOTA_Ability_Aghsfort_Reward_MagicResistAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -44455,7 +44455,7 @@ public:
 class CDOTA_Ability_Aghsfort_Reward_ArmorAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -44479,7 +44479,7 @@ public:
 class CDOTA_Ability_AghsFort_Ascension_PlasmaField : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 15
@@ -44523,7 +44523,7 @@ public:
 class CDOTA_Ability_Ascension_Bulwark : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -44542,7 +44542,7 @@ public:
 class CDOTA_Ability_Ascension_AcidBlood : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -44568,7 +44568,7 @@ public:
 class CDOTA_Ability_AghsFort_Ascension_Firefly : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -44614,7 +44614,7 @@ public:
 class CDOTA_Ability_AghsFort_Ascension_Silence : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -44622,7 +44622,7 @@ public:
 class CDOTA_Modifier_AghsFort_Ascension_Silence_Charge : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -44630,7 +44630,7 @@ public:
 class CDOTA_Modifier_AghsFort_Ascension_Silence : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -44638,7 +44638,7 @@ public:
 class CDOTA_Modifier_AghsFort_Ascension_Silence_Display : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -44646,7 +44646,7 @@ public:
 class CDOTA_Ability_AghsFort_Ascension_MagneticField : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -44679,7 +44679,7 @@ public:
 class CDOTA_Modifier_AghsFort_Ascension_Invis_Warning : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -44687,7 +44687,7 @@ public:
 class CDOTA_Modifier_AghsFort_Ascension_Invis : public CDOTA_Modifier_PersistentInvisibility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -44705,7 +44705,7 @@ public:
 class CDOTA_Modifier_Morty_Hop_Controller : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -44723,7 +44723,7 @@ public:
 class C_DOTA_Ability_Morty_Hop_Launch : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -44742,7 +44742,7 @@ public:
 class CDOTA_Ability_AghsFort_ExplosiveBarrel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -44802,7 +44802,7 @@ public:
 class CDOTA_Modifier_AghsFort_Ravage_Potion : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -44875,7 +44875,7 @@ public:
 class CDOTA_Modifier_AghsFort_EchoSlamPotion_Debuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -44883,7 +44883,7 @@ public:
 class CDOTA_Modifier_AghsFort_Potion_SpendCharge : public CDOTA_Buff_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -44921,7 +44921,7 @@ public:
 class CDOTA_Ability_AghsFort_ShadowWaveEffectPotion : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -44945,7 +44945,7 @@ public:
 class CDOTA_Item_AghsFort_RefresherOrb_Shard : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -44953,7 +44953,7 @@ public:
 class CDOTA_Ability_Aghsfort_Minor_Stats_Upgrade : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 16
@@ -44984,7 +44984,7 @@ public:
 class CDOTA_Modifier_Aghsfort_AggroOverride : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -44992,7 +44992,7 @@ public:
 class CDOTA_Item_Aghsfort_BootsOfTravel : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -45000,7 +45000,7 @@ public:
 class CDOTA_Item_Aghsfort_BootsOfTravel_2 : public CDOTA_Item_Aghsfort_BootsOfTravel
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -45017,7 +45017,7 @@ public:
 class CDOTA_Ability_AghsFort_RestorativeFlower : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -45093,7 +45093,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Enrage : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -45154,7 +45154,7 @@ public:
 class CDOTA_Modifier_AghsFort_RockGolem_Avalanche_Stun : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -45228,7 +45228,7 @@ public:
 class C_DOTA_Ability_PudgeMiniboss_HatefulStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -45247,7 +45247,7 @@ public:
 class C_DOTA_Ability_PudgeMiniboss_ArmorCorruption : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -45273,7 +45273,7 @@ public:
 class CDOTA_Modifier_PudgeMiniboss_ArmorCorruptionStack : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -45299,7 +45299,7 @@ public:
 class CDOTA_Modifier_Wave_Blast_Disarm : public CDOTA_Modifier_Disarmed
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -45307,7 +45307,7 @@ public:
 class C_DOTA_Ability_AghsFort_Waveblaster_Leap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -45324,7 +45324,7 @@ public:
 class CDOTA_Ability_AghsFort_Morphling_Waveform : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -45332,7 +45332,7 @@ public:
 class CDOTA_Modifier_AghsFort_Morphling_Waveform : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -45352,7 +45352,7 @@ public:
 class CDOTA_Modifier_AghsFort_Creature_Impale : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -45360,7 +45360,7 @@ public:
 class CDOTA_Ability_AghsFort_Creature_SpikedCarapace : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -45376,7 +45376,7 @@ public:
 class CDOTA_Ability_Aghsfort_Walrus_Pudge_Harpoon : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -45384,7 +45384,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Walrus_Pudge_Harpoon_PathingFix : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -45392,7 +45392,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Walrus_Pudge_Harpoon : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -45400,7 +45400,7 @@ public:
 class CDOTA_Ability_Creature_Flamestrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -45442,7 +45442,7 @@ public:
 class CDOTA_Modifier_AghsFort_DragonKnight_BreatheFire_Debuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -45450,7 +45450,7 @@ public:
 class C_DOTA_Ability_AghsFort_Gyrocopter_Multi_Homing_Missile : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -45458,7 +45458,7 @@ public:
 class CDOTA_Ability_PineCone_ShieldBash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -45496,7 +45496,7 @@ public:
 class CDOTA_Modifier_PineCone_AcornShot_DelayThinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -45504,7 +45504,7 @@ public:
 class CDOTA_Modifier_PineCone_AcornShot_TreeThinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -45529,7 +45529,7 @@ public:
 class CDOTA_Ability_AghsFort_Lifestealer_Enraged_Pulse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -45574,7 +45574,7 @@ public:
 class CDOTA_Ability_UpheavalUrn_Reincarnation : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -45590,7 +45590,7 @@ public:
 class CDOTA_Modifier_AghsFort_SkeletonKing_VampiricAura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -45598,7 +45598,7 @@ public:
 class C_DOTA_Ability_AghanimsFortress_SkeletonKing_VampiricAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -45606,7 +45606,7 @@ public:
 class C_DOTA_Ability_AghsFort_Shadow_Demon_Shadow_Poison : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -45626,7 +45626,7 @@ public:
 class C_DOTA_Ability_AghsFort_Shadow_Demon_Shadow_Poison_Release : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -45708,7 +45708,7 @@ public:
 class CDOTA_Ability_Aghanim_Spear : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -45742,7 +45742,7 @@ public:
 class CDOTA_Ability_AghsFort_TreantMiniboss_NaturesGuise : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -45769,7 +45769,7 @@ public:
 class CDOTA_Modifier_AghsFort_TreantMiniboss_NaturesGuise_Invis : public CDOTA_Modifier_Invisible
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -45777,7 +45777,7 @@ public:
 class CDOTA_Modifier_AghsFort_TreantMiniboss_NaturesGuise_NearTreeDisplay : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -45824,7 +45824,7 @@ public:
 class CDOTA_AghsFort_Ability_Creature_Venomancer_PoisonSting : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -45891,7 +45891,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Aziyog_Underlord_Portal_Warp_Channel_Soundstop : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -45938,7 +45938,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Bonus_Pudge_Meat_Hook : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -45946,7 +45946,7 @@ public:
 class CDOTA_Modifier_AghsFort_AmoebaBoss_Summoned_Knockback : public CDOTA_Modifier_Knockback
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -45998,7 +45998,7 @@ public:
 class CDOTA_Modifier_Aghsfort_Hoodwink_ArcingBoomerang : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46006,7 +46006,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Pugna_Grandmaster_NetherWard : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -46024,7 +46024,7 @@ public:
 class C_DOTA_Ability_AghsFort_AssaultCaptain_SearingChains : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46032,7 +46032,7 @@ public:
 class C_DOTA_Ability_AghsFort_AssaultCaptain_SunRay : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 23
@@ -46097,7 +46097,7 @@ public:
 class CDOTA_Modifier_AghsFort_Blessings_Debuff_Duration_Increase : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -46124,7 +46124,7 @@ public:
 class CDOTA_Ability_AghsFort_TrapRoom_MeatHook : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46132,7 +46132,7 @@ public:
 class CDOTA_Modifier_AghsFort_TrapRoom_MeatHook_PathingFix : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46140,7 +46140,7 @@ public:
 class CDOTA_Modifier_AghsFort_TrapRoom_MeatHook : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46148,7 +46148,7 @@ public:
 class CDOTA_Modifier_Effigy_AghsFort : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -46177,7 +46177,7 @@ public:
 class CDOTA_Modifier_AghsFort_Watch_Tower_Capturing : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 15
@@ -46210,7 +46210,7 @@ public:
 class CDOTA_Ability_HighFive : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -46234,7 +46234,7 @@ public:
 class CDOTA_Ability_Seasonal_TI10_Portal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 15
@@ -46276,7 +46276,7 @@ public:
 class CDOTA_Modifier_Seasonal_TI10_DiscoBall : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46284,7 +46284,7 @@ public:
 class CDOTA_Ability_Seasonal_TI10_DiscoBall : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -46377,7 +46377,7 @@ public:
 class CDOTA_Modifier_Seasonal_TI10_HotPotato : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46385,7 +46385,7 @@ public:
 class CDOTA_Modifier_Seasonal_TI10_HotPotato_InboundPotato : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46393,7 +46393,7 @@ public:
 class CDOTA_Modifier_Seasonal_TI10_HotPotato_Debuff : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -46413,7 +46413,7 @@ public:
 class CDOTA_Ability_Seasonal_TI10_HotPotato_ThrowExistingPotato : public CDOTA_Ability_Seasonal_TI10_HotPotato
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46421,7 +46421,7 @@ public:
 class CDOTA_Ability_TI10_HighFive : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -46445,7 +46445,7 @@ public:
 class CDOTA_Ability_Seasonal_TI10_GuildBanner : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -46490,7 +46490,7 @@ public:
 class CDOTA_Ability_Seasonal_TI11_BubbleGun : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46498,7 +46498,7 @@ public:
 class CDOTA_Ability_Seasonal_TI11_RockPaperScissors : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46506,7 +46506,7 @@ public:
 class CDOTA_Ability_Seasonal_TI11_RockPaperScissors_Base : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46514,7 +46514,7 @@ public:
 class CDOTA_Ability_Seasonal_TI11_Rock : public CDOTA_Ability_Seasonal_TI11_RockPaperScissors_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46522,7 +46522,7 @@ public:
 class CDOTA_Ability_Seasonal_TI11_Paper : public CDOTA_Ability_Seasonal_TI11_RockPaperScissors_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46530,7 +46530,7 @@ public:
 class CDOTA_Ability_Seasonal_TI11_Scissors : public CDOTA_Ability_Seasonal_TI11_RockPaperScissors_Base
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -46600,7 +46600,7 @@ public:
 class CDOTA_Modifier_Seasonal_TI11_CongaLine : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46608,7 +46608,7 @@ public:
 class CDOTA_Modifier_Seasonal_TI11_CongaLineDancer : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -46632,7 +46632,7 @@ public:
 class CDOTA_Ability_Plus_HighFive : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -46656,7 +46656,7 @@ public:
 class CDOTA_Ability_Plus_GuildBanner : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -46703,7 +46703,7 @@ public:
 class C_DOTA_Item_Ofrenda_Pledge : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46711,7 +46711,7 @@ public:
 class CDOTA_Modifier_Ofrenda_Pledge : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46719,7 +46719,7 @@ public:
 class C_DOTA_Item_Ofrenda : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46727,7 +46727,7 @@ public:
 class CDOTA_Item_Ofrenda_Shovel : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46735,7 +46735,7 @@ public:
 class C_DOTA_Item_Recipe_AghsFort_Bloodstone : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46743,7 +46743,7 @@ public:
 class C_DOTA_Item_AghsFort_Bloodstone : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -46780,7 +46780,7 @@ public:
 class CDOTA_Modifier_Item_AghsFort_Bloodstone_GainableCharges : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -46849,7 +46849,7 @@ public:
 class C_DotaSubquestBuyItems : public C_DotaSubquestBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46857,7 +46857,7 @@ public:
 class C_DotaSubquestEntityDeath : public C_DotaSubquestBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46865,7 +46865,7 @@ public:
 class C_DotaSubquestTutorialEvent : public C_DotaSubquestBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46873,7 +46873,7 @@ public:
 class C_DotaSubquestPlayerStat : public C_DotaSubquestBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46881,7 +46881,7 @@ public:
 class C_DotaSubquestAbilityCastCount : public C_DotaSubquestBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -46889,7 +46889,7 @@ public:
 class C_DotaQuestBase : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -47030,7 +47030,7 @@ public:
 class CDOTA_Ability_Jungle_Spirit_Reductions : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -47058,7 +47058,7 @@ public:
 class CDOTA_Ability_Jungle_Spirit_RiverRejuvenation : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -47092,7 +47092,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Morokai_TreantLevel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47100,7 +47100,7 @@ public:
 class CDOTA_Modifier_JungleSpirit_BaseAttackRangeIncrease : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -47116,7 +47116,7 @@ public:
 class C_DOTA_Ability_Morokai_JungleHealBeam : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -47144,7 +47144,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Morokai_JungleHeal_SummonCreeps : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47152,7 +47152,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Morokai_JungleHeal_SecondBeam : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47160,7 +47160,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Morokai_JungleHeal_ThirdBeam : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47168,7 +47168,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Morokai_JungleHeal_BeamRange : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47176,7 +47176,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Morokai_JungleHeal_BeamHeal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47184,7 +47184,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Morokai_JungleHeal_SummonCreeps_Interval : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47192,7 +47192,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Morokai_JungleHeal_Treant_Level : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -47213,7 +47213,7 @@ public:
 class CDOTA_Ability_JungleSpirit_Volcano_Eruption_Knockback : public CDOTA_Modifier_Knockback
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47221,7 +47221,7 @@ public:
 class CDOTA_Ability_Special_JungleSpirit_Volcano_Multitarget : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47229,7 +47229,7 @@ public:
 class CDOTA_Ability_Special_JungleSpirit_Volcano_Splinter : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47237,7 +47237,7 @@ public:
 class CDOTA_Ability_Special_JungleSpirit_Volcano_Damage_Bonus : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47245,7 +47245,7 @@ public:
 class C_DOTA_Ability_JungleSpirit_Storm_Cyclone : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 12
@@ -47293,7 +47293,7 @@ public:
 class CDOTA_Ability_Special_Jungle_Spirit_Storm_Cyclone_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47301,7 +47301,7 @@ public:
 class CDOTA_Ability_Special_Jungle_Spirit_Storm_Cyclone_Projectiles : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47309,7 +47309,7 @@ public:
 class CDOTA_Ability_Special_Jungle_Spirit_Storm_Cyclone_Debuff_Duration : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47317,7 +47317,7 @@ public:
 class CDOTA_Modifier_Jungle_Spirit_Storm_Multicast : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47325,7 +47325,7 @@ public:
 class CDOTA_Modifier_Jungle_Spirit_Storm_Multicast_Cooldown : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47333,7 +47333,7 @@ public:
 class CDOTA_Modifier_Jungle_Spirit_Jungle_Lumber_Lock : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47341,7 +47341,7 @@ public:
 class CDOTA_Modifier_Jungle_Spirit_Jungle_Lumber_Lock_Immunity : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47349,7 +47349,7 @@ public:
 class CDOTA_Modifier_Jungle_Spirit_Volcano_Fire_Strike : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -47365,7 +47365,7 @@ public:
 class C_DOTA_Ability_Jungle_Spirit_Range_Attack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -47384,7 +47384,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Morokai_Range_Attack_Projectile_Duration : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47392,7 +47392,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Morokai_Range_Attack_Aoe_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47400,7 +47400,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jungle_Spirit_Movement_Speed : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47408,7 +47408,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jungle_Spirit_Spell_Lifesteal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47416,7 +47416,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jungle_Spirit_Evasion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47424,7 +47424,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Jungle_Spirit_Bonus_Health : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47432,7 +47432,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jungle_Spirit_Cooldown_Reduction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47440,7 +47440,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jungle_Spirit_Magic_Resistance : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47448,7 +47448,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Jungle_Spirit_Spell_Amplify : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47456,7 +47456,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jungle_Spirit_Attack_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47464,7 +47464,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jungle_Spirit_Health_Regen : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47472,7 +47472,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jungle_Spirit_Bonus_Armor : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47480,7 +47480,7 @@ public:
 class C_PointEntity : public C_BaseEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 25
@@ -47613,7 +47613,7 @@ public:
 class C_EnvCubemapBox : public C_EnvCubemap
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 18
@@ -47853,7 +47853,7 @@ public:
 class CInfoTarget : public C_PointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -47861,7 +47861,7 @@ public:
 class CInfoParticleTarget : public C_PointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -48187,7 +48187,7 @@ public:
 class CVehicleEntityIOVData : public CBaseVehicleVData
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 16
@@ -48353,7 +48353,7 @@ public:
 class CServerOnlyModelEntity : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -48361,7 +48361,7 @@ public:
 class C_ModelPointEntity : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -48578,7 +48578,7 @@ public:
 class C_PointHMDAnchorOverride : public C_PointHMDAnchor
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 25
@@ -48692,7 +48692,7 @@ public:
 class C_BaseToggle : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -48716,7 +48716,7 @@ public:
 class C_PrecipitationBlocker : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -48754,7 +48754,7 @@ public:
 class C_EnvProjectedTexture : public C_ModelPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -48793,7 +48793,7 @@ public:
 class C_FuncBrush : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -48816,7 +48816,7 @@ public:
 class C_FuncRotating : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -48824,7 +48824,7 @@ public:
 class C_Breakable : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -48832,7 +48832,7 @@ public:
 class C_PhysBox : public C_Breakable
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 41
@@ -48980,7 +48980,7 @@ public:
 class C_TriggerVolume : public C_BaseModelEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -48988,7 +48988,7 @@ public:
 class C_TriggerLerpObject : public C_BaseTrigger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -49213,7 +49213,7 @@ public:
 class C_SpriteOriented : public C_Sprite
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -49479,7 +49479,7 @@ public:
 class C_BaseAnimatingOverlay : public CBaseAnimatingActivity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49487,7 +49487,7 @@ public:
 class CDOTA_Modifier_Fountain_Glyph : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -49505,7 +49505,7 @@ public:
 class CDOTA_Modifier_Courier_AutoDeliver : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49513,7 +49513,7 @@ public:
 class CDOTA_Modifier_Turbo_Courier_Haste : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49521,7 +49521,7 @@ public:
 class CDOTA_Modifier_Turbo_Courier_Invulnerable : public CDOTA_Modifier_Invulnerable
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49529,7 +49529,7 @@ public:
 class CDOTA_Ability_Courier_AutoDeliver : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -49596,7 +49596,7 @@ public:
 class CDOTA_Ability_Generic_Hidden : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49604,7 +49604,7 @@ public:
 class CDOTA_Modifier_Jungle_Varmint : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49612,7 +49612,7 @@ public:
 class C_DOTA_Jungle_Varmint_Dive : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -49732,7 +49732,7 @@ public:
 class CDOTA_Modifier_Outpost_Summoning : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49740,7 +49740,7 @@ public:
 class CDOTA_Modifier_Watch_Tower_Capturing : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -49769,7 +49769,7 @@ public:
 class CDOTA_Modifier_Watch_Tower_Invulnerable : public CDOTA_Modifier_Invulnerable
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49777,7 +49777,7 @@ public:
 class CDOTA_Modifier_Watch_Tower_Invulnerable_Temporary : public CDOTA_Modifier_Invulnerable
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49785,7 +49785,7 @@ public:
 class CDOTA_Modifier_Watch_Tower_Marker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49793,7 +49793,7 @@ public:
 class CDOTA_Modifier_Mutation_Vampire_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -49810,7 +49810,7 @@ public:
 class CDOTA_Modifier_Mutation_Spellcast : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49818,7 +49818,7 @@ public:
 class CDOTA_Modifier_Mutation_DeathExplosion_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49826,7 +49826,7 @@ public:
 class CDOTA_Modifier_Mutation_DeathExplosion_TeamAura : public CDOTA_Modifier_Mutation_DeathExplosion_Aura
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49834,7 +49834,7 @@ public:
 class CDOTA_Modifier_Mutation_DeathExplosion : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -49852,7 +49852,7 @@ public:
 class CDOTA_Modifier_Mutation_NoHealthBars_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49860,7 +49860,7 @@ public:
 class CDOTA_Modifier_Mutation_StationaryDamageReduction_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -49876,7 +49876,7 @@ public:
 class CDOTA_Modifier_Mutation_CreateTombstone_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49884,7 +49884,7 @@ public:
 class CDOTA_Modifier_Mutation_CreateTombstone_Team_Aura : public CDOTA_Modifier_Mutation_CreateTombstone_Aura
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49892,7 +49892,7 @@ public:
 class CDOTA_Modifier_Mutation_CreateTombstone : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49900,7 +49900,7 @@ public:
 class CDOTA_Modifier_Mutation_KillstreakPower_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -49918,7 +49918,7 @@ public:
 class CDOTA_Modifier_Mutation_Treecutter_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -49934,7 +49934,7 @@ public:
 class CDOTA_Modifier_Mutation_Cooldown_Reduction_Team_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -49950,7 +49950,7 @@ public:
 class CDOTA_Modifier_Mutation_CritChance_Team_Aura : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -49967,7 +49967,7 @@ public:
 class C_DOTA_Item_DeathGoldDropped : public CBaseAnimatingActivity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49977,7 +49977,7 @@ class CDOTA_Modifier_ContextualTips : public CDOTA_Buff
 public:
 	static float &Get_k_flParentDamageTrackingWindow(){return *reinterpret_cast<float*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CDOTA_Modifier_ContextualTips")->m_static_fields[0]->m_instance);};
 	static float &Get_k_flGlobalTipCooldown(){return *reinterpret_cast<float*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CDOTA_Modifier_ContextualTips")->m_static_fields[1]->m_instance);};
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49985,7 +49985,7 @@ public:
 class CDOTA_Modifier_731_Teaser_Stun : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -49993,7 +49993,7 @@ public:
 class CDOTA_Modifier_731_Teaser_Thinker : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -50029,7 +50029,7 @@ public:
 class CDOTA_Modifier_Neutral_Creep_Lost : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50037,7 +50037,7 @@ public:
 class C_DOTA_Ability_KoboldTaskmaster_SpeedAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50061,7 +50061,7 @@ public:
 class C_DOTA_Ability_CentaurKhan_EnduranceAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50085,7 +50085,7 @@ public:
 class C_DOTA_Ability_CentaurKhan_WarStomp : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50093,7 +50093,7 @@ public:
 class CDOTA_Ability_Spawnlord_Master_Stomp : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -50110,7 +50110,7 @@ public:
 class C_DOTA_Ability_Spawnlord_Master_Freeze : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -50139,7 +50139,7 @@ public:
 class C_DOTA_Ability_GnollAssassin_EnvenomedWeapon : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -50166,7 +50166,7 @@ public:
 class C_DOTA_Ability_Ghost_FrostAttack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -50193,7 +50193,7 @@ public:
 class C_DOTA_Ability_PolarFurbolgUrsaWarrior_ThunderClap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -50235,7 +50235,7 @@ public:
 class C_DOTA_Ability_Neutral_SpellImmunity : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50243,7 +50243,7 @@ public:
 class CDOTA_Modifier_Neutral_SpellImmunity : public CDOTA_Modifier_MagicImmune
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50251,7 +50251,7 @@ public:
 class CDOTA_Modifier_Neutral_SpellImmunity_Visible : public CDOTA_Modifier_MagicImmune
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50259,7 +50259,7 @@ public:
 class C_DOTA_Ability_OgreMagi_FrostArmor : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -50285,7 +50285,7 @@ public:
 class C_DOTA_Ability_DarkTrollWarlord_Ensnare : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50293,7 +50293,7 @@ public:
 class CDOTA_Modifier_DarkTrollWarlord_Ensnare : public CDOTA_Modifier_Rooted
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50301,7 +50301,7 @@ public:
 class C_DOTA_Ability_DarkTrollWarlord_RaiseDead : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50309,7 +50309,7 @@ public:
 class C_DOTA_Ability_GiantWolf_CriticalStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -50326,7 +50326,7 @@ public:
 class C_DOTA_Ability_AncientGolem_Rockslide : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50334,7 +50334,7 @@ public:
 class CDOTA_Ability_MudGolem_RockDestroy : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -50354,7 +50354,7 @@ public:
 class CDOTA_Modifier_MudGolem_Rock_Shard : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50362,7 +50362,7 @@ public:
 class CDOTA_Ability_MudGolem_HurlBoulder : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50370,7 +50370,7 @@ public:
 class CDOTA_Modifier_DoNotCastEnsnare : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50378,7 +50378,7 @@ public:
 class CDOTA_Modifier_DoNotCastRock : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50386,7 +50386,7 @@ public:
 class CDOTA_Modifier_DoNotCastSmash : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50394,7 +50394,7 @@ public:
 class C_DOTA_Ability_AlphaWolf_CriticalStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -50411,7 +50411,7 @@ public:
 class C_DOTA_Ability_AncientRockGolem_Weakening_Aura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50435,7 +50435,7 @@ public:
 class C_DOTA_Ability_BlackDrake_MagicAmplification_Aura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50459,7 +50459,7 @@ public:
 class C_DOTA_Ability_AlphaWolf_CommandAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50483,7 +50483,7 @@ public:
 class CDOTA_Ability_FrostbittenGolem_TimeWarpAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50524,7 +50524,7 @@ public:
 class C_DOTA_Ability_Tornado_Tempest : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -50571,7 +50571,7 @@ public:
 class CDOTA_Modifier_Tornado_ExpirationTime : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -50597,7 +50597,7 @@ public:
 class CDOTA_Ability_BerserkerTroll_Break : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50613,7 +50613,7 @@ public:
 class CDOTA_Ability_Kobold_Disarm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50629,7 +50629,7 @@ public:
 class C_DOTA_Ability_EnragedWildkin_ToughnessAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50653,7 +50653,7 @@ public:
 class CDOTA_Ability_GraniteGolem_HPAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50677,7 +50677,7 @@ public:
 class CDOTA_Ability_GraniteGolem_Bash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50685,7 +50685,7 @@ public:
 class CDOTA_Ability_Spawnlord_Master_Bash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50726,7 +50726,7 @@ public:
 class C_DOTA_Ability_SatyrHellcaller_Shockwave : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50734,7 +50734,7 @@ public:
 class C_DOTA_Ability_SatyrHellcaller_UnholyAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50758,7 +50758,7 @@ public:
 class CDOTA_Ability_Spawnlord_Aura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50783,7 +50783,7 @@ public:
 class C_DOTA_Ability_ForestTrollHighPriest_Heal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -50800,7 +50800,7 @@ public:
 class C_DOTA_Ability_ForestTrollHighPriest_ManaAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50826,7 +50826,7 @@ public:
 class CDOTA_Ability_ForestTrollHighPriest_HealAmp_Aura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50850,7 +50850,7 @@ public:
 class CDOTA_Ability_Furbolg_Enrage_AttackSpeed : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -50875,7 +50875,7 @@ public:
 class CDOTA_Ability_Furbolg_Enrage_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -50925,7 +50925,7 @@ public:
 class CDOTA_Ability_KoboldTunneler_Prospecting : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50949,7 +50949,7 @@ public:
 class CDOTA_Ability_HillTroll_Rally : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -50973,7 +50973,7 @@ public:
 class CDOTA_Modifier_HillTroll_Rally_Stack : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -50981,7 +50981,7 @@ public:
 class C_DOTA_Ability_HarpyScout_TakeOff : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -51010,7 +51010,7 @@ public:
 class CDOTA_Modifier_OgreSmash_Swing : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -51035,7 +51035,7 @@ public:
 class C_DOTA_Ability_HarpyStorm_ChainLightning : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -51053,7 +51053,7 @@ public:
 class C_DOTA_Ability_BlackDragon_Fireball : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -51071,7 +51071,7 @@ public:
 class C_DOTA_Ability_BlackDragon_SplashAttack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -51088,7 +51088,7 @@ public:
 class CDOTA_Ability_BlackDragon_DragonhideAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51112,7 +51112,7 @@ public:
 class CDOTA_Ability_MudGolem_CloakAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51137,7 +51137,7 @@ public:
 class C_DOTA_Ability_BlueDragonspawnSorcerer_Evasion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51153,7 +51153,7 @@ public:
 class C_DOTA_Ability_BlueDragonspawnOverseer_Evasion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51169,7 +51169,7 @@ public:
 class C_DOTA_Ability_BlueDragonspawnOverseer_DevotionAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51193,7 +51193,7 @@ public:
 class CDOTA_Ability_BigThunderLizard_Wardrums : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51218,7 +51218,7 @@ public:
 class C_DOTA_Ability_BigThunderLizard_Slam : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51234,7 +51234,7 @@ public:
 class C_DOTA_Ability_BigThunderLizard_Frenzy : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51258,7 +51258,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_Black_Nightmare : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51274,7 +51274,7 @@ public:
 class CDOTA_Modifier_Greevil_Miniboss_Black_Nightmare_Invulnerable : public CDOTA_Modifier_Invulnerable
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51282,7 +51282,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_Black_BrainSap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51290,7 +51290,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_Blue_ColdFeet : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -51310,7 +51310,7 @@ public:
 class CDOTA_Modifier_Greevil_Miniboss_Blue_ColdFeet_Freeze : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51347,7 +51347,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_Red_Earthshock : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51363,7 +51363,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_Red_Overpower : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51379,7 +51379,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_Yellow_IonShell : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -51396,7 +51396,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_Yellow_Surge : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51404,7 +51404,7 @@ public:
 class CDOTA_Modifier_Greevil_Miniboss_Yellow_Surge : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51412,7 +51412,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_White_Purification : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51420,7 +51420,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_White_Degen_Aura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51444,7 +51444,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_Green_LivingArmor : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -51461,7 +51461,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_Green_Overgrowth : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51469,7 +51469,7 @@ public:
 class CDOTA_Modifier_Greevil_Miniboss_Green_Overgrowth : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51477,7 +51477,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_Orange_DragonSlave : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51485,7 +51485,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_Orange_LightStrikeArray : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -51522,7 +51522,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_Purple_PlagueWard : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51530,7 +51530,7 @@ public:
 class C_DOTA_Ability_Greevil_Miniboss_Sight : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51546,7 +51546,7 @@ public:
 class CDOTA_Ability_Neutral_Upgrade : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -51570,7 +51570,7 @@ public:
 class C_DOTA_Ability_Creep_Siege : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -51589,7 +51589,7 @@ public:
 class C_DOTA_Ability_Creep_Piercing : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -51607,7 +51607,7 @@ public:
 class C_DOTA_Ability_Creep_Irresolute : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51623,7 +51623,7 @@ public:
 class C_DOTA_Ability_FlagBearer_Creep_Aura_Effect : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -51652,7 +51652,7 @@ public:
 class CDOTA_Ability_Filler_Tooltip : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51660,7 +51660,7 @@ public:
 class CDOTA_Modifier_Filler_Tooltip : public CDOTA_Buff
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51668,7 +51668,7 @@ public:
 class C_DOTA_Ability_BackdoorProtection : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51676,7 +51676,7 @@ public:
 class C_DOTA_Ability_BackdoorProtectionInBase : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51684,7 +51684,7 @@ public:
 class CDOTA_Ability_FillerAbility : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51692,7 +51692,7 @@ public:
 class CDOTA_Modifier_Tutorial_Sleep : public CDOTA_Modifier_Stunned
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51780,7 +51780,7 @@ public:
 class C_DOTA_Ability_Lua : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51788,7 +51788,7 @@ public:
 class C_DOTA_Item_Lua : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51796,7 +51796,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_Thunder_Strike_Interval_Upgrade : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51804,7 +51804,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_Thunder_Strike_Mana_Restore : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51812,7 +51812,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_Thunder_Strike_Crit_Chance : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51820,7 +51820,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_Thunder_Strike_On_Attack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51828,7 +51828,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Disruptor_Thunder_Strike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51836,7 +51836,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_Glimpse_Cast_AoE : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51844,7 +51844,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_Glimpse_Hit_On_Arrival : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51852,7 +51852,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_Glimpse_Travel_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51860,7 +51860,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Disruptor_Glimpse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51868,7 +51868,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_KineticField_Instant_Setup : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51876,7 +51876,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_KineticField_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51884,7 +51884,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_KineticField_DoubleRing : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51892,7 +51892,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_KineticField_Allied_Heal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51900,7 +51900,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_KineticField_Allied_AttackBuff : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51908,7 +51908,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Disruptor_KineticField : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51916,7 +51916,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_StaticStorm_Kinetic_Field_On_Cast : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51924,7 +51924,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_StaticStorm_Crits_On_Attack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51932,7 +51932,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Disruptor_StaticStorm_Damage_Reduction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51940,7 +51940,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Disruptor_StaticStorm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51948,7 +51948,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Magnataur_Horn_Toss : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -51964,7 +51964,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Shockwave_Multishot : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51972,7 +51972,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Shockwave_Damage_Reduction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51980,7 +51980,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Shockwave_Damage_Increase : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -51988,7 +51988,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Shockwave_Boomerang : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -52013,7 +52013,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Empower_All_Allies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52021,7 +52021,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Empower_Charges : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52029,7 +52029,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Empower_Lifesteal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52037,7 +52037,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Empower_ShockwaveOnAttack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -52072,7 +52072,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Skewer_OriginalScepter : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52080,7 +52080,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Skewer_BonusStrength : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52088,7 +52088,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Skewer_Heal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52096,7 +52096,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Skewer_Shockwave : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52104,7 +52104,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Skewer_HornToss : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52112,7 +52112,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Reverse_Polarity_Radius : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52120,7 +52120,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Reverse_Polarity_Allies_Crit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52128,7 +52128,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Reverse_Polarity_Steroid : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52136,7 +52136,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Magnataur_Reverse_Polarity_Polarity_Dummy : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -52154,7 +52154,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_PhantomAssassin_Stifling_Dagger_No_Secondary_Dagger_Restriction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52162,7 +52162,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_PhantomAssassin_Stifling_Dagger_On_Attack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52170,7 +52170,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_PhantomAssassin_Stifling_Dagger_AutoDagger : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52178,7 +52178,7 @@ public:
 class C_DOTA_Ability_Aghsfort_PhantomAssassin_Stifling_Dagger : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52186,7 +52186,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_PhantomAssassin_PhantomStrike_Buff_Allies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52194,7 +52194,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_PhantomAssassin_PhantomStrike_Mastery : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52202,7 +52202,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_PhantomAssassin_PhantomStrike_Damage_Reduction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52210,7 +52210,7 @@ public:
 class C_DOTA_Ability_Aghsfort_PhantomAssassin_PhantomStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52218,7 +52218,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_PhantomAssassin_Blur_Regen_When_Active : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52226,7 +52226,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_PhantomAssassin_Blur_Dagger_On_End : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52234,7 +52234,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_PhantomAssassin_Blur_Immediate : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52242,7 +52242,7 @@ public:
 class C_DOTA_Ability_Aghsfort_PhantomAssassin_Blur : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52250,7 +52250,7 @@ public:
 class C_DOTA_Ability_Aghsfort_PhantomAssassin_CoupdeGrace : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52258,7 +52258,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_PhantomAssassin_CoupDeGrace_MarksTarget : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52266,7 +52266,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_PhantomAssassin_CoupDeGrace_Execute : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52274,7 +52274,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_PhantomAssassin_CoupDeGrace_KillsRefresh : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52282,7 +52282,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_PhantomAssassin_CoupDeGrace_BloodyDebuff : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52290,7 +52290,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Winter_Wyvern_Arctic_Burn_Splitshot : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52298,7 +52298,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Winter_Wyvern_Arctic_Burn_DoubleAttack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52306,7 +52306,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Winter_Wyvern_Arctic_Burn_NoMana : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52314,7 +52314,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Winter_Wyvern_Arctic_Burn_Splash_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -52330,7 +52330,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Winter_Wyvern_Splinter_Blast_Main_Target_Hit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52338,7 +52338,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Winter_Wyvern_Splinter_Blast_Heal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52346,7 +52346,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Winter_Wyvern_Splinter_Blast_Vacuum : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -52363,7 +52363,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Winter_Wyvern_Cold_Embrace_Blast_On_End : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52371,7 +52371,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Winter_Wyvern_Cold_Embrace_Charges : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52379,7 +52379,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Winter_Wyvern_Cold_Embrace_Magic_Damage_Block : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52387,7 +52387,7 @@ public:
 class CDOTA_Ability_Aghsfort_Winter_Wyvern_Cold_Embrace : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52395,7 +52395,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Winter_Wyvern_Winters_Curse_Transfer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52403,7 +52403,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Winter_Wyvern_Winters_Curse_Damage_Amp : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52411,7 +52411,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Winter_Wyvern_Winters_Curse_Heal_On_Death : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52419,7 +52419,7 @@ public:
 class CDOTA_Ability_Aghsfort_Winter_Wyvern_Winters_Curse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -52500,7 +52500,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Snapfire_Scatterblast_Double_Barrel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52508,7 +52508,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Snapfire_Scatterblast_Knockback : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52516,7 +52516,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Snapfire_Scatterblast_FullRange_PointBlank : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52524,7 +52524,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Snapfire_Scatterblast_Barrage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52532,7 +52532,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Snapfire_FiresnapCookie_MultiCookie : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52540,7 +52540,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Snapfire_FiresnapCookie_EnemyTarget : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52548,7 +52548,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Snapfire_FiresnapCookie_Allied_Buff : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52556,7 +52556,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Snapfire_LilShredder_Explosives : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52564,7 +52564,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Snapfire_LilShredder_AllyCast : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52572,7 +52572,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Snapfire_LilShredder_Bouncing_Bullets : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52580,7 +52580,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Snapfire_MortimerKisses_Fragmentation : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52588,7 +52588,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Snapfire_MortimerKisses_Incoming_Damage_Reduction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52596,7 +52596,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Snapfire_MortimerKisses_Fire_Trail : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52604,7 +52604,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Snapfire_MortimerKisses_Autoattack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 15
@@ -52640,7 +52640,7 @@ public:
 class CDOTA_Ability_Aghsfort_Tusk_IceShards_Stop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -52702,7 +52702,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Tusk_Launch_Snowball : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52710,7 +52710,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Tusk_WalrusPunch : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52718,7 +52718,7 @@ public:
 class CDOTA_Ability_Aghsfort_Tusk_Tag_Team : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52726,7 +52726,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_IceShards_Circle : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52734,7 +52734,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_IceShards_Explode : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52742,7 +52742,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_IceShards_Stun : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52750,7 +52750,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_IceShards_Snowball : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52758,7 +52758,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_IceShards_Secondary : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52766,7 +52766,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_Snowball_Heal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52774,7 +52774,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_Snowball_End_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52782,7 +52782,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_Snowball_Global : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52790,7 +52790,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_TagTeam_Lifesteal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52798,7 +52798,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_TagTeam_Toggle : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52806,7 +52806,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_TagTeam_DeathCooldown : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52814,7 +52814,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_TagTeam_Global : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52822,7 +52822,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_Walrus_Punch_Reset : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52830,7 +52830,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_Walrus_Punch_Land_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52838,7 +52838,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Tusk_Walrus_Punch_Wallop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52846,7 +52846,7 @@ public:
 class CDOTA_Ability_AghsFort_Ursa_Overpower : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52854,7 +52854,7 @@ public:
 class C_DOTA_Ability_AghsFort_Ursa_Fury_Swipes : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52862,7 +52862,7 @@ public:
 class CDOTA_Ability_AghsFort_Ursa_Earthshock : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52870,7 +52870,7 @@ public:
 class CDOTA_Ability_AghsFort_Ursa_Enrage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52878,7 +52878,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Earthshock_Invis : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52886,7 +52886,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Earthshock_ApplyFurySwipes : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52894,7 +52894,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Earthshock_OverpowerStack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52902,7 +52902,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Earthshock_Knockback : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52910,7 +52910,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Earthshock_MissChance : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52918,7 +52918,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Overpower_Crit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52926,7 +52926,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Overpower_Evasion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52934,7 +52934,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Overpower_Taunt : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52942,7 +52942,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Overpower_Cleave : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52950,7 +52950,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_FurySwipes_ArmorReduction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52958,7 +52958,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_FurySwipes_Lifesteal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52966,7 +52966,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_FurySwipes_UrsaMinor : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52974,7 +52974,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Enrage_Magic_Immunity : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52982,7 +52982,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Enrage_Allies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52990,7 +52990,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Enrage_Fear : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -52998,7 +52998,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Enrage_Armor : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53006,7 +53006,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Enrage_AttackSpeed : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53014,7 +53014,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Ursa_Enrage_Earthshock : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53022,7 +53022,7 @@ public:
 class CDOTA_Ability_Aghsfort_Mars_Spear : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53030,7 +53030,7 @@ public:
 class CDOTA_Ability_Aghsfort_Mars_ArenaOfBlood : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53038,7 +53038,7 @@ public:
 class CDOTA_Ability_Aghsfort_Mars_GodsRebuke : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -53054,7 +53054,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Mars_Bulwark_Stop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53062,7 +53062,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_Spear_MultiSkewer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53070,7 +53070,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_Spear_ImpaleExplosion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53078,7 +53078,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_Spear_BurningTrail : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53086,7 +53086,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_GodsRebuke_FullCircle : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53094,7 +53094,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_GodsRebuke_Stun : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53102,7 +53102,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_GodsRebuke_Strength_Buff : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53110,7 +53110,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_Bulwark_Counter_Rebuke : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53118,7 +53118,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_Bulwark_Healing : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53126,7 +53126,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_Bulwark_Return : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53134,7 +53134,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_Bulwark_Spears : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53142,7 +53142,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_Bulwark_Soldiers : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53150,7 +53150,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_Arena_Of_Blood_Fear : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53158,7 +53158,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_Arena_Of_Blood_Global : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53166,7 +53166,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_Arena_Of_Blood_Attack_Buff : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53174,7 +53174,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Mars_Arena_Of_Blood_Outside_Perimeter : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53182,7 +53182,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Weaver_TheSwarm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -53201,7 +53201,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Weaver_GeminateAttack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -53217,7 +53217,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Swarm_Allies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53225,7 +53225,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Swarm_Explosion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53233,7 +53233,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Swarm_Damage_Transfer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53241,7 +53241,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Geminate_Attack_Splitshot : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53249,7 +53249,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Geminate_Attack_Applies_Swarm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53257,7 +53257,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Geminate_Attack_Knockback : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53265,7 +53265,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Geminate_Attack_Lifesteal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53273,7 +53273,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Shukuchi_Pull : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53281,7 +53281,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Shukuchi_Trail : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53289,7 +53289,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Shukuchi_Heal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53297,7 +53297,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Shukuchi_Attack_On_Completion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53305,7 +53305,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Shukuchi_Swarm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53313,7 +53313,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Shukuchi_Greater_Invisibility : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53321,7 +53321,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Time_Lapse_Allies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53329,7 +53329,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Time_Lapse_Restoration : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53337,7 +53337,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Weaver_Time_Lapse_Explosion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53345,7 +53345,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Viper_PoisonAttackExplode : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53353,7 +53353,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Viper_PoisonAttackSpread : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53361,7 +53361,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Viper_PoisonSnap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53369,7 +53369,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Viper_PoisonAttack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53377,7 +53377,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Viper_NethertoxinCharges : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53385,7 +53385,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Viper_NethertoxinLifesteal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53393,7 +53393,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Viper_Nethertoxin_Persist : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53401,7 +53401,7 @@ public:
 class CDOTA_Ability_Aghsfort_Viper_Nethertoxin : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53409,7 +53409,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Viper_CorrosiveSkinFlying : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53417,7 +53417,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Viper_CorrosiveSkinSpeedSteal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53425,7 +53425,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Viper_CorrosiveSkin_Aura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53433,7 +53433,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Viper_CorrosiveSkin : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53441,7 +53441,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Viper_ViperStrikeAllies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53449,7 +53449,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Viper_ChainViperStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53457,7 +53457,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Viper_ChanneledViperStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53465,7 +53465,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Viper_PeriodicViperStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -53483,7 +53483,7 @@ public:
 class CDOTA_Ability_AghsFort_VoidSpiritBoss_Passive : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -53544,7 +53544,7 @@ public:
 class CDOTA_Ability_AghsFort_Sniper_Shrapnel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53552,7 +53552,7 @@ public:
 class C_DOTA_Ability_AghsFort_Sniper_Headshot : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53560,7 +53560,7 @@ public:
 class C_DOTA_AghsFort_Ability_Sniper_TakeAim : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -53587,7 +53587,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_Shrapnel_Bombs : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53595,7 +53595,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_Shrapnel_AttackSpeed : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53603,7 +53603,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_Shrapnel_MissChance : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53611,7 +53611,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_Shrapnel_MoveSpeed : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53619,7 +53619,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_Headshot_Crits : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53627,7 +53627,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_Headshot_Stuns : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53635,7 +53635,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_TakeAim_SelfPurge : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53643,7 +53643,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_TakeAim_Shrapnel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53651,7 +53651,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_TakeAim_AOE : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53659,7 +53659,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_TakeAim_HopBackwards : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53667,7 +53667,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_TakeAim_ArmorReduction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53675,7 +53675,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_TakeAim_RapidFire : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53683,7 +53683,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_Assassinate_Buckshot : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53691,7 +53691,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_Assassinate_OriginalScepter : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53699,7 +53699,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_Assassinate_Killshot : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53707,7 +53707,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_Assassinate_ConcussiveDummy : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53715,7 +53715,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_Headshot_Shotgun : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -53731,7 +53731,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_Headshot_Assassinate : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53739,7 +53739,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Sniper_Headshot_ArmorReduction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53747,7 +53747,7 @@ public:
 class CDOTA_Ability_AghsFort_EarthSpiritBoss_StoneCaller : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 12
@@ -53823,7 +53823,7 @@ public:
 class CDOTA_Ability_AghsFort_EarthSpiritBoss_Petrify : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53831,7 +53831,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Purification_Cast_Radius : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53839,7 +53839,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Purification_Charges : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53847,7 +53847,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Purification_Cooldown_Reduction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53855,7 +53855,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Purification_Multicast : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53863,7 +53863,7 @@ public:
 class C_DOTA_Ability_AghsFort_Omniknight_Purification : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53871,7 +53871,7 @@ public:
 class C_DOTA_Ability_AghsFort_Omniknight_Degen_Aura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53879,7 +53879,7 @@ public:
 class CDOTA_Ability_AghsFort_Omniknight_Repel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53887,7 +53887,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Omniknight_GuardianAngel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53895,7 +53895,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Repel_Procs_Purification : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53903,7 +53903,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Repel_Outgoing_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53911,7 +53911,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Repel_Applies_Degen_Aura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53919,7 +53919,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Repel_Damage_Instance_Refraction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53927,7 +53927,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Repel_Knockback_On_Cast : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53935,7 +53935,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Degen_Aura_Toggle : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53943,7 +53943,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Degen_Aura_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53951,7 +53951,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Degen_Aura_Restoration : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53959,7 +53959,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Guardian_Angel_Purification : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53967,7 +53967,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Guardian_Angel_Immune_Flight : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53975,7 +53975,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Guardian_Angel_Single_Target : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -53983,7 +53983,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Omniknight_Guardian_Angel_Single_Target_Dummy : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -54001,7 +54001,7 @@ public:
 class C_DOTA_Ability_Aghsfort_WitchDoctor_VoodooRestoration : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54009,7 +54009,7 @@ public:
 class C_DOTA_Ability_Aghsfort_WitchDoctor_Maledict : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -54033,7 +54033,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_ParalyzingCask_Multicask : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54041,7 +54041,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_ParalyzingCask_Applies_Maledict : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54049,7 +54049,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_ParalyzingCask_AoE_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54057,7 +54057,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_ParalyzingCask_Attack_Procs : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54065,7 +54065,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_Maledict_Ground_Curse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54073,7 +54073,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_Maledict_AoE_Procs : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54081,7 +54081,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_Maledict_Death_Restoration : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54089,7 +54089,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_Maledict_Affects_Allies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54097,7 +54097,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_Maledict_Infectious : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54105,7 +54105,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_Voodoo_Restoration_Enemy_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54113,7 +54113,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_Voodoo_Restoration_Lifesteal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54121,7 +54121,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_Voodoo_Restoration_Damage_Amp : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54129,7 +54129,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_Voodoo_Restoration_Mana_Restore : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54137,7 +54137,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_Death_Ward_No_Channel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54145,7 +54145,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_Death_Ward_Splitshot : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54153,7 +54153,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_Death_Ward_Damage_Resist : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54161,7 +54161,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_WitchDoctor_Death_Ward_Bounce : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -54185,7 +54185,7 @@ public:
 class C_DOTA_Ability_Aghsfort_TemplarAssassin_PsionicTrap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54193,7 +54193,7 @@ public:
 class CDOTA_Ability_Aghsfort_TemplarAssassin_Refraction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54201,7 +54201,7 @@ public:
 class CDOTA_Ability_Aghsfort_TemplarAssassin_Meld : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54209,7 +54209,7 @@ public:
 class C_DOTA_Ability_Aghsfort_TemplarAssassin_PsiBlades : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54217,7 +54217,7 @@ public:
 class C_DOTA_Ability_Aghsfort_TemplarAssassin_Refraction_Holdout : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54225,7 +54225,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Templar_Assassin_Refraction_Allies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54233,7 +54233,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Templar_Assassin_Refraction_KillRefresh : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54241,7 +54241,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Templar_Assassin_Refraction_Counter_Attack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54249,7 +54249,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Templar_Assassin_Refraction_Detonate_Trap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54257,7 +54257,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Templar_Assassin_Psionic_Trap_Area_Attack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54265,7 +54265,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Templar_Assassin_Meld_Attack_On_Activation : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54273,7 +54273,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Templar_Assassin_Meld_Teleport : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54281,7 +54281,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Templar_Assassin_Meld_Refraction_On_Kill : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54289,7 +54289,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Templar_Assassin_PsiBlades_Trap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54297,7 +54297,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Templar_Assassin_PsiBlades_Splash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54305,7 +54305,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Templar_Assassin_Psionic_Trap_Damage_Heals : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54313,7 +54313,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Templar_Assassin_Psionic_Trap_MultiPulse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54321,7 +54321,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Templar_Assassin_PsiBlades_AutoAttack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54329,7 +54329,7 @@ public:
 class CDOTA_Ability_Aghsfort_Slark_DarkPact : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54337,7 +54337,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Slark_Pounce : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54345,7 +54345,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Slark_EssenceShift : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54353,7 +54353,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Slark_ShadowDance : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54361,7 +54361,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Slark_Dark_Pact_Essence_Shift : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54369,7 +54369,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Slark_Dark_Pact_Push_Stun : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54377,7 +54377,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Slark_Dark_Pact_Dispells_Allies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54385,7 +54385,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Slark_Dark_Pact_Unit_Target : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54393,7 +54393,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Slark_Pounce_Attack_All : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54401,7 +54401,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Slark_Pounce_Pounce_Projectiles : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54409,7 +54409,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Slark_Pounce_Leashed_Bonus : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54417,7 +54417,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Slark_Essence_Shift_AoE_Attack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54425,7 +54425,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Slark_Essence_Shift_Leash_Chance : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54433,7 +54433,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Slark_Essence_Shift_Allied_Buff : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54441,7 +54441,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Slark_Shadow_Dance_Essence_Shift_Bonus : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54449,7 +54449,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Slark_Shadow_Dance_Dark_Pact_Pulses : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54457,7 +54457,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Slark_Shadow_Dance_Leash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -54481,7 +54481,7 @@ public:
 class C_DOTA_Ability_AghsFort_QueenOfPain_Blink : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -54508,7 +54508,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_QueenOfPain_ShadowStrike_On_Attack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54516,7 +54516,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_QueenOfPain_Blink_Generates_Scream : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54524,7 +54524,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_QueenOfPain_Blink_Attack_Speed : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54532,7 +54532,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_QueenOfPain_Sonic_Wave_Trail : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54540,7 +54540,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_QueenOfPain_ShadowStrike_Chain : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54548,7 +54548,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_QueenOfPain_ShadowStrike_Scream : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54556,7 +54556,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_QueenOfPain_ScreamOfPain_Resets_Blink : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54564,7 +54564,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_QueenOfPain_ScreamOfPain_Restores_Caster : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54572,7 +54572,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_QueenOfPain_ScreamOfPain_Knockback : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54580,7 +54580,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_QueenOfPain_ScreamOfPain_Stun : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54588,7 +54588,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_QueenOfPain_Sonic_Wave_Circle : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54596,7 +54596,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_QueenOfPain_Sonic_Wave_Attack_Buff : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54604,7 +54604,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_QueenOfPain_Blink_Shadow_Strike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54612,7 +54612,7 @@ public:
 class CDOTA_Ability_Aghsfort_TuskBoss_IceShards_Stop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -54673,7 +54673,7 @@ public:
 class C_DOTA_Ability_aghsfort_tusk_boss_Launch_Snowball : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54681,7 +54681,7 @@ public:
 class C_DOTA_Ability_Aghsfort_TuskBoss_WalrusPunch : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54689,7 +54689,7 @@ public:
 class CDOTA_Ability_Aghsfort_TuskBoss_Tag_Team : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54697,7 +54697,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_TuskBoss_IceShards_Circle : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54705,7 +54705,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_TuskBoss_IceShards_Explode : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54713,7 +54713,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_TuskBoss_IceShards_Stun : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54721,7 +54721,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_TuskBoss_IceShards_Secondary : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54729,7 +54729,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_TuskBoss_Snowball_Heal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54737,7 +54737,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_TuskBoss_Snowball_End_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54745,7 +54745,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_TuskBoss_Snowball_Global : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54753,7 +54753,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_TuskBoss_TagTeam_Lifesteal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54761,7 +54761,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_TuskBoss_TagTeam_Toggle : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54769,7 +54769,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_TuskBoss_TagTeam_Global : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54777,7 +54777,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_TuskBoss_Walrus_Punch_Reset : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54785,7 +54785,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_TuskBoss_Walrus_Punch_Land_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54793,7 +54793,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_TuskBoss_Walrus_Punch_Wallop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -54836,7 +54836,7 @@ public:
 class C_DOTA_AghsFort_Ability_Undying_Tombstone_Zombie_DeathStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54844,7 +54844,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Special_Undying_ConsumeZombies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54852,7 +54852,7 @@ public:
 class C_DOTA_AghsFort_Ability_Undying_FleshGolem : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54860,7 +54860,7 @@ public:
 class C_DOTA_Aghsfort_Ability_Special_Bonus_Unique_Undying_TombstoneOnDeath : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54868,7 +54868,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Undying_Decay_Spawn_Zombies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54876,7 +54876,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Undying_Decay_On_Attack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54884,7 +54884,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Undying_Decay_Reverberation : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54892,7 +54892,7 @@ public:
 class C_DOTA_Aghsfort_Ability_Special_Bonus_Unique_Undying_SoulRip_Charges : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54900,7 +54900,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Undying_SoulRip_Spawn_Zombies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54908,7 +54908,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Undying_SoulRip_Share_Strength : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54916,7 +54916,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Undying_SoulRip_Ward : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54924,7 +54924,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Undying_Tombstone_Exploding_Zombies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54932,7 +54932,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Undying_Tombstone_Bunker : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54940,7 +54940,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Undying_FleshGolem_SpawnZombies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54948,7 +54948,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Undying_FleshGolem_HealOnEnemyDeath : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54956,7 +54956,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Undying_FleshGolem_Smash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54964,7 +54964,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Undying_ConsumeZombies_Dummy : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -54972,7 +54972,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Lina_LightStrikeArray : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -55010,7 +55010,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_DragonSlave_LSA_Trail : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55018,7 +55018,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_DragonSlave_Triwave : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55026,7 +55026,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_DragonSlave_Ignite : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55034,7 +55034,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_LightStrikeArray_Pulsate : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55042,7 +55042,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_LightStrikeArray_Attacks : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55050,7 +55050,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_LightStrikeArray_Vacuum : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55058,7 +55058,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_FierySoul_Multishot : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55066,7 +55066,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_FierySoul_DragonSlave_On_Cast : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55074,7 +55074,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_FierySoul_Mini_Lagunas : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55082,7 +55082,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_FierySoul_LSA_Attacks : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55090,7 +55090,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_FierySoul_Ally_Cast : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55098,7 +55098,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_Laguna_Blade_Bounce : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55106,7 +55106,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_Laguna_Blade_LSA : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55114,7 +55114,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_Laguna_Blade_Channel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55122,7 +55122,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_Laguna_Blade_Line : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55130,7 +55130,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lina_Dragon_Slave_Booster : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55138,7 +55138,7 @@ public:
 class C_DOTA_AghsFort_Ability_Juggernaut_BladeFury : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55146,7 +55146,7 @@ public:
 class C_DOTA_Ability_AghsFort_Juggernaut_HealingWard : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55154,7 +55154,7 @@ public:
 class C_DOTA_Ability_AghsFort_Juggernaut_ZenWard : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -55170,7 +55170,7 @@ public:
 class C_DOTA_Ability_AghsFort_Juggernaut_Omnislash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55178,7 +55178,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Blade_Fury_Sparks : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55186,7 +55186,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Blade_Fury_Force : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55194,7 +55194,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Blade_Fury_Shared : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55202,7 +55202,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Blade_Fury_Lifesteal_Hit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55210,7 +55210,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Healing_Ward_Blade_Fury : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55218,7 +55218,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Healing_Ward_Crit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55226,7 +55226,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Healing_Ward_Detonate : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55234,7 +55234,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Blade_Dance_Cooldown : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55242,7 +55242,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Blade_Dance_Buff : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55250,7 +55250,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Blade_Dance_Launches_Blade_Fury : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55258,7 +55258,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Blade_Dance_Shared : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55266,7 +55266,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Blade_Dance_Teleport : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55274,7 +55274,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Omnislash_Range : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55282,7 +55282,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Omnislash_Illusion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55290,7 +55290,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Omnislash_Crit_Extend : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55298,7 +55298,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Omnislash_Shared : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55306,7 +55306,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Omnislash_Spin : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55314,7 +55314,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Omnislash_Ignite : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55322,7 +55322,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Juggernaut_Zen_Ward : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55330,7 +55330,7 @@ public:
 class C_DOTA_Ability_AghsFort2_DrowRanger_FrostArrows : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -55359,7 +55359,7 @@ public:
 class C_DOTA_Ability_Aghsfort2_DrowRanger_Marksmanship : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55367,7 +55367,7 @@ public:
 class CDOTA_Ability_Aghsfort2_Talent_DrowRanger_WaveOfSilence_Blind : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55375,7 +55375,7 @@ public:
 class CDOTA_Ability_Aghsfort2_Talent_DrowRanger_Multishot_Range : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55383,7 +55383,7 @@ public:
 class CDOTA_Ability_Aghsfort2_Talent_DrowRanger_Marksmanship_Attack_Count : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55391,7 +55391,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_DrowRanger_FrostArrows_Split : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55399,7 +55399,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_DrowRanger_FrostArrows_MoveDamage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55407,7 +55407,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_DrowRanger_FrostArrows_Wave : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55415,7 +55415,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_DrowRanger_WaveOfSilence_Echo : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55423,7 +55423,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_DrowRanger_WaveOfSilence_Movement : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55431,7 +55431,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_DrowRanger_WaveOfSilence_Cooldown : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55439,7 +55439,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_DrowRanger_WaveOfSilence_Frost : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55447,7 +55447,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_DrowRanger_Multishot_Move : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55455,7 +55455,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_DrowRanger_Multishot_SideLine : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55463,7 +55463,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_DrowRanger_Multishot_Refire : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55471,7 +55471,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_DrowRanger_Multishot_Buff : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55479,7 +55479,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_DrowRanger_Marksmanship_WaveOfSilence : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55487,7 +55487,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_DrowRanger_Marksmanship_AoE : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55495,7 +55495,7 @@ public:
 class C_DOTA_Ability_AghsFort_Luna_LucentBeam : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55503,7 +55503,7 @@ public:
 class C_DOTA_Ability_AghsFort_Luna_MoonGlaive : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55511,7 +55511,7 @@ public:
 class C_DOTA_Ability_AghsFort_Luna_LunarBlessing : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55519,7 +55519,7 @@ public:
 class C_DOTA_Ability_AghsFort_Luna_Lunar_Grace : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55527,7 +55527,7 @@ public:
 class C_DOTA_Ability_AghsFort_Luna_Eclipse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55535,7 +55535,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_LucentBeam_Bloodmoon : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55543,7 +55543,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_LucentBeam_Diffusion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55551,7 +55551,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_LucentBeam_Moonglow : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55559,7 +55559,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_LunarBlessing_MoonMark : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55567,7 +55567,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_LunarBlessing_LunarRemnant : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55575,7 +55575,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_MoonGlaive_AllyBounce : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55583,7 +55583,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_MoonGlaive_DoubleMoon : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55591,7 +55591,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_MoonGlaive_Knockback : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55599,7 +55599,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_LunarBlessing_MoonShield : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55607,7 +55607,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_LunarBlessing_Moonfright : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55615,7 +55615,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_LunarBlessing_LunarPower : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55623,7 +55623,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_Eclipse_Moonstruck : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55631,7 +55631,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_Eclipse_LunarCycle : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55639,7 +55639,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_Eclipse_LunarFavor : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55647,7 +55647,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_Eclipse_LunarFocus : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55655,7 +55655,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_LucentBeam_Glaives : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55663,7 +55663,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_Glaives_MoonWell : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55671,7 +55671,7 @@ public:
 class CDOTA_Ability_AghsFort_Eclispe_Hide : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55679,7 +55679,7 @@ public:
 class CDOTA_Ability_AghsFort_Luna_LunarBlessing_Leap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -55695,7 +55695,7 @@ public:
 class C_DOTA_Ability_AghsFort_Lich_FrostNova : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -55723,7 +55723,7 @@ public:
 class C_DOTA_Ability_AghsFort_Lich_FrostShield : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -55743,7 +55743,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lich_Frost_Nova_Root_Disarm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55751,7 +55751,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lich_Frost_Nova_Applies_Frost_Shield : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55759,7 +55759,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lich_Frost_Nova_Execute_Refund : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55767,7 +55767,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lich_Frost_Nova_AOE_Attacks : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55775,7 +55775,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lich_Frost_Shield_Magic_Resist_Debuff_And_Stun : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55783,7 +55783,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lich_Frost_Shield_Heal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55791,7 +55791,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lich_Frost_Shield_Frost_Giant : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55799,7 +55799,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lich_Frost_Shield_Dispels : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55807,7 +55807,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lich_Sinister_Gaze_Spawns_Ice_Spire : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55815,7 +55815,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lich_Sinister_Gaze_Drains_Life : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55823,7 +55823,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lich_Sinister_Gaze_Raises_Skeletons : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55831,7 +55831,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lich_Chain_Frost_Split : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55839,7 +55839,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lich_Chain_Frost_Applies_Frost_Shield : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55847,7 +55847,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Lich_Chain_Frost_Applies_Frost_Nova : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55855,7 +55855,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Aghsfort_Lich_Extra_Chain_Frost_Jumps : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -55871,7 +55871,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Torrent_Storm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55879,7 +55879,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Tidebringer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -55895,7 +55895,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Return : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -55916,7 +55916,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Ghost_Ship_Fire_Cannons : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -55932,7 +55932,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Squall : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55940,7 +55940,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Grog_Blossom : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55948,7 +55948,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Marked : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55956,7 +55956,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Green_Around_the_Gills : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55964,7 +55964,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Angry_Recall : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55972,7 +55972,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Keelhaul : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55980,7 +55980,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Sealegs : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55988,7 +55988,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Rumboldened : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -55996,7 +55996,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Man_the_Helm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56004,7 +56004,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Davy_Jones_Locker : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56012,7 +56012,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Dread_Pirate : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56020,7 +56020,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_No_Quarter : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56028,7 +56028,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Skull_and_Bones : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56036,7 +56036,7 @@ public:
 class C_DOTA_Ability_AghsFort_Kunkka_Tidebringer_Charges : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -56092,7 +56092,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_VoidSpirit_AetherRemnant_Push : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56100,7 +56100,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_VoidSpirit_AetherRemnant_PhantomAttack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56108,7 +56108,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_VoidSpirit_AetherRemnant_Bowling : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56116,7 +56116,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_VoidSpirit_Dissimilate_Translocate : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56124,7 +56124,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_VoidSpirit_Dissimilate_Expanse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56132,7 +56132,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_VoidSpirit_Dissimilate_Remnants : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56140,7 +56140,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_VoidSpirit_Dissimilate_Lure : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56148,7 +56148,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_VoidSpirit_ResonantPulse_Knockback : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56156,7 +56156,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_VoidSpirit_ResonantPulse_Cadence : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -56172,7 +56172,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_VoidSpirit_AstralStep_Vacuum : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56180,7 +56180,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_VoidSpirit_AstralStep_Attacks : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56188,7 +56188,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_VoidSpirit_AstralStep_Trail : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56196,7 +56196,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_VoidSpirit_AstralStep_Breach : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56204,7 +56204,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_VoidSpirit_AstralStep_RestoreTime : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56212,7 +56212,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_VoidSpirit_AetherRemnant_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56220,7 +56220,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_VoidSpirit_Dissimilate_Stun : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56228,7 +56228,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_VoidSpirit_ResonantPulse_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56236,7 +56236,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_VoidSpirit_AstralStep_Crit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56244,7 +56244,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_VoidSpirit_Dissimilate_Invis : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -56269,7 +56269,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Gyrocopter_Homing_Missile : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56277,7 +56277,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Gyrocopter_Flak_Cannon : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56285,7 +56285,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_RocketBarrage_OnAttack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56293,7 +56293,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_RocketBarrage_DoubleTarget : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56301,7 +56301,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_RocketBarrage_Flare : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56309,7 +56309,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_RocketBarrage_Ground : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56317,7 +56317,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_HomingMissile_Barrage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56325,7 +56325,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_HomingMissile_Ride : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56333,7 +56333,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_HomingMissile_Minimissile : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56341,7 +56341,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_HomingMissile_CallDown : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56349,7 +56349,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_Flak_Cannon_First_Strike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56357,7 +56357,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_Flak_Cannon_Side_Gunner : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56365,7 +56365,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_Flak_Cannon_Missiles : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56373,7 +56373,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_Flak_Cannon_FireTrail : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56381,7 +56381,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_CallDown_AttackBuff : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56389,7 +56389,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_CallDown_MineField : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56397,7 +56397,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_CallDown_Strafe : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56405,7 +56405,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_HomingMissile_Charges : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56413,7 +56413,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Gyrocopter_CallDown_Precision_Strike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56421,7 +56421,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Dawnbreaker_Fire_Wreath : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -56445,7 +56445,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Dawnbreaker_Luminosity : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -56472,7 +56472,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Dawnbreaker_Converge : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56480,7 +56480,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Dawnbreaker_Land : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56488,7 +56488,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Dawnbreaker_StarbreakerCelestialFire : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56496,7 +56496,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Dawnbreaker_Starbreaker_Suncrusher : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56504,7 +56504,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Dawnbreaker_CelestialHammer_SunForge : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56512,7 +56512,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Dawnbreaker_Luminosity_BrightFoundry : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56520,7 +56520,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Dawnbreaker_CelestialHammer_Haven : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56528,7 +56528,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Dawnbreaker_CelestialHammer_HammerTime : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56536,7 +56536,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Dawnbreaker_Luminosity_SolarBattery : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56544,7 +56544,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Dawnbreaker_Luminosity_Lightbringer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56552,7 +56552,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Dawnbreaker_Solar_Guardian_SunSentinel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56560,7 +56560,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Dawnbreaker_Solar_Guardian_DeathOfAStar : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56568,7 +56568,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Dawnbreaker_Solar_Guardian_SolarFlare : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56576,7 +56576,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Dawnbreaker_Starbreaker_CounterOrbital : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56584,7 +56584,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Bane_BrainSap_Invis : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56592,7 +56592,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Bane_Nightmare_Confusion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56600,7 +56600,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Bane_Enfeeble_Allies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56608,7 +56608,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Bane_Nightmare_Burst : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56616,7 +56616,7 @@ public:
 class C_DOTA_Ability_AghsFort_Bane_Enfeeble : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -56633,7 +56633,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Bane_Nightmare : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56641,7 +56641,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Bane_NightmareEnd : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -56663,7 +56663,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Bane_Enfeeble_DeathSpread : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56671,7 +56671,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Bane_Enfeeble_DamageSteal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56679,7 +56679,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Bane_Enfeeble_EndFiendGrip : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56687,7 +56687,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Bane_FiendsGrip_Spread : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56695,7 +56695,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Bane_FiendsGrip_AutoNightmare : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56703,7 +56703,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Bane_BrainSap_NightmareMirror : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56711,7 +56711,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Bane_Enfeeble_Spill : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56719,7 +56719,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Bane_FiendsGrip_BoostAlly : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56727,7 +56727,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Bane_BrainSap_Knockback_Slow : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56735,7 +56735,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Bane_Nightmare_SweetDreams : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56743,7 +56743,7 @@ public:
 class CDOTA_Ability_AghsFort_Phoenix_SunRay : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56751,7 +56751,7 @@ public:
 class C_DOTA_Ability_AghsFort_Phoenix_SunRayStop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56759,7 +56759,7 @@ public:
 class C_DOTA_Ability_AghsFort_Phoenix_SunRayToggleMove : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -56775,7 +56775,7 @@ public:
 class C_DOTA_Ability_AghsFort_Phoenix_IcarusDiveStop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -56808,7 +56808,7 @@ public:
 class CDOTA_Ability_AghsFort_Phoenix_Supernova : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56816,7 +56816,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Phoenix_IcarusDive_Savior : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56824,7 +56824,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Phoenix_IcarusDive_BlastWave : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56832,7 +56832,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Phoenix_IcarusDive_SecondSun : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56840,7 +56840,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Phoenix_FireSpirits_Vitality : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56848,7 +56848,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Phoenix_FireSpirits_Artillery : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56856,7 +56856,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Phoenix_FireSpirits_FlameRevenant : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -56872,7 +56872,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Phoenix_SunRay_Luminance : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56880,7 +56880,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Phoenix_SunRay_FocusPoint : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56888,7 +56888,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Phoenix_SunRay_GammaRay : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56896,7 +56896,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Phoenix_Supernova_Capture : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56904,7 +56904,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Phoenix_Supernova_Horizon : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56912,7 +56912,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Phoenix_Supernova_ExpelCore : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56920,7 +56920,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Phoenix_Supernova_BonusDps : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56928,7 +56928,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Phoenix_SunRay_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56936,7 +56936,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Phoenix_Supernova_AttacksToKill : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56944,7 +56944,7 @@ public:
 class C_DOTA_Ability_AghsFort_ArcWardenBoss_Flux : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56952,7 +56952,7 @@ public:
 class C_DOTA_AghsFort_Ability_ArcWardenBoss_MagneticField : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -56980,7 +56980,7 @@ public:
 class C_DOTA_Aghsfort_Ability_ArcWardenBoss_Gleipnir : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56988,7 +56988,7 @@ public:
 class C_DOTA_Ability_ArcWardenBoss_SparkWraith_Missile : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -56996,7 +56996,7 @@ public:
 class CDOTA_Ability_AghsFort_BossEarthshaker_Fissure : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57004,7 +57004,7 @@ public:
 class CDOTA_Ability_AghsFort_BossEarthshaker_EnchantTotem : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57012,7 +57012,7 @@ public:
 class C_DOTA_Ability_Aghsfort_PrimalBeast_Boss_CreateRock : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57020,7 +57020,7 @@ public:
 class C_DOTA_Ability_Aghsfort_PrimalBeast_Boss_HeavySteps : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -57044,7 +57044,7 @@ public:
 class C_DOTA_Ability_Aghsfort_PrimalBeast_Boss_Inhibition : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57052,7 +57052,7 @@ public:
 class C_DOTA_Ability_Aghsfort_PrimalBeast_Boss_Vault : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -57118,7 +57118,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Sand_King_CausticFinale : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -57145,7 +57145,7 @@ public:
 class C_DOTA_Ability_Aghsfort_Special_Sand_King_BurrowStrike_Reverse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57153,7 +57153,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Sand_King_BurrowStrike_Channel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57161,7 +57161,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Sand_King_BurrowStrike_Transport : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57169,7 +57169,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Sand_King_SandStorm_Independant : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57177,7 +57177,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Sand_King_SandStorm_Burrowstrike_Field : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57185,7 +57185,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Sand_King_SandStorm_Vacuum : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57193,7 +57193,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Sand_King_Caustic_Finale_Sandstorm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57201,7 +57201,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Sand_King_Caustic_Finale_Active : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57209,7 +57209,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Sand_King_Caustic_Finale_StrengthBuff : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57217,7 +57217,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Sand_King_Caustic_Finale_Epicenter : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57225,7 +57225,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Sand_King_Epicenter_Movement : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57233,7 +57233,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Sand_King_Epicenter_Allies : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57241,7 +57241,7 @@ public:
 class CDOTA_Ability_Aghsfort_Special_Sand_King_Epicenter_DamageResist : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57249,7 +57249,7 @@ public:
 class C_DOTA_Ability_AghsFort_Sand_King_BurrowStrike_Channel_Stop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -57273,7 +57273,7 @@ public:
 class CDOTA_Ability_AghsFort_Clinkz_SearingArrows : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -57289,7 +57289,7 @@ public:
 class CDOTA_Ability_AghsFort_Clinkz_SkeletonWalk : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57297,7 +57297,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Clinkz_BurningBarrage_TriSplit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57305,7 +57305,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Clinkz_BurningBarrage_SkeletonShot : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57313,7 +57313,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Clinkz_BurningBarrage_Singe : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57321,7 +57321,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Clinkz_SearingArrows_Ignite : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57329,7 +57329,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Clinkz_SearingArrows_SkeletalColossus : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57337,7 +57337,7 @@ public:
 class CDOTA_Ability_AghsFort_Clinkz_SkeletalColossus : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57345,7 +57345,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Clinkz_SearingArrows_Melter : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57353,7 +57353,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Clinkz_SkeletonWalk_BeckonUndead : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57361,7 +57361,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Clinkz_SkeletonWalk_WraithTouch : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57369,7 +57369,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Clinkz_SkeletonWalk_Strafe : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57377,7 +57377,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Clinkz_BurningArmy_Entrenchment : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57385,7 +57385,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Clinkz_BurningArmy_BigSkeletons : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57393,7 +57393,7 @@ public:
 class CDOTA_Ability_AghsFort_Special_Clinkz_BurningArmy_StunningSkeletons : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57401,7 +57401,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Clinkz_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57409,7 +57409,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Clinkz_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57417,7 +57417,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Clinkz_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57425,7 +57425,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Clinkz_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57433,7 +57433,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Clinkz_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57441,7 +57441,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Clinkz_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57449,7 +57449,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Clinkz_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57457,7 +57457,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Clinkz_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57465,7 +57465,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Clinkz_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57473,7 +57473,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Clinkz_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57481,7 +57481,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Clinkz_11 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57489,7 +57489,7 @@ public:
 class CDOTA_Ability_AghsFort_Talent_Clinkz_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -57505,7 +57505,7 @@ public:
 class C_DOTA_Ability_AghsFort_BossDarkWillow_CursedCrown : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57513,7 +57513,7 @@ public:
 class CDOTA_Ability_AncientApparition_ColdFeet : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -57529,7 +57529,7 @@ public:
 class CDOTA_Ability_AncientApparition_ChillingTouch : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 12
@@ -57556,7 +57556,7 @@ public:
 class CDOTA_Ability_AncientApparition_IceBlast_Release : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57564,7 +57564,7 @@ public:
 class C_DOTA_Ability_AntiMage_ManaBreak : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57572,7 +57572,7 @@ public:
 class C_DOTA_Ability_AntiMage_Blink : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57580,7 +57580,7 @@ public:
 class C_DOTA_Ability_AntiMage_Blink_Fake : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57588,7 +57588,7 @@ public:
 class C_DOTA_Ability_AntiMage_SpellShield : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57596,7 +57596,7 @@ public:
 class C_DOTA_Ability_AntiMage_Counterspell : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57604,7 +57604,7 @@ public:
 class C_DOTA_Ability_AntiMage_ManaVoid : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57612,7 +57612,7 @@ public:
 class CDOTA_Ability_AntiMage_Scepter : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57620,7 +57620,7 @@ public:
 class C_DOTA_Ability_AntiMage_Mana_Overload : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57628,7 +57628,7 @@ public:
 class C_DOTA_Ability_Bane_Enfeeble : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -57644,7 +57644,7 @@ public:
 class C_DOTA_Ability_Bane_Nightmare : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57652,7 +57652,7 @@ public:
 class C_DOTA_Ability_Bane_NightmareEnd : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -57670,7 +57670,7 @@ public:
 class CDOTA_Ability_Pudge_Eject : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -57719,7 +57719,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pudge_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57727,7 +57727,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pudge_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57735,7 +57735,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pudge_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57743,7 +57743,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pudge_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57751,7 +57751,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pudge_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57759,7 +57759,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pudge_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57767,7 +57767,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Pudge_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -57783,7 +57783,7 @@ public:
 class C_DOTA_Ability_Juggernaut_HealingWard : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57791,7 +57791,7 @@ public:
 class C_DOTA_Ability_Juggernaut_BladeDance : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57799,7 +57799,7 @@ public:
 class C_DOTA_Ability_Juggernaut_Omnislash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57807,7 +57807,7 @@ public:
 class CDOTA_Ability_Juggernaut_Swift_Slash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57815,7 +57815,7 @@ public:
 class C_DOTA_Ability_Holdout_BladeFury : public C_DOTA_Ability_Juggernaut_BladeFury
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -57853,7 +57853,7 @@ public:
 class C_DOTA_Ability_Nevermore_Shadowraze1 : public C_DOTA_Ability_Nevermore_Shadowraze
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57861,7 +57861,7 @@ public:
 class C_DOTA_Ability_Nevermore_Shadowraze2 : public C_DOTA_Ability_Nevermore_Shadowraze
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57869,7 +57869,7 @@ public:
 class C_DOTA_Ability_Nevermore_Shadowraze3 : public C_DOTA_Ability_Nevermore_Shadowraze
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57877,7 +57877,7 @@ public:
 class C_DOTA_Ability_Nevermore_Presence : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -57909,7 +57909,7 @@ public:
 class C_DOTA_Ability_SandKing_CausticFinale : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -57929,7 +57929,7 @@ public:
 class C_DOTA_Ability_SandKing_SandStorm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -57969,7 +57969,7 @@ public:
 class C_DOTA_Ability_Mirana_Leap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -57977,7 +57977,7 @@ public:
 class C_DOTA_Ability_Mirana_MoonlightShadow : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -57993,7 +57993,7 @@ public:
 class C_DOTA_Ability_Sven_GreatCleave : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58001,7 +58001,7 @@ public:
 class C_DOTA_Ability_Sven_Warcry : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58009,7 +58009,7 @@ public:
 class C_DOTA_Ability_Sven_GodsStrength : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58017,7 +58017,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sven : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58025,7 +58025,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sven_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58033,7 +58033,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sven_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58041,7 +58041,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sven_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58049,7 +58049,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sven_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58057,7 +58057,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sven_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58065,7 +58065,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sven_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58073,7 +58073,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Sven_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58081,7 +58081,7 @@ public:
 class C_DOTA_Ability_SkeletonKing_HellfireBlast : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58089,7 +58089,7 @@ public:
 class C_DOTA_Ability_SkeletonKing_VampiricAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58097,7 +58097,7 @@ public:
 class C_DOTA_Ability_SkeletonKing_MortalStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58105,7 +58105,7 @@ public:
 class C_DOTA_Ability_SkeletonKing_Reincarnation : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58113,7 +58113,7 @@ public:
 class C_DOTA_Ability_Storm_Spirit_Electric_Rave : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -58129,7 +58129,7 @@ public:
 class C_DOTA_Ability_StormSpirit_ElectricVortex : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -58171,7 +58171,7 @@ public:
 class C_DOTA_Ability_DrowRanger_Silence : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -58191,7 +58191,7 @@ public:
 class C_DOTA_Ability_DrowRanger_Trueshot : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58199,7 +58199,7 @@ public:
 class C_DOTA_Ability_DrowRanger_Marksmanship : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -58238,7 +58238,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Drow_Ranger_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58246,7 +58246,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Drow_Ranger_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58254,7 +58254,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Drow_Ranger_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58262,7 +58262,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Drow_Ranger_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58270,7 +58270,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Drow_Ranger_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58278,7 +58278,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Drow_Ranger_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58286,7 +58286,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Drow_Ranger_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58294,7 +58294,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Drow_Ranger_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58302,7 +58302,7 @@ public:
 class C_DOTA_Ability_Earthshaker_Fissure : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58310,7 +58310,7 @@ public:
 class C_DOTA_Ability_Earthshaker_EnchantTotem : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58318,7 +58318,7 @@ public:
 class C_DOTA_Ability_Earthshaker_Aftershock : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -58371,7 +58371,7 @@ public:
 class C_DOTA_Ability_CrystalMaiden_Let_It_Go : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -58387,7 +58387,7 @@ public:
 class C_DOTA_Ability_CrystalMaiden_Frostbite : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58395,7 +58395,7 @@ public:
 class C_DOTA_Ability_CrystalMaiden_BrillianceAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58403,7 +58403,7 @@ public:
 class C_DOTA_Ability_CrystalMaiden_FreezingField : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58411,7 +58411,7 @@ public:
 class C_DOTA_Ability_CrystalMaiden_FreezingFieldStop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -58435,7 +58435,7 @@ public:
 class C_DOTA_Ability_Axe_BerserkersCall : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58443,7 +58443,7 @@ public:
 class C_DOTA_Ability_Axe_CounterHelix : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -58464,7 +58464,7 @@ public:
 class C_DOTA_Ability_Holdout_CullingBlade : public C_DOTA_Ability_Axe_CullingBlade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58472,7 +58472,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Axe : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58480,7 +58480,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Axe_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58488,7 +58488,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Axe_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58496,7 +58496,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Axe_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58504,7 +58504,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Axe_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58512,7 +58512,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Axe_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58520,7 +58520,7 @@ public:
 class C_DOTA_Ability_Bloodseeker_Bloodrage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58528,7 +58528,7 @@ public:
 class CDOTA_Ability_Bloodseeker_Bloodbath : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58536,7 +58536,7 @@ public:
 class C_DOTA_Ability_Bloodseeker_Thirst : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58544,7 +58544,7 @@ public:
 class C_DOTA_Ability_Bloodseeker_Rupture : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58552,7 +58552,7 @@ public:
 class C_DOTA_Ability_Bloodseeker_BloodMist : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -58568,7 +58568,7 @@ public:
 class C_DOTA_Ability_PhantomLancer_Doppelwalk : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58576,7 +58576,7 @@ public:
 class C_DOTA_Ability_PhantomLancer_Juxtapose : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58584,7 +58584,7 @@ public:
 class C_DOTA_Ability_PhantomLancer_PhantomEdge : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58592,7 +58592,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Lancer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58600,7 +58600,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Lancer_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58608,7 +58608,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Lancer_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58616,7 +58616,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Lancer_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58624,7 +58624,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Lancer_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58632,7 +58632,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Lancer_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58640,7 +58640,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Lancer_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58648,7 +58648,7 @@ public:
 class C_DOTA_Ability_Razor_PlasmaField : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -58670,7 +58670,7 @@ public:
 class C_DOTA_Ability_Razor_UnstableCurrent : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58678,7 +58678,7 @@ public:
 class C_DOTA_Ability_Razor_EyeOfTheStorm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58686,7 +58686,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Razor : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58694,7 +58694,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Razor_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58702,7 +58702,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Razor_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58710,7 +58710,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Razor_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58718,7 +58718,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Razor_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58726,7 +58726,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Razor_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -58743,7 +58743,7 @@ public:
 class C_DOTA_Ability_Lina_LightStrikeArray : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58751,7 +58751,7 @@ public:
 class C_DOTA_Ability_Lina_FierySoul : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -58767,7 +58767,7 @@ public:
 class C_DOTA_Ability_Lina_Flame_Cloak : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58775,7 +58775,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lina_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58783,7 +58783,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lina_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58791,7 +58791,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lina_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58799,7 +58799,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lina_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58807,7 +58807,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lina_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58815,7 +58815,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lina_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58823,7 +58823,7 @@ public:
 class CDOTA_Ability_Morphling_Hybrid : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58831,7 +58831,7 @@ public:
 class C_DOTA_Ability_Morphling_Waveform : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58839,7 +58839,7 @@ public:
 class C_DOTA_Ability_Morphling_AdaptiveStrike_Agi : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58847,7 +58847,7 @@ public:
 class C_DOTA_Ability_Morphling_AdaptiveStrike_Str : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58855,7 +58855,7 @@ public:
 class C_DOTA_Ability_Morphling_Morph : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58863,7 +58863,7 @@ public:
 class C_DOTA_Ability_Morphling_Morph_Agi : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58871,7 +58871,7 @@ public:
 class C_DOTA_Ability_Morphling_Morph_Str : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -58896,7 +58896,7 @@ public:
 class C_DOTA_Ability_Zuus_StaticField : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58904,7 +58904,7 @@ public:
 class C_DOTA_Ability_Zuus_ArcLightning : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58912,7 +58912,7 @@ public:
 class C_DOTA_Ability_Zuus_Cloud : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58920,7 +58920,7 @@ public:
 class C_DOTA_Ability_Zuus_LightningBolt : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -58936,7 +58936,7 @@ public:
 class C_DOTA_Ability_Zuus_ThundergodsVengeance : public C_DOTA_Ability_Zuus_ThundergodsWrath
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58944,7 +58944,7 @@ public:
 class C_DOTA_Ability_Zuus_Heavenly_Jump : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58952,7 +58952,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Zeus : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58960,7 +58960,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Zeus_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58968,7 +58968,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Zeus_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58976,7 +58976,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Zeus_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58984,7 +58984,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Zeus_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -58992,7 +58992,7 @@ public:
 class C_DOTA_Ability_Kunkka_Torrent : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59000,7 +59000,7 @@ public:
 class C_DOTA_Ability_Kunkka_Torrent_Storm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59008,7 +59008,7 @@ public:
 class C_DOTA_Ability_Kunkka_Tidebringer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -59024,7 +59024,7 @@ public:
 class C_DOTA_Ability_Kunkka_Return : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -59054,7 +59054,7 @@ public:
 class C_DOTA_Ability_Tiny_CraggyExterior : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -59070,7 +59070,7 @@ public:
 class C_DOTA_Ability_Tiny_Toss : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -59086,7 +59086,7 @@ public:
 class C_DOTA_Ability_Tiny_Tree_Channel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59094,7 +59094,7 @@ public:
 class C_DOTA_Ability_Tiny_TossTree : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59102,7 +59102,7 @@ public:
 class C_DOTA_Ability_Tiny_Grow : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59110,7 +59110,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tiny : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59118,7 +59118,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tiny_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59126,7 +59126,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tiny_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59134,7 +59134,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tiny_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59142,7 +59142,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tiny_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59150,7 +59150,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tiny_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59158,7 +59158,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Tiny_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59166,7 +59166,7 @@ public:
 class C_DOTA_Ability_Puck_EtherealJaunt : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -59198,7 +59198,7 @@ public:
 class C_DOTA_Ability_Puck_PhaseShift : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -59214,7 +59214,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Puck : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59222,7 +59222,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Puck_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59230,7 +59230,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Puck_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59238,7 +59238,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Puck_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59246,7 +59246,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Puck_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59254,7 +59254,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Puck_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59262,7 +59262,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Puck_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59270,7 +59270,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Puck_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -59308,7 +59308,7 @@ public:
 class C_DOTA_Ability_Windrunner_Windrun : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59316,7 +59316,7 @@ public:
 class C_DOTA_Ability_Windrunner_FocusFire : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59324,7 +59324,7 @@ public:
 class C_DOTA_Ability_Windrunner_FocusFire_End : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -59342,7 +59342,7 @@ public:
 class C_DOTA_Ability_Lich_FrostNova : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -59359,7 +59359,7 @@ public:
 class C_DOTA_Ability_Lich_DarkSorcery : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59367,7 +59367,7 @@ public:
 class CDOTA_Ability_Lich_FrostAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59375,7 +59375,7 @@ public:
 class C_DOTA_Ability_Lich_FrostArmor : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59383,7 +59383,7 @@ public:
 class C_DOTA_Ability_Lich_FrostShield : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -59413,7 +59413,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lich_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59421,7 +59421,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lich_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59429,7 +59429,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lich_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59437,7 +59437,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lich_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59445,7 +59445,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lich_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59453,7 +59453,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lich_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59461,7 +59461,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lich_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59469,7 +59469,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lich_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -59485,7 +59485,7 @@ public:
 class C_DOTA_Ability_Tidehunter_KrakenShell : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59493,7 +59493,7 @@ public:
 class C_DOTA_Ability_Tidehunter_AnchorSmash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -59526,7 +59526,7 @@ public:
 class C_DOTA_Ability_ShadowShaman_EtherShock : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59534,7 +59534,7 @@ public:
 class C_DOTA_Ability_ShadowShamanVoodoo : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59542,7 +59542,7 @@ public:
 class C_DOTA_Ability_ShadowShaman_MassSerpentWard : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -59570,7 +59570,7 @@ public:
 class C_DOTA_Ability_Riki_SmokeScreen : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59578,7 +59578,7 @@ public:
 class C_DOTA_Ability_Riki_BlinkStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59586,7 +59586,7 @@ public:
 class C_DOTA_Ability_Riki_Permanent_Invisibility : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59594,7 +59594,7 @@ public:
 class C_DOTA_Ability_Riki_Backstab : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59602,7 +59602,7 @@ public:
 class C_DOTA_Ability_Riki_TricksOfTheTrade : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59610,7 +59610,7 @@ public:
 class C_DOTA_Ability_Riki_Poison_Dart : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59618,7 +59618,7 @@ public:
 class C_DOTA_Ability_Enigma_DemonicConversion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -59636,7 +59636,7 @@ public:
 class C_DOTA_Ability_Enigma_MidnightPulse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59644,7 +59644,7 @@ public:
 class C_DOTA_Ability_Enigma_BlackHole : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59652,7 +59652,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Enigma : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59660,7 +59660,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Enigma_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59668,7 +59668,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Enigma_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59676,7 +59676,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Enigma_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59684,7 +59684,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Enigma_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59692,7 +59692,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Enigma_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59700,7 +59700,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Enigma_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59708,7 +59708,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Enigma_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59716,7 +59716,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Enigma_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59724,7 +59724,7 @@ public:
 class C_DOTA_Ability_Tinker_Defensive_Matrix : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -59780,7 +59780,7 @@ public:
 class CDOTA_Ability_Tinker_Shrink_Ray : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -59812,7 +59812,7 @@ public:
 class C_DOTA_Ability_WitchDoctor_VoodooRestoration : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59820,7 +59820,7 @@ public:
 class C_DOTA_Ability_WitchDoctor_Maledict : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -59847,7 +59847,7 @@ public:
 class C_DOTA_Ability_WitchDoctor_Voodoo_Switcheroo : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59855,7 +59855,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Witch_Doctor_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59863,7 +59863,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Witch_Doctor_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59871,7 +59871,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Witch_Doctor_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59879,7 +59879,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Witch_Doctor_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59887,7 +59887,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Witch_Doctor_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59895,7 +59895,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Witch_Doctor_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59903,7 +59903,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Witch_Doctor_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59911,7 +59911,7 @@ public:
 class C_DOTA_Ability_Sniper_Shrapnel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59919,7 +59919,7 @@ public:
 class C_DOTA_Ability_Sniper_Headshot : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59927,7 +59927,7 @@ public:
 class C_DOTA_Ability_Sniper_TakeAim : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -59952,7 +59952,7 @@ public:
 class C_DOTA_Ability_Necrolyte_Sadist_Stop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59960,7 +59960,7 @@ public:
 class C_DOTA_Ability_Necrolyte_Sadist : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -59976,7 +59976,7 @@ public:
 class C_DOTA_Ability_Necrolyte_Heartstopper_Aura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59984,7 +59984,7 @@ public:
 class C_DOTA_Ability_Necrolyte_ReapersScythe : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -59992,7 +59992,7 @@ public:
 class C_DOTA_Ability_Necrolyte_Death_Seeker : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60000,7 +60000,7 @@ public:
 class C_DOTA_Ability_Slardar_Sprint : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60008,7 +60008,7 @@ public:
 class C_DOTA_Ability_Slardar_Slithereen_Crush : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60016,7 +60016,7 @@ public:
 class C_DOTA_Ability_Slardar_Bash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60024,7 +60024,7 @@ public:
 class C_DOTA_Ability_Slardar_Amplify_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60032,7 +60032,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slardar : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60040,7 +60040,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slardar_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60048,7 +60048,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slardar_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60056,7 +60056,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slardar_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60064,7 +60064,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slardar_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60072,7 +60072,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slardar_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60080,7 +60080,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slardar_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60088,7 +60088,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Slardar_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60096,7 +60096,7 @@ public:
 class C_DOTA_Ability_Ursa_Overpower : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60104,7 +60104,7 @@ public:
 class C_DOTA_Ability_Ursa_Fury_Swipes : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60112,7 +60112,7 @@ public:
 class C_DOTA_Ability_Ursa_Enrage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60120,7 +60120,7 @@ public:
 class C_DOTA_Ability_Ursa_Earthshock : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -60142,7 +60142,7 @@ public:
 class C_DOTA_Ability_Lion_Voodoo : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -60166,7 +60166,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60174,7 +60174,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lion_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60182,7 +60182,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lion_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60190,7 +60190,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lion_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60198,7 +60198,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lion_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60206,7 +60206,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lion_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60214,7 +60214,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lion_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60222,7 +60222,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lion_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60230,7 +60230,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lion_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60238,7 +60238,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lion_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60246,7 +60246,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Lion_11 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60254,7 +60254,7 @@ public:
 class C_DOTA_Ability_Courier_ReturnToBase : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60262,7 +60262,7 @@ public:
 class C_DOTA_Ability_Courier_TakeStashItems : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60270,7 +60270,7 @@ public:
 class C_DOTA_Ability_Courier_ReturnStashItems : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60278,7 +60278,7 @@ public:
 class C_DOTA_Ability_Courier_GoToSecretShop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60286,7 +60286,7 @@ public:
 class C_DOTA_Ability_Courier_GoToEnemySecretShop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60294,7 +60294,7 @@ public:
 class C_DOTA_Ability_Courier_GoToSideShop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60302,7 +60302,7 @@ public:
 class C_DOTA_Ability_Courier_GoToSideShop2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60310,7 +60310,7 @@ public:
 class C_DOTA_Ability_Courier_TransferItems : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60318,7 +60318,7 @@ public:
 class C_DOTA_Ability_Courier_TransferItems_ToOtherPlayer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60326,7 +60326,7 @@ public:
 class C_DOTA_Ability_Courier_TakeStashAndTransferItems : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60334,7 +60334,7 @@ public:
 class C_DOTA_Ability_Courier_Burst : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60342,7 +60342,7 @@ public:
 class CDOTA_Ability_Courier_Morph : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60350,7 +60350,7 @@ public:
 class C_DOTA_Ability_Courier_Shield : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60358,7 +60358,7 @@ public:
 class C_DOTA_Ability_Courier_QueuePickupFromStash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60366,7 +60366,7 @@ public:
 class C_DOTA_Ability_Courier_DequeuePickupFromStash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60374,7 +60374,7 @@ public:
 class C_DOTA_Ability_Roshan_SpellBlock : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60382,7 +60382,7 @@ public:
 class C_DOTA_Ability_Roshan_Bash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60390,7 +60390,7 @@ public:
 class C_DOTA_Ability_Roshan_Slam : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60398,7 +60398,7 @@ public:
 class C_DOTA_Ability_Roshan_InherentBuffs : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60406,7 +60406,7 @@ public:
 class C_DOTA_Ability_Roshan_Devotion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -60422,7 +60422,7 @@ public:
 class C_DOTA_Ability_Animation_RightClawSwipe : public C_DOTA_Ability_Animation_Attack
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60430,7 +60430,7 @@ public:
 class C_DOTA_Ability_Animation_LeftClawSwipe : public C_DOTA_Ability_Animation_Attack
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60438,7 +60438,7 @@ public:
 class C_DOTA_Ability_Nian_Dive : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60446,7 +60446,7 @@ public:
 class C_DOTA_Ability_NianCharge : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60454,7 +60454,7 @@ public:
 class C_DOTA_Ability_Nian_Frenzy : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 16
@@ -60513,7 +60513,7 @@ public:
 class C_DOTA_Ability_Nian_GreaterBash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60521,7 +60521,7 @@ public:
 class C_DOTA_Ability_Nian_Tail_Swipe : public C_DOTA_Ability_Animation_Attack
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -60569,7 +60569,7 @@ public:
 class C_DOTA_Ability_Nian_Eruption : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60577,7 +60577,7 @@ public:
 class C_DOTA_Ability_Nian_Sigils : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -60594,7 +60594,7 @@ public:
 class C_DOTA_Item_Nian_Flag_Trap : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60602,7 +60602,7 @@ public:
 class C_DOTA_Ability_Firework_Mine : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60610,7 +60610,7 @@ public:
 class C_DOTA_Item_JumpBoots : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60618,7 +60618,7 @@ public:
 class C_DOTA_Ability_Nian_Leap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60626,7 +60626,7 @@ public:
 class CDOTA_Item_Recipe_Vermillion_Robe : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60634,7 +60634,7 @@ public:
 class C_DOTA_Item_Vermillion_Robe : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60642,7 +60642,7 @@ public:
 class C_DOTA_Ability_Warlock_Fatal_Bonds : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60650,7 +60650,7 @@ public:
 class C_DOTA_Ability_Warlock_Shadow_Word : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 15
@@ -60694,7 +60694,7 @@ public:
 class C_DOTA_Ability_Warlock_Golem_Flaming_Fists : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60702,7 +60702,7 @@ public:
 class C_DOTA_Ability_Warlock_Golem_Permanent_Immolation : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60710,7 +60710,7 @@ public:
 class C_DOTA_Beastmaster_Axe : public CBaseAnimatingActivity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -60726,7 +60726,7 @@ public:
 class C_DOTA_Ability_Beastmaster_CallOfTheWild_Boar : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60734,7 +60734,7 @@ public:
 class C_DOTA_Ability_Beastmaster_CallOfTheWild_Hawk : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60742,7 +60742,7 @@ public:
 class CDOTA_Ability_CallOfTheWild_Boar_Poison : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60750,7 +60750,7 @@ public:
 class C_DOTA_Ability_Beastmaster_InnerBeast : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -60774,7 +60774,7 @@ public:
 class C_DOTA_Ability_Beastmaster_Mark_Of_The_Beast : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60782,7 +60782,7 @@ public:
 class C_DOTA_Ability_Beastmaster_Hawk_Dive : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60790,7 +60790,7 @@ public:
 class C_DOTA_Ability_Beastmaster_DrumsOfSlom : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60798,7 +60798,7 @@ public:
 class CDOTA_Ability_Beastmaster_DrumsOfSlom_Stop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60806,7 +60806,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Beastmaster : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60814,7 +60814,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Beastmaster_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60822,7 +60822,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Beastmaster_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60830,7 +60830,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Beastmaster_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60838,7 +60838,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Beastmaster_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60846,7 +60846,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Beastmaster_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60854,7 +60854,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Beastmaster_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60862,7 +60862,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Beastmaster_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60870,7 +60870,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Beastmaster_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -60894,7 +60894,7 @@ public:
 class C_DOTA_Ability_QueenOfPain_Blink : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -60914,7 +60914,7 @@ public:
 class C_DOTA_Ability_Venomancer_PlagueWard : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -60938,7 +60938,7 @@ public:
 class C_DOTA_Ability_Venomancer_PoisonNova : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60946,7 +60946,7 @@ public:
 class C_DOTA_Ability_Holdout_ScourgeWard : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -60962,7 +60962,7 @@ public:
 class C_DOTA_Ability_FacelessVoid_Backtrack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60970,7 +60970,7 @@ public:
 class C_DOTA_Ability_FacelessVoid_TimeLock : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -60978,7 +60978,7 @@ public:
 class C_DOTA_Ability_FacelessVoid_TimeDilation : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -61004,7 +61004,7 @@ public:
 class C_DOTA_Ability_FacelessVoid_Chronosphere : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -61033,7 +61033,7 @@ public:
 class C_DOTA_Ability_DeathProphet_Witchcraft : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -61051,7 +61051,7 @@ public:
 class C_DOTA_DeathProphet_Exorcism_Spirit : public CBaseAnimatingActivity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61059,7 +61059,7 @@ public:
 class C_DOTA_Ability_Pugna_NetherBlast : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61067,7 +61067,7 @@ public:
 class C_DOTA_Ability_Pugna_Decrepify : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -61092,7 +61092,7 @@ public:
 class C_DOTA_Ability_PhantomAssassin_Stifling_Dagger : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61100,7 +61100,7 @@ public:
 class C_DOTA_Ability_PhantomAssassin_Fan_Of_Knives : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61108,7 +61108,7 @@ public:
 class C_DOTA_Ability_PhantomAssassin_PhantomStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61116,7 +61116,7 @@ public:
 class C_DOTA_Ability_PhantomAssassin_Blur : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61124,7 +61124,7 @@ public:
 class C_DOTA_Ability_PhantomAssassin_CoupdeGrace : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61132,7 +61132,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Assassin : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61140,7 +61140,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Assassin_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61148,7 +61148,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Assassin_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61156,7 +61156,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Assassin_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61164,7 +61164,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Assassin_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61172,7 +61172,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Assassin_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61180,7 +61180,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Assassin_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61188,7 +61188,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Phantom_Assassin_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61196,7 +61196,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Phantom_Assassin_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61204,7 +61204,7 @@ public:
 class C_DOTA_Ability_TemplarAssassin_Refraction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61212,7 +61212,7 @@ public:
 class C_DOTA_Ability_TemplarAssassin_Meld : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61220,7 +61220,7 @@ public:
 class C_DOTA_Ability_TemplarAssassin_PsiBlades : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61228,7 +61228,7 @@ public:
 class C_DOTA_Ability_TemplarAssassin_PsionicTrap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61236,7 +61236,7 @@ public:
 class C_DOTA_Ability_TemplarAssassin_Trap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -61252,7 +61252,7 @@ public:
 class C_DOTA_Ability_TemplarAssassin_SelfTrap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61260,7 +61260,7 @@ public:
 class C_DOTA_Ability_TemplarAssassin_Refraction_Holdout : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61268,7 +61268,7 @@ public:
 class C_DOTA_Ability_Viper_PoisonAttack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61276,7 +61276,7 @@ public:
 class CDOTA_Ability_Viper_Nethertoxin : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61284,7 +61284,7 @@ public:
 class C_DOTA_Ability_Viper_CorrosiveSkin : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -61300,7 +61300,7 @@ public:
 class C_DOTA_Ability_Viper_Nose_Dive : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61308,7 +61308,7 @@ public:
 class C_DOTA_Ability_Luna_LucentBeam : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -61328,7 +61328,7 @@ public:
 class C_DOTA_Ability_Luna_LunarBlessing : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61336,7 +61336,7 @@ public:
 class C_DOTA_Ability_Luna_Lunar_Grace : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61344,7 +61344,7 @@ public:
 class C_DOTA_Ability_Luna_Eclipse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -61365,7 +61365,7 @@ public:
 class C_DOTA_Ability_DragonKnight_DragonTail : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61373,7 +61373,7 @@ public:
 class C_DOTA_Ability_DragonKnight_DragonBlood : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61381,7 +61381,7 @@ public:
 class C_DOTA_Ability_DragonKnight_ElderDragonForm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61389,7 +61389,7 @@ public:
 class C_DOTA_Ability_DragonKnight_Fireball : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61397,7 +61397,7 @@ public:
 class C_DOTA_Ability_Dazzle_Good_Juju : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61405,7 +61405,7 @@ public:
 class C_DOTA_Ability_Dazzle_Bad_Juju : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61413,7 +61413,7 @@ public:
 class C_DOTA_Ability_Dazzle_Rain_Of_Vermin : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61421,7 +61421,7 @@ public:
 class C_DOTA_Ability_Dazzle_Poison_Touch : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61429,7 +61429,7 @@ public:
 class C_DOTA_Ability_Dazzle_Shallow_Grave : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -61451,7 +61451,7 @@ public:
 class C_DOTA_Ability_Dazzle_Weave : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61459,7 +61459,7 @@ public:
 class C_DOTA_Ability_Leshrac_Split_Earth : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61467,7 +61467,7 @@ public:
 class C_DOTA_Ability_Leshrac_Diabolic_Edict : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61475,7 +61475,7 @@ public:
 class C_DOTA_Ability_Leshrac_Lightning_Storm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61483,7 +61483,7 @@ public:
 class C_DOTA_Ability_Leshrac_Greater_Lightning_Storm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61491,7 +61491,7 @@ public:
 class C_DOTA_Ability_Leshrac_Pulse_Nova : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61499,7 +61499,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Leshrac_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61507,7 +61507,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Leshrac_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61515,7 +61515,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Leshrac_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61523,7 +61523,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Leshrac_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61531,7 +61531,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Leshrac_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61539,7 +61539,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Leshrac_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61547,7 +61547,7 @@ public:
 class C_DOTA_Ability_Rattletrap_Overclocking : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61555,7 +61555,7 @@ public:
 class C_DOTA_Ability_Rattletrap_BatteryAssault : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61563,7 +61563,7 @@ public:
 class C_DOTA_Ability_Rattletrap_PowerCogs : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -61579,7 +61579,7 @@ public:
 class C_DOTA_Ability_Rattletrap_JetPack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -61597,7 +61597,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clockwerk : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61605,7 +61605,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clockwerk_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61613,7 +61613,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clockwerk_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61621,7 +61621,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clockwerk_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61629,7 +61629,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clockwerk_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61637,7 +61637,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clockwerk_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61645,7 +61645,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clockwerk_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61653,7 +61653,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clockwerk_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61661,7 +61661,7 @@ public:
 class C_DOTA_Ability_Furion_Greater_Sprout : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -61687,7 +61687,7 @@ public:
 class C_DOTA_Ability_Furion_ForceOfNature : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61695,7 +61695,7 @@ public:
 class C_DOTA_Ability_Furion_WrathOfNature : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61703,7 +61703,7 @@ public:
 class C_DOTA_Ability_Furion_CurseOfTheForest : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61711,7 +61711,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Furion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61719,7 +61719,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Furion_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61727,7 +61727,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Furion_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61735,7 +61735,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Furion_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61743,7 +61743,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Furion_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61751,7 +61751,7 @@ public:
 class C_DOTA_Ability_Life_Stealer_Feast : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61759,7 +61759,7 @@ public:
 class C_DOTA_Ability_Life_Stealer_Ghoul_Frenzy : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61767,7 +61767,7 @@ public:
 class C_DOTA_Ability_Life_Stealer_Open_Wounds : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61775,7 +61775,7 @@ public:
 class CDOTA_Ability_Life_Stealer_Empty1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61783,7 +61783,7 @@ public:
 class CDOTA_Ability_Life_Stealer_Empty2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61791,7 +61791,7 @@ public:
 class CDOTA_Ability_Life_Stealer_Empty3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61799,7 +61799,7 @@ public:
 class C_DOTA_Ability_Life_Stealer_Infest : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61807,7 +61807,7 @@ public:
 class C_DOTA_Ability_Life_Stealer_Consume : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61815,7 +61815,7 @@ public:
 class CDOTA_Ability_Life_Stealer_Control : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -61831,7 +61831,7 @@ public:
 class CDOTA_Ability_Life_Stealer_AssimilateEject : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61839,7 +61839,7 @@ public:
 class C_DOTA_Ability_Life_Stealer_Rage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61847,7 +61847,7 @@ public:
 class C_DOTA_Ability_DarkSeer_Normal_Punch : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -61863,7 +61863,7 @@ public:
 class C_DOTA_Ability_DarkSeer_IonShell : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61871,7 +61871,7 @@ public:
 class C_DOTA_Ability_DarkSeer_Surge : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -61887,7 +61887,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dark_Seer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61895,7 +61895,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dark_Seer_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61903,7 +61903,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dark_Seer_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61911,7 +61911,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dark_Seer_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61919,7 +61919,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dark_Seer_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61927,7 +61927,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dark_Seer_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61935,7 +61935,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dark_Seer_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61943,7 +61943,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dark_Seer_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61951,7 +61951,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dark_Seer_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61959,7 +61959,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dark_Seer_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61967,7 +61967,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dark_Seer_11 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61975,7 +61975,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dark_Seer_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61983,7 +61983,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Dark_Seer_13 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -61991,7 +61991,7 @@ public:
 class CDOTA_Ability_Clinkz_SearingArrows : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -62015,7 +62015,7 @@ public:
 class C_DOTA_Ability_Clinkz_Scepter : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62023,7 +62023,7 @@ public:
 class C_DOTA_Ability_Clinkz_WindWalk : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62031,7 +62031,7 @@ public:
 class C_DOTA_Ability_Clinkz_Strafe : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -62050,7 +62050,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clinkz_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62058,7 +62058,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clinkz_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62066,7 +62066,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clinkz_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62074,7 +62074,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clinkz_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62082,7 +62082,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clinkz_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62090,7 +62090,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clinkz_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62098,7 +62098,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clinkz_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62106,7 +62106,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clinkz_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62114,7 +62114,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clinkz_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62122,7 +62122,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clinkz_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62130,7 +62130,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clinkz_11 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62138,7 +62138,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Clinkz_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62146,7 +62146,7 @@ public:
 class C_DOTA_Ability_Clinkz_Empty1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -62164,7 +62164,7 @@ public:
 class CDOTA_Ability_Omniknight_Angelic_Flight : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62172,7 +62172,7 @@ public:
 class C_DOTA_Ability_Omniknight_Purification : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62180,7 +62180,7 @@ public:
 class C_DOTA_Ability_Omniknight_Pacify : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62188,7 +62188,7 @@ public:
 class C_DOTA_Ability_Omniknight_Repel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62196,7 +62196,7 @@ public:
 class C_DOTA_Ability_Omniknight_Degen_Aura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62204,7 +62204,7 @@ public:
 class C_DOTA_Ability_Omniknight_Martyr : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62212,7 +62212,7 @@ public:
 class C_DOTA_Ability_Omniknight_GuardianAngel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -62229,7 +62229,7 @@ public:
 class C_DOTA_Ability_Enchantress_Bunny_Hop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62237,7 +62237,7 @@ public:
 class C_DOTA_Ability_Enchantress_Untouchable : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62245,7 +62245,7 @@ public:
 class C_DOTA_Ability_Enchantress_Enchant : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62253,7 +62253,7 @@ public:
 class C_DOTA_Ability_Enchantress_NaturesAttendants : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62261,7 +62261,7 @@ public:
 class C_DOTA_Ability_Enchantress_Impetus : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62269,7 +62269,7 @@ public:
 class C_DOTA_Ability_Huskar_Inner_Fire : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62277,7 +62277,7 @@ public:
 class C_DOTA_Ability_Huskar_Inner_Vitality : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62285,7 +62285,7 @@ public:
 class C_DOTA_Ability_Huskar_Burning_Spear : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62293,7 +62293,7 @@ public:
 class C_DOTA_Ability_Huskar_Berserkers_Blood : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -62311,7 +62311,7 @@ public:
 class C_DOTA_Ability_NightStalker_Void : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62319,7 +62319,7 @@ public:
 class C_DOTA_Ability_NightStalker_CripplingFear : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62327,7 +62327,7 @@ public:
 class C_DOTA_Ability_NightStalker_HunterInTheNight : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62335,7 +62335,7 @@ public:
 class C_DOTA_Ability_NightStalker_Darkness : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62343,7 +62343,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Night_Stalker : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62351,7 +62351,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Night_Stalker_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62359,7 +62359,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Night_Stalker_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62367,7 +62367,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Night_Stalker_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62375,7 +62375,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Night_Stalker_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62383,7 +62383,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Night_Stalker_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62391,7 +62391,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Night_Stalker_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62399,7 +62399,7 @@ public:
 class C_DOTA_Ability_Broodmother_SpawnSpiderlings : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62407,7 +62407,7 @@ public:
 class C_DOTA_Ability_Broodmother_SpawnSpiderite : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62415,7 +62415,7 @@ public:
 class C_DOTA_Ability_Broodmother_PoisonSting : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -62431,7 +62431,7 @@ public:
 class CDOTA_Ability_Broodmother_SpinWeb_Destroy : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62439,7 +62439,7 @@ public:
 class C_DOTA_Ability_Broodmother_IncapacitatingBite : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62447,7 +62447,7 @@ public:
 class C_DOTA_Ability_Broodmother_InsatiableHunger : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62455,7 +62455,7 @@ public:
 class C_DOTA_Ability_Broodmother_Silken_Bola : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -62478,7 +62478,7 @@ public:
 class C_DOTA_Ability_BountyHunter_ShurikenToss : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62486,7 +62486,7 @@ public:
 class C_DOTA_Ability_BountyHunter_Jinada : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62494,7 +62494,7 @@ public:
 class C_DOTA_Ability_BountyHunter_WindWalk : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -62510,7 +62510,7 @@ public:
 class C_DOTA_Ability_BountyHunter_Lookout : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62518,7 +62518,7 @@ public:
 class C_DOTA_Ability_Weaver_TheSwarm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -62537,7 +62537,7 @@ public:
 class C_DOTA_Ability_Weaver_GeminateAttack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -62553,7 +62553,7 @@ public:
 class C_DOTA_Ability_Jakiro_DualBreath : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62561,7 +62561,7 @@ public:
 class C_DOTA_Ability_Jakiro_IcePath : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62569,7 +62569,7 @@ public:
 class C_DOTA_Ability_Jakiro_Liquid_Ice : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62577,7 +62577,7 @@ public:
 class C_DOTA_Ability_Jakiro_Liquid_Fire : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62585,7 +62585,7 @@ public:
 class C_DOTA_Ability_Jakiro_Macropyre : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62593,7 +62593,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jakiro : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62601,7 +62601,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jakiro_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62609,7 +62609,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jakiro_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62617,7 +62617,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jakiro_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62625,7 +62625,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jakiro_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62633,7 +62633,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jakiro_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62641,7 +62641,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jakiro_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62649,7 +62649,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Jakiro_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62657,7 +62657,7 @@ public:
 class C_DOTA_Ability_Batrider_StickyNapalm_Application_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62665,7 +62665,7 @@ public:
 class C_DOTA_Ability_Batrider_StickyNapalm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62673,7 +62673,7 @@ public:
 class C_DOTA_Ability_Batrider_Flamebreak : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62681,7 +62681,7 @@ public:
 class C_DOTA_Ability_Batrider_Firefly : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62689,7 +62689,7 @@ public:
 class C_DOTA_Ability_Batrider_FlamingLasso : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62697,7 +62697,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Batrider_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62705,7 +62705,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Batrider_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62713,7 +62713,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Batrider_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62721,7 +62721,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Batrider_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62729,7 +62729,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Batrider_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62737,7 +62737,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Batrider_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62745,7 +62745,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Batrider_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62753,7 +62753,7 @@ public:
 class C_DOTA_Ability_Chen_Penitence : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62761,7 +62761,7 @@ public:
 class C_DOTA_Ability_Chen_TestOfFaith : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62769,7 +62769,7 @@ public:
 class C_DOTA_Ability_Chen_DivineFavor : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62777,7 +62777,7 @@ public:
 class C_DOTA_Ability_Chen_TestOfFaithTeleport : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -62793,7 +62793,7 @@ public:
 class C_DOTA_Ability_Chen_HandOfGod : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62801,7 +62801,7 @@ public:
 class C_DOTA_Ability_Chen_Martyrdom : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62809,7 +62809,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chen_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62817,7 +62817,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chen_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62825,7 +62825,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chen_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62833,7 +62833,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chen_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62841,7 +62841,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chen_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62849,7 +62849,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chen_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62857,7 +62857,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chen_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62865,7 +62865,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chen_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62873,7 +62873,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chen_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62881,7 +62881,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chen_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62889,7 +62889,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chen_11 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62897,7 +62897,7 @@ public:
 class C_DOTA_Ability_Spectre_Desolate : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -62924,7 +62924,7 @@ public:
 class C_DOTA_Ability_Spectre_Dispersion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62932,7 +62932,7 @@ public:
 class C_DOTA_Ability_Spectre_Haunt : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62940,7 +62940,7 @@ public:
 class C_DOTA_Ability_Spectre_Haunt_Single : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62948,7 +62948,7 @@ public:
 class C_DOTA_Ability_Spectre_Reality : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -62964,7 +62964,7 @@ public:
 class C_DOTA_Ability_DoomBringer_ScorchedEarth : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62972,7 +62972,7 @@ public:
 class C_DOTA_Ability_DoomBringer_InfernalBlade : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62980,7 +62980,7 @@ public:
 class C_DOTA_Ability_DoomBringer_Doom : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62988,7 +62988,7 @@ public:
 class C_DOTA_Ability_DoomBringer_Empty1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -62996,7 +62996,7 @@ public:
 class C_DOTA_Ability_DoomBringer_Empty2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -63012,7 +63012,7 @@ public:
 class C_DOTA_Ability_SpiritBreaker_GreaterBash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63020,7 +63020,7 @@ public:
 class C_DOTA_Ability_SpiritBreaker_Bulldoze : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63028,7 +63028,7 @@ public:
 class C_DOTA_Ability_SpiritBreaker_EmpoweringHaste : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63036,7 +63036,7 @@ public:
 class C_DOTA_Ability_SpiritBreaker_NetherStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63044,7 +63044,7 @@ public:
 class C_DOTA_Ability_SpiritBreaker_PlanarPocket : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63052,7 +63052,7 @@ public:
 class C_DOTA_Ability_Gyrocopter_Rocket_Barrage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63060,7 +63060,7 @@ public:
 class C_DOTA_Ability_Gyrocopter_Homing_Missile : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63068,7 +63068,7 @@ public:
 class C_DOTA_Ability_Gyrocopter_Flak_Cannon : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -63085,7 +63085,7 @@ public:
 class CDOTA_Ability_Alchemist_AcidSpray : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63093,7 +63093,7 @@ public:
 class C_DOTA_Ability_Alchemist_UnstableConcoction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -63110,7 +63110,7 @@ public:
 class C_DOTA_Ability_Alchemist_GoblinsGreed : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63118,7 +63118,7 @@ public:
 class CDOTA_Ability_Alchemist_ChemicalRage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63126,7 +63126,7 @@ public:
 class C_DOTA_Ability_Alchemist_Berserk_Potion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63134,7 +63134,7 @@ public:
 class C_DOTA_Ability_Invoker_AttributeBonus : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -63155,7 +63155,7 @@ public:
 class C_DOTA_Ability_Invoker_ColdSnap : public CDOTA_Ability_Invoker_InvokedBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63163,7 +63163,7 @@ public:
 class C_DOTA_Ability_Invoker_GhostWalk : public CDOTA_Ability_Invoker_InvokedBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -63184,7 +63184,7 @@ public:
 class C_DOTA_Ability_Invoker_EMP : public CDOTA_Ability_Invoker_InvokedBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63192,7 +63192,7 @@ public:
 class C_DOTA_Ability_Invoker_Alacrity : public CDOTA_Ability_Invoker_InvokedBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -63214,7 +63214,7 @@ public:
 class C_DOTA_Ability_Invoker_SunStrike : public CDOTA_Ability_Invoker_InvokedBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63222,7 +63222,7 @@ public:
 class C_DOTA_Ability_Invoker_ForgeSpirit : public CDOTA_Ability_Invoker_InvokedBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63230,7 +63230,7 @@ public:
 class C_DOTA_Ability_ForgedSpirit_MeltingStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63238,7 +63238,7 @@ public:
 class C_DOTA_Ability_Invoker_IceWall : public CDOTA_Ability_Invoker_InvokedBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -63265,7 +63265,7 @@ public:
 class C_DOTA_Ability_Invoker_Quas : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63273,7 +63273,7 @@ public:
 class C_DOTA_Ability_Invoker_Wex : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63281,7 +63281,7 @@ public:
 class C_DOTA_Ability_Invoker_Exort : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63289,7 +63289,7 @@ public:
 class C_DOTA_Ability_Invoker_Empty1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63297,7 +63297,7 @@ public:
 class C_DOTA_Ability_Invoker_Empty2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63305,7 +63305,7 @@ public:
 class C_DOTA_Ability_Invoker_ColdSnap_AD : public C_DOTA_Ability_Invoker_ColdSnap
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63313,7 +63313,7 @@ public:
 class C_DOTA_Ability_Invoker_GhostWalk_AD : public C_DOTA_Ability_Invoker_GhostWalk
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63321,7 +63321,7 @@ public:
 class C_DOTA_Ability_Invoker_Tornado_AD : public C_DOTA_Ability_Invoker_Tornado
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63329,7 +63329,7 @@ public:
 class C_DOTA_Ability_Invoker_EMP_AD : public C_DOTA_Ability_Invoker_EMP
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63337,7 +63337,7 @@ public:
 class C_DOTA_Ability_Invoker_Alacrity_AD : public C_DOTA_Ability_Invoker_Alacrity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63345,7 +63345,7 @@ public:
 class C_DOTA_Ability_Invoker_SunStrike_AD : public C_DOTA_Ability_Invoker_SunStrike
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63353,7 +63353,7 @@ public:
 class C_DOTA_Ability_Invoker_ForgeSpirit_AD : public C_DOTA_Ability_Invoker_ForgeSpirit
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63361,7 +63361,7 @@ public:
 class C_DOTA_Ability_Invoker_ChaosMeteor_AD : public C_DOTA_Ability_Invoker_ChaosMeteor
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63369,7 +63369,7 @@ public:
 class C_DOTA_Ability_Invoker_IceWall_AD : public C_DOTA_Ability_Invoker_IceWall
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63377,7 +63377,7 @@ public:
 class C_DOTA_Ability_Invoker_DeafeningBlast_AD : public C_DOTA_Ability_Invoker_DeafeningBlast
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63385,7 +63385,7 @@ public:
 class C_DOTA_Ability_Silencer_CurseOfTheSilent : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -63405,7 +63405,7 @@ public:
 class C_DOTA_Ability_Silencer_LastWord : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63413,7 +63413,7 @@ public:
 class C_DOTA_Ability_Silencer_GlobalSilence : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63421,7 +63421,7 @@ public:
 class C_DOTA_Ability_Obsidian_Destroyer_ArcaneOrb : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -63437,7 +63437,7 @@ public:
 class C_DOTA_Ability_Obsidian_Destroyer_EssenceAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63445,7 +63445,7 @@ public:
 class C_DOTA_Ability_Obsidian_Destroyer_SanityEclipse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63453,7 +63453,7 @@ public:
 class C_DOTA_Ability_Obsidian_Destroyer_Equilibrium : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63461,7 +63461,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Outworld_Devourer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63469,7 +63469,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Outworld_Devourer_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63477,7 +63477,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Outworld_Devourer_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63485,7 +63485,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Outworld_Devourer_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63493,7 +63493,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Outworld_Devourer_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63501,7 +63501,7 @@ public:
 class C_DOTA_Ability_Brewmaster_ThunderClap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63509,7 +63509,7 @@ public:
 class C_DOTA_Ability_Brewmaster_DrunkenHaze : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63517,7 +63517,7 @@ public:
 class C_DOTA_Ability_Brewmaster_CinderBrew : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -63540,7 +63540,7 @@ public:
 class C_DOTA_Ability_Brewmaster_Primal_Split_Fire_Phase : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -63560,7 +63560,7 @@ public:
 class C_DOTA_Ability_Brewmaster_AstralPulse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63568,7 +63568,7 @@ public:
 class C_DOTA_Ability_Brewmaster_SpellImmunity : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63576,7 +63576,7 @@ public:
 class C_DOTA_Ability_Brewmaster_Pulverize : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63584,7 +63584,7 @@ public:
 class C_DOTA_Ability_Brewmaster_DispelMagic : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63592,7 +63592,7 @@ public:
 class C_DOTA_Ability_Brewmaster_Cyclone : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63600,7 +63600,7 @@ public:
 class C_DOTA_Ability_Brewmaster_WindWalk : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63608,7 +63608,7 @@ public:
 class C_DOTA_Ability_Brewmaster_PermanentImmolation : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63616,7 +63616,7 @@ public:
 class C_DOTA_Ability_Brewmaster_Primal_Split_Cancel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -63632,7 +63632,7 @@ public:
 class C_DOTA_Ability_Lycan_Wolf_Bite : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -63654,7 +63654,7 @@ public:
 class C_DOTA_Ability_Lycan_SummonWolves_CriticalStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63662,7 +63662,7 @@ public:
 class C_DOTA_Ability_Lycan_SummonWolves_PermanentInvisibility : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63670,7 +63670,7 @@ public:
 class C_DOTA_Ability_Lycan_Howl : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63678,7 +63678,7 @@ public:
 class C_DOTA_Ability_Lycan_FeralImpulse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63686,7 +63686,7 @@ public:
 class C_DOTA_Ability_Lycan_Shapeshift : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -63702,7 +63702,7 @@ public:
 class C_DOTA_Ability_Shadow_Demon_Soul_Catcher : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63710,7 +63710,7 @@ public:
 class C_DOTA_Ability_Shadow_Demon_Shadow_Poison_Release : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63718,7 +63718,7 @@ public:
 class C_DOTA_Ability_Shadow_Demon_Shadow_Poison : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -63742,7 +63742,7 @@ public:
 class C_DOTA_Ability_Shadow_Demon_Disseminate : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -63772,7 +63772,7 @@ public:
 class C_DOTA_Ability_LoneDruid_SpiritBear_Defender : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63780,7 +63780,7 @@ public:
 class C_DOTA_Ability_LoneDruid_Entangling_Claws : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63788,7 +63788,7 @@ public:
 class C_DOTA_Ability_LoneDruid_SpiritBear_Entangle : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63796,7 +63796,7 @@ public:
 class C_DOTA_Ability_LoneDruid_SpiritBear_Demolish : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -63812,7 +63812,7 @@ public:
 class C_DOTA_Ability_LoneDruid_SpiritLink : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63820,7 +63820,7 @@ public:
 class C_DOTA_Ability_LoneDruid_TrueForm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63828,7 +63828,7 @@ public:
 class C_DOTA_Ability_LoneDruid_TrueForm_Druid : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -63844,7 +63844,7 @@ public:
 class C_DOTA_Ability_LoneDruid_SavageRoar : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63852,7 +63852,7 @@ public:
 class C_DOTA_Ability_LoneDruid_SavageRoar_Bear : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63860,7 +63860,7 @@ public:
 class C_DOTA_Ability_Bear_Empty1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63868,7 +63868,7 @@ public:
 class C_DOTA_Ability_Bear_Empty2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -63897,7 +63897,7 @@ public:
 class C_DOTA_Ability_ChaosKnight_Chaos_Strike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63905,7 +63905,7 @@ public:
 class C_DOTA_Ability_ChaosKnight_Phantasm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63913,7 +63913,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chaos_Knight : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63921,7 +63921,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chaos_Knight_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63929,7 +63929,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chaos_Knight_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63937,7 +63937,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chaos_Knight_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63945,7 +63945,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chaos_Knight_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63953,7 +63953,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chaos_Knight_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63961,7 +63961,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chaos_Knight_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63969,7 +63969,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Chaos_Knight_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -63977,7 +63977,7 @@ public:
 class C_DOTA_Ability_Meepo_Petrify : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -63993,7 +63993,7 @@ public:
 class C_DOTA_Ability_Meepo_Geostrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -64024,7 +64024,7 @@ public:
 class C_DOTA_Ability_Meepo_Ransack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64032,7 +64032,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Meepo : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64040,7 +64040,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Meepo_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64048,7 +64048,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Meepo_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64056,7 +64056,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Meepo_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64064,7 +64064,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Meepo_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64072,7 +64072,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Meepo_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64080,7 +64080,7 @@ public:
 class CDOTA_Ability_Treant_EyesInTheForest : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64088,7 +64088,7 @@ public:
 class C_DOTA_Ability_Treant_NaturesGrasp : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -64105,7 +64105,7 @@ public:
 class CDOTA_Ability_Treant_LifeBomb_Explode : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64113,7 +64113,7 @@ public:
 class C_DOTA_Ability_Treant_NaturesGuise : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64121,7 +64121,7 @@ public:
 class C_CDOTA_Ability_Treant_LeechSeed : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64129,7 +64129,7 @@ public:
 class C_DOTA_Ability_Treant_LivingArmor : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64137,7 +64137,7 @@ public:
 class C_DOTA_Ability_Treant_Overgrowth : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64145,7 +64145,7 @@ public:
 class C_DOTA_Ability_Ogre_Magi_Multicast : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -64178,7 +64178,7 @@ public:
 class C_DOTA_Ability_Ogre_Magi_Bloodlust : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64186,7 +64186,7 @@ public:
 class C_DOTA_Ability_Ogre_Magi_Smash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -64218,7 +64218,7 @@ public:
 class C_DOTA_Ability_Undying_Tombstone_Zombie_DeathStrike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -64237,7 +64237,7 @@ public:
 class C_DOTA_Ability_Undying_FleshGolem : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64245,7 +64245,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Undying : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64253,7 +64253,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Undying_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64261,7 +64261,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Undying_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64269,7 +64269,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Undying_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64277,7 +64277,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Undying_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64285,7 +64285,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Undying_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64293,7 +64293,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Undying_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64301,7 +64301,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Undying_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -64324,7 +64324,7 @@ public:
 class C_DOTA_Ability_Rubick_TelekinesisLand : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64332,7 +64332,7 @@ public:
 class C_DOTA_Ability_Rubick_TelekinesisLand_Self : public C_DOTA_Ability_Rubick_TelekinesisLand
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64340,7 +64340,7 @@ public:
 class C_DOTA_Ability_Rubick_FadeBolt : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64348,7 +64348,7 @@ public:
 class C_DOTA_Ability_Rubick_NullField : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -64369,7 +64369,7 @@ public:
 class C_DOTA_Ability_Rubick_Empty1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64377,7 +64377,7 @@ public:
 class C_DOTA_Ability_Rubick_Empty2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64385,7 +64385,7 @@ public:
 class C_DOTA_Ability_Rubick_Hidden1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64393,7 +64393,7 @@ public:
 class C_DOTA_Ability_Rubick_Hidden2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64401,7 +64401,7 @@ public:
 class C_DOTA_Ability_Rubick_Hidden3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64409,7 +64409,7 @@ public:
 class C_DOTA_Ability_Rubick_Arcane_Supremacy : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64417,7 +64417,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Rubick : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64425,7 +64425,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Rubick_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64433,7 +64433,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Rubick_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64441,7 +64441,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Rubick_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64449,7 +64449,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Rubick_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64457,7 +64457,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Rubick_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64465,7 +64465,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Rubick_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64473,7 +64473,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Rubick_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64481,7 +64481,7 @@ public:
 class C_DOTA_Ability_Disruptor_Thunder_Strike : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64489,7 +64489,7 @@ public:
 class C_DOTA_Ability_Disruptor_Glimpse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64497,7 +64497,7 @@ public:
 class C_DOTA_Ability_Disruptor_KineticField : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64505,7 +64505,7 @@ public:
 class C_DOTA_Ability_Disruptor_StaticStorm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64513,7 +64513,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Disruptor : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64521,7 +64521,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Disruptor_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64529,7 +64529,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Disruptor_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64537,7 +64537,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Disruptor_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64545,7 +64545,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Disruptor_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64553,7 +64553,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Disruptor_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64561,7 +64561,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Disruptor_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64569,7 +64569,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Disruptor_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64577,7 +64577,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Disruptor_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -64615,7 +64615,7 @@ public:
 class CDOTA_Ability_Nyx_Assassin_Unburrow : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64623,7 +64623,7 @@ public:
 class C_DOTA_Ability_Nyx_Assassin_SpikedCarapace : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64631,7 +64631,7 @@ public:
 class C_DOTA_Ability_Nyx_Assassin_Vendetta : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -64647,7 +64647,7 @@ public:
 class C_DOTA_Ability_NagaSiren_Ensnare : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64655,7 +64655,7 @@ public:
 class C_DOTA_Ability_NagaSiren_RipTide : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64663,7 +64663,7 @@ public:
 class C_DOTA_Ability_NagaSiren_Crit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64671,7 +64671,7 @@ public:
 class C_DOTA_Ability_NagaSiren_SongOfTheSiren : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64679,7 +64679,7 @@ public:
 class C_DOTA_Ability_NagaSiren_SongOfTheSiren_Cancel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -64710,7 +64710,7 @@ public:
 class C_DOTA_Ability_KeeperOfTheLight_IlluminateEnd : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -64731,7 +64731,7 @@ public:
 class C_DOTA_Ability_KeeperOfTheLight_SpiritFormIlluminateEnd : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64739,7 +64739,7 @@ public:
 class C_DOTA_Ability_KeeperOfTheLight_ManaLeak : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64747,7 +64747,7 @@ public:
 class C_DOTA_Ability_KeeperOfTheLight_Radiant_Bind : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64755,7 +64755,7 @@ public:
 class C_DOTA_Ability_KeeperOfTheLight_Will_O_Wisp : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64763,7 +64763,7 @@ public:
 class C_DOTA_Ability_KeeperOfTheLight_ChakraMagic : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64771,7 +64771,7 @@ public:
 class CDOTA_Ability_KeeperOfTheLight_SpiritForm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64779,7 +64779,7 @@ public:
 class C_DOTA_Ability_KeeperOfTheLight_Recall : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64787,7 +64787,7 @@ public:
 class C_DOTA_Ability_KeeperOfTheLight_BlindingLight : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64795,7 +64795,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Keeper_of_the_Light : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64803,7 +64803,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Keeper_of_the_Light_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64811,7 +64811,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Keeper_of_the_Light_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64819,7 +64819,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Keeper_of_the_Light_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64827,7 +64827,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Keeper_of_the_Light_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64835,7 +64835,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Keeper_of_the_Light_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64843,7 +64843,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Keeper_of_the_Light_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64851,7 +64851,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Keeper_of_the_Light_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64859,7 +64859,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Keeper_of_the_Light_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64867,7 +64867,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Keeper_of_the_Light_10 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64875,7 +64875,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Keeper_of_the_Light_11 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64883,7 +64883,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Keeper_of_the_Light_12 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64891,7 +64891,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Keeper_of_the_Light_13 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64899,7 +64899,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Keeper_of_the_Light_14 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -64923,7 +64923,7 @@ public:
 class C_DOTA_Ability_Wisp_Tether_Break : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64931,7 +64931,7 @@ public:
 class C_DOTA_Ability_Wisp_Empty1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64939,7 +64939,7 @@ public:
 class C_DOTA_Ability_Wisp_Empty2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64947,7 +64947,7 @@ public:
 class C_DOTA_Ability_Wisp_Spirits_In : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64955,7 +64955,7 @@ public:
 class C_DOTA_Ability_Wisp_Spirits_Out : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -64963,7 +64963,7 @@ public:
 class C_DOTA_Ability_Wisp_Overcharge : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -64982,7 +64982,7 @@ public:
 class C_DOTA_Ability_Visage_GraveChill : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -65000,7 +65000,7 @@ public:
 class C_DOTA_Ability_Visage_GravekeepersCloak : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -65020,7 +65020,7 @@ public:
 class C_DOTA_Ability_Visage_SummonFamiliars_StoneForm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65028,7 +65028,7 @@ public:
 class C_DOTA_Ability_Visage_Stone_Form_Self_Cast : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -65044,7 +65044,7 @@ public:
 class CDOTA_Ability_Slark_DarkPact : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65052,7 +65052,7 @@ public:
 class C_DOTA_Ability_Slark_Pounce : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65060,7 +65060,7 @@ public:
 class C_DOTA_Ability_Slark_EssenceShift : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65068,7 +65068,7 @@ public:
 class C_DOTA_Ability_Slark_ShadowDance : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65076,7 +65076,7 @@ public:
 class C_DOTA_Ability_Slark_Depth_Shroud : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65084,7 +65084,7 @@ public:
 class C_DOTA_Ability_Slark_Fish_Bait : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65092,7 +65092,7 @@ public:
 class C_DOTA_Ability_Medusa_SplitShot : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -65118,7 +65118,7 @@ public:
 class C_DOTA_Ability_Medusa_ManaShield : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65126,7 +65126,7 @@ public:
 class C_DOTA_Ability_Medusa_StoneGaze : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65134,7 +65134,7 @@ public:
 class C_DOTA_Ability_Medusa_Cold_Blooded : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65142,7 +65142,7 @@ public:
 class C_DOTA_Ability_Troll_Warlord_Rampage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -65185,7 +65185,7 @@ public:
 class C_DOTA_Ability_TrollWarlord_Fervor : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -65201,7 +65201,7 @@ public:
 class C_DOTA_Ability_Centaur_HoofStomp : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -65217,7 +65217,7 @@ public:
 class CDOTA_Ability_Centaur_Return : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -65241,7 +65241,7 @@ public:
 class CDOTA_Ability_Centaur_Mount : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65249,7 +65249,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Centaur_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65257,7 +65257,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Centaur_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65265,7 +65265,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Centaur_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65273,7 +65273,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Centaur_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65281,7 +65281,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Centaur_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65289,7 +65289,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Centaur_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65297,7 +65297,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Centaur_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65305,7 +65305,7 @@ public:
 class C_DOTA_Ability_Magnataur_Horn_Toss : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -65326,7 +65326,7 @@ public:
 class C_DOTA_Ability_Magnataur_Empower : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -65355,7 +65355,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Magnus : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65363,7 +65363,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Magnus_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65371,7 +65371,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Magnus_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65379,7 +65379,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Magnus_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65387,7 +65387,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Magnus_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65395,7 +65395,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Magnus_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65403,7 +65403,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Magnus_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -65434,7 +65434,7 @@ public:
 class C_DOTA_Ability_Shredder_Reactive_Armor : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -65465,7 +65465,7 @@ public:
 class C_DOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2 : public C_DOTA_Ability_Shredder_Chakram
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65473,7 +65473,7 @@ public:
 class C_DOTA_Ability_Shredder_ReturnChakram : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65481,7 +65481,7 @@ public:
 class C_DOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2 : public C_DOTA_Ability_Shredder_ReturnChakram
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65489,7 +65489,7 @@ public:
 class C_DOTA_Ability_Shredder_Flamethrower : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65497,7 +65497,7 @@ public:
 class C_DOTA_Ability_Bristleback_ViscousNasalGoo : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65505,7 +65505,7 @@ public:
 class C_DOTA_Ability_Bristleback_QuillSpray : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65513,7 +65513,7 @@ public:
 class C_DOTA_Ability_Bristleback_Bristleback : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65521,7 +65521,7 @@ public:
 class C_DOTA_Ability_Bristleback_Warpath : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65529,7 +65529,7 @@ public:
 class C_DOTA_Ability_Bristleback_Hairball : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65537,7 +65537,7 @@ public:
 class CDOTA_Ability_Tusk_IceShards_Stop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -65597,7 +65597,7 @@ public:
 class C_DOTA_Ability_Tusk_Launch_Snowball : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65605,7 +65605,7 @@ public:
 class C_DOTA_Ability_Tusk_FrozenSigil : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65613,7 +65613,7 @@ public:
 class C_DOTA_Ability_Tusk_WalrusPunch : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -65632,7 +65632,7 @@ public:
 class CDOTA_Ability_Tusk_Tag_Team : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65640,7 +65640,7 @@ public:
 class C_DOTA_Ability_Skywrath_Mage_Shield_Of_The_Scion : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -65672,7 +65672,7 @@ public:
 class C_DOTA_Ability_Skywrath_Mage_Ancient_Seal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65680,7 +65680,7 @@ public:
 class C_DOTA_Ability_Skywrath_Mage_Mystic_Flare : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65688,7 +65688,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Skywrath : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65696,7 +65696,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Skywrath_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65704,7 +65704,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Skywrath_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65712,7 +65712,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Skywrath_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65720,7 +65720,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Skywrath_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65728,7 +65728,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Skywrath_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65736,7 +65736,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Skywrath_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65744,7 +65744,7 @@ public:
 class C_DOTA_Ability_Abaddon_DeathCoil : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65752,7 +65752,7 @@ public:
 class C_DOTA_Ability_Abaddon_AphoticShield : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65760,7 +65760,7 @@ public:
 class CDOTA_Ability_Abaddon_Frostmourne : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65768,7 +65768,7 @@ public:
 class CDOTA_Ability_Abaddon_BorrowedTime : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -65799,7 +65799,7 @@ public:
 class CDOTA_Ability_Elder_Titan_MoveSpirit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65807,7 +65807,7 @@ public:
 class CDOTA_Ability_Elder_Titan_ReturnSpirit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -65833,7 +65833,7 @@ public:
 class CDOTA_Ability_Elder_Titan_EchoStomp_Spirit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65841,7 +65841,7 @@ public:
 class C_DOTA_Ability_Elder_Titan_NaturalOrder : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65849,7 +65849,7 @@ public:
 class C_DOTA_Ability_Elder_Titan_NaturalOrder_Spirit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -65869,7 +65869,7 @@ public:
 class C_DOTA_Ability_Legion_Commander_OverwhelmingOdds : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65877,7 +65877,7 @@ public:
 class C_DOTA_Ability_Legion_Commander_PressTheAttack : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65885,7 +65885,7 @@ public:
 class C_DOTA_Ability_Legion_Commander_MomentOfCourage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65893,7 +65893,7 @@ public:
 class C_DOTA_Ability_Legion_Commander_Duel : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65901,7 +65901,7 @@ public:
 class C_DOTA_Ability_Holdout_GladiatorsUnite : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65909,7 +65909,7 @@ public:
 class CDOTA_Ability_Techies_ReactiveTazer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65917,7 +65917,7 @@ public:
 class CDOTA_Ability_Techies_StickyBomb : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65925,7 +65925,7 @@ public:
 class CDOTA_Ability_Techies_LandMines : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -65959,7 +65959,7 @@ public:
 class C_DOTA_Ability_Techies_FocusedDetonate : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -65967,7 +65967,7 @@ public:
 class CDOTA_Ability_Techies_RemoteMines_SelfDetonate : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -65984,7 +65984,7 @@ public:
 class C_DOTA_Ability_EmberSpirit_SearingChains : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -66003,7 +66003,7 @@ public:
 class C_DOTA_Ability_EmberSpirit_FlameGuard : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -66067,7 +66067,7 @@ public:
 class C_DOTA_Ability_EarthSpirit_StoneCaller : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -66138,7 +66138,7 @@ public:
 class CDOTA_Ability_AbyssalUnderlord_AtrophyAura : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -66155,7 +66155,7 @@ public:
 class CDOTA_Ability_AbyssalUnderlord_Cancel_DarkRift : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -66179,7 +66179,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Underlord : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66187,7 +66187,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Underlord_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66195,7 +66195,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Underlord_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66203,7 +66203,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Underlord_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66211,7 +66211,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Underlord_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66219,7 +66219,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Underlord_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66227,7 +66227,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Underlord_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66235,7 +66235,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Underlord_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66243,7 +66243,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Underlord_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -66259,7 +66259,7 @@ public:
 class C_DOTA_Ability_Terrorblade_ConjureImage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66267,7 +66267,7 @@ public:
 class C_DOTA_Ability_Terrorblade_Metamorphosis : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66275,7 +66275,7 @@ public:
 class C_DOTA_Ability_Terrorblade_Demon_Zeal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66283,7 +66283,7 @@ public:
 class C_DOTA_Ability_Terrorblade_Terror_Wave : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66291,7 +66291,7 @@ public:
 class C_DOTA_Ability_Terrorblade_Sunder : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66299,7 +66299,7 @@ public:
 class C_DOTA_Ability_Phoenix_SunRay : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66307,7 +66307,7 @@ public:
 class C_DOTA_Ability_Phoenix_SunRayStop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66315,7 +66315,7 @@ public:
 class C_DOTA_Ability_Phoenix_SunRayToggleMove : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66323,7 +66323,7 @@ public:
 class C_DOTA_Ability_Phoenix_SunRayToggleMoveEmpty : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -66339,7 +66339,7 @@ public:
 class C_DOTA_Ability_Phoenix_IcarusDiveStop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -66367,7 +66367,7 @@ public:
 class C_DOTA_Ability_Phoenix_Supernova : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -66416,7 +66416,7 @@ public:
 class C_DOTA_Ability_Oracle_FalsePromise : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66424,7 +66424,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Oracle : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66432,7 +66432,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Oracle_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66440,7 +66440,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Oracle_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66448,7 +66448,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Oracle_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66456,7 +66456,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Oracle_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66464,7 +66464,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Oracle_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66472,7 +66472,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Oracle_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66480,7 +66480,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Oracle_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66488,7 +66488,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Oracle_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66496,7 +66496,7 @@ public:
 class C_DOTA_Ability_Oracle_RainOfDestiny : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -66512,7 +66512,7 @@ public:
 class CDOTA_Ability_Winter_Wyvern_Splinter_Blast : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66520,7 +66520,7 @@ public:
 class CDOTA_Ability_Winter_Wyvern_Cold_Embrace : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66528,7 +66528,7 @@ public:
 class CDOTA_Ability_Winter_Wyvern_Winters_Curse : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66536,7 +66536,7 @@ public:
 class C_DOTA_Ability_ArcWarden_Flux : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66544,7 +66544,7 @@ public:
 class C_DOTA_Ability_ArcWarden_MagneticField : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -66573,7 +66573,7 @@ public:
 class C_DOTA_Ability_ArcWarden_Scepter : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -66612,7 +66612,7 @@ public:
 class C_DOTA_Ability_MonkeyKing_Spring_Early : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66620,7 +66620,7 @@ public:
 class C_DOTA_Ability_MonkeyKing_Transform : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66628,7 +66628,7 @@ public:
 class C_DOTA_Ability_MonkeyKing_UnTransform : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66636,7 +66636,7 @@ public:
 class C_DOTA_Ability_MonkeyKing_QuadrupleTap : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66644,7 +66644,7 @@ public:
 class C_DOTA_Ability_Pangolier_HeartPiercer : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66652,7 +66652,7 @@ public:
 class C_DOTA_Ability_Pangolier_LuckyShot : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66660,7 +66660,7 @@ public:
 class C_DOTA_Ability_Pangolier_ShieldCrash : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -66688,7 +66688,7 @@ public:
 class C_DOTA_Ability_Pangolier_GyroshellStop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -66704,7 +66704,7 @@ public:
 class C_DOTA_Ability_Pangolier_RollupStop : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66712,7 +66712,7 @@ public:
 class C_DOTA_Ability_DarkWillow_BrambleMaze : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66720,7 +66720,7 @@ public:
 class C_DOTA_Ability_DarkWillow_ShadowRealm : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66728,7 +66728,7 @@ public:
 class C_DOTA_Ability_DarkWillow_CursedCrown : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66736,7 +66736,7 @@ public:
 class C_DOTA_Ability_DarkWillow_Bedlam : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -66752,7 +66752,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_DarkWillow_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66760,7 +66760,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_DarkWillow_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66768,7 +66768,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_DarkWillow_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66776,7 +66776,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_DarkWillow_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66784,7 +66784,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_DarkWillow_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66792,7 +66792,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_DarkWillow_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66800,7 +66800,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_DarkWillow_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -66816,7 +66816,7 @@ public:
 class C_DOTA_Ability_Grimstroke_Scepter : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -66866,7 +66866,7 @@ public:
 class C_DOTA_Ability_Grimstroke_Dark_Portrait : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66874,7 +66874,7 @@ public:
 class C_DOTA_Ability_Grimstroke_Ink_Over : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66882,7 +66882,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Grimstroke_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66890,7 +66890,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Grimstroke_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66898,7 +66898,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Grimstroke_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66906,7 +66906,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Grimstroke_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66914,7 +66914,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Grimstroke_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66922,7 +66922,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Grimstroke_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66930,7 +66930,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Grimstroke_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66938,7 +66938,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Grimstroke_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66946,7 +66946,7 @@ public:
 class CDOTA_Ability_Mars_Spear : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66954,7 +66954,7 @@ public:
 class CDOTA_Ability_Mars_ArenaOfBlood : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -66971,7 +66971,7 @@ public:
 class CDOTA_Ability_Mars_GodsRebuke : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66979,7 +66979,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_MarsSpearStunDuration : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66987,7 +66987,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_ArenaOfBloodHPRegen : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -66995,7 +66995,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_SpearBonusDamage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67003,7 +67003,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_GodsRebuke_ExtraCrit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67011,7 +67011,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_SpearCooldown : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67019,7 +67019,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_RebukeCooldown : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67027,7 +67027,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_GodsRebuke_Slow : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67035,7 +67035,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Bulwark_Speed : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67043,7 +67043,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Bulwark_DamageReduction : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -67088,7 +67088,7 @@ public:
 class CDOTA_Ability_Snapfire_LilShredder : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -67113,7 +67113,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Snapfire_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67121,7 +67121,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Snapfire_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67129,7 +67129,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Snapfire_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67137,7 +67137,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Snapfire_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67145,7 +67145,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Snapfire_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67153,7 +67153,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Snapfire_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67161,7 +67161,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Snapfire_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67169,7 +67169,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Snapfire_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -67225,7 +67225,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_VoidSpirit_1 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67233,7 +67233,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_VoidSpirit_2 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67241,7 +67241,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_VoidSpirit_3 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67249,7 +67249,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_VoidSpirit_4 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67257,7 +67257,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_VoidSpirit_5 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67265,7 +67265,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_VoidSpirit_6 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67273,7 +67273,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_VoidSpirit_7 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67281,7 +67281,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_VoidSpirit_8 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67289,7 +67289,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_VoidSpirit_9 : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -67321,7 +67321,7 @@ public:
 class C_DOTA_Ability_Hoodwink_Scurry : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -67339,7 +67339,7 @@ public:
 class C_DOTA_Ability_Hoodwink_Sharpshooter_Release : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67347,7 +67347,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Hoodwink_AcornShotBounces : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67355,7 +67355,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Hoodwink_AcornShotDamage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67363,7 +67363,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Hoodwink_AcornShotCharges : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67371,7 +67371,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Hoodwink_Camouflague : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67379,7 +67379,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Hoodwink_SharpshooterPierceHeroes : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67387,7 +67387,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Hoodwink_SharpshooterPureDamage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67395,7 +67395,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Hoodwink_Bushwhack_Duration : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67403,7 +67403,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Hoodwink_Bushwhack_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67411,7 +67411,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Hoodwink_Sharpshooter_Speed : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67419,7 +67419,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Hoodwink_AcornShot_ArmorCorruption : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67427,7 +67427,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Hoodwink_BushwhackCooldown : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67435,7 +67435,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Hoodwink_ScurryDuration : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67443,7 +67443,7 @@ public:
 class C_DOTA_Ability_Hoodwink_Caltrops : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -67463,7 +67463,7 @@ public:
 class C_DOTA_Ability_Hoodwink_HeavyQuiver : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -67487,7 +67487,7 @@ public:
 class C_DOTA_Ability_Hoodwink_HuntersQuiver : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -67510,7 +67510,7 @@ public:
 class C_DOTA_Ability_Dawnbreaker_Luminosity : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 25
@@ -67556,7 +67556,7 @@ public:
 class C_DOTA_Ability_Dawnbreaker_Fire_Wreath : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67564,7 +67564,7 @@ public:
 class C_DOTA_Ability_Dawnbreaker_Converge : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67572,7 +67572,7 @@ public:
 class C_DOTA_Ability_Dawnbreaker_Land : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67580,7 +67580,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Dawnbreaker_Celestial_Hammer_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67588,7 +67588,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Dawnbreaker_Fire_Wreath_Magic_Immunity : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67596,7 +67596,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Dawnbreaker_Solar_Guardian_Radius : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67604,7 +67604,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Dawnbreaker_Converge_Slow : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67612,7 +67612,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Dawnbreaker_Celestial_Hammer_Cast_Range : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67620,7 +67620,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Dawnbreaker_Fire_Wreath_Ministun : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67628,7 +67628,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Dawnbreaker_Luminosity_Attack_Count : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67636,7 +67636,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Dawnbreaker_Fire_wreath_Charges : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67644,7 +67644,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Dawnbreaker_Solar_Guardian_Cooldown : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67652,7 +67652,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Dawnbreaker_Luminosity_Crit : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67660,7 +67660,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Dawnbreaker_FireWreath_Swipe : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67668,7 +67668,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Dawnbreaker_CelestialHammer_Slow : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67676,7 +67676,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Dawnbreaker_FireWreath_AoE : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67684,7 +67684,7 @@ public:
 class CDOTA_Ability_Marci_Grapple : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -67732,7 +67732,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Marci_Lunge_AllyAbsorb : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67740,7 +67740,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Marci_Lunge_Damage : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67748,7 +67748,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Marci_Lunge_Range : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67756,7 +67756,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Marci_Grapple_StunDuration : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67764,7 +67764,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Marci_Guardian_MagicImmunity : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67772,7 +67772,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Marci_Unleash_LungeRefresh : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67780,7 +67780,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Marci_Unleash_Silence : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67788,7 +67788,7 @@ public:
 class CDOTA_Ability_Special_Bonus_Unique_Marci_Guardian_Lifesteal : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67796,7 +67796,7 @@ public:
 class C_DOTA_Ability_PrimalBeast_Trample : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -67827,7 +67827,7 @@ public:
 class C_DOTA_Ability_PrimalBeast_Onslaught_Release : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -67870,7 +67870,7 @@ public:
 class C_DOTA_Ability_Muerta_PierceTheVeil : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67878,7 +67878,7 @@ public:
 class C_DOTA_Ability_Muerta_TheCalling : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67886,7 +67886,7 @@ public:
 class C_DOTA_Ability_Muerta_Gunslinger : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67894,7 +67894,7 @@ public:
 class C_DOTA_Ability_Special_Bonus_Unique_Muerta_TrickShotCharges : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67902,7 +67902,7 @@ public:
 class C_DOTA_Item_Recipe_Bracer : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -67918,7 +67918,7 @@ public:
 class C_DOTA_Item_Gauntlets : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67926,7 +67926,7 @@ public:
 class C_DOTA_Item_Circlet : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67934,7 +67934,7 @@ public:
 class C_DOTA_Item_Slippers : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67942,7 +67942,7 @@ public:
 class C_DOTA_Item_Recipe_WraithBand : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -67958,7 +67958,7 @@ public:
 class C_DOTA_Item_Mantle : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67966,7 +67966,7 @@ public:
 class C_DOTA_Item_Recipe_NullTalisman : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -67982,7 +67982,7 @@ public:
 class C_DOTA_Item_Tango : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67990,7 +67990,7 @@ public:
 class C_DOTA_Item_Tango_Single : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -67998,7 +67998,7 @@ public:
 class C_DOTA_Item_Clarity : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68006,7 +68006,7 @@ public:
 class C_DOTA_Item_Flask : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68014,7 +68014,7 @@ public:
 class C_DOTA_Item_BootsOfSpeed : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68022,7 +68022,7 @@ public:
 class C_DOTA_Item_Recipe_BootsOfTravel : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68030,7 +68030,7 @@ public:
 class CDOTA_Item_Recipe_BootsOfTravel_2 : public C_DOTA_Item_Recipe_BootsOfTravel
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -68048,7 +68048,7 @@ public:
 class CDOTA_Item_BootsOfTravel_2 : public C_DOTA_Item_BootsOfTravel
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68056,7 +68056,7 @@ public:
 class C_DOTA_Item_Recipe_PowerTreads : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -68074,7 +68074,7 @@ public:
 class C_DOTA_Item_Recipe_PhaseBoots : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68082,7 +68082,7 @@ public:
 class C_DOTA_Item_PhaseBoots : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68090,7 +68090,7 @@ public:
 class C_DOTA_Item_Recipe_TranquilBoots : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -68110,7 +68110,7 @@ public:
 class CDOTA_Item_Recipe_TranquilBoots2 : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -68130,7 +68130,7 @@ public:
 class C_DOTA_Item_GlovesOfHaste : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68138,7 +68138,7 @@ public:
 class C_DOTA_Item_BeltOfStrength : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68146,7 +68146,7 @@ public:
 class C_DOTA_Item_RobeOfMagi : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68154,7 +68154,7 @@ public:
 class C_DOTA_Item_BootsOfElven : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68162,7 +68162,7 @@ public:
 class C_DOTA_Item_BladesOfAttack : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -68182,7 +68182,7 @@ public:
 class C_DOTA_Item_DemonEdge : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68190,7 +68190,7 @@ public:
 class C_DOTA_Item_Eaglehorn : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68198,7 +68198,7 @@ public:
 class C_DOTA_Item_Reaver : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68206,7 +68206,7 @@ public:
 class C_DOTA_Item_SacredRelic : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68214,7 +68214,7 @@ public:
 class C_DOTA_Item_Hyperstone : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68222,7 +68222,7 @@ public:
 class C_DOTA_Item_RingOfHealth : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68230,7 +68230,7 @@ public:
 class C_DOTA_Item_VoidStone : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68238,7 +68238,7 @@ public:
 class C_DOTA_Item_MysticStaff : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68246,7 +68246,7 @@ public:
 class C_DOTA_Item_EnergyBooster : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68254,7 +68254,7 @@ public:
 class C_DOTA_Item_PointBooster : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68262,7 +68262,7 @@ public:
 class C_DOTA_Item_VitalityBooster : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68270,7 +68270,7 @@ public:
 class C_DOTA_Item_Broadsword : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68278,7 +68278,7 @@ public:
 class C_DOTA_Item_Quarterstaff : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68286,7 +68286,7 @@ public:
 class C_DOTA_Item_Claymore : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68294,7 +68294,7 @@ public:
 class C_DOTA_Item_RingOfProtection : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68302,7 +68302,7 @@ public:
 class C_DOTA_Item_StoutShield : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68310,7 +68310,7 @@ public:
 class C_DOTA_Item_Javelin : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68318,7 +68318,7 @@ public:
 class C_DOTA_Item_MithrilHammer : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68326,7 +68326,7 @@ public:
 class C_DOTA_Item_ChainMail : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68334,7 +68334,7 @@ public:
 class C_DOTA_Item_HelmOfIronWill : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68342,7 +68342,7 @@ public:
 class C_DOTA_Item_PlateMail : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68350,7 +68350,7 @@ public:
 class C_DOTA_Item_QuellingBlade : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68358,7 +68358,7 @@ public:
 class C_DOTA_Item_IronwoodBranch : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68366,7 +68366,7 @@ public:
 class C_DOTA_Item_OgreAxe : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68374,7 +68374,7 @@ public:
 class C_DOTA_Item_BladeOfAlacrity : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68382,7 +68382,7 @@ public:
 class C_DOTA_Item_StaffOfWizardry : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68390,7 +68390,7 @@ public:
 class C_DOTA_Item_UltimateOrb : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68398,7 +68398,7 @@ public:
 class C_DOTA_Item_MaskOfDeath : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68406,7 +68406,7 @@ public:
 class C_DOTA_Item_RingOfRegeneration : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68414,7 +68414,7 @@ public:
 class C_DOTA_Item_BlinkDagger : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68422,7 +68422,7 @@ public:
 class CDOTA_Item_SuperBlinkDagger : public C_DOTA_Item_BlinkDagger
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68430,7 +68430,7 @@ public:
 class C_DOTA_Item_SobiMask : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -68448,7 +68448,7 @@ public:
 class C_DOTA_Item_PlaneswalkersCloak : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68456,7 +68456,7 @@ public:
 class C_DOTA_Item_MagicStick : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68464,7 +68464,7 @@ public:
 class C_DOTA_Item_Recipe_MagicWand : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68472,7 +68472,7 @@ public:
 class C_DOTA_Item_MagicWand : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68480,7 +68480,7 @@ public:
 class C_DOTA_Item_TalismanOfEvasion : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68488,7 +68488,7 @@ public:
 class C_DOTA_Item_GhostScepter : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68496,7 +68496,7 @@ public:
 class C_DOTA_Item_Recipe_HandOfMidas : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68504,7 +68504,7 @@ public:
 class C_DOTA_Item_HandOfMidas : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68512,7 +68512,7 @@ public:
 class C_DOTA_Item_Recipe_OblivionStaff : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68520,7 +68520,7 @@ public:
 class C_DOTA_Item_OblivionStaff : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68528,7 +68528,7 @@ public:
 class C_DOTA_Item_Recipe_Perseverance : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68536,7 +68536,7 @@ public:
 class C_DOTA_Item_Perseverance : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68544,7 +68544,7 @@ public:
 class C_DOTA_Item_Recipe_PoorMansShield : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68552,7 +68552,7 @@ public:
 class C_DOTA_Item_PoorMansShield : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68560,7 +68560,7 @@ public:
 class C_DOTA_Item_DustofAppearance : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68568,7 +68568,7 @@ public:
 class CDOTA_Item_ObserverWard : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68576,7 +68576,7 @@ public:
 class CDOTA_Item_SentryWard : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -68598,7 +68598,7 @@ public:
 class C_DOTA_Item_Recipe_DivineRapier : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68606,7 +68606,7 @@ public:
 class C_DOTA_Item_DivineRapier : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68614,7 +68614,7 @@ public:
 class C_DOTA_Item_Recipe_MonkeyKingBar : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68622,7 +68622,7 @@ public:
 class C_DOTA_Item_MonkeyKingBar : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68630,7 +68630,7 @@ public:
 class C_DOTA_Item_Recipe_Radiance : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68638,7 +68638,7 @@ public:
 class C_DOTA_Item_Radiance : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68646,7 +68646,7 @@ public:
 class C_DOTA_Item_Recipe_Butterfly : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68654,7 +68654,7 @@ public:
 class C_DOTA_Item_Butterfly : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68662,7 +68662,7 @@ public:
 class C_DOTA_Item_Recipe_GreaterCritical : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68670,7 +68670,7 @@ public:
 class C_DOTA_Item_GreaterCritical : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68678,7 +68678,7 @@ public:
 class C_DOTA_Item_Recipe_CraniumBasher : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68686,7 +68686,7 @@ public:
 class C_DOTA_Item_CraniumBasher : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68694,7 +68694,7 @@ public:
 class C_DOTA_Item_Recipe_AbyssalBlade : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68702,7 +68702,7 @@ public:
 class C_DOTA_Item_AbyssalBlade : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68710,7 +68710,7 @@ public:
 class CDOTA_Item_Recipe_Battlefury : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68718,7 +68718,7 @@ public:
 class CDOTA_Item_Battlefury : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68726,7 +68726,7 @@ public:
 class C_DOTA_Item_Recipe_MantaStyle : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68734,7 +68734,7 @@ public:
 class C_DOTA_Item_MantaStyle : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68742,7 +68742,7 @@ public:
 class C_DOTA_Item_Recipe_LesserCritical : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68750,7 +68750,7 @@ public:
 class C_DOTA_Item_LesserCritical : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68758,7 +68758,7 @@ public:
 class C_DOTA_Item_Recipe_Armlet : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -68774,7 +68774,7 @@ public:
 class C_DOTA_Item_Recipe_InvisibilityEdge : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68782,7 +68782,7 @@ public:
 class C_DOTA_Item_InvisibilityEdge : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68790,7 +68790,7 @@ public:
 class C_DOTA_Item_Recipe_SheepStick : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -68806,7 +68806,7 @@ public:
 class C_DOTA_Item_Recipe_OrchidMalevolence : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68814,7 +68814,7 @@ public:
 class C_DOTA_Item_OrchidMalevolence : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68822,7 +68822,7 @@ public:
 class C_DOTA_Item_Recipe_RodOfAtos : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68830,7 +68830,7 @@ public:
 class C_DOTA_Item_RodOfAtos : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68838,7 +68838,7 @@ public:
 class C_DOTA_Item_Recipe_Cyclone : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68846,7 +68846,7 @@ public:
 class C_DOTA_Item_Cyclone : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68854,7 +68854,7 @@ public:
 class CDOTA_Item_Recipe_ForceStaff : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68862,7 +68862,7 @@ public:
 class CDOTA_Item_ForceStaff : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68870,7 +68870,7 @@ public:
 class C_DOTA_Item_Recipe_Dagon : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68878,7 +68878,7 @@ public:
 class C_DOTA_Item_Recipe_Dagon2 : public C_DOTA_Item_Recipe_Dagon
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68886,7 +68886,7 @@ public:
 class C_DOTA_Item_Recipe_Dagon3 : public C_DOTA_Item_Recipe_Dagon
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68894,7 +68894,7 @@ public:
 class C_DOTA_Item_Recipe_Dagon4 : public C_DOTA_Item_Recipe_Dagon
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68902,7 +68902,7 @@ public:
 class C_DOTA_Item_Recipe_Dagon5 : public C_DOTA_Item_Recipe_Dagon
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68910,7 +68910,7 @@ public:
 class C_DOTA_Item_Dagon : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68918,7 +68918,7 @@ public:
 class C_DOTA_Item_Dagon_Upgraded : public C_DOTA_Item_Dagon
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68926,7 +68926,7 @@ public:
 class C_DOTA_Item_Dagon_Upgraded2 : public C_DOTA_Item_Dagon_Upgraded
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68934,7 +68934,7 @@ public:
 class C_DOTA_Item_Dagon_Upgraded3 : public C_DOTA_Item_Dagon_Upgraded
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68942,7 +68942,7 @@ public:
 class C_DOTA_Item_Dagon_Upgraded4 : public C_DOTA_Item_Dagon_Upgraded
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68950,7 +68950,7 @@ public:
 class C_DOTA_Item_Dagon_Upgraded5 : public C_DOTA_Item_Dagon_Upgraded
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68958,7 +68958,7 @@ public:
 class C_DOTA_Item_Recipe_RefresherOrb : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68966,7 +68966,7 @@ public:
 class C_DOTA_Item_RefresherOrb : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68974,7 +68974,7 @@ public:
 class CDOTA_Item_RefresherOrb_Shard : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68982,7 +68982,7 @@ public:
 class C_DOTA_Item_Recipe_UltimateScepter : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68990,7 +68990,7 @@ public:
 class C_DOTA_Item_Recipe_UltimateScepter_2 : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -68998,7 +68998,7 @@ public:
 class C_DOTA_Item_UltimateScepter_2 : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69006,7 +69006,7 @@ public:
 class C_DOTA_Item_UltimateScepter : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69014,7 +69014,7 @@ public:
 class C_DOTA_Item_UltimateScepter_Roshan : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69022,7 +69022,7 @@ public:
 class C_DOTA_Item_Recipe_Assault_Cuirass : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69030,7 +69030,7 @@ public:
 class C_DOTA_Item_Assault_Cuirass : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69038,7 +69038,7 @@ public:
 class C_DOTA_Item_Recipe_Heart : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69046,7 +69046,7 @@ public:
 class C_DOTA_Item_Heart : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69054,7 +69054,7 @@ public:
 class C_DOTA_Item_Recipe_Black_King_Bar : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -69070,7 +69070,7 @@ public:
 class C_DOTA_Item_Aegis : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69078,7 +69078,7 @@ public:
 class C_DOTA_Item_Recipe_Shivas_Guard : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69086,7 +69086,7 @@ public:
 class C_DOTA_Item_Shivas_Guard : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69094,7 +69094,7 @@ public:
 class C_DOTA_Item_Recipe_Bloodstone : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69102,7 +69102,7 @@ public:
 class C_DOTA_Item_Bloodstone : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69110,7 +69110,7 @@ public:
 class C_DOTA_Item_Recipe_Sange : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69118,7 +69118,7 @@ public:
 class C_DOTA_Item_Sange : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69126,7 +69126,7 @@ public:
 class C_DOTA_Item_Recipe_Yasha : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69134,7 +69134,7 @@ public:
 class C_DOTA_Item_Yasha : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69142,7 +69142,7 @@ public:
 class C_DOTA_Item_Recipe_SangeAndYasha : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69150,7 +69150,7 @@ public:
 class C_DOTA_Item_SangeAndYasha : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69158,7 +69158,7 @@ public:
 class C_DOTA_Item_Recipe_MaskOfMadness : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69166,7 +69166,7 @@ public:
 class C_DOTA_Item_MaskOfMadness : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69174,7 +69174,7 @@ public:
 class C_DOTA_Item_Recipe_Sphere : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69182,7 +69182,7 @@ public:
 class C_DOTA_Item_Sphere : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69190,7 +69190,7 @@ public:
 class C_DOTA_Item_Recipe_Vanguard : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69198,7 +69198,7 @@ public:
 class C_DOTA_Item_Vanguard : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69206,7 +69206,7 @@ public:
 class CDOTA_Item_Recipe_Crimson_Guard : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69214,7 +69214,7 @@ public:
 class C_DOTA_Item_Crimson_Guard : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69222,7 +69222,7 @@ public:
 class C_DOTA_Item_Recipe_Blade_Mail : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69230,7 +69230,7 @@ public:
 class C_DOTA_Item_Blade_Mail : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69238,7 +69238,7 @@ public:
 class C_DOTA_Item_Recipe_Soul_Booster : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69246,7 +69246,7 @@ public:
 class C_DOTA_Item_Soul_Booster : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69254,7 +69254,7 @@ public:
 class C_DOTA_Item_Recipe_Hood_Of_Defiance : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69262,7 +69262,7 @@ public:
 class C_DOTA_Item_Hood_Of_Defiance : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69270,7 +69270,7 @@ public:
 class C_DOTA_Item_Recipe_Mekansm : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69278,7 +69278,7 @@ public:
 class C_DOTA_Item_Mekansm : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69286,7 +69286,7 @@ public:
 class C_DOTA_Item_Recipe_Vladmir : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69294,7 +69294,7 @@ public:
 class C_DOTA_Item_Vladmir : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69302,7 +69302,7 @@ public:
 class C_DOTA_Item_Recipe_Buckler : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69310,7 +69310,7 @@ public:
 class C_DOTA_Item_Buckler : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69318,7 +69318,7 @@ public:
 class C_DOTA_Item_Recipe_Ring_Of_Basilius : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69326,7 +69326,7 @@ public:
 class C_DOTA_Item_Ring_Of_Basilius : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69334,7 +69334,7 @@ public:
 class C_DOTA_Item_Recipe_Pipe : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69342,7 +69342,7 @@ public:
 class C_DOTA_Item_Pipe : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69350,7 +69350,7 @@ public:
 class C_DOTA_Item_Recipe_Urn_Of_Shadows : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69358,7 +69358,7 @@ public:
 class C_DOTA_Item_Urn_Of_Shadows : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69366,7 +69366,7 @@ public:
 class C_DOTA_Item_Recipe_Headdress : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69374,7 +69374,7 @@ public:
 class C_DOTA_Item_Headdress : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69382,7 +69382,7 @@ public:
 class C_DOTA_Item_Recipe_Satanic : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69390,7 +69390,7 @@ public:
 class C_DOTA_Item_Satanic : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69398,7 +69398,7 @@ public:
 class C_DOTA_Item_Recipe_HelmOfTheDominator : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69406,7 +69406,7 @@ public:
 class C_DOTA_Item_Recipe_HelmOfTheDominator_2 : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69414,7 +69414,7 @@ public:
 class C_DOTA_Item_Recipe_HelmOfTheOverlord : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69422,7 +69422,7 @@ public:
 class C_DOTA_Item_HelmOfTheDominator : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69430,7 +69430,7 @@ public:
 class C_DOTA_Item_HelmOfTheDominator_2 : public C_DOTA_Item_HelmOfTheDominator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69438,7 +69438,7 @@ public:
 class C_DOTA_Item_HelmOfTheOverlord : public C_DOTA_Item_HelmOfTheDominator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69446,7 +69446,7 @@ public:
 class C_DOTA_Item_Recipe_Desolator : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69454,7 +69454,7 @@ public:
 class C_DOTA_Item_Desolator : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69462,7 +69462,7 @@ public:
 class C_DOTA_Item_Recipe_Revenants_Brooch : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69470,7 +69470,7 @@ public:
 class C_DOTA_Item_Revenants_Brooch : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69478,7 +69478,7 @@ public:
 class CDOTA_Item_Recipe_Eagle_Eye : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -69496,7 +69496,7 @@ public:
 class C_DOTA_Item_Recipe_Tenderizer : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69504,7 +69504,7 @@ public:
 class C_DOTA_Item_Tenderizer : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69512,7 +69512,7 @@ public:
 class C_DOTA_Item_Recipe_Boots_Of_Bearing : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -69528,7 +69528,7 @@ public:
 class C_DOTA_Item_Recipe_VoidwalkerScythe : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69536,7 +69536,7 @@ public:
 class C_DOTA_Item_VoidwalkerScythe : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69544,7 +69544,7 @@ public:
 class C_DOTA_Item_Recipe_WraithPact : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -69560,7 +69560,7 @@ public:
 class C_DOTA_Item_Recipe_Skadi : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69568,7 +69568,7 @@ public:
 class C_DOTA_Item_Skadi : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69576,7 +69576,7 @@ public:
 class C_DOTA_Item_Recipe_Mjollnir : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69584,7 +69584,7 @@ public:
 class C_DOTA_Item_Mjollnir : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69592,7 +69592,7 @@ public:
 class C_DOTA_Item_Recipe_Maelstrom : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69600,7 +69600,7 @@ public:
 class C_DOTA_Item_Maelstrom : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69608,7 +69608,7 @@ public:
 class C_DOTA_Item_Recipe_Diffusal_Blade : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69616,7 +69616,7 @@ public:
 class CDOTA_Item_Recipe_Diffusal_Blade2 : public C_DOTA_Item_Recipe_Diffusal_Blade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69624,7 +69624,7 @@ public:
 class C_DOTA_Item_Diffusal_Blade : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69632,7 +69632,7 @@ public:
 class C_DOTA_Item_Diffusal_Blade_Level2 : public C_DOTA_Item_Diffusal_Blade
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69640,7 +69640,7 @@ public:
 class C_DOTA_Item_Recipe_Ethereal_Blade : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69648,7 +69648,7 @@ public:
 class C_DOTA_Item_Ethereal_Blade : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69656,7 +69656,7 @@ public:
 class C_DOTA_Item_Recipe_Soul_Ring : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69664,7 +69664,7 @@ public:
 class C_DOTA_Item_Soul_Ring : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69672,7 +69672,7 @@ public:
 class C_DOTA_Item_Recipe_Necronomicon : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69680,7 +69680,7 @@ public:
 class C_DOTA_Item_Recipe_Necronomicon_2 : public C_DOTA_Item_Recipe_Necronomicon
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69688,7 +69688,7 @@ public:
 class C_DOTA_Item_Recipe_Necronomicon_3 : public C_DOTA_Item_Recipe_Necronomicon
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -69705,7 +69705,7 @@ public:
 class C_DOTA_Item_Necronomicon_Level2 : public C_DOTA_Item_Necronomicon
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69713,7 +69713,7 @@ public:
 class C_DOTA_Item_Necronomicon_Level3 : public C_DOTA_Item_Necronomicon
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69721,7 +69721,7 @@ public:
 class C_DOTA_Ability_Necronomicon_Warrior_ManaBurn : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69729,7 +69729,7 @@ public:
 class C_DOTA_Ability_Necronomicon_Warrior_LastWill : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69737,7 +69737,7 @@ public:
 class C_DOTA_Ability_Necronomicon_Warrior_Sight : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69745,7 +69745,7 @@ public:
 class C_DOTA_Ability_Necronomicon_Archer_ManaBurn : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69753,7 +69753,7 @@ public:
 class CDOTA_Ability_Necronomicon_Archer_Purge : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69761,7 +69761,7 @@ public:
 class C_DOTA_Ability_Necronomicon_Archer_AoE : public C_DOTABaseAbility
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69769,7 +69769,7 @@ public:
 class C_DOTA_Item_Courier : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69777,7 +69777,7 @@ public:
 class C_DOTA_Item_Flying_Courier : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69785,7 +69785,7 @@ public:
 class C_DOTA_Item_Cheese : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69793,7 +69793,7 @@ public:
 class C_DOTA_Item_Recipe_Arcane_Boots : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69801,7 +69801,7 @@ public:
 class C_DOTA_Item_Arcane_Boots : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69809,7 +69809,7 @@ public:
 class C_DOTA_Item_Orb_of_Venom : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69817,7 +69817,7 @@ public:
 class C_DOTA_Item_Recipe_Ancient_Janggo : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -69833,7 +69833,7 @@ public:
 class CDOTA_Item_Recipe_Medallion_Of_Courage : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69841,7 +69841,7 @@ public:
 class CDOTA_Item_Medallion_Of_Courage : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69849,7 +69849,7 @@ public:
 class C_DOTA_Item_Smoke_Of_Deceit : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69857,7 +69857,7 @@ public:
 class C_DOTA_Item_Recipe_Veil_Of_Discord : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69865,7 +69865,7 @@ public:
 class C_DOTA_Item_Veil_Of_Discord : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69873,7 +69873,7 @@ public:
 class C_DOTA_Item_Recipe_HeavensHalberd : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69881,7 +69881,7 @@ public:
 class C_DOTA_Item_HeavensHalberd : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69889,7 +69889,7 @@ public:
 class C_DOTA_Item_Recipe_RingOfAquila : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69897,7 +69897,7 @@ public:
 class C_DOTA_Item_RingOfAquila : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69905,7 +69905,7 @@ public:
 class C_DOTA_Item_ShadowAmulet : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69913,7 +69913,7 @@ public:
 class CDOTA_Item_Recipe_Moonshard : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69921,7 +69921,7 @@ public:
 class CDOTA_Item_Moonshard : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69929,7 +69929,7 @@ public:
 class CDOTA_Item_Recipe_Silver_Edge : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69937,7 +69937,7 @@ public:
 class CDOTA_Item_Silver_Edge : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69945,7 +69945,7 @@ public:
 class CDOTA_Item_Recipe_GlimmerCape : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69953,7 +69953,7 @@ public:
 class CDOTA_Item_GlimmerCape : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69961,7 +69961,7 @@ public:
 class CDOTA_Item_Recipe_Solar_Crest : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69969,7 +69969,7 @@ public:
 class CDOTA_Item_Solar_Crest : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69977,7 +69977,7 @@ public:
 class CDOTA_Item_Recipe_Ward_Dispenser : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -69985,7 +69985,7 @@ public:
 class CDOTA_Item_Ward_Dispenser : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -70004,7 +70004,7 @@ public:
 class CDOTA_Item_Recipe_Guardian_Greaves : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70012,7 +70012,7 @@ public:
 class CDOTA_Item_Guardian_Greaves : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70020,7 +70020,7 @@ public:
 class CDOTA_Item_Enchanted_Mango : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70028,7 +70028,7 @@ public:
 class CDOTA_Item_Recipe_Lotus_Orb : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70036,7 +70036,7 @@ public:
 class CDOTA_Item_Lotus_Orb : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70044,7 +70044,7 @@ public:
 class CDOTA_Item_Recipe_Octarine_Core : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70052,7 +70052,7 @@ public:
 class CDOTA_Item_Octarine_Core : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70060,7 +70060,7 @@ public:
 class C_DOTA_Item_Faerie_Fire : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70068,7 +70068,7 @@ public:
 class CDOTA_Item_Recipe_DragonLance : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70076,7 +70076,7 @@ public:
 class C_DOTA_Item_DragonLance : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70084,7 +70084,7 @@ public:
 class CDOTA_Item_Recipe_Aether_Lens : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70092,7 +70092,7 @@ public:
 class C_DOTA_Item_Aether_Lens : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70100,7 +70100,7 @@ public:
 class CDOTA_Item_Recipe_Iron_Talon : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70108,7 +70108,7 @@ public:
 class C_DOTA_Item_Iron_Talon : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70116,7 +70116,7 @@ public:
 class C_DOTA_Item_Recipe_Bloodthorn : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70124,7 +70124,7 @@ public:
 class C_DOTA_Item_Bloodthorn : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70132,7 +70132,7 @@ public:
 class CDOTA_Item_Recipe_EchoSabre : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70140,7 +70140,7 @@ public:
 class C_DOTA_Item_EchoSabre : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70148,7 +70148,7 @@ public:
 class C_DOTA_Item_Blight_Stone : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70156,7 +70156,7 @@ public:
 class C_DOTA_Item_WindLace : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70164,7 +70164,7 @@ public:
 class C_DOTA_Item_Tome_Of_Knowledge : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70172,7 +70172,7 @@ public:
 class CDOTA_Item_Recipe_Hurricane_Pike : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70180,7 +70180,7 @@ public:
 class CDOTA_Item_Hurricane_Pike : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70188,7 +70188,7 @@ public:
 class C_DOTA_Item_Infused_Raindrop : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -70206,7 +70206,7 @@ public:
 class C_DOTA_Item_RiverPainter2 : public C_DOTA_Item_RiverPainter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70214,7 +70214,7 @@ public:
 class CDOTA_Item_RiverPainter3 : public C_DOTA_Item_RiverPainter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70222,7 +70222,7 @@ public:
 class CDOTA_Item_RiverPainter4 : public C_DOTA_Item_RiverPainter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70230,7 +70230,7 @@ public:
 class CDOTA_Item_RiverPainter5 : public C_DOTA_Item_RiverPainter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70238,7 +70238,7 @@ public:
 class CDOTA_Item_RiverPainter6 : public C_DOTA_Item_RiverPainter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70246,7 +70246,7 @@ public:
 class CDOTA_Item_RiverPainter7 : public C_DOTA_Item_RiverPainter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70254,7 +70254,7 @@ public:
 class CDOTA_Item_Recipe_MeteorHammer : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -70271,7 +70271,7 @@ public:
 class CDOTA_Item_Recipe_Nullifier : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70279,7 +70279,7 @@ public:
 class C_DOTA_Item_Nullifier : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70287,7 +70287,7 @@ public:
 class C_DOTA_Item_Recipe_Spirit_Vessel : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70295,7 +70295,7 @@ public:
 class C_DOTA_Item_Spirit_Vessel : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70303,7 +70303,7 @@ public:
 class C_DOTA_Item_Recipe_AeonDisk : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -70320,7 +70320,7 @@ public:
 class C_DOTA_Item_Recipe_Kaya : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70328,7 +70328,7 @@ public:
 class C_DOTA_Item_Kaya : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70336,7 +70336,7 @@ public:
 class C_DOTA_Item_PocketTower : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70344,7 +70344,7 @@ public:
 class C_DOTA_Item_PocketRoshan : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70352,7 +70352,7 @@ public:
 class C_DOTA_Item_Crown : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70360,7 +70360,7 @@ public:
 class C_DOTA_Item_Recipe_Holy_Locket : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70368,7 +70368,7 @@ public:
 class C_DOTA_Item_Holy_Locket : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70376,7 +70376,7 @@ public:
 class CDOTA_Item_Recipe_Kaya_And_Sange : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70384,7 +70384,7 @@ public:
 class CDOTA_Item_Kaya_And_Sange : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70392,7 +70392,7 @@ public:
 class C_DOTA_Item_Recipe_Yasha_And_Kaya : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70400,7 +70400,7 @@ public:
 class C_DOTA_Item_Yasha_And_Kaya : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70408,7 +70408,7 @@ public:
 class C_DOTA_Item_RingOfTarrasque : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70416,7 +70416,7 @@ public:
 class CDOTA_Item_Recipe_Keen_Optic : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70424,7 +70424,7 @@ public:
 class C_DOTA_Item_Keen_Optic : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70432,7 +70432,7 @@ public:
 class CDOTA_Item_Recipe_Grove_Bow : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70440,7 +70440,7 @@ public:
 class C_DOTA_Item_Grove_Bow : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70448,7 +70448,7 @@ public:
 class CDOTA_Item_Recipe_Quickening_Charm : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70456,7 +70456,7 @@ public:
 class CDOTA_Item_Quickening_Charm : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70464,7 +70464,7 @@ public:
 class C_DOTA_Item_Philosophers_Stone : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70472,7 +70472,7 @@ public:
 class CDOTA_Item_Recipe_Force_Boots : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70480,7 +70480,7 @@ public:
 class CDOTA_Item_Force_Boots : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70488,7 +70488,7 @@ public:
 class C_DOTA_Item_Recipe_Desolator_2 : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70496,7 +70496,7 @@ public:
 class C_DOTA_Item_Desolator_2 : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70504,7 +70504,7 @@ public:
 class C_DOTA_Item_Recipe_Phoenix_Ash : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70512,7 +70512,7 @@ public:
 class C_DOTA_Item_Phoenix_Ash : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70520,7 +70520,7 @@ public:
 class CDOTA_Item_Recipe_Seer_Stone : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70528,7 +70528,7 @@ public:
 class C_DOTA_Item_Seer_Stone : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70536,7 +70536,7 @@ public:
 class CDOTA_Item_Greater_Mango : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70544,7 +70544,7 @@ public:
 class C_DOTA_Item_Elixer : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70552,7 +70552,7 @@ public:
 class C_DOTA_Item_Vampire_Fangs : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70560,7 +70560,7 @@ public:
 class C_DOTA_Item_Craggy_Coat : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70568,7 +70568,7 @@ public:
 class C_DOTA_Item_Greater_Faerie_Fire : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70576,7 +70576,7 @@ public:
 class C_DOTA_Item_Recipe_Timeless_Relic : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70584,7 +70584,7 @@ public:
 class C_DOTA_Item_Timeless_Relic : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70592,7 +70592,7 @@ public:
 class C_DOTA_Item_Mirror_Shield : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70600,7 +70600,7 @@ public:
 class C_DOTA_Item_Recipe_Ironwood_tree : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70608,7 +70608,7 @@ public:
 class C_DOTA_Item_Ironwood_tree : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70616,7 +70616,7 @@ public:
 class C_DOTA_Item_Royal_jelly : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70624,7 +70624,7 @@ public:
 class C_DOTA_Item_Recipe_Pupils_gift : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70632,7 +70632,7 @@ public:
 class C_DOTA_Item_Pupils_gift : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70640,7 +70640,7 @@ public:
 class C_DOTA_Item_Tome_of_aghanim : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70648,7 +70648,7 @@ public:
 class C_DOTA_Item_Repair_kit : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70656,7 +70656,7 @@ public:
 class C_DOTA_Item_Recipe_Mind_Breaker : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70664,7 +70664,7 @@ public:
 class CDOTA_Item_Recipe_Mind_Breaker2 : public C_DOTA_Item_Recipe_Mind_Breaker
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70672,7 +70672,7 @@ public:
 class C_DOTA_Item_Mind_Breaker : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70680,7 +70680,7 @@ public:
 class C_DOTA_Item_Third_eye : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70688,7 +70688,7 @@ public:
 class C_DOTA_Item_Spell_Prism : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70696,7 +70696,7 @@ public:
 class C_DOTA_Item_Horizon : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70704,7 +70704,7 @@ public:
 class C_DOTA_Item_Fusion_rune : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70712,7 +70712,7 @@ public:
 class C_DOTA_Item_Princes_Knife : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70720,7 +70720,7 @@ public:
 class CDOTA_Item_Spider_Legs : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70728,7 +70728,7 @@ public:
 class CDOTA_Item_Helm_Of_The_Undying : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70736,7 +70736,7 @@ public:
 class CDOTA_Item_Mango_Tree : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70744,7 +70744,7 @@ public:
 class C_DOTA_Item_Recipe_Vambrace : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -70762,7 +70762,7 @@ public:
 class C_DOTA_Item_Witless_shako : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70770,7 +70770,7 @@ public:
 class C_DOTA_Item_Imp_Claw : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70778,7 +70778,7 @@ public:
 class C_DOTA_Item_Flicker : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70786,7 +70786,7 @@ public:
 class C_DOTA_Item_Spy_Gadget : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70794,7 +70794,7 @@ public:
 class CDOTA_Item_Recipe_Ocean_Heart : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70802,7 +70802,7 @@ public:
 class CDOTA_Item_Ocean_Heart : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70810,7 +70810,7 @@ public:
 class CDOTA_Item_Recipe_Broom_Handle : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70818,7 +70818,7 @@ public:
 class CDOTA_Item_Broom_Handle : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70826,7 +70826,7 @@ public:
 class CDOTA_Item_Recipe_Trusty_Shovel : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -70847,7 +70847,7 @@ public:
 class CDOTA_Item_Recipe_Nether_Shawl : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70855,7 +70855,7 @@ public:
 class CDOTA_Item_Nether_Shawl : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70863,7 +70863,7 @@ public:
 class CDOTA_Item_Recipe_Dragon_Scale : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70871,7 +70871,7 @@ public:
 class CDOTA_Item_Dragon_Scale : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70879,7 +70879,7 @@ public:
 class CDOTA_Item_Recipe_Essence_Ring : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70887,7 +70887,7 @@ public:
 class CDOTA_Item_Essence_Ring : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70895,7 +70895,7 @@ public:
 class CDOTA_Item_Recipe_Clumsy_Net : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70903,7 +70903,7 @@ public:
 class CDOTA_Item_Clumsy_Net : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70911,7 +70911,7 @@ public:
 class CDOTA_Item_Recipe_Enchanted_Quiver : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70919,7 +70919,7 @@ public:
 class CDOTA_Item_Enchanted_Quiver : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70927,7 +70927,7 @@ public:
 class CDOTA_Item_Recipe_Ninja_Gear : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70935,7 +70935,7 @@ public:
 class CDOTA_Item_Ninja_Gear : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70943,7 +70943,7 @@ public:
 class CDOTA_Item_Recipe_Illusionsts_Cape : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70951,7 +70951,7 @@ public:
 class CDOTA_Item_Illusionsts_Cape : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70959,7 +70959,7 @@ public:
 class CDOTA_Item_Recipe_Havoc_Hammer : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70967,7 +70967,7 @@ public:
 class CDOTA_Item_Havoc_Hammer : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70975,7 +70975,7 @@ public:
 class CDOTA_Item_Recipe_Panic_Button : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70983,7 +70983,7 @@ public:
 class CDOTA_Item_Panic_Button : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70991,7 +70991,7 @@ public:
 class CDOTA_Item_Recipe_Apex : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -70999,7 +70999,7 @@ public:
 class CDOTA_Item_Apex : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71007,7 +71007,7 @@ public:
 class CDOTA_Item_Recipe_Ballista : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71015,7 +71015,7 @@ public:
 class CDOTA_Item_Ballista : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71023,7 +71023,7 @@ public:
 class CDOTA_Item_Recipe_Woodland_Striders : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71031,7 +71031,7 @@ public:
 class CDOTA_Item_Woodland_Striders : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71039,7 +71039,7 @@ public:
 class CDOTA_Item_Recipe_Trident : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71047,7 +71047,7 @@ public:
 class CDOTA_Item_Trident : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71055,7 +71055,7 @@ public:
 class CDOTA_Item_Recipe_Demonicon : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -71071,7 +71071,7 @@ public:
 class CDOTA_Item_Recipe_Fallen_Sky : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71079,7 +71079,7 @@ public:
 class C_DOTA_Item_Fallen_Sky : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71087,7 +71087,7 @@ public:
 class CDOTA_Item_Recipe_Pirate_Hat : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -71108,7 +71108,7 @@ public:
 class CDOTA_Item_Recipe_Dimensional_Doorway : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71116,7 +71116,7 @@ public:
 class CDOTA_Item_Dimensional_Doorway : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71124,7 +71124,7 @@ public:
 class CDOTA_Item_Recipe_Ex_Machina : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71132,7 +71132,7 @@ public:
 class CDOTA_Item_Ex_Machina : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71140,7 +71140,7 @@ public:
 class CDOTA_Item_Recipe_Faded_Broach : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71148,7 +71148,7 @@ public:
 class CDOTA_Item_Faded_Broach : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71156,7 +71156,7 @@ public:
 class CDOTA_Item_Recipe_Paladin_Sword : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71164,7 +71164,7 @@ public:
 class CDOTA_Item_Paladin_Sword : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71172,7 +71172,7 @@ public:
 class CDOTA_Item_Recipe_Minotaur_Horn : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71180,7 +71180,7 @@ public:
 class CDOTA_Item_Minotaur_Horn : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71188,7 +71188,7 @@ public:
 class CDOTA_Item_Recipe_Orb_Of_Destruction : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71196,7 +71196,7 @@ public:
 class CDOTA_Item_Orb_Of_Destruction : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71204,7 +71204,7 @@ public:
 class CDOTA_Item_Recipe_The_Leveller : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71212,7 +71212,7 @@ public:
 class CDOTA_Item_The_Leveller : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71220,7 +71220,7 @@ public:
 class C_DOTA_Item_Recipe_Arcane_Ring : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71228,7 +71228,7 @@ public:
 class C_DOTA_Item_Arcane_Ring : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71236,7 +71236,7 @@ public:
 class C_DOTA_Item_Recipe_Titan_Sliver : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71244,7 +71244,7 @@ public:
 class C_DOTA_Item_Titan_Sliver : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71252,7 +71252,7 @@ public:
 class C_DOTA_Item_Voodoo_Mask : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71260,7 +71260,7 @@ public:
 class C_DOTA_Item_Blitz_Knuckles : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71268,7 +71268,7 @@ public:
 class C_DOTA_Item_Recipe_Witch_Blade : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71276,7 +71276,7 @@ public:
 class C_DOTA_Item_Witch_Blade : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71284,7 +71284,7 @@ public:
 class C_DOTA_Item_Recipe_MaskOfDispair : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71292,7 +71292,7 @@ public:
 class C_DOTA_Item_MaskOfDispair : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71300,7 +71300,7 @@ public:
 class C_DOTA_Item_Recipe_Chipped_Vest : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71308,7 +71308,7 @@ public:
 class C_DOTA_Item_Chipped_Vest : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71316,7 +71316,7 @@ public:
 class C_DOTA_Item_Recipe_Cloak_Of_Flames : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71324,7 +71324,7 @@ public:
 class C_DOTA_Item_Cloak_Of_Flames : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71332,7 +71332,7 @@ public:
 class C_DOTA_Item_Recipe_Elven_Tunic : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71340,7 +71340,7 @@ public:
 class C_DOTA_Item_Elven_Tunic : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71348,7 +71348,7 @@ public:
 class C_DOTA_Item_Recipe_Gloves_Of_Travel : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71356,7 +71356,7 @@ public:
 class C_DOTA_Item_Gloves_Of_Travel : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71364,7 +71364,7 @@ public:
 class C_DOTA_Item_Recipe_Orb_Of_Corrosion : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71372,7 +71372,7 @@ public:
 class C_DOTA_Item_Orb_Of_Corrosion : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71380,7 +71380,7 @@ public:
 class C_DOTA_Item_Recipe_Sorcerers_Staff : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71388,7 +71388,7 @@ public:
 class C_DOTA_Item_Sorcerers_Staff : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71396,7 +71396,7 @@ public:
 class C_DOTA_Item_Recipe_Trickster_Cloak : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71404,7 +71404,7 @@ public:
 class C_DOTA_Item_Trickster_Cloak : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71412,7 +71412,7 @@ public:
 class C_DOTA_Item_Recipe_Venom_Gland : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71420,7 +71420,7 @@ public:
 class C_DOTA_Item_Venom_Gland : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71428,7 +71428,7 @@ public:
 class C_DOTA_Item_Recipe_Wizard_Glass : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71436,7 +71436,7 @@ public:
 class C_DOTA_Item_Wizard_Glass : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71444,7 +71444,7 @@ public:
 class C_DOTA_Item_Recipe_Gladiator_Helm : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71452,7 +71452,7 @@ public:
 class C_DOTA_Item_Gladiator_Helm : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71460,7 +71460,7 @@ public:
 class C_DOTA_Item_Recipe_Possessed_Mask : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71468,7 +71468,7 @@ public:
 class C_DOTA_Item_Possessed_Mask : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71476,7 +71476,7 @@ public:
 class C_DOTA_Item_AssassinsDagger : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71484,7 +71484,7 @@ public:
 class C_DOTA_Item_AsceticCap : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71492,7 +71492,7 @@ public:
 class C_DOTA_Item_SamplePicker : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71500,7 +71500,7 @@ public:
 class C_DOTA_Item_IcarusWings : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71508,7 +71508,7 @@ public:
 class C_DOTA_Item_Dynamite_Jacket : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71516,7 +71516,7 @@ public:
 class C_DOTA_Item_Tree_Processor : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71524,7 +71524,7 @@ public:
 class C_DOTA_Item_Heavy_Blade : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71532,7 +71532,7 @@ public:
 class C_DOTA_Item_Mechanical_Arm : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71540,7 +71540,7 @@ public:
 class CDOTA_Item_Recipe_Fortitude_Ring : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71548,7 +71548,7 @@ public:
 class CDOTA_Item_Fortitude_Ring : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71556,7 +71556,7 @@ public:
 class CDOTA_Item_PogoStick : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71564,7 +71564,7 @@ public:
 class C_DOTA_Item_Paintball : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71572,7 +71572,7 @@ public:
 class C_DOTA_Item_UnstableWand : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71580,7 +71580,7 @@ public:
 class C_DOTA_Item_LightRobes : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71588,7 +71588,7 @@ public:
 class C_DOTA_Item_Force_Field : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71596,7 +71596,7 @@ public:
 class C_DOTA_Item_Misericorde : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71604,7 +71604,7 @@ public:
 class C_DOTA_Item_Recipe_Ancient_Perseverance : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71612,7 +71612,7 @@ public:
 class C_DOTA_Item_Ancient_Perseverance : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71620,7 +71620,7 @@ public:
 class C_DOTA_Item_Recipe_Oakheart : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71628,7 +71628,7 @@ public:
 class C_DOTA_Item_Oakheart : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71636,7 +71636,7 @@ public:
 class C_DOTA_Item_Recipe_Stormcrafter : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71644,7 +71644,7 @@ public:
 class C_DOTA_Item_Stormcrafter : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71652,7 +71652,7 @@ public:
 class C_DOTA_Item_Recipe_Overflowing_Elixir : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -71669,7 +71669,7 @@ public:
 class C_DOTA_Item_Recipe_Mysterious_Hat : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71677,7 +71677,7 @@ public:
 class C_DOTA_Item_Mysterious_Hat : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71685,7 +71685,7 @@ public:
 class CDOTA_Item_Recipe_Orb_of_Pestilence : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71693,7 +71693,7 @@ public:
 class C_DOTA_Item_Orb_of_Pestilence : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71701,7 +71701,7 @@ public:
 class C_DOTA_Item_Recipe_Fluffy_Hat : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71709,7 +71709,7 @@ public:
 class C_DOTA_Item_Fluffy_Hat : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71717,7 +71717,7 @@ public:
 class C_DOTA_Item_Recipe_Falcon_Blade : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71725,7 +71725,7 @@ public:
 class C_DOTA_Item_Falcon_Blade : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71733,7 +71733,7 @@ public:
 class C_DOTA_Item_Recipe_Mage_Slayer : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71741,7 +71741,7 @@ public:
 class C_DOTA_Item_Mage_Slayer : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71749,7 +71749,7 @@ public:
 class CDOTA_Item_Recipe_Overwhelming_Blink : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71757,7 +71757,7 @@ public:
 class C_DOTA_Item_Overwhelming_Blink : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71765,7 +71765,7 @@ public:
 class CDOTA_Item_SuperOverwhelming_Blink : public C_DOTA_Item_Overwhelming_Blink
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71773,7 +71773,7 @@ public:
 class CDOTA_Item_Recipe_Swift_Blink : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71781,7 +71781,7 @@ public:
 class C_DOTA_Item_Swift_Blink : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71789,7 +71789,7 @@ public:
 class CDOTA_Item_SuperSwift_Blink : public C_DOTA_Item_Swift_Blink
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71797,7 +71797,7 @@ public:
 class CDOTA_Item_Recipe_Arcane_Blink : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71805,7 +71805,7 @@ public:
 class C_DOTA_Item_Arcane_Blink : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71813,7 +71813,7 @@ public:
 class CDOTA_Item_SuperArcane_Blink : public C_DOTA_Item_Arcane_Blink
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71821,7 +71821,7 @@ public:
 class C_DOTA_Item_Recipe_Wind_Waker : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71829,7 +71829,7 @@ public:
 class C_DOTA_Item_Wind_Waker : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71837,7 +71837,7 @@ public:
 class C_DOTA_Item_Aghanims_Shard : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71845,7 +71845,7 @@ public:
 class C_DOTA_Item_Aghanims_Shard_Roshan : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71853,7 +71853,7 @@ public:
 class C_DOTA_Item_Recipe_Eternal_Shroud : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71861,7 +71861,7 @@ public:
 class C_DOTA_Item_Eternal_Shroud : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71869,7 +71869,7 @@ public:
 class C_DOTA_Item_Recipe_Star_Mace : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71877,7 +71877,7 @@ public:
 class C_DOTA_Item_Star_Mace : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71885,7 +71885,7 @@ public:
 class C_DOTA_Item_Recipe_Penta_Edged_Sword : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71893,7 +71893,7 @@ public:
 class C_DOTA_Item_Penta_Edged_Sword : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71901,7 +71901,7 @@ public:
 class C_DOTA_Item_Recipe_Gungir : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71909,7 +71909,7 @@ public:
 class C_DOTA_Item_Gungir : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71917,7 +71917,7 @@ public:
 class C_DOTA_Item_Recipe_Orb_Of_Revelations : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -71934,7 +71934,7 @@ public:
 class C_DOTA_Item_Satchel : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71942,7 +71942,7 @@ public:
 class C_DOTA_Item_Recipe_Grandmasters_Glaive : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -71960,7 +71960,7 @@ public:
 class C_DOTA_Item_Recipe_Warhammer : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71968,7 +71968,7 @@ public:
 class C_DOTA_Item_Warhammer : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71976,7 +71976,7 @@ public:
 class C_DOTA_Item_Recipe_Psychic_Headband : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71984,7 +71984,7 @@ public:
 class C_DOTA_Item_Psychic_Headband : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -71992,7 +71992,7 @@ public:
 class C_DOTA_Item_Recipe_Ceremonial_Robe : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72000,7 +72000,7 @@ public:
 class C_DOTA_Item_Ceremonial_Robe : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72008,7 +72008,7 @@ public:
 class C_DOTA_Item_Recipe_Book_Of_Shadows : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72016,7 +72016,7 @@ public:
 class C_DOTA_Item_Book_Of_Shadows : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72024,7 +72024,7 @@ public:
 class C_DOTA_Item_Recipe_Giants_Ring : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72032,7 +72032,7 @@ public:
 class C_DOTA_Item_Giants_Ring : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72040,7 +72040,7 @@ public:
 class C_DOTA_Item_Recipe_Vengeances_Shadow : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72048,7 +72048,7 @@ public:
 class C_DOTA_Item_Vengeances_Shadow : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72056,7 +72056,7 @@ public:
 class C_DOTA_Item_Recipe_Bullwhip : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72064,7 +72064,7 @@ public:
 class C_DOTA_Item_Bullwhip : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72072,7 +72072,7 @@ public:
 class CDOTA_Item_Recipe_Quicksilver_Amulet : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72080,7 +72080,7 @@ public:
 class CDOTA_Item_Quicksilver_Amulet : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72088,7 +72088,7 @@ public:
 class C_DOTA_Item_Recipe_Naginata : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72096,7 +72096,7 @@ public:
 class C_DOTA_Item_Naginata : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72104,7 +72104,7 @@ public:
 class CDOTA_Item_SeedsOfSerenity : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72112,7 +72112,7 @@ public:
 class C_DOTA_Item_LanceOfPursuit : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72120,7 +72120,7 @@ public:
 class C_DOTA_Item_Occult_Bracelet : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72128,7 +72128,7 @@ public:
 class C_DOTA_Item_Tome_of_Omniscience : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72136,7 +72136,7 @@ public:
 class CDOTA_Item_OgreSealTotem : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72144,7 +72144,7 @@ public:
 class CDOTA_Item_WandOfTheBrine : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72152,7 +72152,7 @@ public:
 class C_DOTA_Item_Slime_Vial : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72160,7 +72160,7 @@ public:
 class C_DOTA_Item_Harpoon : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72168,7 +72168,7 @@ public:
 class CDOTA_Item_Guardian_Shell : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -72192,7 +72192,7 @@ public:
 class C_DOTA_Item_EyeOfTheVizier : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72200,7 +72200,7 @@ public:
 class C_DOTA_Item_ManaclesOfPower : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -72220,7 +72220,7 @@ public:
 class CDOTA_Item_WandOfSanctitude : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72228,7 +72228,7 @@ public:
 class C_DOTA_Item_SpecialistsArray : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72236,7 +72236,7 @@ public:
 class C_DOTA_Item_DaggerOfRistul : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72244,7 +72244,7 @@ public:
 class CDOTA_Item_Recipe_Lunar_Crest : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72252,7 +72252,7 @@ public:
 class CDOTA_Item_Lunar_Crest : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72260,7 +72260,7 @@ public:
 class C_DOTA_Item_Recipe_Phylactery : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72268,7 +72268,7 @@ public:
 class C_DOTA_Item_Phylactery : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72276,7 +72276,7 @@ public:
 class C_DOTA_Item_Recipe_Magus_Minimus : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72284,7 +72284,7 @@ public:
 class C_DOTA_Item_Magus_Minimus : public C_DOTA_Item
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72292,7 +72292,7 @@ public:
 class C_EnvDeferredLight : public C_ModelPointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72300,7 +72300,7 @@ public:
 class C_EnvDeferredLightClientOnly : public C_EnvDeferredLight
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72308,7 +72308,7 @@ public:
 class C_EnvDeferredSpotLightClientOnly : public C_EnvDeferredLight
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 95
@@ -72670,7 +72670,7 @@ public:
 class C_DOTA_PortraitTree : public CBaseAnimatingActivity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -72723,7 +72723,7 @@ public:
 class C_DOTA_PortraitBaseModel : public CBaseAnimatingActivity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72731,7 +72731,7 @@ public:
 class C_PointEntityAlias_info_target_portrait_root : public C_PointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -72748,7 +72748,7 @@ public:
 class CInfoOfrendaStatueSpawn : public C_PointEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -72821,7 +72821,7 @@ public:
 class C_TonemapController2Alias_env_tonemap_controller2 : public C_TonemapController2
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -72841,7 +72841,7 @@ public:
 class C_LightSpotEntity : public C_LightEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72849,7 +72849,7 @@ public:
 class C_LightOrthoEntity : public C_LightEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72857,7 +72857,7 @@ public:
 class C_LightDirectionalEntity : public C_LightEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -72865,7 +72865,7 @@ public:
 class C_LightEnvironmentEntity : public C_LightDirectionalEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 12
@@ -73150,7 +73150,7 @@ public:
 class C_DynamicPropAlias_dynamic_prop : public C_DynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -73158,7 +73158,7 @@ public:
 class C_DynamicPropAlias_prop_dynamic_override : public C_DynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -73166,7 +73166,7 @@ public:
 class C_DynamicPropAlias_cable_dynamic : public C_DynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -73198,7 +73198,7 @@ public:
 class C_FuncMoveLinear : public C_BaseToggle
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 13
@@ -73503,7 +73503,7 @@ public:
 class C_EconWearable : public C_EconEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -73511,7 +73511,7 @@ public:
 class C_TFWearableItem : public C_EconWearable
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -73528,7 +73528,7 @@ public:
 class C_DynamicPropClientFadeOut : public C_DynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -73584,7 +73584,7 @@ public:
 class CAdditionalWearable : public C_DynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 14
@@ -73628,7 +73628,7 @@ public:
 class C_InfoPlayerStartGoodGuys : public C_InfoPlayerStartDota
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -73636,7 +73636,7 @@ public:
 class C_InfoPlayerStartBadGuys : public C_InfoPlayerStartDota
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -73652,7 +73652,7 @@ public:
 class C_PortraitWorldPet : public C_DynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -73721,7 +73721,7 @@ public:
 class C_DOTA_GuildBannerProp : public C_DynamicProp
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -73738,7 +73738,7 @@ public:
 class CVehicleEntityIO : public CBaseVehicle
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -73870,7 +73870,7 @@ public:
 class C_DOTA_Tiny_ScepterTree : public C_DOTAWearableItem
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -73878,7 +73878,7 @@ public:
 class CDOTAPlayerPawn : public C_BasePlayerPawn
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -73920,7 +73920,7 @@ public:
 class C_NetTestBaseCombatCharacter : public C_BaseCombatCharacter
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 185
@@ -74349,7 +74349,7 @@ public:
 class C_DOTA_BaseNPC_Additive : public C_DOTA_BaseNPC
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 16
@@ -74396,7 +74396,7 @@ public:
 class C_DOTA_BaseNPC_Filler : public C_DOTA_BaseNPC_Building
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -74455,7 +74455,7 @@ public:
 class C_DOTA_BaseNPC_SDKTower : public C_DOTA_BaseNPC_HoldoutTower
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74463,7 +74463,7 @@ public:
 class C_DOTA_BaseNPC_HoldoutTower_LightFast : public C_DOTA_BaseNPC_HoldoutTower
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74471,7 +74471,7 @@ public:
 class C_DOTA_BaseNPC_HoldoutTower_HeavySlow : public C_DOTA_BaseNPC_HoldoutTower
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74479,7 +74479,7 @@ public:
 class C_DOTA_BaseNPC_HoldoutTower_ReduceSpeed : public C_DOTA_BaseNPC_HoldoutTower
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74487,7 +74487,7 @@ public:
 class C_DOTA_BaseNPC_Barracks : public C_DOTA_BaseNPC_Building
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74495,7 +74495,7 @@ public:
 class C_DOTA_BaseNPC_Fort : public C_DOTA_BaseNPC_Building
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74503,7 +74503,7 @@ public:
 class C_DOTA_BaseNPC_Effigy_Statue : public C_DOTA_BaseNPC_Building
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74511,7 +74511,7 @@ public:
 class C_DOTA_BaseNPC_Effigy_BattleCup : public C_DOTA_BaseNPC_Building
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -74632,8 +74632,8 @@ public:
 		uint8_t m_bStoreOldVisibility: 1; 		
 		uint8_t m_bResetVisibility: 1; 		
 		uint8_t m_bStoredVisibility: 1; 		
-		uint16_t __pad4: 10; // @note: autoaligned
-	}; // 20 bits
+		uint8_t __pad4: 2; // @note: autoaligned
+	}; // 12 bits
 };
 
 // Alignment: 1
@@ -74650,7 +74650,7 @@ public:
 class C_DOTA_BaseNPC_Creep_Lane : public C_DOTA_BaseNPC_Creep
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74658,7 +74658,7 @@ public:
 class C_DOTA_BaseNPC_Creep_Siege : public C_DOTA_BaseNPC_Creep_Lane
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -74674,7 +74674,7 @@ public:
 class C_DOTA_BaseNPC_Creep_Talking : public C_DOTA_BaseNPC_Creep
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -74710,7 +74710,7 @@ public:
 class C_DOTA_BaseNPC_Trap_Ward : public C_DOTA_BaseNPC_Creature
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -74741,7 +74741,7 @@ public:
 class C_DOTA_BaseNPC_Promo : public C_DOTA_BaseNPC_Building
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -74798,7 +74798,7 @@ public:
 class C_DOTA_BaseNPC_Seasonal_Snowman : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74806,7 +74806,7 @@ public:
 class CDOTA_BaseNPC_Seasonal_Penguin : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74814,7 +74814,7 @@ public:
 class CDOTA_BaseNPC_Seasonal_Dragon : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74822,7 +74822,7 @@ public:
 class CDOTA_BaseNPC_Seasonal_CNY_Balloon : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74830,7 +74830,7 @@ public:
 class CDOTA_BaseNPC_Seasonal_TI9_Balloon : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74838,7 +74838,7 @@ public:
 class CDOTA_BaseNPC_Seasonal_TI9_Drums : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74846,7 +74846,7 @@ public:
 class CDOTA_BaseNPC_Seasonal_TI9_Monkey : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74854,7 +74854,7 @@ public:
 class C_DOTA_BaseNPC_Frostivus2018_Snowman : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74862,7 +74862,7 @@ public:
 class CDOTA_BaseNPC_Frostivus2018_Clinkz_Skeleton_Army : public C_DOTA_BaseNPC
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74870,7 +74870,7 @@ public:
 class CDOTA_Unit_SpectralTusk_Tombstone : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -74890,7 +74890,7 @@ public:
 class CDOTA_BaseNPC_Spring2021_DefusalBomb : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74898,7 +74898,7 @@ public:
 class CDOTA_BaseNPC_Spring2021_MeteorCrashSite : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74906,7 +74906,7 @@ public:
 class CDOTA_BaseNPC_Spring2021_AbilityBuilding : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74914,7 +74914,7 @@ public:
 class CDOTA_BaseNPC_Winter2022_CandyBucket : public C_DOTA_BaseNPC_Building
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74922,7 +74922,7 @@ public:
 class CDOTA_BaseNPC_Winter2022_FeedableRoshan : public C_DOTA_BaseNPC_Creature
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74930,7 +74930,7 @@ public:
 class CDOTA_Unit_AghsFort_SpectralTusk_Tombstone : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -74938,7 +74938,7 @@ public:
 class CDOTA_Unit_AghsFort_Creature_DragonKnight : public C_DOTA_BaseNPC_Creature
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -74962,7 +74962,7 @@ public:
 class C_DOTA_Unit_AghsFort_Creature_Batrider : public C_DOTA_BaseNPC_Creature
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -75023,7 +75023,7 @@ public:
 class CDOTA_Unit_CustomGameAnnouncerAghanim : public C_DOTA_BaseNPC
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75034,7 +75034,7 @@ public:
 	static char* &Get_PARTICLE_SPAWN(){return *reinterpret_cast<char**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CDOTA_BaseNPC_Seasonal_TI10_DiscoBall")->m_static_fields[0]->m_instance);};
 	static char* &Get_PARTICLE_DEATH(){return *reinterpret_cast<char**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CDOTA_BaseNPC_Seasonal_TI10_DiscoBall")->m_static_fields[1]->m_instance);};
 	static char* &Get_PARTICLE_CHANNEL(){return *reinterpret_cast<char**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CDOTA_BaseNPC_Seasonal_TI10_DiscoBall")->m_static_fields[2]->m_instance);};
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75042,7 +75042,7 @@ public:
 class CDOTA_BaseNPC_Seasonal_TI10_SoccerBall : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75050,7 +75050,7 @@ public:
 class CDOTA_BaseNPC_Seasonal_TI11_Balloon : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75058,7 +75058,7 @@ public:
 class CDOTA_BaseNPC_Seasonal_TI11_Balloon_Dire : public CDOTA_BaseNPC_Seasonal_TI11_Balloon
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75066,7 +75066,7 @@ public:
 class CInfoOfrendaStatue : public C_DOTA_BaseNPC_Building
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -75100,7 +75100,7 @@ public:
 class CDOTA_BaseNPC_JungleVarmint : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75108,7 +75108,7 @@ public:
 class CIngameEvent_MuertaReleaseSpring2023_DummyModifierHolder : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75116,7 +75116,7 @@ public:
 class C_DOTA_NPC_DataDriven : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75124,7 +75124,7 @@ public:
 class C_DOTA_Unit_AghsFort_EarthSpiritBoss_Stone : public C_DOTA_BaseNPC
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -75144,7 +75144,7 @@ public:
 class C_DOTA_AghsFort_Unit_Undying_Tombstone : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -75161,7 +75161,7 @@ public:
 class C_DOTA_AghsFort_Unit_Hero_Undying : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75169,7 +75169,7 @@ public:
 class C_DOTA_NPC_AghsFort_Lich_Ice_Spire : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75177,7 +75177,7 @@ public:
 class C_DOTA_AghsFort_Hero_Phoenix : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -75195,7 +75195,7 @@ public:
 class CDOTA_Unit_Hero_Aghsfort_PrimalBeast_Boss : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75203,7 +75203,7 @@ public:
 class C_DOTA_AghsFort_Hero_Clinkz : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75211,7 +75211,7 @@ public:
 class C_DOTA_BaseNPC_AghsFort_Clinkz_Skeleton_Archer : public C_DOTA_BaseNPC
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75219,7 +75219,7 @@ public:
 class C_DOTA_BaseNPC_AghsFort_Clinkz_Skeleton_Colossus : public C_DOTA_BaseNPC_Creature
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75227,7 +75227,7 @@ public:
 class CDOTA_Unit_Hero_AncientApparition : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75235,7 +75235,7 @@ public:
 class C_DOTA_Unit_Hero_AntiMage : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75243,7 +75243,7 @@ public:
 class C_DOTA_Unit_Hero_Bane : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75251,7 +75251,7 @@ public:
 class C_DOTA_Unit_Hero_Pudge : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -75275,7 +75275,7 @@ public:
 class C_DOTA_Unit_Hero_SandKing : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75283,7 +75283,7 @@ public:
 class C_DOTA_Unit_Hero_Mirana : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75291,7 +75291,7 @@ public:
 class C_DOTA_Unit_Hero_Sven : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -75313,7 +75313,7 @@ public:
 class C_DOTA_Unit_Hero_StormSpirit : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75321,7 +75321,7 @@ public:
 class C_DOTA_Unit_Hero_DrowRanger : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -75354,7 +75354,7 @@ public:
 class C_DOTA_Unit_Hero_Axe : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75362,7 +75362,7 @@ public:
 class C_DOTA_Unit_Hero_Bloodseeker : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75370,7 +75370,7 @@ public:
 class C_DOTA_Unit_Hero_PhantomLancer : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -75393,7 +75393,7 @@ public:
 class C_DOTA_Unit_Hero_Lina : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75401,7 +75401,7 @@ public:
 class C_DOTA_Unit_Hero_Morphling : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75409,7 +75409,7 @@ public:
 class C_DOTA_Unit_ZeusCloud : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75417,7 +75417,7 @@ public:
 class C_DOTA_Unit_Hero_Zuus : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -75446,7 +75446,7 @@ public:
 class C_DOTA_Unit_Hero_Puck : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -75466,7 +75466,7 @@ public:
 class C_DOTA_Unit_Hero_Lich : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75474,7 +75474,7 @@ public:
 class C_DOTA_NPC_Lich_Ice_Spire : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75482,7 +75482,7 @@ public:
 class C_DOTA_Unit_Hero_Tidehunter : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -75499,7 +75499,7 @@ public:
 class C_DOTA_Unit_Hero_ShadowShaman : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75507,7 +75507,7 @@ public:
 class C_DOTA_Unit_Hero_Riki : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75515,7 +75515,7 @@ public:
 class C_DOTA_Unit_Hero_Enigma : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75523,7 +75523,7 @@ public:
 class C_DOTA_Unit_Hero_Tinker : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75531,7 +75531,7 @@ public:
 class C_DOTA_Unit_Hero_WitchDoctor : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -75551,7 +75551,7 @@ public:
 class C_DOTA_Unit_Hero_Sniper : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75559,7 +75559,7 @@ public:
 class C_DOTA_Unit_Hero_Necrolyte : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75567,7 +75567,7 @@ public:
 class C_DOTA_Unit_Hero_Slardar : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75575,7 +75575,7 @@ public:
 class C_DOTA_Unit_Hero_Ursa : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -75599,7 +75599,7 @@ public:
 class CDOTA_Unit_CustomGameAnnouncer : public C_DOTA_BaseNPC
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -75632,7 +75632,7 @@ public:
 class C_DOTA_Unit_Fountain : public C_DOTA_BaseNPC_Building
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -75652,7 +75652,7 @@ public:
 class C_DOTA_Unit_Nian : public C_DOTA_BaseNPC_Creature
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75660,7 +75660,7 @@ public:
 class C_DOTA_BaseNPC_Warlock_Golem : public C_DOTA_BaseNPC_Creep
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75668,7 +75668,7 @@ public:
 class C_DOTA_Unit_Hero_Warlock : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75676,7 +75676,7 @@ public:
 class C_DOTA_Unit_Hero_Beastmaster : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75684,7 +75684,7 @@ public:
 class C_DOTA_Unit_Hero_Beastmaster_Beasts : public C_DOTA_BaseNPC_Creep_Talking
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75692,7 +75692,7 @@ public:
 class C_DOTA_Unit_Hero_Beastmaster_Hawk : public C_DOTA_Unit_Hero_Beastmaster_Beasts
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75700,7 +75700,7 @@ public:
 class C_DOTA_Unit_Hero_Beastmaster_Boar : public C_DOTA_Unit_Hero_Beastmaster_Beasts
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75708,7 +75708,7 @@ public:
 class C_DOTA_Unit_Hero_QueenOfPain : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -75725,7 +75725,7 @@ public:
 class C_DOTA_Unit_Hero_Venomancer : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75733,7 +75733,7 @@ public:
 class C_DOTA_Unit_Hero_FacelessVoid : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75741,7 +75741,7 @@ public:
 class C_DOTA_Unit_Hero_DeathProphet : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75749,7 +75749,7 @@ public:
 class C_DOTA_Unit_Hero_Pugna : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -75784,7 +75784,7 @@ public:
 class C_DOTA_Unit_Hero_TemplarAssassin : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75792,7 +75792,7 @@ public:
 class C_DOTA_Unit_Hero_Viper : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -75828,7 +75828,7 @@ public:
 class C_DOTA_Unit_Hero_Luna : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75836,7 +75836,7 @@ public:
 class C_DOTA_Unit_Hero_DragonKnight : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75844,7 +75844,7 @@ public:
 class C_DOTA_Unit_Hero_Dazzle : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75852,7 +75852,7 @@ public:
 class C_DOTA_Unit_Hero_Leshrac : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75860,7 +75860,7 @@ public:
 class C_DOTA_Unit_Hero_Rattletrap : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75868,7 +75868,7 @@ public:
 class C_DOTA_Unit_Hero_Furion : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75876,7 +75876,7 @@ public:
 class C_DOTA_Unit_Hero_Life_Stealer : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -75892,7 +75892,7 @@ public:
 class C_DOTA_BaseNPC_Clinkz_Skeleton_Army : public C_DOTA_BaseNPC
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75900,7 +75900,7 @@ public:
 class C_DOTA_Unit_Hero_Clinkz : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75908,7 +75908,7 @@ public:
 class C_DOTA_Unit_Hero_Omniknight : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75916,7 +75916,7 @@ public:
 class C_DOTA_Unit_Hero_Enchantress : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75924,7 +75924,7 @@ public:
 class C_DOTA_Unit_Hero_Huskar : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75932,7 +75932,7 @@ public:
 class C_DOTA_Unit_Hero_NightStalker : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75940,7 +75940,7 @@ public:
 class C_DOTA_Unit_Hero_Broodmother : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75948,7 +75948,7 @@ public:
 class C_DOTA_Unit_Broodmother_Spiderling : public C_DOTA_BaseNPC_Creep_Talking
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -75965,7 +75965,7 @@ public:
 class C_DOTA_NPC_BroodmotherStickyWeb : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75973,7 +75973,7 @@ public:
 class C_DOTA_Unit_Hero_BountyHunter : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75981,7 +75981,7 @@ public:
 class C_DOTA_Unit_Hero_Weaver : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75989,7 +75989,7 @@ public:
 class C_DOTA_Unit_Hero_Jakiro : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -75997,7 +75997,7 @@ public:
 class C_DOTA_Unit_Hero_Batrider : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76005,7 +76005,7 @@ public:
 class C_DOTA_Unit_Hero_Chen : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -76035,7 +76035,7 @@ public:
 class C_DOTA_Unit_Hero_DoomBringer : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76043,7 +76043,7 @@ public:
 class C_DOTA_Unit_Hero_SpiritBreaker : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76051,7 +76051,7 @@ public:
 class CDOTA_Unit_Hero_Gyrocopter : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76059,7 +76059,7 @@ public:
 class CDOTA_Unit_Hero_Alchemist : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76067,7 +76067,7 @@ public:
 class C_DOTA_Unit_Hero_Invoker : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76075,7 +76075,7 @@ public:
 class C_DOTA_BaseNPC_Invoker_Forged_Spirit : public C_DOTA_BaseNPC_Creep
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76083,7 +76083,7 @@ public:
 class C_DOTA_Unit_Hero_Silencer : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -76099,7 +76099,7 @@ public:
 class C_DOTA_Unit_Hero_Brewmaster : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -76141,7 +76141,7 @@ public:
 class C_DOTA_Unit_Hero_Lycan : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76149,7 +76149,7 @@ public:
 class C_DOTA_Unit_Hero_Shadow_Demon : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -76168,7 +76168,7 @@ public:
 class C_DOTA_Unit_Hero_LoneDruid : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76176,7 +76176,7 @@ public:
 class C_DOTA_Unit_Hero_ChaosKnight : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -76193,7 +76193,7 @@ public:
 class C_DOTA_Unit_Hero_Treant : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76201,7 +76201,7 @@ public:
 class C_DOTA_NPC_Treant_EyesInTheForest : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76209,7 +76209,7 @@ public:
 class C_DOTA_Unit_Hero_Ogre_Magi : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76217,7 +76217,7 @@ public:
 class C_DOTA_Unit_Undying_Tombstone : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -76234,7 +76234,7 @@ public:
 class C_DOTA_Unit_Hero_Undying : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 11
@@ -76270,7 +76270,7 @@ public:
 class C_DOTA_Unit_Hero_Disruptor : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76278,7 +76278,7 @@ public:
 class C_DOTA_Unit_Hero_Nyx_Assassin : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76286,7 +76286,7 @@ public:
 class C_DOTA_Unit_Hero_Naga_Siren : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76294,7 +76294,7 @@ public:
 class C_DOTA_Unit_IngisFatuus : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76302,7 +76302,7 @@ public:
 class C_DOTA_Unit_Hero_KeeperOfTheLight : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 8
@@ -76328,7 +76328,7 @@ public:
 class C_DOTA_Wisp_Spirit : public C_DOTA_BaseNPC
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76336,7 +76336,7 @@ public:
 class C_DOTA_Unit_Hero_Visage : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -76352,7 +76352,7 @@ public:
 class C_DOTA_Unit_Hero_Slark : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76360,7 +76360,7 @@ public:
 class C_DOTA_Unit_Hero_Medusa : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76368,7 +76368,7 @@ public:
 class C_DOTA_Unit_Hero_TrollWarlord : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76376,7 +76376,7 @@ public:
 class CDOTA_Unit_Hero_Centaur : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76384,7 +76384,7 @@ public:
 class C_DOTA_Unit_Hero_Magnataur : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76392,7 +76392,7 @@ public:
 class C_DOTA_Unit_Hero_Shredder : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76400,7 +76400,7 @@ public:
 class C_DOTA_Unit_Hero_Bristleback : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76408,7 +76408,7 @@ public:
 class C_DOTA_Unit_Hero_Tusk : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -76424,7 +76424,7 @@ public:
 class C_DOTA_Unit_Hero_Skywrath_Mage : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76432,7 +76432,7 @@ public:
 class CDOTA_Unit_Hero_Abaddon : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76440,7 +76440,7 @@ public:
 class CDOTA_Unit_Elder_Titan_AncestralSpirit : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76448,7 +76448,7 @@ public:
 class CDOTA_Unit_Hero_Elder_Titan : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -76480,7 +76480,7 @@ public:
 class C_DOTA_NPC_Techies_Minefield_Sign : public C_DOTA_BaseNPC_Additive
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76488,7 +76488,7 @@ public:
 class C_DOTA_Unit_Hero_EmberSpirit : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76496,7 +76496,7 @@ public:
 class C_DOTA_Unit_Earth_Spirit_Stone : public C_DOTA_BaseNPC
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -76542,7 +76542,7 @@ public:
 class C_DOTA_Unit_Hero_Phoenix : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -76593,7 +76593,7 @@ public:
 class C_DOTA_Unit_Hero_Pangolier : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76601,7 +76601,7 @@ public:
 class C_DOTA_Unit_Hero_DarkWillow : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76609,7 +76609,7 @@ public:
 class C_DOTA_DarkWillow_Creature : public C_DOTA_BaseNPC
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -76625,7 +76625,7 @@ public:
 class CDOTA_Unit_Grimstroke_InkCreature : public C_DOTA_BaseNPC
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76633,7 +76633,7 @@ public:
 class CDOTA_Unit_Hero_Mars : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76641,7 +76641,7 @@ public:
 class CDOTA_Unit_Hero_Snapfire : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76649,7 +76649,7 @@ public:
 class CDOTA_Unit_Hero_Void_Spirit : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76657,7 +76657,7 @@ public:
 class C_DOTA_Unit_Hero_Hoodwink : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -76674,7 +76674,7 @@ public:
 class CDOTA_Unit_Hero_Marci : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76682,7 +76682,7 @@ public:
 class CDOTA_Unit_Hero_PrimalBeast : public C_DOTA_BaseNPC_Hero
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -76701,7 +76701,7 @@ public:
 class CDOTA_Muerta_Revenant : public C_DOTA_BaseNPC
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -76750,7 +76750,7 @@ public:
 class C_DOTA_PortraitEntity_FullBody : public C_DOTA_PortraitEntity
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -76758,6 +76758,6 @@ public:
 class CDOTA_Unit_Announcer_Killing_Spree : public CDOTA_Unit_Announcer
 {
 public:
-	// no members available
+	// @note: no members available
 };
 

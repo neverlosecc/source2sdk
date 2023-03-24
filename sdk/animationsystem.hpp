@@ -2056,7 +2056,7 @@ public:
 class CStaticPoseCacheBuilder : public CStaticPoseCache
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 10
@@ -2130,7 +2130,7 @@ public:
 class CAnimGraphSettingsGroup
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x20]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -2406,7 +2406,7 @@ public:
 class CAnimActionBase
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x28]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -2482,7 +2482,7 @@ public:
 class CPathAnimMotor : public CPathAnimMotorBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -4316,7 +4316,7 @@ public:
 class CInputStreamAnimNode : public CAnimNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -4372,7 +4372,7 @@ public:
 class CBindPoseAnimNode : public CAnimNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -4380,7 +4380,7 @@ public:
 class CZeroPoseAnimNode : public CAnimNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -4497,7 +4497,7 @@ public:
 class CConditionBase
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x28]; 	// @note: autoaligned
 };
 
 // Alignment: 4
@@ -4547,7 +4547,7 @@ public:
 class COrCondition : public CConditionBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -4650,7 +4650,7 @@ public:
 class CStringAnimTag : public CAnimTagBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -4863,7 +4863,7 @@ public:
 class CMotionNodeManager : public CAnimNodeManager
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -5010,7 +5010,7 @@ public:
 class CBlockSelectionMetric : public CMotionMetricBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -5029,7 +5029,7 @@ public:
 class CCurrentRotationVelocityMetric : public CMotionMetricBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -5037,7 +5037,7 @@ public:
 class CCurrentVelocityMetric : public CMotionMetricBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -5369,7 +5369,7 @@ public:
 class CAnimActionUpdater
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x18]; 	// @note: autoaligned
 };
 
 // Alignment: 2
@@ -5394,7 +5394,7 @@ public:
 class CPathAnimMotorUpdater : public CPathAnimMotorUpdaterBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 7
@@ -5543,7 +5543,7 @@ public:
 class CLeafUpdateNode : public CAnimUpdateNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -5861,7 +5861,7 @@ public:
 class CInputStreamUpdateNode : public CLeafUpdateNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3
@@ -5965,7 +5965,7 @@ public:
 class CEditableMotionGraph : public CMotionGraph
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -6021,7 +6021,7 @@ public:
 class CBlockSelectionMetricEvaluator : public CMotionMetricEvaluator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -6037,7 +6037,7 @@ public:
 class CCurrentRotationVelocityMetricEvaluator : public CMotionMetricEvaluator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -6045,7 +6045,7 @@ public:
 class CCurrentVelocityMetricEvaluator : public CMotionMetricEvaluator
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 4
@@ -7145,7 +7145,7 @@ public:
 class CBoneConstraintBase
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x28]; 	// @note: autoaligned
 };
 
 // Alignment: 4
@@ -7167,7 +7167,7 @@ public:
 class CPointConstraint : public CBaseConstraint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7175,7 +7175,7 @@ public:
 class COrientConstraint : public CBaseConstraint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -7225,7 +7225,7 @@ public:
 class CParentConstraint : public CBaseConstraint
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 5
@@ -7409,7 +7409,7 @@ public:
 class CAnimCycle : public CCycleBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7417,7 +7417,7 @@ public:
 class CFootCycle : public CCycleBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 9
@@ -7608,7 +7608,7 @@ public:
 class CAnimComponentStateTransition : public CAnimStateTransition
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7616,7 +7616,7 @@ public:
 class CAnimComponentState : public CAnimState
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -7759,7 +7759,7 @@ public:
 class CGroupInputAnimNode : public CProxyAnimNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7767,7 +7767,7 @@ public:
 class CGroupOutputAnimNode : public CProxyAnimNodeBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7775,7 +7775,7 @@ public:
 class CBindPoseUpdateNode : public CLeafUpdateNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7783,7 +7783,7 @@ public:
 class CZeroPoseUpdateNode : public CLeafUpdateNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7791,7 +7791,7 @@ public:
 class CAndCondition : public CConditionBase
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -7799,7 +7799,7 @@ public:
 class CRootUpdateNode : public CUnaryUpdateNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 6
@@ -8048,7 +8048,7 @@ public:
 class CChoreoUpdateNode : public CUnaryUpdateNode
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 3

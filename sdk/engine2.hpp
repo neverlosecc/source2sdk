@@ -71,7 +71,7 @@ public:
 struct EventModInitialized_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -95,7 +95,7 @@ public:
 struct EventSplitScreenStateChanged_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 8
@@ -246,7 +246,7 @@ public:
 struct EventServerAdvanceTick_t : public EventAdvanceTick_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -254,7 +254,7 @@ public:
 struct EventServerPostAdvanceTick_t : public EventPostAdvanceTick_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -262,7 +262,7 @@ public:
 struct EventClientAdvanceTick_t : public EventAdvanceTick_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -270,7 +270,7 @@ public:
 struct EventClientPostAdvanceTick_t : public EventPostAdvanceTick_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 2
@@ -287,7 +287,7 @@ public:
 struct EventClientPredictionPostNetupdate_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -303,7 +303,7 @@ public:
 struct EventClientProcessNetworking_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -311,7 +311,7 @@ public:
 struct EventClientPreSimulate_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -319,7 +319,7 @@ public:
 struct EventClientSimulate_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -327,7 +327,7 @@ public:
 struct EventServerPollNetworking_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -335,7 +335,7 @@ public:
 struct EventServerProcessNetworking_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -343,7 +343,7 @@ public:
 struct EventServerSimulate_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -351,7 +351,7 @@ public:
 struct EventServerPostSimulate_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -359,7 +359,7 @@ public:
 struct EventClientPostSimulate_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 0
@@ -367,7 +367,7 @@ public:
 struct EventClientPauseSimulate_t : public EventSimulate_t
 {
 public:
-	// no members available
+	// @note: no members available
 };
 
 // Alignment: 1
@@ -399,7 +399,7 @@ public:
 class IHandleEntity
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 1
@@ -417,7 +417,7 @@ public:
 class CVariantDefaultAllocator
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x1]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -425,7 +425,7 @@ public:
 struct EntOutput_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x10]; 	// @note: autoaligned
 };
 
 // Alignment: 8
@@ -451,7 +451,7 @@ public:
 class CEntityComponent
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 0
@@ -459,7 +459,7 @@ public:
 struct EntInput_t
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x30]; 	// @note: autoaligned
 };
 
 // Alignment: 4
@@ -516,7 +516,7 @@ public:
 class CEmptyEntityInstance
 {
 public:
-	// no members available
+	uint8_t __pad0000[0x8]; 	// @note: autoaligned
 };
 
 // Alignment: 3
