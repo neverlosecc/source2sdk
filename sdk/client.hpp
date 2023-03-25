@@ -124,6 +124,8 @@ struct CPlayer_MovementServices;
 // Size: 0x20
 class CBuoyancyHelper
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	float m_flFluidDensity; // 0x18	
 };
@@ -141,6 +143,8 @@ public:
 // Size: 0xc0
 struct PlayerResourceData_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkEncoder
@@ -179,6 +183,8 @@ public:
 // Size: 0x78
 struct audioparams_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkEncoder
@@ -198,6 +204,8 @@ public:
 // Size: 0x68
 struct fogparams_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkEncoder
@@ -286,13 +294,13 @@ public:
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
 	// MNetworkBitCount "17"
-	// MNetworkMinValue "-4096"
-	// MNetworkMaxValue "4096"
+	// MNetworkMinValue "-4096.000000"
+	// MNetworkMaxValue "4096.000000"
 	float m_flFallVelocity; // 0x34	
 	// MNetworkEnable
 	// MNetworkBitCount "12"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "2048"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "2048.000000"
 	// MNetworkEncodeFlags
 	float m_flMaxspeed; // 0x38	
 	// MNetworkEnable
@@ -400,6 +408,8 @@ public:
 // Size: 0x40
 class CNetworkedSequenceOperation
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkSerializer "minusone"
@@ -408,8 +418,8 @@ public:
 	HSequence m_hSequence; // 0x8	
 	// MNetworkEnable
 	// MNetworkBitCount "15"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	// MNetworkEncodeFlags
 	// MNetworkPriority "32"
 	// MNetworkSendProxyRecipientsFilter
@@ -417,8 +427,8 @@ public:
 	float m_flPrevCycle; // 0xc	
 	// MNetworkEnable
 	// MNetworkBitCount "15"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	// MNetworkEncodeFlags
 	// MNetworkPriority "32"
 	// MNetworkSendProxyRecipientsFilter
@@ -430,8 +440,8 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	// MNetworkEncodeFlags
 	CNetworkedQuantizedFloat m_flWeight; // 0x18	
 	// MNetworkDisable
@@ -451,6 +461,8 @@ public:
 // Size: 0x30
 struct CBaseAnimatingEasingFloat_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	CUtlString m_GraphParameterName; // 0x8	
@@ -465,6 +477,8 @@ public:
 // Size: 0x38
 struct CBaseAnimatingEasings_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	CBaseAnimatingEasingFloat_t m_IKMasterBlendAmountEasing; // 0x8	
@@ -474,6 +488,8 @@ public:
 // Size: 0x28
 struct PhysicsRagdollPose_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnTransformChanged"
@@ -485,6 +501,8 @@ public:
 // Size: 0x58
 struct ActiveModelConfig_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	// MNetworkEnable
 	ModelConfigHandle_t m_Handle; // 0x18	
@@ -503,6 +521,8 @@ public:
 // Size: 0x10
 class CGameSceneNodeHandle
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	CEntityHandle m_hOwner; // 0x8	
@@ -514,6 +534,8 @@ public:
 // Size: 0x160
 class CGameSceneNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	// MNetworkDisable
 	CTransform m_nodeToWorld; // 0x10	
@@ -616,6 +638,8 @@ public:
 // Size: 0xb8
 class CAnimationLayer
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "animationLayerOpChanged"
@@ -628,8 +652,8 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "-4"
-	// MNetworkMaxValue "12"
+	// MNetworkMinValue "-4.000000"
+	// MNetworkMaxValue "12.000000"
 	// MNetworkEncodeFlags
 	// MNetworkSendProxyRecipientsFilter
 	CNetworkedQuantizedFloat m_flPlaybackRate; // 0x68	
@@ -673,6 +697,8 @@ public:
 // Size: 0x50
 class CNetworkedIKProceduralTargetContext
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
 	// MNetworkEnable
 	int32_t m_nChainIndex; // 0x20	
@@ -693,6 +719,8 @@ public:
 // Size: 0x50
 class CNetworkedIKContext
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	C_UtlVectorEmbeddedNetworkVar< CNetworkedIKProceduralTargetContext > m_ProceduralTargetContexts; // 0x8	
@@ -702,6 +730,8 @@ public:
 // Size: 0x240
 class CModelState
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0xa0]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "skeletonModelChanged"
@@ -737,6 +767,8 @@ public:
 // Size: 0x4c0
 class CSkeletonInstance : public CGameSceneNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0160[0x10]; // 0x160
 public:
 	// MNetworkEnable
 	CModelState m_modelState; // 0x170	
@@ -780,6 +812,8 @@ public:
 // Size: 0x10
 class IntervalTimer
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	float m_timestamp; // 0x8	
@@ -789,6 +823,8 @@ public:
 // Size: 0x10
 class CountdownTimer
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	float m_duration; // 0x8	
@@ -821,6 +857,8 @@ public:
 // Size: 0x16b0
 class CAnimGraphNetworkedVariables
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "animationgraph"
@@ -974,6 +1012,8 @@ public:
 // Size: 0x2e0
 class CProjectedTextureBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0xc]; // 0x0
 public:
 	// MNetworkEnable
 	CHandle< C_BaseEntity > m_hTargetEntity; // 0xc	
@@ -1036,14 +1076,14 @@ public:
 	uint32_t m_nShadowQuality; // 0x258	
 	// MNetworkEnable
 	// MNetworkBitCount "16"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "500"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "500.000000"
 	// MNetworkEncodeFlags
 	float m_flNearZ; // 0x25c	
 	// MNetworkEnable
 	// MNetworkBitCount "18"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1500"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1500.000000"
 	// MNetworkEncodeFlags
 	float m_flFarZ; // 0x260	
 	// MNetworkEnable
@@ -1052,6 +1092,8 @@ public:
 	float m_flRotation; // 0x268	
 	// MNetworkEnable
 	bool m_bFlipHorizontal; // 0x26c	
+	
+	// Static fields:
 	static float &Get_m_flVisibleBBoxMinHeight(){return *reinterpret_cast<float*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CProjectedTextureBase")->m_static_fields[0]->m_instance);};
 };
 
@@ -1059,6 +1101,8 @@ public:
 // Size: 0x10
 class C_RopeKeyframe::CPhysicsDelegate
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	C_RopeKeyframe* m_pKeyframe; // 0x8	
 };
@@ -1075,6 +1119,8 @@ public:
 // Size: 0x2d0
 class CFlashlightEffect
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	bool m_bIsOn; // 0x8	
 private:
@@ -1131,6 +1177,8 @@ public:
 // Size: 0xd0
 class CGlowOverlay
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	Vector m_vPos; // 0x8	
 	bool m_bDirectional; // 0x14	
@@ -1165,8 +1213,10 @@ public:
 // Size: 0x8
 class IClientAlphaProperty
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	uint8_t __pad0000[0x8]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 8
@@ -1195,6 +1245,8 @@ public:
 // Size: 0x30
 struct VPhysicsCollisionAttribute_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	uint64_t m_nInteractsAs; // 0x8	
@@ -1218,6 +1270,8 @@ public:
 // Size: 0xb0
 class CCollisionProperty
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "CollisionAttributeChanged"
@@ -1291,6 +1345,8 @@ public:
 // Size: 0x70
 class CEffectData
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkEncoder
@@ -1312,14 +1368,14 @@ public:
 	float m_flScale; // 0x40	
 	// MNetworkEnable
 	// MNetworkBitCount "12"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1023"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1023.000000"
 	// MNetworkEncodeFlags
 	float m_flMagnitude; // 0x44	
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1023"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1023.000000"
 	// MNetworkEncodeFlags
 	float m_flRadius; // 0x48	
 	// MNetworkEnable
@@ -1358,6 +1414,8 @@ public:
 // Size: 0x230
 class C_EnvWindShared
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	float m_flStartTime; // 0x8	
@@ -1436,6 +1494,8 @@ public:
 // Size: 0x60
 struct shard_model_desc_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	int32_t m_nModelID; // 0x8	
@@ -1481,14 +1541,18 @@ public:
 // Size: 0x8
 class C_GameRules
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	uint8_t __pad0000[0x8]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 10
 // Size: 0x50
 class CGlowProperty
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	Vector m_fGlowColor; // 0x8	
 	int32_t m_iGlowTeam; // 0x14	
@@ -1529,6 +1593,8 @@ public:
 // Size: 0x40
 struct C_fogplayerparams_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "PlayerFogController"
@@ -1626,6 +1692,8 @@ public:
 // Size: 0x90
 struct sky3dparams_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	int16_t scale; // 0x8	
@@ -1666,6 +1734,8 @@ public:
 // Size: 0x60
 struct TransitioningLayer_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CNetworkedSequenceOperation m_op; // 0x8	
 	float m_flStartAnimTime; // 0x48	
@@ -1680,6 +1750,8 @@ public:
 // Size: 0x238
 class C_CSequenceTransitioner2
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CNetworkedSequenceOperation m_currentOp; // 0x8	
 	float m_flCurrentPlaybackRate; // 0x48	
@@ -1768,6 +1840,8 @@ public:
 // Size: 0x28
 struct NPCAbilityTarget_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
@@ -1875,6 +1949,8 @@ public:
 // Size: 0x18
 struct AWS_AbilityUsageData_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	CUtlStringToken m_nAbilityID; // 0x8	
@@ -2291,6 +2367,8 @@ public:
 // Size: 0x18
 class CModifierHandleBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkSerializer "modifier_handle"
@@ -2316,6 +2394,8 @@ public:
 // Size: 0xf0
 class CModifierProperty
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
@@ -2348,6 +2428,8 @@ public:
 // Size: 0x78
 class CBaseModifier
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x24]; // 0x0
 public:
 	ModifierSerialNumber_t m_nSerialNumber; // 0x24	
 	float m_flLastAppliedTime; // 0x28	
@@ -2400,6 +2482,8 @@ public:
 // Size: 0x38
 class C_SteamPalGameRules : public C_SingleplayRules
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x8]; // 0x8
 public:
 	bool m_bIsInAscentSection; // 0x10	
 };
@@ -2788,6 +2872,8 @@ public:
 // Size: 0x78
 class CEntityIdentity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x14]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "entityIdentityNameChanged"
@@ -2842,8 +2928,12 @@ public:
 // Size: 0x38
 class CScriptComponent : public CEntityComponent
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x28]; // 0x8
 public:
 	CUtlSymbolLarge m_scriptClassName; // 0x30	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CScriptComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CScriptComponent")->m_static_fields[1]->m_instance);};
 };
@@ -2861,6 +2951,8 @@ public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
 	CNetworkVarChainer __m_pChainEntity; // 0x20	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponent")->m_static_fields[1]->m_instance);};
 };
@@ -2875,6 +2967,8 @@ public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
 	CNetworkVarChainer __m_pChainEntity; // 0x1a0	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentPoint")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentPoint")->m_static_fields[1]->m_instance);};
 };
@@ -2889,6 +2983,8 @@ public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
 	CNetworkVarChainer __m_pChainEntity; // 0x500	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentSkeletonInstance")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentSkeletonInstance")->m_static_fields[1]->m_instance);};
 };
@@ -2897,8 +2993,12 @@ public:
 // Size: 0x20
 class CHitboxComponent : public CEntityComponent
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x14]; // 0x8
 public:
 	uint32_t m_unDisabledHitGroupMask; // 0x1c	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CHitboxComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_referenced_but_impl_is_contained(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CHitboxComponent")->m_static_fields[1]->m_instance);};
 };
@@ -2907,6 +3007,8 @@ public:
 // Size: 0x1b8
 class CLightComponent : public CEntityComponent
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x40]; // 0x8
 public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
@@ -3113,6 +3215,8 @@ public:
 	float m_flLightStyleStartTime; // 0x1a0	
 	// MNetworkEnable
 	float m_flCapsuleLength; // 0x1a4	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CLightComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CLightComponent")->m_static_fields[1]->m_instance);};
 };
@@ -3121,6 +3225,8 @@ public:
 // Size: 0xc8
 class CRenderComponent : public CEntityComponent
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x8]; // 0x8
 public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
@@ -3141,6 +3247,8 @@ private:
 	[[maybe_unused]] uint8_t __pad0051[0x4f]; // 0x51
 public:
 	bool m_bInterpolationReadyToDraw; // 0xa0	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CRenderComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CRenderComponent")->m_static_fields[1]->m_instance);};
 };
@@ -3233,6 +3341,8 @@ public:
 // Size: 0x1b08
 class C_BaseAnimatingController : public CSkeletonAnimationController
 {
+private:
+	[[maybe_unused]] uint8_t __pad0010[0x8]; // 0x10
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "baseAnimBaseLayerChanged"
@@ -3255,8 +3365,8 @@ public:
 	float m_flLastEventAnimTime; // 0x171c	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "-4"
-	// MNetworkMaxValue "12"
+	// MNetworkMinValue "-4.000000"
+	// MNetworkMaxValue "12.000000"
 	// MNetworkEncodeFlags
 	// MNetworkPriority "32"
 	// MNetworkChangeCallback "playbackRateChanged"
@@ -3265,8 +3375,8 @@ public:
 	float m_flPrevAnimTime; // 0x1738	
 	// MNetworkEnable
 	// MNetworkBitCount "11"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	// MNetworkUserGroup "m_flPoseParameter"
 	// MNetworkChangeCallback "poseParametersChanged"
 	float m_flPoseParameter[24]; // 0x173c	
@@ -3318,6 +3428,8 @@ public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
 	CNetworkVarChainer __m_pChainEntity; // 0x2028	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BodyComponentBaseAnimating")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BodyComponentBaseAnimating")->m_static_fields[1]->m_instance);};
 };
@@ -3343,6 +3455,8 @@ public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
 	CNetworkVarChainer __m_pChainEntity; // 0x2090	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BodyComponentBaseAnimatingOverlay")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BodyComponentBaseAnimatingOverlay")->m_static_fields[1]->m_instance);};
 };
@@ -3355,6 +3469,8 @@ public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
 	CNetworkVarChainer __m_pChainEntity; // 0x520	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseModelEntity")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseModelEntity")->m_static_fields[1]->m_instance);};
 };
@@ -3518,8 +3634,8 @@ public:
 	CHandle< C_BaseEntity > m_hGroundEntity; // 0x454	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "4"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "4.000000"
 	// MNetworkEncodeFlags
 	// MNetworkUserGroup "LocalPlayerExclusive"
 	float m_flFriction; // 0x458	
@@ -3594,6 +3710,8 @@ private:
 	[[maybe_unused]] uint8_t __pad0563[0xd]; // 0x563
 public:
 	CUtlString m_sUniqueHammerID; // 0x570	
+	
+	// Static fields:
 	static bool &Get_sm_bDatadescValidating(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[0]->m_instance);};
 	static bool &Get_sm_bAccurateTriggerBboxChecks(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[1]->m_instance);};
 	static bool &Get_sm_bDisableTouchFuncs(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[2]->m_instance);};
@@ -3765,6 +3883,8 @@ public:
 // Size: 0x30
 class CClientAlphaProperty : public IClientAlphaProperty
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x8]; // 0x8
 public:
 	uint8_t m_nRenderFX; // 0x10	
 	uint8_t m_nRenderMode; // 0x11	
@@ -3871,13 +3991,13 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "11"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	float m_fPoseValue; // 0x57c	
 	// MNetworkEnable
 	// MNetworkBitCount "11"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "10"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "10.000000"
 	float m_fInterpolationDuration; // 0x580	
 	// MNetworkEnable
 	bool m_bInterpolationWrap; // 0x584	
@@ -3886,25 +4006,25 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "11"
-	// MNetworkMinValue "-10"
-	// MNetworkMaxValue "10"
+	// MNetworkMinValue "-10.000000"
+	// MNetworkMaxValue "10.000000"
 	float m_fCycleFrequency; // 0x588	
 	// MNetworkEnable
 	PoseController_FModType_t m_nFModType; // 0x58c	
 	// MNetworkEnable
 	// MNetworkBitCount "11"
-	// MNetworkMinValue "-1"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "-1.000000"
+	// MNetworkMaxValue "1.000000"
 	float m_fFModTimeOffset; // 0x590	
 	// MNetworkEnable
 	// MNetworkBitCount "11"
-	// MNetworkMinValue "-10"
-	// MNetworkMaxValue "10"
+	// MNetworkMinValue "-10.000000"
+	// MNetworkMaxValue "10.000000"
 	float m_fFModRate; // 0x594	
 	// MNetworkEnable
 	// MNetworkBitCount "11"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "10"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "10.000000"
 	float m_fFModAmplitude; // 0x598	
 	// MNetworkEnable
 	CHandle< C_BaseEntity > m_hProps[4]; // 0x59c	
@@ -4199,6 +4319,8 @@ public:
 // Size: 0x5c8
 class CSteamPal_NameForm : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0578[0x10]; // 0x578
 public:
 	bool m_bPrevShowingWritingSurface; // 0x588	
 private:
@@ -4450,6 +4572,8 @@ public:
 // Size: 0x16d0
 class C_EnvCombinedLightProbeVolume : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0578[0x10c0]; // 0x578
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "StateChanged"
@@ -4511,6 +4635,8 @@ public:
 // Size: 0x6e8
 class C_EnvCubemap : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0578[0xf8]; // 0x578
 public:
 	// MNetworkEnable
 	CStrongHandle< InfoForResourceTypeCTextureBase > m_hCubemapTexture; // 0x670	
@@ -4625,6 +4751,8 @@ public:
 // Size: 0x15a0
 class C_EnvLightProbeVolume : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0578[0xfc8]; // 0x578
 public:
 	// MNetworkEnable
 	CStrongHandle< InfoForResourceTypeCTextureBase > m_hLightProbeTexture; // 0x1540	
@@ -4810,6 +4938,8 @@ public:
 // Size: 0x590
 class C_InfoVisibilityBox : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0578[0x4]; // 0x578
 public:
 	// MNetworkEnable
 	int32_t m_nMode; // 0x57c	
@@ -5006,6 +5136,8 @@ public:
 // Size: 0x5c8
 class CPlayerResource : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0578[0x8]; // 0x578
 public:
 	// MNetworkEnable
 	C_UtlVectorEmbeddedNetworkVar< PlayerResourceData_t > m_vecPlayerData; // 0x580	
@@ -5254,13 +5386,13 @@ public:
 	int32_t m_Exponent; // 0x868	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "360"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "360.000000"
 	float m_InnerAngle; // 0x86c	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "360"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "360.000000"
 	float m_OuterAngle; // 0x870	
 	// MNetworkEnable
 	float m_SpotRadius; // 0x874	
@@ -5275,8 +5407,8 @@ public:
 	CUtlSymbolLarge m_iszOverlayNames[10]; // 0x578	
 	// MNetworkEnable
 	// MNetworkBitCount "11"
-	// MNetworkMinValue "-1"
-	// MNetworkMaxValue "63"
+	// MNetworkMinValue "-1.000000"
+	// MNetworkMaxValue "63.000000"
 	float m_flOverlayTimes[10]; // 0x5c8	
 	// MNetworkEnable
 	float m_flStartTime; // 0x5f0	
@@ -5320,13 +5452,13 @@ public:
 	uint32_t m_nOuterMaxDist; // 0x870	
 	// MNetworkEnable
 	// MNetworkBitCount "6"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "64"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "64.000000"
 	// MNetworkEncodeFlags
 	float m_flGlowProxySize; // 0x874	
 	// MNetworkEnable
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "100"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "100.000000"
 	// MNetworkChangeCallback "OnHDRColorScaleChanged"
 	float m_flHDRColorScale; // 0x878	
 private:
@@ -5445,6 +5577,8 @@ public:
 // Size: 0xad8
 class C_PointWorldText : public C_ModelPointEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0860[0x8]; // 0x860
 public:
 	bool m_bForceRecreateNextUpdate; // 0x868	
 private:
@@ -5533,6 +5667,8 @@ public:
 // Size: 0x8a8
 class C_EntityDissolve : public C_BaseModelEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0860[0x8]; // 0x860
 public:
 	// MNetworkEnable
 	float m_flStartTime; // 0x868	
@@ -5618,6 +5754,8 @@ public:
 // Size: 0xc48
 class C_RopeKeyframe : public C_BaseModelEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0860[0x8]; // 0x860
 public:
 	CBitVec< 10 > m_LinksTouchingSomething; // 0x868	
 	int32_t m_nLinksTouchingSomething; // 0x86c	
@@ -5672,8 +5810,8 @@ public:
 	int16_t m_Slack; // 0xbaa	
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0.1"
-	// MNetworkMaxValue "10"
+	// MNetworkMinValue "0.100000"
+	// MNetworkMaxValue "10.000000"
 	float m_TextureScale; // 0xbac	
 	// MNetworkEnable
 	uint8_t m_fLockedPoints; // 0xbb0	
@@ -5704,7 +5842,7 @@ public:
 		uint8_t m_bEndPointAttachmentAnglesDirty: 1; 		
 		uint8_t m_bNewDataThisFrame: 1; 		
 		uint8_t m_bPhysicsInitted: 1; 		
-		uint8_t __pad3: 4; // Autoaligned
+		uint8_t __pad3: 4;
 	}; // 8 bits
 };
 
@@ -5712,6 +5850,8 @@ public:
 // Size: 0x5d8
 class C_SceneEntity : public C_PointEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0578[0x8]; // 0x578
 public:
 	// MNetworkEnable
 	bool m_bIsPlayingBack; // 0x580	
@@ -5777,27 +5917,27 @@ public:
 	// MNetworkBitCount "10"
 	float m_flHazeScale; // 0x8a4	
 	// MNetworkEnable
-	// MNetworkMinValue "-360"
-	// MNetworkMaxValue "360"
+	// MNetworkMinValue "-360.000000"
+	// MNetworkMaxValue "360.000000"
 	float m_flRotation; // 0x8a8	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnHDRScaleChanged"
 	float m_flHDRColorScale; // 0x8ac	
 	// MNetworkEnable
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "2"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "2.000000"
 	float m_flAlphaHaze; // 0x8b0	
 	// MNetworkEnable
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "2"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "2.000000"
 	float m_flAlphaScale; // 0x8b4	
 	// MNetworkEnable
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "2"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "2.000000"
 	float m_flAlphaHdr; // 0x8b8	
 	// MNetworkEnable
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	float m_flFarZScale; // 0x8bc	
 };
 
@@ -5845,8 +5985,8 @@ class C_Beam : public C_BaseModelEntity
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "-25"
-	// MNetworkMaxValue "25"
+	// MNetworkMinValue "-25.000000"
+	// MNetworkMaxValue "25.000000"
 	// MNetworkEncodeFlags
 	float m_flFrameRate; // 0x860	
 	// MNetworkEnable
@@ -5879,14 +6019,14 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "102.3"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "102.300003"
 	// MNetworkEncodeFlags
 	float m_fWidth; // 0x8e4	
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "102.3"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "102.300003"
 	// MNetworkEncodeFlags
 	float m_fEndWidth; // 0x8e8	
 	// MNetworkEnable
@@ -5895,25 +6035,25 @@ public:
 	float m_fHaloScale; // 0x8f0	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "64"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "64.000000"
 	// MNetworkEncodeFlags
 	float m_fAmplitude; // 0x8f4	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "256"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "256.000000"
 	// MNetworkEncodeFlags
 	float m_fStartFrame; // 0x8f8	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "100"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "100.000000"
 	float m_fSpeed; // 0x8fc	
 	// MNetworkEnable
 	// MNetworkBitCount "20"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "256"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "256.000000"
 	// MNetworkEncodeFlags
 	// MNetworkPriority "32"
 	float m_flFrame; // 0x900	
@@ -5955,6 +6095,8 @@ public:
 	// MNetworkEnable
 	bool m_bFakeLadder; // 0x8b1	
 	bool m_bHasSlack; // 0x8b2	
+	
+	// Static fields:
 	static CUtlVector< C_FuncLadder* > &Get_s_Ladders(){return *reinterpret_cast<CUtlVector< C_FuncLadder* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_FuncLadder")->m_static_fields[0]->m_instance);};
 };
 
@@ -5962,6 +6104,8 @@ public:
 // Size: 0x990
 class C_Sprite : public C_BaseModelEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0860[0x18]; // 0x860
 public:
 	// MNetworkEnable
 	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hSpriteMaterial; // 0x878	
@@ -5974,14 +6118,14 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "60"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "60.000000"
 	// MNetworkEncodeFlags
 	float m_flSpriteFramerate; // 0x888	
 	// MNetworkEnable
 	// MNetworkBitCount "20"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "256"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "256.000000"
 	// MNetworkEncodeFlags
 	float m_flFrame; // 0x88c	
 	float m_flDieTime; // 0x890	
@@ -6004,8 +6148,8 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "6"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "64"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "64.000000"
 	// MNetworkEncodeFlags
 	float m_flGlowProxySize; // 0x8b4	
 	// MNetworkEnable
@@ -6041,6 +6185,8 @@ public:
 // Size: 0x898
 class C_BaseClientUIEntity : public C_BaseModelEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0860[0x8]; // 0x860
 public:
 	// MNetworkEnable
 	bool m_bEnabled; // 0x868	
@@ -6070,6 +6216,8 @@ public:
 // Size: 0xa68
 class C_PointClientUIHUD : public C_BaseClientUIEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0898[0x8]; // 0x898
 public:
 	bool m_bCheckCSSClasses; // 0x8a0	
 private:
@@ -6111,6 +6259,8 @@ public:
 // Size: 0xad0
 class C_PointClientUIWorldPanel : public C_BaseClientUIEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0898[0x8]; // 0x898
 public:
 	bool m_bForceRecreateNextUpdate; // 0x8a0	
 	bool m_bMoveViewToPlayerNextThink; // 0x8a1	
@@ -6207,6 +6357,8 @@ public:
 // Size: 0xb70
 class C_PointHintUi : public C_PointClientUIWorldPanel
 {
+private:
+	[[maybe_unused]] uint8_t __pad0ad0[0x30]; // 0xad0
 public:
 	CUtlSymbolLarge m_pszLessonName; // 0xb00	
 	CUtlSymbolLarge m_pszCaption; // 0xb08	
@@ -6270,6 +6422,8 @@ public:
 // Size: 0x638
 class COffscreenParticleTexture : public C_PointEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0578[0x8]; // 0x578
 public:
 	// MNetworkEnable
 	bool m_bEnabled; // 0x580	
@@ -6543,6 +6697,8 @@ public:
 // Size: 0xb80
 class CInfoOffscreenMovieTexture : public CInfoOffscreenPanoramaTexture
 {
+private:
+	[[maybe_unused]] uint8_t __pad0758[0x8]; // 0x758
 public:
 	// MNetworkEnable
 	char m_MovieName[512]; // 0x760	
@@ -6580,6 +6736,8 @@ public:
 	int32_t m_nImportance; // 0x580	
 	int32_t m_nLightChoice; // 0x584	
 	CHandle< C_BaseEntity > m_hLight; // 0x588	
+	
+	// Static fields:
 	static CUtlVector< CInfoDynamicShadowHint* > &Get_m_AllHints(){return *reinterpret_cast<CUtlVector< CInfoDynamicShadowHint* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CInfoDynamicShadowHint")->m_static_fields[0]->m_instance);};
 };
 
@@ -6685,6 +6843,8 @@ public:
 // Size: 0x8a8
 class C_PostProcessingVolume : public C_BaseTrigger
 {
+private:
+	[[maybe_unused]] uint8_t __pad0868[0x10]; // 0x868
 public:
 	// MNetworkEnable
 	CStrongHandle< InfoForResourceTypeCPostProcessingResource > m_hPostSettings; // 0x878	
@@ -6841,6 +7001,8 @@ public:
 // Size: 0xb88
 class C_BreakableProp : public CBaseProp
 {
+private:
+	[[maybe_unused]] uint8_t __pad0a78[0x8]; // 0xa78
 public:
 	CEntityIOOutput m_OnBreak; // 0xa80	
 	CEntityOutputTemplate< float32 > m_OnHealthChanged; // 0xaa8	
@@ -7031,6 +7193,8 @@ public:
 // Size: 0xa88
 class C_PointCommentaryNode : public C_BaseAnimating
 {
+private:
+	[[maybe_unused]] uint8_t __pad0a38[0x8]; // 0xa38
 public:
 	// MNetworkEnable
 	bool m_bActive; // 0xa40	
@@ -7084,11 +7248,13 @@ public:
 // Size: 0xbf0
 class C_BaseFlex : public C_BaseAnimatingOverlay
 {
+private:
+	[[maybe_unused]] uint8_t __pad0a38[0x8]; // 0xa38
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "12"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	// MNetworkEncodeFlags
 	C_NetworkUtlVectorBase< float32 > m_flexWeight; // 0xa40	
 	// MNetworkEnable
@@ -7255,8 +7421,8 @@ public:
 	// MNetworkEnable
 	// MNetworkSerializer "angle_normalize_positive"
 	// MNetworkBitCount "7"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "360"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "360.000000"
 	// MNetworkEncodeFlags
 	// MNetworkChangeCallback "OnAngChanged"
 	float m_angle; // 0xac0	
@@ -7279,6 +7445,8 @@ public:
 // Size: 0xb30
 class C_PropVehicleDriveable : public C_BaseAnimating
 {
+private:
+	[[maybe_unused]] uint8_t __pad0a38[0x8]; // 0xa38
 public:
 	// MNetworkEnable
 	CHandle< C_BasePlayer > m_hPlayer; // 0xa40	
@@ -7367,6 +7535,8 @@ public:
 // Size: 0xcf8
 class C_BasePropDoor : public C_DynamicProp
 {
+private:
+	[[maybe_unused]] uint8_t __pad0cb8[0x10]; // 0xcb8
 public:
 	// MNetworkEnable
 	DoorState_t m_eDoorState; // 0xcc8	
@@ -7447,6 +7617,8 @@ public:
 // Size: 0xab0
 class C_RagdollProp : public C_BaseAnimating
 {
+private:
+	[[maybe_unused]] uint8_t __pad0a38[0x8]; // 0xa38
 public:
 	// MNetworkEnable
 	// MNetworkEncoder
@@ -7459,8 +7631,8 @@ public:
 	C_NetworkUtlVectorBase< QAngle > m_ragAngles; // 0xa58	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	// MNetworkEncodeFlags
 	float m_flBlendWeight; // 0xa70	
 	// MNetworkEnable
@@ -7478,6 +7650,8 @@ public:
 // Size: 0xaf8
 class C_LocalTempEntity : public C_BaseAnimating
 {
+private:
+	[[maybe_unused]] uint8_t __pad0a38[0x18]; // 0xa38
 public:
 	int32_t flags; // 0xa50	
 	float die; // 0xa54	
@@ -7526,8 +7700,8 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1024"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1024.000000"
 	// MNetworkEncodeFlags
 	float m_DmgRadius; // 0xbf4	
 	// MNetworkEnable
@@ -7535,8 +7709,8 @@ public:
 	float m_flWarnAITime; // 0xbfc	
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "256"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "256.000000"
 	// MNetworkEncodeFlags
 	float m_flDamage; // 0xc00	
 private:
@@ -7560,6 +7734,8 @@ public:
 // Size: 0xbf8
 class C_ShatterGlassShardPhysics : public C_PhysicsProp
 {
+private:
+	[[maybe_unused]] uint8_t __pad0b90[0x8]; // 0xb90
 public:
 	// MNetworkEnable
 	shard_model_desc_t m_ShardDesc; // 0xb98	
@@ -7585,6 +7761,8 @@ public:
 // Size: 0xad0
 class C_PointHintUIHighlightModel : public C_BaseAnimating
 {
+private:
+	[[maybe_unused]] uint8_t __pad0a38[0x30]; // 0xa38
 public:
 	CUtlVector< matrix3x4a_t > m_vecRenderModelComponentTransforms; // 0xa68	
 	int32_t m_nTrackedDeviceIndex; // 0xa80	
@@ -7621,6 +7799,8 @@ public:
 // Size: 0xa58
 class CSteamPal_BaseSingingEntity : public C_BaseAnimating
 {
+private:
+	[[maybe_unused]] uint8_t __pad0a38[0x8]; // 0xa38
 public:
 	char m_cCurNote; // 0xa40	
 private:
@@ -7639,6 +7819,8 @@ public:
 // Size: 0xaf0
 class CSteamPal_WritingSurface : public C_BaseAnimating
 {
+private:
+	[[maybe_unused]] uint8_t __pad0a38[0x28]; // 0xa38
 public:
 	Vector m_vPointOnBoardPos; // 0xa60	
 	Vector m_vPrevPointOnBoardPos1; // 0xa6c	
@@ -8164,6 +8346,8 @@ public:
 // Size: 0xd10
 class CBasePlayerController : public C_BaseCombatCharacter
 {
+private:
+	[[maybe_unused]] uint8_t __pad0c68[0x8]; // 0xc68
 public:
 	int32_t m_nFinalPredictedTick; // 0xc70	
 private:
@@ -8270,6 +8454,8 @@ public:
 // Size: 0xf58
 class C_SteamPal_Player : public C_BasePlayer
 {
+private:
+	[[maybe_unused]] uint8_t __pad0e98[0x58]; // 0xe98
 public:
 	// MNetworkEnable
 	CUtlString m_strPlayerName; // 0xef0	

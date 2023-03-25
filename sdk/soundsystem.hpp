@@ -172,6 +172,8 @@ struct VMixFilterDesc_t;
 // Size: 0x18
 class CSosGroupActionSchema
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MPropertyFriendlyName "Name"
 	CUtlString m_name; // 0x8	
@@ -209,6 +211,8 @@ public:
 // Size: 0x10
 class CSosGroupBranchPattern
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MPropertyFriendlyName "Event Name"
 	bool m_bMatchEventName; // 0x8	

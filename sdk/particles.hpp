@@ -800,24 +800,30 @@ public:
 // Size: 0x10
 class IParticleCollection
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
-	uint8_t __pad0000[0x10]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 0
 // Size: 0x8
 class IControlPointEditorData
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	uint8_t __pad0000[0x8]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 0
 // Size: 0x8
 class IParticleSystemDefinition
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	uint8_t __pad0000[0x8]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 18
@@ -1200,8 +1206,10 @@ public:
 // Size: 0x40
 class CPiecewiseCurveSchemaWrapper
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x40]; // 0x0
 public:
-	uint8_t __pad0000[0x40]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 36
@@ -1268,6 +1276,8 @@ public:
 // Size: 0x180
 class CParticleFunction
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MPropertyStartGroup "Operator Fade"
 	// MPropertyFriendlyName "operator start fadein"
@@ -1999,22 +2009,28 @@ public:
 // Size: 0x8
 class IParticleEffect
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	uint8_t __pad0000[0x8]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 0
 // Size: 0x28
 class CParticleProperty
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x28]; // 0x0
 public:
-	uint8_t __pad0000[0x28]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 25
 // Size: 0xb8
 class CNewParticleEffect : public IParticleEffect
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x8]; // 0x8
 public:
 	CNewParticleEffect* m_pNext; // 0x10	
 	CNewParticleEffect* m_pPrev; // 0x18	
@@ -3036,6 +3052,8 @@ public:
 // Size: 0x1c0
 class C_INIT_RandomColor : public CParticleFunctionInitializer
 {
+private:
+	[[maybe_unused]] uint8_t __pad0180[0x18]; // 0x180
 public:
 	// MPropertyFriendlyName "color1"
 	Color m_ColorMin; // 0x198	
@@ -3064,6 +3082,8 @@ public:
 // Size: 0x1c0
 class C_INIT_ColorLitPerParticle : public CParticleFunctionInitializer
 {
+private:
+	[[maybe_unused]] uint8_t __pad0180[0x18]; // 0x180
 public:
 	// MPropertyFriendlyName "color1"
 	Color m_ColorMin; // 0x198	
@@ -4179,6 +4199,8 @@ public:
 // Size: 0x1a0
 class C_INIT_RemapInitialVisibilityScalar : public CParticleFunctionInitializer
 {
+private:
+	[[maybe_unused]] uint8_t __pad0180[0x4]; // 0x180
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -7187,6 +7209,8 @@ public:
 // Size: 0x1d0
 class C_OP_LockToSavedSequentialPath : public CParticleFunctionOperator
 {
+private:
+	[[maybe_unused]] uint8_t __pad0180[0x4]; // 0x180
 public:
 	// MPropertyFriendlyName "start fade time"
 	float m_flFadeStart; // 0x184	

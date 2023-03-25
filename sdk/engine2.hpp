@@ -64,6 +64,8 @@ struct CScriptComponent;
 // Size: 0x28
 struct EngineLoopState_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	int32_t m_nPlatWindowWidth; // 0x18	
 	int32_t m_nPlatWindowHeight; // 0x1c	
@@ -75,8 +77,10 @@ public:
 // Size: 0x1
 struct EventModInitialized_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	uint8_t __pad0000[0x1]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 1
@@ -99,8 +103,10 @@ public:
 // Size: 0x1
 struct EventSplitScreenStateChanged_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	uint8_t __pad0000[0x1]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 8
@@ -283,16 +289,20 @@ public:
 // Size: 0x1
 struct EventClientSendInput_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	uint8_t __pad0000[0x1]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 0
 // Size: 0x1
 struct EventClientPredictionPostNetupdate_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	uint8_t __pad0000[0x1]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 1
@@ -307,8 +317,10 @@ public:
 // Size: 0x1
 struct EventClientProcessNetworking_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	uint8_t __pad0000[0x1]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 0
@@ -403,14 +415,18 @@ public:
 // Size: 0x8
 class IHandleEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	uint8_t __pad0000[0x8]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 1
 // Size: 0x18
 class CNetworkVarChainer
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
@@ -421,16 +437,20 @@ public:
 // Size: 0x1
 class CVariantDefaultAllocator
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	uint8_t __pad0000[0x1]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 0
 // Size: 0x10
 struct EntOutput_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
-	uint8_t __pad0000[0x10]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 8
@@ -455,22 +475,28 @@ public:
 // Size: 0x8
 class CEntityComponent
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	uint8_t __pad0000[0x8]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 0
 // Size: 0x30
 struct EntInput_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x30]; // 0x0
 public:
-	uint8_t __pad0000[0x30]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 4
 // Size: 0x28
 class CEntityComponentHelper
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	uint32_t m_flags; // 0x8	
 private:
@@ -488,6 +514,8 @@ public:
 // Size: 0x78
 class CEntityIdentity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x14]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "entityIdentityNameChanged"
@@ -519,8 +547,10 @@ public:
 // Size: 0x8
 class CEmptyEntityInstance
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	uint8_t __pad0000[0x8]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 4
@@ -550,6 +580,8 @@ public:
 // Size: 0x28
 class CEntityIOOutput
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CVariantBase< CVariantDefaultAllocator > m_Value; // 0x18	
 };
@@ -558,8 +590,12 @@ public:
 // Size: 0x38
 class CScriptComponent : public CEntityComponent
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x28]; // 0x8
 public:
 	CUtlSymbolLarge m_scriptClassName; // 0x30	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("engine2.dll")->FindDeclaredClass("CScriptComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("engine2.dll")->FindDeclaredClass("CScriptComponent")->m_static_fields[1]->m_instance);};
 };
