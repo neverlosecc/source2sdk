@@ -1313,6 +1313,8 @@ public:
 // Size: 0x70
 class CAnimData
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	CBufferString m_name; // 0x10	
 	CUtlVector< CAnimDesc > m_animArray; // 0x20	
@@ -1383,6 +1385,8 @@ public:
 // Size: 0x130
 class CAnimationGroup
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	uint32_t m_nFlags; // 0x10	
 private:
@@ -1638,6 +1642,8 @@ public:
 // Size: 0x138
 class CSequenceGroupData
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	CBufferString m_sName; // 0x10	
 	uint32_t m_nFlags; // 0x20	
@@ -1697,6 +1703,8 @@ public:
 // Size: 0x10
 class CAnimationGraphVisualizerPrimitiveBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CAnimationGraphVisualizerPrimitiveType m_Type; // 0x8	
 };
@@ -1932,6 +1940,8 @@ public:
 // Size: 0x48
 class CAnimNodeManager
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MPropertyHideField
 	CUtlHashtable< AnimNodeID, CSmartPtr< CAnimNodeBase > > m_nodes; // 0x8	
@@ -1941,6 +1951,8 @@ public:
 // Size: 0x28
 class CAnimGraphModelBinding
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CUtlString m_modelName; // 0x8	
 	CSmartPtr< CAnimUpdateSharedData > m_pSharedData; // 0x10	
@@ -1950,6 +1962,8 @@ public:
 // Size: 0x38
 class CAnimClipDataManager
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CUtlHashtable< CUtlString, CSmartPtr< CAnimClipData > > m_itemTable; // 0x18	
 };
@@ -1958,6 +1972,8 @@ public:
 // Size: 0x48
 class CAnimClipData
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
 	// MPropertyHideField
 	CUtlVector< CSmartPtr< CAnimTagSpan > > m_tagSpans; // 0x20	
@@ -1970,6 +1986,8 @@ public:
 // Size: 0x58
 class CAnimParameterList
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
 	CUtlVector< CSmartPtr< CAnimParameterBase > > m_Parameters; // 0x20	
 };
@@ -1978,6 +1996,8 @@ public:
 // Size: 0x28
 class CAnimNodeList
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	CUtlVector< CAnimNodeBase* > m_nodes; // 0x10	
 };
@@ -1986,6 +2006,8 @@ public:
 // Size: 0x28
 class CAnimComponentManager
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CUtlVector< CSmartPtr< CAnimComponentBase > > m_components; // 0x8	
 };
@@ -1994,6 +2016,8 @@ public:
 // Size: 0x28
 class CAnimStateList
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	CUtlVector< CAnimState* > m_states; // 0x10	
 };
@@ -2002,6 +2026,8 @@ public:
 // Size: 0x10
 class CAnimInputDamping
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MPropertyFriendlyName "Speed Function"
 	DampingSpeedFunction m_speedFunction; // 0x8	
@@ -2013,6 +2039,8 @@ public:
 // Size: 0x30
 class CAnimGraphSettingsManager
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CUtlVector< CSmartPtr< CAnimGraphSettingsGroup > > m_settingsGroups; // 0x18	
 };
@@ -2021,6 +2049,8 @@ public:
 // Size: 0x18
 class CFloatAnimValue
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MPropertyHideField
 	float m_flConstValue; // 0x8	
@@ -2034,6 +2064,8 @@ public:
 // Size: 0x40
 class CCachedPose
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CUtlVector< CTransform > m_transforms; // 0x8	
 	CUtlVector< float32 > m_morphWeights; // 0x20	
@@ -2045,6 +2077,8 @@ public:
 // Size: 0x30
 class CStaticPoseCache
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	CUtlVector< CCachedPose > m_poses; // 0x10	
 	int32_t m_nBoneCount; // 0x28	
@@ -2063,6 +2097,8 @@ public:
 // Size: 0x100
 class CAnimUpdateSharedData
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	CUtlVector< CSmartPtr< CAnimUpdateNodeBase > > m_nodes; // 0x10	
 	CUtlHashtable< CAnimNodePath, int32 > m_nodeIndexMap; // 0x28	
@@ -2080,6 +2116,8 @@ public:
 // Size: 0x20
 class CAnimParamSpanSample
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CAnimVariant m_value; // 0x8	
 private:
@@ -2092,6 +2130,8 @@ public:
 // Size: 0x48
 class CAnimParamSpan
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
 	CUtlVector< CAnimParamSpanSample > m_samples; // 0x20	
 	AnimParamID m_id; // 0x38	
@@ -2129,8 +2169,10 @@ public:
 // Size: 0x20
 class CAnimGraphSettingsGroup
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
-	uint8_t __pad0000[0x20]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 1
@@ -2146,6 +2188,8 @@ public:
 // Size: 0x38
 class CAnimComponentBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	// MPropertyHideField
 	CUtlString m_group; // 0x18	
@@ -2169,6 +2213,8 @@ public:
 // Size: 0xe0
 class CAnimationSubGraph
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CAnimNodeManager m_nodeManager; // 0x8	
 	CAnimComponentManager m_componentManager; // 0x50	
@@ -2182,6 +2228,8 @@ public:
 // Size: 0x58
 class CAnimScriptComponent : public CAnimComponentBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "Name"
 	// MPropertySortPriority "100"
@@ -2260,6 +2308,8 @@ public:
 // Size: 0x108
 class CMovementComponent : public CAnimComponentBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "Movement Modes"
 	CUtlVector< CMovementMode > m_moveModes; // 0x40	
@@ -2298,6 +2348,8 @@ public:
 // Size: 0x60
 class CLookComponent : public CAnimComponentBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "Network Look Target"
 	bool m_bNetworkLookTarget; // 0x40	
@@ -2331,6 +2383,8 @@ public:
 // Size: 0x28
 class CRigidBodyWeightList
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CUtlString m_name; // 0x8	
 	CUtlVector< CRigidBodyWeight > m_weights; // 0x10	
@@ -2359,6 +2413,8 @@ public:
 // Size: 0x60
 class CSlopeComponent : public CAnimComponentBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "Trace Distance"
 	float m_flTraceDistance; // 0x40	
@@ -2405,8 +2461,10 @@ public:
 // Size: 0x28
 class CAnimActionBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x28]; // 0x0
 public:
-	uint8_t __pad0000[0x28]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 1
@@ -2459,6 +2517,8 @@ public:
 // Size: 0x28
 class CAnimMotorBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	// MPropertyFriendlyName "Name"
 	// MPropertySortPriority "100"
@@ -2539,6 +2599,8 @@ public:
 // Size: 0x78
 class CAnimParameterBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	// MPropertyFriendlyName "Name"
 	// MPropertySortPriority "100"
@@ -2594,6 +2656,8 @@ public:
 // Size: 0xd0
 class CEnumAnimParameter : public CAnimParameterBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0078[0x8]; // 0x78
 public:
 	// MPropertyFriendlyName "Default Value"
 	uint8_t m_defaultValue; // 0x80	
@@ -2647,6 +2711,8 @@ public:
 // Size: 0xa0
 class CQuaternionAnimParameter : public CAnimParameterBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0078[0x8]; // 0x78
 public:
 	// MPropertyFriendlyName "Default Value"
 	Quaternion m_defaultValue; // 0x80	
@@ -2658,6 +2724,8 @@ public:
 // Size: 0x38
 class CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
 	// MPropertyFriendlyName "Name"
 	// MPropertySortPriority "100"
@@ -2674,6 +2742,8 @@ public:
 // Size: 0xa8
 class CSequenceAnimNode : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x30]; // 0x38
 public:
 	// MPropertyHideField
 	CUtlVector< CSmartPtr< CAnimTagSpan > > m_tagSpans; // 0x68	
@@ -2692,6 +2762,8 @@ public:
 // Size: 0x20
 class CBlendNodeChild
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MPropertyHideField
 	CAnimNodeConnection m_inputConnection; // 0x8	
@@ -2705,6 +2777,8 @@ public:
 // Size: 0x80
 class CBlendAnimNode : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x10]; // 0x38
 public:
 	// MPropertyFriendlyName "Blend Items"
 	// MPropertyAutoExpandSelf
@@ -2745,6 +2819,8 @@ public:
 // Size: 0x58
 class CRootAnimNode : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x18]; // 0x38
 public:
 	// MPropertyHideField
 	CAnimNodeConnection m_inputConnection; // 0x50	
@@ -2818,6 +2894,8 @@ public:
 // Size: 0x78
 class CCycleControlClipAnimNode : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x18]; // 0x38
 public:
 	// MPropertyHideField
 	CUtlVector< CSmartPtr< CAnimTagSpan > > m_tagSpans; // 0x50	
@@ -3007,6 +3085,8 @@ public:
 // Size: 0x90
 class CAimMatrixAnimNode : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyHideField
 	CAnimNodeConnection m_inputConnection; // 0x40	
@@ -3063,6 +3143,8 @@ public:
 // Size: 0x68
 class CDirectionalBlendAnimNode : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "Sequence Names Prefix"
 	CUtlString m_animNamePrefix; // 0x40	
@@ -3179,6 +3261,8 @@ public:
 // Size: 0x80
 class CLeanMatrixAnimNode : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "Sequence"
 	// MPropertyAttributeChoiceName "Sequence"
@@ -3276,6 +3360,8 @@ public:
 // Size: 0x58
 class CSolveIKChainAnimNodeChainData
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MPropertyFriendlyName "IK Chain"
 	// MPropertyAttributeChoiceName "IKChain"
@@ -3311,6 +3397,8 @@ public:
 // Size: 0x60
 class CSolveIKChainAnimNode : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyHideField
 	CAnimNodeConnection m_inputConnection; // 0x40	
@@ -3413,6 +3501,8 @@ public:
 // Size: 0x58
 class CProxyAnimNodeBase : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "External Connections"
 	// MPropertyAutoExpandSelf
@@ -3498,6 +3588,8 @@ public:
 // Size: 0xa8
 class CSelectorAnimNode : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertySuppressField
 	CUtlVector< CAnimNodeConnection > m_children; // 0x40	
@@ -3600,6 +3692,8 @@ public:
 // Size: 0x30
 class CBlend2DItemBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	// MPropertyFriendlyName "Blend Value"
 	Vector2D m_blendValue; // 0x18	
@@ -3623,6 +3717,8 @@ public:
 // Size: 0x58
 class CSequenceBlend2DItem : public CBlend2DItemBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0030[0x8]; // 0x30
 public:
 	// MPropertyHideField
 	CUtlVector< CSmartPtr< CAnimTagSpan > > m_tagSpans; // 0x38	
@@ -3635,6 +3731,8 @@ public:
 // Size: 0x48
 class CNodeBlend2DItem : public CBlend2DItemBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0030[0x8]; // 0x30
 public:
 	// MPropertyHideField
 	CAnimNodeConnection m_inputConnection; // 0x38	
@@ -3646,6 +3744,8 @@ public:
 // Size: 0xc8
 class CBlend2DAnimNode : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x18]; // 0x38
 public:
 	// MPropertyHideField
 	CUtlVector< CSmartPtr< CBlend2DItemBase > > m_items; // 0x50	
@@ -4087,6 +4187,8 @@ public:
 // Size: 0xd0
 class CMotionMatchingAnimNode : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x10]; // 0x38
 public:
 	// MPropertyHideField
 	CUtlVector< CSmartPtr< CMotionItemGroup > > m_groups; // 0x48	
@@ -4248,6 +4350,8 @@ public:
 // Size: 0xc8
 class CJumpHelperAnimNode : public CSequenceAnimNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad00a8[0x8]; // 0xa8
 public:
 	// MPropertyFriendlyName "Target Parameter"
 	// MPropertyAttributeChoiceName "VectorParameter"
@@ -4272,6 +4376,8 @@ public:
 // Size: 0x78
 class CSingleFrameAnimNode : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x18]; // 0x38
 public:
 	// MPropertyFriendlyName "Sequence"
 	// MPropertyAttributeChoiceName "Sequence"
@@ -4289,6 +4395,8 @@ public:
 // Size: 0x58
 class CCommentAnimNode : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertySuppressField
 	CUtlString m_commentText; // 0x40	
@@ -4302,6 +4410,8 @@ public:
 // Size: 0x70
 class CContainerAnimNodeBase : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x10]; // 0x38
 public:
 	// MPropertyHideField
 	AnimNodeID m_inputNodeID; // 0x48	
@@ -4358,6 +4468,8 @@ public:
 // Size: 0xb8
 class CSubGraphAnimNode : public CContainerAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0070[0x8]; // 0x70
 public:
 	// MPropertyFriendlyName "SubGraph File"
 	// MPropertyAttributeEditor "AssetBrowse( vsubgrph )"
@@ -4387,6 +4499,8 @@ public:
 // Size: 0x18
 class CStateAction
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CSmartPtr< CAnimActionBase > m_pAction; // 0x8	
 	StateActionBehavior m_eBehavior; // 0x10	
@@ -4396,6 +4510,8 @@ public:
 // Size: 0x70
 class CAnimState
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x28]; // 0x0
 public:
 	// MPropertySuppressField
 	CUtlVector< CSmartPtr< CAnimStateTransition > > m_transitions; // 0x28	
@@ -4420,6 +4536,8 @@ public:
 // Size: 0x38
 class CConditionContainer
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	// MPropertySuppressField
 	CUtlVector< CSmartPtr< CConditionBase > > m_conditions; // 0x10	
@@ -4429,6 +4547,8 @@ public:
 // Size: 0x28
 class CAnimStateMachine
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MPropertyHideField
 	CUtlVector< CSmartPtr< CAnimState > > m_states; // 0x8	
@@ -4453,7 +4573,7 @@ public:
 	struct 
 	{
 		uint8_t m_bDisabled: 1; 		
-		uint8_t __pad0: 1; // Autoaligned
+		uint8_t __pad0: 1;
 	}; // 2 bits
 };
 
@@ -4475,7 +4595,7 @@ public:
 		uint8_t m_bIsStartState: 1; 		
 		uint8_t m_bIsEndState: 1; 		
 		uint8_t m_bIsPassthrough: 1; 		
-		uint8_t __pad1: 3; // Autoaligned
+		uint8_t __pad1: 3;
 	}; // 6 bits
 };
 
@@ -4483,6 +4603,8 @@ public:
 // Size: 0x58
 class CAnimStateMachineUpdater
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CUtlVector< CStateUpdateData > m_states; // 0x8	
 	CUtlVector< CTransitionUpdateData > m_transitions; // 0x20	
@@ -4496,14 +4618,18 @@ public:
 // Size: 0x28
 class CConditionBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x28]; // 0x0
 public:
-	uint8_t __pad0000[0x28]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 4
 // Size: 0x70
 class CAnimStateTransition
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x28]; // 0x0
 public:
 	// MPropertySuppressField
 	CConditionContainer m_conditionList; // 0x28	
@@ -4546,6 +4672,8 @@ public:
 // Size: 0x60
 class COrCondition : public CConditionBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0028[0x10]; // 0x28
 public:
 	// No members available
 };
@@ -4615,6 +4743,8 @@ public:
 // Size: 0x30
 class CAnimTagSpan
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
 	AnimTagID m_id; // 0x20	
 	float m_fStartCycle; // 0x24	
@@ -4625,6 +4755,8 @@ public:
 // Size: 0x58
 class CAnimTagManager
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CUtlVector< CSmartPtr< CAnimTagBase > > m_tags; // 0x18	
 };
@@ -4633,6 +4765,8 @@ public:
 // Size: 0x38
 class CAnimTagBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
 	// MPropertyFriendlyName "Name"
 	// MPropertySortPriority "100"
@@ -4657,6 +4791,8 @@ public:
 // Size: 0x48
 class CFootFallAnimTag : public CAnimTagBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "Foot"
 	FootFallTagFoot_t m_foot; // 0x40	
@@ -4666,6 +4802,8 @@ public:
 // Size: 0x58
 class CAudioAnimTag : public CAnimTagBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "Sound Event"
 	// MPropertyAttributeEditor "SoundPicker()"
@@ -4690,6 +4828,8 @@ public:
 // Size: 0x60
 class CFootstepLandedAnimTag : public CAnimTagBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "Footstep Type"
 	FootstepLandedFootSoundType_t m_FootstepType; // 0x40	
@@ -4710,6 +4850,8 @@ public:
 // Size: 0x48
 class CSequenceFinishedAnimTag : public CAnimTagBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "Sequence"
 	// MPropertyAttributeChoiceName "Sequence"
@@ -4720,6 +4862,8 @@ public:
 // Size: 0x50
 class CTaskStatusAnimTag : public CAnimTagBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyHideField
 	CUtlString m_identifierString; // 0x40	
@@ -4729,6 +4873,8 @@ public:
 // Size: 0x58
 class CClothSettingsAnimTag : public CAnimTagBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "Stiffness"
 	// MPropertyAttributeRange "0 1"
@@ -4750,6 +4896,8 @@ public:
 // Size: 0x58
 class CRagdollAnimTag : public CAnimTagBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "Pose Control"
 	AnimPoseControl m_nPoseControl; // 0x40	
@@ -4773,6 +4921,8 @@ public:
 // Size: 0x80
 class CParticleAnimTag : public CAnimTagBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertySuppressField
 	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_hParticleSystem; // 0x40	
@@ -4815,6 +4965,8 @@ public:
 // Size: 0x58
 class CMaterialAttributeAnimTag : public CAnimTagBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "Attribute Name"
 	CUtlString m_AttributeName; // 0x40	
@@ -4848,6 +5000,8 @@ public:
 // Size: 0x60
 class CBodyGroupAnimTag : public CAnimTagBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
 	// MPropertyFriendlyName "Priority"
 	int32_t m_nPriority; // 0x40	
@@ -4870,6 +5024,8 @@ public:
 // Size: 0x28
 class CMotionParameterManager
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	CUtlVector< CSmartPtr< CMotionParameter > > m_params; // 0x10	
 };
@@ -4878,6 +5034,8 @@ public:
 // Size: 0x30
 class CMotionParameter
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CUtlString m_name; // 0x18	
 	AnimParamID m_id; // 0x20	
@@ -4947,6 +5105,8 @@ public:
 // Size: 0x78
 class CMotionItemGroup
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
 	// MPropertyHideField
 	CUtlVector< CSmartPtr< CMotionItem > > m_motions; // 0x20	
@@ -4959,6 +5119,8 @@ public:
 // Size: 0xa8
 class CMotionItem
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x28]; // 0x0
 public:
 	// MPropertyHideField
 	CMotionParameterManager m_paramManager; // 0x28	
@@ -4979,6 +5141,8 @@ public:
 // Size: 0xb8
 class CSequenceMotionItem : public CMotionItem
 {
+private:
+	[[maybe_unused]] uint8_t __pad00a8[0x8]; // 0xa8
 public:
 	// MPropertyFriendlyName "Sequence"
 	// MPropertyAttributeChoiceName "Sequence"
@@ -4989,6 +5153,8 @@ public:
 // Size: 0x108
 class CGraphMotionItem : public CMotionItem
 {
+private:
+	[[maybe_unused]] uint8_t __pad00a8[0x8]; // 0xa8
 public:
 	// MPropertyFriendlyName "Name"
 	CUtlString m_name; // 0xb0	
@@ -5000,6 +5166,8 @@ public:
 // Size: 0x28
 class CMotionMetricBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
 	// MPropertyHideField
 	float m_flWeight; // 0x20	
@@ -5223,6 +5391,8 @@ public:
 // Size: 0x110
 class CAnimScriptManager
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	CUtlVector< ScriptInfo_t > m_scriptInfo; // 0x10	
 };
@@ -5246,6 +5416,8 @@ public:
 // Size: 0x90
 class CAnimReplayFrame
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	CUtlVector< CUtlBinaryBlock > m_inputDataBlocks; // 0x10	
 	CUtlBinaryBlock m_instanceData; // 0x28	
@@ -5258,6 +5430,8 @@ public:
 // Size: 0x70
 class CAnimGraphDebugReplay
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x40]; // 0x0
 public:
 	CUtlString m_animGraphFileName; // 0x40	
 	CUtlVector< CSmartPtr< CAnimReplayFrame > > m_frameList; // 0x48	
@@ -5278,6 +5452,8 @@ public:
 // Size: 0x100
 class CAnimParameterListUpdater
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CUtlVector< CSmartPtr< CAnimParameterBase > > m_parameters; // 0x18	
 	CUtlHashtable< AnimParamID, int32 > m_idToIndexMap; // 0x30	
@@ -5291,6 +5467,8 @@ public:
 // Size: 0x38
 class CAnimTagManagerUpdater
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CUtlVector< CSmartPtr< CAnimTagBase > > m_tags; // 0x18	
 };
@@ -5299,6 +5477,8 @@ public:
 // Size: 0x30
 class CAnimComponentUpdater
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CUtlString m_name; // 0x18	
 	AnimComponentID m_id; // 0x20	
@@ -5340,6 +5520,8 @@ public:
 // Size: 0x48
 class CLookComponentUpdater : public CAnimComponentUpdater
 {
+private:
+	[[maybe_unused]] uint8_t __pad0030[0x4]; // 0x30
 public:
 	CAnimParamHandle m_hLookHeading; // 0x34	
 	CAnimParamHandle m_hLookHeadingVelocity; // 0x36	
@@ -5354,6 +5536,8 @@ public:
 // Size: 0x48
 class CSlopeComponentUpdater : public CAnimComponentUpdater
 {
+private:
+	[[maybe_unused]] uint8_t __pad0030[0x4]; // 0x30
 public:
 	float m_flTraceDistance; // 0x34	
 	CAnimParamHandle m_hSlopeAngle; // 0x38	
@@ -5368,14 +5552,18 @@ public:
 // Size: 0x18
 class CAnimActionUpdater
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
-	uint8_t __pad0000[0x18]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 2
 // Size: 0x20
 class CAnimMotorUpdaterBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	CUtlString m_name; // 0x10	
 	bool m_bDefault; // 0x18	
@@ -5401,6 +5589,8 @@ public:
 // Size: 0x48
 class CDampedPathAnimMotorUpdater : public CPathAnimMotorUpdaterBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0028[0x4]; // 0x28
 public:
 	float m_flAnticipationTime; // 0x2c	
 	float m_flMinSpeedScale; // 0x30	
@@ -5439,7 +5629,7 @@ public:
 	{
 		uint8_t m_bReset: 1; 		
 		uint8_t m_resetCycleOption: 3; 		
-		uint8_t __pad2: 4; // Autoaligned
+		uint8_t __pad2: 4;
 	}; // 8 bits
 };
 
@@ -5447,6 +5637,8 @@ public:
 // Size: 0x10
 class CAnimUpdateNodeRef
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	int32_t m_nodeIndex; // 0x8	
 };
@@ -5460,7 +5652,7 @@ public:
 	struct 
 	{
 		uint8_t m_bExclusiveRootMotion: 1; 		
-		uint8_t __pad3: 1; // Autoaligned
+		uint8_t __pad3: 1;
 	}; // 2 bits
 };
 
@@ -5468,6 +5660,8 @@ public:
 // Size: 0x58
 class CAnimUpdateNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CAnimNodePath m_nodePath; // 0x18	
 	CUtlString m_name; // 0x48	
@@ -5655,6 +5849,8 @@ public:
 // Size: 0xf0
 class CBlend2DUpdateNode : public CAnimUpdateNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0058[0x8]; // 0x58
 public:
 	CUtlVector< BlendItem_t > m_items; // 0x60	
 	CUtlVector< TagSpan_t > m_tags; // 0x78	
@@ -5683,6 +5879,8 @@ public:
 // Size: 0xa8
 class CFootAdjustmentUpdateNode : public CUnaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0068[0x8]; // 0x68
 public:
 	CUtlVector< HSequence > m_clips; // 0x70	
 	CPoseHandle m_hBasePoseCacheHandle; // 0x88	
@@ -5779,6 +5977,8 @@ public:
 // Size: 0xa8
 class CFollowPathUpdateNode : public CUnaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0068[0x4]; // 0x68
 public:
 	float m_flBlendOutTime; // 0x6c	
 	bool m_bBlockNonPathMovement; // 0x70	
@@ -5826,6 +6026,8 @@ public:
 // Size: 0x90
 class CStopAtGoalUpdateNode : public CUnaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0068[0x4]; // 0x68
 public:
 	float m_flOuterRadius; // 0x6c	
 	float m_flInnerRadius; // 0x70	
@@ -5950,6 +6152,8 @@ public:
 // Size: 0x58
 class CMotionGraph
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	CParamSpanUpdater m_paramSpans; // 0x10	
 	CUtlVector< TagSpan_t > m_tags; // 0x28	
@@ -5972,6 +6176,8 @@ public:
 // Size: 0x28
 class CMotionNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CUtlString m_name; // 0x18	
 	AnimNodeID m_id; // 0x20	
@@ -6009,6 +6215,8 @@ public:
 // Size: 0x50
 class CMotionMetricEvaluator
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CUtlVector< float32 > m_means; // 0x18	
 	CUtlVector< float32 > m_standardDeviations; // 0x30	
@@ -6311,6 +6519,8 @@ public:
 // Size: 0xc8
 class CFootPinningUpdateNode : public CUnaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0068[0x8]; // 0x68
 public:
 	FootPinningPoseOpFixedData_t m_poseOpFixedData; // 0x70	
 	FootPinningTimingSource m_eTimingSource; // 0xa0	
@@ -6814,6 +7024,8 @@ public:
 // Size: 0x48
 class CModelConfigElement
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CUtlString m_ElementName; // 0x8	
 	CUtlVector< CModelConfigElement* > m_NestedElements; // 0x10	
@@ -7057,6 +7269,8 @@ public:
 // Size: 0x70
 class CHitBox
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
 	Vector m_vMinBounds; // 0x20	
 	Vector m_vMaxBounds; // 0x2c	
@@ -7103,6 +7317,8 @@ public:
 // Size: 0x1d8
 class CRenderMesh
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	CUtlVectorFixedGrowable< CSceneObjectData > m_sceneObjects; // 0x10	
 	CUtlVector< CBaseConstraint* > m_constraints; // 0xa0	
@@ -7113,6 +7329,8 @@ public:
 // Size: 0x60
 class CConstraintTarget
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
 	Quaternion m_qOffset; // 0x20	
 	Vector m_vOffset; // 0x30	
@@ -7144,8 +7362,10 @@ public:
 // Size: 0x28
 class CBoneConstraintBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x28]; // 0x0
 public:
-	uint8_t __pad0000[0x28]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 4
@@ -7342,6 +7562,8 @@ public:
 // Size: 0x98
 class CMorphSetData
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	int32_t m_nWidth; // 0x10	
 	int32_t m_nHeight; // 0x14	
@@ -7369,6 +7591,8 @@ public:
 // Size: 0xd0
 class CAnimSkeleton
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	CUtlVector< CTransform > m_localSpaceTransforms; // 0x10	
 	CUtlVector< CTransform > m_modelSpaceTransforms; // 0x28	
@@ -7444,6 +7668,8 @@ public:
 	Vector m_vOffset; // 0x0	
 	float m_flRotationOffset; // 0xc	
 	float m_flProgression; // 0x10	
+	
+	// Static fields:
 	static CFootTrajectory &Get_Identity(){return *reinterpret_cast<CFootTrajectory*>(interfaces::g_schema->FindTypeScopeForModule("animationsystem.dll")->FindDeclaredClass("CFootTrajectory")->m_static_fields[0]->m_instance);};
 };
 
@@ -7545,6 +7771,8 @@ public:
 // Size: 0x150
 class CAnimationGraph : public CAnimationSubGraph
 {
+private:
+	[[maybe_unused]] uint8_t __pad00e0[0x8]; // 0xe0
 public:
 	CSmartPtr< CAnimGraphSettingsManager > m_pSettingsManager; // 0xe8	
 private:
@@ -7623,6 +7851,8 @@ public:
 // Size: 0x68
 class CStateMachineComponent : public CAnimComponentBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x28]; // 0x38
 public:
 	// MPropertyFriendlyName "Name"
 	// MPropertySortPriority "100"
@@ -7641,6 +7871,8 @@ public:
 // Size: 0x48
 class CVRInputComponentUpdater : public CAnimComponentUpdater
 {
+private:
+	[[maybe_unused]] uint8_t __pad0030[0x4]; // 0x30
 public:
 	CAnimParamHandle m_FingerCurl_Thumb; // 0x34	
 	CAnimParamHandle m_FingerCurl_Index; // 0x36	
@@ -7697,6 +7929,8 @@ public:
 // Size: 0xb8
 class CAnimNodeStateTransition : public CAnimStateTransition
 {
+private:
+	[[maybe_unused]] uint8_t __pad0070[0x8]; // 0x70
 public:
 	// MPropertyFriendlyName "Blend Duration"
 	CFloatAnimValue m_blendDuration; // 0x78	
@@ -7729,6 +7963,8 @@ public:
 // Size: 0x68
 class CStateMachineAnimNode : public CAnimNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x28]; // 0x38
 public:
 	// MPropertyFriendlyName "Block Tags from Waning States"
 	bool m_bBlockWaningTags; // 0x60	
@@ -7790,6 +8026,8 @@ public:
 // Size: 0x60
 class CAndCondition : public CConditionBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0028[0x10]; // 0x28
 public:
 	// No members available
 };
@@ -7806,6 +8044,8 @@ public:
 // Size: 0xa8
 class CSequenceUpdateNode : public CLeafUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0058[0x8]; // 0x58
 public:
 	CParamSpanUpdater m_paramSpans; // 0x60	
 	CUtlVector< TagSpan_t > m_tags; // 0x78	
@@ -7822,6 +8062,8 @@ public:
 // Size: 0xd0
 class CBlendUpdateNode : public CAnimUpdateNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0058[0x8]; // 0x58
 public:
 	CUtlVector< CAnimUpdateNodeRef > m_children; // 0x60	
 	CUtlVector< uint8 > m_sortedOrder; // 0x78	
@@ -7846,6 +8088,8 @@ public:
 // Size: 0xf8
 class CStateMachineUpdateNode : public CAnimUpdateNodeBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0058[0x10]; // 0x58
 public:
 	CAnimStateMachineUpdater m_stateMachine; // 0x68	
 	CUtlVector< CStateNodeStateData > m_stateData; // 0xc0	
@@ -7887,6 +8131,8 @@ public:
 // Size: 0x90
 class CCycleControlClipUpdateNode : public CLeafUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0058[0x8]; // 0x58
 public:
 	CUtlVector< TagSpan_t > m_tags; // 0x60	
 private:
@@ -7902,6 +8148,8 @@ public:
 // Size: 0x98
 class CAddUpdateNode : public CBinaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0088[0x4]; // 0x88
 public:
 	BinaryNodeChildOption m_footMotionTiming; // 0x8c	
 	bool m_bApplyToFootMotion; // 0x90	
@@ -7913,6 +8161,8 @@ public:
 // Size: 0x98
 class CSubtractUpdateNode : public CBinaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0088[0x4]; // 0x88
 public:
 	BinaryNodeChildOption m_footMotionTiming; // 0x8c	
 	bool m_bApplyToFootMotion; // 0x90	
@@ -7924,6 +8174,8 @@ public:
 // Size: 0xa0
 class CMoverUpdateNode : public CUnaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0068[0x8]; // 0x68
 public:
 	CAnimInputDamping m_damping; // 0x70	
 	AnimValueSource m_facingTarget; // 0x80	
@@ -7954,6 +8206,8 @@ public:
 // Size: 0x88
 class CTurnHelperUpdateNode : public CUnaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0068[0x4]; // 0x68
 public:
 	AnimValueSource m_facingTarget; // 0x6c	
 	float m_turnStartTimeOffset; // 0x70	
@@ -7970,6 +8224,8 @@ public:
 // Size: 0x160
 class CAimMatrixUpdateNode : public CUnaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0068[0x8]; // 0x68
 public:
 	AimMatrixOpFixedSettings_t m_opFixedSettings; // 0x70	
 private:
@@ -7997,6 +8253,8 @@ public:
 // Size: 0xa8
 class CDirectionalBlendUpdateNode : public CLeafUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0058[0x4]; // 0x58
 public:
 	HSequence m_hSequences[8]; // 0x5c	
 private:
@@ -8018,6 +8276,8 @@ public:
 // Size: 0x78
 class CWayPointHelperUpdateNode : public CUnaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0068[0x4]; // 0x68
 public:
 	float m_flStartCycle; // 0x6c	
 	float m_flEndCycle; // 0x70	
@@ -8030,6 +8290,8 @@ public:
 // Size: 0xa8
 class CBoneMaskUpdateNode : public CBinaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0088[0x4]; // 0x88
 public:
 	int32_t m_nWeightListIndex; // 0x8c	
 	float m_flRootMotionBlend; // 0x90	
@@ -8055,6 +8317,8 @@ public:
 // Size: 0x88
 class CDirectPlaybackUpdateNode : public CUnaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0068[0x4]; // 0x68
 public:
 	bool m_bFinishEarly; // 0x6c	
 	bool m_bResetOnFinish; // 0x6d	
@@ -8068,6 +8332,8 @@ public:
 // Size: 0xe8
 class CLeanMatrixUpdateNode : public CLeafUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0058[0x4]; // 0x58
 public:
 	int32_t m_frameCorners[3][3]; // 0x5c	
 	CPoseHandle m_poses[9]; // 0x80	
@@ -8091,6 +8357,8 @@ public:
 // Size: 0x1e0
 class CTwoBoneIKUpdateNode : public CUnaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0068[0x8]; // 0x68
 public:
 	TwoBoneIKSettings_t m_opFixedData; // 0x70	
 };
@@ -8108,6 +8376,8 @@ public:
 // Size: 0x150
 class CLookAtUpdateNode : public CUnaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0068[0x8]; // 0x68
 public:
 	LookAtOpFixedSettings_t m_opFixedSettings; // 0x70	
 private:
@@ -8133,6 +8403,8 @@ public:
 // Size: 0x110
 class CFollowAttachmentUpdateNode : public CUnaryUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0068[0x8]; // 0x68
 public:
 	FollowAttachmentSettings_t m_opFixedData; // 0x70	
 };

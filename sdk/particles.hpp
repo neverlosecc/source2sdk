@@ -859,24 +859,30 @@ public:
 // Size: 0x10
 class IParticleCollection
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
-	uint8_t __pad0000[0x10]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 0
 // Size: 0x8
 class IControlPointEditorData
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	uint8_t __pad0000[0x8]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 0
 // Size: 0x8
 class IParticleSystemDefinition
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	uint8_t __pad0000[0x8]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 18
@@ -1304,6 +1310,8 @@ public:
 // Size: 0x1f0
 class CParticleFunction
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MPropertyFriendlyName "operator strength"
 	// MPropertySortPriority "-100"
@@ -1418,9 +1426,9 @@ public:
 // Size: 0x230
 class CParticleFunctionRenderer : public CParticleFunction
 {
+	// Collision detected(0x1e8->0x1f0), output may be wrong.
 public:
-	// MPropertySortPriority "-1"
-	CParticleVisibilityInputs VisibilityInputs; // 0x1e8	
+	// Skipped field "VisibilityInputs" @ 0x1e8 because of the struct collision
 	// MPropertyStartGroup "Rendering filter"
 	// MPropertyFriendlyName "I cannot be refracted through refracting objects like water"
 	// MPropertySortPriority "-1"
@@ -1583,6 +1591,8 @@ public:
 // Size: 0x50
 class CParticleTransformInput
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x4]; // 0x0
 public:
 	ParticleTransformType_t m_nType; // 0x4	
 	CKV3MemberNameWithStorage m_NamedValue; // 0x8	
@@ -1601,9 +1611,9 @@ public:
 // Size: 0x1f0
 class CParticleFunctionEmitter : public CParticleFunction
 {
+	// Collision detected(0x1e8->0x1f0), output may be wrong.
 public:
-	// MPropertyFriendlyName "Emitter Index"
-	int32_t m_nEmitterIndex; // 0x1e8	
+	// Skipped field "m_nEmitterIndex" @ 0x1e8 because of the struct collision
 };
 
 // Alignment: 0
@@ -1618,9 +1628,9 @@ public:
 // Size: 0x1f0
 class CParticleFunctionInitializer : public CParticleFunction
 {
+	// Collision detected(0x1e8->0x1f0), output may be wrong.
 public:
-	// MPropertyFriendlyName "Associated emitter Index"
-	int32_t m_nAssociatedEmitterIndex; // 0x1e8	
+	// Skipped field "m_nAssociatedEmitterIndex" @ 0x1e8 because of the struct collision
 };
 
 // Alignment: 0
@@ -2098,22 +2108,28 @@ public:
 // Size: 0x8
 class IParticleEffect
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	uint8_t __pad0000[0x8]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 0
 // Size: 0x28
 class CParticleProperty
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x28]; // 0x0
 public:
-	uint8_t __pad0000[0x28]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 32
 // Size: 0xc8
 class CNewParticleEffect : public IParticleEffect
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x8]; // 0x8
 public:
 	CNewParticleEffect* m_pNext; // 0x10	
 	CNewParticleEffect* m_pPrev; // 0x18	
@@ -3163,6 +3179,8 @@ public:
 // Size: 0x240
 class C_INIT_RandomColor : public CParticleFunctionInitializer
 {
+private:
+	[[maybe_unused]] uint8_t __pad01f0[0x1c]; // 0x1f0
 public:
 	// MPropertyFriendlyName "color1"
 	Color m_ColorMin; // 0x20c	
@@ -3191,6 +3209,8 @@ public:
 // Size: 0x230
 class C_INIT_ColorLitPerParticle : public CParticleFunctionInitializer
 {
+private:
+	[[maybe_unused]] uint8_t __pad01f0[0x18]; // 0x1f0
 public:
 	// MPropertyFriendlyName "color1"
 	Color m_ColorMin; // 0x208	
@@ -4340,6 +4360,8 @@ public:
 // Size: 0x210
 class C_INIT_RemapInitialVisibilityScalar : public CParticleFunctionInitializer
 {
+private:
+	[[maybe_unused]] uint8_t __pad01f0[0x4]; // 0x1f0
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -7496,6 +7518,8 @@ public:
 // Size: 0x240
 class C_OP_LockToSavedSequentialPath : public CParticleFunctionOperator
 {
+private:
+	[[maybe_unused]] uint8_t __pad01f0[0x4]; // 0x1f0
 public:
 	// MPropertyFriendlyName "start fade time"
 	float m_flFadeStart; // 0x1f4	
