@@ -79,8 +79,10 @@ public:
 // Size: 0x8
 class IPhysicsPlayerController
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	uint8_t __pad0000[0x8]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 35

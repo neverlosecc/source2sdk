@@ -146,8 +146,10 @@ public:
 // Size: 0x1
 class InfoForResourceTypeCResourceManifestInternal
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	uint8_t __pad0000[0x1]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 1
@@ -171,6 +173,8 @@ public:
 // Size: 0x10
 class CExampleSchemaVData_PolymorphicBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	int32_t m_nBase; // 0x8	
 };
