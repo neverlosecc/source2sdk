@@ -2089,8 +2089,6 @@ public:
 // Size: 0x38
 class CStaticPoseCacheBuilder : public CStaticPoseCache
 {
-private:
-	[[maybe_unused]] uint8_t __pad0030[0xffffffffffffffd8]; // 0x30
 public:
 	// No members available
 };
@@ -4785,8 +4783,6 @@ public:
 // Size: 0x40
 class CStringAnimTag : public CAnimTagBase
 {
-private:
-	[[maybe_unused]] uint8_t __pad0038[0xffffffffffffffd0]; // 0x38
 public:
 	// No members available
 };
@@ -5020,8 +5016,6 @@ public:
 // Size: 0x50
 class CMotionNodeManager : public CAnimNodeManager
 {
-private:
-	[[maybe_unused]] uint8_t __pad0048[0xffffffffffffffc0]; // 0x48
 public:
 	// No members available
 };
@@ -6068,8 +6062,6 @@ public:
 // Size: 0x60
 class CInputStreamUpdateNode : public CLeafUpdateNode
 {
-private:
-	[[maybe_unused]] uint8_t __pad0058[0xffffffffffffffb0]; // 0x58
 public:
 	// No members available
 };
@@ -8002,8 +7994,6 @@ public:
 // Size: 0x60
 class CGroupInputAnimNode : public CProxyAnimNodeBase
 {
-private:
-	[[maybe_unused]] uint8_t __pad0058[0xffffffffffffffb0]; // 0x58
 public:
 	// No members available
 };
@@ -8020,8 +8010,6 @@ public:
 // Size: 0x60
 class CBindPoseUpdateNode : public CLeafUpdateNode
 {
-private:
-	[[maybe_unused]] uint8_t __pad0058[0xffffffffffffffb0]; // 0x58
 public:
 	// No members available
 };
@@ -8030,8 +8018,6 @@ public:
 // Size: 0x60
 class CZeroPoseUpdateNode : public CLeafUpdateNode
 {
-private:
-	[[maybe_unused]] uint8_t __pad0058[0xffffffffffffffb0]; // 0x58
 public:
 	// No members available
 };
@@ -8323,8 +8309,6 @@ public:
 // Size: 0x70
 class CChoreoUpdateNode : public CUnaryUpdateNode
 {
-private:
-	[[maybe_unused]] uint8_t __pad0068[0xffffffffffffffa0]; // 0x68
 public:
 	// No members available
 };

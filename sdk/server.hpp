@@ -5184,8 +5184,6 @@ public:
 // Size: 0x830
 class CInfoData : public CServerOnlyEntity
 {
-private:
-	[[maybe_unused]] uint8_t __pad04a0[0xfffffffffffffef0]; // 0x4a0
 public:
 	// No members available
 };
@@ -5540,8 +5538,6 @@ public:
 // Size: 0xd8
 class CNavVolumeMarkupVolume : public CNavVolume
 {
-private:
-	[[maybe_unused]] uint8_t __pad0070[0xfffffffffffffff8]; // 0x70
 public:
 	// No members available
 };
@@ -5550,8 +5546,6 @@ public:
 // Size: 0x98
 class CNavVolumeCalculatedVector : public CNavVolume
 {
-private:
-	[[maybe_unused]] uint8_t __pad0070[0xffffffffffffffb8]; // 0x70
 public:
 	// No members available
 };
@@ -7970,8 +7964,6 @@ public:
 // Size: 0x78
 class CCSPlayer_ParachuteServices : public CPlayerPawnComponent
 {
-private:
-	[[maybe_unused]] uint8_t __pad0040[0xfffffffffffffff8]; // 0x40
 public:
 	// No members available
 };
@@ -8083,8 +8075,6 @@ public:
 // Size: 0x4a8
 class CPointDZItemSpawn : public CServerOnlyPointEntity
 {
-private:
-	[[maybe_unused]] uint8_t __pad04a0[0xfffffffffffffb68]; // 0x4a0
 public:
 	// No members available
 };
@@ -8117,8 +8107,6 @@ public:
 // Size: 0x4c8
 class CPointDZWeaponSpawnGroup : public CPointDZItemSpawnGroup
 {
-private:
-	[[maybe_unused]] uint8_t __pad04c0[0xfffffffffffffb48]; // 0x4c0
 public:
 	// No members available
 };
@@ -8137,8 +8125,6 @@ public:
 // Size: 0x4a8
 class CPointDZParachuteSpawn : public CServerOnlyPointEntity
 {
-private:
-	[[maybe_unused]] uint8_t __pad04a0[0xfffffffffffffb68]; // 0x4a0
 public:
 	// No members available
 };
@@ -10969,8 +10955,6 @@ public:
 // Size: 0x540
 class CSplineConstraint : public CPhysConstraint
 {
-private:
-	[[maybe_unused]] uint8_t __pad04f8[0xfffffffffffffb50]; // 0x4f8
 public:
 	// No members available
 };
@@ -12808,8 +12792,6 @@ public:
 // Size: 0x8a0
 class CTriggerCallback : public CBaseTrigger
 {
-private:
-	[[maybe_unused]] uint8_t __pad0898[0xfffffffffffff770]; // 0x898
 public:
 	// No members available
 };
@@ -13353,8 +13335,6 @@ public:
 // Size: 0x900
 class CPointHintUi : public CPointClientUIWorldPanel
 {
-private:
-	[[maybe_unused]] uint8_t __pad08f8[0xfffffffffffff710]; // 0x8f8
 public:
 	// No members available
 };
@@ -13855,8 +13835,6 @@ public:
 // Size: 0x8a0
 class CTabletBlocker : public CTabletBlockerShim
 {
-private:
-	[[maybe_unused]] uint8_t __pad0898[0xfffffffffffff770]; // 0x898
 public:
 	// No members available
 };
@@ -13865,8 +13843,6 @@ public:
 // Size: 0x8a0
 class CTriggerTripWire : public CBaseTrigger
 {
-private:
-	[[maybe_unused]] uint8_t __pad0898[0xfffffffffffff770]; // 0x898
 public:
 	// No members available
 };
@@ -13942,8 +13918,6 @@ public:
 // Size: 0x8a8
 class CHostageRescueZone : public CHostageRescueZoneShim
 {
-private:
-	[[maybe_unused]] uint8_t __pad0898[0xfffffffffffff778]; // 0x898
 public:
 	// No members available
 };
@@ -16796,8 +16770,6 @@ public:
 // Size: 0xb28
 class CBrBaseItem : public CPhysicsPropMultiplayer
 {
-private:
-	[[maybe_unused]] uint8_t __pad0b00[0xfffffffffffff528]; // 0xb00
 public:
 	// No members available
 };
@@ -17596,8 +17568,6 @@ public:
 // Size: 0xd90
 class CWeaponZoneRepulsor : public CWeaponCSBaseGun
 {
-private:
-	[[maybe_unused]] uint8_t __pad0d70[0xfffffffffffff2b0]; // 0xd70
 public:
 	// No members available
 };
@@ -18328,8 +18298,6 @@ public:
 // Size: 0x1598
 class CCSObserverPawn : public CCSPlayerPawnBase
 {
-private:
-	[[maybe_unused]] uint8_t __pad1570[0xffffffffffffeab8]; // 0x1570
 public:
 	// No members available
 };
@@ -18777,8 +18745,6 @@ public:
 // Size: 0xd98
 class CSmokeGrenade : public CBaseCSGrenade
 {
-private:
-	[[maybe_unused]] uint8_t __pad0d90[0xfffffffffffff278]; // 0xd90
 public:
 	// No members available
 };

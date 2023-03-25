@@ -1426,11 +1426,9 @@ public:
 // Size: 0x230
 class CParticleFunctionRenderer : public CParticleFunction
 {
-private:
-	[[maybe_unused]] uint8_t __pad01f0[0xfffffffffffffff8]; // 0x1f0
+	// Collision detected(0x1e8->0x1f0), output may be wrong.
 public:
-	// MPropertySortPriority "-1"
-	CParticleVisibilityInputs VisibilityInputs; // 0x1e8	
+	// Skipped field "VisibilityInputs" @ 0x1e8 because of the struct collision
 	// MPropertyStartGroup "Rendering filter"
 	// MPropertyFriendlyName "I cannot be refracted through refracting objects like water"
 	// MPropertySortPriority "-1"
@@ -1613,11 +1611,9 @@ public:
 // Size: 0x1f0
 class CParticleFunctionEmitter : public CParticleFunction
 {
-private:
-	[[maybe_unused]] uint8_t __pad01f0[0xfffffffffffffff8]; // 0x1f0
+	// Collision detected(0x1e8->0x1f0), output may be wrong.
 public:
-	// MPropertyFriendlyName "Emitter Index"
-	int32_t m_nEmitterIndex; // 0x1e8	
+	// Skipped field "m_nEmitterIndex" @ 0x1e8 because of the struct collision
 };
 
 // Alignment: 0
@@ -1632,11 +1628,9 @@ public:
 // Size: 0x1f0
 class CParticleFunctionInitializer : public CParticleFunction
 {
-private:
-	[[maybe_unused]] uint8_t __pad01f0[0xfffffffffffffff8]; // 0x1f0
+	// Collision detected(0x1e8->0x1f0), output may be wrong.
 public:
-	// MPropertyFriendlyName "Associated emitter Index"
-	int32_t m_nAssociatedEmitterIndex; // 0x1e8	
+	// Skipped field "m_nAssociatedEmitterIndex" @ 0x1e8 because of the struct collision
 };
 
 // Alignment: 0

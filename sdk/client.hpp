@@ -1889,8 +1889,6 @@ public:
 // Size: 0x550
 class C_TintController : public C_BaseEntity
 {
-private:
-	[[maybe_unused]] uint8_t __pad0538[0xfffffffffffffae0]; // 0x538
 public:
 	// No members available
 };
@@ -4272,8 +4270,6 @@ public:
 // Size: 0x70
 class CCSPlayer_GlowServices : public CPlayerPawnComponent
 {
-private:
-	[[maybe_unused]] uint8_t __pad0040[0xfffffffffffffff0]; // 0x40
 public:
 	// No members available
 };
@@ -5860,8 +5856,6 @@ public:
 // Size: 0xb20
 class C_EnvProjectedTexture : public C_ModelPointEntity
 {
-private:
-	[[maybe_unused]] uint8_t __pad0838[0xfffffffffffffab0]; // 0x838
 public:
 	// No members available
 };
@@ -8738,8 +8732,6 @@ public:
 // Size: 0xaf8
 class C_PhysPropRadarJammer : public C_PhysicsPropMultiplayer
 {
-private:
-	[[maybe_unused]] uint8_t __pad0af0[0xfffffffffffff518]; // 0xaf0
 public:
 	// No members available
 };
@@ -8748,8 +8740,6 @@ public:
 // Size: 0xc20
 class C_SensorGrenadeProjectile : public C_BaseCSGrenadeProjectile
 {
-private:
-	[[maybe_unused]] uint8_t __pad0c00[0xfffffffffffff420]; // 0xc00
 public:
 	// No members available
 };
@@ -8818,8 +8808,6 @@ public:
 // Size: 0x9a0
 class C_HostageCarriableProp : public CBaseAnimGraph
 {
-private:
-	[[maybe_unused]] uint8_t __pad0998[0xfffffffffffff670]; // 0x998
 public:
 	// No members available
 };
@@ -9552,8 +9540,6 @@ public:
 // Size: 0x13e0
 class C_BreachCharge : public C_WeaponCSBase
 {
-private:
-	[[maybe_unused]] uint8_t __pad13d0[0xffffffffffffec40]; // 0x13d0
 public:
 	// No members available
 };
@@ -10342,8 +10328,6 @@ public:
 // Size: 0x1430
 class C_MolotovGrenade : public C_BaseCSGrenade
 {
-private:
-	[[maybe_unused]] uint8_t __pad1410[0xffffffffffffec10]; // 0x1410
 public:
 	// No members available
 };
