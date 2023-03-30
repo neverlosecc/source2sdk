@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: animationsystem.dll
-// Classes count: 474
+// Classes count: 476
 // Enums count: 77
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -290,7 +290,7 @@ enum class IKTargetCoordinateSystem : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x24
+// Size: 0x25
 enum class AnimValueSource : uint32_t
 {
 	MoveHeading = 0x0,
@@ -301,34 +301,35 @@ enum class AnimValueSource : uint32_t
 	ManualFacingHeading = 0x5,
 	LookHeading = 0x6,
 	LookPitch = 0x7,
-	Parameter = 0x8,
-	WayPointHeading = 0x9,
-	WayPointDistance = 0xa,
-	BoundaryRadius = 0xb,
-	TargetMoveHeading = 0xc,
-	TargetMoveSpeed = 0xd,
-	AccelerationHeading = 0xe,
-	AccelerationSpeed = 0xf,
-	SlopeHeading = 0x10,
-	SlopeAngle = 0x11,
-	SlopePitch = 0x12,
-	SlopeYaw = 0x13,
-	GoalDistance = 0x14,
-	AccelerationLeftRight = 0x15,
-	AccelerationFrontBack = 0x16,
-	RootMotionSpeed = 0x17,
-	RootMotionTurnSpeed = 0x18,
-	MoveHeadingRelativeToLookHeading = 0x19,
-	MaxMoveSpeed = 0x1a,
-	FingerCurl_Thumb = 0x1b,
-	FingerCurl_Index = 0x1c,
-	FingerCurl_Middle = 0x1d,
-	FingerCurl_Ring = 0x1e,
-	FingerCurl_Pinky = 0x1f,
-	FingerSplay_Thumb_Index = 0x20,
-	FingerSplay_Index_Middle = 0x21,
-	FingerSplay_Middle_Ring = 0x22,
-	FingerSplay_Ring_Pinky = 0x23,
+	LookDistance = 0x8,
+	Parameter = 0x9,
+	WayPointHeading = 0xa,
+	WayPointDistance = 0xb,
+	BoundaryRadius = 0xc,
+	TargetMoveHeading = 0xd,
+	TargetMoveSpeed = 0xe,
+	AccelerationHeading = 0xf,
+	AccelerationSpeed = 0x10,
+	SlopeHeading = 0x11,
+	SlopeAngle = 0x12,
+	SlopePitch = 0x13,
+	SlopeYaw = 0x14,
+	GoalDistance = 0x15,
+	AccelerationLeftRight = 0x16,
+	AccelerationFrontBack = 0x17,
+	RootMotionSpeed = 0x18,
+	RootMotionTurnSpeed = 0x19,
+	MoveHeadingRelativeToLookHeading = 0x1a,
+	MaxMoveSpeed = 0x1b,
+	FingerCurl_Thumb = 0x1c,
+	FingerCurl_Index = 0x1d,
+	FingerCurl_Middle = 0x1e,
+	FingerCurl_Ring = 0x1f,
+	FingerCurl_Pinky = 0x20,
+	FingerSplay_Thumb_Index = 0x21,
+	FingerSplay_Index_Middle = 0x22,
+	FingerSplay_Middle_Ring = 0x23,
+	FingerSplay_Ring_Pinky = 0x24,
 };
 
 // Alignment: 4
@@ -368,7 +369,7 @@ enum class EAnimValueSource : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x28
+// Size: 0x29
 enum class ControlValue : uint32_t
 {
 	ControlValue_MoveHeading = 0x0,
@@ -376,40 +377,41 @@ enum class ControlValue : uint32_t
 	ControlValue_FacingHeading = 0x2,
 	ControlValue_LookHeading = 0x3,
 	ControlValue_LookPitch = 0x4,
-	ControlValue_WayPointHeading = 0x5,
-	ControlValue_WayPointDistance = 0x6,
-	ControlValue_BoundaryRadius = 0x7,
-	ControlValue_TotalTranslation_SourceState = 0x8,
-	ControlValue_TotalTranslation_TargetState = 0x9,
-	ControlValue_RemainingTranslation_SourceState = 0xa,
-	ControlValue_RemainingTranslation_TargetState = 0xb,
-	ControlValue_MoveVsFacingDelta = 0xc,
-	ControlValue_SourceStateBlendWeight = 0xd,
-	ControlValue_TargetStateBlendWeight = 0xe,
-	ControlValue_TargetMoveHeading = 0xf,
-	ControlValue_TargetMoveSpeed = 0x10,
-	ControlValue_AccelerationHeading = 0x11,
-	ControlValue_AccelerationSpeed = 0x12,
-	ControlValue_SlopeHeading = 0x13,
-	ControlValue_SlopeAngle = 0x14,
-	ControlValue_SlopeYaw = 0x15,
-	ControlValue_SlopePitch = 0x16,
-	ControlValue_GoalDistance = 0x17,
-	ControlValue_AccelerationLeftRight = 0x18,
-	ControlValue_AccelerationFrontBack = 0x19,
-	ControlValue_RootMotionSpeed = 0x1a,
-	ControlValue_RootMotionTurnSpeed = 0x1b,
-	ControlValue_MoveHeadingRelativeToLookHeading = 0x1c,
-	ControlValue_FingerCurl_Thumb = 0x1d,
-	ControlValue_FingerCurl_Index = 0x1e,
-	ControlValue_FingerCurl_Middle = 0x1f,
-	ControlValue_FingerCurl_Ring = 0x20,
-	ControlValue_FingerCurl_Pinky = 0x21,
-	ControlValue_FingerSplay_Thumb_Index = 0x22,
-	ControlValue_FingerSplay_Index_Middle = 0x23,
-	ControlValue_FingerSplay_Middle_Ring = 0x24,
-	ControlValue_FingerSplay_Ring_Pinky = 0x25,
-	ControlValue_Count = 0x26,
+	ControlValue_LookDistance = 0x5,
+	ControlValue_WayPointHeading = 0x6,
+	ControlValue_WayPointDistance = 0x7,
+	ControlValue_BoundaryRadius = 0x8,
+	ControlValue_TotalTranslation_SourceState = 0x9,
+	ControlValue_TotalTranslation_TargetState = 0xa,
+	ControlValue_RemainingTranslation_SourceState = 0xb,
+	ControlValue_RemainingTranslation_TargetState = 0xc,
+	ControlValue_MoveVsFacingDelta = 0xd,
+	ControlValue_SourceStateBlendWeight = 0xe,
+	ControlValue_TargetStateBlendWeight = 0xf,
+	ControlValue_TargetMoveHeading = 0x10,
+	ControlValue_TargetMoveSpeed = 0x11,
+	ControlValue_AccelerationHeading = 0x12,
+	ControlValue_AccelerationSpeed = 0x13,
+	ControlValue_SlopeHeading = 0x14,
+	ControlValue_SlopeAngle = 0x15,
+	ControlValue_SlopeYaw = 0x16,
+	ControlValue_SlopePitch = 0x17,
+	ControlValue_GoalDistance = 0x18,
+	ControlValue_AccelerationLeftRight = 0x19,
+	ControlValue_AccelerationFrontBack = 0x1a,
+	ControlValue_RootMotionSpeed = 0x1b,
+	ControlValue_RootMotionTurnSpeed = 0x1c,
+	ControlValue_MoveHeadingRelativeToLookHeading = 0x1d,
+	ControlValue_FingerCurl_Thumb = 0x1e,
+	ControlValue_FingerCurl_Index = 0x1f,
+	ControlValue_FingerCurl_Middle = 0x20,
+	ControlValue_FingerCurl_Ring = 0x21,
+	ControlValue_FingerCurl_Pinky = 0x22,
+	ControlValue_FingerSplay_Thumb_Index = 0x23,
+	ControlValue_FingerSplay_Index_Middle = 0x24,
+	ControlValue_FingerSplay_Middle_Ring = 0x25,
+	ControlValue_FingerSplay_Ring_Pinky = 0x26,
+	ControlValue_Count = 0x27,
 	ControlValue_Invalid = 0xff,
 };
 
@@ -1461,14 +1463,18 @@ public:
 	CUtlVector< CUtlPair< CBufferString, float32 > > m_morphCtrlWeightArray; // 0x48	
 };
 
-// Alignment: 3
-// Size: 0x40
+// Alignment: 4
+// Size: 0x48
 class CSeqScaleSet
 {
 public:
 	CBufferString m_sName; // 0x0	
-	CUtlVector< int16 > m_nLocalBoneArray; // 0x10	
-	CUtlVector< float32 > m_flBoneScaleArray; // 0x28	
+	float m_flRootOffsetScale; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0014[0x4]; // 0x14
+public:
+	CUtlVector< int16 > m_nLocalBoneArray; // 0x18	
+	CUtlVector< float32 > m_flBoneScaleArray; // 0x30	
 };
 
 // Alignment: 6
@@ -1699,67 +1705,69 @@ public:
 	int32_t m_Value; // 0x0	
 };
 
-// Alignment: 1
-// Size: 0x10
+// Alignment: 3
+// Size: 0x40
 class CAnimationGraphVisualizerPrimitiveBase
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CAnimationGraphVisualizerPrimitiveType m_Type; // 0x8	
+	AnimNodeID m_OwningAnimNodePaths[11]; // 0xc	
+	int32_t m_nOwningAnimNodePathCount; // 0x38	
 };
 
 // Alignment: 3
-// Size: 0x30
+// Size: 0x60
 class CAnimationGraphVisualizerText : public CAnimationGraphVisualizerPrimitiveBase
 {
 public:
-	VectorAligned m_vWsPosition; // 0x10	
-	Color m_Color; // 0x20	
+	VectorAligned m_vWsPosition; // 0x40	
+	Color m_Color; // 0x50	
 private:
-	[[maybe_unused]] uint8_t __pad0024[0x4]; // 0x24
+	[[maybe_unused]] uint8_t __pad0054[0x4]; // 0x54
 public:
-	CUtlString m_Text; // 0x28	
+	CUtlString m_Text; // 0x58	
 };
 
 // Alignment: 3
-// Size: 0x30
+// Size: 0x60
 class CAnimationGraphVisualizerSphere : public CAnimationGraphVisualizerPrimitiveBase
 {
 public:
-	VectorAligned m_vWsPosition; // 0x10	
-	float m_flRadius; // 0x20	
-	Color m_Color; // 0x24	
+	VectorAligned m_vWsPosition; // 0x40	
+	float m_flRadius; // 0x50	
+	Color m_Color; // 0x54	
 };
 
 // Alignment: 3
-// Size: 0x40
+// Size: 0x70
 class CAnimationGraphVisualizerLine : public CAnimationGraphVisualizerPrimitiveBase
 {
 public:
-	VectorAligned m_vWsPositionStart; // 0x10	
-	VectorAligned m_vWsPositionEnd; // 0x20	
-	Color m_Color; // 0x30	
+	VectorAligned m_vWsPositionStart; // 0x40	
+	VectorAligned m_vWsPositionEnd; // 0x50	
+	Color m_Color; // 0x60	
 };
 
 // Alignment: 4
-// Size: 0x50
+// Size: 0x80
 class CAnimationGraphVisualizerPie : public CAnimationGraphVisualizerPrimitiveBase
 {
 public:
-	VectorAligned m_vWsCenter; // 0x10	
-	VectorAligned m_vWsStart; // 0x20	
-	VectorAligned m_vWsEnd; // 0x30	
-	Color m_Color; // 0x40	
+	VectorAligned m_vWsCenter; // 0x40	
+	VectorAligned m_vWsStart; // 0x50	
+	VectorAligned m_vWsEnd; // 0x60	
+	Color m_Color; // 0x70	
 };
 
 // Alignment: 2
-// Size: 0x40
+// Size: 0x70
 class CAnimationGraphVisualizerAxis : public CAnimationGraphVisualizerPrimitiveBase
 {
 public:
-	CTransform m_xWsTransform; // 0x10	
-	float m_flAxisSize; // 0x30	
+	CTransform m_xWsTransform; // 0x40	
+	float m_flAxisSize; // 0x60	
 };
 
 // Alignment: 1
@@ -2251,6 +2259,17 @@ public:
 	CUtlString m_sName; // 0x50	
 };
 
+// Alignment: 1
+// Size: 0x58
+class CCPPScriptComponent : public CAnimComponentBase
+{
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
+public:
+	// MPropertyFriendlyName "Scripts"
+	CUtlVector< CUtlString > m_scriptsToRun; // 0x40	
+};
+
 // Alignment: 6
 // Size: 0x28
 class CDampedValueItem
@@ -2344,7 +2363,7 @@ public:
 	int32_t m_nServerLOD; // 0x38	
 };
 
-// Alignment: 7
+// Alignment: 8
 // Size: 0x60
 class CLookComponent : public CAnimComponentBase
 {
@@ -2363,11 +2382,13 @@ public:
 	// MPropertyHideField
 	AnimParamID m_lookPitchID; // 0x4c	
 	// MPropertyHideField
-	AnimParamID m_lookDirectionID; // 0x50	
+	AnimParamID m_lookDistanceID; // 0x50	
 	// MPropertyHideField
-	AnimParamID m_lookTargetID; // 0x54	
+	AnimParamID m_lookDirectionID; // 0x54	
 	// MPropertyHideField
-	AnimParamID m_lookTargetWorldSpaceID; // 0x58	
+	AnimParamID m_lookTargetID; // 0x58	
+	// MPropertyHideField
+	AnimParamID m_lookTargetWorldSpaceID; // 0x5c	
 };
 
 // Alignment: 2
@@ -5516,7 +5537,7 @@ public:
 	CAnimParamHandle m_paramHandles[30]; // 0x83	
 };
 
-// Alignment: 7
+// Alignment: 8
 // Size: 0x48
 class CLookComponentUpdater : public CAnimComponentUpdater
 {
@@ -5526,10 +5547,11 @@ public:
 	CAnimParamHandle m_hLookHeading; // 0x34	
 	CAnimParamHandle m_hLookHeadingVelocity; // 0x36	
 	CAnimParamHandle m_hLookPitch; // 0x38	
-	CAnimParamHandle m_hLookDirection; // 0x3a	
-	CAnimParamHandle m_hLookTarget; // 0x3c	
-	CAnimParamHandle m_hLookTargetWorldSpace; // 0x3e	
-	bool m_bNetworkLookTarget; // 0x40	
+	CAnimParamHandle m_hLookDistance; // 0x3a	
+	CAnimParamHandle m_hLookDirection; // 0x3c	
+	CAnimParamHandle m_hLookTarget; // 0x3e	
+	CAnimParamHandle m_hLookTargetWorldSpace; // 0x40	
+	bool m_bNetworkLookTarget; // 0x42	
 };
 
 // Alignment: 7
@@ -5699,7 +5721,7 @@ public:
 private:
 	[[maybe_unused]] uint8_t __pad0129[0x7]; // 0x129
 public:
-	VectorAligned m_vFallbackHingeAxis; // 0x130	
+	VectorAligned m_vLsFallbackHingeAxis; // 0x130	
 	int32_t m_nFixedBoneIndex; // 0x140	
 	int32_t m_nMiddleBoneIndex; // 0x144	
 	int32_t m_nEndBoneIndex; // 0x148	
@@ -7800,6 +7822,15 @@ class CActionComponentUpdater : public CAnimComponentUpdater
 {
 public:
 	CUtlVector< CSmartPtr< CAnimActionUpdater > > m_actions; // 0x30	
+};
+
+// Alignment: 1
+// Size: 0xb8
+class CCPPScriptComponentUpdater : public CAnimComponentUpdater
+{
+public:
+	// MPropertyFriendlyName "Scripts"
+	CUtlVector< CUtlString > m_scriptsToRun; // 0x30	
 };
 
 // Alignment: 1

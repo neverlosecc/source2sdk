@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: worldrenderer.dll
-// Classes count: 23
+// Classes count: 24
 // Enums count: 1
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -181,7 +181,7 @@ public:
 	CUtlVector< uint8 > m_pData; // 0x20	
 };
 
-// Alignment: 12
+// Alignment: 13
 // Size: 0x30
 struct AggregateMeshInfo_t
 {
@@ -190,21 +190,36 @@ public:
 	uint8_t m_nVisClusterMemberCount; // 0x4	
 	bool m_bHasTransform; // 0x5	
 	int16_t m_nDrawCallIndex; // 0x6	
-	Color m_vTintColor; // 0x8	
-	uint8_t m_nLODGroupMask; // 0xc	
+	int16_t m_nLODSetupIndex; // 0x8	
+	uint8_t m_nLODGroupMask; // 0xa	
+	Color m_vTintColor; // 0xb	
 private:
-	[[maybe_unused]] uint8_t __pad000d[0x3]; // 0xd
+	[[maybe_unused]] uint8_t __pad000f[0x1]; // 0xf
 public:
 	ObjectTypeFlags_t m_objectFlags; // 0x10	
-	Vector m_vLODOrigin; // 0x14	
-	float m_fLODStartDrawDistance; // 0x20	
-	float m_fLODEndDrawDistance; // 0x24	
-	float m_fMaxObjectScale; // 0x28	
-	int32_t m_nLightProbeVolumePrecomputedHandshake; // 0x2c	
+	int32_t m_nLightProbeVolumePrecomputedHandshake; // 0x14	
+	Vector m_vLODOrigin; // 0x18	
+	float m_fLODStartDrawDistance; // 0x24	
+	float m_fLODEndDrawDistance; // 0x28	
+	float m_fMaxObjectScale; // 0x2c	
 };
 
-// Alignment: 7
-// Size: 0x60
+// Alignment: 4
+// Size: 0x40
+struct AggregateLODSetup_t
+{
+public:
+	Vector m_vLODOrigin; // 0x0	
+	float m_fMaxObjectScale; // 0xc	
+	uint8_t m_nLODMask; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0011[0x7]; // 0x11
+public:
+	CUtlVectorFixedGrowable< float32 > m_fSwitchDistances; // 0x18	
+};
+
+// Alignment: 8
+// Size: 0x78
 struct AggregateSceneObject_t
 {
 public:
@@ -215,9 +230,10 @@ private:
 	[[maybe_unused]] uint8_t __pad000a[0x6]; // 0xa
 public:
 	CUtlVector< AggregateMeshInfo_t > m_aggregateMeshes; // 0x10	
-	CUtlVector< uint16 > m_visClusterMembership; // 0x28	
-	CUtlVector< matrix3x4_t > m_fragmentTransforms; // 0x40	
-	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x58	
+	CUtlVector< AggregateLODSetup_t > m_lodSetups; // 0x28	
+	CUtlVector< uint16 > m_visClusterMembership; // 0x40	
+	CUtlVector< matrix3x4_t > m_fragmentTransforms; // 0x58	
+	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x70	
 };
 
 // Alignment: 12

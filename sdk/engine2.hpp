@@ -446,22 +446,21 @@ public:
 	// No members available
 };
 
-// Alignment: 8
-// Size: 0x78
+// Alignment: 7
+// Size: 0x68
 struct EntComponentInfo_t
 {
 public:
-	V_uuid_t m_id; // 0x0	
-	char* m_pName; // 0x10	
-	char* m_pCPPClassname; // 0x18	
-	char* m_pNetworkDataReferencedDescription; // 0x20	
-	char* m_pNetworkDataReferencedPtrPropDescription; // 0x28	
-	int32_t m_nRuntimeIndex; // 0x30	
-	uint32_t m_nFlags; // 0x34	
+	char* m_pName; // 0x0	
+	char* m_pCPPClassname; // 0x8	
+	char* m_pNetworkDataReferencedDescription; // 0x10	
+	char* m_pNetworkDataReferencedPtrPropDescription; // 0x18	
+	int32_t m_nRuntimeIndex; // 0x20	
+	uint32_t m_nFlags; // 0x24	
 private:
-	[[maybe_unused]] uint8_t __pad0038[0x38]; // 0x38
+	[[maybe_unused]] uint8_t __pad0028[0x38]; // 0x28
 public:
-	CEntityComponentHelper* m_pBaseClassComponentHelper; // 0x70	
+	CEntityComponentHelper* m_pBaseClassComponentHelper; // 0x60	
 };
 
 // Alignment: 0
