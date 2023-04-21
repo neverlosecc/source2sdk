@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: resourcesystem.dll
-// Classes count: 52
+// Classes count: 53
 // Enums count: 2
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -88,6 +88,16 @@ public:
 // Alignment: 0
 // Size: 0x1
 class InfoForResourceTypeCVDataResource
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x1
+class InfoForResourceTypeIPulseGraphDef
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
@@ -437,7 +447,7 @@ public:
 
 // Alignment: 0
 // Size: 0x1
-class InfoForResourceTypeCCSGOItem
+class InfoForResourceTypeCCSGOEconItem
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
