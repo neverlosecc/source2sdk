@@ -3921,7 +3921,7 @@ enum class EGCBaseMsg : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x110
+// Size: 0x112
 enum class modifierfunction : uint32_t
 {
 	MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE = 0x0,
@@ -4194,7 +4194,9 @@ enum class modifierfunction : uint32_t
 	MODIFIER_PROPERTY_KNOCKBACK_AMPLIFICATION_PERCENTAGE = 0x10b,
 	MODIFIER_PROPERTY_HEALTHBAR_PIPS = 0x10c,
 	MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT = 0x10d,
-	MODIFIER_FUNCTION_LAST = 0x10e,
+	MODIFIER_EVENT_SPELL_APPLIED_SUCCESSFULLY = 0x10e,
+	MODIFIER_PROPERTY_AVOID_DAMAGE_AFTER_REDUCTIONS = 0x10f,
+	MODIFIER_FUNCTION_LAST = 0x110,
 	MODIFIER_FUNCTION_INVALID = 0xffff,
 };
 
@@ -25468,7 +25470,7 @@ private:
 public:
 	// MPropertyFriendlyName "particle to use"
 	ParticleSelection_t m_nParticleSelection; // 0x804	
-	// MPropertyFriendlyName "particle number"
+	// MPropertyFriendlyName "particle number/offset"
 	CParticleCollectionFloatInput m_nParticleNumber; // 0x808	
 	// MPropertyFriendlyName "pin break type"
 	ParticlePinDistance_t m_nPinBreakType; // 0x948	
@@ -25600,7 +25602,7 @@ public:
 	bool m_b3D; // 0x12f0	
 };
 
-// Alignment: 5
+// Alignment: 6
 // Size: 0x370
 class C_OP_SetChildControlPoints : public CParticleFunctionOperator
 {
@@ -25616,8 +25618,10 @@ private:
 public:
 	// MPropertyFriendlyName "first particle to copy"
 	CParticleCollectionFloatInput m_nFirstSourcePoint; // 0x220	
+	// MPropertyFriendlyName "start as last particle"
+	bool m_bReverse; // 0x360	
 	// MPropertyFriendlyName "set orientation"
-	bool m_bSetOrientation; // 0x360	
+	bool m_bSetOrientation; // 0x361	
 };
 
 // Alignment: 2
@@ -34103,15 +34107,6 @@ public:
 	uint32_t m_Value; // 0x0	
 };
 
-// Alignment: 2
-// Size: 0x8
-class sPartingShotTemporarySoulDef
-{
-public:
-	CHandle< CBaseEntity > hHeroOwner; // 0x0	
-	CHandle< CBaseEntity > hTemporarySoulClone; // 0x4	
-};
-
 // Alignment: 28
 // Size: 0xc0
 class CBaseAchievement
@@ -34403,6 +34398,15 @@ private:
 public:
 	int32_t m_nNumPrefixedContexts; // 0x28	
 	bool m_bOverrideOnAppend; // 0x2c	
+};
+
+// Alignment: 2
+// Size: 0x8
+class sMuertaPartingShotSoulDef
+{
+public:
+	CHandle< CBaseEntity > hHeroOwner; // 0x0	
+	CHandle< CBaseEntity > hSoulClone; // 0x4	
 };
 
 // Alignment: 10
@@ -35490,7 +35494,7 @@ public:
 };
 
 // Alignment: 34
-// Size: 0x11b8
+// Size: 0x11d8
 class CDOTA_Buff : public CHorizontalMotionController
 {
 private:
@@ -35542,9 +35546,9 @@ public:
 	CUtlVector< CDOTA_BuffParticle > m_iParticles; // 0xa0	
 	CUtlVector< CHandle< CBaseEntity > > m_hAuraUnits; // 0xb8	
 private:
-	[[maybe_unused]] uint8_t __pad00d0[0x10e0]; // 0xd0
+	[[maybe_unused]] uint8_t __pad00d0[0x1100]; // 0xd0
 public:
-	HSCRIPT m_hScriptScope; // 0x11b0	
+	HSCRIPT m_hScriptScope; // 0x11d0	
 };
 
 // Alignment: 9

@@ -7171,7 +7171,7 @@ public:
 	bool m_bClampUpperRange; // 0x215	
 };
 
-// Alignment: 5
+// Alignment: 6
 // Size: 0x370
 class C_OP_SetChildControlPoints : public CParticleFunctionOperator
 {
@@ -7187,8 +7187,10 @@ private:
 public:
 	// MPropertyFriendlyName "first particle to copy"
 	CParticleCollectionFloatInput m_nFirstSourcePoint; // 0x220	
+	// MPropertyFriendlyName "start as last particle"
+	bool m_bReverse; // 0x360	
 	// MPropertyFriendlyName "set orientation"
-	bool m_bSetOrientation; // 0x360	
+	bool m_bSetOrientation; // 0x361	
 };
 
 // Alignment: 7
@@ -7355,7 +7357,7 @@ private:
 public:
 	// MPropertyFriendlyName "particle to use"
 	ParticleSelection_t m_nParticleSelection; // 0x804	
-	// MPropertyFriendlyName "particle number"
+	// MPropertyFriendlyName "particle number/offset"
 	CParticleCollectionFloatInput m_nParticleNumber; // 0x808	
 	// MPropertyFriendlyName "pin break type"
 	ParticlePinDistance_t m_nPinBreakType; // 0x948	
