@@ -2248,7 +2248,7 @@ enum class DOTA_GC_TEAM : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x2b
+// Size: 0x2c
 enum class EEvent : uint32_t
 {
 	EVENT_ID_NONE = 0x0,
@@ -2294,6 +2294,7 @@ enum class EEvent : uint32_t
 	EVENT_ID_MUERTA_RELEASE_SPRING2023 = 0x28,
 	EVENT_ID_TEAM_2023_TOUR1 = 0x29,
 	EVENT_ID_TEAM_2023_TOUR2 = 0x2a,
+	EVENT_ID_TEAM_2023_TOUR3 = 0x2b,
 };
 
 // Alignment: 4
@@ -13654,7 +13655,7 @@ private:
 	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CHandle< CBaseEntity > m_hSource; // 0x8	
-	CHandle< CBaseEntity > m_hInflictor; // 0xc	
+	CHandle< CDOTABaseAbility > m_hInflictor; // 0xc	
 	CHandle< CBaseEntity > m_hTarget; // 0x10	
 	CHandle< CBaseEntity > m_hProjectileSource; // 0x14	
 	float m_flDamage; // 0x18	
@@ -14284,65 +14285,68 @@ public:
 	float fAttackTimeRemaining; // 0x28	
 	PlayerID_t m_nIssuerPlayerIndex; // 0x2c	
 	PlayerID_t m_nVictimPlayerID; // 0x30	
-	CHandle< CBaseEntity > inflictor; // 0x34	
-	int32_t nDamageType; // 0x38	
-	int32_t nDamageflags; // 0x3c	
-	int32_t nDamageCategory; // 0x40	
-	int32_t iFailType; // 0x44	
-	int16_t iRecord; // 0x48	
+	int32_t nDamageType; // 0x34	
+	int32_t nDamageflags; // 0x38	
+	int32_t nDamageCategory; // 0x3c	
+	int32_t iFailType; // 0x40	
+	int16_t iRecord; // 0x44	
 private:
-	[[maybe_unused]] uint8_t __pad004a[0x6]; // 0x4a
+	[[maybe_unused]] uint8_t __pad0046[0x2]; // 0x46
 public:
-	CDOTA_Orb* pOrb; // 0x50	
-	CDOTA_Orb* pOrb2; // 0x58	
-	int32_t nCost; // 0x60	
-	int32_t nOrdertype; // 0x64	
-	Vector vOldLoc; // 0x68	
-	Vector vNewLoc; // 0x74	
-	Vector vCastLocation; // 0x80	
-	bool bCraniumBasherTested; // 0x8c	
-	bool bMKBTested; // 0x8d	
-	bool bOctarineTested; // 0x8e	
-	bool bHeartRegenApplied; // 0x8f	
-	bool bSangeAmpApplied; // 0x90	
-	bool bLocketAmpApplied; // 0x91	
-	bool bPaladinAmpApplied; // 0x92	
-	bool bBlademailApplied; // 0x93	
-	bool bForceFieldApplied; // 0x94	
-	bool bKayaApplied; // 0x95	
-	bool bStoutConsidered; // 0x96	
-	bool bInterrupted; // 0x97	
-	bool bDiffusalApplied; // 0x98	
-	bool bChainLightningConsidered; // 0x99	
-	bool bSuppressDamage; // 0x9a	
-	bool bRangedAttack; // 0x9b	
-	bool bProcessProcs; // 0x9c	
-	bool bProjectileIsFromIllusion; // 0x9d	
-	bool bHasMagicComponent; // 0x9e	
-	bool bIsSpellLifesteal; // 0x9f	
-	CEntityIndex pnMagicStickProcEntityIndices[64]; // 0xa0	
-	bool bBloodstoneRegenApplied; // 0x1a0	
-	bool bShroudManaRestoreApplied; // 0x1a1	
-	bool bPhylacteryApplied; // 0x1a2	
-	bool bIgnoreNegativeValuesIfDebuffImmune; // 0x1a3	
-	bool bIgnorePositiveValuesIfDebuffImmune; // 0x1a4	
-	bool bIgnoreAllIfDebuffImmune; // 0x1a5	
-	bool bAlsoIgnoreBuffsIfDebuffImmune; // 0x1a6	
-	bool bIgnoreLowerIfDebuffImmune; // 0x1a7	
-	float flIgnoreLowerIfDebuffImmune; // 0x1a8	
-	bool bIgnoreHigherIfDebuffImmune; // 0x1ac	
+	CDOTA_Orb* pOrb; // 0x48	
+	CDOTA_Orb* pOrb2; // 0x50	
+	int32_t nCost; // 0x58	
+	int32_t nOrdertype; // 0x5c	
+	Vector vOldLoc; // 0x60	
+	Vector vNewLoc; // 0x6c	
+	Vector vCastLocation; // 0x78	
+	bool bCraniumBasherTested; // 0x84	
+	bool bMKBTested; // 0x85	
+	bool bOctarineTested; // 0x86	
+	bool bHeartRegenApplied; // 0x87	
+	bool bSangeAmpApplied; // 0x88	
+	bool bLocketAmpApplied; // 0x89	
+	bool bPaladinAmpApplied; // 0x8a	
+	bool bBlademailApplied; // 0x8b	
+	bool bForceFieldApplied; // 0x8c	
+	bool bKayaApplied; // 0x8d	
+	bool bStoutConsidered; // 0x8e	
+	bool bInterrupted; // 0x8f	
+	bool bDiffusalApplied; // 0x90	
+	bool bChainLightningConsidered; // 0x91	
+	bool bSuppressDamage; // 0x92	
+	bool bRangedAttack; // 0x93	
+	bool bProcessProcs; // 0x94	
+	bool bProjectileIsFromIllusion; // 0x95	
+	bool bHasMagicComponent; // 0x96	
+	bool bIsSpellLifesteal; // 0x97	
+	CEntityIndex pnMagicStickProcEntityIndices[64]; // 0x98	
+	bool bBloodstoneRegenApplied; // 0x198	
+	bool bShroudManaRestoreApplied; // 0x199	
+	bool bPhylacteryApplied; // 0x19a	
+	bool bIgnoreNegativeValuesIfDebuffImmune; // 0x19b	
+	bool bIgnorePositiveValuesIfDebuffImmune; // 0x19c	
+	bool bIgnoreAllIfDebuffImmune; // 0x19d	
+	bool bAlsoIgnoreBuffsIfDebuffImmune; // 0x19e	
+	bool bIgnoreLowerIfDebuffImmune; // 0x19f	
+	float flIgnoreLowerIfDebuffImmune; // 0x1a0	
+	bool bIgnoreHigherIfDebuffImmune; // 0x1a4	
 private:
-	[[maybe_unused]] uint8_t __pad01ad[0x3]; // 0x1ad
+	[[maybe_unused]] uint8_t __pad01a5[0x3]; // 0x1a5
 public:
-	float flIgnoreHigherIfDebuffImmune; // 0x1b0	
+	float flIgnoreHigherIfDebuffImmune; // 0x1a8	
 private:
-	[[maybe_unused]] uint8_t __pad01b4[0x4]; // 0x1b4
+	[[maybe_unused]] uint8_t __pad01ac[0x4]; // 0x1ac
 public:
-	char* pszAbilitySpecialName; // 0x1b8	
-	int32_t nAbilitySpecialLevel; // 0x1c0	
-	CHandle< CBaseEntity > hattacker; // 0x1c4	
-	CHandle< CBaseEntity > htarget; // 0x1c8	
-	CHandle< CBaseEntity > hunit; // 0x1cc	
+	char* pszAbilitySpecialName; // 0x1b0	
+	int32_t nAbilitySpecialLevel; // 0x1b8	
+	CHandle< CBaseEntity > hattacker; // 0x1bc	
+	CHandle< CBaseEntity > htarget; // 0x1c0	
+	CHandle< CBaseEntity > hunit; // 0x1c4	
+	CHandle< CDOTABaseAbility > inflictor; // 0x1c8	
+private:
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
+public:
 	CDOTA_Buff* pAddedBuff; // 0x1d0	
 	
 	// Static fields:
@@ -39436,7 +39440,7 @@ public:
 	int32_t radius; // 0x11d8	
 	float health_threshold_pct; // 0x11dc	
 	float duration; // 0x11e0	
-	CHandle< CBaseEntity > m_hTombstoneSourceAbility; // 0x11e4	
+	CHandle< CDOTABaseAbility > m_hTombstoneSourceAbility; // 0x11e4	
 	CHandle< CBaseEntity > m_hChaseUnit; // 0x11e8	
 };
 
@@ -47377,7 +47381,7 @@ class CDOTA_Modifier_SkeletonKing_VampiricAura : public CDOTA_Buff
 {
 public:
 	int32_t vampiric_aura; // 0x11d8	
-	int32_t creep_vampiric_aura; // 0x11dc	
+	int32_t creep_lifesteal_reduction_pct; // 0x11dc	
 	float skeleton_duration; // 0x11e0	
 	int32_t max_skeleton_charges; // 0x11e4	
 	int32_t m_iKillCounter; // 0x11e8	
@@ -52111,12 +52115,13 @@ public:
 	int32_t bonus_attack_range; // 0x11d8	
 };
 
-// Alignment: 1
+// Alignment: 2
 // Size: 0x11e8
 class CDOTA_Modifier_Sniper_TakeAim_Bonus : public CDOTA_Buff
 {
 public:
 	int32_t slow; // 0x11d8	
+	int32_t active_attack_range_bonus; // 0x11dc	
 };
 
 // Alignment: 2
@@ -63204,7 +63209,7 @@ public:
 	int32_t radius; // 0x11d8	
 	float health_threshold_pct; // 0x11dc	
 	float duration; // 0x11e0	
-	CHandle< CBaseEntity > m_hTombstoneSourceAbility; // 0x11e4	
+	CHandle< CDOTABaseAbility > m_hTombstoneSourceAbility; // 0x11e4	
 	CHandle< CBaseEntity > m_hChaseUnit; // 0x11e8	
 };
 
@@ -82771,12 +82776,13 @@ public:
 	// No members available
 };
 
-// Alignment: 1
+// Alignment: 2
 // Size: 0x11e0
 class CDOTA_Modifier_Item_SeedsOfSerenity : public CDOTA_Buff_Item
 {
 public:
 	int32_t bonus_health; // 0x11d8	
+	float bonus_health_regen; // 0x11dc	
 };
 
 // Alignment: 2
@@ -83277,15 +83283,16 @@ public:
 	// No members available
 };
 
-// Alignment: 4
-// Size: 0x1220
+// Alignment: 5
+// Size: 0x1228
 class CDOTA_Modifier_Item_SpecialistsArray : public CDOTA_Buff_Item
 {
 public:
 	int32_t all_stats; // 0x11d8	
 	int32_t bonus_damage; // 0x11dc	
-	int32_t count; // 0x11e0	
-	int32_t secondary_target_range_bonus; // 0x11e4	
+	int32_t proc_bonus_damage; // 0x11e0	
+	int32_t count; // 0x11e4	
+	int32_t secondary_target_range_bonus; // 0x11e8	
 };
 
 // Alignment: 0

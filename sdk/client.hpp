@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: client.dll
-// Classes count: 7667
+// Classes count: 7669
 // Enums count: 61
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -9186,7 +9186,7 @@ public:
 	int32_t radius; // 0x11d8	
 	float health_threshold_pct; // 0x11dc	
 	float duration; // 0x11e0	
-	CHandle< C_BaseEntity > m_hTombstoneSourceAbility; // 0x11e4	
+	CHandle< C_DOTABaseAbility > m_hTombstoneSourceAbility; // 0x11e4	
 	CHandle< C_BaseEntity > m_hChaseUnit; // 0x11e8	
 };
 
@@ -13601,7 +13601,7 @@ class CDOTA_Modifier_SkeletonKing_VampiricAura : public CDOTA_Buff
 {
 public:
 	int32_t vampiric_aura; // 0x11d8	
-	int32_t creep_vampiric_aura; // 0x11dc	
+	int32_t creep_lifesteal_reduction_pct; // 0x11dc	
 	float skeleton_duration; // 0x11e0	
 	int32_t max_skeleton_charges; // 0x11e4	
 	int32_t m_iKillCounter; // 0x11e8	
@@ -16300,12 +16300,13 @@ public:
 	int32_t bonus_attack_range; // 0x11d8	
 };
 
-// Alignment: 1
+// Alignment: 2
 // Size: 0x11e8
 class CDOTA_Modifier_Sniper_TakeAim_Bonus : public CDOTA_Buff
 {
 public:
 	int32_t slow; // 0x11d8	
+	int32_t active_attack_range_bonus; // 0x11dc	
 };
 
 // Alignment: 3
@@ -22632,7 +22633,7 @@ public:
 	int32_t radius; // 0x11d8	
 	float health_threshold_pct; // 0x11dc	
 	float duration; // 0x11e0	
-	CHandle< C_BaseEntity > m_hTombstoneSourceAbility; // 0x11e4	
+	CHandle< C_DOTABaseAbility > m_hTombstoneSourceAbility; // 0x11e4	
 	CHandle< C_BaseEntity > m_hChaseUnit; // 0x11e8	
 };
 
@@ -33586,12 +33587,13 @@ public:
 	int32_t bonus_chance; // 0x11f0	
 };
 
-// Alignment: 1
+// Alignment: 2
 // Size: 0x11e0
 class CDOTA_Modifier_Item_SeedsOfSerenity : public CDOTA_Buff_Item
 {
 public:
 	int32_t bonus_health; // 0x11d8	
+	float bonus_health_regen; // 0x11dc	
 };
 
 // Alignment: 2
@@ -33945,15 +33947,16 @@ public:
 	ParticleIndex_t m_nFXIndex; // 0x11dc	
 };
 
-// Alignment: 4
-// Size: 0x1220
+// Alignment: 5
+// Size: 0x1228
 class CDOTA_Modifier_Item_SpecialistsArray : public CDOTA_Buff_Item
 {
 public:
 	int32_t all_stats; // 0x11d8	
 	int32_t bonus_damage; // 0x11dc	
-	int32_t count; // 0x11e0	
-	int32_t secondary_target_range_bonus; // 0x11e4	
+	int32_t proc_bonus_damage; // 0x11e0	
+	int32_t count; // 0x11e4	
+	int32_t secondary_target_range_bonus; // 0x11e8	
 };
 
 // Alignment: 1
@@ -35616,6 +35619,49 @@ class C_CaptureCallbackHandler : public C_BaseEntity
 {
 public:
 	// No members available
+};
+
+// Alignment: 11
+// Size: 0x58
+class C_DOTA_TrackingProjectileInfo
+{
+public:
+	int32_t m_iHandle; // 0x0	
+	int32_t m_iMoveSpeed; // 0x4	
+	Vector m_vLocation; // 0x8	
+	CHandle< C_BaseEntity > m_hSource; // 0x14	
+	CHandle< C_BaseEntity > m_hTarget; // 0x18	
+	Vector m_vTargetLocation; // 0x1c	
+	bool m_bDodgeable; // 0x28	
+	bool m_bIsAttack; // 0x29	
+	bool m_bIsEvaded; // 0x2a	
+private:
+	[[maybe_unused]] uint8_t __pad002b[0x1]; // 0x2b
+public:
+	GameTime_t m_flExpireTime; // 0x2c	
+	GameTime_t m_flMaxImpactTime; // 0x30	
+};
+
+// Alignment: 10
+// Size: 0x90
+class C_DOTA_LinearProjectileInfo
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
+public:
+	CTransform m_transform; // 0x20	
+	int32_t m_iHandle; // 0x40	
+	Vector m_vInitPosition; // 0x44	
+	Vector m_vPosition; // 0x50	
+	Vector m_vVelocity; // 0x5c	
+	Vector m_vAcceleration; // 0x68	
+	float m_flMaxSpeed; // 0x74	
+	float m_flFowRadius; // 0x78	
+	bool m_bStickyFoWReveal; // 0x7c	
+private:
+	[[maybe_unused]] uint8_t __pad007d[0x3]; // 0x7d
+public:
+	float m_flDistance; // 0x80	
 };
 
 // Alignment: 100
