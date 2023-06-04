@@ -3802,7 +3802,7 @@ enum class ECustomGameWhitelistState : uint32_t
 };
 
 // Alignment: 4
-// Size: 0xa
+// Size: 0x7
 enum class ERankType : uint32_t
 {
 	k_ERankType_Invalid = 0x0,
@@ -3812,13 +3812,10 @@ enum class ERankType : uint32_t
 	k_ERankType_RankedLegacy = 0x4,
 	k_ERankType_CasualGlicko = 0x5,
 	k_ERankType_RankedGlicko = 0x6,
-	k_ERankType_CasualRemapped = 0x7,
-	k_ERankType_CasualRemappedGlicko = 0x8,
-	k_ERankType_CasualShiftedGlicko = 0x9,
 };
 
 // Alignment: 4
-// Size: 0xa
+// Size: 0xb
 enum class AttributeDerivedStats : uint32_t
 {
 	DOTA_ATTRIBUTE_STRENGTH_DAMAGE = 0x0,
@@ -3831,6 +3828,7 @@ enum class AttributeDerivedStats : uint32_t
 	DOTA_ATTRIBUTE_INTELLIGENCE_MANA = 0x7,
 	DOTA_ATTRIBUTE_INTELLIGENCE_MANA_REGEN = 0x8,
 	DOTA_ATTRIBUTE_INTELLIGENCE_MAGIC_RESIST = 0x9,
+	DOTA_ATTRIBUTE_ALL_DAMAGE = 0xa,
 };
 
 // Alignment: 4

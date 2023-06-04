@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: server.dll
-// Classes count: 8092
+// Classes count: 8094
 // Enums count: 314
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -2298,7 +2298,7 @@ enum class EEvent : uint32_t
 };
 
 // Alignment: 4
-// Size: 0xa
+// Size: 0x7
 enum class ERankType : uint32_t
 {
 	k_ERankType_Invalid = 0x0,
@@ -2308,9 +2308,6 @@ enum class ERankType : uint32_t
 	k_ERankType_RankedLegacy = 0x4,
 	k_ERankType_CasualGlicko = 0x5,
 	k_ERankType_RankedGlicko = 0x6,
-	k_ERankType_CasualRemapped = 0x7,
-	k_ERankType_CasualRemappedGlicko = 0x8,
-	k_ERankType_CasualShiftedGlicko = 0x9,
 };
 
 // Alignment: 4
@@ -6233,7 +6230,7 @@ enum class Attributes : uint32_t
 };
 
 // Alignment: 4
-// Size: 0xa
+// Size: 0xb
 enum class AttributeDerivedStats : uint32_t
 {
 	DOTA_ATTRIBUTE_STRENGTH_DAMAGE = 0x0,
@@ -6246,6 +6243,7 @@ enum class AttributeDerivedStats : uint32_t
 	DOTA_ATTRIBUTE_INTELLIGENCE_MANA = 0x7,
 	DOTA_ATTRIBUTE_INTELLIGENCE_MANA_REGEN = 0x8,
 	DOTA_ATTRIBUTE_INTELLIGENCE_MAGIC_RESIST = 0x9,
+	DOTA_ATTRIBUTE_ALL_DAMAGE = 0xa,
 };
 
 // Alignment: 4
@@ -12401,8 +12399,8 @@ public:
 	CUtlVectorEmbeddedNetworkVar< CDOTACustomShopItemInfo > m_CustomShopItems; // 0x130	
 };
 
-// Alignment: 103
-// Size: 0x758
+// Alignment: 104
+// Size: 0x760
 class CDOTABaseGameMode : public CBaseEntity
 {
 private:
@@ -12553,135 +12551,140 @@ public:
 	// MNetworkEnable
 	float m_flStrengthMagicResistancePercent; // 0x570	
 	// MNetworkEnable
-	float m_flDraftingHeroPickSelectTimeOverride; // 0x574	
+	float m_flAttributeAllDamage; // 0x574	
 	// MNetworkEnable
-	float m_flDraftingBanningTimeOverride; // 0x578	
+	float m_flDraftingHeroPickSelectTimeOverride; // 0x578	
 	// MNetworkEnable
-	bool m_bPauseEnabled; // 0x57c	
+	float m_flDraftingBanningTimeOverride; // 0x57c	
+	// MNetworkEnable
+	bool m_bPauseEnabled; // 0x580	
 private:
-	[[maybe_unused]] uint8_t __pad057d[0x3]; // 0x57d
+	[[maybe_unused]] uint8_t __pad0581[0x3]; // 0x581
 public:
 	// MNetworkEnable
-	float m_flCustomScanCooldown; // 0x580	
+	float m_flCustomScanCooldown; // 0x584	
 	// MNetworkEnable
-	float m_flCustomGlyphCooldown; // 0x584	
+	float m_flCustomGlyphCooldown; // 0x588	
 	// MNetworkEnable
-	float m_flCustomBackpackSwapCooldown; // 0x588	
+	float m_flCustomBackpackSwapCooldown; // 0x58c	
 	// MNetworkEnable
-	float m_flCustomBackpackCooldownPercent; // 0x58c	
+	float m_flCustomBackpackCooldownPercent; // 0x590	
 	// MNetworkEnable
-	bool m_bDefaultRuneSpawnLogic; // 0x590	
+	bool m_bDefaultRuneSpawnLogic; // 0x594	
 	// MNetworkEnable
-	bool m_bEnableFreeCourierMode; // 0x591	
+	bool m_bEnableFreeCourierMode; // 0x595	
 	// MNetworkEnable
-	bool m_bAllowNeutralItemDrops; // 0x592	
+	bool m_bAllowNeutralItemDrops; // 0x596	
 	// MNetworkEnable
-	bool m_bEnableNeutralStash; // 0x593	
+	bool m_bEnableNeutralStash; // 0x597	
 	// MNetworkEnable
-	bool m_bEnableNeutralStashTeamViewOnly; // 0x594	
+	bool m_bEnableNeutralStashTeamViewOnly; // 0x598	
 	// MNetworkEnable
-	bool m_bEnableNeutralItemHideUndiscovered; // 0x595	
+	bool m_bEnableNeutralItemHideUndiscovered; // 0x599	
 	// MNetworkEnable
-	bool m_bEnableSendToStash; // 0x596	
+	bool m_bEnableSendToStash; // 0x59a	
 	// MNetworkEnable
-	bool m_bForceRightClickAttackDisabled; // 0x597	
-	// MNetworkEnable
-	CUtlVectorEmbeddedNetworkVar< CDOTACustomShopInfo > m_vecCustomShopInfo; // 0x598	
-	// MNetworkEnable
-	bool m_bCanSellAnywhere; // 0x5e8	
+	bool m_bForceRightClickAttackDisabled; // 0x59b	
 private:
-	[[maybe_unused]] uint8_t __pad05e9[0x3]; // 0x5e9
+	[[maybe_unused]] uint8_t __pad059c[0x4]; // 0x59c
 public:
 	// MNetworkEnable
-	float m_flCameraNearZ; // 0x5ec	
+	CUtlVectorEmbeddedNetworkVar< CDOTACustomShopInfo > m_vecCustomShopInfo; // 0x5a0	
 	// MNetworkEnable
-	float m_flCameraFarZ; // 0x5f0	
-	// MNetworkEnable
-	int32_t m_nCustomRadiantScore; // 0x5f4	
-	// MNetworkEnable
-	int32_t m_nCustomDireScore; // 0x5f8	
-	// MNetworkEnable
-	bool m_bAbilityUpgradeWhitelistEnabled; // 0x5fc	
+	bool m_bCanSellAnywhere; // 0x5f0	
 private:
-	[[maybe_unused]] uint8_t __pad05fd[0x3]; // 0x5fd
+	[[maybe_unused]] uint8_t __pad05f1[0x3]; // 0x5f1
 public:
 	// MNetworkEnable
-	CNetworkUtlVectorBase< AbilityID_t > m_vecAbilityUpgradeWhitelist; // 0x600	
+	float m_flCameraNearZ; // 0x5f4	
 	// MNetworkEnable
-	bool m_bGiveFreeTPOnDeath; // 0x618	
+	float m_flCameraFarZ; // 0x5f8	
+	// MNetworkEnable
+	int32_t m_nCustomRadiantScore; // 0x5fc	
+	// MNetworkEnable
+	int32_t m_nCustomDireScore; // 0x600	
+	// MNetworkEnable
+	bool m_bAbilityUpgradeWhitelistEnabled; // 0x604	
 private:
-	[[maybe_unused]] uint8_t __pad0619[0x3]; // 0x619
+	[[maybe_unused]] uint8_t __pad0605[0x3]; // 0x605
 public:
 	// MNetworkEnable
-	int32_t m_nInnateMeleeDamageBlockPct; // 0x61c	
+	CNetworkUtlVectorBase< AbilityID_t > m_vecAbilityUpgradeWhitelist; // 0x608	
 	// MNetworkEnable
-	int32_t m_nInnateMeleeDamageBlockAmount; // 0x620	
-	// MNetworkEnable
-	int32_t m_nInnateMeleeDamageBlockPerLevelAmount; // 0x624	
-	// MNetworkEnable
-	float m_flWaterRuneSpawnInterval; // 0x628	
+	bool m_bGiveFreeTPOnDeath; // 0x620	
 private:
-	[[maybe_unused]] uint8_t __pad062c[0x1c]; // 0x62c
+	[[maybe_unused]] uint8_t __pad0621[0x3]; // 0x621
 public:
-	bool m_bSelectionGoldPenaltyEnabled; // 0x648	
-	bool m_bRemoveIllusionsOnDeath; // 0x649	
-	bool m_bRandomHeroBonusItemGrantDisabled; // 0x64a	
-	bool m_bDisableClumpingBehaviorByDefault; // 0x64b	
-	bool m_bRuneTypeEnabled[10]; // 0x64c	
-	bool m_bOverrideBotLateGame; // 0x656	
-	bool m_bBotsAlwaysPushWithHuman; // 0x657	
-	bool m_bBotsInLateGame; // 0x658	
+	// MNetworkEnable
+	int32_t m_nInnateMeleeDamageBlockPct; // 0x624	
+	// MNetworkEnable
+	int32_t m_nInnateMeleeDamageBlockAmount; // 0x628	
+	// MNetworkEnable
+	int32_t m_nInnateMeleeDamageBlockPerLevelAmount; // 0x62c	
+	// MNetworkEnable
+	float m_flWaterRuneSpawnInterval; // 0x630	
 private:
-	[[maybe_unused]] uint8_t __pad0659[0x3]; // 0x659
+	[[maybe_unused]] uint8_t __pad0634[0x1c]; // 0x634
 public:
-	int32_t m_nBotMaxPushTier; // 0x65c	
-	float m_flFountainPercentageHealthRegen; // 0x660	
-	float m_flFountainPercentageManaRegen; // 0x664	
-	float m_flFountainConstantManaRegen; // 0x668	
-	float m_flPowerRuneSpawnInterval; // 0x66c	
-	float m_flBountyRuneSpawnInterval; // 0x670	
+	bool m_bSelectionGoldPenaltyEnabled; // 0x650	
+	bool m_bRemoveIllusionsOnDeath; // 0x651	
+	bool m_bRandomHeroBonusItemGrantDisabled; // 0x652	
+	bool m_bDisableClumpingBehaviorByDefault; // 0x653	
+	bool m_bRuneTypeEnabled[10]; // 0x654	
+	bool m_bOverrideBotLateGame; // 0x65e	
+	bool m_bBotsAlwaysPushWithHuman; // 0x65f	
+	bool m_bBotsInLateGame; // 0x660	
+private:
+	[[maybe_unused]] uint8_t __pad0661[0x3]; // 0x661
+public:
+	int32_t m_nBotMaxPushTier; // 0x664	
+	float m_flFountainPercentageHealthRegen; // 0x668	
+	float m_flFountainPercentageManaRegen; // 0x66c	
+	float m_flFountainConstantManaRegen; // 0x670	
+	float m_flPowerRuneSpawnInterval; // 0x674	
+	float m_flBountyRuneSpawnInterval; // 0x678	
 };
 
 // Alignment: 11
-// Size: 0x808
+// Size: 0x810
 class CDOTATurboGameMode : public CDOTABaseGameMode
 {
 private:
-	[[maybe_unused]] uint8_t __pad0758[0x18]; // 0x758
+	[[maybe_unused]] uint8_t __pad0760[0x18]; // 0x760
 public:
-	int32_t m_nHighestLevelInCurrentGame; // 0x770	
+	int32_t m_nHighestLevelInCurrentGame; // 0x778	
 private:
-	[[maybe_unused]] uint8_t __pad0774[0x34]; // 0x774
+	[[maybe_unused]] uint8_t __pad077c[0x34]; // 0x77c
 public:
-	CUtlVector< float32 > m_ExtraMeleeCreepTimes; // 0x7a8	
-	CUtlVector< float32 > m_ExtraRangedCreepTimes; // 0x7c0	
-	CUtlVector< float32 > m_ExtraSiegeCreepTimes; // 0x7d8	
-	int32_t m_nExtraGoldPerWave; // 0x7f0	
-	int32_t m_nExtraXPPerWave; // 0x7f4	
-	float m_flNextRewardDistributionTime; // 0x7f8	
-	float m_flNextWaveRecalculationTime; // 0x7fc	
-	float m_flNextNeutralItemDistributionTime; // 0x800	
-	bool m_bInOvertime; // 0x804	
-	bool m_bDistributingPassiveGoldAndXp; // 0x805	
+	CUtlVector< float32 > m_ExtraMeleeCreepTimes; // 0x7b0	
+	CUtlVector< float32 > m_ExtraRangedCreepTimes; // 0x7c8	
+	CUtlVector< float32 > m_ExtraSiegeCreepTimes; // 0x7e0	
+	int32_t m_nExtraGoldPerWave; // 0x7f8	
+	int32_t m_nExtraXPPerWave; // 0x7fc	
+	float m_flNextRewardDistributionTime; // 0x800	
+	float m_flNextWaveRecalculationTime; // 0x804	
+	float m_flNextNeutralItemDistributionTime; // 0x808	
+	bool m_bInOvertime; // 0x80c	
+	bool m_bDistributingPassiveGoldAndXp; // 0x80d	
 };
 
 // Alignment: 5
-// Size: 0x810
+// Size: 0x818
 class CDOTANewPlayerPoolGameMode : public CDOTABaseGameMode
 {
 public:
-	int32_t m_nHighestLevelInCurrentGame; // 0x758	
+	int32_t m_nHighestLevelInCurrentGame; // 0x760	
 private:
-	[[maybe_unused]] uint8_t __pad075c[0x64]; // 0x75c
+	[[maybe_unused]] uint8_t __pad0764[0x64]; // 0x764
 public:
-	CUtlVector< float32 > m_ExtraMeleeCreepTimes; // 0x7c0	
-	CUtlVector< float32 > m_ExtraRangedCreepTimes; // 0x7d8	
-	CUtlVector< float32 > m_ExtraSiegeCreepTimes; // 0x7f0	
-	bool m_bInOvertime; // 0x808	
+	CUtlVector< float32 > m_ExtraMeleeCreepTimes; // 0x7c8	
+	CUtlVector< float32 > m_ExtraRangedCreepTimes; // 0x7e0	
+	CUtlVector< float32 > m_ExtraSiegeCreepTimes; // 0x7f8	
+	bool m_bInOvertime; // 0x810	
 };
 
 // Alignment: 0
-// Size: 0x758
+// Size: 0x760
 class CDOTAMutationGameMode : public CDOTABaseGameMode
 {
 public:
@@ -31014,6 +31017,14 @@ private:
 	[[maybe_unused]] uint8_t __pad0924[0x4]; // 0x924
 public:
 	CountdownTimer m_RampTimer; // 0x928	
+};
+
+// Alignment: 0
+// Size: 0x8f0
+class CTriggerBuoyancy : public CBaseTrigger
+{
+public:
+	// No members available
 };
 
 // Alignment: 0
@@ -49861,8 +49872,8 @@ public:
 	// No members available
 };
 
-// Alignment: 9
-// Size: 0x1218
+// Alignment: 10
+// Size: 0x1220
 class CDOTA_Modifier_Zuus_ArcLightning : public CDOTA_Buff
 {
 public:
@@ -49873,8 +49884,15 @@ public:
 	int32_t damage_health_pct; // 0x11e8	
 	int32_t total_damage_pct; // 0x11ec	
 	int32_t m_iCurJumpCount; // 0x11f0	
-	Vector m_vCurTargetLoc; // 0x11f4	
-	CUtlVector< CHandle< CBaseEntity > > m_hHitEntities; // 0x1200	
+	bool trigger_spell_absorb; // 0x11f4	
+private:
+	[[maybe_unused]] uint8_t __pad11f5[0x3]; // 0x11f5
+public:
+	Vector m_vCurTargetLoc; // 0x11f8	
+private:
+	[[maybe_unused]] uint8_t __pad1204[0x4]; // 0x1204
+public:
+	CUtlVector< CHandle< CBaseEntity > > m_hHitEntities; // 0x1208	
 };
 
 // Alignment: 0
@@ -51949,17 +51967,15 @@ public:
 	CUtlVector< sBounceInfo > m_BounceInfo; // 0x578	
 };
 
-// Alignment: 6
-// Size: 0x11f0
+// Alignment: 4
+// Size: 0x11e8
 class CDOTA_Modifier_WitchDoctor_DeathWard : public CDOTA_Buff
 {
 public:
 	int32_t bonus_damage; // 0x11d8	
-	int32_t attack_speed_reduction; // 0x11dc	
-	int32_t m_iBounceRadius; // 0x11e0	
-	int32_t bonus_accuracy; // 0x11e4	
-	bool m_bFirstAttack; // 0x11e8	
-	bool m_bShard; // 0x11e9	
+	int32_t m_iBounceRadius; // 0x11dc	
+	int32_t bonus_accuracy; // 0x11e0	
+	bool m_bFirstAttack; // 0x11e4	
 };
 
 // Alignment: 0
@@ -51977,6 +51993,14 @@ class CDOTA_Modifier_WitchDoctor_Voodoo_Switcheroo : public CDOTA_Buff
 public:
 	Vector m_vSavedPos; // 0x11d8	
 	CHandle< CBaseEntity > m_hSavedAbility; // 0x11e4	
+};
+
+// Alignment: 1
+// Size: 0x11e0
+class CDOTA_Modifier_WitchDoctor_DeathWard_Voodoo_Switcheroo_AttackSpeedReduction : public CDOTA_Buff
+{
+public:
+	int32_t attack_speed_reduction; // 0x11d8	
 };
 
 // Alignment: 0
@@ -60011,7 +60035,7 @@ public:
 	// No members available
 };
 
-// Alignment: 10
+// Alignment: 11
 // Size: 0x5d0
 class CDOTA_Ability_SpiritBreaker_ChargeOfDarkness : public CDOTABaseAbility
 {
@@ -60019,9 +60043,10 @@ private:
 	[[maybe_unused]] uint8_t __pad0558[0x10]; // 0x558
 public:
 	bool m_bFinished; // 0x568	
-	bool m_bPlayedChargeAnimation; // 0x569	
+	bool m_bInterrupted; // 0x569	
+	bool m_bPlayedChargeAnimation; // 0x56a	
 private:
-	[[maybe_unused]] uint8_t __pad056a[0x2]; // 0x56a
+	[[maybe_unused]] uint8_t __pad056b[0x1]; // 0x56b
 public:
 	Vector m_vProjectileLocation; // 0x56c	
 	Vector m_vTargetLocation; // 0x578	
@@ -68485,12 +68510,13 @@ public:
 	int32_t bonus_ms; // 0x11dc	
 };
 
-// Alignment: 1
+// Alignment: 2
 // Size: 0x560
 class CDOTA_Ability_AbyssalUnderlord_Dark_Portal : public CDOTABaseAbility
 {
 public:
 	float duration; // 0x558	
+	float distance_from_fountain; // 0x55c	
 };
 
 // Alignment: 0
@@ -74749,14 +74775,16 @@ public:
 	// No members available
 };
 
-// Alignment: 3
-// Size: 0x11e8
+// Alignment: 5
+// Size: 0x11f0
 class CDOTA_Modifier_Item_DustofAppearance_Thinker : public CDOTA_Buff
 {
 public:
 	float radius; // 0x11d8	
 	float duration; // 0x11dc	
 	float linger_duration; // 0x11e0	
+	int32_t movespeed; // 0x11e4	
+	float damage; // 0x11e8	
 };
 
 // Alignment: 2
@@ -89203,12 +89231,12 @@ public:
 	// No members available
 };
 
-// Alignment: 1
-// Size: 0x11e0
+// Alignment: 0
+// Size: 0x11d8
 class CDOTA_Modifier_Lamp_On : public CDOTA_Buff
 {
 public:
-	ParticleIndex_t m_iFxIndex; // 0x11d8	
+	// No members available
 };
 
 // Alignment: 1
@@ -92311,12 +92339,12 @@ public:
 	// No members available
 };
 
-// Alignment: 0
-// Size: 0x1d68
+// Alignment: 1
+// Size: 0x1d70
 class CDOTA_Unit_Hero_PhantomLancer : public CDOTA_BaseNPC_Hero
 {
 public:
-	// No members available
+	bool m_bInventoryEnabled; // 0x1d68	
 };
 
 // Alignment: 2
@@ -92622,6 +92650,7 @@ public:
 class CDOTA_Unit_Miniboss : public CDOTA_BaseNPC_Additive
 {
 public:
+	// MNetworkEnable
 	int32_t m_nTimesSpawned; // 0x1730	
 	int32_t m_nTempViewer; // 0x1734	
 	CUtlVector< CHandle< CBaseEntity > > m_hAttackingHeroes; // 0x1738	
