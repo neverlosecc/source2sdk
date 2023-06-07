@@ -206,8 +206,6 @@ struct VMixFilterDesc_t;
 // Size: 0x18
 class CSosGroupActionSchema
 {
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MPropertyFriendlyName "Name"
 	CUtlString m_name; // 0x8	
@@ -224,10 +222,8 @@ class CSosGroupActionLimitSchema : public CSosGroupActionSchema
 public:
 	// MPropertyFriendlyName "Max Count"
 	int32_t m_nMaxCount; // 0x18	
-	// MPropertyAttributeChoiceEnumName
 	// MPropertyFriendlyName "Stop Type"
 	SosActionStopType_t m_nStopType; // 0x1c	
-	// MPropertyAttributeChoiceEnumName
 	// MPropertyFriendlyName "Sort Type"
 	SosActionSortType_t m_nSortType; // 0x20	
 };
@@ -245,8 +241,6 @@ public:
 // Size: 0x10
 class CSosGroupBranchPattern
 {
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MPropertyFriendlyName "Event Name"
 	bool m_bMatchEventName; // 0x8	
@@ -280,7 +274,6 @@ class CSosSoundEventGroupSchema
 public:
 	// MPropertyFriendlyName "Group Name"
 	CUtlString m_name; // 0x0	
-	// MPropertyAttributeChoiceEnumName
 	// MPropertyFriendlyName "Group Type"
 	SosGroupType_t m_nType; // 0x8	
 	// MPropertyFriendlyName "Blocks Events"
