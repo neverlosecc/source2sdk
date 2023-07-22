@@ -3802,7 +3802,7 @@ enum class ECustomGameWhitelistState : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x7
+// Size: 0xb
 enum class ERankType : uint32_t
 {
 	k_ERankType_Invalid = 0x0,
@@ -3812,6 +3812,10 @@ enum class ERankType : uint32_t
 	k_ERankType_RankedLegacy = 0x4,
 	k_ERankType_CasualGlicko = 0x5,
 	k_ERankType_RankedGlicko = 0x6,
+	k_ERankType_RankMax = 0x7,
+	k_ERankType_BehaviorPrivate = 0x64,
+	k_ERankType_BehaviorPublic = 0x65,
+	k_ERankType_Max = 0x66,
 };
 
 // Alignment: 4
@@ -3921,7 +3925,7 @@ enum class EGCBaseMsg : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x112
+// Size: 0x113
 enum class modifierfunction : uint32_t
 {
 	MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE = 0x0,
@@ -4196,7 +4200,8 @@ enum class modifierfunction : uint32_t
 	MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT = 0x10d,
 	MODIFIER_EVENT_SPELL_APPLIED_SUCCESSFULLY = 0x10e,
 	MODIFIER_PROPERTY_AVOID_DAMAGE_AFTER_REDUCTIONS = 0x10f,
-	MODIFIER_FUNCTION_LAST = 0x110,
+	MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE_MULTIPLICATIVE = 0x110,
+	MODIFIER_FUNCTION_LAST = 0x111,
 	MODIFIER_FUNCTION_INVALID = 0xffff,
 };
 
@@ -5441,7 +5446,7 @@ enum class ECustomGameInstallStatus : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x335
+// Size: 0x334
 enum class EDOTAGCMsg : uint32_t
 {
 	k_EMsgGCDOTABase = 0x1b58,
@@ -6254,7 +6259,6 @@ enum class EDOTAGCMsg : uint32_t
 	k_EMsgGCToClientCollectorsCacheAvailableDataResponse = 0x22a8,
 	k_EMsgClientToGCUploadMatchClip = 0x22a9,
 	k_EMsgGCToClientUploadMatchClipResponse = 0x22aa,
-	k_EMsgGCToServerSetSteamLearnDisable = 0x22ab,
 	k_EMsgGCToServerSetSteamLearnKeysChanged = 0x22ac,
 	k_EMsgSignOutMuertaMinigame = 0x22ad,
 	k_EMsgGCToServerLobbyHeroRoleStats = 0x22ae,
@@ -7106,7 +7110,7 @@ enum class ABILITY_TYPES : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x6c
+// Size: 0x6d
 enum class DOTA_CHAT_MESSAGE : uint32_t
 {
 	CHAT_MESSAGE_INVALID = 0xffffffffffffffff,
@@ -7217,6 +7221,7 @@ enum class DOTA_CHAT_MESSAGE : uint32_t
 	CHAT_MESSAGE_PRIVATE_COACH_CONNECTED = 0x71,
 	CHAT_MESSAGE_CANT_PAUSE_TOO_EARLY = 0x73,
 	CHAT_MESSAGE_HERO_KILL_WITH_PENGUIN = 0x74,
+	CHAT_MESSAGE_MINIBOSS_KILL = 0x75,
 };
 
 // Alignment: 4
@@ -7752,7 +7757,7 @@ enum class EDPCPushNotification : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x61
+// Size: 0x62
 enum class EDotaClientMessages : uint32_t
 {
 	DOTA_CM_MapLine = 0x12d,
@@ -7852,6 +7857,7 @@ enum class EDotaClientMessages : uint32_t
 	DOTA_CM_PlayerDraftSuggest = 0x321,
 	DOTA_CM_PlayerDraftPreferRole = 0x322,
 	DOTA_CM_PlayerDraftPreferTeam = 0x323,
+	DOTA_CM_AbilityAlert = 0x325,
 };
 
 // Alignment: 4
@@ -35569,7 +35575,7 @@ public:
 };
 
 // Alignment: 34
-// Size: 0x11d8
+// Size: 0x11e8
 class CDOTA_Buff : public CHorizontalMotionController
 {
 private:
@@ -35621,9 +35627,9 @@ public:
 	CUtlVector< CDOTA_BuffParticle > m_iParticles; // 0xa0	
 	CUtlVector< CHandle< CBaseEntity > > m_hAuraUnits; // 0xb8	
 private:
-	[[maybe_unused]] uint8_t __pad00d0[0x1100]; // 0xd0
+	[[maybe_unused]] uint8_t __pad00d0[0x1110]; // 0xd0
 public:
-	HSCRIPT m_hScriptScope; // 0x11d0	
+	HSCRIPT m_hScriptScope; // 0x11e0	
 };
 
 // Alignment: 9
