@@ -12,7 +12,7 @@ This repository contains the generated Source 2 SDKs for various games. Each gam
 - `artifact-classic` - Artifact
 - `artifact-foundry` - Artifact Foundry
 - `sbox` - S&Box
-- `underlods` - Dota Underlords
+- `underlords` - Dota Underlords
 
 To access the SDK for a specific game, switch to the corresponding branch:
 
