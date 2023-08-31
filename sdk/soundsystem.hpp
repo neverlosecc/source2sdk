@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: soundsystem.dll
-// Classes count: 36
+// Classes count: 37
 // Enums count: 13
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -46,12 +46,13 @@ enum class soundlevel_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x3
+// Size: 0x4
 enum class ActionType_t : uint32_t
 {
 	SOS_ACTION_NONE = 0x0,
 	SOS_ACTION_LIMITER = 0x1,
 	SOS_ACTION_TIME_LIMIT = 0x2,
+	SOS_ACTION_SET_SOUNDEVENT_PARAM = 0x3,
 };
 
 // Alignment: 4
@@ -224,10 +225,8 @@ class CSosGroupActionLimitSchema : public CSosGroupActionSchema
 public:
 	// MPropertyFriendlyName "Max Count"
 	int32_t m_nMaxCount; // 0x18	
-	// MPropertyAttributeChoiceEnumName
 	// MPropertyFriendlyName "Stop Type"
 	SosActionStopType_t m_nStopType; // 0x1c	
-	// MPropertyAttributeChoiceEnumName
 	// MPropertyFriendlyName "Sort Type"
 	SosActionSortType_t m_nSortType; // 0x20	
 };
@@ -239,6 +238,26 @@ class CSosGroupActionTimeLimitSchema : public CSosGroupActionSchema
 public:
 	// MPropertyFriendlyName "Max Time"
 	float m_flMaxDuration; // 0x18	
+};
+
+// Alignment: 5
+// Size: 0x38
+class CSosGroupActionSetSoundeventParameterSchema : public CSosGroupActionSchema
+{
+public:
+	// MPropertyFriendlyName "Max Count"
+	int32_t m_nMaxCount; // 0x18	
+	// MPropertyFriendlyName "Minimum Value"
+	float m_flMinValue; // 0x1c	
+	// MPropertyFriendlyName "Maximum Value"
+	float m_flMaxValue; // 0x20	
+private:
+	[[maybe_unused]] uint8_t __pad0024[0x4]; // 0x24
+public:
+	// MPropertyFriendlyName "Parameter Name"
+	CUtlString m_opvarName; // 0x28	
+	// MPropertyFriendlyName "Sort Type"
+	SosActionSortType_t m_nSortType; // 0x30	
 };
 
 // Alignment: 4
@@ -280,7 +299,6 @@ class CSosSoundEventGroupSchema
 public:
 	// MPropertyFriendlyName "Group Name"
 	CUtlString m_name; // 0x0	
-	// MPropertyAttributeChoiceEnumName
 	// MPropertyFriendlyName "Group Type"
 	SosGroupType_t m_nType; // 0x8	
 	// MPropertyFriendlyName "Blocks Events"

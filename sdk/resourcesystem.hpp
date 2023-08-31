@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: resourcesystem.dll
-// Classes count: 53
+// Classes count: 54
 // Enums count: 2
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -98,6 +98,26 @@ public:
 // Alignment: 0
 // Size: 0x1
 class InfoForResourceTypeIPulseGraphDef
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x1
+class InfoForResourceTypeCTypeScriptResource
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x1
+class InfoForResourceTypeCJavaScriptResource
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
@@ -367,27 +387,17 @@ public:
 
 // Alignment: 0
 // Size: 0x1
-class InfoForResourceTypeCPanoramaScript
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
-public:
-	// No members available
-};
-
-// Alignment: 0
-// Size: 0x1
-class InfoForResourceTypeCPanoramaTypeScript
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
-public:
-	// No members available
-};
-
-// Alignment: 0
-// Size: 0x1
 class InfoForResourceTypeCDOTAPatchNotesList
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x1
+class InfoForResourceTypeCDOTANovelsList
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
@@ -471,6 +481,9 @@ struct FuseVariableIndex_t
 {
 public:
 	uint16_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("resourcesystem.dll")->FindDeclaredClass("FuseVariableIndex_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 1
@@ -479,6 +492,9 @@ struct FuseFunctionIndex_t
 {
 public:
 	uint16_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("resourcesystem.dll")->FindDeclaredClass("FuseFunctionIndex_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 3
@@ -529,16 +545,17 @@ public:
 	int32_t m_nMaxTempVarsUsed; // 0x48	
 };
 
-// Alignment: 3
-// Size: 0x68
+// Alignment: 6
+// Size: 0xb0
 class CFuseSymbolTable
 {
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	CUtlHashtable< CUtlStringToken, ConstantInfo_t > m_constants; // 0x8	
-	CUtlHashtable< CUtlStringToken, VariableInfo_t > m_variables; // 0x28	
-	CUtlHashtable< CUtlStringToken, FunctionInfo_t > m_functions; // 0x48	
+	CUtlVector< ConstantInfo_t > m_constants; // 0x0	
+	CUtlVector< VariableInfo_t > m_variables; // 0x18	
+	CUtlVector< FunctionInfo_t > m_functions; // 0x30	
+	CUtlHashtable< CUtlStringToken, int32 > m_constantMap; // 0x48	
+	CUtlHashtable< CUtlStringToken, int32 > m_variableMap; // 0x68	
+	CUtlHashtable< CUtlStringToken, int32 > m_functionMap; // 0x88	
 };
 
 // Alignment: 2

@@ -4,13 +4,13 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: worldrenderer.dll
-// Classes count: 24
+// Classes count: 26
 // Enums count: 1
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
 // Alignment: 4
-// Size: 0xf
+// Size: 0x10
 enum class ObjectTypeFlags_t : uint32_t
 {
 	OBJECT_TYPE_NONE = 0x0,
@@ -26,11 +26,13 @@ enum class ObjectTypeFlags_t : uint32_t
 	OBJECT_TYPE_RENDER_WITH_DYNAMIC = 0x200,
 	OBJECT_TYPE_RENDER_TO_CUBEMAPS = 0x400,
 	OBJECT_TYPE_MODEL_HAS_LODS = 0x800,
+	OBJECT_TYPE_OVERLAY = 0x2000,
 	OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
 	OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000,
 };
 
 struct CRenderBufferBinding;
+struct AABB_t;
 struct BakedLightingInfo_t;
 struct WorldBuilderParams_t;
 struct VoxelVisBlockOffset_t;
@@ -56,23 +58,27 @@ public:
 };
 
 // Alignment: 2
-// Size: 0x30
+// Size: 0x40
 struct EntityKeyValueData_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	CUtlBinaryBlock m_keyValuesData; // 0x0	
-	CUtlVector< EntityIOConnectionData_t > m_connections; // 0x18	
+	CUtlVector< EntityIOConnectionData_t > m_connections; // 0x8	
+	CUtlBinaryBlock m_keyValuesData; // 0x20	
 };
 
 // Alignment: 4
 // Size: 0x40
 struct PermEntityLumpData_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	CUtlString m_name; // 0x0	
-	CUtlString m_hammerUniqueId; // 0x8	
-	CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > > m_childLumps; // 0x10	
-	CUtlVector< EntityKeyValueData_t > m_entityKeyValues; // 0x28	
+	CUtlString m_name; // 0x8	
+	CUtlString m_hammerUniqueId; // 0x10	
+	CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > > m_childLumps; // 0x18	
+	CUtlLeanVector< EntityKeyValueData_t > m_entityKeyValues; // 0x30	
 };
 
 // Alignment: 15
@@ -181,8 +187,8 @@ public:
 	CUtlVector< uint8 > m_pData; // 0x20	
 };
 
-// Alignment: 13
-// Size: 0x30
+// Alignment: 9
+// Size: 0x18
 struct AggregateMeshInfo_t
 {
 public:
@@ -198,10 +204,6 @@ private:
 public:
 	ObjectTypeFlags_t m_objectFlags; // 0x10	
 	int32_t m_nLightProbeVolumePrecomputedHandshake; // 0x14	
-	Vector m_vLODOrigin; // 0x18	
-	float m_fLODStartDrawDistance; // 0x24	
-	float m_fLODEndDrawDistance; // 0x28	
-	float m_fMaxObjectScale; // 0x2c	
 };
 
 // Alignment: 4
@@ -236,8 +238,39 @@ public:
 	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x70	
 };
 
-// Alignment: 12
-// Size: 0x128
+// Alignment: 3
+// Size: 0x20
+struct ClutterTile_t
+{
+public:
+	uint32_t m_nFirstInstance; // 0x0	
+	uint32_t m_nLastInstance; // 0x4	
+	AABB_t m_BoundsWs; // 0x8	
+};
+
+// Alignment: 8
+// Size: 0xa0
+struct ClutterSceneObject_t
+{
+public:
+	AABB_t m_Bounds; // 0x0	
+	ObjectTypeFlags_t m_flags; // 0x18	
+	int16_t m_nLayer; // 0x1c	
+private:
+	[[maybe_unused]] uint8_t __pad001e[0x2]; // 0x1e
+public:
+	CUtlVector< Vector > m_instancePositions; // 0x20	
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x18]; // 0x38
+public:
+	CUtlVector< float32 > m_instanceScales; // 0x50	
+	CUtlVector< Color > m_instanceTintSrgb; // 0x68	
+	CUtlVector< ClutterTile_t > m_tiles; // 0x80	
+	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x98	
+};
+
+// Alignment: 13
+// Size: 0x140
 struct WorldNode_t
 {
 public:
@@ -245,14 +278,15 @@ public:
 	CUtlVector< InfoOverlayData_t > m_infoOverlays; // 0x18	
 	CUtlVector< uint16 > m_visClusterMembership; // 0x30	
 	CUtlVector< AggregateSceneObject_t > m_aggregateSceneObjects; // 0x48	
-	CUtlVector< ExtraVertexStreamOverride_t > m_extraVertexStreamOverrides; // 0x60	
-	CUtlVector< MaterialOverride_t > m_materialOverrides; // 0x78	
-	CUtlVector< WorldNodeOnDiskBufferData_t > m_extraVertexStreams; // 0x90	
-	CUtlVector< CUtlString > m_layerNames; // 0xa8	
-	CUtlVector< uint8 > m_sceneObjectLayerIndices; // 0xc0	
-	CUtlVector< uint8 > m_overlayLayerIndices; // 0xd8	
-	CUtlString m_grassFileName; // 0xf0	
-	BakedLightingInfo_t m_nodeLightingInfo; // 0xf8	
+	CUtlVector< ClutterSceneObject_t > m_clutterSceneObjects; // 0x60	
+	CUtlVector< ExtraVertexStreamOverride_t > m_extraVertexStreamOverrides; // 0x78	
+	CUtlVector< MaterialOverride_t > m_materialOverrides; // 0x90	
+	CUtlVector< WorldNodeOnDiskBufferData_t > m_extraVertexStreams; // 0xa8	
+	CUtlVector< CUtlString > m_layerNames; // 0xc0	
+	CUtlVector< uint8 > m_sceneObjectLayerIndices; // 0xd8	
+	CUtlVector< uint8 > m_overlayLayerIndices; // 0xf0	
+	CUtlString m_grassFileName; // 0x108	
+	BakedLightingInfo_t m_nodeLightingInfo; // 0x110	
 };
 
 // Alignment: 5
