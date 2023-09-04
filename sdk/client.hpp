@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: client.dll
-// Classes count: 407
+// Classes count: 420
 // Enums count: 8
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -61,11 +61,16 @@ enum class CompositeMaterialInputLooseVariableType_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x2
+// Size: 0x7
 enum class CompositeMaterialInputTextureType_t : uint32_t
 {
 	INPUT_TEXTURE_TYPE_DEFAULT = 0x0,
 	INPUT_TEXTURE_TYPE_NORMALMAP = 0x1,
+	INPUT_TEXTURE_TYPE_COLOR = 0x2,
+	INPUT_TEXTURE_TYPE_MASKS = 0x3,
+	INPUT_TEXTURE_TYPE_ROUGHNESS = 0x4,
+	INPUT_TEXTURE_TYPE_PEARLESCENCE_MASK = 0x5,
+	INPUT_TEXTURE_TYPE_AO = 0x6,
 };
 
 // Alignment: 4
@@ -142,6 +147,7 @@ struct AttachmentHandle_t;
 struct CAttributeManager;
 struct C_EconItemView;
 struct C_CSGameRules;
+struct CCSGameModeRules;
 struct C_SurvivalGameRules;
 struct C_RetakeGameRules;
 struct WeaponPurchaseTracker_t;
@@ -182,6 +188,7 @@ struct CountdownTimer;
 struct shard_model_desc_t;
 struct C_AttributeContainer;
 struct EntitySpottedState_t;
+struct CBasePlayerController;
 struct CPlayer_WeaponServices;
 struct CPlayer_ItemServices;
 struct CPlayer_AutoaimServices;
@@ -198,12 +205,15 @@ struct CCSPlayer_ViewModelServices;
 struct C_WeaponCSBase;
 struct CCSPlayer_BulletServices;
 struct CCSPlayer_HostageServices;
+struct CCSPlayer_BuyServices;
 struct CCSPlayer_GlowServices;
 
 // Alignment: 11
 // Size: 0x78
 class CEntityIdentity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x14]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "entityIdentityNameChanged"
@@ -254,8 +264,12 @@ public:
 // Size: 0x38
 class CScriptComponent : public CEntityComponent
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x28]; // 0x8
 public:
 	CUtlSymbolLarge m_scriptClassName; // 0x30	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CScriptComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CScriptComponent")->m_static_fields[1]->m_instance);};
 };
@@ -273,6 +287,8 @@ public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
 	CNetworkVarChainer __m_pChainEntity; // 0x20	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponent")->m_static_fields[1]->m_instance);};
 };
@@ -281,6 +297,8 @@ public:
 // Size: 0x10
 class CGameSceneNodeHandle
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	CEntityHandle m_hOwner; // 0x8	
@@ -292,6 +310,8 @@ public:
 // Size: 0x150
 class CGameSceneNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	// MNetworkDisable
 	CTransform m_nodeToWorld; // 0x10	
@@ -395,9 +415,13 @@ public:
 // Size: 0x28
 class CHitboxComponent : public CEntityComponent
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x1c]; // 0x8
 public:
 	// MNetworkEnable
 	uint32_t m_bvDisabledHitGroups[1]; // 0x24	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CHitboxComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_referenced_but_impl_is_contained(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CHitboxComponent")->m_static_fields[1]->m_instance);};
 };
@@ -406,6 +430,8 @@ public:
 // Size: 0x1c8
 class CLightComponent : public CEntityComponent
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x40]; // 0x8
 public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
@@ -616,6 +642,8 @@ public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "LightRenderingChanged"
 	float m_flMinRoughness; // 0x1b8	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CLightComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CLightComponent")->m_static_fields[1]->m_instance);};
 };
@@ -624,6 +652,8 @@ public:
 // Size: 0xd8
 class CRenderComponent : public CEntityComponent
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x8]; // 0x8
 public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
@@ -644,6 +674,8 @@ private:
 	[[maybe_unused]] uint8_t __pad0061[0x4f]; // 0x61
 public:
 	bool m_bInterpolationReadyToDraw; // 0xb0	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CRenderComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CRenderComponent")->m_static_fields[1]->m_instance);};
 };
@@ -652,6 +684,8 @@ public:
 // Size: 0x28
 class CBuoyancyHelper
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	float m_flFluidDensity; // 0x18	
 	float m_flDisplacementFromObjects; // 0x1c	
@@ -666,6 +700,25 @@ public:
 	int32_t command_number; // 0x78	
 };
 
+// Alignment: 3
+// Size: 0x48
+struct ViewAngleServerChange_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x30]; // 0x0
+public:
+	// MNetworkEnable
+	FixAngleSet_t nType; // 0x30	
+private:
+	[[maybe_unused]] uint8_t __pad0031[0x3]; // 0x31
+public:
+	// MNetworkEnable
+	// MNetworkEncoder
+	QAngle qAngle; // 0x34	
+	// MNetworkEnable
+	uint32_t nIndex; // 0x40	
+};
+
 // Alignment: 0
 // Size: 0x40
 class CPlayer_AutoaimServices : public CPlayerPawnComponent
@@ -678,6 +731,8 @@ public:
 // Size: 0x78
 struct audioparams_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkEncoder
@@ -699,6 +754,8 @@ public:
 // Size: 0x68
 struct fogparams_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkEncoder
@@ -782,7 +839,7 @@ public:
 };
 
 // Alignment: 15
-// Size: 0x1c8
+// Size: 0x1d0
 class CPlayer_MovementServices : public CPlayerPawnComponent
 {
 public:
@@ -804,66 +861,66 @@ public:
 	uint64_t m_nToggleButtonDownMask; // 0x188	
 	// MNetworkEnable
 	// MNetworkBitCount "12"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "2048"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "2048.000000"
 	// MNetworkEncodeFlags
 	float m_flMaxspeed; // 0x190	
 	// MNetworkEnable
-	float m_flForceSubtickMoveWhen; // 0x194	
-	float m_flForwardMove; // 0x198	
-	float m_flLeftMove; // 0x19c	
-	float m_flUpMove; // 0x1a0	
-	Vector m_vecLastMovementImpulses; // 0x1a4	
-	QAngle m_vecOldViewAngles; // 0x1b0	
+	float m_arrForceSubtickMoveWhen[4]; // 0x194	
+	float m_flForwardMove; // 0x1a4	
+	float m_flLeftMove; // 0x1a8	
+	float m_flUpMove; // 0x1ac	
+	Vector m_vecLastMovementImpulses; // 0x1b0	
+	QAngle m_vecOldViewAngles; // 0x1bc	
 };
 
 // Alignment: 12
-// Size: 0x208
+// Size: 0x210
 class CPlayer_MovementServices_Humanoid : public CPlayer_MovementServices
 {
 public:
-	float m_flStepSoundTime; // 0x1c8	
+	float m_flStepSoundTime; // 0x1d0	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
 	// MNetworkBitCount "17"
-	// MNetworkMinValue "-4096"
-	// MNetworkMaxValue "4096"
+	// MNetworkMinValue "-4096.000000"
+	// MNetworkMaxValue "4096.000000"
 	// MNetworkEncodeFlags
-	float m_flFallVelocity; // 0x1cc	
+	float m_flFallVelocity; // 0x1d4	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	bool m_bInCrouch; // 0x1d0	
+	bool m_bInCrouch; // 0x1d8	
 private:
-	[[maybe_unused]] uint8_t __pad01d1[0x3]; // 0x1d1
+	[[maybe_unused]] uint8_t __pad01d9[0x3]; // 0x1d9
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint32_t m_nCrouchState; // 0x1d4	
+	uint32_t m_nCrouchState; // 0x1dc	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	GameTime_t m_flCrouchTransitionStartTime; // 0x1d8	
+	GameTime_t m_flCrouchTransitionStartTime; // 0x1e0	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	bool m_bDucked; // 0x1dc	
+	bool m_bDucked; // 0x1e4	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	bool m_bDucking; // 0x1dd	
+	bool m_bDucking; // 0x1e5	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	bool m_bInDuckJump; // 0x1de	
+	bool m_bInDuckJump; // 0x1e6	
 private:
-	[[maybe_unused]] uint8_t __pad01df[0x1]; // 0x1df
+	[[maybe_unused]] uint8_t __pad01e7[0x1]; // 0x1e7
 public:
-	Vector m_groundNormal; // 0x1e0	
-	float m_flSurfaceFriction; // 0x1ec	
-	CUtlStringToken m_surfaceProps; // 0x1f0	
+	Vector m_groundNormal; // 0x1e8	
+	float m_flSurfaceFriction; // 0x1f4	
+	CUtlStringToken m_surfaceProps; // 0x1f8	
 private:
-	[[maybe_unused]] uint8_t __pad01f4[0xc]; // 0x1f4
+	[[maybe_unused]] uint8_t __pad01fc[0xc]; // 0x1fc
 public:
-	int32_t m_nStepside; // 0x200	
+	int32_t m_nStepside; // 0x208	
 };
 
-// Alignment: 5
+// Alignment: 6
 // Size: 0x58
 class CPlayer_ObserverServices : public CPlayerPawnComponent
 {
@@ -883,6 +940,7 @@ private:
 	[[maybe_unused]] uint8_t __pad004d[0x3]; // 0x4d
 public:
 	float m_flObserverChaseDistance; // 0x50	
+	GameTime_t m_flObserverChaseDistanceCalcTime; // 0x54	
 };
 
 // Alignment: 0
@@ -925,6 +983,8 @@ public:
 // Size: 0x230
 class CModelState
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0xa0]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "skeletonModelChanged"
@@ -958,6 +1018,8 @@ public:
 // Size: 0x48
 struct EntityRenderAttribute_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x30]; // 0x0
 public:
 	// MNetworkEnable
 	CUtlStringToken m_ID; // 0x30	
@@ -969,6 +1031,8 @@ public:
 // Size: 0x68
 struct ActiveModelConfig_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x28]; // 0x0
 public:
 	// MNetworkEnable
 	ModelConfigHandle_t m_Handle; // 0x28	
@@ -987,6 +1051,8 @@ public:
 // Size: 0x3f0
 class CSkeletonInstance : public CGameSceneNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0150[0x10]; // 0x150
 public:
 	// MNetworkEnable
 	CModelState m_modelState; // 0x160	
@@ -1021,6 +1087,8 @@ public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
 	CNetworkVarChainer __m_pChainEntity; // 0x440	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentSkeletonInstance")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentSkeletonInstance")->m_static_fields[1]->m_instance);};
 };
@@ -1035,6 +1103,8 @@ public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
 	CNetworkVarChainer __m_pChainEntity; // 0x1a0	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentPoint")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentPoint")->m_static_fields[1]->m_instance);};
 };
@@ -1043,6 +1113,8 @@ public:
 // Size: 0x28
 class CNetworkedSequenceOperation
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkSerializer "minusone"
@@ -1051,8 +1123,8 @@ public:
 	HSequence m_hSequence; // 0x8	
 	// MNetworkEnable
 	// MNetworkBitCount "15"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	// MNetworkEncodeFlags
 	// MNetworkPriority "32"
 	// MNetworkSendProxyRecipientsFilter
@@ -1060,8 +1132,8 @@ public:
 	float m_flPrevCycle; // 0xc	
 	// MNetworkEnable
 	// MNetworkBitCount "15"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	// MNetworkEncodeFlags
 	// MNetworkPriority "32"
 	// MNetworkSendProxyRecipientsFilter
@@ -1070,8 +1142,8 @@ public:
 	float m_flCycle; // 0x10	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	// MNetworkEncodeFlags
 	CNetworkedQuantizedFloat m_flWeight; // 0x14	
 	// MNetworkDisable
@@ -1095,6 +1167,8 @@ public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
 	CNetworkVarChainer __m_pChainEntity; // 0x470	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseModelEntity")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseModelEntity")->m_static_fields[1]->m_instance);};
 };
@@ -1103,6 +1177,8 @@ public:
 // Size: 0x12e0
 class CAnimGraphNetworkedVariables
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "animationgraph"
@@ -1230,6 +1306,8 @@ public:
 // Size: 0x10
 class IntervalTimer
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	GameTime_t m_timestamp; // 0x8	
@@ -1241,6 +1319,8 @@ public:
 // Size: 0x18
 class CountdownTimer
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	float m_duration; // 0x8	
@@ -1256,6 +1336,8 @@ public:
 // Size: 0x18
 class EngineCountdownTimer
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	float m_duration; // 0x8	
@@ -1305,8 +1387,8 @@ public:
 	float m_flLastEventCycle; // 0x131c	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "-4"
-	// MNetworkMaxValue "12"
+	// MNetworkMinValue "-4.000000"
+	// MNetworkMaxValue "12.000000"
 	// MNetworkEncodeFlags
 	// MNetworkPriority "32"
 	// MNetworkChangeCallback "playbackRateChangedCompat"
@@ -1470,8 +1552,8 @@ public:
 	// MNetworkUserGroup "Water"
 	// MNetworkChangeCallback "OnWaterLevelChangeNetworked"
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	// MNetworkEncodeFlags
 	float m_flWaterLevel; // 0x420	
 	// MNetworkEnable
@@ -1483,8 +1565,8 @@ public:
 	CHandle< C_BaseEntity > m_hGroundEntity; // 0x428	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "4"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "4.000000"
 	// MNetworkEncodeFlags
 	// MNetworkUserGroup "LocalPlayerExclusive"
 	float m_flFriction; // 0x42c	
@@ -1549,6 +1631,8 @@ private:
 	[[maybe_unused]] uint8_t __pad052b[0xd]; // 0x52b
 public:
 	CUtlString m_sUniqueHammerID; // 0x538	
+	
+	// Static fields:
 	static bool &Get_sm_bDatadescValidating(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[0]->m_instance);};
 	static bool &Get_sm_bAccurateTriggerBboxChecks(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[1]->m_instance);};
 	static bool &Get_sm_bDisableTouchFuncs(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[2]->m_instance);};
@@ -1629,6 +1713,8 @@ public:
 // Size: 0x208
 class C_EnvWindShared
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	GameTime_t m_flStartTime; // 0x8	
@@ -1704,6 +1790,8 @@ public:
 // Size: 0x2e0
 class CProjectedTextureBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0xc]; // 0x0
 public:
 	// MNetworkEnable
 	CHandle< C_BaseEntity > m_hTargetEntity; // 0xc	
@@ -1766,14 +1854,14 @@ public:
 	uint32_t m_nShadowQuality; // 0x258	
 	// MNetworkEnable
 	// MNetworkBitCount "16"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "500"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "500.000000"
 	// MNetworkEncodeFlags
 	float m_flNearZ; // 0x25c	
 	// MNetworkEnable
 	// MNetworkBitCount "18"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1500"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1500.000000"
 	// MNetworkEncodeFlags
 	float m_flFarZ; // 0x260	
 	// MNetworkEnable
@@ -1782,6 +1870,8 @@ public:
 	float m_flRotation; // 0x268	
 	// MNetworkEnable
 	bool m_bFlipHorizontal; // 0x26c	
+	
+	// Static fields:
 	static float &Get_m_flVisibleBBoxMinHeight(){return *reinterpret_cast<float*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CProjectedTextureBase")->m_static_fields[0]->m_instance);};
 };
 
@@ -1813,6 +1903,8 @@ public:
 // Size: 0x10
 class C_RopeKeyframe::CPhysicsDelegate
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	C_RopeKeyframe* m_pKeyframe; // 0x8	
 };
@@ -1833,18 +1925,12 @@ public:
 	// No members available
 };
 
-// Alignment: 0
-// Size: 0x540
-class C_TriggerCamera : public C_BaseEntity
-{
-public:
-	// No members available
-};
-
 // Alignment: 13
 // Size: 0x2e0
 class CFlashlightEffect
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	bool m_bIsOn; // 0x10	
 private:
@@ -1903,6 +1989,8 @@ public:
 // Size: 0xd0
 class CGlowOverlay
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	Vector m_vPos; // 0x8	
 	bool m_bDirectional; // 0x14	
@@ -1937,8 +2025,10 @@ public:
 // Size: 0x8
 class IClientAlphaProperty
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	uint8_t __pad0000[0x8]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 2
@@ -1954,6 +2044,8 @@ public:
 // Size: 0x90
 struct sky3dparams_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	int16_t scale; // 0x8	
@@ -2008,6 +2100,8 @@ public:
 // Size: 0x30
 struct VPhysicsCollisionAttribute_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	uint64_t m_nInteractsAs; // 0x8	
@@ -2031,6 +2125,8 @@ public:
 // Size: 0xb0
 class CCollisionProperty
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "CollisionAttributeChanged"
@@ -2105,6 +2201,8 @@ public:
 // Size: 0x70
 class CEffectData
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkEncoder
@@ -2126,14 +2224,14 @@ public:
 	float m_flScale; // 0x40	
 	// MNetworkEnable
 	// MNetworkBitCount "12"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1023"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1023.000000"
 	// MNetworkEncodeFlags
 	float m_flMagnitude; // 0x44	
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1023"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1023.000000"
 	// MNetworkEncodeFlags
 	float m_flRadius; // 0x48	
 	// MNetworkEnable
@@ -2219,6 +2317,8 @@ public:
 // Size: 0x60
 struct shard_model_desc_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	int32_t m_nModelID; // 0x8	
@@ -2272,14 +2372,18 @@ public:
 // Size: 0x8
 class C_GameRules
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	uint8_t __pad0000[0x8]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 11
 // Size: 0x58
 class CGlowProperty
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	Vector m_fGlowColor; // 0x8	
 private:
@@ -2323,6 +2427,8 @@ public:
 // Size: 0x40
 struct C_fogplayerparams_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "PlayerFogController"
@@ -2342,61 +2448,53 @@ public:
 	float m_flNewFarZ; // 0x3c	
 };
 
-// Alignment: 25
-// Size: 0x220
+// Alignment: 20
+// Size: 0x210
 class CPlayer_CameraServices : public CPlayerPawnComponent
 {
 public:
 	// MNetworkEnable
-	uint32_t m_iFOV; // 0x40	
-	// MNetworkEnable
-	uint32_t m_iFOVStart; // 0x44	
-	// MNetworkEnable
-	GameTime_t m_flFOVTime; // 0x48	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	float m_flFOVRate; // 0x4c	
-	// MNetworkEnable
 	// MNetworkEncoder
-	QAngle m_vecCsViewPunchAngle; // 0x50	
+	QAngle m_vecCsViewPunchAngle; // 0x40	
 	// MNetworkEnable
-	GameTick_t m_nCsViewPunchAngleTick; // 0x5c	
+	GameTick_t m_nCsViewPunchAngleTick; // 0x4c	
 	// MNetworkEnable
-	float m_flCsViewPunchAngleTickRatio; // 0x60	
+	float m_flCsViewPunchAngleTickRatio; // 0x50	
+private:
+	[[maybe_unused]] uint8_t __pad0054[0x4]; // 0x54
+public:
 	// MNetworkEnable
-	CHandle< C_BaseEntity > m_hZoomOwner; // 0x64	
+	C_fogplayerparams_t m_PlayerFog; // 0x58	
 	// MNetworkEnable
-	C_fogplayerparams_t m_PlayerFog; // 0x68	
+	CHandle< C_ColorCorrection > m_hColorCorrectionCtrl; // 0x98	
 	// MNetworkEnable
-	CHandle< C_ColorCorrection > m_hColorCorrectionCtrl; // 0xa8	
-	// MNetworkEnable
-	CHandle< C_BaseEntity > m_hViewEntity; // 0xac	
+	CHandle< C_BaseEntity > m_hViewEntity; // 0x9c	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerAndObserversExclusive"
-	CHandle< C_TonemapController2 > m_hTonemapController; // 0xb0	
+	CHandle< C_TonemapController2 > m_hTonemapController; // 0xa0	
 private:
-	[[maybe_unused]] uint8_t __pad00b4[0x4]; // 0xb4
+	[[maybe_unused]] uint8_t __pad00a4[0x4]; // 0xa4
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerAndObserversExclusive"
-	audioparams_t m_audio; // 0xb8	
+	audioparams_t m_audio; // 0xa8	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerAndObserversExclusive"
-	C_NetworkUtlVectorBase< CHandle< C_PostProcessingVolume > > m_PostProcessingVolumes; // 0x130	
-	float m_flOldPlayerZ; // 0x148	
-	float m_flOldPlayerViewOffsetZ; // 0x14c	
-	fogparams_t m_CurrentFog; // 0x150	
-	CHandle< C_FogController > m_hOldFogController; // 0x1b8	
-	bool m_bOverrideFogColor[5]; // 0x1bc	
-	Color m_OverrideFogColor[5]; // 0x1c1	
-	bool m_bOverrideFogStartEnd[5]; // 0x1d5	
+	C_NetworkUtlVectorBase< CHandle< C_PostProcessingVolume > > m_PostProcessingVolumes; // 0x120	
+	float m_flOldPlayerZ; // 0x138	
+	float m_flOldPlayerViewOffsetZ; // 0x13c	
+	fogparams_t m_CurrentFog; // 0x140	
+	CHandle< C_FogController > m_hOldFogController; // 0x1a8	
+	bool m_bOverrideFogColor[5]; // 0x1ac	
+	Color m_OverrideFogColor[5]; // 0x1b1	
+	bool m_bOverrideFogStartEnd[5]; // 0x1c5	
 private:
-	[[maybe_unused]] uint8_t __pad01da[0x2]; // 0x1da
+	[[maybe_unused]] uint8_t __pad01ca[0x2]; // 0x1ca
 public:
-	float m_fOverrideFogStart[5]; // 0x1dc	
-	float m_fOverrideFogEnd[5]; // 0x1f0	
-	CHandle< C_PostProcessingVolume > m_hActivePostProcessingVolume; // 0x204	
-	QAngle m_angDemoViewAngles; // 0x208	
+	float m_fOverrideFogStart[5]; // 0x1cc	
+	float m_fOverrideFogEnd[5]; // 0x1e0	
+	CHandle< C_PostProcessingVolume > m_hActivePostProcessingVolume; // 0x1f4	
+	QAngle m_angDemoViewAngles; // 0x1f8	
 };
 
 // Alignment: 4
@@ -2415,10 +2513,12 @@ public:
 	C_SkyCamera* m_pNext; // 0x5d8	
 };
 
-// Alignment: 3
-// Size: 0x50
+// Alignment: 4
+// Size: 0x70
 struct PhysicsRagdollPose_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
@@ -2426,7 +2526,12 @@ public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnTransformChanged"
 	C_NetworkUtlVectorBase< CTransform > m_Transforms; // 0x30	
-	bool m_bDirty; // 0x48	
+	// MNetworkEnable
+	CHandle< C_BaseEntity > m_hOwner; // 0x48	
+private:
+	[[maybe_unused]] uint8_t __pad004c[0x1c]; // 0x4c
+public:
+	bool m_bDirty; // 0x68	
 };
 
 // Alignment: 0
@@ -2571,9 +2676,25 @@ public:
 };
 
 // Alignment: 2
+// Size: 0x20
+class CComicBook
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// MPropertyDescription "Cover image to use. Likely starts with file://{images}/comics/..."
+	CPanoramaImageName m_CoverImage; // 0x8	
+	// MPropertyDescription "Comic book xml file.  The xml that defines the layout and flow of the comic book."
+	// MPropertyCustomFGDType
+	CUtlString m_XmlFile; // 0x18	
+};
+
+// Alignment: 2
 // Size: 0x60
 class CAttributeList
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkTypeAlias "CUtlVector< CEconItemAttribute >"
@@ -2585,6 +2706,8 @@ public:
 // Size: 0x48
 class CEconItemAttribute
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x30]; // 0x0
 public:
 	// MNetworkEnable
 	uint16_t m_iAttributeDefinitionIndex; // 0x30	
@@ -2606,6 +2729,8 @@ public:
 // Size: 0x50
 class CAttributeManager
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CUtlVector< CHandle< C_BaseEntity > > m_Providers; // 0x8	
 	// MNetworkEnable
@@ -2635,6 +2760,8 @@ public:
 // Size: 0x448
 class C_EconItemView : public IEconItemInterface
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x58]; // 0x8
 public:
 	bool m_bInventoryImageRgbaRequested; // 0x60	
 	bool m_bInventoryImageTriedCache; // 0x61	
@@ -2698,6 +2825,8 @@ private:
 	[[maybe_unused]] uint8_t __pad0412[0x2e]; // 0x412
 public:
 	bool m_bInitializedTags; // 0x440	
+	
+	// Static fields:
 	static bool &Get_m_sbHasCleanedInventoryImageCacheDir(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_EconItemView")->m_static_fields[0]->m_instance);};
 };
 
@@ -2713,6 +2842,8 @@ public:
 // Size: 0x18
 struct EntitySpottedState_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnIsSpottedChanged"
@@ -2740,6 +2871,8 @@ public:
 // Size: 0x118
 class C_RetakeGameRules
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0xf8]; // 0x0
 public:
 	// MNetworkEnable
 	int32_t m_nMatchSeed; // 0xf8	
@@ -2756,10 +2889,66 @@ public:
 	int32_t m_iBombSite; // 0x104	
 };
 
+// Alignment: 1
+// Size: 0x30
+class CCSGameModeRules
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// MNetworkDisable
+	// MNetworkChangeAccessorFieldPathIndex
+	CNetworkVarChainer __m_pChainEntity; // 0x8	
+};
+
+// Alignment: 0
+// Size: 0x30
+class CCSGameModeRules_Noop : public CCSGameModeRules
+{
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0xd0
+class CCSGameModeScript : public CBasePulseGraphInstance
+{
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x30
+class CCSGameModeRules_Scripted : public CCSGameModeRules
+{
+public:
+	// No members available
+};
+
+// Alignment: 5
+// Size: 0x40
+class CCSGameModeRules_Deathmatch : public CCSGameModeRules
+{
+public:
+	bool m_bFirstThink; // 0x30	
+	bool m_bFirstThinkAfterConnected; // 0x31	
+private:
+	[[maybe_unused]] uint8_t __pad0032[0x2]; // 0x32
+public:
+	// MNetworkEnable
+	GameTime_t m_flDMBonusStartTime; // 0x34	
+	// MNetworkEnable
+	float m_flDMBonusTimeLength; // 0x38	
+	// MNetworkEnable
+	int16_t m_nDMBonusWeaponLoadoutSlot; // 0x3c	
+};
+
 // Alignment: 18
 // Size: 0x6c0
 class C_SurvivalGameRules
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	Vector m_vecPlayAreaMins; // 0x8	
@@ -2805,6 +2994,8 @@ public:
 // Size: 0x68
 struct CSPerRoundStats_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x30]; // 0x0
 public:
 	// MNetworkEnable
 	int32_t m_iKills; // 0x30	
@@ -2855,26 +3046,30 @@ public:
 	int32_t m_iEnemy3Ks; // 0x70	
 };
 
-// Alignment: 4
-// Size: 0x9d8
+// Alignment: 6
+// Size: 0x9e0
 class C_CSGO_TeamPreviewCharacterPosition : public C_BaseEntity
 {
 public:
 	// MNetworkEnable
-	int32_t m_nOrdinal; // 0x540	
+	int32_t m_nVariant; // 0x540	
+	// MNetworkEnable
+	int32_t m_nRandom; // 0x544	
+	// MNetworkEnable
+	int32_t m_nOrdinal; // 0x548	
 private:
-	[[maybe_unused]] uint8_t __pad0544[0x4]; // 0x544
+	[[maybe_unused]] uint8_t __pad054c[0x4]; // 0x54c
 public:
 	// MNetworkEnable
-	CUtlString m_sWeaponName; // 0x548	
+	CUtlString m_sWeaponName; // 0x550	
 	// MNetworkEnable
-	uint64_t m_xuid; // 0x550	
+	uint64_t m_xuid; // 0x558	
 	// MNetworkEnable
-	C_EconItemView m_weaponItem; // 0x558	
+	C_EconItemView m_weaponItem; // 0x560	
 };
 
 // Alignment: 0
-// Size: 0x9d8
+// Size: 0x9e0
 class C_CSGO_TeamSelectCharacterPosition : public C_CSGO_TeamPreviewCharacterPosition
 {
 public:
@@ -2882,7 +3077,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x9d8
+// Size: 0x9e0
 class C_CSGO_TeamSelectTerroristPosition : public C_CSGO_TeamSelectCharacterPosition
 {
 public:
@@ -2890,7 +3085,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x9d8
+// Size: 0x9e0
 class C_CSGO_TeamSelectCounterTerroristPosition : public C_CSGO_TeamSelectCharacterPosition
 {
 public:
@@ -2898,7 +3093,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x9d8
+// Size: 0x9e0
 class C_CSGO_TeamIntroCharacterPosition : public C_CSGO_TeamPreviewCharacterPosition
 {
 public:
@@ -2906,7 +3101,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x9d8
+// Size: 0x9e0
 class C_CSGO_TeamIntroTerroristPosition : public C_CSGO_TeamIntroCharacterPosition
 {
 public:
@@ -2914,8 +3109,32 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x9d8
+// Size: 0x9e0
 class C_CSGO_TeamIntroCounterTerroristPosition : public C_CSGO_TeamIntroCharacterPosition
+{
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x9e0
+class CCSGO_WingmanIntroCharacterPosition : public C_CSGO_TeamIntroCharacterPosition
+{
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x9e0
+class CCSGO_WingmanIntroTerroristPosition : public CCSGO_WingmanIntroCharacterPosition
+{
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x9e0
+class CCSGO_WingmanIntroCounterTerroristPosition : public CCSGO_WingmanIntroCharacterPosition
 {
 public:
 	// No members available
@@ -2933,6 +3152,8 @@ public:
 // Size: 0x38
 struct WeaponPurchaseCount_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x30]; // 0x0
 public:
 	// MNetworkEnable
 	uint16_t m_nItemDefIndex; // 0x30	
@@ -2944,20 +3165,23 @@ public:
 // Size: 0x58
 struct WeaponPurchaseTracker_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
 	C_UtlVectorEmbeddedNetworkVar< WeaponPurchaseCount_t > m_weaponPurchases; // 0x8	
 };
 
-// Alignment: 3
+// Alignment: 4
 // Size: 0xf8
 class CCSPlayer_ActionTrackingServices : public CPlayerPawnComponent
 {
 public:
+	CHandle< C_BasePlayerWeapon > m_hLastWeaponBeforeC4AutoSwitch; // 0x40	
 	// MNetworkEnable
-	bool m_bIsRescuing; // 0x40	
+	bool m_bIsRescuing; // 0x44	
 private:
-	[[maybe_unused]] uint8_t __pad0041[0x7]; // 0x41
+	[[maybe_unused]] uint8_t __pad0045[0x3]; // 0x45
 public:
 	// MNetworkEnable
 	WeaponPurchaseTracker_t m_weaponPurchasesThisMatch; // 0x48	
@@ -2969,6 +3193,8 @@ public:
 // Size: 0x590
 class C_PlayerPing : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0540[0x30]; // 0x540
 public:
 	// MNetworkEnable
 	CHandle< C_BaseEntity > m_hPlayer; // 0x570	
@@ -3026,13 +3252,58 @@ public:
 	int32_t m_totalHitsOnServer; // 0x40	
 };
 
-// Alignment: 2
-// Size: 0x228
+// Alignment: 5
+// Size: 0x48
+struct SellbackPurchaseEntry_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x30]; // 0x0
+public:
+	// MNetworkEnable
+	uint16_t m_unDefIdx; // 0x30	
+private:
+	[[maybe_unused]] uint8_t __pad0032[0x2]; // 0x32
+public:
+	// MNetworkEnable
+	int32_t m_nCost; // 0x34	
+	// MNetworkEnable
+	int32_t m_nPrevArmor; // 0x38	
+	// MNetworkEnable
+	bool m_bPrevHelmet; // 0x3c	
+private:
+	[[maybe_unused]] uint8_t __pad003d[0x3]; // 0x3d
+public:
+	// MNetworkEnable
+	CEntityHandle m_hItem; // 0x40	
+};
+
+// Alignment: 1
+// Size: 0x90
+class CCSPlayer_BuyServices : public CPlayerPawnComponent
+{
+public:
+	// MNetworkEnable
+	C_UtlVectorEmbeddedNetworkVar< SellbackPurchaseEntry_t > m_vecSellbackPurchaseEntries; // 0x40	
+};
+
+// Alignment: 7
+// Size: 0x230
 class CCSPlayer_CameraServices : public CPlayer_CameraServices
 {
 public:
-	float m_flLastShotFOV; // 0x220	
-	float m_flDeathCamTilt; // 0x224	
+	// MNetworkEnable
+	uint32_t m_iFOV; // 0x210	
+	// MNetworkEnable
+	uint32_t m_iFOVStart; // 0x214	
+	// MNetworkEnable
+	GameTime_t m_flFOVTime; // 0x218	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	float m_flFOVRate; // 0x21c	
+	// MNetworkEnable
+	CHandle< C_BaseEntity > m_hZoomOwner; // 0x220	
+	float m_flLastShotFOV; // 0x224	
+	float m_flDeathCamTilt; // 0x228	
 };
 
 // Alignment: 2
@@ -3046,8 +3317,8 @@ public:
 	CHandle< C_BaseEntity > m_hCarriedHostageProp; // 0x44	
 };
 
-// Alignment: 8
-// Size: 0x50
+// Alignment: 3
+// Size: 0x48
 class CCSPlayer_ItemServices : public CPlayer_ItemServices
 {
 public:
@@ -3057,111 +3328,87 @@ public:
 	bool m_bHasHelmet; // 0x41	
 	// MNetworkEnable
 	bool m_bHasHeavyArmor; // 0x42	
-	// MNetworkEnable
-	bool m_bKevlarIsRefundable; // 0x43	
-	// MNetworkEnable
-	bool m_bAssaultSuitIsRefundable; // 0x44	
-	// MNetworkEnable
-	bool m_bDefuserIsRefundable; // 0x45	
-private:
-	[[maybe_unused]] uint8_t __pad0046[0x2]; // 0x46
-public:
-	// MNetworkEnable
-	int32_t m_nPrevArmorValue; // 0x48	
-	// MNetworkEnable
-	bool m_bPrevHadHelmet; // 0x4c	
 };
 
-// Alignment: 36
-// Size: 0x13d0
+// Alignment: 35
+// Size: 0x4d8
 class CCSPlayer_MovementServices : public CPlayer_MovementServices_Humanoid
 {
 public:
 	// MNetworkEnable
-	float m_flMaxFallVelocity; // 0x208	
+	float m_flMaxFallVelocity; // 0x210	
 	// MNetworkEnable
 	// MNetworkEncoder
-	Vector m_vecLadderNormal; // 0x20c	
+	Vector m_vecLadderNormal; // 0x214	
 	// MNetworkEnable
-	int32_t m_nLadderSurfacePropIndex; // 0x218	
+	int32_t m_nLadderSurfacePropIndex; // 0x220	
 	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	bool m_bAllowAutoMovement; // 0x21c	
+	float m_flDuckAmount; // 0x224	
+	// MNetworkEnable
+	float m_flDuckSpeed; // 0x228	
+	// MNetworkEnable
+	bool m_bDuckOverride; // 0x22c	
+	// MNetworkEnable
+	bool m_bDesiresDuck; // 0x22d	
 private:
-	[[maybe_unused]] uint8_t __pad021d[0x3]; // 0x21d
+	[[maybe_unused]] uint8_t __pad022e[0x2]; // 0x22e
 public:
-	// MNetworkEnable
-	float m_flDuckAmount; // 0x220	
-	// MNetworkEnable
-	float m_flDuckSpeed; // 0x224	
-	// MNetworkEnable
-	bool m_bDuckOverride; // 0x228	
-private:
-	[[maybe_unused]] uint8_t __pad0229[0x3]; // 0x229
-public:
-	float m_flDuckOffset; // 0x22c	
+	float m_flDuckOffset; // 0x230	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
 	// MNetworkPriority "32"
-	uint32_t m_nDuckTimeMsecs; // 0x230	
+	uint32_t m_nDuckTimeMsecs; // 0x234	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint32_t m_nDuckJumpTimeMsecs; // 0x234	
+	uint32_t m_nDuckJumpTimeMsecs; // 0x238	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint32_t m_nJumpTimeMsecs; // 0x238	
+	uint32_t m_nJumpTimeMsecs; // 0x23c	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	float m_flLastDuckTime; // 0x23c	
+	float m_flLastDuckTime; // 0x240	
 private:
-	[[maybe_unused]] uint8_t __pad0240[0x8]; // 0x240
+	[[maybe_unused]] uint8_t __pad0244[0xc]; // 0x244
 public:
-	Vector2D m_vecLastPositionAtFullCrouchSpeed; // 0x248	
-	bool m_duckUntilOnGround; // 0x250	
-	bool m_bHasWalkMovedSinceLastJump; // 0x251	
-	bool m_bInStuckTest; // 0x252	
+	Vector2D m_vecLastPositionAtFullCrouchSpeed; // 0x250	
+	bool m_duckUntilOnGround; // 0x258	
+	bool m_bHasWalkMovedSinceLastJump; // 0x259	
+	bool m_bInStuckTest; // 0x25a	
 private:
-	[[maybe_unused]] uint8_t __pad0253[0x5]; // 0x253
+	[[maybe_unused]] uint8_t __pad025b[0xd]; // 0x25b
 public:
-	uint64_t m_CachedGetPointContents[3][64]; // 0x258	
-	Vector m_CachedGetPointContentsPoint[3][64]; // 0x858	
+	float m_flStuckCheckTime[2][64]; // 0x268	
+	int32_t m_nTraceCount; // 0x468	
+	int32_t m_StuckLast; // 0x46c	
+	bool m_bSpeedCropped; // 0x470	
 private:
-	[[maybe_unused]] uint8_t __pad1158[0x8]; // 0x1158
+	[[maybe_unused]] uint8_t __pad0471[0x3]; // 0x471
 public:
-	float m_flStuckCheckTime[2][64]; // 0x1160	
-	int32_t m_nTraceCount; // 0x1360	
-	int32_t m_StuckLast; // 0x1364	
-	bool m_bSpeedCropped; // 0x1368	
+	int32_t m_nOldWaterLevel; // 0x474	
+	float m_flWaterEntryTime; // 0x478	
+	Vector m_vecForward; // 0x47c	
+	Vector m_vecLeft; // 0x488	
+	Vector m_vecUp; // 0x494	
+	Vector m_vecPreviouslyPredictedOrigin; // 0x4a0	
+	// MNetworkEnable
+	bool m_bOldJumpPressed; // 0x4ac	
 private:
-	[[maybe_unused]] uint8_t __pad1369[0x3]; // 0x1369
+	[[maybe_unused]] uint8_t __pad04ad[0x3]; // 0x4ad
 public:
-	int32_t m_nOldWaterLevel; // 0x136c	
-	float m_flWaterEntryTime; // 0x1370	
-	Vector m_vecForward; // 0x1374	
-	Vector m_vecLeft; // 0x1380	
-	Vector m_vecUp; // 0x138c	
-	Vector m_vecPreviouslyPredictedOrigin; // 0x1398	
+	float m_flJumpPressedTime; // 0x4b0	
 	// MNetworkEnable
-	bool m_bOldJumpPressed; // 0x13a4	
-private:
-	[[maybe_unused]] uint8_t __pad13a5[0x3]; // 0x13a5
-public:
+	float m_flJumpUntil; // 0x4b4	
 	// MNetworkEnable
-	float m_flJumpUntil; // 0x13a8	
+	float m_flJumpVel; // 0x4b8	
 	// MNetworkEnable
-	float m_flJumpVel; // 0x13ac	
+	GameTime_t m_fStashGrenadeParameterWhen; // 0x4bc	
 	// MNetworkEnable
-	GameTime_t m_fStashGrenadeParameterWhen; // 0x13b0	
-private:
-	[[maybe_unused]] uint8_t __pad13b4[0x4]; // 0x13b4
-public:
+	uint64_t m_nButtonDownMaskPrev; // 0x4c0	
 	// MNetworkEnable
-	uint64_t m_nButtonDownMaskPrev; // 0x13b8	
+	float m_flOffsetTickCompleteTime; // 0x4c8	
 	// MNetworkEnable
-	float m_flOffsetTickCompleteTime; // 0x13c0	
-	// MNetworkEnable
-	float m_flOffsetTickStashedSpeed; // 0x13c4	
-	bool m_bUpdatePredictedOriginAfterDataUpdate; // 0x13c8	
+	float m_flOffsetTickStashedSpeed; // 0x4cc	
+	bool m_bUpdatePredictedOriginAfterDataUpdate; // 0x4d0	
 };
 
 // Alignment: 16
@@ -3253,6 +3500,8 @@ public:
 // Size: 0x70
 class CDamageRecord
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x28]; // 0x0
 public:
 	// MNetworkEnable
 	CHandle< C_CSPlayerPawnBase > m_PlayerDamager; // 0x28	
@@ -3284,7 +3533,7 @@ public:
 	EKillTypes_t m_killType; // 0x69	
 };
 
-// Alignment: 3
+// Alignment: 2
 // Size: 0x98
 class CCSPlayerController_DamageServices : public CPlayerControllerComponent
 {
@@ -3293,7 +3542,9 @@ public:
 	// MNetworkUserGroup "LocalPlayerExclusiveDuringRoundEnd"
 	// MNetworkChangeCallback "OnDamageListUpdate"
 	int32_t m_nSendUpdate; // 0x40	
-	int32_t m_nCachedSendUpdate; // 0x44	
+private:
+	[[maybe_unused]] uint8_t __pad0044[0x4]; // 0x44
+public:
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusiveDuringRoundEnd"
 	C_UtlVectorEmbeddedNetworkVar< CDamageRecord > m_DamageList; // 0x48	
@@ -3346,8 +3597,8 @@ public:
 	C_UtlVectorEmbeddedNetworkVar< C_EconItemView > m_vecCounterTerroristLoadoutCache; // 0xc0	
 };
 
-// Alignment: 108
-// Size: 0x1938
+// Alignment: 107
+// Size: 0x1940
 class C_CSGameRules : public C_TeamplayRules
 {
 public:
@@ -3466,134 +3717,126 @@ private:
 	[[maybe_unused]] uint8_t __pad046d[0x3]; // 0x46d
 public:
 	// MNetworkEnable
-	float m_flDMBonusStartTime; // 0x470	
+	int32_t m_nNextMapInMapgroup; // 0x470	
 	// MNetworkEnable
-	float m_flDMBonusTimeLength; // 0x474	
+	char m_szTournamentEventName[512]; // 0x474	
 	// MNetworkEnable
-	uint16_t m_unDMBonusWeaponItemDefIndex; // 0x478	
+	char m_szTournamentEventStage[512]; // 0x674	
 	// MNetworkEnable
-	bool m_bDMBonusActive; // 0x47a	
+	char m_szMatchStatTxt[512]; // 0x874	
+	// MNetworkEnable
+	char m_szTournamentPredictionsTxt[512]; // 0xa74	
+	// MNetworkEnable
+	int32_t m_nTournamentPredictionsPct; // 0xc74	
+	// MNetworkEnable
+	GameTime_t m_flCMMItemDropRevealStartTime; // 0xc78	
+	// MNetworkEnable
+	GameTime_t m_flCMMItemDropRevealEndTime; // 0xc7c	
+	// MNetworkEnable
+	bool m_bIsDroppingItems; // 0xc80	
+	// MNetworkEnable
+	bool m_bIsQuestEligible; // 0xc81	
 private:
-	[[maybe_unused]] uint8_t __pad047b[0x1]; // 0x47b
+	[[maybe_unused]] uint8_t __pad0c82[0x2]; // 0xc82
 public:
 	// MNetworkEnable
-	int32_t m_nNextMapInMapgroup; // 0x47c	
+	int32_t m_nGuardianModeWaveNumber; // 0xc84	
 	// MNetworkEnable
-	char m_szTournamentEventName[512]; // 0x480	
+	int32_t m_nGuardianModeSpecialKillsRemaining; // 0xc88	
 	// MNetworkEnable
-	char m_szTournamentEventStage[512]; // 0x680	
+	int32_t m_nGuardianModeSpecialWeaponNeeded; // 0xc8c	
+	int32_t m_nGuardianGrenadesToGiveBots; // 0xc90	
+	int32_t m_nNumHeaviesToSpawn; // 0xc94	
 	// MNetworkEnable
-	char m_szMatchStatTxt[512]; // 0x880	
+	uint32_t m_numGlobalGiftsGiven; // 0xc98	
 	// MNetworkEnable
-	char m_szTournamentPredictionsTxt[512]; // 0xa80	
+	uint32_t m_numGlobalGifters; // 0xc9c	
 	// MNetworkEnable
-	int32_t m_nTournamentPredictionsPct; // 0xc80	
+	uint32_t m_numGlobalGiftsPeriodSeconds; // 0xca0	
 	// MNetworkEnable
-	GameTime_t m_flCMMItemDropRevealStartTime; // 0xc84	
+	uint32_t m_arrFeaturedGiftersAccounts[4]; // 0xca4	
 	// MNetworkEnable
-	GameTime_t m_flCMMItemDropRevealEndTime; // 0xc88	
+	uint32_t m_arrFeaturedGiftersGifts[4]; // 0xcb4	
 	// MNetworkEnable
-	bool m_bIsDroppingItems; // 0xc8c	
+	uint16_t m_arrProhibitedItemIndices[100]; // 0xcc4	
 	// MNetworkEnable
-	bool m_bIsQuestEligible; // 0xc8d	
+	uint32_t m_arrTournamentActiveCasterAccounts[4]; // 0xd8c	
+	// MNetworkEnable
+	int32_t m_numBestOfMaps; // 0xd9c	
+	// MNetworkEnable
+	int32_t m_nHalloweenMaskListSeed; // 0xda0	
+	// MNetworkEnable
+	bool m_bBombDropped; // 0xda4	
+	// MNetworkEnable
+	bool m_bBombPlanted; // 0xda5	
 private:
-	[[maybe_unused]] uint8_t __pad0c8e[0x2]; // 0xc8e
+	[[maybe_unused]] uint8_t __pad0da6[0x2]; // 0xda6
 public:
 	// MNetworkEnable
-	int32_t m_nGuardianModeWaveNumber; // 0xc90	
+	int32_t m_iRoundWinStatus; // 0xda8	
 	// MNetworkEnable
-	int32_t m_nGuardianModeSpecialKillsRemaining; // 0xc94	
+	int32_t m_eRoundWinReason; // 0xdac	
 	// MNetworkEnable
-	int32_t m_nGuardianModeSpecialWeaponNeeded; // 0xc98	
-	int32_t m_nGuardianGrenadesToGiveBots; // 0xc9c	
-	int32_t m_nNumHeaviesToSpawn; // 0xca0	
+	bool m_bTCantBuy; // 0xdb0	
 	// MNetworkEnable
-	uint32_t m_numGlobalGiftsGiven; // 0xca4	
-	// MNetworkEnable
-	uint32_t m_numGlobalGifters; // 0xca8	
-	// MNetworkEnable
-	uint32_t m_numGlobalGiftsPeriodSeconds; // 0xcac	
-	// MNetworkEnable
-	uint32_t m_arrFeaturedGiftersAccounts[4]; // 0xcb0	
-	// MNetworkEnable
-	uint32_t m_arrFeaturedGiftersGifts[4]; // 0xcc0	
-	// MNetworkEnable
-	uint16_t m_arrProhibitedItemIndices[100]; // 0xcd0	
-	// MNetworkEnable
-	uint32_t m_arrTournamentActiveCasterAccounts[4]; // 0xd98	
-	// MNetworkEnable
-	int32_t m_numBestOfMaps; // 0xda8	
-	// MNetworkEnable
-	int32_t m_nHalloweenMaskListSeed; // 0xdac	
-	// MNetworkEnable
-	bool m_bBombDropped; // 0xdb0	
-	// MNetworkEnable
-	bool m_bBombPlanted; // 0xdb1	
+	bool m_bCTCantBuy; // 0xdb1	
 private:
 	[[maybe_unused]] uint8_t __pad0db2[0x2]; // 0xdb2
 public:
 	// MNetworkEnable
-	int32_t m_iRoundWinStatus; // 0xdb4	
+	GameTime_t m_flGuardianBuyUntilTime; // 0xdb4	
 	// MNetworkEnable
-	int32_t m_eRoundWinReason; // 0xdb8	
+	int32_t m_iMatchStats_RoundResults[30]; // 0xdb8	
 	// MNetworkEnable
-	bool m_bTCantBuy; // 0xdbc	
+	int32_t m_iMatchStats_PlayersAlive_CT[30]; // 0xe30	
 	// MNetworkEnable
-	bool m_bCTCantBuy; // 0xdbd	
+	int32_t m_iMatchStats_PlayersAlive_T[30]; // 0xea8	
+	// MNetworkEnable
+	float m_TeamRespawnWaveTimes[32]; // 0xf20	
+	// MNetworkEnable
+	GameTime_t m_flNextRespawnWave[32]; // 0xfa0	
+	// MNetworkEnable
+	int32_t m_nServerQuestID; // 0x1020	
+	// MNetworkEnable
+	Vector m_vMinimapMins; // 0x1024	
+	// MNetworkEnable
+	Vector m_vMinimapMaxs; // 0x1030	
+	// MNetworkEnable
+	float m_MinimapVerticalSectionHeights[8]; // 0x103c	
+	bool m_bDontIncrementCoopWave; // 0x105c	
+	bool m_bSpawnedTerrorHuntHeavy; // 0x105d	
 private:
-	[[maybe_unused]] uint8_t __pad0dbe[0x2]; // 0xdbe
+	[[maybe_unused]] uint8_t __pad105e[0x2]; // 0x105e
 public:
 	// MNetworkEnable
-	GameTime_t m_flGuardianBuyUntilTime; // 0xdc0	
+	int32_t m_nEndMatchMapGroupVoteTypes[10]; // 0x1060	
 	// MNetworkEnable
-	int32_t m_iMatchStats_RoundResults[30]; // 0xdc4	
+	int32_t m_nEndMatchMapGroupVoteOptions[10]; // 0x1088	
 	// MNetworkEnable
-	int32_t m_iMatchStats_PlayersAlive_CT[30]; // 0xe3c	
+	int32_t m_nEndMatchMapVoteWinner; // 0x10b0	
 	// MNetworkEnable
-	int32_t m_iMatchStats_PlayersAlive_T[30]; // 0xeb4	
+	int32_t m_iNumConsecutiveCTLoses; // 0x10b4	
 	// MNetworkEnable
-	float m_TeamRespawnWaveTimes[32]; // 0xf2c	
-	// MNetworkEnable
-	GameTime_t m_flNextRespawnWave[32]; // 0xfac	
-	// MNetworkEnable
-	int32_t m_nServerQuestID; // 0x102c	
-	// MNetworkEnable
-	Vector m_vMinimapMins; // 0x1030	
-	// MNetworkEnable
-	Vector m_vMinimapMaxs; // 0x103c	
-	// MNetworkEnable
-	float m_MinimapVerticalSectionHeights[8]; // 0x1048	
-	bool m_bDontIncrementCoopWave; // 0x1068	
-	bool m_bSpawnedTerrorHuntHeavy; // 0x1069	
+	int32_t m_iNumConsecutiveTerroristLoses; // 0x10b8	
 private:
-	[[maybe_unused]] uint8_t __pad106a[0x2]; // 0x106a
+	[[maybe_unused]] uint8_t __pad10bc[0x1c]; // 0x10bc
+public:
+	bool m_bMarkClientStopRecordAtRoundEnd; // 0x10d8	
+private:
+	[[maybe_unused]] uint8_t __pad10d9[0x57]; // 0x10d9
 public:
 	// MNetworkEnable
-	int32_t m_nEndMatchMapGroupVoteTypes[10]; // 0x106c	
-	// MNetworkEnable
-	int32_t m_nEndMatchMapGroupVoteOptions[10]; // 0x1094	
-	// MNetworkEnable
-	int32_t m_nEndMatchMapVoteWinner; // 0x10bc	
-	// MNetworkEnable
-	int32_t m_iNumConsecutiveCTLoses; // 0x10c0	
-	// MNetworkEnable
-	int32_t m_iNumConsecutiveTerroristLoses; // 0x10c4	
+	bool m_bMatchAbortedDueToPlayerBan; // 0x1130	
+	bool m_bHasTriggeredRoundStartMusic; // 0x1131	
+	bool m_bHasTriggeredCoopSpawnReset; // 0x1132	
+	bool m_bSwitchingTeamsAtRoundReset; // 0x1133	
+	int32_t m_iMaxGunGameProgressiveWeaponIndex; // 0x1134	
 private:
-	[[maybe_unused]] uint8_t __pad10c8[0x18]; // 0x10c8
-public:
-	bool m_bMarkClientStopRecordAtRoundEnd; // 0x10e0	
-private:
-	[[maybe_unused]] uint8_t __pad10e1[0x57]; // 0x10e1
+	[[maybe_unused]] uint8_t __pad1138[0x18]; // 0x1138
 public:
 	// MNetworkEnable
-	bool m_bMatchAbortedDueToPlayerBan; // 0x1138	
-	bool m_bHasTriggeredRoundStartMusic; // 0x1139	
-	bool m_bHasTriggeredCoopSpawnReset; // 0x113a	
-	bool m_bSwitchingTeamsAtRoundReset; // 0x113b	
-	int32_t m_iMaxGunGameProgressiveWeaponIndex; // 0x113c	
-private:
-	[[maybe_unused]] uint8_t __pad1140[0x18]; // 0x1140
-public:
+	// MNetworkPolymorphic
+	CCSGameModeRules* m_pGameModeRules; // 0x1150	
 	// MNetworkEnable
 	C_SurvivalGameRules m_SurvivalRules; // 0x1158	
 	// MNetworkEnable
@@ -3601,9 +3844,16 @@ public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnMatchEndCountChanged"
 	uint8_t m_nMatchEndCount; // 0x1930	
+private:
+	[[maybe_unused]] uint8_t __pad1931[0x3]; // 0x1931
+public:
+	// MNetworkEnable
+	int32_t m_nTTeamIntroVariant; // 0x1934	
+	// MNetworkEnable
+	int32_t m_nCTTeamIntroVariant; // 0x1938	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnTeamIntroPeriodChanged"
-	bool m_bTeamIntroPeriod; // 0x1931	
+	bool m_bTeamIntroPeriod; // 0x193c	
 };
 
 // Alignment: 7
@@ -3674,6 +3924,8 @@ public:
 // Size: 0xb0
 class C_IronSightController
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	bool m_bIronSightAvailable; // 0x10	
 private:
@@ -3709,8 +3961,8 @@ public:
 	bool m_bPassWhenTrue; // 0x18	
 };
 
-// Alignment: 32
-// Size: 0x258
+// Alignment: 34
+// Size: 0x270
 struct CompositeMaterialInputLooseVariable_t
 {
 public:
@@ -3733,106 +3985,115 @@ public:
 	// MPropertyAttrStateCallback
 	bool m_bExposedVariableIsFixedRange; // 0x20	
 private:
-	[[maybe_unused]] uint8_t __pad0021[0x3]; // 0x21
+	[[maybe_unused]] uint8_t __pad0021[0x7]; // 0x21
 public:
+	// MPropertyFriendlyName "Exposed SetVisible When True"
+	// MPropertyAttrStateCallback
+	CUtlString m_strExposedVisibleWhenTrue; // 0x28	
+	// MPropertyFriendlyName "Exposed SetHidden When True"
+	// MPropertyAttrStateCallback
+	CUtlString m_strExposedHiddenWhenTrue; // 0x30	
 	// MPropertyAutoRebuildOnChange
 	// MPropertyFriendlyName "Type"
-	CompositeMaterialInputLooseVariableType_t m_nVariableType; // 0x24	
+	CompositeMaterialInputLooseVariableType_t m_nVariableType; // 0x38	
 	// MPropertyFriendlyName "Value"
 	// MPropertyAttrStateCallback
-	bool m_bValueBoolean; // 0x28	
-private:
-	[[maybe_unused]] uint8_t __pad0029[0x3]; // 0x29
-public:
-	// MPropertyFriendlyName "X Value"
-	// MPropertyAttrStateCallback
-	// MPropertyAttributeRange "0 255"
-	int32_t m_nValueIntX; // 0x2c	
-	// MPropertyFriendlyName "Y Value"
-	// MPropertyAttrStateCallback
-	// MPropertyAttributeRange "0 255"
-	int32_t m_nValueIntY; // 0x30	
-	// MPropertyFriendlyName "Z Value"
-	// MPropertyAttrStateCallback
-	// MPropertyAttributeRange "0 255"
-	int32_t m_nValueIntZ; // 0x34	
-	// MPropertyFriendlyName "W Value"
-	// MPropertyAttrStateCallback
-	// MPropertyAttributeRange "0 255"
-	int32_t m_nValueIntW; // 0x38	
-	// MPropertyFriendlyName "Specify Min/Max"
-	// MPropertyAttrStateCallback
-	bool m_bHasFloatBounds; // 0x3c	
+	bool m_bValueBoolean; // 0x3c	
 private:
 	[[maybe_unused]] uint8_t __pad003d[0x3]; // 0x3d
 public:
 	// MPropertyFriendlyName "X Value"
 	// MPropertyAttrStateCallback
+	// MPropertyAttributeRange "0 255"
+	int32_t m_nValueIntX; // 0x40	
+	// MPropertyFriendlyName "Y Value"
+	// MPropertyAttrStateCallback
+	// MPropertyAttributeRange "0 255"
+	int32_t m_nValueIntY; // 0x44	
+	// MPropertyFriendlyName "Z Value"
+	// MPropertyAttrStateCallback
+	// MPropertyAttributeRange "0 255"
+	int32_t m_nValueIntZ; // 0x48	
+	// MPropertyFriendlyName "W Value"
+	// MPropertyAttrStateCallback
+	// MPropertyAttributeRange "0 255"
+	int32_t m_nValueIntW; // 0x4c	
+	// MPropertyFriendlyName "Specify Min/Max"
+	// MPropertyAttrStateCallback
+	bool m_bHasFloatBounds; // 0x50	
+private:
+	[[maybe_unused]] uint8_t __pad0051[0x3]; // 0x51
+public:
+	// MPropertyFriendlyName "X Value"
+	// MPropertyAttrStateCallback
 	// MPropertyAttributeRange "0.0 1.0"
-	float m_flValueFloatX; // 0x40	
+	float m_flValueFloatX; // 0x54	
 	// MPropertyFriendlyName "X Min"
 	// MPropertyAttrStateCallback
-	float m_flValueFloatX_Min; // 0x44	
+	float m_flValueFloatX_Min; // 0x58	
 	// MPropertyFriendlyName "X Max"
 	// MPropertyAttrStateCallback
-	float m_flValueFloatX_Max; // 0x48	
+	float m_flValueFloatX_Max; // 0x5c	
 	// MPropertyFriendlyName "Y Value"
 	// MPropertyAttrStateCallback
 	// MPropertyAttributeRange "0.0 1.0"
-	float m_flValueFloatY; // 0x4c	
+	float m_flValueFloatY; // 0x60	
 	// MPropertyFriendlyName "Y Min"
 	// MPropertyAttrStateCallback
-	float m_flValueFloatY_Min; // 0x50	
+	float m_flValueFloatY_Min; // 0x64	
 	// MPropertyFriendlyName "Y Max"
 	// MPropertyAttrStateCallback
-	float m_flValueFloatY_Max; // 0x54	
+	float m_flValueFloatY_Max; // 0x68	
 	// MPropertyFriendlyName "Z Value"
 	// MPropertyAttrStateCallback
 	// MPropertyAttributeRange "0.0 1.0"
-	float m_flValueFloatZ; // 0x58	
+	float m_flValueFloatZ; // 0x6c	
 	// MPropertyFriendlyName "Z Min"
 	// MPropertyAttrStateCallback
-	float m_flValueFloatZ_Min; // 0x5c	
+	float m_flValueFloatZ_Min; // 0x70	
 	// MPropertyFriendlyName "Z Max"
 	// MPropertyAttrStateCallback
-	float m_flValueFloatZ_Max; // 0x60	
+	float m_flValueFloatZ_Max; // 0x74	
 	// MPropertyFriendlyName "W Value"
 	// MPropertyAttrStateCallback
 	// MPropertyAttributeRange "0.0 1.0"
-	float m_flValueFloatW; // 0x64	
+	float m_flValueFloatW; // 0x78	
 	// MPropertyFriendlyName "W Min"
 	// MPropertyAttrStateCallback
-	float m_flValueFloatW_Min; // 0x68	
+	float m_flValueFloatW_Min; // 0x7c	
 	// MPropertyFriendlyName "W Max"
 	// MPropertyAttrStateCallback
-	float m_flValueFloatW_Max; // 0x6c	
+	float m_flValueFloatW_Max; // 0x80	
 	// MPropertyFriendlyName "Value"
 	// MPropertyAttrStateCallback
-	Color m_cValueColor4; // 0x70	
+	Color m_cValueColor4; // 0x84	
 	// MPropertyFriendlyName "Value"
 	// MPropertyAttrStateCallback
-	CompositeMaterialVarSystemVar_t m_nValueSystemVar; // 0x74	
+	CompositeMaterialVarSystemVar_t m_nValueSystemVar; // 0x88	
+private:
+	[[maybe_unused]] uint8_t __pad008c[0x4]; // 0x8c
+public:
 	// MPropertyFriendlyName "Material"
 	// MPropertyAttributeEditor "AssetBrowse( vmat )"
 	// MPropertyAttrStateCallback
-	CResourceName m_strResourceMaterial; // 0x78	
+	CResourceName m_strResourceMaterial; // 0x90	
 	// MPropertyFriendlyName "Texture"
 	// MPropertyAttributeEditor "AssetBrowse( jpg, png, psd, tga )"
 	// MPropertyAttrStateCallback
-	CUtlString m_strTextureContentAssetPath; // 0x158	
+	CUtlString m_strTextureContentAssetPath; // 0x170	
 	// MPropertyHideField
-	CResourceName m_strTextureRuntimeResourcePath; // 0x160	
+	CResourceName m_strTextureRuntimeResourcePath; // 0x178	
 	// MPropertyHideField
-	CUtlString m_strTextureCompilationVtexTemplate; // 0x240	
+	CUtlString m_strTextureCompilationVtexTemplate; // 0x258	
 	// MPropertyFriendlyName "Texture Type"
 	// MPropertyAttrStateCallback
-	CompositeMaterialInputTextureType_t m_nTextureType; // 0x248	
+	CompositeMaterialInputTextureType_t m_nTextureType; // 0x260	
 private:
-	[[maybe_unused]] uint8_t __pad024c[0x4]; // 0x24c
+	[[maybe_unused]] uint8_t __pad0264[0x4]; // 0x264
 public:
 	// MPropertyFriendlyName "String"
 	// MPropertyAttrStateCallback
-	CUtlString m_strString; // 0x250	
+	CUtlString m_strString; // 0x268	
 };
 
 // Alignment: 5
@@ -3856,8 +4117,8 @@ public:
 	bool m_bPassWhenTrue; // 0x20	
 };
 
-// Alignment: 27
-// Size: 0x350
+// Alignment: 28
+// Size: 0x368
 struct CompMatPropertyMutator_t
 {
 public:
@@ -3903,54 +4164,58 @@ public:
 	CompositeMaterialInputLooseVariable_t m_nSetValue_Value; // 0x68	
 	// MPropertyFriendlyName "Target Texture Param"
 	// MPropertyAttrStateCallback
-	CUtlString m_strGenerateTexture_TargetParam; // 0x2c0	
+	CUtlString m_strGenerateTexture_TargetParam; // 0x2d8	
 	// MPropertyFriendlyName "Initial Container"
 	// MPropertyAttrStateCallback
-	CUtlString m_strGenerateTexture_InitialContainer; // 0x2c8	
+	CUtlString m_strGenerateTexture_InitialContainer; // 0x2e0	
 	// MPropertyFriendlyName "Resolution"
 	// MPropertyAttrStateCallback
-	int32_t m_nResolution; // 0x2d0	
+	int32_t m_nResolution; // 0x2e8	
+	// MPropertyAutoRebuildOnChange
+	// MPropertyFriendlyName "Scratch Target"
+	// MPropertyAttrStateCallback
+	bool m_bIsScratchTarget; // 0x2ec	
 	// MPropertyAutoRebuildOnChange
 	// MPropertyFriendlyName "Splat Debug info on Texture"
 	// MPropertyAttrStateCallback
-	bool m_bSplatDebugInfo; // 0x2d4	
+	bool m_bSplatDebugInfo; // 0x2ed	
 	// MPropertyAutoRebuildOnChange
 	// MPropertyFriendlyName "Capture in RenderDoc"
 	// MPropertyAttrStateCallback
-	bool m_bCaptureInRenderDoc; // 0x2d5	
+	bool m_bCaptureInRenderDoc; // 0x2ee	
 private:
-	[[maybe_unused]] uint8_t __pad02d6[0x2]; // 0x2d6
+	[[maybe_unused]] uint8_t __pad02ef[0x1]; // 0x2ef
 public:
 	// MPropertyFriendlyName "Texture Generation Instructions"
 	// MPropertyAttrStateCallback
-	CUtlVector< CompMatPropertyMutator_t > m_vecTexGenInstructions; // 0x2d8	
+	CUtlVector< CompMatPropertyMutator_t > m_vecTexGenInstructions; // 0x2f0	
 	// MPropertyFriendlyName "Mutators"
 	// MPropertyAttrStateCallback
-	CUtlVector< CompMatPropertyMutator_t > m_vecConditionalMutators; // 0x2f0	
+	CUtlVector< CompMatPropertyMutator_t > m_vecConditionalMutators; // 0x308	
 	// MPropertyFriendlyName "Container to Pop"
 	// MPropertyAttrStateCallback
-	CUtlString m_strPopInputQueue_Container; // 0x308	
+	CUtlString m_strPopInputQueue_Container; // 0x320	
 	// MPropertyFriendlyName "Input Container"
 	// MPropertyAttrStateCallback
-	CUtlString m_strDrawText_InputContainerSrc; // 0x310	
+	CUtlString m_strDrawText_InputContainerSrc; // 0x328	
 	// MPropertyFriendlyName "Input Container Property"
 	// MPropertyAttrStateCallback
-	CUtlString m_strDrawText_InputContainerProperty; // 0x318	
+	CUtlString m_strDrawText_InputContainerProperty; // 0x330	
 	// MPropertyFriendlyName "Text Position"
 	// MPropertyAttrStateCallback
-	Vector2D m_vecDrawText_Position; // 0x320	
+	Vector2D m_vecDrawText_Position; // 0x338	
 	// MPropertyFriendlyName "Text Color"
 	// MPropertyAttrStateCallback
-	Color m_colDrawText_Color; // 0x328	
+	Color m_colDrawText_Color; // 0x340	
 private:
-	[[maybe_unused]] uint8_t __pad032c[0x4]; // 0x32c
+	[[maybe_unused]] uint8_t __pad0344[0x4]; // 0x344
 public:
 	// MPropertyFriendlyName "Font"
 	// MPropertyAttrStateCallback
-	CUtlString m_strDrawText_Font; // 0x330	
+	CUtlString m_strDrawText_Font; // 0x348	
 	// MPropertyFriendlyName "Conditions"
 	// MPropertyAttrStateCallback
-	CUtlVector< CompMatMutatorCondition_t > m_vecConditions; // 0x338	
+	CUtlVector< CompMatMutatorCondition_t > m_vecConditions; // 0x350	
 };
 
 // Alignment: 8
@@ -4009,13 +4274,15 @@ struct GeneratedTextureHandle_t
 public:
 	// MPropertyFriendlyName "Generated Texture"
 	// MPropertyAttributeEditor "CompositeMaterialTextureViewer"
-	CUtlString m_strBitmapName; // 0x8	
+	CUtlString m_strBitmapName; // 0x0	
 };
 
 // Alignment: 4
 // Size: 0x60
 struct CompositeMaterial_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MPropertyGroupName "Target Material"
 	// MPropertyAttributeEditor "CompositeMaterialKVInspector"
@@ -4076,6 +4343,8 @@ public:
 // Size: 0x38
 class CCompositeMaterialEditorDoc
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	int32_t m_nVersion; // 0x8	
 private:
@@ -4089,6 +4358,8 @@ public:
 // Size: 0x4c0
 class CGlobalLightBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
 	bool m_bSpotLight; // 0x10	
 private:
@@ -4127,22 +4398,25 @@ public:
 	float m_flCloud1Direction; // 0x98	
 	float m_flCloud2Speed; // 0x9c	
 	float m_flCloud2Direction; // 0xa0	
-	float m_flAmbientScale1; // 0xa4	
-	float m_flAmbientScale2; // 0xa8	
-	float m_flGroundScale; // 0xac	
-	float m_flLightScale; // 0xb0	
-	float m_flFoWDarkness; // 0xb4	
-	bool m_bEnableSeparateSkyboxFog; // 0xb8	
 private:
-	[[maybe_unused]] uint8_t __pad00b9[0x3]; // 0xb9
+	[[maybe_unused]] uint8_t __pad00a4[0xc]; // 0xa4
 public:
-	Vector m_vFowColor; // 0xbc	
-	Vector m_ViewOrigin; // 0xc8	
-	QAngle m_ViewAngles; // 0xd4	
-	float m_flViewFoV; // 0xe0	
-	Vector m_WorldPoints[8]; // 0xe4	
+	float m_flAmbientScale1; // 0xb0	
+	float m_flAmbientScale2; // 0xb4	
+	float m_flGroundScale; // 0xb8	
+	float m_flLightScale; // 0xbc	
+	float m_flFoWDarkness; // 0xc0	
+	bool m_bEnableSeparateSkyboxFog; // 0xc4	
 private:
-	[[maybe_unused]] uint8_t __pad0144[0x364]; // 0x144
+	[[maybe_unused]] uint8_t __pad00c5[0x3]; // 0xc5
+public:
+	Vector m_vFowColor; // 0xc8	
+	Vector m_ViewOrigin; // 0xd4	
+	QAngle m_ViewAngles; // 0xe0	
+	float m_flViewFoV; // 0xec	
+	Vector m_WorldPoints[8]; // 0xf0	
+private:
+	[[maybe_unused]] uint8_t __pad0150[0x358]; // 0x150
 public:
 	Vector2D m_vFogOffsetLayer0; // 0x4a8	
 	Vector2D m_vFogOffsetLayer1; // 0x4b0	
@@ -4154,8 +4428,12 @@ public:
 // Size: 0xa30
 class C_GlobalLight : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0540[0x4c0]; // 0x540
 public:
 	uint16_t m_WindClothForceHandle; // 0xa00	
+	
+	// Static fields:
 	static C_GlobalLight* &Get_sm_pGlobalLight(){return *reinterpret_cast<C_GlobalLight**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GlobalLight")->m_static_fields[0]->m_instance);};
 	static CUtlStringToken &Get_sm_pSkyboxSlots(){return *reinterpret_cast<CUtlStringToken*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GlobalLight")->m_static_fields[1]->m_instance);};
 	static CUtlVector< C_GlobalLight* > &Get_sm_nonPrimaryGlobalLights(){return *reinterpret_cast<CUtlVector< C_GlobalLight* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GlobalLight")->m_static_fields[2]->m_instance);};
@@ -4211,6 +4489,8 @@ public:
 // Size: 0x578
 class C_VoteController : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0540[0x10]; // 0x540
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "RecvProxy_VoteType"
@@ -4232,6 +4512,8 @@ public:
 // Size: 0xe88
 class C_MapVetoPickController : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0540[0x10]; // 0x540
 public:
 	// MNetworkEnable
 	int32_t m_nDraftType; // 0x550	
@@ -4271,28 +4553,31 @@ public:
 // Size: 0x30
 class CPlayerSprayDecalRenderHelper
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x30]; // 0x0
 public:
-	uint8_t __pad0000[0x30]; // Autoaligned
+	// No members available
 };
 
-// Alignment: 6
-// Size: 0x5b8
+// Alignment: 7
+// Size: 0x5c0
 class C_CSGO_TeamPreviewCamera : public C_CSGO_MapPreviewCameraPath
 {
 public:
-	bool m_bDofEnabled; // 0x5a0	
+	int32_t m_nVariant; // 0x5a0	
+	bool m_bDofEnabled; // 0x5a4	
 private:
-	[[maybe_unused]] uint8_t __pad05a1[0x3]; // 0x5a1
+	[[maybe_unused]] uint8_t __pad05a5[0x3]; // 0x5a5
 public:
-	float m_flDofNearBlurry; // 0x5a4	
-	float m_flDofNearCrisp; // 0x5a8	
-	float m_flDofFarCrisp; // 0x5ac	
-	float m_flDofFarBlurry; // 0x5b0	
-	float m_flDofTiltToGround; // 0x5b4	
+	float m_flDofNearBlurry; // 0x5a8	
+	float m_flDofNearCrisp; // 0x5ac	
+	float m_flDofFarCrisp; // 0x5b0	
+	float m_flDofFarBlurry; // 0x5b4	
+	float m_flDofTiltToGround; // 0x5b8	
 };
 
 // Alignment: 0
-// Size: 0x5b8
+// Size: 0x5c0
 class C_CSGO_TeamSelectCamera : public C_CSGO_TeamPreviewCamera
 {
 public:
@@ -4300,7 +4585,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x5b8
+// Size: 0x5c0
 class C_CSGO_TerroristTeamIntroCamera : public C_CSGO_TeamPreviewCamera
 {
 public:
@@ -4308,7 +4593,15 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x5b8
+// Size: 0x5c0
+class C_CSGO_TerroristWingmanIntroCamera : public C_CSGO_TeamPreviewCamera
+{
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x5c0
 class C_CSGO_CounterTerroristTeamIntroCamera : public C_CSGO_TeamPreviewCamera
 {
 public:
@@ -4316,7 +4609,15 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x5b8
+// Size: 0x5c0
+class C_CSGO_CounterTerroristWingmanIntroCamera : public C_CSGO_TeamPreviewCamera
+{
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x5c0
 class C_CSGO_EndOfMatchCamera : public C_CSGO_TeamPreviewCamera
 {
 public:
@@ -4324,7 +4625,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x9d8
+// Size: 0x9e0
 class C_CSGO_EndOfMatchCharacterPosition : public C_CSGO_TeamPreviewCharacterPosition
 {
 public:
@@ -4391,6 +4692,8 @@ public:
 // Size: 0x16c0
 class C_EnvCombinedLightProbeVolume : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0540[0x10d0]; // 0x540
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "StateChanged"
@@ -4462,6 +4765,8 @@ public:
 // Size: 0x6a0
 class C_EnvCubemap : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0540[0xf0]; // 0x540
 public:
 	// MNetworkEnable
 	CStrongHandle< InfoForResourceTypeCTextureBase > m_hCubemapTexture; // 0x630	
@@ -4619,6 +4924,8 @@ public:
 	// MNetworkEnable
 	bool m_bIsEnabled; // 0x579	
 	bool m_bGradientFogNeedsTextures; // 0x57a	
+	
+	// Static fields:
 	static C_GradientFog* &Get_sm_pGradientFog(){return *reinterpret_cast<C_GradientFog**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GradientFog")->m_static_fields[0]->m_instance);};
 };
 
@@ -4626,6 +4933,8 @@ public:
 // Size: 0x1598
 class C_EnvLightProbeVolume : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0540[0xfe0]; // 0x540
 public:
 	// MNetworkEnable
 	CStrongHandle< InfoForResourceTypeCTextureBase > m_hLightProbeTexture; // 0x1520	
@@ -4672,6 +4981,29 @@ private:
 public:
 	// MNetworkEnable
 	bool m_bEnabled; // 0x1591	
+};
+
+// Alignment: 6
+// Size: 0x570
+class C_PlayerVisibility : public C_BaseEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkChangeCallback "PlayerVisibilityStateChanged"
+	float m_flVisibilityStrength; // 0x540	
+	// MNetworkEnable
+	// MNetworkChangeCallback "PlayerVisibilityStateChanged"
+	float m_flFogDistanceMultiplier; // 0x544	
+	// MNetworkEnable
+	// MNetworkChangeCallback "PlayerVisibilityStateChanged"
+	float m_flFogMaxDensityMultiplier; // 0x548	
+	// MNetworkEnable
+	// MNetworkChangeCallback "PlayerVisibilityStateChanged"
+	float m_flFadeTime; // 0x54c	
+	// MNetworkEnable
+	bool m_bStartDisabled; // 0x550	
+	// MNetworkEnable
+	bool m_bIsEnabled; // 0x551	
 };
 
 // Alignment: 8
@@ -4826,6 +5158,8 @@ public:
 // Size: 0x558
 class C_InfoVisibilityBox : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0540[0x4]; // 0x540
 public:
 	// MNetworkEnable
 	int32_t m_nMode; // 0x544	
@@ -5014,6 +5348,8 @@ public:
 // Size: 0x6c0
 class CBasePlayerController : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0540[0x8]; // 0x540
 public:
 	int32_t m_nFinalPredictedTick; // 0x548	
 private:
@@ -5058,6 +5394,9 @@ private:
 public:
 	// MNetworkEnable
 	uint32_t m_iDesiredFOV; // 0x6a4	
+	
+	// Static fields:
+	static bool &Get_sm_bRunningPredictedClientStringCommands(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBasePlayerController")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 14
@@ -5093,8 +5432,8 @@ public:
 	float m_flCrouchTime; // 0x174	
 };
 
-// Alignment: 22
-// Size: 0x320
+// Alignment: 21
+// Size: 0x240
 class CBasePlayerWeaponVData : public CEntitySubclassVDataBase
 {
 public:
@@ -5119,63 +5458,60 @@ public:
 	// MPropertyDescription "Effect when firing this weapon"
 	// MPropertyGroupName "Visuals"
 	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashParticle; // 0x118	
-	// MPropertyDescription "Effect to actually fire into the world from this weapon"
-	// MPropertyGroupName "Visuals"
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szTracerParticle; // 0x1f8	
-	ItemFlagTypes_t m_iFlags; // 0x2d8	
+	ItemFlagTypes_t m_iFlags; // 0x1f8	
 	// MPropertyAttributeEditor "VDataChoice( scripts/ammo.vdata )"
 	// MPropertyGroupName "Ammo"
 	// MPropertyCustomFGDType
-	AmmoIndex_t m_nPrimaryAmmoType; // 0x2d9	
+	AmmoIndex_t m_nPrimaryAmmoType; // 0x1f9	
 	// MPropertyAttributeEditor "VDataChoice( scripts/ammo.vdata )"
 	// MPropertyGroupName "Ammo"
 	// MPropertyCustomFGDType
-	AmmoIndex_t m_nSecondaryAmmoType; // 0x2da	
+	AmmoIndex_t m_nSecondaryAmmoType; // 0x1fa	
 private:
-	[[maybe_unused]] uint8_t __pad02db[0x1]; // 0x2db
+	[[maybe_unused]] uint8_t __pad01fb[0x1]; // 0x1fb
 public:
 	// MPropertyFriendlyName "Primary Clip Size"
 	// MPropertyDescription "How many bullets this gun can fire before it reloads (0 if no clip)"
 	// MPropertyAttributeRange "0 255"
 	// MPropertyGroupName "Ammo"
-	int32_t m_iMaxClip1; // 0x2dc	
+	int32_t m_iMaxClip1; // 0x1fc	
 	// MPropertyFriendlyName "Secondary Clip Size"
 	// MPropertyDescription "How many secondary bullets this gun can fire before it reloads (0 if no clip)"
 	// MPropertyGroupName "Ammo"
 	// MPropertyAttributeRange "0 255"
-	int32_t m_iMaxClip2; // 0x2e0	
+	int32_t m_iMaxClip2; // 0x200	
 	// MPropertyDescription "Primary Initial Clip (-1 means use clip size)"
 	// MPropertyGroupName "Ammo"
 	// MPropertyAttributeRange "-1 255"
-	int32_t m_iDefaultClip1; // 0x2e4	
+	int32_t m_iDefaultClip1; // 0x204	
 	// MPropertyDescription "Secondary Initial Clip (-1 means use clip size)"
 	// MPropertyGroupName "Ammo"
 	// MPropertyAttributeRange "-1 255"
-	int32_t m_iDefaultClip2; // 0x2e8	
+	int32_t m_iDefaultClip2; // 0x208	
 	// MPropertyDescription "This value used to determine this weapon's importance in autoselection"
 	// MPropertyGroupName "UI"
-	int32_t m_iWeight; // 0x2ec	
+	int32_t m_iWeight; // 0x20c	
 	// MPropertyFriendlyName "Safe To Auto-Switch To"
 	// MPropertyDescription "Whether this weapon is safe to automatically switch to (should be false for eg. explosives that can the player may accidentally hurt themselves with)"
 	// MPropertyGroupName "UI"
-	bool m_bAutoSwitchTo; // 0x2f0	
+	bool m_bAutoSwitchTo; // 0x210	
 	// MPropertyFriendlyName "Safe To Auto-Switch Away From"
 	// MPropertyGroupName "UI"
-	bool m_bAutoSwitchFrom; // 0x2f1	
+	bool m_bAutoSwitchFrom; // 0x211	
 private:
-	[[maybe_unused]] uint8_t __pad02f2[0x2]; // 0x2f2
+	[[maybe_unused]] uint8_t __pad0212[0x2]; // 0x212
 public:
 	// MPropertyGroupName "UI"
-	RumbleEffect_t m_iRumbleEffect; // 0x2f4	
-	CUtlMap< WeaponSound_t, CSoundEventName > m_aShootSounds; // 0x2f8	
+	RumbleEffect_t m_iRumbleEffect; // 0x214	
+	CUtlMap< WeaponSound_t, CSoundEventName > m_aShootSounds; // 0x218	
 	// MPropertyFriendlyName "HUD Bucket"
 	// MPropertyDescription "Which 'column' to display this weapon in the HUD"
 	// MPropertyGroupName "UI"
-	int32_t m_iSlot; // 0x318	
+	int32_t m_iSlot; // 0x238	
 	// MPropertyFriendlyName "HUD Bucket Position"
 	// MPropertyDescription "Which 'row' to display this weapon in the HUD"
 	// MPropertyGroupName "UI"
-	int32_t m_iPosition; // 0x31c	
+	int32_t m_iPosition; // 0x23c	
 };
 
 // Alignment: 2
@@ -5188,6 +5524,8 @@ public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
 	CNetworkVarChainer __m_pChainEntity; // 0x1810	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseAnimGraph")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseAnimGraph")->m_static_fields[1]->m_instance);};
 };
@@ -5196,6 +5534,8 @@ public:
 // Size: 0xcc0
 class C_BaseModelEntity : public C_BaseEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0540[0x4d0]; // 0x540
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "CRenderComponent"
@@ -5321,7 +5661,7 @@ public:
 	bool m_bPassthoughCaller; // 0x594	
 };
 
-// Alignment: 23
+// Alignment: 24
 // Size: 0x1270
 class C_ParticleSystem : public C_BaseModelEntity
 {
@@ -5360,10 +5700,9 @@ public:
 	bool m_bNoSave; // 0x1014	
 	// MNetworkEnable
 	bool m_bNoFreeze; // 0x1015	
-	bool m_bStartActive; // 0x1016	
-private:
-	[[maybe_unused]] uint8_t __pad1017[0x1]; // 0x1017
-public:
+	// MNetworkEnable
+	bool m_bNoRamp; // 0x1016	
+	bool m_bStartActive; // 0x1017	
 	CUtlSymbolLarge m_iszEffectName; // 0x1018	
 	CUtlSymbolLarge m_iszControlPointNames[64]; // 0x1020	
 	int32_t m_nDataCP; // 0x1220	
@@ -5449,13 +5788,13 @@ public:
 	int32_t m_Exponent; // 0xcc8	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "360"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "360.000000"
 	float m_InnerAngle; // 0xccc	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "360"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "360.000000"
 	float m_OuterAngle; // 0xcd0	
 	// MNetworkEnable
 	float m_SpotRadius; // 0xcd4	
@@ -5470,8 +5809,8 @@ public:
 	CUtlSymbolLarge m_iszOverlayNames[10]; // 0x540	
 	// MNetworkEnable
 	// MNetworkBitCount "11"
-	// MNetworkMinValue "-1"
-	// MNetworkMaxValue "63"
+	// MNetworkMinValue "-1.000000"
+	// MNetworkMaxValue "63.000000"
 	float m_flOverlayTimes[10]; // 0x590	
 	// MNetworkEnable
 	GameTime_t m_flStartTime; // 0x5b8	
@@ -5529,13 +5868,13 @@ public:
 	uint32_t m_nOuterMaxDist; // 0xcd0	
 	// MNetworkEnable
 	// MNetworkBitCount "6"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "64"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "64.000000"
 	// MNetworkEncodeFlags
 	float m_flGlowProxySize; // 0xcd4	
 	// MNetworkEnable
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "100"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "100.000000"
 	// MNetworkChangeCallback "OnHDRColorScaleChanged"
 	float m_flHDRColorScale; // 0xcd8	
 private:
@@ -5562,31 +5901,6 @@ public:
 	float m_flLightScale; // 0xcc0	
 	// MNetworkEnable
 	float m_Radius; // 0xcc4	
-};
-
-// Alignment: 4
-// Size: 0x550
-class C_PointHMDAnchor : public C_BaseEntity
-{
-public:
-	// MNetworkEnable
-	bool m_bDisabled; // 0x540	
-private:
-	[[maybe_unused]] uint8_t __pad0541[0x3]; // 0x541
-public:
-	// MNetworkEnable
-	GameTime_t m_flEnableTime; // 0x544	
-	// MNetworkEnable
-	int32_t m_nPlayerIndex; // 0x548	
-	int32_t m_nLastSimulateFrame; // 0x54c	
-};
-
-// Alignment: 0
-// Size: 0x550
-class C_PointHMDAnchorOverride : public C_PointHMDAnchor
-{
-public:
-	// No members available
 };
 
 // Alignment: 25
@@ -5654,6 +5968,8 @@ public:
 // Size: 0xf38
 class C_PointWorldText : public C_ModelPointEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0cc0[0x8]; // 0xcc0
 public:
 	bool m_bForceRecreateNextUpdate; // 0xcc8	
 private:
@@ -5742,6 +6058,8 @@ public:
 // Size: 0xd08
 class C_EntityDissolve : public C_BaseModelEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0cc0[0x8]; // 0xcc0
 public:
 	// MNetworkEnable
 	GameTime_t m_flStartTime; // 0xcc8	
@@ -5869,6 +6187,8 @@ public:
 // Size: 0x10a8
 class C_RopeKeyframe : public C_BaseModelEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0cc0[0x8]; // 0xcc0
 public:
 	CBitVec< 10 > m_LinksTouchingSomething; // 0xcc8	
 	int32_t m_nLinksTouchingSomething; // 0xccc	
@@ -5923,8 +6243,8 @@ public:
 	int16_t m_Slack; // 0x100a	
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0.1"
-	// MNetworkMaxValue "10"
+	// MNetworkMinValue "0.100000"
+	// MNetworkMaxValue "10.000000"
 	float m_TextureScale; // 0x100c	
 	// MNetworkEnable
 	uint8_t m_fLockedPoints; // 0x1010	
@@ -5955,7 +6275,7 @@ public:
 		uint8_t m_bEndPointAttachmentAnglesDirty: 1; 		
 		uint8_t m_bNewDataThisFrame: 1; 		
 		uint8_t m_bPhysicsInitted: 1; 		
-		uint8_t __pad2: 4; // Autoaligned
+		uint8_t __pad2: 4;
 	}; // 8 bits
 };
 
@@ -5963,6 +6283,8 @@ public:
 // Size: 0x5a0
 class C_SceneEntity : public C_PointEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0540[0x8]; // 0x540
 public:
 	// MNetworkEnable
 	bool m_bIsPlayingBack; // 0x548	
@@ -6036,27 +6358,27 @@ public:
 	// MNetworkBitCount "10"
 	float m_flHazeScale; // 0xd04	
 	// MNetworkEnable
-	// MNetworkMinValue "-360"
-	// MNetworkMaxValue "360"
+	// MNetworkMinValue "-360.000000"
+	// MNetworkMaxValue "360.000000"
 	float m_flRotation; // 0xd08	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnHDRScaleChanged"
 	float m_flHDRColorScale; // 0xd0c	
 	// MNetworkEnable
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "2"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "2.000000"
 	float m_flAlphaHaze; // 0xd10	
 	// MNetworkEnable
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "2"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "2.000000"
 	float m_flAlphaScale; // 0xd14	
 	// MNetworkEnable
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "2"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "2.000000"
 	float m_flAlphaHdr; // 0xd18	
 	// MNetworkEnable
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	float m_flFarZScale; // 0xd1c	
 };
 
@@ -6081,6 +6403,14 @@ public:
 
 // Alignment: 0
 // Size: 0xcc8
+class C_TriggerMultiple : public C_BaseTrigger
+{
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0xcc8
 class C_TriggerLerpObject : public C_BaseTrigger
 {
 public:
@@ -6091,6 +6421,8 @@ public:
 // Size: 0x30
 class CClientAlphaProperty : public IClientAlphaProperty
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x8]; // 0x8
 public:
 	uint8_t m_nRenderFX; // 0x10	
 	uint8_t m_nRenderMode; // 0x11	
@@ -6118,8 +6450,8 @@ class C_Beam : public C_BaseModelEntity
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "-25"
-	// MNetworkMaxValue "25"
+	// MNetworkMinValue "-25.000000"
+	// MNetworkMaxValue "25.000000"
 	// MNetworkEncodeFlags
 	float m_flFrameRate; // 0xcc0	
 	// MNetworkEnable
@@ -6152,14 +6484,14 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "102.3"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "102.300003"
 	// MNetworkEncodeFlags
 	float m_fWidth; // 0xd44	
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "102.3"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "102.300003"
 	// MNetworkEncodeFlags
 	float m_fEndWidth; // 0xd48	
 	// MNetworkEnable
@@ -6168,25 +6500,25 @@ public:
 	float m_fHaloScale; // 0xd50	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "64"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "64.000000"
 	// MNetworkEncodeFlags
 	float m_fAmplitude; // 0xd54	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "256"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "256.000000"
 	// MNetworkEncodeFlags
 	float m_fStartFrame; // 0xd58	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "100"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "100.000000"
 	float m_fSpeed; // 0xd5c	
 	// MNetworkEnable
 	// MNetworkBitCount "20"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "256"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "256.000000"
 	// MNetworkEncodeFlags
 	// MNetworkPriority "32"
 	float m_flFrame; // 0xd60	
@@ -6228,6 +6560,8 @@ public:
 	// MNetworkEnable
 	bool m_bFakeLadder; // 0xd11	
 	bool m_bHasSlack; // 0xd12	
+	
+	// Static fields:
 	static CUtlVector< C_FuncLadder* > &Get_s_Ladders(){return *reinterpret_cast<CUtlVector< C_FuncLadder* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_FuncLadder")->m_static_fields[0]->m_instance);};
 };
 
@@ -6255,6 +6589,8 @@ public:
 // Size: 0xdf0
 class C_Sprite : public C_BaseModelEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0cc0[0x18]; // 0xcc0
 public:
 	// MNetworkEnable
 	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hSpriteMaterial; // 0xcd8	
@@ -6267,14 +6603,14 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "60"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "60.000000"
 	// MNetworkEncodeFlags
 	float m_flSpriteFramerate; // 0xce8	
 	// MNetworkEnable
 	// MNetworkBitCount "20"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "256"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "256.000000"
 	// MNetworkEncodeFlags
 	float m_flFrame; // 0xcec	
 	GameTime_t m_flDieTime; // 0xcf0	
@@ -6297,8 +6633,8 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "6"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "64"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "64.000000"
 	// MNetworkEncodeFlags
 	float m_flGlowProxySize; // 0xd14	
 	// MNetworkEnable
@@ -6334,6 +6670,8 @@ public:
 // Size: 0xcf0
 class C_BaseClientUIEntity : public C_BaseModelEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0cc0[0x8]; // 0xcc0
 public:
 	// MNetworkEnable
 	bool m_bEnabled; // 0xcc8	
@@ -6363,6 +6701,8 @@ public:
 // Size: 0xec8
 class C_PointClientUIHUD : public C_BaseClientUIEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0cf0[0x8]; // 0xcf0
 public:
 	bool m_bCheckCSSClasses; // 0xcf8	
 private:
@@ -6404,6 +6744,8 @@ public:
 // Size: 0xf20
 class C_PointClientUIWorldPanel : public C_BaseClientUIEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0cf0[0x8]; // 0xcf0
 public:
 	bool m_bForceRecreateNextUpdate; // 0xcf8	
 	bool m_bMoveViewToPlayerNextThink; // 0xcf9	
@@ -6496,33 +6838,6 @@ public:
 	char m_messageText[512]; // 0xf20	
 };
 
-// Alignment: 14
-// Size: 0xfc0
-class C_PointHintUi : public C_PointClientUIWorldPanel
-{
-public:
-	CUtlSymbolLarge m_pszLessonName; // 0xf50	
-	CUtlSymbolLarge m_pszCaption; // 0xf58	
-	Vector m_vOffset; // 0xf60	
-	WorldTextAttachmentType_t m_attachType; // 0xf6c	
-	CHandle< C_BaseEntity > m_hIconTarget; // 0xf70	
-private:
-	[[maybe_unused]] uint8_t __pad0f74[0x4]; // 0xf74
-public:
-	CUtlSymbolLarge m_szTargetAttachmentName; // 0xf78	
-	CUtlSymbolLarge m_pszCustomLayoutFile; // 0xf80	
-	int32_t m_nTrackedDeviceIndex; // 0xf88	
-	CHandle< C_PropVRHand > m_hHighlightHand; // 0xf8c	
-	CUtlSymbolLarge m_pszHighlightControllerComponent; // 0xf90	
-	CUtlSymbolLarge m_pszHighlightControllerAction; // 0xf98	
-	Vector m_vecLocalHighlightPoint; // 0xfa0	
-private:
-	[[maybe_unused]] uint8_t __pad0fac[0x4]; // 0xfac
-public:
-	CUtlSymbolLarge m_pszHighlightOtherEntityName; // 0xfb0	
-	bool m_bUseOffScreenIndicator; // 0xfb8	
-};
-
 // Alignment: 9
 // Size: 0x728
 class CInfoOffscreenPanoramaTexture : public C_PointEntity
@@ -6573,6 +6888,31 @@ public:
 	uint64_t m_ullRegisteredAsItemID; // 0x4a0	
 };
 
+// Alignment: 1
+// Size: 0xcd0
+class CBombTarget : public C_BaseTrigger
+{
+public:
+	// MNetworkEnable
+	bool m_bBombPlantedHere; // 0xcc8	
+};
+
+// Alignment: 0
+// Size: 0xcc8
+class CHostageRescueZoneShim : public C_BaseTrigger
+{
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0xcd0
+class CHostageRescueZone : public CHostageRescueZoneShim
+{
+public:
+	// No members available
+};
+
 // Alignment: 2
 // Size: 0xcf8
 class C_TriggerBuoyancy : public C_BaseTrigger
@@ -6591,10 +6931,20 @@ public:
 	CBuoyancyHelper m_BuoyancyHelper; // 0xcc0	
 };
 
-// Alignment: 54
-// Size: 0x848
+// Alignment: 0
+// Size: 0xcc0
+class CWaterSplasher : public C_BaseModelEntity
+{
+public:
+	// No members available
+};
+
+// Alignment: 58
+// Size: 0x850
 class CCSPlayerController : public CBasePlayerController
 {
+private:
+	[[maybe_unused]] uint8_t __pad06c0[0x10]; // 0x6c0
 public:
 	// MNetworkEnable
 	CCSPlayerController_InGameMoneyServices* m_pInGameMoneyServices; // 0x6d0	
@@ -6653,84 +7003,94 @@ private:
 	[[maybe_unused]] uint8_t __pad0749[0x3]; // 0x749
 public:
 	// MNetworkEnable
-	int32_t m_nEndMatchNextMapVote; // 0x74c	
+	int32_t m_iCompetitiveRankingPredicted_Win; // 0x74c	
 	// MNetworkEnable
-	uint16_t m_unActiveQuestId; // 0x750	
+	int32_t m_iCompetitiveRankingPredicted_Loss; // 0x750	
+	// MNetworkEnable
+	int32_t m_iCompetitiveRankingPredicted_Tie; // 0x754	
+	// MNetworkEnable
+	int32_t m_nEndMatchNextMapVote; // 0x758	
+	// MNetworkEnable
+	uint16_t m_unActiveQuestId; // 0x75c	
 private:
-	[[maybe_unused]] uint8_t __pad0752[0x2]; // 0x752
+	[[maybe_unused]] uint8_t __pad075e[0x2]; // 0x75e
 public:
 	// MNetworkEnable
-	QuestProgress::Reason m_nQuestProgressReason; // 0x754	
+	QuestProgress::Reason m_nQuestProgressReason; // 0x760	
 	// MNetworkEnable
-	uint32_t m_unPlayerTvControlFlags; // 0x758	
+	uint32_t m_unPlayerTvControlFlags; // 0x764	
 private:
-	[[maybe_unused]] uint8_t __pad075c[0x6c]; // 0x75c
+	[[maybe_unused]] uint8_t __pad0768[0x68]; // 0x768
 public:
-	int32_t m_iDraftIndex; // 0x7c8	
-	uint32_t m_msQueuedModeDisconnectionTimestamp; // 0x7cc	
-	uint32_t m_uiAbandonRecordedReason; // 0x7d0	
-	bool m_bEverFullyConnected; // 0x7d4	
-	bool m_bAbandonAllowsSurrender; // 0x7d5	
-	bool m_bDisconnection1MinWarningPrinted; // 0x7d6	
-	bool m_bScoreReported; // 0x7d7	
-	// MNetworkEnable
-	int32_t m_nDisconnectionTick; // 0x7d8	
+	int32_t m_iDraftIndex; // 0x7d0	
+	uint32_t m_msQueuedModeDisconnectionTimestamp; // 0x7d4	
+	uint32_t m_uiAbandonRecordedReason; // 0x7d8	
+	bool m_bEverFullyConnected; // 0x7dc	
+	bool m_bAbandonAllowsSurrender; // 0x7dd	
+	bool m_bAbandonOffersInstantSurrender; // 0x7de	
+	bool m_bDisconnection1MinWarningPrinted; // 0x7df	
+	bool m_bScoreReported; // 0x7e0	
 private:
-	[[maybe_unused]] uint8_t __pad07dc[0xc]; // 0x7dc
-public:
-	// MNetworkEnable
-	bool m_bControllingBot; // 0x7e8	
-	// MNetworkEnable
-	bool m_bHasControlledBotThisRound; // 0x7e9	
-	bool m_bHasBeenControlledByPlayerThisRound; // 0x7ea	
-private:
-	[[maybe_unused]] uint8_t __pad07eb[0x1]; // 0x7eb
-public:
-	int32_t m_nBotsControlledThisRound; // 0x7ec	
-	// MNetworkEnable
-	bool m_bCanControlObservedBot; // 0x7f0	
-private:
-	[[maybe_unused]] uint8_t __pad07f1[0x3]; // 0x7f1
+	[[maybe_unused]] uint8_t __pad07e1[0x3]; // 0x7e1
 public:
 	// MNetworkEnable
-	CHandle< C_CSPlayerPawn > m_hPlayerPawn; // 0x7f4	
-	// MNetworkEnable
-	CHandle< C_CSObserverPawn > m_hObserverPawn; // 0x7f8	
-	// MNetworkEnable
-	bool m_bPawnIsAlive; // 0x7fc	
+	int32_t m_nDisconnectionTick; // 0x7e4	
 private:
-	[[maybe_unused]] uint8_t __pad07fd[0x3]; // 0x7fd
+	[[maybe_unused]] uint8_t __pad07e8[0x8]; // 0x7e8
 public:
 	// MNetworkEnable
-	uint32_t m_iPawnHealth; // 0x800	
+	bool m_bControllingBot; // 0x7f0	
 	// MNetworkEnable
-	int32_t m_iPawnArmor; // 0x804	
-	// MNetworkEnable
-	bool m_bPawnHasDefuser; // 0x808	
-	// MNetworkEnable
-	bool m_bPawnHasHelmet; // 0x809	
-	// MNetworkEnable
-	uint16_t m_nPawnCharacterDefIndex; // 0x80a	
-	// MNetworkEnable
-	int32_t m_iPawnLifetimeStart; // 0x80c	
-	// MNetworkEnable
-	int32_t m_iPawnLifetimeEnd; // 0x810	
-	// MNetworkEnable
-	int32_t m_iPawnGunGameLevel; // 0x814	
-	// MNetworkEnable
-	int32_t m_iPawnBotDifficulty; // 0x818	
-	// MNetworkEnable
-	CHandle< CCSPlayerController > m_hOriginalControllerOfCurrentPawn; // 0x81c	
-	// MNetworkEnable
-	int32_t m_iScore; // 0x820	
+	bool m_bHasControlledBotThisRound; // 0x7f1	
+	bool m_bHasBeenControlledByPlayerThisRound; // 0x7f2	
 private:
-	[[maybe_unused]] uint8_t __pad0824[0x4]; // 0x824
+	[[maybe_unused]] uint8_t __pad07f3[0x1]; // 0x7f3
+public:
+	int32_t m_nBotsControlledThisRound; // 0x7f4	
+	// MNetworkEnable
+	bool m_bCanControlObservedBot; // 0x7f8	
+private:
+	[[maybe_unused]] uint8_t __pad07f9[0x3]; // 0x7f9
 public:
 	// MNetworkEnable
-	C_NetworkUtlVectorBase< EKillTypes_t > m_vecKills; // 0x828	
+	CHandle< C_CSPlayerPawn > m_hPlayerPawn; // 0x7fc	
 	// MNetworkEnable
-	int32_t m_iMVPs; // 0x840	
-	bool m_bIsPlayerNameDirty; // 0x844	
+	CHandle< C_CSObserverPawn > m_hObserverPawn; // 0x800	
+	// MNetworkEnable
+	bool m_bPawnIsAlive; // 0x804	
+private:
+	[[maybe_unused]] uint8_t __pad0805[0x3]; // 0x805
+public:
+	// MNetworkEnable
+	uint32_t m_iPawnHealth; // 0x808	
+	// MNetworkEnable
+	int32_t m_iPawnArmor; // 0x80c	
+	// MNetworkEnable
+	bool m_bPawnHasDefuser; // 0x810	
+	// MNetworkEnable
+	bool m_bPawnHasHelmet; // 0x811	
+	// MNetworkEnable
+	uint16_t m_nPawnCharacterDefIndex; // 0x812	
+	// MNetworkEnable
+	int32_t m_iPawnLifetimeStart; // 0x814	
+	// MNetworkEnable
+	int32_t m_iPawnLifetimeEnd; // 0x818	
+	// MNetworkEnable
+	int32_t m_iPawnGunGameLevel; // 0x81c	
+	// MNetworkEnable
+	int32_t m_iPawnBotDifficulty; // 0x820	
+	// MNetworkEnable
+	CHandle< CCSPlayerController > m_hOriginalControllerOfCurrentPawn; // 0x824	
+	// MNetworkEnable
+	int32_t m_iScore; // 0x828	
+private:
+	[[maybe_unused]] uint8_t __pad082c[0x4]; // 0x82c
+public:
+	// MNetworkEnable
+	C_NetworkUtlVectorBase< EKillTypes_t > m_vecKills; // 0x830	
+	// MNetworkEnable
+	int32_t m_iMVPs; // 0x848	
+	bool m_bIsPlayerNameDirty; // 0x84c	
 };
 
 // Alignment: 2
@@ -6742,27 +7102,31 @@ public:
 	CUtlSymbolLarge m_source; // 0xcc8	
 	// MNetworkEnable
 	CUtlSymbolLarge m_destination; // 0xcd0	
+	
+	// Static fields:
 	static CUtlVector< C_FootstepControl* > &Get_sm_footstepControllers(){return *reinterpret_cast<CUtlVector< C_FootstepControl* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_FootstepControl")->m_static_fields[0]->m_instance);};
 };
 
-// Alignment: 89
+// Alignment: 90
 // Size: 0xda8
 class CWeaponCSBaseVData : public CBasePlayerWeaponVData
 {
 public:
-	CSWeaponType m_WeaponType; // 0x320	
-	CSWeaponCategory m_WeaponCategory; // 0x324	
+	CSWeaponType m_WeaponType; // 0x240	
+	CSWeaponCategory m_WeaponCategory; // 0x244	
 	// MPropertyStartGroup "Visuals"
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szViewModel; // 0x328	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szPlayerModel; // 0x408	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szWorldDroppedModel; // 0x4e8	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szAimsightLensMaskModel; // 0x5c8	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szMagazineModel; // 0x6a8	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szHeatEffect; // 0x788	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szEjectBrassEffect; // 0x868	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashParticleAlt; // 0x948	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashThirdPersonParticle; // 0xa28	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashThirdPersonParticleAlt; // 0xb08	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szViewModel; // 0x248	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szPlayerModel; // 0x328	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szWorldDroppedModel; // 0x408	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szAimsightLensMaskModel; // 0x4e8	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szMagazineModel; // 0x5c8	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szHeatEffect; // 0x6a8	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szEjectBrassEffect; // 0x788	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashParticleAlt; // 0x868	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashThirdPersonParticle; // 0x948	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashThirdPersonParticleAlt; // 0xa28	
+	// MPropertyDescription "Effect to actually fire into the world from this weapon"
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szTracerParticle; // 0xb08	
 	// MPropertyStartGroup "HUD Positions"
 	// MPropertyFriendlyName "HUD Bucket"
 	// MPropertyDescription "Which 'column' to display this weapon in the HUD"
@@ -6770,7 +7134,7 @@ public:
 	int32_t m_GearSlotPosition; // 0xbec	
 	// MPropertyFriendlyName "HUD Bucket Position"
 	// MPropertyDescription "Default team (non Terrorist or Counter-Terrorist) 'row' to display this weapon in the HUD."
-	loadout_positions_t m_DefaultLoadoutPosition; // 0xbf0	
+	loadout_slot_t m_DefaultLoadoutSlot; // 0xbf0	
 private:
 	[[maybe_unused]] uint8_t __pad0bf4[0x4]; // 0xbf4
 public:
@@ -6922,6 +7286,8 @@ public:
 // Size: 0xd08
 class C_FuncConveyor : public C_BaseModelEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0cc0[0x8]; // 0xcc0
 public:
 	// MNetworkEnable
 	Vector m_vecMoveDirEntitySpace; // 0xcc8	
@@ -6943,12 +7309,16 @@ public:
 };
 
 // Alignment: 2
-// Size: 0xd20
+// Size: 0x11a0
 class CGrenadeTracer : public C_BaseModelEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0cc0[0x20]; // 0xcc0
 public:
 	float m_flTracerDuration; // 0xce0	
 	GrenadeType_t m_nType; // 0xce4	
+	
+	// Static fields:
 	static int32_t &Get_s_nColorIdx(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CGrenadeTracer")->m_static_fields[0]->m_instance);};
 };
 
@@ -6956,6 +7326,8 @@ public:
 // Size: -0x7d60
 class C_Inferno : public C_BaseModelEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0cc0[0x40]; // 0xcc0
 public:
 	ParticleIndex_t m_nfxFireDamageEffect; // 0xd00	
 	// MNetworkEnable
@@ -7267,6 +7639,8 @@ public:
 	int32_t m_nImportance; // 0x548	
 	int32_t m_nLightChoice; // 0x54c	
 	CHandle< C_BaseEntity > m_hLight; // 0x550	
+	
+	// Static fields:
 	static CUtlVector< CInfoDynamicShadowHint* > &Get_m_AllHints(){return *reinterpret_cast<CUtlVector< CInfoDynamicShadowHint* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CInfoDynamicShadowHint")->m_static_fields[0]->m_instance);};
 };
 
@@ -7279,8 +7653,8 @@ public:
 	Vector m_vBoxMaxs; // 0x564	
 };
 
-// Alignment: 10
-// Size: 0xd08
+// Alignment: 12
+// Size: 0xd20
 class C_EnvSky : public C_BaseModelEntity
 {
 public:
@@ -7289,34 +7663,40 @@ public:
 	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hSkyMaterial; // 0xcc0	
 	// MNetworkEnable
 	// MNetworkChangeCallback "SkyStateChanged"
-	bool m_bStartDisabled; // 0xcc8	
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hSkyMaterialLightingOnly; // 0xcc8	
 	// MNetworkEnable
 	// MNetworkChangeCallback "SkyStateChanged"
-	Color m_vTintColor; // 0xcc9	
+	bool m_bStartDisabled; // 0xcd0	
+	// MNetworkEnable
+	// MNetworkChangeCallback "SkyStateChanged"
+	Color m_vTintColor; // 0xcd1	
+	// MNetworkEnable
+	// MNetworkChangeCallback "SkyStateChanged"
+	Color m_vTintColorLightingOnly; // 0xcd5	
 private:
-	[[maybe_unused]] uint8_t __pad0ccd[0x3]; // 0xccd
+	[[maybe_unused]] uint8_t __pad0cd9[0x3]; // 0xcd9
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "SkyStateChanged"
-	float m_flBrightnessScale; // 0xcd0	
+	float m_flBrightnessScale; // 0xcdc	
 	// MNetworkEnable
 	// MNetworkChangeCallback "SkyStateChanged"
-	int32_t m_nFogType; // 0xcd4	
+	int32_t m_nFogType; // 0xce0	
 	// MNetworkEnable
 	// MNetworkChangeCallback "SkyStateChanged"
-	float m_flFogMinStart; // 0xcd8	
+	float m_flFogMinStart; // 0xce4	
 	// MNetworkEnable
 	// MNetworkChangeCallback "SkyStateChanged"
-	float m_flFogMinEnd; // 0xcdc	
+	float m_flFogMinEnd; // 0xce8	
 	// MNetworkEnable
 	// MNetworkChangeCallback "SkyStateChanged"
-	float m_flFogMaxStart; // 0xce0	
+	float m_flFogMaxStart; // 0xcec	
 	// MNetworkEnable
 	// MNetworkChangeCallback "SkyStateChanged"
-	float m_flFogMaxEnd; // 0xce4	
+	float m_flFogMaxEnd; // 0xcf0	
 	// MNetworkEnable
 	// MNetworkChangeCallback "SkyStateChanged"
-	bool m_bEnabled; // 0xce8	
+	bool m_bEnabled; // 0xcf4	
 };
 
 // Alignment: 0
@@ -7375,6 +7755,8 @@ public:
 // Size: 0xd18
 class C_PostProcessingVolume : public C_BaseTrigger
 {
+private:
+	[[maybe_unused]] uint8_t __pad0cc8[0x10]; // 0xcc8
 public:
 	// MNetworkEnable
 	CStrongHandle< InfoForResourceTypeCPostProcessingResource > m_hPostSettings; // 0xcd8	
@@ -7468,6 +7850,8 @@ public:
 // Size: 0xf18
 class CBaseAnimGraph : public C_BaseModelEntity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0cc0[0x8]; // 0xcc0
 public:
 	// MNetworkEnable
 	bool m_bInitiallyPopulateInterpHistory; // 0xcc8	
@@ -7538,6 +7922,8 @@ public:
 // Size: 0x1068
 class C_BreakableProp : public CBaseProp
 {
+private:
+	[[maybe_unused]] uint8_t __pad0f58[0x8]; // 0xf58
 public:
 	CEntityIOOutput m_OnBreak; // 0xf60	
 	CEntityOutputTemplate< float32 > m_OnHealthChanged; // 0xf88	
@@ -7716,6 +8102,8 @@ public:
 // Size: 0xf68
 class C_PointCommentaryNode : public CBaseAnimGraph
 {
+private:
+	[[maybe_unused]] uint8_t __pad0f18[0x8]; // 0xf18
 public:
 	// MNetworkEnable
 	bool m_bActive; // 0xf20	
@@ -7766,53 +8154,55 @@ public:
 };
 
 // Alignment: 19
-// Size: 0x10a8
+// Size: 0x10b0
 class C_BaseFlex : public CBaseAnimGraph
 {
+private:
+	[[maybe_unused]] uint8_t __pad0f18[0x10]; // 0xf18
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "12"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	// MNetworkEncodeFlags
-	C_NetworkUtlVectorBase< float32 > m_flexWeight; // 0xf20	
+	C_NetworkUtlVectorBase< float32 > m_flexWeight; // 0xf28	
 	// MNetworkEnable
 	// MNetworkEncoder
 	// MNetworkChangeCallback "OnViewTargetChanged"
-	Vector m_vLookTargetPosition; // 0xf38	
+	Vector m_vLookTargetPosition; // 0xf40	
 private:
-	[[maybe_unused]] uint8_t __pad0f44[0xc]; // 0xf44
+	[[maybe_unused]] uint8_t __pad0f4c[0xc]; // 0xf4c
 public:
 	// MNetworkEnable
-	bool m_blinktoggle; // 0xf50	
+	bool m_blinktoggle; // 0xf58	
 private:
-	[[maybe_unused]] uint8_t __pad0f51[0x5f]; // 0xf51
+	[[maybe_unused]] uint8_t __pad0f59[0x5f]; // 0xf59
 public:
-	int32_t m_nLastFlexUpdateFrameCount; // 0xfb0	
-	Vector m_CachedViewTarget; // 0xfb4	
-	uint32_t m_nNextSceneEventId; // 0xfc0	
-	int32_t m_iBlink; // 0xfc4	
-	float m_blinktime; // 0xfc8	
-	bool m_prevblinktoggle; // 0xfcc	
+	int32_t m_nLastFlexUpdateFrameCount; // 0xfb8	
+	Vector m_CachedViewTarget; // 0xfbc	
+	uint32_t m_nNextSceneEventId; // 0xfc8	
+	int32_t m_iBlink; // 0xfcc	
+	float m_blinktime; // 0xfd0	
+	bool m_prevblinktoggle; // 0xfd4	
 private:
-	[[maybe_unused]] uint8_t __pad0fcd[0x3]; // 0xfcd
+	[[maybe_unused]] uint8_t __pad0fd5[0x3]; // 0xfd5
 public:
-	int32_t m_iJawOpen; // 0xfd0	
-	float m_flJawOpenAmount; // 0xfd4	
-	float m_flBlinkAmount; // 0xfd8	
-	AttachmentHandle_t m_iMouthAttachment; // 0xfdc	
-	AttachmentHandle_t m_iEyeAttachment; // 0xfdd	
-	bool m_bResetFlexWeightsOnModelChange; // 0xfde	
+	int32_t m_iJawOpen; // 0xfd8	
+	float m_flJawOpenAmount; // 0xfdc	
+	float m_flBlinkAmount; // 0xfe0	
+	AttachmentHandle_t m_iMouthAttachment; // 0xfe4	
+	AttachmentHandle_t m_iEyeAttachment; // 0xfe5	
+	bool m_bResetFlexWeightsOnModelChange; // 0xfe6	
 private:
-	[[maybe_unused]] uint8_t __pad0fdf[0x19]; // 0xfdf
+	[[maybe_unused]] uint8_t __pad0fe7[0x19]; // 0xfe7
 public:
-	int32_t m_nEyeOcclusionRendererBone; // 0xff8	
-	matrix3x4_t m_mEyeOcclusionRendererCameraToBoneTransform; // 0xffc	
-	Vector m_vEyeOcclusionRendererHalfExtent; // 0x102c	
+	int32_t m_nEyeOcclusionRendererBone; // 0x1000	
+	matrix3x4_t m_mEyeOcclusionRendererCameraToBoneTransform; // 0x1004	
+	Vector m_vEyeOcclusionRendererHalfExtent; // 0x1034	
 private:
-	[[maybe_unused]] uint8_t __pad1038[0x10]; // 0x1038
+	[[maybe_unused]] uint8_t __pad1040[0x10]; // 0x1040
 public:
-	C_BaseFlex::Emphasized_Phoneme m_PhonemeClasses[3]; // 0x1048	
+	C_BaseFlex::Emphasized_Phoneme m_PhonemeClasses[3]; // 0x1050	
 };
 
 // Alignment: 14
@@ -7930,8 +8320,8 @@ public:
 	// MNetworkEnable
 	// MNetworkSerializer "angle_normalize_positive"
 	// MNetworkBitCount "7"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "360"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "360.000000"
 	// MNetworkEncodeFlags
 	// MNetworkChangeCallback "OnAngChanged"
 	float m_angle; // 0xfa8	
@@ -7954,6 +8344,8 @@ public:
 // Size: 0x11c0
 class C_BasePropDoor : public C_DynamicProp
 {
+private:
+	[[maybe_unused]] uint8_t __pad1180[0x10]; // 0x1180
 public:
 	// MNetworkEnable
 	DoorState_t m_eDoorState; // 0x1190	
@@ -8001,6 +8393,8 @@ public:
 // Size: 0xf90
 class C_RagdollProp : public CBaseAnimGraph
 {
+private:
+	[[maybe_unused]] uint8_t __pad0f18[0x8]; // 0xf18
 public:
 	// MNetworkEnable
 	// MNetworkEncoder
@@ -8013,8 +8407,8 @@ public:
 	C_NetworkUtlVectorBase< QAngle > m_ragAngles; // 0xf38	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1.000000"
 	// MNetworkEncodeFlags
 	float m_flBlendWeight; // 0xf50	
 	// MNetworkEnable
@@ -8032,6 +8426,8 @@ public:
 // Size: 0xfd8
 class C_LocalTempEntity : public CBaseAnimGraph
 {
+private:
+	[[maybe_unused]] uint8_t __pad0f18[0x18]; // 0xf18
 public:
 	int32_t flags; // 0xf30	
 	GameTime_t die; // 0xf34	
@@ -8070,150 +8466,126 @@ public:
 // Size: 0x10d8
 class C_ShatterGlassShardPhysics : public C_PhysicsProp
 {
+private:
+	[[maybe_unused]] uint8_t __pad1070[0x8]; // 0x1070
 public:
 	// MNetworkEnable
 	shard_model_desc_t m_ShardDesc; // 0x1078	
 };
 
-// Alignment: 1
-// Size: 0xf48
-class C_PointHintUIButtonHighlightModel : public CBaseAnimGraph
-{
-public:
-	matrix3x4_t m_mComponentTransform; // 0xf18	
-};
-
-// Alignment: 1
-// Size: 0xf48
-class C_PointHintUIArrowHighlightModel : public CBaseAnimGraph
-{
-public:
-	matrix3x4_t m_mArrowLocalTransform; // 0xf18	
-};
-
-// Alignment: 4
-// Size: 0xfb0
-class C_PointHintUIHighlightModel : public CBaseAnimGraph
-{
-public:
-	CUtlVector< matrix3x4a_t > m_vecRenderModelComponentTransforms; // 0xf48	
-	int32_t m_nTrackedDeviceIndex; // 0xf60	
-private:
-	[[maybe_unused]] uint8_t __pad0f64[0x14]; // 0xf64
-public:
-	matrix3x4_t m_matLocalHighlight; // 0xf78	
-	bool m_bVisible; // 0xfa8	
-};
-
 // Alignment: 20
-// Size: 0x15f0
+// Size: 0x15f8
 class C_EconEntity : public C_BaseFlex
 {
-public:
-	float m_flFlexDelayTime; // 0x10b8	
 private:
-	[[maybe_unused]] uint8_t __pad10bc[0x4]; // 0x10bc
+	[[maybe_unused]] uint8_t __pad10b0[0x10]; // 0x10b0
 public:
-	float32* m_flFlexDelayedWeight; // 0x10c0	
-	bool m_bAttributesInitialized; // 0x10c8	
+	float m_flFlexDelayTime; // 0x10c0	
 private:
-	[[maybe_unused]] uint8_t __pad10c9[0x7]; // 0x10c9
+	[[maybe_unused]] uint8_t __pad10c4[0x4]; // 0x10c4
 public:
-	// MNetworkEnable
-	C_AttributeContainer m_AttributeManager; // 0x10d0	
-	// MNetworkEnable
-	uint32_t m_OriginalOwnerXuidLow; // 0x1578	
-	// MNetworkEnable
-	uint32_t m_OriginalOwnerXuidHigh; // 0x157c	
-	// MNetworkEnable
-	int32_t m_nFallbackPaintKit; // 0x1580	
-	// MNetworkEnable
-	int32_t m_nFallbackSeed; // 0x1584	
-	// MNetworkEnable
-	float m_flFallbackWear; // 0x1588	
-	// MNetworkEnable
-	int32_t m_nFallbackStatTrak; // 0x158c	
-	bool m_bClientside; // 0x1590	
-	bool m_bParticleSystemsCreated; // 0x1591	
+	float32* m_flFlexDelayedWeight; // 0x10c8	
+	bool m_bAttributesInitialized; // 0x10d0	
 private:
-	[[maybe_unused]] uint8_t __pad1592[0x6]; // 0x1592
+	[[maybe_unused]] uint8_t __pad10d1[0x7]; // 0x10d1
 public:
-	CUtlVector< int32 > m_vecAttachedParticles; // 0x1598	
-	CHandle< CBaseAnimGraph > m_hViewmodelAttachment; // 0x15b0	
-	int32_t m_iOldTeam; // 0x15b4	
-	bool m_bAttachmentDirty; // 0x15b8	
+	// MNetworkEnable
+	C_AttributeContainer m_AttributeManager; // 0x10d8	
+	// MNetworkEnable
+	uint32_t m_OriginalOwnerXuidLow; // 0x1580	
+	// MNetworkEnable
+	uint32_t m_OriginalOwnerXuidHigh; // 0x1584	
+	// MNetworkEnable
+	int32_t m_nFallbackPaintKit; // 0x1588	
+	// MNetworkEnable
+	int32_t m_nFallbackSeed; // 0x158c	
+	// MNetworkEnable
+	float m_flFallbackWear; // 0x1590	
+	// MNetworkEnable
+	int32_t m_nFallbackStatTrak; // 0x1594	
+	bool m_bClientside; // 0x1598	
+	bool m_bParticleSystemsCreated; // 0x1599	
 private:
-	[[maybe_unused]] uint8_t __pad15b9[0x3]; // 0x15b9
+	[[maybe_unused]] uint8_t __pad159a[0x6]; // 0x159a
 public:
-	int32_t m_nUnloadedModelIndex; // 0x15bc	
-	int32_t m_iNumOwnerValidationRetries; // 0x15c0	
+	CUtlVector< int32 > m_vecAttachedParticles; // 0x15a0	
+	CHandle< CBaseAnimGraph > m_hViewmodelAttachment; // 0x15b8	
+	int32_t m_iOldTeam; // 0x15bc	
+	bool m_bAttachmentDirty; // 0x15c0	
 private:
-	[[maybe_unused]] uint8_t __pad15c4[0xc]; // 0x15c4
+	[[maybe_unused]] uint8_t __pad15c1[0x3]; // 0x15c1
 public:
-	CHandle< C_BaseEntity > m_hOldProvidee; // 0x15d0	
+	int32_t m_nUnloadedModelIndex; // 0x15c4	
+	int32_t m_iNumOwnerValidationRetries; // 0x15c8	
 private:
-	[[maybe_unused]] uint8_t __pad15d4[0x4]; // 0x15d4
+	[[maybe_unused]] uint8_t __pad15cc[0xc]; // 0x15cc
 public:
-	CUtlVector< C_EconEntity::AttachedModelData_t > m_vecAttachedModels; // 0x15d8	
+	CHandle< C_BaseEntity > m_hOldProvidee; // 0x15d8	
+private:
+	[[maybe_unused]] uint8_t __pad15dc[0x4]; // 0x15dc
+public:
+	CUtlVector< C_EconEntity::AttachedModelData_t > m_vecAttachedModels; // 0x15e0	
 };
 
 // Alignment: 2
-// Size: 0x15f8
+// Size: 0x1600
 class C_EconWearable : public C_EconEntity
 {
 public:
-	int32_t m_nForceSkin; // 0x15f0	
-	bool m_bAlwaysAllow; // 0x15f4	
+	int32_t m_nForceSkin; // 0x15f8	
+	bool m_bAlwaysAllow; // 0x15fc	
 };
 
 // Alignment: 12
-// Size: 0x10f8
+// Size: 0x1100
 class C_BaseGrenade : public C_BaseFlex
 {
 public:
-	bool m_bHasWarnedAI; // 0x10a8	
-	bool m_bIsSmokeGrenade; // 0x10a9	
+	bool m_bHasWarnedAI; // 0x10b0	
+	bool m_bIsSmokeGrenade; // 0x10b1	
 	// MNetworkEnable
-	bool m_bIsLive; // 0x10aa	
+	bool m_bIsLive; // 0x10b2	
 private:
-	[[maybe_unused]] uint8_t __pad10ab[0x1]; // 0x10ab
+	[[maybe_unused]] uint8_t __pad10b3[0x1]; // 0x10b3
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "1024"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "1024.000000"
 	// MNetworkEncodeFlags
-	float m_DmgRadius; // 0x10ac	
+	float m_DmgRadius; // 0x10b4	
 	// MNetworkEnable
-	GameTime_t m_flDetonateTime; // 0x10b0	
-	float m_flWarnAITime; // 0x10b4	
+	GameTime_t m_flDetonateTime; // 0x10b8	
+	float m_flWarnAITime; // 0x10bc	
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0"
-	// MNetworkMaxValue "256"
+	// MNetworkMinValue "0.000000"
+	// MNetworkMaxValue "256.000000"
 	// MNetworkEncodeFlags
-	float m_flDamage; // 0x10b8	
+	float m_flDamage; // 0x10c0	
 private:
-	[[maybe_unused]] uint8_t __pad10bc[0x4]; // 0x10bc
+	[[maybe_unused]] uint8_t __pad10c4[0x4]; // 0x10c4
 public:
-	CUtlSymbolLarge m_iszBounceSound; // 0x10c0	
-	CUtlString m_ExplosionSound; // 0x10c8	
+	CUtlSymbolLarge m_iszBounceSound; // 0x10c8	
+	CUtlString m_ExplosionSound; // 0x10d0	
 private:
-	[[maybe_unused]] uint8_t __pad10d0[0x4]; // 0x10d0
+	[[maybe_unused]] uint8_t __pad10d8[0x4]; // 0x10d8
 public:
 	// MNetworkEnable
-	CHandle< C_BaseEntity > m_hThrower; // 0x10d4	
+	CHandle< C_BaseEntity > m_hThrower; // 0x10dc	
 private:
-	[[maybe_unused]] uint8_t __pad10d8[0x18]; // 0x10d8
+	[[maybe_unused]] uint8_t __pad10e0[0x18]; // 0x10e0
 public:
-	GameTime_t m_flNextAttack; // 0x10f0	
-	CHandle< C_BaseEntity > m_hOriginalThrower; // 0x10f4	
+	GameTime_t m_flNextAttack; // 0x10f8	
+	CHandle< C_BaseEntity > m_hOriginalThrower; // 0x10fc	
 };
 
 // Alignment: 2
 // Size: 0xf28
 class C_BRC4Target : public CBaseAnimGraph
 {
+private:
+	[[maybe_unused]] uint8_t __pad0f18[0x8]; // 0xf18
 public:
 	// MNetworkEnable
 	bool m_bBrokenOpen; // 0xf20	
@@ -8228,6 +8600,8 @@ public:
 // Size: 0xf40
 class C_ParadropChopper : public CBaseAnimGraph
 {
+private:
+	[[maybe_unused]] uint8_t __pad0f18[0x8]; // 0xf18
 public:
 	Vector m_vecLastRopeTargetPos; // 0xf20	
 	GameTime_t m_flLastRopeTime; // 0xf2c	
@@ -8250,6 +8624,8 @@ public:
 // Size: 0xf70
 class C_Dronegun : public CBaseAnimGraph
 {
+private:
+	[[maybe_unused]] uint8_t __pad0f18[0x8]; // 0xf18
 public:
 	// MNetworkEnable
 	Vector m_vecAttentionTarget; // 0xf20	
@@ -8278,6 +8654,8 @@ public:
 // Size: 0x12d0
 class C_Drone : public C_PhysicsProp
 {
+private:
+	[[maybe_unused]] uint8_t __pad1070[0x10]; // 0x1070
 public:
 	CUtlVector< Vector > m_vecClientSideTrailPositions; // 0x1080	
 	// MNetworkEnable
@@ -8412,6 +8790,8 @@ public:
 // Size: 0xf80
 class C_BaseViewModel : public CBaseAnimGraph
 {
+private:
+	[[maybe_unused]] uint8_t __pad0f18[0x8]; // 0xf18
 public:
 	Vector m_vecLastFacing; // 0xf20	
 	// MNetworkEnable
@@ -8480,91 +8860,93 @@ public:
 };
 
 // Alignment: 15
-// Size: 0x1180
+// Size: 0x1188
 class C_BaseCSGrenadeProjectile : public C_BaseGrenade
 {
 public:
 	// MNetworkEnable
-	Vector m_vInitialVelocity; // 0x10f8	
+	Vector m_vInitialVelocity; // 0x1100	
 	// MNetworkEnable
-	int32_t m_nBounces; // 0x1104	
+	int32_t m_nBounces; // 0x110c	
 	// MNetworkEnable
-	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_nExplodeEffectIndex; // 0x1108	
+	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_nExplodeEffectIndex; // 0x1110	
 	// MNetworkEnable
-	int32_t m_nExplodeEffectTickBegin; // 0x1110	
+	int32_t m_nExplodeEffectTickBegin; // 0x1118	
 	// MNetworkEnable
-	Vector m_vecExplodeEffectOrigin; // 0x1114	
-	GameTime_t m_flSpawnTime; // 0x1120	
-	Vector vecLastTrailLinePos; // 0x1124	
-	GameTime_t flNextTrailLineTime; // 0x1130	
-	bool m_bExplodeEffectBegan; // 0x1134	
-	bool m_bCanCreateGrenadeTrail; // 0x1135	
+	Vector m_vecExplodeEffectOrigin; // 0x111c	
+	GameTime_t m_flSpawnTime; // 0x1128	
+	Vector vecLastTrailLinePos; // 0x112c	
+	GameTime_t flNextTrailLineTime; // 0x1138	
+	bool m_bExplodeEffectBegan; // 0x113c	
+	bool m_bCanCreateGrenadeTrail; // 0x113d	
 private:
-	[[maybe_unused]] uint8_t __pad1136[0x2]; // 0x1136
+	[[maybe_unused]] uint8_t __pad113e[0x2]; // 0x113e
 public:
-	ParticleIndex_t m_nSnapshotTrajectoryEffectIndex; // 0x1138	
+	ParticleIndex_t m_nSnapshotTrajectoryEffectIndex; // 0x1140	
 private:
-	[[maybe_unused]] uint8_t __pad113c[0x4]; // 0x113c
+	[[maybe_unused]] uint8_t __pad1144[0x4]; // 0x1144
 public:
-	CStrongHandle< InfoForResourceTypeIParticleSnapshot > m_hSnapshotTrajectoryParticleSnapshot; // 0x1140	
-	CUtlVector< Vector > m_arrTrajectoryTrailPoints; // 0x1148	
-	CUtlVector< float32 > m_arrTrajectoryTrailPointCreationTimes; // 0x1160	
-	float m_flTrajectoryTrailEffectCreationTime; // 0x1178	
+	CStrongHandle< InfoForResourceTypeIParticleSnapshot > m_hSnapshotTrajectoryParticleSnapshot; // 0x1148	
+	CUtlVector< Vector > m_arrTrajectoryTrailPoints; // 0x1150	
+	CUtlVector< float32 > m_arrTrajectoryTrailPointCreationTimes; // 0x1168	
+	float m_flTrajectoryTrailEffectCreationTime; // 0x1180	
+	
+	// Static fields:
 	static float &Get_s_flThinkInterval(){return *reinterpret_cast<float*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseCSGrenadeProjectile")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 4
-// Size: 0x1110
+// Size: 0x1118
 class C_BreachChargeProjectile : public C_BaseGrenade
 {
 public:
 	// MNetworkEnable
-	bool m_bShouldExplode; // 0x10f8	
+	bool m_bShouldExplode; // 0x1100	
 private:
-	[[maybe_unused]] uint8_t __pad10f9[0x3]; // 0x10f9
+	[[maybe_unused]] uint8_t __pad1101[0x3]; // 0x1101
 public:
 	// MNetworkEnable
-	CHandle< C_BaseEntity > m_weaponThatThrewMe; // 0x10fc	
+	CHandle< C_BaseEntity > m_weaponThatThrewMe; // 0x1104	
 	// MNetworkEnable
-	int32_t m_nParentBoneIndex; // 0x1100	
+	int32_t m_nParentBoneIndex; // 0x1108	
 	// MNetworkEnable
-	Vector m_vecParentBonePos; // 0x1104	
+	Vector m_vecParentBonePos; // 0x110c	
 };
 
 // Alignment: 4
-// Size: 0x1130
+// Size: 0x1138
 class C_BumpMineProjectile : public C_BaseGrenade
 {
 public:
-	bool m_bShouldExplode; // 0x10f8	
+	bool m_bShouldExplode; // 0x1100	
 private:
-	[[maybe_unused]] uint8_t __pad10f9[0x3]; // 0x10f9
+	[[maybe_unused]] uint8_t __pad1101[0x3]; // 0x1101
 public:
 	// MNetworkEnable
-	int32_t m_nParentBoneIndex; // 0x10fc	
+	int32_t m_nParentBoneIndex; // 0x1104	
 	// MNetworkEnable
-	Vector m_vecParentBonePos; // 0x1100	
+	Vector m_vecParentBonePos; // 0x1108	
 	// MNetworkEnable
-	bool m_bArmed; // 0x110c	
+	bool m_bArmed; // 0x1114	
 };
 
 // Alignment: 6
-// Size: 0x1190
+// Size: 0x1198
 class C_TripWireFireProjectile : public C_BaseGrenade
 {
 public:
 	// MNetworkEnable
-	GameTime_t m_flAttachTime; // 0x10f8	
+	GameTime_t m_flAttachTime; // 0x1100	
 	// MNetworkEnable
-	Vector m_vecTripWireEndPositions[10]; // 0x10fc	
+	Vector m_vecTripWireEndPositions[10]; // 0x1104	
 	// MNetworkEnable
-	bool m_bTripWireEndPositionsUsed[10]; // 0x1174	
+	bool m_bTripWireEndPositionsUsed[10]; // 0x117c	
 private:
-	[[maybe_unused]] uint8_t __pad117e[0x2]; // 0x117e
+	[[maybe_unused]] uint8_t __pad1186[0x2]; // 0x1186
 public:
-	int32_t m_nTripWireStartIndex0; // 0x1180	
-	int32_t m_nTripWireEndIndex0; // 0x1184	
-	int32_t m_nTripWireCenterIndex0; // 0x1188	
+	int32_t m_nTripWireStartIndex0; // 0x1188	
+	int32_t m_nTripWireEndIndex0; // 0x118c	
+	int32_t m_nTripWireCenterIndex0; // 0x1190	
 };
 
 // Alignment: 0
@@ -8579,6 +8961,8 @@ public:
 // Size: 0x1088
 class C_PhysPropLootCrate : public C_PhysicsPropMultiplayer
 {
+private:
+	[[maybe_unused]] uint8_t __pad1070[0x8]; // 0x1070
 public:
 	// MNetworkEnable
 	bool m_bRenderInPSPM; // 0x1078	
@@ -8618,7 +9002,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x11a0
+// Size: 0x11a8
 class C_SensorGrenadeProjectile : public C_BaseCSGrenadeProjectile
 {
 public:
@@ -8626,19 +9010,19 @@ public:
 };
 
 // Alignment: 5
-// Size: 0x1170
+// Size: 0x1178
 class C_CSGO_PreviewModel : public C_BaseFlex
 {
 public:
-	CUtlString m_animgraph; // 0x10a8	
-	CUtlString m_animgraphCharacterModeString; // 0x10b0	
-	CUtlString m_defaultAnim; // 0x10b8	
-	AnimLoopMode_t m_nDefaultAnimLoopMode; // 0x10c0	
-	float m_flInitialModelScale; // 0x10c4	
+	CUtlString m_animgraph; // 0x10b0	
+	CUtlString m_animgraphCharacterModeString; // 0x10b8	
+	CUtlString m_defaultAnim; // 0x10c0	
+	AnimLoopMode_t m_nDefaultAnimLoopMode; // 0x10c8	
+	float m_flInitialModelScale; // 0x10cc	
 };
 
 // Alignment: 0
-// Size: 0x1170
+// Size: 0x1178
 class C_CSGO_PreviewModelAlias_csgo_item_previewmodel : public C_CSGO_PreviewModel
 {
 public:
@@ -8697,12 +9081,14 @@ public:
 // Size: 0xf28
 class C_Multimeter : public CBaseAnimGraph
 {
+private:
+	[[maybe_unused]] uint8_t __pad0f18[0x8]; // 0xf18
 public:
 	CHandle< C_PlantedC4 > m_hTargetC4; // 0xf20	
 };
 
-// Alignment: 21
-// Size: 0xf88
+// Alignment: 27
+// Size: 0xf98
 class C_PlantedC4 : public CBaseAnimGraph
 {
 public:
@@ -8725,50 +9111,68 @@ public:
 	// MNetworkEnable
 	GameTime_t m_flC4Blow; // 0xf48	
 	// MNetworkEnable
-	float m_flTimerLength; // 0xf4c	
-	float m_bTenSecWarning; // 0xf50	
-	float m_bTriggerWarning; // 0xf54	
-	float m_bExplodeWarning; // 0xf58	
-	bool m_bLocalBRMusicPlayed; // 0xf5c	
+	bool m_bCannotBeDefused; // 0xf4c	
+	// MNetworkEnable
+	bool m_bHasExploded; // 0xf4d	
 private:
-	[[maybe_unused]] uint8_t __pad0f5d[0x3]; // 0xf5d
+	[[maybe_unused]] uint8_t __pad0f4e[0x2]; // 0xf4e
 public:
 	// MNetworkEnable
-	float m_flDefuseLength; // 0xf60	
+	float m_flTimerLength; // 0xf50	
 	// MNetworkEnable
-	GameTime_t m_flDefuseCountDown; // 0xf64	
-	// MNetworkEnable
-	bool m_bBombDefused; // 0xf68	
+	bool m_bBeingDefused; // 0xf54	
 private:
-	[[maybe_unused]] uint8_t __pad0f69[0x3]; // 0xf69
+	[[maybe_unused]] uint8_t __pad0f55[0x3]; // 0xf55
+public:
+	float m_bTenSecWarning; // 0xf58	
+	float m_bTriggerWarning; // 0xf5c	
+	float m_bExplodeWarning; // 0xf60	
+	bool m_bC4Activated; // 0xf64	
+	bool m_bLocalBRMusicPlayed; // 0xf65	
+private:
+	[[maybe_unused]] uint8_t __pad0f66[0x2]; // 0xf66
 public:
 	// MNetworkEnable
-	CHandle< C_CSPlayerPawnBase > m_hBombDefuser; // 0xf6c	
+	float m_flDefuseLength; // 0xf68	
 	// MNetworkEnable
-	CHandle< C_BaseEntity > m_hControlPanel; // 0xf70	
-	CHandle< C_Multimeter > m_hDefuserMultimeter; // 0xf74	
-	GameTime_t m_flNextRadarFlashTime; // 0xf78	
-	bool m_bRadarFlash; // 0xf7c	
+	GameTime_t m_flDefuseCountDown; // 0xf6c	
+	// MNetworkEnable
+	bool m_bBombDefused; // 0xf70	
 private:
-	[[maybe_unused]] uint8_t __pad0f7d[0x3]; // 0xf7d
+	[[maybe_unused]] uint8_t __pad0f71[0x3]; // 0xf71
 public:
-	CHandle< C_CSPlayerPawnBase > m_hLocalDefusingPlayerHandle; // 0xf80	
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnDefuserChanged"
+	CHandle< C_CSPlayerPawnBase > m_hBombDefuser; // 0xf74	
+	// MNetworkEnable
+	CHandle< C_BaseEntity > m_hControlPanel; // 0xf78	
+	CHandle< C_Multimeter > m_hDefuserMultimeter; // 0xf7c	
+	GameTime_t m_flNextRadarFlashTime; // 0xf80	
+	bool m_bRadarFlash; // 0xf84	
+private:
+	[[maybe_unused]] uint8_t __pad0f85[0x3]; // 0xf85
+public:
+	CHandle< C_CSPlayerPawn > m_pBombDefuser; // 0xf88	
+	GameTime_t m_fLastDefuseTime; // 0xf8c	
+	CBasePlayerController* m_pPredictionOwner; // 0xf90	
 };
 
 // Alignment: 2
-// Size: 0x16f8
+// Size: 0x1700
 class C_Item : public C_EconEntity
 {
 public:
 	// MNetworkEnable
-	bool m_bShouldGlow; // 0x15f0	
-	char m_pReticleHintTextName[256]; // 0x15f1	
+	bool m_bShouldGlow; // 0x15f8	
+	char m_pReticleHintTextName[256]; // 0x15f9	
 };
 
-// Alignment: 7
+// Alignment: 8
 // Size: 0x1650
 class C_Chicken : public C_DynamicProp
 {
+private:
+	[[maybe_unused]] uint8_t __pad1180[0x8]; // 0x1180
 public:
 	CHandle< CBaseAnimGraph > m_hHolidayHatAddon; // 0x1188	
 	// MNetworkEnable
@@ -8789,44 +9193,48 @@ public:
 	// MNetworkEnable
 	uint32_t m_OriginalOwnerXuidHigh; // 0x1644	
 	bool m_bAttributesInitialized; // 0x1648	
+private:
+	[[maybe_unused]] uint8_t __pad1649[0x3]; // 0x1649
+public:
+	ParticleIndex_t m_hWaterWakeParticles; // 0x164c	
 };
 
 // Alignment: 10
-// Size: 0x1638
+// Size: 0x1640
 class C_BasePlayerWeapon : public C_EconEntity
 {
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnWeaponStateChanged"
-	WeaponState_t m_iState; // 0x15f0	
-	WeaponState_t m_iOldState; // 0x15f4	
-	bool m_bRemoveable; // 0x15f8	
+	WeaponState_t m_iState; // 0x15f8	
+	WeaponState_t m_iOldState; // 0x15fc	
+	bool m_bRemoveable; // 0x1600	
 private:
-	[[maybe_unused]] uint8_t __pad15f9[0x3]; // 0x15f9
+	[[maybe_unused]] uint8_t __pad1601[0x3]; // 0x1601
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalWeaponExclusive"
-	GameTick_t m_nNextPrimaryAttackTick; // 0x15fc	
+	GameTick_t m_nNextPrimaryAttackTick; // 0x1604	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalWeaponExclusive"
-	float m_flNextPrimaryAttackTickRatio; // 0x1600	
+	float m_flNextPrimaryAttackTickRatio; // 0x1608	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalWeaponExclusive"
-	GameTick_t m_nNextSecondaryAttackTick; // 0x1604	
+	GameTick_t m_nNextSecondaryAttackTick; // 0x160c	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalWeaponExclusive"
-	float m_flNextSecondaryAttackTickRatio; // 0x1608	
+	float m_flNextSecondaryAttackTickRatio; // 0x1610	
 	// MNetworkEnable
 	// MNetworkSerializer "minusone"
 	// MNetworkPriority "32"
-	int32_t m_iClip1; // 0x160c	
+	int32_t m_iClip1; // 0x1614	
 	// MNetworkEnable
 	// MNetworkSerializer "minusone"
 	// MNetworkUserGroup "LocalWeaponExclusive"
-	int32_t m_iClip2; // 0x1610	
+	int32_t m_iClip2; // 0x1618	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalWeaponExclusive"
-	int32_t m_pReserveAmmo[2]; // 0x1614	
+	int32_t m_pReserveAmmo[2]; // 0x161c	
 };
 
 // Alignment: 7
@@ -8850,94 +9258,83 @@ public:
 };
 
 // Alignment: 8
-// Size: 0x1138
+// Size: 0x1140
 class C_BaseCombatCharacter : public C_BaseFlex
 {
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnWearablesChanged"
-	C_NetworkUtlVectorBase< CHandle< C_EconWearable > > m_hMyWearables; // 0x10a8	
-	int32_t m_bloodColor; // 0x10c0	
-	AttachmentHandle_t m_leftFootAttachment; // 0x10c4	
-	AttachmentHandle_t m_rightFootAttachment; // 0x10c5	
+	C_NetworkUtlVectorBase< CHandle< C_EconWearable > > m_hMyWearables; // 0x10b0	
+	int32_t m_bloodColor; // 0x10c8	
+	AttachmentHandle_t m_leftFootAttachment; // 0x10cc	
+	AttachmentHandle_t m_rightFootAttachment; // 0x10cd	
 private:
-	[[maybe_unused]] uint8_t __pad10c6[0x2]; // 0x10c6
+	[[maybe_unused]] uint8_t __pad10ce[0x2]; // 0x10ce
 public:
-	C_BaseCombatCharacter::WaterWakeMode_t m_nWaterWakeMode; // 0x10c8	
-	float m_flWaterWorldZ; // 0x10cc	
-	float m_flWaterNextTraceTime; // 0x10d0	
+	C_BaseCombatCharacter::WaterWakeMode_t m_nWaterWakeMode; // 0x10d0	
+	float m_flWaterWorldZ; // 0x10d4	
+	float m_flWaterNextTraceTime; // 0x10d8	
 	// MNetworkEnable
-	float m_flFieldOfView; // 0x10d4	
+	float m_flFieldOfView; // 0x10dc	
 };
 
 // Alignment: 26
-// Size: 0x1280
+// Size: 0x12d0
 class C_BasePlayerPawn : public C_BaseCombatCharacter
 {
 public:
 	// MNetworkEnable
-	CPlayer_WeaponServices* m_pWeaponServices; // 0x1138	
+	CPlayer_WeaponServices* m_pWeaponServices; // 0x1140	
 	// MNetworkEnable
-	CPlayer_ItemServices* m_pItemServices; // 0x1140	
+	CPlayer_ItemServices* m_pItemServices; // 0x1148	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	CPlayer_AutoaimServices* m_pAutoaimServices; // 0x1148	
+	CPlayer_AutoaimServices* m_pAutoaimServices; // 0x1150	
 	// MNetworkEnable
-	CPlayer_ObserverServices* m_pObserverServices; // 0x1150	
+	CPlayer_ObserverServices* m_pObserverServices; // 0x1158	
 	// MNetworkEnable
-	CPlayer_WaterServices* m_pWaterServices; // 0x1158	
+	CPlayer_WaterServices* m_pWaterServices; // 0x1160	
 	// MNetworkEnable
-	CPlayer_UseServices* m_pUseServices; // 0x1160	
+	CPlayer_UseServices* m_pUseServices; // 0x1168	
 	// MNetworkEnable
-	CPlayer_FlashlightServices* m_pFlashlightServices; // 0x1168	
+	CPlayer_FlashlightServices* m_pFlashlightServices; // 0x1170	
 	// MNetworkEnable
-	CPlayer_CameraServices* m_pCameraServices; // 0x1170	
+	CPlayer_CameraServices* m_pCameraServices; // 0x1178	
 	// MNetworkEnable
-	CPlayer_MovementServices* m_pMovementServices; // 0x1178	
+	CPlayer_MovementServices* m_pMovementServices; // 0x1180	
 private:
-	[[maybe_unused]] uint8_t __pad1180[0x8]; // 0x1180
+	[[maybe_unused]] uint8_t __pad1188[0x8]; // 0x1188
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	FixAngleSet_t m_fixAngleChangeType; // 0x1188	
-private:
-	[[maybe_unused]] uint8_t __pad1189[0x3]; // 0x1189
-public:
+	C_UtlVectorEmbeddedNetworkVar< ViewAngleServerChange_t > m_ServerViewAngleChanges; // 0x1190	
+	uint32_t m_nHighestConsumedServerViewAngleChangeIndex; // 0x11e0	
+	QAngle v_angle; // 0x11e4	
+	QAngle v_anglePrevious; // 0x11f0	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	QAngle m_fixAngleChangeAngle; // 0x118c	
+	uint32_t m_iHideHUD; // 0x11fc	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	// MNetworkChangeCallback "OnServerAngleChange"
-	int32_t m_fixAngleChangeTick; // 0x1198	
-	QAngle v_angle; // 0x119c	
+	sky3dparams_t m_skybox3d; // 0x1200	
 	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint32_t m_iHideHUD; // 0x11a8	
-private:
-	[[maybe_unused]] uint8_t __pad11ac[0x4]; // 0x11ac
-public:
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	sky3dparams_t m_skybox3d; // 0x11b0	
-	// MNetworkEnable
-	GameTime_t m_flDeathTime; // 0x1240	
-	Vector m_vecPredictionError; // 0x1244	
-	GameTime_t m_flPredictionErrorTime; // 0x1250	
-	float m_flFOVSensitivityAdjust; // 0x1254	
-	float m_flMouseSensitivity; // 0x1258	
-	Vector m_vOldOrigin; // 0x125c	
-	float m_flOldSimulationTime; // 0x1268	
-	int32_t m_nLastExecutedCommandNumber; // 0x126c	
-	int32_t m_nLastExecutedCommandTick; // 0x1270	
+	GameTime_t m_flDeathTime; // 0x1290	
+	Vector m_vecPredictionError; // 0x1294	
+	GameTime_t m_flPredictionErrorTime; // 0x12a0	
+	float m_flFOVSensitivityAdjust; // 0x12a4	
+	float m_flMouseSensitivity; // 0x12a8	
+	Vector m_vOldOrigin; // 0x12ac	
+	float m_flOldSimulationTime; // 0x12b8	
+	int32_t m_nLastExecutedCommandNumber; // 0x12bc	
+	int32_t m_nLastExecutedCommandTick; // 0x12c0	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnControllerChanged"
-	CHandle< CBasePlayerController > m_hController; // 0x1274	
-	bool m_bIsSwappingToPredictableController; // 0x1278	
+	CHandle< CBasePlayerController > m_hController; // 0x12c4	
+	bool m_bIsSwappingToPredictableController; // 0x12c8	
 };
 
 // Alignment: 0
-// Size: 0x16f8
+// Size: 0x1700
 class C_ItemCash : public C_Item
 {
 public:
@@ -8966,194 +9363,196 @@ public:
 };
 
 // Alignment: 59
-// Size: 0x1950
+// Size: 0x1970
 class C_WeaponCSBase : public C_BasePlayerWeapon
 {
-public:
-	// MNetworkEnable
-	float m_flFireSequenceStartTime; // 0x1670	
-	// MNetworkEnable
-	int32_t m_nFireSequenceStartTimeChange; // 0x1674	
-	int32_t m_nFireSequenceStartTimeAck; // 0x1678	
-	// MNetworkEnable
-	bool m_bPlayerFireEventIsPrimary; // 0x167c	
 private:
-	[[maybe_unused]] uint8_t __pad167d[0x3]; // 0x167d
+	[[maybe_unused]] uint8_t __pad1640[0x38]; // 0x1640
 public:
-	HSequence m_seqIdle; // 0x1680	
-	HSequence m_seqFirePrimary; // 0x1684	
-	HSequence m_seqFireSecondary; // 0x1688	
 	// MNetworkEnable
-	int32_t m_nRefundable; // 0x168c	
+	float m_flFireSequenceStartTime; // 0x1678	
+	// MNetworkEnable
+	int32_t m_nFireSequenceStartTimeChange; // 0x167c	
+	int32_t m_nFireSequenceStartTimeAck; // 0x1680	
+	// MNetworkEnable
+	bool m_bPlayerFireEventIsPrimary; // 0x1684	
 private:
-	[[maybe_unused]] uint8_t __pad1690[0x10]; // 0x1690
+	[[maybe_unused]] uint8_t __pad1685[0x3]; // 0x1685
 public:
-	float m_flCrosshairDistance; // 0x16a0	
-	int32_t m_iAmmoLastCheck; // 0x16a4	
-	int32_t m_iAlpha; // 0x16a8	
-	int32_t m_iScopeTextureID; // 0x16ac	
-	int32_t m_iCrosshairTextureID; // 0x16b0	
-	float m_flGunAccuracyPosition; // 0x16b4	
+	HSequence m_seqIdle; // 0x1688	
+	HSequence m_seqFirePrimary; // 0x168c	
+	HSequence m_seqFireSecondary; // 0x1690	
+private:
+	[[maybe_unused]] uint8_t __pad1694[0x14]; // 0x1694
+public:
+	float m_flCrosshairDistance; // 0x16a8	
+	int32_t m_iAmmoLastCheck; // 0x16ac	
+	int32_t m_iAlpha; // 0x16b0	
+	int32_t m_iScopeTextureID; // 0x16b4	
+	int32_t m_iCrosshairTextureID; // 0x16b8	
+	float m_flGunAccuracyPosition; // 0x16bc	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalWeaponExclusive"
-	uint32_t m_nViewModelIndex; // 0x16b8	
-	bool m_bReloadsWithClips; // 0x16bc	
+	uint32_t m_nViewModelIndex; // 0x16c0	
+	bool m_bReloadsWithClips; // 0x16c4	
 private:
-	[[maybe_unused]] uint8_t __pad16bd[0x3]; // 0x16bd
+	[[maybe_unused]] uint8_t __pad16c5[0x3]; // 0x16c5
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalWeaponExclusive"
 	// MNetworkPriority "32"
-	GameTime_t m_flTimeWeaponIdle; // 0x16c0	
-	bool m_bFireOnEmpty; // 0x16c4	
+	GameTime_t m_flTimeWeaponIdle; // 0x16c8	
+	bool m_bFireOnEmpty; // 0x16cc	
 private:
-	[[maybe_unused]] uint8_t __pad16c5[0x3]; // 0x16c5
+	[[maybe_unused]] uint8_t __pad16cd[0x3]; // 0x16cd
 public:
-	CEntityIOOutput m_OnPlayerPickup; // 0x16c8	
+	CEntityIOOutput m_OnPlayerPickup; // 0x16d0	
 	// MNetworkEnable
-	CSWeaponMode m_weaponMode; // 0x16f0	
-	float m_flTurningInaccuracyDelta; // 0x16f4	
-	Vector m_vecTurningInaccuracyEyeDirLast; // 0x16f8	
-	float m_flTurningInaccuracy; // 0x1704	
+	CSWeaponMode m_weaponMode; // 0x16f8	
+	float m_flTurningInaccuracyDelta; // 0x16fc	
+	Vector m_vecTurningInaccuracyEyeDirLast; // 0x1700	
+	float m_flTurningInaccuracy; // 0x170c	
 	// MNetworkEnable
-	float m_fAccuracyPenalty; // 0x1708	
-	GameTime_t m_flLastAccuracyUpdateTime; // 0x170c	
-	float m_fAccuracySmoothedForZoom; // 0x1710	
-	GameTime_t m_fScopeZoomEndTime; // 0x1714	
+	float m_fAccuracyPenalty; // 0x1710	
+	GameTime_t m_flLastAccuracyUpdateTime; // 0x1714	
+	float m_fAccuracySmoothedForZoom; // 0x1718	
+	GameTime_t m_fScopeZoomEndTime; // 0x171c	
 	// MNetworkEnable
-	int32_t m_iRecoilIndex; // 0x1718	
+	int32_t m_iRecoilIndex; // 0x1720	
 	// MNetworkEnable
-	float m_flRecoilIndex; // 0x171c	
+	float m_flRecoilIndex; // 0x1724	
 	// MNetworkEnable
-	bool m_bBurstMode; // 0x1720	
+	bool m_bBurstMode; // 0x1728	
 private:
-	[[maybe_unused]] uint8_t __pad1721[0x3]; // 0x1721
-public:
-	// MNetworkEnable
-	GameTime_t m_flPostponeFireReadyTime; // 0x1724	
-	// MNetworkEnable
-	bool m_bInReload; // 0x1728	
-	// MNetworkEnable
-	bool m_bReloadVisuallyComplete; // 0x1729	
-private:
-	[[maybe_unused]] uint8_t __pad172a[0x2]; // 0x172a
+	[[maybe_unused]] uint8_t __pad1729[0x3]; // 0x1729
 public:
 	// MNetworkEnable
-	GameTime_t m_flDroppedAtTime; // 0x172c	
+	GameTime_t m_flPostponeFireReadyTime; // 0x172c	
 	// MNetworkEnable
-	bool m_bIsHauledBack; // 0x1730	
+	bool m_bInReload; // 0x1730	
 	// MNetworkEnable
-	bool m_bSilencerOn; // 0x1731	
+	bool m_bReloadVisuallyComplete; // 0x1731	
 private:
 	[[maybe_unused]] uint8_t __pad1732[0x2]; // 0x1732
 public:
 	// MNetworkEnable
-	GameTime_t m_flTimeSilencerSwitchComplete; // 0x1734	
+	GameTime_t m_flDroppedAtTime; // 0x1734	
 	// MNetworkEnable
-	int32_t m_iOriginalTeamNumber; // 0x1738	
-	float m_flNextAttackRenderTimeOffset; // 0x173c	
+	bool m_bIsHauledBack; // 0x1738	
+	// MNetworkEnable
+	bool m_bSilencerOn; // 0x1739	
 private:
-	[[maybe_unused]] uint8_t __pad1740[0x78]; // 0x1740
-public:
-	bool m_bVisualsDataSet; // 0x17b8	
-	bool m_bOldFirstPersonSpectatedState; // 0x17b9	
-private:
-	[[maybe_unused]] uint8_t __pad17ba[0x2]; // 0x17ba
-public:
-	CHandle< C_BaseEntity > m_hOurPing; // 0x17bc	
-	CEntityIndex m_nOurPingIndex; // 0x17c0	
-	Vector m_vecOurPingPos; // 0x17c4	
-	bool m_bGlowForPing; // 0x17d0	
-	bool m_bUIWeapon; // 0x17d1	
-private:
-	[[maybe_unused]] uint8_t __pad17d2[0xe]; // 0x17d2
+	[[maybe_unused]] uint8_t __pad173a[0x2]; // 0x173a
 public:
 	// MNetworkEnable
-	CHandle< C_CSPlayerPawnBase > m_hPrevOwner; // 0x17e0	
+	GameTime_t m_flTimeSilencerSwitchComplete; // 0x173c	
+	// MNetworkEnable
+	int32_t m_iOriginalTeamNumber; // 0x1740	
+	float m_flNextAttackRenderTimeOffset; // 0x1744	
 private:
-	[[maybe_unused]] uint8_t __pad17e4[0x20]; // 0x17e4
+	[[maybe_unused]] uint8_t __pad1748[0x78]; // 0x1748
 public:
-	bool m_donated; // 0x1804	
+	bool m_bVisualsDataSet; // 0x17c0	
+	bool m_bOldFirstPersonSpectatedState; // 0x17c1	
 private:
-	[[maybe_unused]] uint8_t __pad1805[0x3]; // 0x1805
+	[[maybe_unused]] uint8_t __pad17c2[0x2]; // 0x17c2
+public:
+	CHandle< C_BaseEntity > m_hOurPing; // 0x17c4	
+	CEntityIndex m_nOurPingIndex; // 0x17c8	
+	Vector m_vecOurPingPos; // 0x17cc	
+	bool m_bGlowForPing; // 0x17d8	
+	bool m_bUIWeapon; // 0x17d9	
+private:
+	[[maybe_unused]] uint8_t __pad17da[0xe]; // 0x17da
 public:
 	// MNetworkEnable
-	GameTime_t m_fLastShotTime; // 0x1808	
-	bool m_bWasOwnedByCT; // 0x180c	
-	bool m_bWasOwnedByTerrorist; // 0x180d	
-private:
-	[[maybe_unused]] uint8_t __pad180e[0x2]; // 0x180e
-public:
-	float m_gunHeat; // 0x1810	
-	uint32_t m_smokeAttachments; // 0x1814	
-	GameTime_t m_lastSmokeTime; // 0x1818	
-	float m_flLastClientFireBulletTime; // 0x181c	
-private:
-	[[maybe_unused]] uint8_t __pad1820[0x50]; // 0x1820
-public:
-	C_IronSightController m_IronSightController; // 0x1870	
+	CHandle< C_CSPlayerPawnBase > m_hPrevOwner; // 0x17e8	
 	// MNetworkEnable
-	int32_t m_iIronSightMode; // 0x1920	
+	GameTick_t m_nDropTick; // 0x17ec	
 private:
-	[[maybe_unused]] uint8_t __pad1924[0xc]; // 0x1924
+	[[maybe_unused]] uint8_t __pad17f0[0x1c]; // 0x17f0
 public:
-	GameTime_t m_flLastLOSTraceFailureTime; // 0x1930	
+	bool m_donated; // 0x180c	
+private:
+	[[maybe_unused]] uint8_t __pad180d[0x3]; // 0x180d
+public:
 	// MNetworkEnable
-	int32_t m_iNumEmptyAttacks; // 0x1934	
+	GameTime_t m_fLastShotTime; // 0x1810	
+	bool m_bWasOwnedByCT; // 0x1814	
+	bool m_bWasOwnedByTerrorist; // 0x1815	
+private:
+	[[maybe_unused]] uint8_t __pad1816[0x2]; // 0x1816
+public:
+	float m_gunHeat; // 0x1818	
+	uint32_t m_smokeAttachments; // 0x181c	
+	GameTime_t m_lastSmokeTime; // 0x1820	
+	float m_flLastClientFireBulletTime; // 0x1824	
+private:
+	[[maybe_unused]] uint8_t __pad1828[0x58]; // 0x1828
+public:
+	C_IronSightController m_IronSightController; // 0x1880	
+	// MNetworkEnable
+	int32_t m_iIronSightMode; // 0x1930	
+private:
+	[[maybe_unused]] uint8_t __pad1934[0xc]; // 0x1934
+public:
+	GameTime_t m_flLastLOSTraceFailureTime; // 0x1940	
+	// MNetworkEnable
+	int32_t m_iNumEmptyAttacks; // 0x1944	
 };
 
 // Alignment: 6
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponCSBaseGun : public C_WeaponCSBase
 {
 public:
 	// MNetworkEnable
-	int32_t m_zoomLevel; // 0x1950	
+	int32_t m_zoomLevel; // 0x1970	
 	// MNetworkEnable
-	int32_t m_iBurstShotsRemaining; // 0x1954	
-	int32_t m_iSilencerBodygroup; // 0x1958	
+	int32_t m_iBurstShotsRemaining; // 0x1974	
+	int32_t m_iSilencerBodygroup; // 0x1978	
 private:
-	[[maybe_unused]] uint8_t __pad195c[0xc]; // 0x195c
+	[[maybe_unused]] uint8_t __pad197c[0xc]; // 0x197c
 public:
-	int32_t m_silencedModelIndex; // 0x1968	
-	bool m_inPrecache; // 0x196c	
+	int32_t m_silencedModelIndex; // 0x1988	
+	bool m_inPrecache; // 0x198c	
 	// MNetworkEnable
-	bool m_bNeedsBoltAction; // 0x196d	
+	bool m_bNeedsBoltAction; // 0x198d	
 };
 
 // Alignment: 12
-// Size: 0x19b0
+// Size: 0x19d0
 class C_C4 : public C_WeaponCSBase
 {
 public:
-	char m_szScreenText[32]; // 0x1950	
-	ParticleIndex_t m_bombdroppedlightParticleIndex; // 0x1970	
+	char m_szScreenText[32]; // 0x1970	
+	ParticleIndex_t m_bombdroppedlightParticleIndex; // 0x1990	
 	// MNetworkEnable
-	bool m_bStartedArming; // 0x1974	
+	bool m_bStartedArming; // 0x1994	
 private:
-	[[maybe_unused]] uint8_t __pad1975[0x3]; // 0x1975
+	[[maybe_unused]] uint8_t __pad1995[0x3]; // 0x1995
 public:
 	// MNetworkEnable
-	GameTime_t m_fArmedTime; // 0x1978	
+	GameTime_t m_fArmedTime; // 0x1998	
 	// MNetworkEnable
-	bool m_bBombPlacedAnimation; // 0x197c	
+	bool m_bBombPlacedAnimation; // 0x199c	
 	// MNetworkEnable
-	bool m_bShowC4LED; // 0x197d	
+	bool m_bShowC4LED; // 0x199d	
 	// MNetworkEnable
-	bool m_bIsPlantingViaUse; // 0x197e	
+	bool m_bIsPlantingViaUse; // 0x199e	
 private:
-	[[maybe_unused]] uint8_t __pad197f[0x1]; // 0x197f
+	[[maybe_unused]] uint8_t __pad199f[0x1]; // 0x199f
 public:
 	// MNetworkEnable
-	EntitySpottedState_t m_entitySpottedState; // 0x1980	
-	int32_t m_nSpotRules; // 0x1998	
-	bool m_bPlayedArmingBeeps[7]; // 0x199c	
-	bool m_bBombPlanted; // 0x19a3	
-	bool m_bDroppedFromDeath; // 0x19a4	
+	EntitySpottedState_t m_entitySpottedState; // 0x19a0	
+	int32_t m_nSpotRules; // 0x19b8	
+	bool m_bPlayedArmingBeeps[7]; // 0x19bc	
+	bool m_bBombPlanted; // 0x19c3	
+	bool m_bDroppedFromDeath; // 0x19c4	
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_DEagle : public C_WeaponCSBaseGun
 {
 public:
@@ -9161,7 +9560,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponElite : public C_WeaponCSBaseGun
 {
 public:
@@ -9169,7 +9568,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1950
+// Size: 0x1970
 class C_WeaponNOVA : public C_WeaponCSBase
 {
 public:
@@ -9177,7 +9576,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1950
+// Size: 0x1970
 class C_WeaponSawedoff : public C_WeaponCSBase
 {
 public:
@@ -9185,16 +9584,16 @@ public:
 };
 
 // Alignment: 1
-// Size: 0x1980
+// Size: 0x19a0
 class C_WeaponTaser : public C_WeaponCSBaseGun
 {
 public:
 	// MNetworkEnable
-	GameTime_t m_fFireTime; // 0x1970	
+	GameTime_t m_fFireTime; // 0x1990	
 };
 
 // Alignment: 0
-// Size: 0x1950
+// Size: 0x1970
 class C_WeaponXM1014 : public C_WeaponCSBase
 {
 public:
@@ -9202,7 +9601,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1950
+// Size: 0x1970
 class C_Knife : public C_WeaponCSBase
 {
 public:
@@ -9210,7 +9609,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1950
+// Size: 0x1970
 class C_KnifeGG : public C_Knife
 {
 public:
@@ -9218,127 +9617,132 @@ public:
 };
 
 // Alignment: 1
-// Size: 0x1960
+// Size: 0x1980
 class C_Melee : public C_WeaponCSBase
 {
 public:
 	// MNetworkEnable
-	GameTime_t m_flThrowAt; // 0x1950	
+	GameTime_t m_flThrowAt; // 0x1970	
 };
 
 // Alignment: 2
-// Size: 0x1980
+// Size: 0x19a0
 class C_WeaponZoneRepulsor : public C_WeaponCSBaseGun
 {
 public:
-	float m_flPitchLocal; // 0x1970	
-	GameTime_t m_flLastTimeNotIdle; // 0x1974	
+	float m_flPitchLocal; // 0x1990	
+	GameTime_t m_flLastTimeNotIdle; // 0x1994	
 };
 
 // Alignment: 1
-// Size: 0x1980
+// Size: 0x19a0
 class C_WeaponShield : public C_WeaponCSBaseGun
 {
 public:
 	// MNetworkEnable
-	float m_flDisplayHealth; // 0x1970	
+	float m_flDisplayHealth; // 0x1990	
 };
 
 // Alignment: 1
-// Size: 0x11a8
+// Size: 0x11b0
 class C_MolotovProjectile : public C_BaseCSGrenadeProjectile
 {
 public:
 	// MNetworkEnable
-	bool m_bIsIncGrenade; // 0x1180	
+	bool m_bIsIncGrenade; // 0x1188	
 };
 
 // Alignment: 1
-// Size: 0x11a8
+// Size: 0x11b0
 class C_DecoyProjectile : public C_BaseCSGrenadeProjectile
 {
+private:
+	[[maybe_unused]] uint8_t __pad1188[0x20]; // 0x1188
 public:
-	GameTime_t m_flTimeParticleEffectSpawn; // 0x11a0	
+	GameTime_t m_flTimeParticleEffectSpawn; // 0x11a8	
 };
 
 // Alignment: 8
-// Size: 0x1310
+// Size: 0x1328
 class C_SmokeGrenadeProjectile : public C_BaseCSGrenadeProjectile
 {
+private:
+	[[maybe_unused]] uint8_t __pad1188[0x8]; // 0x1188
 public:
 	// MNetworkEnable
-	int32_t m_nSmokeEffectTickBegin; // 0x1188	
+	int32_t m_nSmokeEffectTickBegin; // 0x1190	
 	// MNetworkEnable
-	bool m_bDidSmokeEffect; // 0x118c	
+	bool m_bDidSmokeEffect; // 0x1194	
 private:
-	[[maybe_unused]] uint8_t __pad118d[0x3]; // 0x118d
+	[[maybe_unused]] uint8_t __pad1195[0x3]; // 0x1195
 public:
 	// MNetworkEnable
-	int32_t m_nRandomSeed; // 0x1190	
+	int32_t m_nRandomSeed; // 0x1198	
 	// MNetworkEnable
-	Vector m_vSmokeColor; // 0x1194	
+	Vector m_vSmokeColor; // 0x119c	
 	// MNetworkEnable
-	Vector m_vSmokeDetonationPos; // 0x11a0	
+	Vector m_vSmokeDetonationPos; // 0x11a8	
 private:
-	[[maybe_unused]] uint8_t __pad11ac[0x4]; // 0x11ac
+	[[maybe_unused]] uint8_t __pad11b4[0x4]; // 0x11b4
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnSimulationChanged"
-	CUtlVector< uint8 > m_VoxelFrameData; // 0x11b0	
-	bool m_bSmokeVolumeDataReceived; // 0x11c8	
-	bool m_bSmokeEffectSpawned; // 0x11c9	
+	CUtlVector< uint8 > m_VoxelFrameData; // 0x11b8	
+	bool m_bSmokeVolumeDataReceived; // 0x11d0	
+	bool m_bSmokeEffectSpawned; // 0x11d1	
 };
 
-// Alignment: 8
-// Size: 0x1990
+// Alignment: 9
+// Size: 0x19b0
 class C_BaseCSGrenade : public C_WeaponCSBase
 {
-public:
-	// MNetworkEnable
-	bool m_bRedraw; // 0x1970	
-	// MNetworkEnable
-	bool m_bIsHeldByPlayer; // 0x1971	
-	// MNetworkEnable
-	bool m_bPinPulled; // 0x1972	
 private:
-	[[maybe_unused]] uint8_t __pad1973[0x1]; // 0x1973
+	[[maybe_unused]] uint8_t __pad1970[0x20]; // 0x1970
 public:
 	// MNetworkEnable
-	EGrenadeThrowState m_eThrowStatus; // 0x1974	
+	bool m_bRedraw; // 0x1990	
 	// MNetworkEnable
-	GameTime_t m_fThrowTime; // 0x1978	
+	bool m_bIsHeldByPlayer; // 0x1991	
 	// MNetworkEnable
-	float m_flThrowStrength; // 0x197c	
+	bool m_bPinPulled; // 0x1992	
 	// MNetworkEnable
-	float m_flThrowStrengthApproach; // 0x1980	
+	bool m_bJumpThrow; // 0x1993	
 	// MNetworkEnable
-	GameTime_t m_fDropTime; // 0x1984	
+	EGrenadeThrowState m_eThrowStatus; // 0x1994	
+	// MNetworkEnable
+	GameTime_t m_fThrowTime; // 0x1998	
+	// MNetworkEnable
+	float m_flThrowStrength; // 0x199c	
+	// MNetworkEnable
+	float m_flThrowStrengthApproach; // 0x19a0	
+	// MNetworkEnable
+	GameTime_t m_fDropTime; // 0x19a4	
 };
 
 // Alignment: 2
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponBaseItem : public C_WeaponCSBase
 {
 public:
 	// MNetworkEnable
-	CountdownTimer m_SequenceCompleteTimer; // 0x1950	
+	CountdownTimer m_SequenceCompleteTimer; // 0x1970	
 	// MNetworkEnable
-	bool m_bRedraw; // 0x1968	
+	bool m_bRedraw; // 0x1988	
 };
 
 // Alignment: 2
-// Size: 0x1700
+// Size: 0x1708
 class C_ItemDogtags : public C_Item
 {
 public:
 	// MNetworkEnable
-	CHandle< C_CSPlayerPawnBase > m_OwningPlayer; // 0x16f8	
+	CHandle< C_CSPlayerPawnBase > m_OwningPlayer; // 0x1700	
 	// MNetworkEnable
-	CHandle< C_CSPlayerPawnBase > m_KillingPlayer; // 0x16fc	
+	CHandle< C_CSPlayerPawnBase > m_KillingPlayer; // 0x1704	
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_Item_Healthshot : public C_WeaponBaseItem
 {
 public:
@@ -9346,79 +9750,81 @@ public:
 };
 
 // Alignment: 2
-// Size: 0x1960
+// Size: 0x1980
 class C_Fists : public C_WeaponCSBase
 {
 public:
 	// MNetworkEnable
-	bool m_bPlayingUninterruptableAct; // 0x1950	
+	bool m_bPlayingUninterruptableAct; // 0x1970	
 private:
-	[[maybe_unused]] uint8_t __pad1951[0x3]; // 0x1951
+	[[maybe_unused]] uint8_t __pad1971[0x3]; // 0x1971
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnUninterruptChanged"
-	PlayerAnimEvent_t m_nUninterruptableActivity; // 0x1954	
+	PlayerAnimEvent_t m_nUninterruptableActivity; // 0x1974	
 };
 
 // Alignment: 27
-// Size: 0x20b0
+// Size: 0x20d0
 class C_Tablet : public C_WeaponCSBase
 {
-public:
-	// MNetworkEnable
-	GameTime_t m_flUpgradeExpirationTime[4]; // 0x1958	
-	// MNetworkEnable
-	int32_t m_vecLocalHexFlags[42]; // 0x1968	
-	// MNetworkEnable
-	int32_t m_nContractKillGridIndex; // 0x1a10	
-	// MNetworkEnable
-	int32_t m_nContractKillGridHighResIndex; // 0x1a14	
-	// MNetworkEnable
-	bool m_bTabletReceptionIsBlocked; // 0x1a18	
 private:
-	[[maybe_unused]] uint8_t __pad1a19[0x3]; // 0x1a19
+	[[maybe_unused]] uint8_t __pad1970[0x8]; // 0x1970
 public:
 	// MNetworkEnable
-	float m_flScanProgress; // 0x1a1c	
+	GameTime_t m_flUpgradeExpirationTime[4]; // 0x1978	
 	// MNetworkEnable
-	GameTime_t m_flBootTime; // 0x1a20	
+	int32_t m_vecLocalHexFlags[42]; // 0x1988	
 	// MNetworkEnable
-	GameTime_t m_flShowMapTime; // 0x1a24	
+	int32_t m_nContractKillGridIndex; // 0x1a30	
 	// MNetworkEnable
-	Vector m_vecNearestMetalCratePos; // 0x1a28	
+	int32_t m_nContractKillGridHighResIndex; // 0x1a34	
 	// MNetworkEnable
-	tablet_skin_state_t m_skinState; // 0x1a34	
+	bool m_bTabletReceptionIsBlocked; // 0x1a38	
 private:
-	[[maybe_unused]] uint8_t __pad1a35[0x3]; // 0x1a35
+	[[maybe_unused]] uint8_t __pad1a39[0x3]; // 0x1a39
 public:
 	// MNetworkEnable
-	int32_t m_vecNotificationIds[8]; // 0x1a38	
+	float m_flScanProgress; // 0x1a3c	
 	// MNetworkEnable
-	GameTime_t m_vecNotificationTimestamps[8]; // 0x1a58	
+	GameTime_t m_flBootTime; // 0x1a40	
 	// MNetworkEnable
-	int32_t m_nLastPurchaseIndex; // 0x1a78	
+	GameTime_t m_flShowMapTime; // 0x1a44	
 	// MNetworkEnable
-	Vector m_vecPlayerPositionHistory[24]; // 0x1a7c	
-	int32_t m_vecLocalHexFlagsClientCopy[42]; // 0x1b9c	
-	GameTime_t m_vecLastHexPlayerOccupancyChange[42][6]; // 0x1c44	
+	Vector m_vecNearestMetalCratePos; // 0x1a48	
+	// MNetworkEnable
+	tablet_skin_state_t m_skinState; // 0x1a54	
 private:
-	[[maybe_unused]] uint8_t __pad2034[0x34]; // 0x2034
+	[[maybe_unused]] uint8_t __pad1a55[0x3]; // 0x1a55
 public:
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_radarMaterial; // 0x2068	
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_buildingMaterial; // 0x2070	
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hZoneOverlayMaterial; // 0x2078	
-	float m_flNoiseFadeAlpha; // 0x2080	
-	Color m_WorkingColor; // 0x2084	
-	Vector m_vecLastCameraPos; // 0x2088	
-	QAngle m_angLastCameraAng; // 0x2094	
-	int32_t m_nDrawElementCount; // 0x20a0	
-	float m_flPrevScanProgress; // 0x20a4	
-	int32_t m_nRenderTargetRes; // 0x20a8	
-	float m_flLastClosePoseParamVal; // 0x20ac	
+	// MNetworkEnable
+	int32_t m_vecNotificationIds[8]; // 0x1a58	
+	// MNetworkEnable
+	GameTime_t m_vecNotificationTimestamps[8]; // 0x1a78	
+	// MNetworkEnable
+	int32_t m_nLastPurchaseIndex; // 0x1a98	
+	// MNetworkEnable
+	Vector m_vecPlayerPositionHistory[24]; // 0x1a9c	
+	int32_t m_vecLocalHexFlagsClientCopy[42]; // 0x1bbc	
+	GameTime_t m_vecLastHexPlayerOccupancyChange[42][6]; // 0x1c64	
+private:
+	[[maybe_unused]] uint8_t __pad2054[0x34]; // 0x2054
+public:
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_radarMaterial; // 0x2088	
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_buildingMaterial; // 0x2090	
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hZoneOverlayMaterial; // 0x2098	
+	float m_flNoiseFadeAlpha; // 0x20a0	
+	Color m_WorkingColor; // 0x20a4	
+	Vector m_vecLastCameraPos; // 0x20a8	
+	QAngle m_angLastCameraAng; // 0x20b4	
+	int32_t m_nDrawElementCount; // 0x20c0	
+	float m_flPrevScanProgress; // 0x20c4	
+	int32_t m_nRenderTargetRes; // 0x20c8	
+	float m_flLastClosePoseParamVal; // 0x20cc	
 };
 
 // Alignment: 0
-// Size: 0x1960
+// Size: 0x1980
 class C_BreachCharge : public C_WeaponCSBase
 {
 public:
@@ -9426,7 +9832,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1950
+// Size: 0x1970
 class C_BumpMine : public C_WeaponCSBase
 {
 public:
@@ -9434,7 +9840,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1990
+// Size: 0x19b0
 class C_TripWireFire : public C_BaseCSGrenade
 {
 public:
@@ -9442,7 +9848,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0xf88
+// Size: 0xf98
 class C_PlantedC4Survival : public C_PlantedC4
 {
 public:
@@ -9450,559 +9856,596 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1990
+// Size: 0x19b0
 class C_SensorGrenade : public C_BaseCSGrenade
 {
 public:
 	// No members available
 };
 
-// Alignment: 184
-// Size: 0x1828
+// Alignment: 185
+// Size: 0x1870
 class C_CSPlayerPawnBase : public C_BasePlayerPawn
 {
+private:
+	[[maybe_unused]] uint8_t __pad12d0[0x18]; // 0x12d0
 public:
 	// MNetworkEnable
-	CCSPlayer_ActionTrackingServices* m_pActionTrackingServices; // 0x1298	
+	CCSPlayer_ActionTrackingServices* m_pActionTrackingServices; // 0x12e8	
 	// MNetworkEnable
-	CCSPlayer_PingServices* m_pPingServices; // 0x12a0	
+	CCSPlayer_PingServices* m_pPingServices; // 0x12f0	
 	// MNetworkEnable
-	CCSPlayer_ViewModelServices* m_pViewModelServices; // 0x12a8	
-	float m_fRenderingClipPlane[4]; // 0x12b0	
-	int32_t m_nLastClipPlaneSetupFrame; // 0x12c0	
-	Vector m_vecLastClipCameraPos; // 0x12c4	
-	Vector m_vecLastClipCameraForward; // 0x12d0	
-	bool m_bClipHitStaticWorld; // 0x12dc	
-	bool m_bCachedPlaneIsValid; // 0x12dd	
+	CCSPlayer_ViewModelServices* m_pViewModelServices; // 0x12f8	
+	float m_fRenderingClipPlane[4]; // 0x1300	
+	int32_t m_nLastClipPlaneSetupFrame; // 0x1310	
+	Vector m_vecLastClipCameraPos; // 0x1314	
+	Vector m_vecLastClipCameraForward; // 0x1320	
+	bool m_bClipHitStaticWorld; // 0x132c	
+	bool m_bCachedPlaneIsValid; // 0x132d	
 private:
-	[[maybe_unused]] uint8_t __pad12de[0x2]; // 0x12de
+	[[maybe_unused]] uint8_t __pad132e[0x2]; // 0x132e
 public:
-	C_WeaponCSBase* m_pClippingWeapon; // 0x12e0	
+	C_WeaponCSBase* m_pClippingWeapon; // 0x1330	
 	// MNetworkEnable
-	bool m_bHasFemaleVoice; // 0x12e8	
+	bool m_bHasFemaleVoice; // 0x1338	
 private:
-	[[maybe_unused]] uint8_t __pad12e9[0x3]; // 0x12e9
+	[[maybe_unused]] uint8_t __pad1339[0x3]; // 0x1339
 public:
-	CSPlayerState m_previousPlayerState; // 0x12ec	
-	float m_flLastCollisionCeiling; // 0x12f0	
-	float m_flLastCollisionCeilingChangeTime; // 0x12f4	
+	CSPlayerState m_previousPlayerState; // 0x133c	
+	float m_flLastCollisionCeiling; // 0x1340	
+	float m_flLastCollisionCeilingChangeTime; // 0x1344	
 private:
-	[[maybe_unused]] uint8_t __pad12f8[0x58]; // 0x12f8
+	[[maybe_unused]] uint8_t __pad1348[0x18]; // 0x1348
 public:
-	bool m_bInLanding; // 0x1350	
+	bool m_bInLanding; // 0x1360	
 private:
-	[[maybe_unused]] uint8_t __pad1351[0x3]; // 0x1351
+	[[maybe_unused]] uint8_t __pad1361[0x3]; // 0x1361
 public:
-	float m_flLandingTime; // 0x1354	
-	GameTime_t m_grenadeParameterStashTime; // 0x1358	
-	bool m_bGrenadeParametersStashed; // 0x135c	
+	float m_flLandingTime; // 0x1364	
+	GameTime_t m_grenadeParameterStashTime; // 0x1368	
+	bool m_bGrenadeParametersStashed; // 0x136c	
 private:
-	[[maybe_unused]] uint8_t __pad135d[0x3]; // 0x135d
+	[[maybe_unused]] uint8_t __pad136d[0x3]; // 0x136d
 public:
-	QAngle m_angStashedShootAngles; // 0x1360	
-	Vector m_vecStashedGrenadeThrowPosition; // 0x136c	
-	Vector m_vecStashedVelocity; // 0x1378	
-	QAngle m_angShootAngleHistory[2]; // 0x1384	
-	Vector m_vecThrowPositionHistory[2]; // 0x139c	
-	Vector m_vecVelocityHistory[2]; // 0x13b4	
+	QAngle m_angStashedShootAngles; // 0x1370	
+	Vector m_vecStashedGrenadeThrowPosition; // 0x137c	
+	Vector m_vecStashedVelocity; // 0x1388	
+	QAngle m_angShootAngleHistory[2]; // 0x1394	
+	Vector m_vecThrowPositionHistory[2]; // 0x13ac	
+	Vector m_vecVelocityHistory[2]; // 0x13c4	
 private:
-	[[maybe_unused]] uint8_t __pad13cc[0x4]; // 0x13cc
+	[[maybe_unused]] uint8_t __pad13dc[0x4]; // 0x13dc
 public:
 	// MNetworkEnable
 	// MNetworkEncoder
 	// MNetworkChangeCallback "OnThirdPersonHeadingChanged"
 	// MNetworkPriority "32"
-	QAngle m_thirdPersonHeading; // 0x13d0	
-private:
-	[[maybe_unused]] uint8_t __pad13dc[0xc]; // 0x13dc
-public:
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnSlopeDropOffsetChanged"
-	// MNetworkPriority "32"
-	float m_flSlopeDropOffset; // 0x13e8	
+	QAngle m_thirdPersonHeading; // 0x13e0	
 private:
 	[[maybe_unused]] uint8_t __pad13ec[0xc]; // 0x13ec
 public:
 	// MNetworkEnable
-	// MNetworkChangeCallback "OnSlopeDropHeightChanged"
+	// MNetworkChangeCallback "OnSlopeDropOffsetChanged"
 	// MNetworkPriority "32"
-	float m_flSlopeDropHeight; // 0x13f8	
+	float m_flSlopeDropOffset; // 0x13f8	
 private:
 	[[maybe_unused]] uint8_t __pad13fc[0xc]; // 0x13fc
 public:
 	// MNetworkEnable
+	// MNetworkChangeCallback "OnSlopeDropHeightChanged"
+	// MNetworkPriority "32"
+	float m_flSlopeDropHeight; // 0x1408	
+private:
+	[[maybe_unused]] uint8_t __pad140c[0xc]; // 0x140c
+public:
+	// MNetworkEnable
 	// MNetworkChangeCallback "OnHeadConstraintChanged"
 	// MNetworkPriority "32"
-	Vector m_vHeadConstraintOffset; // 0x1408	
+	Vector m_vHeadConstraintOffset; // 0x1418	
 private:
-	[[maybe_unused]] uint8_t __pad1414[0xc]; // 0x1414
-public:
-	bool m_bClientTransparentImmunityAlphaEffectEnabled; // 0x1420	
-	bool m_bClientDeferDrawToImmunityAlphaPass; // 0x1421	
-	// MNetworkEnable
-	bool m_bIsScoped; // 0x1422	
-	// MNetworkEnable
-	bool m_bIsWalking; // 0x1423	
-	// MNetworkEnable
-	bool m_bResumeZoom; // 0x1424	
-private:
-	[[maybe_unused]] uint8_t __pad1425[0x3]; // 0x1425
+	[[maybe_unused]] uint8_t __pad1424[0xc]; // 0x1424
 public:
 	// MNetworkEnable
-	CSPlayerState m_iPlayerState; // 0x1428	
+	bool m_bIsScoped; // 0x1430	
 	// MNetworkEnable
-	bool m_bIsDefusing; // 0x142c	
+	bool m_bIsWalking; // 0x1431	
 	// MNetworkEnable
-	bool m_bIsGrabbingHostage; // 0x142d	
+	bool m_bResumeZoom; // 0x1432	
 private:
-	[[maybe_unused]] uint8_t __pad142e[0x2]; // 0x142e
+	[[maybe_unused]] uint8_t __pad1433[0x1]; // 0x1433
 public:
 	// MNetworkEnable
-	CSPlayerBlockingUseAction_t m_iBlockingUseActionInProgress; // 0x1430	
+	CSPlayerState m_iPlayerState; // 0x1434	
 	// MNetworkEnable
-	bool m_bIsRescuing; // 0x1434	
+	bool m_bIsDefusing; // 0x1438	
+	// MNetworkEnable
+	bool m_bIsGrabbingHostage; // 0x1439	
 private:
-	[[maybe_unused]] uint8_t __pad1435[0x3]; // 0x1435
+	[[maybe_unused]] uint8_t __pad143a[0x2]; // 0x143a
 public:
 	// MNetworkEnable
-	GameTime_t m_fImmuneToGunGameDamageTime; // 0x1438	
-	GameTime_t m_fImmuneToGunGameDamageTimeLast; // 0x143c	
+	CSPlayerBlockingUseAction_t m_iBlockingUseActionInProgress; // 0x143c	
 	// MNetworkEnable
-	bool m_bGunGameImmunity; // 0x1440	
-	// MNetworkEnable
-	bool m_bHasMovedSinceSpawn; // 0x1441	
-	// MNetworkEnable
-	bool m_bMadeFinalGunGameProgressiveKill; // 0x1442	
+	bool m_bIsRescuing; // 0x1440	
 private:
-	[[maybe_unused]] uint8_t __pad1443[0x1]; // 0x1443
+	[[maybe_unused]] uint8_t __pad1441[0x3]; // 0x1441
 public:
 	// MNetworkEnable
-	int32_t m_iGunGameProgressiveWeaponIndex; // 0x1444	
+	GameTime_t m_fImmuneToGunGameDamageTime; // 0x1444	
+	GameTime_t m_fImmuneToGunGameDamageTimeLast; // 0x1448	
 	// MNetworkEnable
-	int32_t m_iNumGunGameTRKillPoints; // 0x1448	
+	bool m_bGunGameImmunity; // 0x144c	
 	// MNetworkEnable
-	int32_t m_iNumGunGameKillsWithCurrentWeapon; // 0x144c	
+	bool m_bHasMovedSinceSpawn; // 0x144d	
 	// MNetworkEnable
-	uint32_t m_unTotalRoundDamageDealt; // 0x1450	
-	// MNetworkEnable
-	float m_fMolotovUseTime; // 0x1454	
-	// MNetworkEnable
-	float m_fMolotovDamageTime; // 0x1458	
-	// MNetworkEnable
-	bool m_bInBombZone; // 0x145c	
+	bool m_bMadeFinalGunGameProgressiveKill; // 0x144e	
 private:
-	[[maybe_unused]] uint8_t __pad145d[0x3]; // 0x145d
+	[[maybe_unused]] uint8_t __pad144f[0x1]; // 0x144f
 public:
 	// MNetworkEnable
-	int32_t m_nWhichBombZone; // 0x1460	
+	int32_t m_iGunGameProgressiveWeaponIndex; // 0x1450	
 	// MNetworkEnable
-	bool m_bInBuyZone; // 0x1464	
+	int32_t m_iNumGunGameTRKillPoints; // 0x1454	
 	// MNetworkEnable
-	bool m_bInNoDefuseArea; // 0x1465	
+	int32_t m_iNumGunGameKillsWithCurrentWeapon; // 0x1458	
+	// MNetworkEnable
+	uint32_t m_unTotalRoundDamageDealt; // 0x145c	
+	// MNetworkEnable
+	float m_fMolotovUseTime; // 0x1460	
+	// MNetworkEnable
+	float m_fMolotovDamageTime; // 0x1464	
+	// MNetworkEnable
+	bool m_bInBombZone; // 0x1468	
 private:
-	[[maybe_unused]] uint8_t __pad1466[0x2]; // 0x1466
+	[[maybe_unused]] uint8_t __pad1469[0x3]; // 0x1469
 public:
 	// MNetworkEnable
-	int32_t m_iThrowGrenadeCounter; // 0x1468	
+	int32_t m_nWhichBombZone; // 0x146c	
 	// MNetworkEnable
-	bool m_bWaitForNoAttack; // 0x146c	
+	bool m_bInBuyZone; // 0x1470	
 	// MNetworkEnable
-	bool m_bIsRespawningForDMBonus; // 0x146d	
+	bool m_bInNoDefuseArea; // 0x1471	
 private:
-	[[maybe_unused]] uint8_t __pad146e[0x2]; // 0x146e
+	[[maybe_unused]] uint8_t __pad1472[0x2]; // 0x1472
 public:
 	// MNetworkEnable
-	float m_flGuardianTooFarDistFrac; // 0x1470	
+	int32_t m_iThrowGrenadeCounter; // 0x1474	
 	// MNetworkEnable
-	GameTime_t m_flDetectedByEnemySensorTime; // 0x1474	
-	float m_flNextGuardianTooFarWarning; // 0x1478	
-	bool m_bSuppressGuardianTooFarWarningAudio; // 0x147c	
-	// MNetworkEnable
-	bool m_bKilledByTaser; // 0x147d	
+	bool m_bWaitForNoAttack; // 0x1478	
 private:
-	[[maybe_unused]] uint8_t __pad147e[0x2]; // 0x147e
+	[[maybe_unused]] uint8_t __pad1479[0x3]; // 0x1479
 public:
 	// MNetworkEnable
-	int32_t m_iMoveState; // 0x1480	
+	float m_flGuardianTooFarDistFrac; // 0x147c	
 	// MNetworkEnable
-	bool m_bCanMoveDuringFreezePeriod; // 0x1484	
+	GameTime_t m_flDetectedByEnemySensorTime; // 0x1480	
+	float m_flNextGuardianTooFarWarning; // 0x1484	
+	bool m_bSuppressGuardianTooFarWarningAudio; // 0x1488	
 	// MNetworkEnable
-	bool m_isCurrentGunGameLeader; // 0x1485	
-	// MNetworkEnable
-	bool m_isCurrentGunGameTeamLeader; // 0x1486	
+	bool m_bKilledByTaser; // 0x1489	
 private:
-	[[maybe_unused]] uint8_t __pad1487[0x1]; // 0x1487
+	[[maybe_unused]] uint8_t __pad148a[0x2]; // 0x148a
 public:
 	// MNetworkEnable
-	float m_flLowerBodyYawTarget; // 0x1488	
+	int32_t m_iMoveState; // 0x148c	
 	// MNetworkEnable
-	bool m_bStrafing; // 0x148c	
+	bool m_bCanMoveDuringFreezePeriod; // 0x1490	
 	// MNetworkEnable
-	char m_szLastPlaceName[18]; // 0x148d	
+	bool m_isCurrentGunGameLeader; // 0x1491	
+	// MNetworkEnable
+	bool m_isCurrentGunGameTeamLeader; // 0x1492	
 private:
-	[[maybe_unused]] uint8_t __pad149f[0x1]; // 0x149f
+	[[maybe_unused]] uint8_t __pad1493[0x1]; // 0x1493
 public:
-	GameTime_t m_flLastSpawnTimeIndex; // 0x14a0	
 	// MNetworkEnable
-	GameTime_t m_flEmitSoundTime; // 0x14a4	
+	float m_flLowerBodyYawTarget; // 0x1494	
 	// MNetworkEnable
-	int32_t m_iAddonBits; // 0x14a8	
+	bool m_bStrafing; // 0x1498	
 	// MNetworkEnable
-	int32_t m_iPrimaryAddon; // 0x14ac	
+	char m_szLastPlaceName[18]; // 0x1499	
+private:
+	[[maybe_unused]] uint8_t __pad14ab[0x1]; // 0x14ab
+public:
+	GameTime_t m_flLastSpawnTimeIndex; // 0x14ac	
 	// MNetworkEnable
-	int32_t m_iSecondaryAddon; // 0x14b0	
+	GameTime_t m_flEmitSoundTime; // 0x14b0	
 	// MNetworkEnable
-	int32_t m_iProgressBarDuration; // 0x14b4	
+	int32_t m_iAddonBits; // 0x14b4	
 	// MNetworkEnable
-	float m_flProgressBarStartTime; // 0x14b8	
+	int32_t m_iPrimaryAddon; // 0x14b8	
 	// MNetworkEnable
-	float m_flStamina; // 0x14bc	
+	int32_t m_iSecondaryAddon; // 0x14bc	
 	// MNetworkEnable
-	int32_t m_iDirection; // 0x14c0	
+	int32_t m_iProgressBarDuration; // 0x14c0	
 	// MNetworkEnable
-	int32_t m_iShotsFired; // 0x14c4	
+	float m_flProgressBarStartTime; // 0x14c4	
+	// MNetworkEnable
+	float m_flStamina; // 0x14c8	
+	// MNetworkEnable
+	int32_t m_iDirection; // 0x14cc	
+	// MNetworkEnable
+	int32_t m_iShotsFired; // 0x14d0	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnNightVisionChanged"
-	bool m_bNightVisionOn; // 0x14c8	
+	bool m_bNightVisionOn; // 0x14d4	
 	// MNetworkEnable
-	bool m_bHasNightVision; // 0x14c9	
+	bool m_bHasNightVision; // 0x14d5	
 private:
-	[[maybe_unused]] uint8_t __pad14ca[0x2]; // 0x14ca
+	[[maybe_unused]] uint8_t __pad14d6[0x2]; // 0x14d6
 public:
 	// MNetworkEnable
-	float m_flVelocityModifier; // 0x14cc	
+	float m_flVelocityModifier; // 0x14d8	
 	// MNetworkEnable
-	int32_t m_iStartAccount; // 0x14d0	
+	float m_flHitHeading; // 0x14dc	
 	// MNetworkEnable
-	bool m_bIsSpawnRappelling; // 0x14d4	
+	int32_t m_nHitBodyPart; // 0x14e0	
+	// MNetworkEnable
+	int32_t m_iStartAccount; // 0x14e4	
+	// MNetworkEnable
+	bool m_bIsSpawnRappelling; // 0x14e8	
 private:
-	[[maybe_unused]] uint8_t __pad14d5[0x3]; // 0x14d5
+	[[maybe_unused]] uint8_t __pad14e9[0x3]; // 0x14e9
 public:
 	// MNetworkEnable
-	Vector m_vecSpawnRappellingRopeOrigin; // 0x14d8	
-	float m_flSpawnRappellingFadeOutForClientViewOffset; // 0x14e4	
+	Vector m_vecSpawnRappellingRopeOrigin; // 0x14ec	
+	float m_flSpawnRappellingFadeOutForClientViewOffset; // 0x14f8	
 	// MNetworkEnable
-	int32_t m_nSurvivalTeam; // 0x14e8	
+	int32_t m_nSurvivalTeam; // 0x14fc	
 	// MNetworkEnable
-	CHandle< C_CSPlayerPawnBase > m_hSurvivalAssassinationTarget; // 0x14ec	
+	CHandle< C_CSPlayerPawnBase > m_hSurvivalAssassinationTarget; // 0x1500	
 	// MNetworkEnable
-	float m_flHealthShotBoostExpirationTime; // 0x14f0	
-	float m_flLastKnownParachuteScreenEffectAmount; // 0x14f4	
-	Vector m_vecIntroStartEyePosition; // 0x14f8	
-	Vector m_vecIntroStartPlayerForward; // 0x1504	
-	float m_flClientDeathTime; // 0x1510	
+	float m_flHealthShotBoostExpirationTime; // 0x1504	
+	float m_flLastKnownParachuteScreenEffectAmount; // 0x1508	
+	Vector m_vecIntroStartEyePosition; // 0x150c	
+	Vector m_vecIntroStartPlayerForward; // 0x1518	
+	GameTime_t m_flClientDeathTime; // 0x1524	
 private:
-	[[maybe_unused]] uint8_t __pad1514[0x8]; // 0x1514
+	[[maybe_unused]] uint8_t __pad1528[0x8]; // 0x1528
 public:
-	float m_flNightVisionAlpha; // 0x151c	
-	bool m_bScreenTearFrameCaptured; // 0x1520	
+	float m_flNightVisionAlpha; // 0x1530	
+	bool m_bScreenTearFrameCaptured; // 0x1534	
 private:
-	[[maybe_unused]] uint8_t __pad1521[0x3]; // 0x1521
+	[[maybe_unused]] uint8_t __pad1535[0x3]; // 0x1535
 public:
-	float m_flFlashBangTime; // 0x1524	
-	float m_flFlashScreenshotAlpha; // 0x1528	
-	float m_flFlashOverlayAlpha; // 0x152c	
-	bool m_bFlashBuildUp; // 0x1530	
-	bool m_bFlashDspHasBeenCleared; // 0x1531	
-	bool m_bFlashScreenshotHasBeenGrabbed; // 0x1532	
+	float m_flFlashBangTime; // 0x1538	
+	float m_flFlashScreenshotAlpha; // 0x153c	
+	float m_flFlashOverlayAlpha; // 0x1540	
+	bool m_bFlashBuildUp; // 0x1544	
+	bool m_bFlashDspHasBeenCleared; // 0x1545	
+	bool m_bFlashScreenshotHasBeenGrabbed; // 0x1546	
 private:
-	[[maybe_unused]] uint8_t __pad1533[0x1]; // 0x1533
+	[[maybe_unused]] uint8_t __pad1547[0x1]; // 0x1547
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnFlashMaxAlphaChanged"
-	float m_flFlashMaxAlpha; // 0x1534	
+	float m_flFlashMaxAlpha; // 0x1548	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnFlashDurationChanged"
-	float m_flFlashDuration; // 0x1538	
-	float m_flLastFiredWeaponTime; // 0x153c	
-	Vector m_lastStandingPos; // 0x1540	
-	Vector m_vecLastMuzzleFlashPos; // 0x154c	
-	QAngle m_angLastMuzzleFlashAngle; // 0x1558	
-	CHandle< C_BaseEntity > m_hMuzzleFlashShape; // 0x1564	
-	int32_t m_iHealthBarRenderMaskIndex; // 0x1568	
-	float m_flHealthFadeValue; // 0x156c	
-	float m_flHealthFadeAlpha; // 0x1570	
-	int32_t m_nMyCollisionGroup; // 0x1574	
-	float m_ignoreLadderJumpTime; // 0x1578	
+	float m_flFlashDuration; // 0x154c	
+	float m_flLastFiredWeaponTime; // 0x1550	
+	Vector m_lastStandingPos; // 0x1554	
+	Vector m_vecLastMuzzleFlashPos; // 0x1560	
+	QAngle m_angLastMuzzleFlashAngle; // 0x156c	
+	CHandle< C_BaseEntity > m_hMuzzleFlashShape; // 0x1578	
+	int32_t m_iHealthBarRenderMaskIndex; // 0x157c	
+	float m_flHealthFadeValue; // 0x1580	
+	float m_flHealthFadeAlpha; // 0x1584	
+	int32_t m_nMyCollisionGroup; // 0x1588	
+	float m_ignoreLadderJumpTime; // 0x158c	
+	CountdownTimer m_ladderSurpressionTimer; // 0x1590	
+	Vector m_lastLadderNormal; // 0x15a8	
+	Vector m_lastLadderPos; // 0x15b4	
 private:
-	[[maybe_unused]] uint8_t __pad157c[0x4]; // 0x157c
+	[[maybe_unused]] uint8_t __pad15c0[0x8]; // 0x15c0
 public:
-	CountdownTimer m_ladderSurpressionTimer; // 0x1580	
-	Vector m_lastLadderNormal; // 0x1598	
-	Vector m_lastLadderPos; // 0x15a4	
+	float m_flDeathCCWeight; // 0x15c8	
+	bool m_bOldIsScoped; // 0x15cc	
 private:
-	[[maybe_unused]] uint8_t __pad15b0[0x8]; // 0x15b0
+	[[maybe_unused]] uint8_t __pad15cd[0x3]; // 0x15cd
 public:
-	float m_flDeathCCWeight; // 0x15b8	
-	bool m_bOldIsScoped; // 0x15bc	
+	float m_flPrevRoundEndTime; // 0x15d0	
+	float m_flPrevMatchEndTime; // 0x15d4	
+	// MNetworkEnable
+	uint16_t m_unCurrentEquipmentValue; // 0x15d8	
+	// MNetworkEnable
+	uint16_t m_unRoundStartEquipmentValue; // 0x15da	
+	// MNetworkEnable
+	uint16_t m_unFreezetimeEndEquipmentValue; // 0x15dc	
+	// MNetworkEnable
+	bool m_passiveItems[4]; // 0x15de	
 private:
-	[[maybe_unused]] uint8_t __pad15bd[0x3]; // 0x15bd
+	[[maybe_unused]] uint8_t __pad15e2[0x2]; // 0x15e2
 public:
-	float m_flPrevRoundEndTime; // 0x15c0	
-	float m_flPrevMatchEndTime; // 0x15c4	
+	Vector m_vecThirdPersonViewPositionOverride; // 0x15e4	
 	// MNetworkEnable
-	uint16_t m_unCurrentEquipmentValue; // 0x15c8	
+	int32_t m_nHeavyAssaultSuitCooldownRemaining; // 0x15f0	
 	// MNetworkEnable
-	uint16_t m_unRoundStartEquipmentValue; // 0x15ca	
-	// MNetworkEnable
-	uint16_t m_unFreezetimeEndEquipmentValue; // 0x15cc	
-	// MNetworkEnable
-	bool m_passiveItems[4]; // 0x15ce	
-private:
-	[[maybe_unused]] uint8_t __pad15d2[0x2]; // 0x15d2
-public:
-	Vector m_vecThirdPersonViewPositionOverride; // 0x15d4	
-	// MNetworkEnable
-	int32_t m_nHeavyAssaultSuitCooldownRemaining; // 0x15e0	
-	// MNetworkEnable
-	int32_t m_ArmorValue; // 0x15e4	
+	int32_t m_ArmorValue; // 0x15f4	
 	// MNetworkEnable
 	// MNetworkEncoder
 	// MNetworkChangeCallback "playerEyeAnglesChanged"
 	// MNetworkPriority "32"
-	QAngle m_angEyeAngles; // 0x15e8	
+	QAngle m_angEyeAngles; // 0x15f8	
 private:
-	[[maybe_unused]] uint8_t __pad15f4[0xc]; // 0x15f4
+	[[maybe_unused]] uint8_t __pad1604[0xc]; // 0x1604
 public:
 	// MNetworkEnable
-	bool m_bInHostageRescueZone; // 0x1600	
+	bool m_bInHostageRescueZone; // 0x1610	
 private:
-	[[maybe_unused]] uint8_t __pad1601[0x3]; // 0x1601
+	[[maybe_unused]] uint8_t __pad1611[0x3]; // 0x1611
 public:
-	float m_fNextThinkPushAway; // 0x1604	
-	bool m_bShouldAutobuyDMWeapons; // 0x1608	
-	bool m_bShouldAutobuyNow; // 0x1609	
+	float m_fNextThinkPushAway; // 0x1614	
+	bool m_bShouldAutobuyDMWeapons; // 0x1618	
+	bool m_bShouldAutobuyNow; // 0x1619	
 	// MNetworkEnable
-	bool m_bHud_MiniScoreHidden; // 0x160a	
+	bool m_bHud_MiniScoreHidden; // 0x161a	
 	// MNetworkEnable
-	bool m_bHud_RadarHidden; // 0x160b	
+	bool m_bHud_RadarHidden; // 0x161b	
 	// MNetworkEnable
-	CEntityIndex m_nLastKillerIndex; // 0x160c	
+	CEntityIndex m_nLastKillerIndex; // 0x161c	
 	// MNetworkEnable
-	int32_t m_nLastConcurrentKilled; // 0x1610	
+	int32_t m_nLastConcurrentKilled; // 0x1620	
 	// MNetworkEnable
-	int32_t m_nDeathCamMusic; // 0x1614	
-	CEntityIndex m_iIDEntIndex; // 0x1618	
+	int32_t m_nDeathCamMusic; // 0x1624	
+	CEntityIndex m_iIDEntIndex; // 0x1628	
 private:
-	[[maybe_unused]] uint8_t __pad161c[0x4]; // 0x161c
+	[[maybe_unused]] uint8_t __pad162c[0x4]; // 0x162c
 public:
-	CountdownTimer m_delayTargetIDTimer; // 0x1620	
-	CEntityIndex m_iTargetedWeaponEntIndex; // 0x1638	
-	CEntityIndex m_iOldIDEntIndex; // 0x163c	
-	CountdownTimer m_holdTargetIDTimer; // 0x1640	
+	CountdownTimer m_delayTargetIDTimer; // 0x1630	
+	CEntityIndex m_iTargetedWeaponEntIndex; // 0x1648	
+	CEntityIndex m_iOldIDEntIndex; // 0x164c	
+	CountdownTimer m_holdTargetIDTimer; // 0x1650	
 private:
-	[[maybe_unused]] uint8_t __pad1658[0x4c]; // 0x1658
+	[[maybe_unused]] uint8_t __pad1668[0x4c]; // 0x1668
 public:
-	float m_flCurrentMusicStartTime; // 0x16a4	
-	float m_flMusicRoundStartTime; // 0x16a8	
+	float m_flCurrentMusicStartTime; // 0x16b4	
+	float m_flMusicRoundStartTime; // 0x16b8	
+	bool m_bDeferStartMusicOnWarmup; // 0x16bc	
+private:
+	[[maybe_unused]] uint8_t __pad16bd[0x3]; // 0x16bd
+public:
 	// MNetworkEnable
-	int32_t m_cycleLatch; // 0x16ac	
-	float m_serverIntendedCycle; // 0x16b0	
+	int32_t m_cycleLatch; // 0x16c0	
+	float m_serverIntendedCycle; // 0x16c4	
 	// MNetworkEnable
 	// MNetworkChangeCallback "RecvProxy_PatchEconIndices"
-	uint32_t m_vecPlayerPatchEconIndices[5]; // 0x16b4	
+	uint32_t m_vecPlayerPatchEconIndices[5]; // 0x16c8	
 private:
-	[[maybe_unused]] uint8_t __pad16c8[0x8]; // 0x16c8
+	[[maybe_unused]] uint8_t __pad16dc[0x8]; // 0x16dc
 public:
 	// MNetworkEnable
-	bool m_bHideTargetID; // 0x16d0	
+	bool m_bHideTargetID; // 0x16e4	
 private:
-	[[maybe_unused]] uint8_t __pad16d1[0x3]; // 0x16d1
+	[[maybe_unused]] uint8_t __pad16e5[0x3]; // 0x16e5
 public:
-	float m_nextTaserShakeTime; // 0x16d4	
-	float m_firstTaserShakeTime; // 0x16d8	
-	float m_flLastSmokeOverlayAlpha; // 0x16dc	
-	Vector m_vLastSmokeOverlayColor; // 0x16e0	
-	ParticleIndex_t m_nPlayerSmokedFx; // 0x16ec	
-	float m_flNextMagDropTime; // 0x16f0	
-	int32_t m_nLastMagDropAttachmentIndex; // 0x16f4	
-	CUtlVector< C_BulletHitModel* > m_vecBulletHitModels; // 0x16f8	
-	CUtlVector< C_PickUpModelSlerper* > m_vecPickupModelSlerpers; // 0x1710	
-	Vector m_vecLastAliveLocalVelocity; // 0x1728	
-	float m_flLastNearbyItemHighlightCheck; // 0x1734	
-	bool m_bInSurvivalDangerZone; // 0x1738	
-	bool m_bNearDangerZone; // 0x1739	
+	float m_nextTaserShakeTime; // 0x16e8	
+	float m_firstTaserShakeTime; // 0x16ec	
+	float m_flLastSmokeOverlayAlpha; // 0x16f0	
+	Vector m_vLastSmokeOverlayColor; // 0x16f4	
+	ParticleIndex_t m_nPlayerSmokedFx; // 0x1700	
+	float m_flNextMagDropTime; // 0x1704	
+	int32_t m_nLastMagDropAttachmentIndex; // 0x1708	
 private:
-	[[maybe_unused]] uint8_t __pad173a[0x36]; // 0x173a
+	[[maybe_unused]] uint8_t __pad170c[0x4]; // 0x170c
+public:
+	CUtlVector< C_BulletHitModel* > m_vecBulletHitModels; // 0x1710	
+	CUtlVector< C_PickUpModelSlerper* > m_vecPickupModelSlerpers; // 0x1728	
+	Vector m_vecLastAliveLocalVelocity; // 0x1740	
+	float m_flLastNearbyItemHighlightCheck; // 0x174c	
+	bool m_bInSurvivalDangerZone; // 0x1750	
+	bool m_bNearDangerZone; // 0x1751	
+private:
+	[[maybe_unused]] uint8_t __pad1752[0x36]; // 0x1752
 public:
 	// MNetworkEnable
-	EntitySpottedState_t m_entitySpottedState; // 0x1770	
+	EntitySpottedState_t m_entitySpottedState; // 0x1788	
 	// MNetworkEnable
-	float m_flTimeOfLastInjury; // 0x1788	
+	float m_flTimeOfLastInjury; // 0x17a0	
 	// MNetworkEnable
-	RelativeDamagedDirection_t m_nRelativeDirectionOfLastInjury; // 0x178c	
+	RelativeDamagedDirection_t m_nRelativeDirectionOfLastInjury; // 0x17a4	
 	// MNetworkEnable
-	int32_t m_nSurvivalTeamNumber; // 0x1790	
+	int32_t m_nSurvivalTeamNumber; // 0x17a8	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	float m_flNextSprayDecalTime; // 0x1794	
-	bool m_bPreviouslyInBuyZone; // 0x1798	
+	float m_flNextSprayDecalTime; // 0x17ac	
+	bool m_bPreviouslyInBuyZone; // 0x17b0	
 private:
-	[[maybe_unused]] uint8_t __pad1799[0x3]; // 0x1799
+	[[maybe_unused]] uint8_t __pad17b1[0x3]; // 0x17b1
 public:
-	uint32_t m_unPreviousWeaponHash; // 0x179c	
-	uint32_t m_unWeaponHash; // 0x17a0	
-	bool m_bPrevDefuser; // 0x17a4	
-	bool m_bPrevHelmet; // 0x17a5	
+	uint32_t m_unPreviousWeaponHash; // 0x17b4	
+	uint32_t m_unWeaponHash; // 0x17b8	
+	bool m_bPrevDefuser; // 0x17bc	
+	bool m_bPrevHelmet; // 0x17bd	
 private:
-	[[maybe_unused]] uint8_t __pad17a6[0x2]; // 0x17a6
+	[[maybe_unused]] uint8_t __pad17be[0x2]; // 0x17be
 public:
-	int32_t m_nPrevArmorVal; // 0x17a8	
-	bool m_bGuardianShouldSprayCustomXMark; // 0x17ac	
+	int32_t m_nPrevArmorVal; // 0x17c0	
+	int32_t m_nPrevGrenadeAmmoCount; // 0x17c4	
+	bool m_bGuardianShouldSprayCustomXMark; // 0x17c8	
 private:
-	[[maybe_unused]] uint8_t __pad17ad[0x3]; // 0x17ad
-public:
-	// MNetworkEnable
-	// MNetworkEncoder
-	QAngle m_aimPunchAngle; // 0x17b0	
-	// MNetworkEnable
-	// MNetworkEncoder
-	QAngle m_aimPunchAngleVel; // 0x17bc	
-	// MNetworkEnable
-	int32_t m_aimPunchTickBase; // 0x17c8	
-	// MNetworkEnable
-	float m_aimPunchTickFraction; // 0x17cc	
-	CUtlVector< QAngle > m_aimPunchCache; // 0x17d0	
-private:
-	[[maybe_unused]] uint8_t __pad17e8[0x8]; // 0x17e8
-public:
-	float m_flOldFallVelocity; // 0x17f0	
-	bool m_bHasDeathInfo; // 0x17f4	
-private:
-	[[maybe_unused]] uint8_t __pad17f5[0x3]; // 0x17f5
-public:
-	float m_flDeathInfoTime; // 0x17f8	
-	Vector m_vecDeathInfoOrigin; // 0x17fc	
-	// MNetworkEnable
-	bool m_bKilledByHeadshot; // 0x1808	
-private:
-	[[maybe_unused]] uint8_t __pad1809[0x3]; // 0x1809
+	[[maybe_unused]] uint8_t __pad17c9[0x3]; // 0x17c9
 public:
 	// MNetworkEnable
-	CHandle< CCSPlayerController > m_hOriginalController; // 0x180c	
+	// MNetworkBitCount "32"
+	QAngle m_aimPunchAngle; // 0x17cc	
+	// MNetworkEnable
+	// MNetworkBitCount "32"
+	QAngle m_aimPunchAngleVel; // 0x17d8	
+	// MNetworkEnable
+	int32_t m_aimPunchTickBase; // 0x17e4	
+	// MNetworkEnable
+	float m_aimPunchTickFraction; // 0x17e8	
 private:
-	[[maybe_unused]] uint8_t __pad1810[0x10]; // 0x1810
+	[[maybe_unused]] uint8_t __pad17ec[0x4]; // 0x17ec
 public:
-	float m_flLandseconds; // 0x1820	
+	CUtlVector< QAngle > m_aimPunchCache; // 0x17f0	
+private:
+	[[maybe_unused]] uint8_t __pad1808[0x8]; // 0x1808
+public:
+	float m_flOldFallVelocity; // 0x1810	
+	bool m_bHasDeathInfo; // 0x1814	
+private:
+	[[maybe_unused]] uint8_t __pad1815[0x3]; // 0x1815
+public:
+	float m_flDeathInfoTime; // 0x1818	
+	Vector m_vecDeathInfoOrigin; // 0x181c	
+	// MNetworkEnable
+	bool m_bKilledByHeadshot; // 0x1828	
+private:
+	[[maybe_unused]] uint8_t __pad1829[0x3]; // 0x1829
+public:
+	// MNetworkEnable
+	CHandle< CCSPlayerController > m_hOriginalController; // 0x182c	
+private:
+	[[maybe_unused]] uint8_t __pad1830[0x10]; // 0x1830
+public:
+	float m_flLandseconds; // 0x1840	
 };
 
 // Alignment: 1
-// Size: 0x1830
+// Size: 0x1878
 class C_CSObserverPawn : public C_CSPlayerPawnBase
 {
 public:
-	CEntityHandle m_hDetectParentChange; // 0x1828	
+	CEntityHandle m_hDetectParentChange; // 0x1870	
 };
 
-// Alignment: 20
-// Size: 0x1f30
+// Alignment: 22
+// Size: 0x23a0
 class C_CSPlayerPawn : public C_CSPlayerPawnBase
 {
 public:
 	// MNetworkEnable
-	CCSPlayer_BulletServices* m_pBulletServices; // 0x1828	
+	CCSPlayer_BulletServices* m_pBulletServices; // 0x1870	
 	// MNetworkEnable
-	CCSPlayer_HostageServices* m_pHostageServices; // 0x1830	
+	CCSPlayer_HostageServices* m_pHostageServices; // 0x1878	
 	// MNetworkEnable
-	CCSPlayer_GlowServices* m_pGlowServices; // 0x1838	
+	CCSPlayer_BuyServices* m_pBuyServices; // 0x1880	
 	// MNetworkEnable
-	bool m_bIsBuyMenuOpen; // 0x1840	
+	CCSPlayer_GlowServices* m_pGlowServices; // 0x1888	
+	// MNetworkEnable
+	bool m_bIsBuyMenuOpen; // 0x1890	
 private:
-	[[maybe_unused]] uint8_t __pad1841[0xbf]; // 0x1841
+	[[maybe_unused]] uint8_t __pad1891[0xe7]; // 0x1891
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnRetakesOfferingChanged"
-	int32_t m_iRetakesOffering; // 0x1900	
+	int32_t m_iRetakesOffering; // 0x1978	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnRetakesOfferingCardChanged"
-	int32_t m_iRetakesOfferingCard; // 0x1904	
+	int32_t m_iRetakesOfferingCard; // 0x197c	
 	// MNetworkEnable
-	bool m_bRetakesHasDefuseKit; // 0x1908	
+	bool m_bRetakesHasDefuseKit; // 0x1980	
 	// MNetworkEnable
-	bool m_bRetakesMVPLastRound; // 0x1909	
+	bool m_bRetakesMVPLastRound; // 0x1981	
 private:
-	[[maybe_unused]] uint8_t __pad190a[0x2]; // 0x190a
+	[[maybe_unused]] uint8_t __pad1982[0x2]; // 0x1982
 public:
 	// MNetworkEnable
-	int32_t m_iRetakesMVPBoostItem; // 0x190c	
+	int32_t m_iRetakesMVPBoostItem; // 0x1984	
 	// MNetworkEnable
-	loadout_positions_t m_RetakesMVPBoostExtraUtility; // 0x1910	
+	loadout_slot_t m_RetakesMVPBoostExtraUtility; // 0x1988	
 private:
-	[[maybe_unused]] uint8_t __pad1914[0x1c]; // 0x1914
+	[[maybe_unused]] uint8_t __pad198c[0x1c]; // 0x198c
 public:
-	bool m_bNeedToReApplyGloves; // 0x1930	
+	bool m_bNeedToReApplyGloves; // 0x19a8	
 private:
-	[[maybe_unused]] uint8_t __pad1931[0x7]; // 0x1931
-public:
-	// MNetworkEnable
-	C_EconItemView m_EconGloves; // 0x1938	
-	bool m_bMustSyncRagdollState; // 0x1d80	
-private:
-	[[maybe_unused]] uint8_t __pad1d81[0x3]; // 0x1d81
+	[[maybe_unused]] uint8_t __pad19a9[0x7]; // 0x19a9
 public:
 	// MNetworkEnable
-	int32_t m_nRagdollDamageBone; // 0x1d84	
-	// MNetworkEnable
-	Vector m_vRagdollDamageForce; // 0x1d88	
-	// MNetworkEnable
-	Vector m_vRagdollDamagePosition; // 0x1d94	
-	// MNetworkEnable
-	char m_szRagdollDamageWeaponName[64]; // 0x1da0	
-	// MNetworkEnable
-	bool m_bRagdollDamageHeadshot; // 0x1de0	
+	C_EconItemView m_EconGloves; // 0x19b0	
+	bool m_bMustSyncRagdollState; // 0x1df8	
 private:
-	[[maybe_unused]] uint8_t __pad1de1[0x127]; // 0x1de1
-public:
-	bool m_bLastHeadBoneTransformIsValid; // 0x1f08	
-private:
-	[[maybe_unused]] uint8_t __pad1f09[0x1b]; // 0x1f09
+	[[maybe_unused]] uint8_t __pad1df9[0x3]; // 0x1df9
 public:
 	// MNetworkEnable
-	QAngle m_qDeathEyeAngles; // 0x1f24	
+	int32_t m_nRagdollDamageBone; // 0x1dfc	
+	// MNetworkEnable
+	Vector m_vRagdollDamageForce; // 0x1e00	
+	// MNetworkEnable
+	Vector m_vRagdollDamagePosition; // 0x1e0c	
+	// MNetworkEnable
+	char m_szRagdollDamageWeaponName[64]; // 0x1e18	
+	// MNetworkEnable
+	bool m_bRagdollDamageHeadshot; // 0x1e58	
+private:
+	[[maybe_unused]] uint8_t __pad1e59[0x517]; // 0x1e59
+public:
+	bool m_bLastHeadBoneTransformIsValid; // 0x2370	
+private:
+	[[maybe_unused]] uint8_t __pad2371[0x1b]; // 0x2371
+public:
+	// MNetworkEnable
+	QAngle m_qDeathEyeAngles; // 0x238c	
+	bool m_bSkipOneHeadConstraintUpdate; // 0x2398	
 };
 
-// Alignment: 16
-// Size: 0x11c0
+// Alignment: 23
+// Size: 0x1210
 class C_Hostage : public C_BaseCombatCharacter
 {
 public:
 	// MNetworkEnable
-	EntitySpottedState_t m_entitySpottedState; // 0x1138	
+	EntitySpottedState_t m_entitySpottedState; // 0x1140	
 	// MNetworkEnable
-	CHandle< C_BaseEntity > m_leader; // 0x1150	
+	CHandle< C_BaseEntity > m_leader; // 0x1158	
+private:
+	[[maybe_unused]] uint8_t __pad115c[0x4]; // 0x115c
+public:
 	// MNetworkEnable
-	Vector m_vel; // 0x1154	
+	CountdownTimer m_reuseTimer; // 0x1160	
+	// MNetworkEnable
+	Vector m_vel; // 0x1178	
 	// MNetworkEnable
 	// MNetworkChangeCallback "RecvProxy_Rescued"
-	bool m_isRescued; // 0x1160	
+	bool m_isRescued; // 0x1184	
 	// MNetworkEnable
 	// MNetworkChangeCallback "RecvProxy_Jumped"
-	bool m_jumpedThisFrame; // 0x1161	
+	bool m_jumpedThisFrame; // 0x1185	
 private:
-	[[maybe_unused]] uint8_t __pad1162[0x2]; // 0x1162
+	[[maybe_unused]] uint8_t __pad1186[0x2]; // 0x1186
 public:
 	// MNetworkEnable
-	int32_t m_nHostageState; // 0x1164	
+	// MNetworkChangeCallback "OnHostageStateChanged"
+	int32_t m_nHostageState; // 0x1188	
 	// MNetworkEnable
-	GameTime_t m_flRescueStartTime; // 0x1168	
-	// MNetworkEnable
-	GameTime_t m_flGrabSuccessTime; // 0x116c	
-	// MNetworkEnable
-	GameTime_t m_flDropStartTime; // 0x1170	
-	GameTime_t m_flDeadOrRescuedTime; // 0x1174	
-	CountdownTimer m_blinkTimer; // 0x1178	
-	Vector m_lookAt; // 0x1190	
+	bool m_bHandsHaveBeenCut; // 0x118c	
 private:
-	[[maybe_unused]] uint8_t __pad119c[0x4]; // 0x119c
+	[[maybe_unused]] uint8_t __pad118d[0x3]; // 0x118d
 public:
-	CountdownTimer m_lookAroundTimer; // 0x11a0	
-	bool m_isInit; // 0x11b8	
-	AttachmentHandle_t m_eyeAttachment; // 0x11b9	
-	AttachmentHandle_t m_chestAttachment; // 0x11ba	
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnGrabberChanged"
+	CHandle< C_CSPlayerPawn > m_hHostageGrabber; // 0x1190	
+	GameTime_t m_fLastGrabTime; // 0x1194	
+	Vector m_vecGrabbedPos; // 0x1198	
+	// MNetworkEnable
+	GameTime_t m_flRescueStartTime; // 0x11a4	
+	// MNetworkEnable
+	GameTime_t m_flGrabSuccessTime; // 0x11a8	
+	// MNetworkEnable
+	GameTime_t m_flDropStartTime; // 0x11ac	
+	GameTime_t m_flDeadOrRescuedTime; // 0x11b0	
+private:
+	[[maybe_unused]] uint8_t __pad11b4[0x4]; // 0x11b4
+public:
+	CountdownTimer m_blinkTimer; // 0x11b8	
+	Vector m_lookAt; // 0x11d0	
+private:
+	[[maybe_unused]] uint8_t __pad11dc[0x4]; // 0x11dc
+public:
+	CountdownTimer m_lookAroundTimer; // 0x11e0	
+	bool m_isInit; // 0x11f8	
+	AttachmentHandle_t m_eyeAttachment; // 0x11f9	
+	AttachmentHandle_t m_chestAttachment; // 0x11fa	
+private:
+	[[maybe_unused]] uint8_t __pad11fb[0x5]; // 0x11fb
+public:
+	CBasePlayerController* m_pPredictionOwner; // 0x1200	
+	GameTime_t m_fNewestAlphaThinkTime; // 0x1208	
 };
 
 // Alignment: 0
-// Size: 0x1138
+// Size: 0x1140
 class C_NetTestBaseCombatCharacter : public C_BaseCombatCharacter
 {
 public:
@@ -10010,7 +10453,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_AK47 : public C_WeaponCSBaseGun
 {
 public:
@@ -10018,7 +10461,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponAug : public C_WeaponCSBaseGun
 {
 public:
@@ -10026,7 +10469,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponAWP : public C_WeaponCSBaseGun
 {
 public:
@@ -10034,7 +10477,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponBizon : public C_WeaponCSBaseGun
 {
 public:
@@ -10042,7 +10485,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponFamas : public C_WeaponCSBaseGun
 {
 public:
@@ -10050,7 +10493,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponFiveSeven : public C_WeaponCSBaseGun
 {
 public:
@@ -10058,7 +10501,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponG3SG1 : public C_WeaponCSBaseGun
 {
 public:
@@ -10066,7 +10509,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponGalilAR : public C_WeaponCSBaseGun
 {
 public:
@@ -10074,7 +10517,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponGlock : public C_WeaponCSBaseGun
 {
 public:
@@ -10082,7 +10525,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponHKP2000 : public C_WeaponCSBaseGun
 {
 public:
@@ -10090,7 +10533,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponM4A1 : public C_WeaponCSBaseGun
 {
 public:
@@ -10098,7 +10541,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponMAC10 : public C_WeaponCSBaseGun
 {
 public:
@@ -10106,7 +10549,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponMag7 : public C_WeaponCSBaseGun
 {
 public:
@@ -10114,7 +10557,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponMP7 : public C_WeaponCSBaseGun
 {
 public:
@@ -10122,7 +10565,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponMP9 : public C_WeaponCSBaseGun
 {
 public:
@@ -10130,7 +10573,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponNegev : public C_WeaponCSBaseGun
 {
 public:
@@ -10138,7 +10581,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponP250 : public C_WeaponCSBaseGun
 {
 public:
@@ -10146,7 +10589,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponP90 : public C_WeaponCSBaseGun
 {
 public:
@@ -10154,7 +10597,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponSCAR20 : public C_WeaponCSBaseGun
 {
 public:
@@ -10162,7 +10605,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponSG556 : public C_WeaponCSBaseGun
 {
 public:
@@ -10170,7 +10613,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponSSG08 : public C_WeaponCSBaseGun
 {
 public:
@@ -10178,7 +10621,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponTec9 : public C_WeaponCSBaseGun
 {
 public:
@@ -10186,7 +10629,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponUMP45 : public C_WeaponCSBaseGun
 {
 public:
@@ -10194,7 +10637,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1970
+// Size: 0x1990
 class C_WeaponM249 : public C_WeaponCSBaseGun
 {
 public:
@@ -10202,7 +10645,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x19b0
+// Size: 0x19d0
 class C_MolotovGrenade : public C_BaseCSGrenade
 {
 public:
@@ -10210,7 +10653,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x19b0
+// Size: 0x19d0
 class C_IncendiaryGrenade : public C_MolotovGrenade
 {
 public:
@@ -10218,7 +10661,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1990
+// Size: 0x19b0
 class C_DecoyGrenade : public C_BaseCSGrenade
 {
 public:
@@ -10226,7 +10669,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1990
+// Size: 0x19b0
 class C_Flashbang : public C_BaseCSGrenade
 {
 public:
@@ -10234,7 +10677,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1990
+// Size: 0x19b0
 class C_HEGrenade : public C_BaseCSGrenade
 {
 public:
@@ -10242,7 +10685,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1990
+// Size: 0x19b0
 class C_SmokeGrenade : public C_BaseCSGrenade
 {
 public:
@@ -10250,17 +10693,17 @@ public:
 };
 
 // Alignment: 3
-// Size: 0x1fc0
+// Size: 0x2438
 class C_CSGO_PreviewPlayer : public C_CSPlayerPawn
 {
 public:
-	CUtlString m_animgraph; // 0x1f30	
-	CUtlString m_animgraphCharacterModeString; // 0x1f38	
-	float m_flInitialModelScale; // 0x1f40	
+	CUtlString m_animgraph; // 0x23a0	
+	CUtlString m_animgraphCharacterModeString; // 0x23a8	
+	float m_flInitialModelScale; // 0x23b0	
 };
 
 // Alignment: 0
-// Size: 0x1fc0
+// Size: 0x2438
 class C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel : public C_CSGO_PreviewPlayer
 {
 public:
@@ -10268,7 +10711,7 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x1fc0
+// Size: 0x2438
 class C_CSGO_TeamPreviewModel : public C_CSGO_PreviewPlayer
 {
 public:
