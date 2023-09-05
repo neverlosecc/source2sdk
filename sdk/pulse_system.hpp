@@ -4,13 +4,13 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: pulse_system.dll
-// Classes count: 66
+// Classes count: 71
 // Enums count: 3
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
 // Alignment: 2
-// Size: 0x24
+// Size: 0x41
 enum class PulseInstructionCode_t : uint16_t
 {
 	INVALID = 0x0,
@@ -26,29 +26,58 @@ enum class PulseInstructionCode_t : uint16_t
 	PULSE_CALL_ASYNC_FIRE = 0xa,
 	CELL_INVOKE = 0xb,
 	LIBRARY_INVOKE = 0xc,
-	SET_VAR_REG_BOOL = 0xd,
-	SET_VAR_REG_INT = 0xe,
-	SET_VAR_REG_FLOAT = 0xf,
-	SET_VAR_REG_STR = 0x10,
-	SET_VAR_REG_EHANDLE = 0x11,
-	SET_VAR_REG_SNDEVT_GUID = 0x12,
-	SET_VAR_REG_VEC3 = 0x13,
-	GET_VAR_REG_BOOL = 0x14,
-	GET_VAR_REG_INT = 0x15,
-	GET_VAR_REG_FLOAT = 0x16,
-	GET_VAR_REG_STR = 0x17,
-	GET_VAR_REG_EHANDLE = 0x18,
-	GET_VAR_REG_SNDEVT_GUID = 0x19,
-	GET_VAR_REG_VEC3 = 0x1a,
-	SET_REGISTER_LIT_BOOL = 0x1b,
-	SET_REGISTER_LIT_INT = 0x1c,
-	SET_REGISTER_LIT_FLOAT = 0x1d,
-	SET_REGISTER_LIT_STR = 0x1e,
-	SET_REGISTER_LIT_INVAL_EHANDLE = 0x1f,
-	SET_REGISTER_LIT_INVAL_SNDEVT_GUID = 0x20,
-	SET_REGISTER_LIT_VEC3 = 0x21,
-	SET_REGISTER_DOMAIN_VALUE = 0x22,
-	COUNT = 0x23,
+	TARGET_INVOKE = 0xd,
+	SET_VAR = 0xe,
+	GET_VAR = 0xf,
+	SET_REGISTER_LIT_BOOL = 0x10,
+	SET_REGISTER_LIT_INT = 0x11,
+	SET_REGISTER_LIT_FLOAT = 0x12,
+	SET_REGISTER_LIT_STR = 0x13,
+	SET_REGISTER_LIT_INVAL_EHANDLE = 0x14,
+	SET_REGISTER_LIT_INVAL_SNDEVT_GUID = 0x15,
+	SET_REGISTER_LIT_VEC3 = 0x16,
+	SET_REGISTER_DOMAIN_VALUE = 0x17,
+	COPY = 0x18,
+	NOT = 0x19,
+	NEGATE = 0x1a,
+	ADD = 0x1b,
+	SUB = 0x1c,
+	MUL = 0x1d,
+	DIV = 0x1e,
+	MOD = 0x1f,
+	LT = 0x20,
+	LTE = 0x21,
+	EQ = 0x22,
+	NE = 0x23,
+	AND = 0x24,
+	OR = 0x25,
+	CONVERT_VALUE = 0x26,
+	LAST_SERIALIZED_CODE = 0x27,
+	NEGATE_INT = 0x28,
+	NEGATE_FLOAT = 0x29,
+	ADD_INT = 0x2a,
+	ADD_FLOAT = 0x2b,
+	ADD_STRING = 0x2c,
+	SUB_INT = 0x2d,
+	SUB_FLOAT = 0x2e,
+	MUL_INT = 0x2f,
+	MUL_FLOAT = 0x30,
+	DIV_INT = 0x31,
+	DIV_FLOAT = 0x32,
+	MOD_INT = 0x33,
+	MOD_FLOAT = 0x34,
+	LT_INT = 0x35,
+	LT_FLOAT = 0x36,
+	LTE_INT = 0x37,
+	LTE_FLOAT = 0x38,
+	EQ_BOOL = 0x39,
+	EQ_INT = 0x3a,
+	EQ_FLOAT = 0x3b,
+	EQ_STRING = 0x3c,
+	NE_BOOL = 0x3d,
+	NE_INT = 0x3e,
+	NE_FLOAT = 0x3f,
+	NE_STRING = 0x40,
 };
 
 // Alignment: 4
@@ -60,7 +89,7 @@ enum class PulseMethodCallMode_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0xd
+// Size: 0xe
 enum class PulseValueType_t : uint32_t
 {
 	PVAL_INVALID = 0xffffffffffffffff,
@@ -73,9 +102,10 @@ enum class PulseValueType_t : uint32_t
 	PVAL_EHANDLE = 0x6,
 	PVAL_RESOURCE = 0x7,
 	PVAL_SNDEVT_GUID = 0x8,
-	PVAL_CURSOR_FLOW = 0x9,
-	PVAL_ANY = 0xa,
-	PVAL_COUNT = 0xb,
+	PVAL_SCHEMA_PTR = 0x9,
+	PVAL_CURSOR_FLOW = 0xa,
+	PVAL_ANY = 0xb,
+	PVAL_COUNT = 0xc,
 };
 
 struct PulseRuntimeRegisterIndex_t;
@@ -89,13 +119,27 @@ struct PulseRuntimeCallInfoIndex_t;
 struct PulseRuntimeOutputIndex_t;
 struct CPulse_ResumePoint;
 struct CPulse_OutflowConnection;
+struct PulseTestEHandle_t;
+struct CPulseGraphInstance_TestDomain;
 
 // Alignment: 0
 // Size: 0x1
 class CPulseTestFuncs_LibraryA
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	uint8_t __pad0000[0x1]; // Autoaligned
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x188
+class CPulseExecCursor
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x188]; // 0x0
+public:
+	// No members available
 };
 
 // Alignment: 1
@@ -104,6 +148,9 @@ struct PulseRuntimeRegisterIndex_t
 {
 public:
 	int16_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("pulse_system.dll")->FindDeclaredClass("PulseRuntimeRegisterIndex_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 3
@@ -131,13 +178,14 @@ public:
 	bool m_bIsPublic; // 0x32	
 };
 
-// Alignment: 2
-// Size: 0x10
+// Alignment: 3
+// Size: 0x20
 class CPulse_PublicOutput
 {
 public:
 	CUtlSymbolLarge m_Name; // 0x0	
 	CUtlString m_Description; // 0x8	
+	CPulseValueFullType m_ParamType; // 0x10	
 };
 
 // Alignment: 4
@@ -157,6 +205,9 @@ struct PulseRuntimeChunkIndex_t
 {
 public:
 	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("pulse_system.dll")->FindDeclaredClass("PulseRuntimeChunkIndex_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 1
@@ -165,12 +216,17 @@ struct PulseDocNodeID_t
 {
 public:
 	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("pulse_system.dll")->FindDeclaredClass("PulseDocNodeID_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 9
 // Size: 0xf8
 class CPulseGraphDef
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CUtlSymbolLarge m_DomainIdentifier; // 0x8	
 	CUtlSymbolLarge m_ParentMapName; // 0x10	
@@ -187,8 +243,30 @@ public:
 // Size: 0xd0
 class CBasePulseGraphInstance
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0xd0]; // 0x0
 public:
-	uint8_t __pad0000[0xd0]; // Autoaligned
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x1
+class CPulseMathlib
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x1
+class CPulseTestScriptLib
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No members available
 };
 
 // Alignment: 1
@@ -197,6 +275,9 @@ struct PulseRuntimeCellIndex_t
 {
 public:
 	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("pulse_system.dll")->FindDeclaredClass("PulseRuntimeCellIndex_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 1
@@ -205,6 +286,9 @@ struct PulseRuntimeCallInfoIndex_t
 {
 public:
 	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("pulse_system.dll")->FindDeclaredClass("PulseRuntimeCallInfoIndex_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 1
@@ -213,6 +297,9 @@ struct PulseRuntimeVarIndex_t
 {
 public:
 	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("pulse_system.dll")->FindDeclaredClass("PulseRuntimeVarIndex_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 1
@@ -221,6 +308,9 @@ struct PulseRuntimeOutputIndex_t
 {
 public:
 	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("pulse_system.dll")->FindDeclaredClass("PulseRuntimeOutputIndex_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 1
@@ -229,6 +319,9 @@ struct PulseRuntimeStateOffset_t
 {
 public:
 	uint16_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("pulse_system.dll")->FindDeclaredClass("PulseRuntimeStateOffset_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 5
@@ -258,6 +351,9 @@ struct PulseRuntimeInvokeIndex_t
 {
 public:
 	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("pulse_system.dll")->FindDeclaredClass("PulseRuntimeInvokeIndex_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 6
@@ -282,18 +378,25 @@ struct PulseRuntimeEntrypointIndex_t
 {
 public:
 	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("pulse_system.dll")->FindDeclaredClass("PulseRuntimeEntrypointIndex_t")->m_static_fields[0]->m_instance);};
 };
 
-// Alignment: 5
-// Size: 0x38
+// Alignment: 6
+// Size: 0x48
 class CPulse_InvokeBinding
 {
 public:
 	PulseRegisterMap_t m_RegisterMap; // 0x0	
 	CUtlSymbolLarge m_FuncName; // 0x20	
 	PulseRuntimeCellIndex_t m_nCellIndex; // 0x28	
-	PulseRuntimeChunkIndex_t m_nSrcChunk; // 0x2c	
-	int32_t m_nSrcInstruction; // 0x30	
+private:
+	[[maybe_unused]] uint8_t __pad002c[0x4]; // 0x2c
+public:
+	CPulseValueFullType m_InstanceType; // 0x30	
+	PulseRuntimeChunkIndex_t m_nSrcChunk; // 0x40	
+	int32_t m_nSrcInstruction; // 0x44	
 };
 
 // Alignment: 16
@@ -350,6 +453,8 @@ public:
 // Size: 0x48
 class CPulseCell_Base
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MFgdFromSchemaCompletelySkipField
 	PulseDocNodeID_t m_nEditorNodeID; // 0x8	
@@ -438,14 +543,6 @@ public:
 // Alignment: 0
 // Size: 0x48
 class CPulseCell_BaseValue : public CPulseCell_Base
-{
-public:
-	// No members available
-};
-
-// Alignment: 0
-// Size: 0x68
-class CPulseCell_Value_Expression : public CPulseCell_BaseValue
 {
 public:
 	// No members available
@@ -555,6 +652,17 @@ public:
 	CPulse_OutflowConnection m_No; // 0x58	
 };
 
+// Alignment: 2
+// Size: 0x68
+class CPulseCell_Outflow_TestExplicitYesNo : public CPulseCell_BaseFlow
+{
+public:
+	// MPropertyFriendlyName "Yes"
+	CPulse_OutflowConnection m_Yes; // 0x48	
+	// MPropertyFriendlyName "No"
+	CPulse_OutflowConnection m_No; // 0x58	
+};
+
 // Alignment: 0
 // Size: 0x48
 class CPulseCell_Value_TestValue50 : public CPulseCell_BaseValue
@@ -594,10 +702,33 @@ struct PulseTestEHandle_t
 {
 public:
 	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("pulse_system.dll")->FindDeclaredClass("PulseTestEHandle_t")->m_static_fields[0]->m_instance);};
 };
 
-// Alignment: 5
-// Size: 0x108
+// Alignment: 7
+// Size: 0x30
+struct FakeEntity_t
+{
+public:
+	PulseTestEHandle_t m_nHandle; // 0x0	
+	CUtlString m_Name; // 0x8	
+	CUtlString m_Class; // 0x10	
+	bool m_bDestroyed; // 0x18	
+private:
+	[[maybe_unused]] uint8_t __pad0019[0x7]; // 0x19
+public:
+	CPulseGraphInstance_TestDomain* m_pAssociatedGraphInstance; // 0x20	
+	bool m_bFuncWasCalled; // 0x28	
+private:
+	[[maybe_unused]] uint8_t __pad0029[0x3]; // 0x29
+public:
+	float m_fValue; // 0x2c	
+};
+
+// Alignment: 6
+// Size: 0xf8
 class CPulseGraphInstance_TestDomain : public CBasePulseGraphInstance
 {
 public:
@@ -609,6 +740,9 @@ private:
 public:
 	int32_t m_nNextValidateIndex; // 0xd4	
 	CUtlVector< CUtlString > m_Tracepoints; // 0xd8	
+	bool m_bTestYesOrNoPath; // 0xf0	
+	
+	// Static fields:
 	static double &Get_s_flExplicitCurTime(){return *reinterpret_cast<double*>(interfaces::g_schema->FindTypeScopeForModule("pulse_system.dll")->FindDeclaredClass("CPulseGraphInstance_TestDomain")->m_static_fields[0]->m_instance);};
 };
 
@@ -660,20 +794,31 @@ public:
 	// No members available
 };
 
-// Alignment: 0
-// Size: 0x108
+// Alignment: 2
+// Size: 0x190
+class CTestDomainDerived_Cursor : public CPulseExecCursor
+{
+public:
+	int32_t m_nCursorValueA; // 0x188	
+	int32_t m_nCursorValueB; // 0x18c	
+};
+
+// Alignment: 1
+// Size: 0x100
 class CPulseGraphInstance_TestDomain_Derived : public CPulseGraphInstance_TestDomain
 {
 public:
-	// No members available
+	int32_t m_nInstanceValueX; // 0xf8	
 };
 
 // Alignment: 0
 // Size: 0x1
 class CPulseTestFuncs_DerivedDomain
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	uint8_t __pad0000[0x1]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 0
@@ -700,19 +845,22 @@ public:
 	// No members available
 };
 
+// Alignment: 4
+// Size: 0x1a0
+class CPulseTurtleGraphicsCursor : public CPulseExecCursor
+{
+public:
+	Color m_Color; // 0x188	
+	Vector2D m_vPos; // 0x18c	
+	float m_flHeadingDeg; // 0x194	
+	bool m_bPenUp; // 0x198	
+};
+
 // Alignment: 0
 // Size: 0xf0
 class CPulseGraphInstance_TurtleGraphics : public CBasePulseGraphInstance
 {
 public:
 	// No members available
-};
-
-// Alignment: 0
-// Size: 0x1
-class CPulseTurtleGraphicsLib
-{
-public:
-	uint8_t __pad0000[0x1]; // Autoaligned
 };
 

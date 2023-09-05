@@ -61,6 +61,8 @@ public:
 // Size: 0x40
 struct EntityKeyValueData_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CUtlVector< EntityIOConnectionData_t > m_connections; // 0x8	
 	CUtlBinaryBlock m_keyValuesData; // 0x20	
@@ -70,6 +72,8 @@ public:
 // Size: 0x40
 struct PermEntityLumpData_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CUtlString m_name; // 0x8	
 	CUtlString m_hammerUniqueId; // 0x10	
@@ -241,11 +245,11 @@ struct ClutterTile_t
 public:
 	uint32_t m_nFirstInstance; // 0x0	
 	uint32_t m_nLastInstance; // 0x4	
-	AABB_t m_Bounds; // 0x8	
+	AABB_t m_BoundsWs; // 0x8	
 };
 
-// Alignment: 7
-// Size: 0x70
+// Alignment: 8
+// Size: 0xa0
 struct ClutterSceneObject_t
 {
 public:
@@ -255,10 +259,14 @@ public:
 private:
 	[[maybe_unused]] uint8_t __pad001e[0x2]; // 0x1e
 public:
-	CUtlVector< matrix3x4_t > m_transforms; // 0x20	
-	CUtlVector< Color > m_tintColorSrgb; // 0x38	
-	CUtlVector< ClutterTile_t > m_tiles; // 0x50	
-	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x68	
+	CUtlVector< Vector > m_instancePositions; // 0x20	
+private:
+	[[maybe_unused]] uint8_t __pad0038[0x18]; // 0x38
+public:
+	CUtlVector< float32 > m_instanceScales; // 0x50	
+	CUtlVector< Color > m_instanceTintSrgb; // 0x68	
+	CUtlVector< ClutterTile_t > m_tiles; // 0x80	
+	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x98	
 };
 
 // Alignment: 13
@@ -337,6 +345,8 @@ public:
 // Size: 0xa0
 class CVoxelVisibility
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x40]; // 0x0
 public:
 	uint32_t m_nBaseClusterCount; // 0x40	
 	uint32_t m_nPVSBytesPerCluster; // 0x44	
@@ -357,22 +367,28 @@ public:
 // Size: 0x1
 struct VMapResourceData_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	uint8_t __pad0000[0x1]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 0
 // Size: 0x1
 struct InfoForResourceTypeVMapResourceData_t
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	uint8_t __pad0000[0x1]; // Autoaligned
+	// No members available
 };
 
 // Alignment: 11
 // Size: 0x78
 class CEntityIdentity
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x14]; // 0x0
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "entityIdentityNameChanged"
@@ -423,8 +439,12 @@ public:
 // Size: 0x38
 class CScriptComponent : public CEntityComponent
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x28]; // 0x8
 public:
 	CUtlSymbolLarge m_scriptClassName; // 0x30	
+	
+	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("worldrenderer.dll")->FindDeclaredClass("CScriptComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("worldrenderer.dll")->FindDeclaredClass("CScriptComponent")->m_static_fields[1]->m_instance);};
 };
