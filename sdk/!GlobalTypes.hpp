@@ -4,8 +4,8 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: !GlobalTypes
-// Classes count: 1292
-// Enums count: 307
+// Classes count: 1293
+// Enums count: 303
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
@@ -1520,6 +1520,14 @@ enum class ParticleOrientationChoiceList_t : uint32_t
 };
 
 // Alignment: 4
+// Size: 0x2
+enum class ParticleHitboxDataSelection_t : uint32_t
+{
+	PARTICLE_HITBOX_AVERAGE_SPEED = 0x0,
+	PARTICLE_HITBOX_COUNT = 0x1,
+};
+
+// Alignment: 4
 // Size: 0x5
 enum class ParticleTransformType_t : uint32_t
 {
@@ -1623,7 +1631,7 @@ enum class ParticleLightUnitChoiceList_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x12
+// Size: 0x13
 enum class ParticleVecType_t : uint32_t
 {
 	PVEC_TYPE_INVALID = 0xffffffffffffffff,
@@ -1643,7 +1651,8 @@ enum class ParticleVecType_t : uint32_t
 	PVEC_TYPE_RANDOM_UNIFORM = 0xd,
 	PVEC_TYPE_RANDOM_UNIFORM_OFFSET = 0xe,
 	PVEC_TYPE_CP_DELTA = 0xf,
-	PVEC_TYPE_COUNT = 0x10,
+	PVEC_TYPE_CLOSEST_CAMERA_POSITION = 0x10,
+	PVEC_TYPE_COUNT = 0x11,
 };
 
 // Alignment: 4
@@ -1737,12 +1746,13 @@ enum class ParticleTextureLayerBlendType_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x3
+// Size: 0x4
 enum class ParticleTraceSet_t : uint32_t
 {
 	PARTICLE_TRACE_SET_ALL = 0x0,
 	PARTICLE_TRACE_SET_STATIC = 0x1,
-	PARTICLE_TRACE_SET_DYNAMIC = 0x2,
+	PARTICLE_TRACE_SET_STATIC_AND_KEYFRAMED = 0x2,
+	PARTICLE_TRACE_SET_DYNAMIC = 0x3,
 };
 
 // Alignment: 4
@@ -2324,7 +2334,7 @@ enum class TakeDamageFlags_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x18
+// Size: 0x19
 enum class WeaponSound_t : uint32_t
 {
 	WEAPON_SOUND_EMPTY = 0x0,
@@ -2336,21 +2346,22 @@ enum class WeaponSound_t : uint32_t
 	WEAPON_SOUND_MELEE_HIT = 0x6,
 	WEAPON_SOUND_MELEE_HIT_WORLD = 0x7,
 	WEAPON_SOUND_MELEE_HIT_PLAYER = 0x8,
-	WEAPON_SOUND_SPECIAL1 = 0x9,
-	WEAPON_SOUND_SPECIAL2 = 0xa,
-	WEAPON_SOUND_SPECIAL3 = 0xb,
-	WEAPON_SOUND_NEARLYEMPTY = 0xc,
-	WEAPON_SOUND_IMPACT = 0xd,
-	WEAPON_SOUND_REFLECT = 0xe,
-	WEAPON_SOUND_SECONDARY_IMPACT = 0xf,
-	WEAPON_SOUND_SECONDARY_REFLECT = 0x10,
-	WEAPON_SOUND_SINGLE_ACCURATE = 0x11,
-	WEAPON_SOUND_ZOOM_IN = 0x12,
-	WEAPON_SOUND_ZOOM_OUT = 0x13,
-	WEAPON_SOUND_MOUSE_PRESSED = 0x14,
-	WEAPON_SOUND_DROP = 0x15,
-	WEAPON_SOUND_RADIO_USE = 0x16,
-	WEAPON_SOUND_NUM_TYPES = 0x17,
+	WEAPON_SOUND_MELEE_HIT_NPC = 0x9,
+	WEAPON_SOUND_SPECIAL1 = 0xa,
+	WEAPON_SOUND_SPECIAL2 = 0xb,
+	WEAPON_SOUND_SPECIAL3 = 0xc,
+	WEAPON_SOUND_NEARLYEMPTY = 0xd,
+	WEAPON_SOUND_IMPACT = 0xe,
+	WEAPON_SOUND_REFLECT = 0xf,
+	WEAPON_SOUND_SECONDARY_IMPACT = 0x10,
+	WEAPON_SOUND_SECONDARY_REFLECT = 0x11,
+	WEAPON_SOUND_SINGLE_ACCURATE = 0x12,
+	WEAPON_SOUND_ZOOM_IN = 0x13,
+	WEAPON_SOUND_ZOOM_OUT = 0x14,
+	WEAPON_SOUND_MOUSE_PRESSED = 0x15,
+	WEAPON_SOUND_DROP = 0x16,
+	WEAPON_SOUND_RADIO_USE = 0x17,
+	WEAPON_SOUND_NUM_TYPES = 0x18,
 };
 
 // Alignment: 1
@@ -2425,19 +2436,6 @@ enum class QuestProgress__Reason : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x7
-enum class ESurvivalGameRuleDecision_t : uint32_t
-{
-	k_ESurvivalGameRuleDecision_Unknown = 0x0,
-	k_ESurvivalGameRuleDecision_Tablet_Purchase_Pistol_DefIdx = 0x1,
-	k_ESurvivalGameRuleDecision_Tablet_Purchase_SMG_DefIdx = 0x2,
-	k_ESurvivalGameRuleDecision_Tablet_Purchase_Rifle_DefIdx = 0x3,
-	k_ESurvivalGameRuleDecision_Tablet_Purchase_Sniper_DefIdx = 0x4,
-	k_ESurvivalGameRuleDecision_Tablet_Purchase_MegaPistol_DefIdx = 0x5,
-	k_ESurvivalGameRuleDecision_TotalCount = 0x6,
-};
-
-// Alignment: 4
 // Size: 0x3
 enum class BrushSolidities_e : uint32_t
 {
@@ -2478,15 +2476,6 @@ enum class PointWorldTextJustifyHorizontal_t : uint32_t
 
 // Alignment: 4
 // Size: 0x3
-enum class WeaponState_t : uint32_t
-{
-	WEAPON_NOT_CARRIED = 0x0,
-	WEAPON_IS_CARRIED_BY_PLAYER = 0x1,
-	WEAPON_IS_ACTIVE = 0x2,
-};
-
-// Alignment: 4
-// Size: 0x3
 enum class PointTemplateOwnerSpawnGroupType_t : uint32_t
 {
 	INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP = 0x0,
@@ -2505,20 +2494,6 @@ enum class ValueRemapperOutputType_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x8
-enum class SpawnStage_t : uint32_t
-{
-	SPAWN_STAGE_NONE = 0x0,
-	SPAWN_STAGE_SELECTION = 0x1,
-	SPAWN_STAGE_LOCKED = 0x3,
-	SPAWN_STAGE_ALL_READY = 0x2,
-	SPAWN_STAGE_PERK_SELECTION = 0x4,
-	SPAWN_STAGE_PERK_ALL_READY = 0x5,
-	SPAWN_STAGE_PLAYERS_CAN_RESPAWN = 0x6,
-	SPAWN_STAGE_COUNT = 0x7,
-};
-
-// Alignment: 4
 // Size: 0x7
 enum class IChoreoServices__ChoreoState_t : uint32_t
 {
@@ -2529,18 +2504,6 @@ enum class IChoreoServices__ChoreoState_t : uint32_t
 	STATE_PLAY_SCRIPT = 0x4,
 	STATE_PLAY_SCRIPT_POST_IDLE = 0x5,
 	STATE_PLAY_SCRIPT_POST_IDLE_DONE = 0x6,
-};
-
-// Alignment: 4
-// Size: 0x6
-enum class RelativeDamagedDirection_t : uint32_t
-{
-	DAMAGED_DIR_NONE = 0x0,
-	DAMAGED_DIR_FRONT = 0x1,
-	DAMAGED_DIR_BACK = 0x2,
-	DAMAGED_DIR_LEFT = 0x3,
-	DAMAGED_DIR_RIGHT = 0x4,
-	DAMAGED_DIR_TOTAL = 0x5,
 };
 
 // Alignment: 1
@@ -2843,15 +2806,6 @@ enum class PointTemplateClientOnlyEntityBehavior_t : uint32_t
 	CREATE_FOR_CLIENTS_WHO_CONNECT_LATER = 0x1,
 };
 
-// Alignment: 1
-// Size: 0x3
-enum class tablet_skin_state_t : uint8_t
-{
-	TABLET_SKIN_STATE_BLANK = 0x0,
-	TABLET_SKIN_STATE_RADAR = 0x1,
-	TABLET_SKIN_STATE_BUYMENU = 0x2,
-};
-
 // Alignment: 4
 // Size: 0x4
 enum class EntitySubclassScope_t : uint32_t
@@ -3151,6 +3105,15 @@ enum class CommandExecMode_t : uint32_t
 };
 
 // Alignment: 4
+// Size: 0x3
+enum class CSWeaponState_t : uint32_t
+{
+	WEAPON_NOT_CARRIED = 0x0,
+	WEAPON_IS_CARRIED_BY_PLAYER = 0x1,
+	WEAPON_IS_ACTIVE = 0x2,
+};
+
+// Alignment: 4
 // Size: 0x12
 enum class CSPlayerBlockingUseAction_t : uint32_t
 {
@@ -3178,10 +3141,10 @@ enum class CSPlayerBlockingUseAction_t : uint32_t
 // Size: 0x4
 enum class WeaponAttackType_t : uint32_t
 {
-	WEAPON_ATTACK_INVALID = 0xffffffffffffffff,
-	WEAPON_PRIMARY_ATTACK = 0x0,
-	WEAPON_SECONDARY_ATTACK = 0x1,
-	WEAPON_ATTACK_COUNT = 0x2,
+	eInvalid = 0xffffffffffffffff,
+	ePrimary = 0x0,
+	eSecondary = 0x1,
+	eCount = 0x2,
 };
 
 // Alignment: 4
@@ -3225,22 +3188,6 @@ enum class Hull_t : uint32_t
 	HULL_SMALL = 0x9,
 	NUM_HULLS = 0xa,
 	HULL_NONE = 0xb,
-};
-
-// Alignment: 1
-// Size: 0xa
-enum class ESurvivalSpawnTileState : uint8_t
-{
-	kSurvivalSpawn_Available = 0x0,
-	kSurvivalSpawn_Unused = 0x1,
-	kSurvivalSpawn_Blocked = 0x2,
-	kSurvivalSpawn_Occupied = 0x3,
-	kSurvivalSpawn_Blockupied = 0x4,
-	kSurvivalSpawn_Locked = 0x5,
-	kSurvivalSpawn_ProximityBlocked = 0x6,
-	kSurvivalSpawn_TileStateCount = 0x7,
-	kSurvivalSpawn_UI_Invalid = 0x7f,
-	kSurvivalSpawn_UI_LocalPlayerFlag = 0x80,
 };
 
 // Alignment: 4
@@ -3607,21 +3554,19 @@ enum class filter_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0xc
+// Size: 0xa
 enum class Class_T : uint32_t
 {
 	CLASS_NONE = 0x0,
 	CLASS_PLAYER = 0x1,
 	CLASS_PLAYER_ALLY = 0x2,
-	CLASS_DZ_DRONE = 0x3,
-	CLASS_DZ_SPAWN_CHOPPER = 0x4,
-	CLASS_BOMB = 0x5,
-	CLASS_FOOT_CONTACT_SHADOW = 0x6,
-	CLASS_WEAPON = 0x7,
-	CLASS_WATER_SPLASHER = 0x8,
-	CLASS_WEAPON_VIEWMODEL = 0x9,
-	CLASS_DOOR = 0xa,
-	NUM_CLASSIFY_CLASSES = 0xb,
+	CLASS_BOMB = 0x3,
+	CLASS_FOOT_CONTACT_SHADOW = 0x4,
+	CLASS_WEAPON = 0x5,
+	CLASS_WATER_SPLASHER = 0x6,
+	CLASS_WEAPON_VIEWMODEL = 0x7,
+	CLASS_DOOR = 0x8,
+	NUM_CLASSIFY_CLASSES = 0x9,
 };
 
 // Alignment: 4
@@ -4563,6 +4508,16 @@ public:
 
 // Alignment: 0
 // Size: 0x1
+class InfoForResourceTypeCNmSkeleton
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x1
 class InfoForResourceTypeCTypeScriptResource
 {
 private:
@@ -4647,6 +4602,16 @@ public:
 // Alignment: 0
 // Size: 0x1
 struct InfoForResourceTypeWorld_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x1
+class InfoForResourceTypeCNmClip
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
@@ -5076,16 +5041,6 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x8
-class IHandleEntity
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
-public:
-	// No members available
-};
-
-// Alignment: 0
 // Size: 0x30
 struct EventClientPauseSimulate_t : public EventSimulate_t
 {
@@ -5228,16 +5183,6 @@ public:
 // Size: 0x40
 struct EventClientAdvanceTick_t : public EventAdvanceTick_t
 {
-public:
-	// No members available
-};
-
-// Alignment: 0
-// Size: 0x8
-class CEntityComponent
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// No members available
 };
@@ -5632,8 +5577,11 @@ private:
 	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CAnimNodePath m_nodePath; // 0x18	
-	CUtlString m_name; // 0x48	
-	AnimNodeNetworkMode m_networkMode; // 0x50	
+	AnimNodeNetworkMode m_networkMode; // 0x48	
+private:
+	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
+public:
+	CUtlString m_name; // 0x50	
 };
 
 // Alignment: 7
@@ -7485,58 +7433,64 @@ public:
 	int32_t m_nType; // 0x14	
 };
 
-// Alignment: 15
-// Size: 0x68
+// Alignment: 16
+// Size: 0x78
 class CAnimDemoCaptureSettings
 {
 public:
-	// MPropertyFriendlyName "Max Rotation Error"
+	// MPropertyFriendlyName "Bone Chain Length Error Scaling Range"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flMaxSplineErrorRotation; // 0x0	
+	Vector2D m_rangeBoneChainLength; // 0x0	
+	// MPropertyFriendlyName "Max Rotation Error (Mapped Against Bone Chain Length)"
+	// MPropertyGroupName "+Spline Settings"
+	Vector2D m_rangeMaxSplineErrorRotation; // 0x8	
 	// MPropertyFriendlyName "Max Translation Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flMaxSplineErrorTranslation; // 0x4	
+	float m_flMaxSplineErrorTranslation; // 0x10	
 	// MPropertyFriendlyName "Max Scale Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flMaxSplineErrorScale; // 0x8	
+	float m_flMaxSplineErrorScale; // 0x14	
 	// MPropertyFriendlyName "Max IK Rotation Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flIkRotation_MaxSplineError; // 0xc	
+	float m_flIkRotation_MaxSplineError; // 0x18	
 	// MPropertyFriendlyName "Max IK Translation Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flIkTranslation_MaxSplineError; // 0x10	
+	float m_flIkTranslation_MaxSplineError; // 0x1c	
 	// MPropertyFriendlyName "Max Rotation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flMaxQuantizationErrorRotation; // 0x14	
+	float m_flMaxQuantizationErrorRotation; // 0x20	
 	// MPropertyFriendlyName "Max Translation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flMaxQuantizationErrorTranslation; // 0x18	
+	float m_flMaxQuantizationErrorTranslation; // 0x24	
 	// MPropertyFriendlyName "Max Scale Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flMaxQuantizationErrorScale; // 0x1c	
+	float m_flMaxQuantizationErrorScale; // 0x28	
 	// MPropertyFriendlyName "Max IK Rotation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flIkRotation_MaxQuantizationError; // 0x20	
+	float m_flIkRotation_MaxQuantizationError; // 0x2c	
 	// MPropertyFriendlyName "Max IK Translation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flIkTranslation_MaxQuantizationError; // 0x24	
+	float m_flIkTranslation_MaxQuantizationError; // 0x30	
+private:
+	[[maybe_unused]] uint8_t __pad0034[0x4]; // 0x34
+public:
 	// MPropertyFriendlyName "Base Sequence"
 	// MPropertyGroupName "+Base Pose"
 	// MPropertyAttributeChoiceName "Sequence"
-	CUtlString m_baseSequence; // 0x28	
+	CUtlString m_baseSequence; // 0x38	
 	// MPropertyFriendlyName "Base Sequence Frame"
 	// MPropertyGroupName "+Base Pose"
-	int32_t m_nBaseSequenceFrame; // 0x30	
+	int32_t m_nBaseSequenceFrame; // 0x40	
 	// MPropertyFriendlyName "Bone Selection Mode"
 	// MPropertyGroupName "+Bones"
 	// MPropertyAttrChangeCallback
-	EDemoBoneSelectionMode m_boneSelectionMode; // 0x34	
+	EDemoBoneSelectionMode m_boneSelectionMode; // 0x44	
 	// MPropertyFriendlyName "Bones"
 	// MPropertyGroupName "+Bones"
 	// MPropertyAttrStateCallback
-	CUtlVector< BoneDemoCaptureSettings_t > m_bones; // 0x38	
+	CUtlVector< BoneDemoCaptureSettings_t > m_bones; // 0x48	
 	// MPropertyFriendlyName "IK Chains"
-	CUtlVector< IKDemoCaptureSettings_t > m_ikChains; // 0x50	
+	CUtlVector< IKDemoCaptureSettings_t > m_ikChains; // 0x60	
 };
 
 // Alignment: 1
@@ -7671,14 +7625,16 @@ public:
 	CUtlVector< float32 > m_outputWeightList; // 0x10	
 };
 
-// Alignment: 1
-// Size: 0x8
+// Alignment: 2
+// Size: 0x10
 struct BoneDemoCaptureSettings_t
 {
 public:
 	// MPropertyFriendlyName "Bone"
 	// MPropertyAttributeChoiceName "Bone"
 	CUtlString m_boneName; // 0x0	
+	// MPropertySuppressField
+	float m_flChainLength; // 0x8	
 };
 
 // Alignment: 6
@@ -9212,7 +9168,7 @@ public:
 };
 
 // Alignment: 1
-// Size: 0x98
+// Size: 0xa8
 class CDemoSettingsComponentUpdater : public CAnimComponentUpdater
 {
 public:
@@ -10258,30 +10214,28 @@ public:
 	float flAlpha; // 0x4	
 };
 
-// Alignment: 6
+// Alignment: 5
 // Size: 0x30
 struct FeTaperedCapsuleRigid_t
 {
 public:
 	fltx4 vSphere[2]; // 0x0	
-	float flStickiness; // 0x20	
-	uint16_t nNode; // 0x24	
-	uint16_t nCollisionMask; // 0x26	
-	uint16_t nVertexMapIndex; // 0x28	
-	uint16_t nFlags; // 0x2a	
+	uint16_t nNode; // 0x20	
+	uint16_t nCollisionMask; // 0x22	
+	uint16_t nVertexMapIndex; // 0x24	
+	uint16_t nFlags; // 0x26	
 };
 
-// Alignment: 6
+// Alignment: 5
 // Size: 0x20
 struct FeSphereRigid_t
 {
 public:
 	fltx4 vSphere; // 0x0	
-	float flStickiness; // 0x10	
-	uint16_t nNode; // 0x14	
-	uint16_t nCollisionMask; // 0x16	
-	uint16_t nVertexMapIndex; // 0x18	
-	uint16_t nFlags; // 0x1a	
+	uint16_t nNode; // 0x10	
+	uint16_t nCollisionMask; // 0x12	
+	uint16_t nVertexMapIndex; // 0x14	
+	uint16_t nFlags; // 0x16	
 };
 
 // Alignment: 5
@@ -10492,7 +10446,7 @@ public:
 	uint32_t m_nFlags; // 0x88	
 };
 
-// Alignment: 8
+// Alignment: 6
 // Size: 0x40
 struct FeBoxRigid_t
 {
@@ -10501,10 +10455,8 @@ public:
 	uint16_t nNode; // 0x20	
 	uint16_t nCollisionMask; // 0x22	
 	Vector vSize; // 0x24	
-	float flStickiness; // 0x30	
-	uint16_t nVertexMapIndex; // 0x34	
-	uint16_t nFlags; // 0x36	
-	float flReserved[2]; // 0x38	
+	uint16_t nVertexMapIndex; // 0x30	
+	uint16_t nFlags; // 0x32	
 };
 
 // Alignment: 4
@@ -10749,16 +10701,15 @@ public:
 	uint16_t m_nCollisionMask; // 0x98	
 };
 
-// Alignment: 5
-// Size: 0x1c
+// Alignment: 4
+// Size: 0x18
 struct FeCollisionPlane_t
 {
 public:
 	uint16_t nCtrlParent; // 0x0	
 	uint16_t nChildNode; // 0x2	
 	RnPlane_t m_Plane; // 0x4	
-	float flStickiness; // 0x14	
-	float flStrength; // 0x18	
+	float flStrength; // 0x14	
 };
 
 // Alignment: 3
@@ -10871,8 +10822,8 @@ public:
 	Vector m_vNormal; // 0xc	
 };
 
-// Alignment: 9
-// Size: 0xa0
+// Alignment: 10
+// Size: 0xa8
 struct RnMesh_t
 {
 public:
@@ -10884,7 +10835,8 @@ public:
 	CUtlVector< RnWing_t > m_Wings; // 0x60	
 	CUtlVector< uint8 > m_Materials; // 0x78	
 	Vector m_vOrthographicAreas; // 0x90	
-	bool m_bHasOpenEdges; // 0x9c	
+	uint32_t m_nFlags; // 0x9c	
+	uint32_t m_nDebugFlags; // 0xa0	
 };
 
 // Alignment: 3
@@ -11068,8 +11020,8 @@ public:
 	constraint_breakableparams_t constraint; // 0x28	
 };
 
-// Alignment: 5
-// Size: 0x14
+// Alignment: 4
+// Size: 0x10
 struct FeTaperedCapsuleStretch_t
 {
 public:
@@ -11078,7 +11030,6 @@ public:
 	// MPropertySuppressField
 	uint16_t nDummy; // 0x6	
 	float flRadius[2]; // 0x8	
-	float flStickiness; // 0x10	
 };
 
 // Alignment: 3
@@ -11227,7 +11178,7 @@ public:
 };
 
 // Alignment: 1
-// Size: 0xb0
+// Size: 0xb8
 struct RnMeshDesc_t : public RnShapeDesc_t
 {
 public:
@@ -12271,18 +12222,14 @@ public:
 	CRenderBufferBinding m_extraBufferBinding; // 0x10	
 };
 
-// Alignment: 4
-// Size: 0x40
+// Alignment: 3
+// Size: 0x38
 struct AggregateLODSetup_t
 {
 public:
 	Vector m_vLODOrigin; // 0x0	
 	float m_fMaxObjectScale; // 0xc	
-	uint8_t m_nLODMask; // 0x10	
-private:
-	[[maybe_unused]] uint8_t __pad0011[0x7]; // 0x11
-public:
-	CUtlVectorFixedGrowable< float32 > m_fSwitchDistances; // 0x18	
+	CUtlVectorFixedGrowable< float32 > m_fSwitchDistances; // 0x10	
 };
 
 // Alignment: 15
@@ -13086,7 +13033,7 @@ public:
 	// No members available
 };
 
-// Alignment: 45
+// Alignment: 46
 // Size: 0x158
 class CParticleFloatInput : public CParticleInput
 {
@@ -13108,51 +13055,49 @@ public:
 private:
 	[[maybe_unused]] uint8_t __pad0079[0x3]; // 0x79
 public:
-	ParticleFloatRandomMode_t m_nRandomMode; // 0x7c	
+	int32_t m_nRandomSeed; // 0x7c	
+	ParticleFloatRandomMode_t m_nRandomMode; // 0x80	
 private:
-	[[maybe_unused]] uint8_t __pad0080[0x4]; // 0x80
+	[[maybe_unused]] uint8_t __pad0084[0x4]; // 0x84
 public:
-	float m_flLOD0; // 0x84	
-	float m_flLOD1; // 0x88	
-	float m_flLOD2; // 0x8c	
-	float m_flLOD3; // 0x90	
-	ParticleAttributeIndex_t m_nNoiseInputVectorAttribute; // 0x94	
-	float m_flNoiseOutputMin; // 0x98	
-	float m_flNoiseOutputMax; // 0x9c	
-	float m_flNoiseScale; // 0xa0	
-	Vector m_vecNoiseOffsetRate; // 0xa4	
-	float m_flNoiseOffset; // 0xb0	
-	int32_t m_nNoiseOctaves; // 0xb4	
-	PFNoiseTurbulence_t m_nNoiseTurbulence; // 0xb8	
-	PFNoiseType_t m_nNoiseType; // 0xbc	
-	PFNoiseModifier_t m_nNoiseModifier; // 0xc0	
-	float m_flNoiseTurbulenceScale; // 0xc4	
-	float m_flNoiseTurbulenceMix; // 0xc8	
-	float m_flNoiseImgPreviewScale; // 0xcc	
-	bool m_bNoiseImgPreviewLive; // 0xd0	
+	float m_flLOD0; // 0x88	
+	float m_flLOD1; // 0x8c	
+	float m_flLOD2; // 0x90	
+	float m_flLOD3; // 0x94	
+	ParticleAttributeIndex_t m_nNoiseInputVectorAttribute; // 0x98	
+	float m_flNoiseOutputMin; // 0x9c	
+	float m_flNoiseOutputMax; // 0xa0	
+	float m_flNoiseScale; // 0xa4	
+	Vector m_vecNoiseOffsetRate; // 0xa8	
+	float m_flNoiseOffset; // 0xb4	
+	int32_t m_nNoiseOctaves; // 0xb8	
+	PFNoiseTurbulence_t m_nNoiseTurbulence; // 0xbc	
+	PFNoiseType_t m_nNoiseType; // 0xc0	
+	PFNoiseModifier_t m_nNoiseModifier; // 0xc4	
+	float m_flNoiseTurbulenceScale; // 0xc8	
+	float m_flNoiseTurbulenceMix; // 0xcc	
+	float m_flNoiseImgPreviewScale; // 0xd0	
+	bool m_bNoiseImgPreviewLive; // 0xd4	
 private:
-	[[maybe_unused]] uint8_t __pad00d1[0xb]; // 0xd1
+	[[maybe_unused]] uint8_t __pad00d5[0xb]; // 0xd5
 public:
-	float m_flNoCameraFallback; // 0xdc	
-	bool m_bUseBoundsCenter; // 0xe0	
+	float m_flNoCameraFallback; // 0xe0	
+	bool m_bUseBoundsCenter; // 0xe4	
 private:
-	[[maybe_unused]] uint8_t __pad00e1[0x3]; // 0xe1
+	[[maybe_unused]] uint8_t __pad00e5[0x3]; // 0xe5
 public:
-	ParticleFloatInputMode_t m_nInputMode; // 0xe4	
-	float m_flMultFactor; // 0xe8	
-	float m_flInput0; // 0xec	
-	float m_flInput1; // 0xf0	
-	float m_flOutput0; // 0xf4	
-	float m_flOutput1; // 0xf8	
-	float m_flNotchedRangeMin; // 0xfc	
-	float m_flNotchedRangeMax; // 0x100	
-	float m_flNotchedOutputOutside; // 0x104	
-	float m_flNotchedOutputInside; // 0x108	
-	ParticleFloatBiasType_t m_nBiasType; // 0x10c	
-	float m_flBiasParameter; // 0x110	
-private:
-	[[maybe_unused]] uint8_t __pad0114[0x4]; // 0x114
-public:
+	ParticleFloatInputMode_t m_nInputMode; // 0xe8	
+	float m_flMultFactor; // 0xec	
+	float m_flInput0; // 0xf0	
+	float m_flInput1; // 0xf4	
+	float m_flOutput0; // 0xf8	
+	float m_flOutput1; // 0xfc	
+	float m_flNotchedRangeMin; // 0x100	
+	float m_flNotchedRangeMax; // 0x104	
+	float m_flNotchedOutputOutside; // 0x108	
+	float m_flNotchedOutputInside; // 0x10c	
+	ParticleFloatBiasType_t m_nBiasType; // 0x110	
+	float m_flBiasParameter; // 0x114	
 	CPiecewiseCurve m_Curve; // 0x118	
 };
 
@@ -15542,7 +15487,7 @@ public:
 	bool m_bEaseOut; // 0x205	
 };
 
-// Alignment: 5
+// Alignment: 6
 // Size: 0x1e0
 class C_OP_ColorInterpolate : public CParticleFunctionOperator
 {
@@ -15561,6 +15506,8 @@ public:
 	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d8	
 	// MPropertyFriendlyName "ease in and out"
 	bool m_bEaseInOut; // 0x1dc	
+	// MPropertyFriendlyName "use new code"
+	bool m_bUseNewCode; // 0x1dd	
 };
 
 // Alignment: 1
@@ -16183,6 +16130,15 @@ public:
 	bool m_bReverse; // 0x328	
 	// MPropertyFriendlyName "set orientation"
 	bool m_bSetOrientation; // 0x329	
+};
+
+// Alignment: 1
+// Size: 0x1d0
+class C_OP_ShapeMatchingConstraint : public CParticleFunctionConstraint
+{
+public:
+	// MPropertyFriendlyName "shape restoration time"
+	float m_flShapeRestorationTime; // 0x1c0	
 };
 
 // Alignment: 2
@@ -18265,7 +18221,7 @@ public:
 	float m_flRemapBias; // 0x2d8	
 };
 
-// Alignment: 4
+// Alignment: 5
 // Size: 0x4a0
 class C_OP_SetFloat : public CParticleFunctionOperator
 {
@@ -18279,6 +18235,8 @@ public:
 	ParticleSetMethod_t m_nSetMethod; // 0x31c	
 	// MPropertyFriendlyName "interpolation"
 	CPerParticleFloatInput m_Lerp; // 0x320	
+	// MPropertyFriendlyName "use new code"
+	bool m_bUseNewCode; // 0x478	
 };
 
 // Alignment: 5
@@ -18693,11 +18651,13 @@ public:
 	// MPropertyFriendlyName "brush only"
 	bool m_bBrushOnly; // 0x25d	
 	// MPropertyFriendlyName "include water"
+	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
 	bool m_bIncludeWater; // 0x25e	
 private:
 	[[maybe_unused]] uint8_t __pad025f[0x1]; // 0x25f
 public:
 	// MPropertyFriendlyName "CP Entity to Ignore for Collisions"
+	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
 	int32_t m_nIgnoreCP; // 0x260	
 	// MPropertyFriendlyName "control point movement distance tolerance"
 	// MPropertySuppressExpr "m_nCollisionMode == COLLISION_MODE_PER_PARTICLE_TRACE"
@@ -18799,6 +18759,7 @@ public:
 	// MPropertyFriendlyName "No Collision Behavior"
 	ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x500	
 	// MPropertyFriendlyName "include water"
+	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
 	bool m_bIncludeWater; // 0x504	
 	// MPropertyFriendlyName "set normal"
 	bool m_bSetNormal; // 0x505	
@@ -18816,6 +18777,7 @@ public:
 	// MPropertyFriendlyName "preserve initial Z-offset relative to cp"
 	int32_t m_nPreserveOffsetCP; // 0x510	
 	// MPropertyFriendlyName "CP Entity to Ignore for Collisions"
+	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
 	int32_t m_nIgnoreCP; // 0x514	
 };
 
@@ -20200,8 +20162,8 @@ public:
 	float m_flMaxDistance; // 0x1c4	
 };
 
-// Alignment: 5
-// Size: 0x480
+// Alignment: 6
+// Size: 0x5e0
 class C_OP_InstantaneousEmitter : public CParticleFunctionEmitter
 {
 public:
@@ -20212,10 +20174,15 @@ public:
 	CParticleCollectionFloatInput m_flStartTime; // 0x318	
 	// MPropertyFriendlyName "emission scale from killed parent particles"
 	float m_flInitFromKilledParentParticles; // 0x470	
+private:
+	[[maybe_unused]] uint8_t __pad0474[0x4]; // 0x474
+public:
+	// MPropertyFriendlyName "emission scale from parent particle count"
+	CParticleCollectionFloatInput m_flParentParticleScale; // 0x478	
 	// MPropertyFriendlyName "maximum emission per frame"
-	int32_t m_nMaxEmittedPerFrame; // 0x474	
+	int32_t m_nMaxEmittedPerFrame; // 0x5d0	
 	// MPropertyFriendlyName "control point with snapshot data"
-	int32_t m_nSnapshotControlPoint; // 0x478	
+	int32_t m_nSnapshotControlPoint; // 0x5d4	
 };
 
 // Alignment: 7
@@ -21662,7 +21629,7 @@ public:
 	float m_flAlphaRandExponent; // 0x1d4	
 };
 
-// Alignment: 10
+// Alignment: 11
 // Size: 0xe20
 class C_OP_RemapAverageHitboxSpeedtoCP : public CParticleFunctionPreEmission
 {
@@ -21674,9 +21641,8 @@ public:
 	// MPropertyFriendlyName "Output component"
 	// MPropertyAttributeChoiceName "vector_component"
 	int32_t m_nField; // 0x1d8	
-private:
-	[[maybe_unused]] uint8_t __pad01dc[0x4]; // 0x1dc
-public:
+	// MPropertyFriendlyName "hitbox data"
+	ParticleHitboxDataSelection_t m_nHitboxDataType; // 0x1dc	
 	// MPropertyFriendlyName "input minimum"
 	CParticleCollectionFloatInput m_flInputMin; // 0x1e0	
 	// MPropertyFriendlyName "input maximum"
@@ -21686,11 +21652,13 @@ public:
 	// MPropertyFriendlyName "output maximum"
 	CParticleCollectionFloatInput m_flOutputMax; // 0x5e8	
 	// MPropertyFriendlyName "intersection height CP"
+	// MPropertySuppressExpr "m_nHitboxDataType != PARTICLE_HITBOX_AVERAGE_SPEED"
 	int32_t m_nHeightControlPointNumber; // 0x740	
 private:
 	[[maybe_unused]] uint8_t __pad0744[0x4]; // 0x744
 public:
 	// MPropertyFriendlyName "comparison velocity"
+	// MPropertySuppressExpr "m_nHitboxDataType != PARTICLE_HITBOX_AVERAGE_SPEED"
 	CParticleCollectionVecInput m_vecComparisonVelocity; // 0x748	
 	// MPropertyFriendlyName "hitbox set"
 	char m_HitboxSetName[128]; // 0xda0	
@@ -21713,7 +21681,7 @@ public:
 	bool m_bParticles; // 0x32b	
 };
 
-// Alignment: 49
+// Alignment: 50
 // Size: 0x25f0
 class C_OP_RenderModels : public CParticleFunctionRenderer
 {
@@ -21785,127 +21753,133 @@ public:
 	// MPropertyFriendlyName "apply scales in local model space"
 	// MPropertySortPriority "700"
 	bool m_bLocalScale; // 0x1540	
+private:
+	[[maybe_unused]] uint8_t __pad1541[0x3]; // 0x1541
+public:
+	// MPropertyFriendlyName "model size cull bloat"
+	// MPropertyAttributeChoiceName "particlefield_size_cull_bloat"
+	int32_t m_nSizeCullBloat; // 0x1544	
 	// MPropertyStartGroup "Animation"
 	// MPropertyFriendlyName "animated"
 	// MPropertySortPriority "500"
-	bool m_bAnimated; // 0x1541	
+	bool m_bAnimated; // 0x1548	
 private:
-	[[maybe_unused]] uint8_t __pad1542[0x2]; // 0x1542
+	[[maybe_unused]] uint8_t __pad1549[0x3]; // 0x1549
 public:
 	// MPropertyFriendlyName "animation rate"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	float m_flAnimationRate; // 0x1544	
+	float m_flAnimationRate; // 0x154c	
 	// MPropertyFriendlyName "scale animation rate"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bScaleAnimationRate; // 0x1548	
+	bool m_bScaleAnimationRate; // 0x1550	
 	// MPropertyFriendlyName "force looping animations"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bForceLoopingAnimation; // 0x1549	
+	bool m_bForceLoopingAnimation; // 0x1551	
 	// MPropertyFriendlyName "reset animation frame on stop"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bResetAnimOnStop; // 0x154a	
+	bool m_bResetAnimOnStop; // 0x1552	
 	// MPropertyFriendlyName "set animation frame manually"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bManualAnimFrame; // 0x154b	
+	bool m_bManualAnimFrame; // 0x1553	
 	// MPropertyFriendlyName "animation rate scale field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	ParticleAttributeIndex_t m_nAnimationScaleField; // 0x154c	
+	ParticleAttributeIndex_t m_nAnimationScaleField; // 0x1554	
 	// MPropertyStartGroup "Animation"
 	// MPropertyFriendlyName "animation sequence field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "500"
-	ParticleAttributeIndex_t m_nAnimationField; // 0x1550	
+	ParticleAttributeIndex_t m_nAnimationField; // 0x1558	
 	// MPropertyFriendlyName "manual animation frame field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!(m_bAnimated && m_bManualAnimFrame)"
-	ParticleAttributeIndex_t m_nManualFrameField; // 0x1554	
+	ParticleAttributeIndex_t m_nManualFrameField; // 0x155c	
 	// MPropertyFriendlyName "activity override"
 	// MPropertySuppressExpr "mod != dota"
 	// MPropertySortPriority "500"
-	char m_ActivityName[256]; // 0x1558	
+	char m_ActivityName[256]; // 0x1560	
 	// MPropertyFriendlyName "sequence override"
 	// MPropertySuppressExpr "mod == dota"
 	// MPropertySortPriority "500"
-	char m_SequenceName[256]; // 0x1658	
+	char m_SequenceName[256]; // 0x1660	
 	// MPropertyFriendlyName "Enable Cloth Simulation"
-	bool m_bEnableClothSimulation; // 0x1758	
+	bool m_bEnableClothSimulation; // 0x1760	
 private:
-	[[maybe_unused]] uint8_t __pad1759[0x7]; // 0x1759
+	[[maybe_unused]] uint8_t __pad1761[0x7]; // 0x1761
 public:
 	// MPropertyStartGroup "Material"
 	// MPropertyFriendlyName "material override"
 	// MPropertySortPriority "600"
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hOverrideMaterial; // 0x1760	
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hOverrideMaterial; // 0x1768	
 	// MPropertyFriendlyName "override translucent materials"
 	// MPropertySortPriority "600"
-	bool m_bOverrideTranslucentMaterials; // 0x1768	
+	bool m_bOverrideTranslucentMaterials; // 0x1770	
 private:
-	[[maybe_unused]] uint8_t __pad1769[0x7]; // 0x1769
+	[[maybe_unused]] uint8_t __pad1771[0x7]; // 0x1771
 public:
 	// MPropertyFriendlyName "skin number"
 	// MPropertySortPriority "600"
-	CPerParticleFloatInput m_nSkin; // 0x1770	
+	CPerParticleFloatInput m_nSkin; // 0x1778	
 	// MPropertyFriendlyName "material variables"
 	// MPropertyAutoExpandSelf
 	// MPropertySortPriority "600"
-	CUtlVector< MaterialVariable_t > m_MaterialVars; // 0x18c8	
+	CUtlVector< MaterialVariable_t > m_MaterialVars; // 0x18d0	
 	// MPropertyStartGroup "Model Overrides"
 	// MPropertyFriendlyName "input model"
-	CParticleModelInput m_modelInput; // 0x18e0	
+	CParticleModelInput m_modelInput; // 0x18e8	
 	// MPropertyFriendlyName "model LOD"
-	int32_t m_nLOD; // 0x1940	
+	int32_t m_nLOD; // 0x1948	
 	// MPropertyFriendlyName "model override economy loadout slot type"
-	char m_EconSlotName[256]; // 0x1944	
+	char m_EconSlotName[256]; // 0x194c	
 	// MPropertyFriendlyName "model override original model only (ignore shapeshift/hex/etc)"
-	bool m_bOriginalModel; // 0x1a44	
+	bool m_bOriginalModel; // 0x1a4c	
 	// MPropertyFriendlyName "suppress tinting of the model"
-	bool m_bSuppressTint; // 0x1a45	
+	bool m_bSuppressTint; // 0x1a4d	
 	// MPropertyFriendlyName "use raw mesh group (ignore bodygroup field and use submodel field as raw meshgroup)"
-	bool m_bUseRawMeshGroup; // 0x1a46	
+	bool m_bUseRawMeshGroup; // 0x1a4e	
 	// MPropertyFriendlyName "disable shadows"
-	bool m_bDisableShadows; // 0x1a47	
+	bool m_bDisableShadows; // 0x1a4f	
 	// MPropertyFriendlyName "accept decals"
-	bool m_bAcceptsDecals; // 0x1a48	
+	bool m_bAcceptsDecals; // 0x1a50	
 	// MPropertyFriendlyName "forcedrawinterlevedwithsiblings"
-	bool m_bForceDrawInterlevedWithSiblings; // 0x1a49	
+	bool m_bForceDrawInterlevedWithSiblings; // 0x1a51	
 	// MPropertyFriendlyName "do not draw in particle pass"
-	bool m_bDoNotDrawInParticlePass; // 0x1a4a	
+	bool m_bDoNotDrawInParticlePass; // 0x1a52	
 	// MPropertyFriendlyName "render attribute"
-	char m_szRenderAttribute[260]; // 0x1a4b	
+	char m_szRenderAttribute[260]; // 0x1a53	
 private:
-	[[maybe_unused]] uint8_t __pad1b4f[0x1]; // 0x1b4f
+	[[maybe_unused]] uint8_t __pad1b57[0x1]; // 0x1b57
 public:
 	// MPropertyStartGroup "+Renderer Modifiers"
 	// MPropertyFriendlyName "Radius Scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flRadiusScale; // 0x1b50	
+	CParticleCollectionFloatInput m_flRadiusScale; // 0x1b58	
 	// MPropertyFriendlyName "alpha scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flAlphaScale; // 0x1ca8	
+	CParticleCollectionFloatInput m_flAlphaScale; // 0x1cb0	
 	// MPropertyFriendlyName "rotation roll scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flRollScale; // 0x1e00	
+	CParticleCollectionFloatInput m_flRollScale; // 0x1e08	
 	// MPropertyFriendlyName "per-particle alpha scale attribute"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "700"
-	ParticleAttributeIndex_t m_nAlpha2Field; // 0x1f58	
+	ParticleAttributeIndex_t m_nAlpha2Field; // 0x1f60	
 private:
-	[[maybe_unused]] uint8_t __pad1f5c[0x4]; // 0x1f5c
+	[[maybe_unused]] uint8_t __pad1f64[0x4]; // 0x1f64
 public:
 	// MPropertyFriendlyName "color blend"
 	// MPropertySortPriority "700"
-	CParticleCollectionVecInput m_vecColorScale; // 0x1f60	
+	CParticleCollectionVecInput m_vecColorScale; // 0x1f68	
 	// MPropertyFriendlyName "color blend type"
 	// MPropertySortPriority "700"
-	ParticleColorBlendType_t m_nColorBlendType; // 0x25b8	
+	ParticleColorBlendType_t m_nColorBlendType; // 0x25c0	
 };
 
 // Alignment: 3
@@ -22198,6 +22172,7 @@ public:
 	CParticleCollectionRendererFloatInput m_flLightingDirectionality; // 0x2a20	
 	// MPropertyFriendlyName "Particle Shadows"
 	// MPropertySortPriority "400"
+	// MPropertySuppressExpr "mod != csgo"
 	bool m_bParticleShadows; // 0x2b78	
 private:
 	[[maybe_unused]] uint8_t __pad2b79[0x3]; // 0x2b79
@@ -24259,7 +24234,7 @@ public:
 };
 
 // Alignment: 18
-// Size: 0xa0
+// Size: 0x98
 class CTakeDamageInfo
 {
 private:
@@ -24289,9 +24264,9 @@ public:
 	int32_t m_nNumObjectsPenetrated; // 0x74	
 	HSCRIPT m_hScriptInstance; // 0x78	
 private:
-	[[maybe_unused]] uint8_t __pad0080[0x18]; // 0x80
+	[[maybe_unused]] uint8_t __pad0080[0x14]; // 0x80
 public:
-	bool m_bInTakeDamageFlow; // 0x98	
+	bool m_bInTakeDamageFlow; // 0x94	
 	
 	// Static fields:
 	static CTakeDamageInfo &Get_EmptyInfo(){return *reinterpret_cast<CTakeDamageInfo*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CTakeDamageInfo")->m_static_fields[0]->m_instance);};
@@ -24484,8 +24459,8 @@ public:
 	CSkeletonInstance* m_pSkeletonInstance; // 0x8	
 };
 
-// Alignment: 16
-// Size: 0x5c
+// Alignment: 17
+// Size: 0x60
 class CGameScriptedMoveData
 {
 public:
@@ -24500,22 +24475,26 @@ public:
 	MoveType_t m_nPrevMoveType; // 0x48	
 	bool m_bActive; // 0x49	
 	bool m_bTeleportOnEnd; // 0x4a	
-	bool m_bIgnoreRotation; // 0x4b	
-	ScriptedMoveType_t m_nType; // 0x4c	
-	bool m_bSuccess; // 0x50	
+	bool m_bEndOnDestinationReached; // 0x4b	
+	bool m_bIgnoreRotation; // 0x4c	
 private:
-	[[maybe_unused]] uint8_t __pad0051[0x3]; // 0x51
+	[[maybe_unused]] uint8_t __pad004d[0x3]; // 0x4d
 public:
-	ForcedCrouchState_t m_nForcedCrouchState; // 0x54	
-	bool m_bIgnoreCollisions; // 0x58	
+	ScriptedMoveType_t m_nType; // 0x50	
+	bool m_bSuccess; // 0x54	
+private:
+	[[maybe_unused]] uint8_t __pad0055[0x3]; // 0x55
+public:
+	ForcedCrouchState_t m_nForcedCrouchState; // 0x58	
+	bool m_bIgnoreCollisions; // 0x5c	
 };
 
 // Alignment: 0
-// Size: 0x510
+// Size: 0x518
 class CCSGOPlayerAnimGraphState
 {
 private:
-	[[maybe_unused]] uint8_t __pad0000[0x510]; // 0x0
+	[[maybe_unused]] uint8_t __pad0000[0x518]; // 0x0
 public:
 	// No members available
 };
@@ -24551,14 +24530,14 @@ public:
 };
 
 // Alignment: 4
-// Size: 0xb8
+// Size: 0xb0
 struct SummaryTakeDamageInfo_t
 {
 public:
 	int32_t nSummarisedCount; // 0x0	
 	CTakeDamageInfo info; // 0x8	
-	CTakeDamageResult result; // 0xa8	
-	CHandle< CBaseEntity > hTarget; // 0xb0	
+	CTakeDamageResult result; // 0xa0	
+	CHandle< CBaseEntity > hTarget; // 0xa8	
 };
 
 // Alignment: 3
