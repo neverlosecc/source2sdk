@@ -5,7 +5,7 @@
 // /////////////////////////////////////////////////////////////
 // Binary: particles.dll
 // Classes count: 438
-// Enums count: 68
+// Enums count: 69
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
@@ -129,12 +129,13 @@ enum class ParticleDetailLevel_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x3
+// Size: 0x4
 enum class ParticleTraceSet_t : uint32_t
 {
 	PARTICLE_TRACE_SET_ALL = 0x0,
 	PARTICLE_TRACE_SET_STATIC = 0x1,
-	PARTICLE_TRACE_SET_DYNAMIC = 0x2,
+	PARTICLE_TRACE_SET_STATIC_AND_KEYFRAMED = 0x2,
+	PARTICLE_TRACE_SET_DYNAMIC = 0x3,
 };
 
 // Alignment: 4
@@ -412,6 +413,14 @@ enum class BBoxVolumeType_t : uint32_t
 	BBOX_VOLUME = 0x0,
 	BBOX_DIMENSIONS = 0x1,
 	BBOX_MINS_MAXS = 0x2,
+};
+
+// Alignment: 4
+// Size: 0x2
+enum class ParticleHitboxDataSelection_t : uint32_t
+{
+	PARTICLE_HITBOX_AVERAGE_SPEED = 0x0,
+	PARTICLE_HITBOX_COUNT = 0x1,
 };
 
 // Alignment: 4
@@ -748,7 +757,7 @@ enum class ParticleModelType_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x12
+// Size: 0x13
 enum class ParticleVecType_t : uint32_t
 {
 	PVEC_TYPE_INVALID = 0xffffffffffffffff,
@@ -768,7 +777,8 @@ enum class ParticleVecType_t : uint32_t
 	PVEC_TYPE_RANDOM_UNIFORM = 0xd,
 	PVEC_TYPE_RANDOM_UNIFORM_OFFSET = 0xe,
 	PVEC_TYPE_CP_DELTA = 0xf,
-	PVEC_TYPE_COUNT = 0x10,
+	PVEC_TYPE_CLOSEST_CAMERA_POSITION = 0x10,
+	PVEC_TYPE_COUNT = 0x11,
 };
 
 struct ParticleAttributeIndex_t;
@@ -1296,7 +1306,7 @@ public:
 	// No members available
 };
 
-// Alignment: 45
+// Alignment: 46
 // Size: 0x158
 class CParticleFloatInput : public CParticleInput
 {
@@ -1318,51 +1328,49 @@ public:
 private:
 	[[maybe_unused]] uint8_t __pad0079[0x3]; // 0x79
 public:
-	ParticleFloatRandomMode_t m_nRandomMode; // 0x7c	
+	int32_t m_nRandomSeed; // 0x7c	
+	ParticleFloatRandomMode_t m_nRandomMode; // 0x80	
 private:
-	[[maybe_unused]] uint8_t __pad0080[0x4]; // 0x80
+	[[maybe_unused]] uint8_t __pad0084[0x4]; // 0x84
 public:
-	float m_flLOD0; // 0x84	
-	float m_flLOD1; // 0x88	
-	float m_flLOD2; // 0x8c	
-	float m_flLOD3; // 0x90	
-	ParticleAttributeIndex_t m_nNoiseInputVectorAttribute; // 0x94	
-	float m_flNoiseOutputMin; // 0x98	
-	float m_flNoiseOutputMax; // 0x9c	
-	float m_flNoiseScale; // 0xa0	
-	Vector m_vecNoiseOffsetRate; // 0xa4	
-	float m_flNoiseOffset; // 0xb0	
-	int32_t m_nNoiseOctaves; // 0xb4	
-	PFNoiseTurbulence_t m_nNoiseTurbulence; // 0xb8	
-	PFNoiseType_t m_nNoiseType; // 0xbc	
-	PFNoiseModifier_t m_nNoiseModifier; // 0xc0	
-	float m_flNoiseTurbulenceScale; // 0xc4	
-	float m_flNoiseTurbulenceMix; // 0xc8	
-	float m_flNoiseImgPreviewScale; // 0xcc	
-	bool m_bNoiseImgPreviewLive; // 0xd0	
+	float m_flLOD0; // 0x88	
+	float m_flLOD1; // 0x8c	
+	float m_flLOD2; // 0x90	
+	float m_flLOD3; // 0x94	
+	ParticleAttributeIndex_t m_nNoiseInputVectorAttribute; // 0x98	
+	float m_flNoiseOutputMin; // 0x9c	
+	float m_flNoiseOutputMax; // 0xa0	
+	float m_flNoiseScale; // 0xa4	
+	Vector m_vecNoiseOffsetRate; // 0xa8	
+	float m_flNoiseOffset; // 0xb4	
+	int32_t m_nNoiseOctaves; // 0xb8	
+	PFNoiseTurbulence_t m_nNoiseTurbulence; // 0xbc	
+	PFNoiseType_t m_nNoiseType; // 0xc0	
+	PFNoiseModifier_t m_nNoiseModifier; // 0xc4	
+	float m_flNoiseTurbulenceScale; // 0xc8	
+	float m_flNoiseTurbulenceMix; // 0xcc	
+	float m_flNoiseImgPreviewScale; // 0xd0	
+	bool m_bNoiseImgPreviewLive; // 0xd4	
 private:
-	[[maybe_unused]] uint8_t __pad00d1[0xb]; // 0xd1
+	[[maybe_unused]] uint8_t __pad00d5[0xb]; // 0xd5
 public:
-	float m_flNoCameraFallback; // 0xdc	
-	bool m_bUseBoundsCenter; // 0xe0	
+	float m_flNoCameraFallback; // 0xe0	
+	bool m_bUseBoundsCenter; // 0xe4	
 private:
-	[[maybe_unused]] uint8_t __pad00e1[0x3]; // 0xe1
+	[[maybe_unused]] uint8_t __pad00e5[0x3]; // 0xe5
 public:
-	ParticleFloatInputMode_t m_nInputMode; // 0xe4	
-	float m_flMultFactor; // 0xe8	
-	float m_flInput0; // 0xec	
-	float m_flInput1; // 0xf0	
-	float m_flOutput0; // 0xf4	
-	float m_flOutput1; // 0xf8	
-	float m_flNotchedRangeMin; // 0xfc	
-	float m_flNotchedRangeMax; // 0x100	
-	float m_flNotchedOutputOutside; // 0x104	
-	float m_flNotchedOutputInside; // 0x108	
-	ParticleFloatBiasType_t m_nBiasType; // 0x10c	
-	float m_flBiasParameter; // 0x110	
-private:
-	[[maybe_unused]] uint8_t __pad0114[0x4]; // 0x114
-public:
+	ParticleFloatInputMode_t m_nInputMode; // 0xe8	
+	float m_flMultFactor; // 0xec	
+	float m_flInput0; // 0xf0	
+	float m_flInput1; // 0xf4	
+	float m_flOutput0; // 0xf8	
+	float m_flOutput1; // 0xfc	
+	float m_flNotchedRangeMin; // 0x100	
+	float m_flNotchedRangeMax; // 0x104	
+	float m_flNotchedOutputOutside; // 0x108	
+	float m_flNotchedOutputInside; // 0x10c	
+	ParticleFloatBiasType_t m_nBiasType; // 0x110	
+	float m_flBiasParameter; // 0x114	
 	CPiecewiseCurve m_Curve; // 0x118	
 };
 
@@ -2063,7 +2071,7 @@ public:
 };
 
 // Alignment: 27
-// Size: 0x2b90
+// Size: 0x2f90
 class C_OP_RenderSprites : public CBaseRendererSource2
 {
 public:
@@ -2084,108 +2092,109 @@ public:
 	// MPropertySuppressExpr "m_nOrientationType != PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL && m_nOrientationType != PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL"
 	bool m_bUseYawWithNormalAligned; // 0x25d0	
 private:
-	[[maybe_unused]] uint8_t __pad25d1[0x3]; // 0x25d1
+	[[maybe_unused]] uint8_t __pad25d1[0x7]; // 0x25d1
 public:
 	// MPropertyStartGroup "Fading and culling"
 	// MPropertyFriendlyName "minimum visual screen size"
 	// MPropertySortPriority "1000"
-	float m_flMinSize; // 0x25d4	
+	CParticleCollectionRendererFloatInput m_flMinSize; // 0x25d8	
 	// MPropertyFriendlyName "maximum visual screen size"
 	// MPropertySortPriority "1000"
-	float m_flMaxSize; // 0x25d8	
+	CParticleCollectionRendererFloatInput m_flMaxSize; // 0x2730	
 	// MPropertyFriendlyName "Factor to map size adjustment to alpha"
 	// MPropertySortPriority "1000"
-	float m_flAlphaAdjustWithSizeAdjust; // 0x25dc	
+	CParticleCollectionRendererFloatInput m_flAlphaAdjustWithSizeAdjust; // 0x2888	
 	// MPropertyFriendlyName "screen size to start fading"
 	// MPropertySortPriority "1000"
-	CParticleCollectionRendererFloatInput m_flStartFadeSize; // 0x25e0	
+	CParticleCollectionRendererFloatInput m_flStartFadeSize; // 0x29e0	
 	// MPropertyFriendlyName "screen size to fade away"
 	// MPropertySortPriority "1000"
-	CParticleCollectionRendererFloatInput m_flEndFadeSize; // 0x2738	
+	CParticleCollectionRendererFloatInput m_flEndFadeSize; // 0x2b38	
 	// MPropertyFriendlyName "start fade dot product of normal vs view"
 	// MPropertySortPriority "1000"
-	float m_flStartFadeDot; // 0x2890	
+	float m_flStartFadeDot; // 0x2c90	
 	// MPropertyFriendlyName "end fade dot product of normal vs view"
 	// MPropertySortPriority "1000"
-	float m_flEndFadeDot; // 0x2894	
+	float m_flEndFadeDot; // 0x2c94	
 	// MPropertyStartGroup "Distance to alpha coding"
 	// MPropertyFriendlyName "distance alpha"
 	// MPropertySortPriority "0"
-	bool m_bDistanceAlpha; // 0x2898	
+	bool m_bDistanceAlpha; // 0x2c98	
 	// MPropertyFriendlyName "use soft edges for distance alpha"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bDistanceAlpha"
-	bool m_bSoftEdges; // 0x2899	
+	bool m_bSoftEdges; // 0x2c99	
 private:
-	[[maybe_unused]] uint8_t __pad289a[0x2]; // 0x289a
+	[[maybe_unused]] uint8_t __pad2c9a[0x2]; // 0x2c9a
 public:
 	// MPropertyFriendlyName "start value for soft edges for distance alpha"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bDistanceAlpha"
-	float m_flEdgeSoftnessStart; // 0x289c	
+	float m_flEdgeSoftnessStart; // 0x2c9c	
 	// MPropertyFriendlyName "end value for soft edges for distance alpha"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bDistanceAlpha"
-	float m_flEdgeSoftnessEnd; // 0x28a0	
+	float m_flEdgeSoftnessEnd; // 0x2ca0	
 	// MPropertyStartGroup "Outlining"
 	// MPropertyFriendlyName "enable particle outlining"
 	// MPropertySortPriority "0"
-	bool m_bOutline; // 0x28a4	
+	bool m_bOutline; // 0x2ca4	
 	// MPropertyFriendlyName "outline color"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	Color m_OutlineColor; // 0x28a5	
+	Color m_OutlineColor; // 0x2ca5	
 private:
-	[[maybe_unused]] uint8_t __pad28a9[0x3]; // 0x28a9
+	[[maybe_unused]] uint8_t __pad2ca9[0x3]; // 0x2ca9
 public:
 	// MPropertyFriendlyName "outline alpha"
 	// MPropertyAttributeRange "0 255"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	int32_t m_nOutlineAlpha; // 0x28ac	
+	int32_t m_nOutlineAlpha; // 0x2cac	
 	// MPropertyFriendlyName "outline start 0"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	float m_flOutlineStart0; // 0x28b0	
+	float m_flOutlineStart0; // 0x2cb0	
 	// MPropertyFriendlyName "outline start 1"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	float m_flOutlineStart1; // 0x28b4	
+	float m_flOutlineStart1; // 0x2cb4	
 	// MPropertyFriendlyName "outline end 0"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	float m_flOutlineEnd0; // 0x28b8	
+	float m_flOutlineEnd0; // 0x2cb8	
 	// MPropertyFriendlyName "outline end 1"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	float m_flOutlineEnd1; // 0x28bc	
+	float m_flOutlineEnd1; // 0x2cbc	
 	// MPropertyStartGroup "Lighting and Shadows"
 	// MPropertyFriendlyName "lighting mode"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "mod != hlx"
-	ParticleLightingQuality_t m_nLightingMode; // 0x28c0	
+	ParticleLightingQuality_t m_nLightingMode; // 0x2cc0	
 private:
-	[[maybe_unused]] uint8_t __pad28c4[0x4]; // 0x28c4
+	[[maybe_unused]] uint8_t __pad2cc4[0x4]; // 0x2cc4
 public:
 	// MPropertyFriendlyName "vertex lighting tessellation (0-5)"
 	// MPropertyAttributeRange "0 5"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "mod != hlx || m_nLightingMode != PARTICLE_LIGHTING_PER_VERTEX"
-	CParticleCollectionRendererFloatInput m_flLightingTessellation; // 0x28c8	
+	CParticleCollectionRendererFloatInput m_flLightingTessellation; // 0x2cc8	
 	// MPropertyFriendlyName "lighting directionality"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "mod != hlx"
-	CParticleCollectionRendererFloatInput m_flLightingDirectionality; // 0x2a20	
+	CParticleCollectionRendererFloatInput m_flLightingDirectionality; // 0x2e20	
 	// MPropertyFriendlyName "Particle Shadows"
 	// MPropertySortPriority "400"
-	bool m_bParticleShadows; // 0x2b78	
+	// MPropertySuppressExpr "mod != csgo"
+	bool m_bParticleShadows; // 0x2f78	
 private:
-	[[maybe_unused]] uint8_t __pad2b79[0x3]; // 0x2b79
+	[[maybe_unused]] uint8_t __pad2f79[0x3]; // 0x2f79
 public:
 	// MPropertyFriendlyName "Shadow Density"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "!m_bParticleShadows"
-	float m_flShadowDensity; // 0x2b7c	
+	float m_flShadowDensity; // 0x2f7c	
 };
 
 // Alignment: 1
@@ -2217,14 +2226,6 @@ public:
 // Alignment: 0
 // Size: 0x110
 class CParticleCollectionBindingInstance : public CBasePulseGraphInstance
-{
-public:
-	// No members available
-};
-
-// Alignment: 0
-// Size: 0x140
-class CParticleBindingRealPulse : public CParticleCollectionBindingInstance
 {
 public:
 	// No members available
@@ -2478,11 +2479,13 @@ public:
 	// MPropertyFriendlyName "brush only"
 	bool m_bBrushOnly; // 0x25d	
 	// MPropertyFriendlyName "include water"
+	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
 	bool m_bIncludeWater; // 0x25e	
 private:
 	[[maybe_unused]] uint8_t __pad025f[0x1]; // 0x25f
 public:
 	// MPropertyFriendlyName "CP Entity to Ignore for Collisions"
+	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
 	int32_t m_nIgnoreCP; // 0x260	
 	// MPropertyFriendlyName "control point movement distance tolerance"
 	// MPropertySuppressExpr "m_nCollisionMode == COLLISION_MODE_PER_PARTICLE_TRACE"
@@ -2550,6 +2553,15 @@ public:
 	bool m_bLocalSpace; // 0xe74	
 	// MPropertyFriendlyName "Take radius into account"
 	bool m_bAccountForRadius; // 0xe75	
+};
+
+// Alignment: 1
+// Size: 0x1d0
+class C_OP_ShapeMatchingConstraint : public CParticleFunctionConstraint
+{
+public:
+	// MPropertyFriendlyName "shape restoration time"
+	float m_flShapeRestorationTime; // 0x1c0	
 };
 
 // Alignment: 5
@@ -3016,6 +3028,7 @@ public:
 	// MPropertyFriendlyName "No Collision Behavior"
 	ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x500	
 	// MPropertyFriendlyName "include water"
+	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
 	bool m_bIncludeWater; // 0x504	
 	// MPropertyFriendlyName "set normal"
 	bool m_bSetNormal; // 0x505	
@@ -3033,6 +3046,7 @@ public:
 	// MPropertyFriendlyName "preserve initial Z-offset relative to cp"
 	int32_t m_nPreserveOffsetCP; // 0x510	
 	// MPropertyFriendlyName "CP Entity to Ignore for Collisions"
+	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
 	int32_t m_nIgnoreCP; // 0x514	
 };
 
@@ -4919,8 +4933,8 @@ public:
 	bool m_bWritePreviousPosition; // 0x821	
 };
 
-// Alignment: 5
-// Size: 0x480
+// Alignment: 6
+// Size: 0x5e0
 class C_OP_InstantaneousEmitter : public CParticleFunctionEmitter
 {
 public:
@@ -4931,10 +4945,15 @@ public:
 	CParticleCollectionFloatInput m_flStartTime; // 0x318	
 	// MPropertyFriendlyName "emission scale from killed parent particles"
 	float m_flInitFromKilledParentParticles; // 0x470	
+private:
+	[[maybe_unused]] uint8_t __pad0474[0x4]; // 0x474
+public:
+	// MPropertyFriendlyName "emission scale from parent particle count"
+	CParticleCollectionFloatInput m_flParentParticleScale; // 0x478	
 	// MPropertyFriendlyName "maximum emission per frame"
-	int32_t m_nMaxEmittedPerFrame; // 0x474	
+	int32_t m_nMaxEmittedPerFrame; // 0x5d0	
 	// MPropertyFriendlyName "control point with snapshot data"
-	int32_t m_nSnapshotControlPoint; // 0x478	
+	int32_t m_nSnapshotControlPoint; // 0x5d4	
 };
 
 // Alignment: 10
@@ -6391,7 +6410,7 @@ public:
 	float m_flBias; // 0x1d4	
 };
 
-// Alignment: 5
+// Alignment: 6
 // Size: 0x1e0
 class C_OP_ColorInterpolate : public CParticleFunctionOperator
 {
@@ -6410,6 +6429,8 @@ public:
 	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d8	
 	// MPropertyFriendlyName "ease in and out"
 	bool m_bEaseInOut; // 0x1dc	
+	// MPropertyFriendlyName "use new code"
+	bool m_bUseNewCode; // 0x1dd	
 };
 
 // Alignment: 6
@@ -8390,7 +8411,7 @@ public:
 	CParticleCollectionFloatInput m_Lerp; // 0x320	
 };
 
-// Alignment: 4
+// Alignment: 5
 // Size: 0x4a0
 class C_OP_SetFloat : public CParticleFunctionOperator
 {
@@ -8404,6 +8425,8 @@ public:
 	ParticleSetMethod_t m_nSetMethod; // 0x31c	
 	// MPropertyFriendlyName "interpolation"
 	CPerParticleFloatInput m_Lerp; // 0x320	
+	// MPropertyFriendlyName "use new code"
+	bool m_bUseNewCode; // 0x478	
 };
 
 // Alignment: 5
@@ -8682,7 +8705,7 @@ public:
 	bool m_bUseDeltaV; // 0x1ec	
 };
 
-// Alignment: 10
+// Alignment: 11
 // Size: 0xe20
 class C_OP_RemapAverageHitboxSpeedtoCP : public CParticleFunctionPreEmission
 {
@@ -8694,9 +8717,8 @@ public:
 	// MPropertyFriendlyName "Output component"
 	// MPropertyAttributeChoiceName "vector_component"
 	int32_t m_nField; // 0x1d8	
-private:
-	[[maybe_unused]] uint8_t __pad01dc[0x4]; // 0x1dc
-public:
+	// MPropertyFriendlyName "hitbox data"
+	ParticleHitboxDataSelection_t m_nHitboxDataType; // 0x1dc	
 	// MPropertyFriendlyName "input minimum"
 	CParticleCollectionFloatInput m_flInputMin; // 0x1e0	
 	// MPropertyFriendlyName "input maximum"
@@ -8706,11 +8728,13 @@ public:
 	// MPropertyFriendlyName "output maximum"
 	CParticleCollectionFloatInput m_flOutputMax; // 0x5e8	
 	// MPropertyFriendlyName "intersection height CP"
+	// MPropertySuppressExpr "m_nHitboxDataType != PARTICLE_HITBOX_AVERAGE_SPEED"
 	int32_t m_nHeightControlPointNumber; // 0x740	
 private:
 	[[maybe_unused]] uint8_t __pad0744[0x4]; // 0x744
 public:
 	// MPropertyFriendlyName "comparison velocity"
+	// MPropertySuppressExpr "m_nHitboxDataType != PARTICLE_HITBOX_AVERAGE_SPEED"
 	CParticleCollectionVecInput m_vecComparisonVelocity; // 0x748	
 	// MPropertyFriendlyName "hitbox set"
 	char m_HitboxSetName[128]; // 0xda0	
@@ -9978,7 +10002,7 @@ public:
 	float m_flForwardDegrees; // 0x204	
 };
 
-// Alignment: 49
+// Alignment: 50
 // Size: 0x25f0
 class C_OP_RenderModels : public CParticleFunctionRenderer
 {
@@ -10050,127 +10074,133 @@ public:
 	// MPropertyFriendlyName "apply scales in local model space"
 	// MPropertySortPriority "700"
 	bool m_bLocalScale; // 0x1540	
+private:
+	[[maybe_unused]] uint8_t __pad1541[0x3]; // 0x1541
+public:
+	// MPropertyFriendlyName "model size cull bloat"
+	// MPropertyAttributeChoiceName "particlefield_size_cull_bloat"
+	int32_t m_nSizeCullBloat; // 0x1544	
 	// MPropertyStartGroup "Animation"
 	// MPropertyFriendlyName "animated"
 	// MPropertySortPriority "500"
-	bool m_bAnimated; // 0x1541	
+	bool m_bAnimated; // 0x1548	
 private:
-	[[maybe_unused]] uint8_t __pad1542[0x2]; // 0x1542
+	[[maybe_unused]] uint8_t __pad1549[0x3]; // 0x1549
 public:
 	// MPropertyFriendlyName "animation rate"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	float m_flAnimationRate; // 0x1544	
+	float m_flAnimationRate; // 0x154c	
 	// MPropertyFriendlyName "scale animation rate"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bScaleAnimationRate; // 0x1548	
+	bool m_bScaleAnimationRate; // 0x1550	
 	// MPropertyFriendlyName "force looping animations"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bForceLoopingAnimation; // 0x1549	
+	bool m_bForceLoopingAnimation; // 0x1551	
 	// MPropertyFriendlyName "reset animation frame on stop"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bResetAnimOnStop; // 0x154a	
+	bool m_bResetAnimOnStop; // 0x1552	
 	// MPropertyFriendlyName "set animation frame manually"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bManualAnimFrame; // 0x154b	
+	bool m_bManualAnimFrame; // 0x1553	
 	// MPropertyFriendlyName "animation rate scale field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	ParticleAttributeIndex_t m_nAnimationScaleField; // 0x154c	
+	ParticleAttributeIndex_t m_nAnimationScaleField; // 0x1554	
 	// MPropertyStartGroup "Animation"
 	// MPropertyFriendlyName "animation sequence field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "500"
-	ParticleAttributeIndex_t m_nAnimationField; // 0x1550	
+	ParticleAttributeIndex_t m_nAnimationField; // 0x1558	
 	// MPropertyFriendlyName "manual animation frame field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!(m_bAnimated && m_bManualAnimFrame)"
-	ParticleAttributeIndex_t m_nManualFrameField; // 0x1554	
+	ParticleAttributeIndex_t m_nManualFrameField; // 0x155c	
 	// MPropertyFriendlyName "activity override"
 	// MPropertySuppressExpr "mod != dota"
 	// MPropertySortPriority "500"
-	char m_ActivityName[256]; // 0x1558	
+	char m_ActivityName[256]; // 0x1560	
 	// MPropertyFriendlyName "sequence override"
 	// MPropertySuppressExpr "mod == dota"
 	// MPropertySortPriority "500"
-	char m_SequenceName[256]; // 0x1658	
+	char m_SequenceName[256]; // 0x1660	
 	// MPropertyFriendlyName "Enable Cloth Simulation"
-	bool m_bEnableClothSimulation; // 0x1758	
+	bool m_bEnableClothSimulation; // 0x1760	
 private:
-	[[maybe_unused]] uint8_t __pad1759[0x7]; // 0x1759
+	[[maybe_unused]] uint8_t __pad1761[0x7]; // 0x1761
 public:
 	// MPropertyStartGroup "Material"
 	// MPropertyFriendlyName "material override"
 	// MPropertySortPriority "600"
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hOverrideMaterial; // 0x1760	
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hOverrideMaterial; // 0x1768	
 	// MPropertyFriendlyName "override translucent materials"
 	// MPropertySortPriority "600"
-	bool m_bOverrideTranslucentMaterials; // 0x1768	
+	bool m_bOverrideTranslucentMaterials; // 0x1770	
 private:
-	[[maybe_unused]] uint8_t __pad1769[0x7]; // 0x1769
+	[[maybe_unused]] uint8_t __pad1771[0x7]; // 0x1771
 public:
 	// MPropertyFriendlyName "skin number"
 	// MPropertySortPriority "600"
-	CPerParticleFloatInput m_nSkin; // 0x1770	
+	CPerParticleFloatInput m_nSkin; // 0x1778	
 	// MPropertyFriendlyName "material variables"
 	// MPropertyAutoExpandSelf
 	// MPropertySortPriority "600"
-	CUtlVector< MaterialVariable_t > m_MaterialVars; // 0x18c8	
+	CUtlVector< MaterialVariable_t > m_MaterialVars; // 0x18d0	
 	// MPropertyStartGroup "Model Overrides"
 	// MPropertyFriendlyName "input model"
-	CParticleModelInput m_modelInput; // 0x18e0	
+	CParticleModelInput m_modelInput; // 0x18e8	
 	// MPropertyFriendlyName "model LOD"
-	int32_t m_nLOD; // 0x1940	
+	int32_t m_nLOD; // 0x1948	
 	// MPropertyFriendlyName "model override economy loadout slot type"
-	char m_EconSlotName[256]; // 0x1944	
+	char m_EconSlotName[256]; // 0x194c	
 	// MPropertyFriendlyName "model override original model only (ignore shapeshift/hex/etc)"
-	bool m_bOriginalModel; // 0x1a44	
+	bool m_bOriginalModel; // 0x1a4c	
 	// MPropertyFriendlyName "suppress tinting of the model"
-	bool m_bSuppressTint; // 0x1a45	
+	bool m_bSuppressTint; // 0x1a4d	
 	// MPropertyFriendlyName "use raw mesh group (ignore bodygroup field and use submodel field as raw meshgroup)"
-	bool m_bUseRawMeshGroup; // 0x1a46	
+	bool m_bUseRawMeshGroup; // 0x1a4e	
 	// MPropertyFriendlyName "disable shadows"
-	bool m_bDisableShadows; // 0x1a47	
+	bool m_bDisableShadows; // 0x1a4f	
 	// MPropertyFriendlyName "accept decals"
-	bool m_bAcceptsDecals; // 0x1a48	
+	bool m_bAcceptsDecals; // 0x1a50	
 	// MPropertyFriendlyName "forcedrawinterlevedwithsiblings"
-	bool m_bForceDrawInterlevedWithSiblings; // 0x1a49	
+	bool m_bForceDrawInterlevedWithSiblings; // 0x1a51	
 	// MPropertyFriendlyName "do not draw in particle pass"
-	bool m_bDoNotDrawInParticlePass; // 0x1a4a	
+	bool m_bDoNotDrawInParticlePass; // 0x1a52	
 	// MPropertyFriendlyName "render attribute"
-	char m_szRenderAttribute[260]; // 0x1a4b	
+	char m_szRenderAttribute[260]; // 0x1a53	
 private:
-	[[maybe_unused]] uint8_t __pad1b4f[0x1]; // 0x1b4f
+	[[maybe_unused]] uint8_t __pad1b57[0x1]; // 0x1b57
 public:
 	// MPropertyStartGroup "+Renderer Modifiers"
 	// MPropertyFriendlyName "Radius Scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flRadiusScale; // 0x1b50	
+	CParticleCollectionFloatInput m_flRadiusScale; // 0x1b58	
 	// MPropertyFriendlyName "alpha scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flAlphaScale; // 0x1ca8	
+	CParticleCollectionFloatInput m_flAlphaScale; // 0x1cb0	
 	// MPropertyFriendlyName "rotation roll scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flRollScale; // 0x1e00	
+	CParticleCollectionFloatInput m_flRollScale; // 0x1e08	
 	// MPropertyFriendlyName "per-particle alpha scale attribute"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "700"
-	ParticleAttributeIndex_t m_nAlpha2Field; // 0x1f58	
+	ParticleAttributeIndex_t m_nAlpha2Field; // 0x1f60	
 private:
-	[[maybe_unused]] uint8_t __pad1f5c[0x4]; // 0x1f5c
+	[[maybe_unused]] uint8_t __pad1f64[0x4]; // 0x1f64
 public:
 	// MPropertyFriendlyName "color blend"
 	// MPropertySortPriority "700"
-	CParticleCollectionVecInput m_vecColorScale; // 0x1f60	
+	CParticleCollectionVecInput m_vecColorScale; // 0x1f68	
 	// MPropertyFriendlyName "color blend type"
 	// MPropertySortPriority "700"
-	ParticleColorBlendType_t m_nColorBlendType; // 0x25b8	
+	ParticleColorBlendType_t m_nColorBlendType; // 0x25c0	
 };
 
 // Alignment: 8

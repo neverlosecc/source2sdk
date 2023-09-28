@@ -4,8 +4,8 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: !GlobalTypes
-// Classes count: 1395
-// Enums count: 562
+// Classes count: 1403
+// Enums count: 566
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
@@ -429,14 +429,6 @@ enum class VPhysXJoint_t__Flags_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x2
-enum class AnimVRHandMotionRange_t : uint32_t
-{
-	MotionRange_WithController = 0x0,
-	MotionRange_WithoutController = 0x1,
-};
-
-// Alignment: 4
 // Size: 0x3
 enum class FieldNetworkOption : uint32_t
 {
@@ -599,24 +591,6 @@ enum class IKChannelMode : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x4
-enum class AnimVrFingerSplay_t : uint32_t
-{
-	AnimVrFingerSplay_Thumb_Index = 0x0,
-	AnimVrFingerSplay_Index_Middle = 0x1,
-	AnimVrFingerSplay_Middle_Ring = 0x2,
-	AnimVrFingerSplay_Ring_Pinky = 0x3,
-};
-
-// Alignment: 4
-// Size: 0x2
-enum class AnimVrBoneTransformSource_t : uint32_t
-{
-	AnimVrBoneTransformSource_LiveStream = 0x0,
-	AnimVrBoneTransformSource_GripLimit = 0x1,
-};
-
-// Alignment: 4
 // Size: 0x5
 enum class ResetCycleOption : uint32_t
 {
@@ -718,14 +692,6 @@ enum class Blend2DMode : uint32_t
 {
 	Blend2DMode_General = 0x0,
 	Blend2DMode_Directional = 0x1,
-};
-
-// Alignment: 4
-// Size: 0x2
-enum class AnimVRHand_t : uint32_t
-{
-	AnimVRHand_Left = 0x0,
-	AnimVRHand_Right = 0x1,
 };
 
 // Alignment: 4
@@ -988,17 +954,6 @@ enum class IKTargetCoordinateSystem : uint32_t
 	IKTARGETCOORDINATESYSTEM_WorldSpace = 0x0,
 	IKTARGETCOORDINATESYSTEM_ModelSpace = 0x1,
 	IKTARGETCOORDINATESYSTEM_COUNT = 0x2,
-};
-
-// Alignment: 4
-// Size: 0x5
-enum class AnimVRFinger_t : uint32_t
-{
-	AnimVrFinger_Thumb = 0x0,
-	AnimVrFinger_Index = 0x1,
-	AnimVrFinger_Middle = 0x2,
-	AnimVrFinger_Ring = 0x3,
-	AnimVrFinger_Pinky = 0x4,
 };
 
 // Alignment: 4
@@ -1520,6 +1475,14 @@ enum class ParticleOrientationChoiceList_t : uint32_t
 };
 
 // Alignment: 4
+// Size: 0x2
+enum class ParticleHitboxDataSelection_t : uint32_t
+{
+	PARTICLE_HITBOX_AVERAGE_SPEED = 0x0,
+	PARTICLE_HITBOX_COUNT = 0x1,
+};
+
+// Alignment: 4
 // Size: 0x5
 enum class ParticleTransformType_t : uint32_t
 {
@@ -1623,7 +1586,7 @@ enum class ParticleLightUnitChoiceList_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x12
+// Size: 0x13
 enum class ParticleVecType_t : uint32_t
 {
 	PVEC_TYPE_INVALID = 0xffffffffffffffff,
@@ -1643,7 +1606,8 @@ enum class ParticleVecType_t : uint32_t
 	PVEC_TYPE_RANDOM_UNIFORM = 0xd,
 	PVEC_TYPE_RANDOM_UNIFORM_OFFSET = 0xe,
 	PVEC_TYPE_CP_DELTA = 0xf,
-	PVEC_TYPE_COUNT = 0x10,
+	PVEC_TYPE_CLOSEST_CAMERA_POSITION = 0x10,
+	PVEC_TYPE_COUNT = 0x11,
 };
 
 // Alignment: 4
@@ -1737,12 +1701,13 @@ enum class ParticleTextureLayerBlendType_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x3
+// Size: 0x4
 enum class ParticleTraceSet_t : uint32_t
 {
 	PARTICLE_TRACE_SET_ALL = 0x0,
 	PARTICLE_TRACE_SET_STATIC = 0x1,
-	PARTICLE_TRACE_SET_DYNAMIC = 0x2,
+	PARTICLE_TRACE_SET_STATIC_AND_KEYFRAMED = 0x2,
+	PARTICLE_TRACE_SET_DYNAMIC = 0x3,
 };
 
 // Alignment: 4
@@ -2299,6 +2264,20 @@ enum class DotaDefaultUIElement_t : uint32_t
 };
 
 // Alignment: 4
+// Size: 0x8
+enum class EFantasyOperationTarget : uint32_t
+{
+	k_eFantasyOperationTarget_None = 0x0,
+	k_eFantasyOperationTarget_GemType = 0x1,
+	k_eFantasyOperationTarget_Region = 0x2,
+	k_eFantasyOperationTarget_SpecificGem = 0x3,
+	k_eFantasyOperationTarget_Title = 0x4,
+	k_eFantasyOperationTarget_ExtraInput = 0x5,
+	k_eFantasyOperationTarget_PlayerDraft = 0x6,
+	k_eFantasyOperationTarget_TitleDraft = 0x7,
+};
+
+// Alignment: 4
 // Size: 0x4
 enum class SPELL_DISPELLABLE_TYPES : uint32_t
 {
@@ -2575,7 +2554,7 @@ enum class TakeDamageFlags_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x12
+// Size: 0x13
 enum class WeaponSound_t : uint32_t
 {
 	WEAPON_SOUND_EMPTY = 0x0,
@@ -2587,15 +2566,16 @@ enum class WeaponSound_t : uint32_t
 	WEAPON_SOUND_MELEE_HIT = 0x6,
 	WEAPON_SOUND_MELEE_HIT_WORLD = 0x7,
 	WEAPON_SOUND_MELEE_HIT_PLAYER = 0x8,
-	WEAPON_SOUND_SPECIAL1 = 0x9,
-	WEAPON_SOUND_SPECIAL2 = 0xa,
-	WEAPON_SOUND_SPECIAL3 = 0xb,
-	WEAPON_SOUND_NEARLYEMPTY = 0xc,
-	WEAPON_SOUND_IMPACT = 0xd,
-	WEAPON_SOUND_REFLECT = 0xe,
-	WEAPON_SOUND_SECONDARY_IMPACT = 0xf,
-	WEAPON_SOUND_SECONDARY_REFLECT = 0x10,
-	WEAPON_SOUND_NUM_TYPES = 0x11,
+	WEAPON_SOUND_MELEE_HIT_NPC = 0x9,
+	WEAPON_SOUND_SPECIAL1 = 0xa,
+	WEAPON_SOUND_SPECIAL2 = 0xb,
+	WEAPON_SOUND_SPECIAL3 = 0xc,
+	WEAPON_SOUND_NEARLYEMPTY = 0xd,
+	WEAPON_SOUND_IMPACT = 0xe,
+	WEAPON_SOUND_REFLECT = 0xf,
+	WEAPON_SOUND_SECONDARY_IMPACT = 0x10,
+	WEAPON_SOUND_SECONDARY_REFLECT = 0x11,
+	WEAPON_SOUND_NUM_TYPES = 0x12,
 };
 
 // Alignment: 4
@@ -2966,6 +2946,15 @@ enum class PointWorldTextJustifyHorizontal_t : uint32_t
 };
 
 // Alignment: 4
+// Size: 0x3
+enum class EFantasyStatType : uint32_t
+{
+	k_eFantasyStatType_Player = 0x0,
+	k_eFantasyStatType_Team = 0x1,
+	k_eFantasyStatType_Game = 0x2,
+};
+
+// Alignment: 4
 // Size: 0x6
 enum class EGCPlatform : uint32_t
 {
@@ -2983,15 +2972,6 @@ enum class EEventActionScoreMode : uint32_t
 {
 	k_eEventActionScoreMode_Add = 0x0,
 	k_eEventActionScoreMode_Min = 0x1,
-};
-
-// Alignment: 4
-// Size: 0x3
-enum class WeaponState_t : uint32_t
-{
-	WEAPON_NOT_CARRIED = 0x0,
-	WEAPON_IS_CARRIED_BY_PLAYER = 0x1,
-	WEAPON_IS_ACTIVE = 0x2,
 };
 
 // Alignment: 4
@@ -3302,7 +3282,7 @@ enum class DOTAPostGameColumn_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x9
+// Size: 0xa
 enum class DOTAPortraitEnvironmentType_t : uint32_t
 {
 	DOTA_PORTRAIT_ENVIRONMENT_INVALID = 0xffffffffffffffff,
@@ -3313,7 +3293,8 @@ enum class DOTAPortraitEnvironmentType_t : uint32_t
 	DOTA_PORTRAIT_ENVIRONMENT_FULL_BODY_RIGHT_SIDE = 0x4,
 	DOTA_PORTRAIT_ENVIRONMENT_FULL_BODY_LOADOUT = 0x5,
 	DOTA_PORTRAIT_ENVIRONMENT_ICON = 0x6,
-	DOTA_PORTRAIT_ENVIRONMENT_TYPE_COUNT = 0x7,
+	DOTA_PORTRAIT_ENVIRONMENT_SHOWCASE = 0x7,
+	DOTA_PORTRAIT_ENVIRONMENT_TYPE_COUNT = 0x8,
 };
 
 // Alignment: 4
@@ -3872,7 +3853,7 @@ enum class EGCBaseMsg : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x120
+// Size: 0x121
 enum class modifierfunction : uint32_t
 {
 	MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE = 0x0,
@@ -4161,7 +4142,8 @@ enum class modifierfunction : uint32_t
 	MODIFIER_PROPERTY_PROJECTILE_SPEED = 0x11b,
 	MODIFIER_PROPERTY_BECOME_UNIVERSAL = 0x11c,
 	MODIFIER_EVENT_ON_FORCE_PROC_MAGIC_STICK = 0x11d,
-	MODIFIER_FUNCTION_LAST = 0x11e,
+	MODIFIER_PROPERTY_DO_NOT_SINK_AFTER_DEATH = 0x11e,
+	MODIFIER_FUNCTION_LAST = 0x11f,
 	MODIFIER_FUNCTION_INVALID = 0xffff,
 };
 
@@ -4326,7 +4308,7 @@ enum class DOTASelectionPriorityRules : uint32_t
 };
 
 // Alignment: 4
-// Size: 0xd
+// Size: 0xe
 enum class DOTACommType_t : uint32_t
 {
 	DOTA_COMM_TYPE_NONE = 0x0,
@@ -4334,14 +4316,15 @@ enum class DOTACommType_t : uint32_t
 	DOTA_COMM_TYPE_CHATWHEEL = 0x2,
 	DOTA_COMM_TYPE_TIP = 0x3,
 	DOTA_COMM_TYPE_TEXT = 0x4,
-	DOTA_COMM_TYPE_VOICE = 0x5,
-	DOTA_COMM_TYPE_ALLY_ABILITY = 0x6,
-	DOTA_COMM_TYPE_PAUSE = 0x7,
-	DOTA_COMM_TYPE_COACHING = 0x8,
-	DOTA_COMM_TYPE_NOCOOLDOWN = 0x9,
-	DOTA_COMM_TYPE_RANKEDMATCHMAKE = 0xa,
-	DOTA_COMM_TYPE_DROPS = 0xb,
-	DOTA_COMM_TYPE_NEWPLAYER_EXPERT = 0xc,
+	DOTA_COMM_TYPE_SHOWCASE = 0x5,
+	DOTA_COMM_TYPE_VOICE = 0x6,
+	DOTA_COMM_TYPE_ALLY_ABILITY = 0x7,
+	DOTA_COMM_TYPE_PAUSE = 0x8,
+	DOTA_COMM_TYPE_COACHING = 0x9,
+	DOTA_COMM_TYPE_NOCOOLDOWN = 0xa,
+	DOTA_COMM_TYPE_RANKEDMATCHMAKE = 0xb,
+	DOTA_COMM_TYPE_DROPS = 0xc,
+	DOTA_COMM_TYPE_NEWPLAYER_EXPERT = 0xd,
 };
 
 // Alignment: 4
@@ -4617,6 +4600,20 @@ enum class EPlayerVoiceListenState : uint32_t
 };
 
 // Alignment: 4
+// Size: 0x8
+enum class EFantasyMutationOperation : uint32_t
+{
+	k_eFantasyMutationOperation_RollEverything = 0x0,
+	k_eFantasyMutationOperation_RollShape = 0x1,
+	k_eFantasyMutationOperation_RollQuality = 0x2,
+	k_eFantasyMutationOperation_RollStat = 0x3,
+	k_eFantasyMutationOperation_IncreaseQuality = 0x4,
+	k_eFantasyMutationOperation_DecreaseQuality = 0x5,
+	k_eFantasyMutationOperation_IncreaseOneQuality = 0x6,
+	k_eFantasyMutationOperation_IncreaseTwoQualitiesDecreaseOne = 0x7,
+};
+
+// Alignment: 4
 // Size: 0x4
 enum class LobbyDotaTVDelay : uint32_t
 {
@@ -4885,9 +4882,10 @@ enum class CLC_Messages : uint32_t
 };
 
 // Alignment: 4
-// Size: 0xc
+// Size: 0x12
 enum class EBadgeType : uint32_t
 {
+	k_EBadgeType_Invalid = 0x0,
 	k_EBadgeType_TI7_Midweek = 0x1,
 	k_EBadgeType_TI7_Finals = 0x2,
 	k_EBadgeType_TI7_AllEvent = 0x3,
@@ -4900,6 +4898,11 @@ enum class EBadgeType : uint32_t
 	k_EBadgeType_TI11_PlayoffsDay3 = 0xa,
 	k_EBadgeType_TI11_PlayoffsDay4 = 0xb,
 	k_EBadgeType_TI11_FinalsWeekend = 0xc,
+	k_EBadgeType_TI12_PlayoffsDay1 = 0xd,
+	k_EBadgeType_TI12_PlayoffsDay2 = 0xe,
+	k_EBadgeType_TI12_PlayoffsDay3 = 0xf,
+	k_EBadgeType_TI12_FinalsWeekend = 0x10,
+	k_EBadgeType_TI12_Special = 0x11,
 };
 
 // Alignment: 4
@@ -5467,7 +5470,7 @@ enum class ECustomGameInstallStatus : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x359
+// Size: 0x375
 enum class EDOTAGCMsg : uint32_t
 {
 	k_EMsgGCDOTABase = 0x1b58,
@@ -6306,8 +6309,8 @@ enum class EDOTAGCMsg : uint32_t
 	k_EMsgClientToGCShowcaseGetUserDataResponse = 0x22b7,
 	k_EMsgClientToGCShowcaseSetUserData = 0x22b8,
 	k_EMsgClientToGCShowcaseSetUserDataResponse = 0x22b9,
-	k_EMsgClientToGCFantasyCraftingGetUserData = 0x22ba,
-	k_EMsgClientToGCFantasyCraftingGetUserDataResponse = 0x22bb,
+	k_EMsgClientToGCFantasyCraftingGetData = 0x22ba,
+	k_EMsgClientToGCFantasyCraftingGetDataResponse = 0x22bb,
 	k_EMsgClientToGCFantasyCraftingPerformOperation = 0x22bc,
 	k_EMsgClientToGCFantasyCraftingPerformOperationResponse = 0x22bd,
 	k_EMsgGCToClientFantasyCraftingGetDataUpdated = 0x22be,
@@ -6327,6 +6330,34 @@ enum class EDOTAGCMsg : uint32_t
 	k_EMsgClientToGCBingoGetStatsDataResponse = 0x22cc,
 	k_EMsgGCToClientBingoUserDataUpdated = 0x22cd,
 	k_EMsgGCToClientRoadToTIQuestDataUpdated = 0x22ce,
+	k_EMsgClientToGCRoadToTIUseItem = 0x22cf,
+	k_EMsgClientToGCRoadToTIUseItemResponse = 0x22d0,
+	k_EMsgClientToGCShowcaseSubmitReport = 0x22d1,
+	k_EMsgClientToGCShowcaseSubmitReportResponse = 0x22d2,
+	k_EMsgClientToGCShowcaseAdminGetReportsRollupList = 0x22d3,
+	k_EMsgClientToGCShowcaseAdminGetReportsRollupListResponse = 0x22d4,
+	k_EMsgClientToGCShowcaseAdminGetReportsRollup = 0x22d5,
+	k_EMsgClientToGCShowcaseAdminGetReportsRollupResponse = 0x22d6,
+	k_EMsgClientToGCShowcaseAdminGetUserDetails = 0x22d7,
+	k_EMsgClientToGCShowcaseAdminGetUserDetailsResponse = 0x22d8,
+	k_EMsgClientToGCShowcaseAdminConvict = 0x22d9,
+	k_EMsgClientToGCShowcaseAdminConvictResponse = 0x22da,
+	k_EMsgClientToGCShowcaseAdminExonerate = 0x22db,
+	k_EMsgClientToGCShowcaseAdminExonerateResponse = 0x22dc,
+	k_EMsgClientToGCShowcaseAdminReset = 0x22dd,
+	k_EMsgClientToGCShowcaseAdminResetResponse = 0x22de,
+	k_EMsgClientToGCShowcaseAdminLockAccount = 0x22df,
+	k_EMsgClientToGCShowcaseAdminLockAccountResponse = 0x22e0,
+	k_EMsgClientToGCFantasyCraftingSelectPlayer = 0x22e1,
+	k_EMsgClientToGCFantasyCraftingSelectPlayerResponse = 0x22e2,
+	k_EMsgClientToGCFantasyCraftingGenerateTablets = 0x22e3,
+	k_EMsgClientToGCFantasyCraftingGenerateTabletsResponse = 0x22e4,
+	k_EMsgClientToGcFantasyCraftingUpgradeTablets = 0x22e5,
+	k_EMsgClientToGcFantasyCraftingUpgradeTabletsResponse = 0x22e6,
+	k_EMsgClientToGCFantasyCraftingRerollOptions = 0x22e8,
+	k_EMsgClientToGCFantasyCraftingRerollOptionsResponse = 0x22e9,
+	k_EMsgClientToGCRoadToTIDevForceQuest = 0x22e7,
+	k_EMsgLobbyRoadToTIMatchQuestData = 0x22eb,
 };
 
 // Alignment: 4
@@ -6369,10 +6400,10 @@ enum class PARTICLE_MESSAGE : uint32_t
 // Size: 0x4
 enum class WeaponAttackType_t : uint32_t
 {
-	WEAPON_ATTACK_INVALID = 0xffffffffffffffff,
-	WEAPON_PRIMARY_ATTACK = 0x0,
-	WEAPON_SECONDARY_ATTACK = 0x1,
-	WEAPON_ATTACK_COUNT = 0x2,
+	eInvalid = 0xffffffffffffffff,
+	ePrimary = 0x0,
+	eSecondary = 0x1,
+	eCount = 0x2,
 };
 
 // Alignment: 4
@@ -6749,6 +6780,14 @@ enum class CavernCrawlChallengeType_t : uint8_t
 	CAVERN_CRAWL_CHALLENGE_TYPE_LOCKED_DOOR = 0xf0,
 	CAVERN_CRAWL_CHALLENGE_TYPE_CAVE_IN = 0xf1,
 	CAVERN_CRAWL_CHALLENGE_LAST_VALID_TYPE_PLUS_ONE = 0xf2,
+};
+
+// Alignment: 4
+// Size: 0x2
+enum class EFantasyStatMatchMode : uint32_t
+{
+	k_FantasyStatMatchMode_Any = 0x0,
+	k_FantasyStatMatchMode_All = 0x1,
 };
 
 // Alignment: 4
@@ -7503,7 +7542,7 @@ enum class Class_T : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x30
+// Size: 0x31
 enum class EBaseUserMessages : uint32_t
 {
 	UM_AchievementEvent = 0x65,
@@ -7553,6 +7592,7 @@ enum class EBaseUserMessages : uint32_t
 	UM_InventoryResponse = 0xa1,
 	UM_RequestDiagnostic = 0xa2,
 	UM_DiagnosticResponse = 0xa3,
+	UM_ExtraUserData = 0xa4,
 	UM_MAX_BASE = 0xc8,
 };
 
@@ -7684,6 +7724,26 @@ enum class DOTAMusicStatus_t : uint32_t
 	DOTA_MUSIC_STATUS_PRE_GAME_EXPLORATION = 0x3,
 	DOTA_MUSIC_STATUS_DEAD = 0x4,
 	DOTA_MUSIC_STATUS_LAST = 0x5,
+};
+
+// Alignment: 2
+// Size: 0xe
+enum class EFantasyMutationTarget : uint16_t
+{
+	k_eFantasyMutationTarget_None = 0x0,
+	k_eFantasyMutationTarget_Prefix = 0x1,
+	k_eFantasyMutationTarget_Player = 0x2,
+	k_eFantasyMutationTarget_Suffix = 0x4,
+	k_eFantasyMutationTarget_Rubies = 0x8,
+	k_eFantasyMutationTarget_Sapphires = 0x10,
+	k_eFantasyMutationTarget_Emeralds = 0x20,
+	k_eFantasyMutationTarget_Adjacent = 0x40,
+	k_eFantasyMutationTarget_OperationChoice = 0x80,
+	k_eFantasyMutationTarget_AllColor = 0x100,
+	k_eFantasyMutationTarget_OneColor = 0x200,
+	k_eFantasyMutationTarget_FirstColor = 0x400,
+	k_eFantasyMutationTarget_LastColor = 0x800,
+	k_eFantasyMutationTarget_All = 0x1000,
 };
 
 // Alignment: 4
@@ -10219,6 +10279,19 @@ enum class ELeagueTierCategory : uint32_t
 };
 
 // Alignment: 4
+// Size: 0x7
+enum class EFantasyShapeBehavior : uint32_t
+{
+	k_eFantasyShapeBehavior_Invalid = 0x0,
+	k_eFantasyShapeBehavior_MinQuality = 0x1,
+	k_eFantasyShapeBehavior_AdjBonus = 0x2,
+	k_eFantasyShapeBehavior_StealBonus = 0x3,
+	k_eFantasyShapeBehavior_OnlyOne = 0x4,
+	k_eFantasyShapeBehavior_NeedMultiples = 0x5,
+	k_eFantasyShapeBehavior_COUNT = 0x6,
+};
+
+// Alignment: 4
 // Size: 0xa
 enum class DotaCustomUIType_t : uint32_t
 {
@@ -10292,6 +10365,14 @@ enum class CMsgBattleReport_EOutcome : uint32_t
 
 // Alignment: 4
 // Size: 0x2
+enum class EShowcaseItemFlag : uint32_t
+{
+	k_eShowcaseItemFlag_None = 0x0,
+	k_eShowcaseItemFlag_FlipHorizontally = 0x1,
+};
+
+// Alignment: 4
+// Size: 0x2
 enum class NeutralCampStackPullAlarmType_t : uint32_t
 {
 	DOTA_NEUTRAL_CAMP_STACK_PULL_ALARM_TYPE_STACK = 0x1,
@@ -10325,6 +10406,14 @@ enum class OrderQueueBehavior_t : uint32_t
 	DOTA_ORDER_QUEUE_DEFAULT = 0x0,
 	DOTA_ORDER_QUEUE_NEVER = 0x1,
 	DOTA_ORDER_QUEUE_ALWAYS = 0x2,
+};
+
+// Alignment: 4
+// Size: 0x2
+enum class ERoadToTIQuestType : uint32_t
+{
+	k_RoadToTIQuestType_Match = 0x0,
+	k_RoadToTIQuestType_Player = 0x1,
 };
 
 // Alignment: 4
@@ -10388,6 +10477,15 @@ enum class PortraitDisplayMode_t : uint32_t
 	PORTRAIT_DISPLAY_MODE_LOADOUT_DIRE = 0x1,
 	PORTRAIT_DISPLAY_MODE_LOADOUT_SMALL = 0x2,
 	PORTRAIT_DISPLAY_MODE_TREASURE_SMALL = 0x3,
+};
+
+// Alignment: 4
+// Size: 0x3
+enum class EShowcaseItemFlag_Hero : uint32_t
+{
+	k_eShowcaseItemFlag_Hero_None = 0x0,
+	k_eShowcaseItemFlag_Hero_ShowPedestal = 0x1,
+	k_eShowcaseItemFlag_Hero_UseCurrentLoadout = 0x2,
 };
 
 // Alignment: 4
@@ -11267,13 +11365,15 @@ enum class ESupportEventRequestResult : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x4
+// Size: 0x6
 enum class EShowcaseItemState : uint32_t
 {
 	k_eShowcaseItemState_Ok = 0x0,
-	k_eShowcaseItemState_ValidityUnknown = 0x1,
-	k_eShowcaseItemState_Failure = 0x2,
-	k_eShowcaseItemState_Invalid = 0x3,
+	k_eShowcaseItemState_MinorModifications = 0x1,
+	k_eShowcaseItemState_ValidityUnknown = 0x2,
+	k_eShowcaseItemState_PartiallyInvalid = 0x3,
+	k_eShowcaseItemState_Invalid = 0x4,
+	k_eShowcaseItemState_Failure = 0x5,
 };
 
 // Alignment: 4
@@ -11315,6 +11415,18 @@ enum class EItemEditorReservationResult : uint32_t
 	k_EItemEditorReservationResult_AlreadyExists = 0x2,
 	k_EItemEditorReservationResult_Reserved = 0x3,
 	k_EItemEditorReservationResult_TimedOut = 0x4,
+};
+
+// Alignment: 4
+// Size: 0x6
+enum class EShowcaseAuditAction : uint32_t
+{
+	k_eShowcaseAuditAction_Invalid = 0x0,
+	k_eShowcaseAuditAction_ShowcaseChanged = 0x1,
+	k_eShowcaseAuditAction_AdminShowcaseReset = 0x2,
+	k_eShowcaseAuditAction_AdminShowcaseAccountLocked = 0x3,
+	k_eShowcaseAuditAction_AdminShowcaseExonerated = 0x4,
+	k_eShowcaseAuditAction_AdminShowcaseConvicted = 0x5,
 };
 
 // Alignment: 4
@@ -11443,19 +11555,6 @@ enum class CMsgDOTARequestMatches_SkillLevel : uint32_t
 };
 
 // Alignment: 4
-// Size: 0x7
-enum class EFantasyShapeBehavior : uint32_t
-{
-	k_eFantasyShapeBehavior_Invalid = 0x0,
-	k_eFantasyShapeBehavior_MinQuality = 0x1,
-	k_eFantasyShapeBehavior_AdjBonus = 0x2,
-	k_eFantasyShapeBehavior_StealBonus = 0x3,
-	k_eFantasyShapeBehavior_OnlyOne = 0x4,
-	k_eFantasyShapeBehavior_NeedMultiples = 0x5,
-	k_eFantasyShapeBehavior_COUNT = 0x6,
-};
-
-// Alignment: 4
 // Size: 0xf
 enum class EStyleNodeType : uint32_t
 {
@@ -11550,7 +11649,6 @@ struct FollowAttachmentSettings_t;
 struct CRangeFloat;
 struct LookAtOpFixedSettings_t;
 struct HitReactFixedSettings_t;
-struct SkeletalInputOpFixedSettings_t;
 struct AimMatrixOpFixedSettings_t;
 struct CAnimStateMachineUpdater;
 struct PermModelInfo_t;
@@ -11640,14 +11738,17 @@ struct CRR_Response;
 struct GameTick_t;
 struct PingWheelMessageID_t;
 struct CDOTA_Orb;
+struct FantasyTabletID_t;
 struct ResponseFollowup;
 struct CavernCrawlRewardType_t;
 struct style_index_t;
+struct FantasyCraftDataID_t;
 struct CNetworkVarChainer;
 struct AmmoIndex_t;
 struct ResponseParams;
 struct CTakeDamageInfo;
 struct CTakeDamageResult;
+struct FantasyGemShape_t;
 struct GameTime_t;
 struct CDOTABaseAbility;
 struct CavernCrawlPathID_t;
@@ -11658,9 +11759,13 @@ struct CSoundEnvelope;
 struct CCopyRecipientFilter;
 struct CModifierParams;
 struct DOTALevelingAbilityBonus_t;
+struct FantasyGemQuality_t;
 struct BlessingID_t;
+struct FantasyTitle_t;
 struct PlayerID_t;
 struct CRangeInt;
+struct FantasyLeagueID_t;
+struct FantasyPeriod_t;
 struct INextBotReply;
 struct BlessingTypeID_t;
 struct VelocitySampler;
@@ -11672,8 +11777,12 @@ struct CBaseFlex;
 struct CSkeletonInstance;
 struct CDOTA_Buff;
 struct CSkillFloat;
+struct FantasyOperationID_t;
+struct FantasyGemSlot_t;
 struct CandyShopRewardOptionID_t;
 struct CandyShopID_t;
+struct RoadToTIQuestID_t;
+struct MatchID_t;
 struct itemid_t;
 struct CDecalInfo;
 struct CandyShopCandyTypeID_t;
@@ -12058,6 +12167,16 @@ public:
 
 // Alignment: 0
 // Size: 0x1
+class InfoForResourceTypeCNmSkeleton
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x1
 class InfoForResourceTypeCTypeScriptResource
 {
 private:
@@ -12142,6 +12261,16 @@ public:
 // Alignment: 0
 // Size: 0x1
 struct InfoForResourceTypeWorld_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x1
+class InfoForResourceTypeCNmClip
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
@@ -12571,16 +12700,6 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x8
-class IHandleEntity
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
-public:
-	// No members available
-};
-
-// Alignment: 0
 // Size: 0x30
 struct EventClientPauseSimulate_t : public EventSimulate_t
 {
@@ -12723,16 +12842,6 @@ public:
 // Size: 0x40
 struct EventClientAdvanceTick_t : public EventAdvanceTick_t
 {
-public:
-	// No members available
-};
-
-// Alignment: 0
-// Size: 0x8
-class CEntityComponent
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// No members available
 };
@@ -13127,22 +13236,11 @@ private:
 	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CAnimNodePath m_nodePath; // 0x18	
-	CUtlString m_name; // 0x48	
-	AnimNodeNetworkMode m_networkMode; // 0x50	
-};
-
-// Alignment: 7
-// Size: 0x38
-class CFingerBone
-{
+	AnimNodeNetworkMode m_networkMode; // 0x48	
+private:
+	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
 public:
-	CUtlString m_boneName; // 0x0	
-	Vector m_hingeAxis; // 0x8	
-	Vector m_vCapsulePos1; // 0x14	
-	Vector m_vCapsulePos2; // 0x20	
-	float m_flMinAngle; // 0x2c	
-	float m_flMaxAngle; // 0x30	
-	float m_flRadius; // 0x34	
+	CUtlString m_name; // 0x50	
 };
 
 // Alignment: 2
@@ -13367,20 +13465,6 @@ class CModelConfigElement_SetRenderColor : public CModelConfigElement
 {
 public:
 	Color m_Color; // 0x48	
-};
-
-// Alignment: 7
-// Size: 0x34
-struct FingerBone_t
-{
-public:
-	int32_t m_boneIndex; // 0x0	
-	Vector m_hingeAxis; // 0x4	
-	Vector m_vCapsulePos1; // 0x10	
-	Vector m_vCapsulePos2; // 0x1c	
-	float m_flMinAngle; // 0x28	
-	float m_flMaxAngle; // 0x2c	
-	float m_flRadius; // 0x30	
 };
 
 // Alignment: 1
@@ -13749,15 +13833,6 @@ class AnimStateID
 {
 public:
 	uint32_t m_id; // 0x0	
-};
-
-// Alignment: 2
-// Size: 0x30
-struct WristBone_t
-{
-public:
-	CTransform m_xOffsetTransformMS; // 0x0	
-	int32_t m_boneIndex; // 0x20	
 };
 
 // Alignment: 46
@@ -14292,17 +14367,6 @@ public:
 	CUtlString m_szFacs; // 0x0	
 };
 
-// Alignment: 4
-// Size: 0x30
-class CWristBone
-{
-public:
-	CUtlString m_name; // 0x0	
-	Vector m_vForwardLS; // 0x8	
-	Vector m_vUpLS; // 0x14	
-	Vector m_vOffset; // 0x20	
-};
-
 // Alignment: 3
 // Size: 0x48
 class CMotionNodeSequence : public CMotionNode
@@ -14311,15 +14375,6 @@ public:
 	CUtlVector< TagSpan_t > m_tags; // 0x28	
 	HSequence m_hSequence; // 0x40	
 	float m_flPlaybackSpeed; // 0x44	
-};
-
-// Alignment: 2
-// Size: 0x8
-class CFingerSource
-{
-public:
-	AnimVRFinger_t m_nFingerIndex; // 0x0	
-	float m_flFingerWeight; // 0x4	
 };
 
 // Alignment: 4
@@ -14524,42 +14579,6 @@ struct CBoneConstraintPoseSpaceBone__Input_t
 public:
 	Vector m_inputValue; // 0x0	
 	CUtlVector< CTransform > m_outputTransformList; // 0x10	
-};
-
-// Alignment: 9
-// Size: 0x48
-struct SkeletalInputOpFixedSettings_t
-{
-public:
-	CUtlVector< WristBone_t > m_wristBones; // 0x0	
-	CUtlVector< FingerChain_t > m_fingers; // 0x18	
-	int32_t m_outerKnuckle1; // 0x30	
-	int32_t m_outerKnuckle2; // 0x34	
-	AnimVRHand_t m_eHand; // 0x38	
-	AnimVRHandMotionRange_t m_eMotionRange; // 0x3c	
-	AnimVrBoneTransformSource_t m_eTransformSource; // 0x40	
-	bool m_bEnableIK; // 0x44	
-	bool m_bEnableCollision; // 0x45	
-};
-
-// Alignment: 10
-// Size: 0x70
-class CFingerChain
-{
-public:
-	CUtlVector< CFingerSource > m_targets; // 0x0	
-	CUtlVector< CFingerBone > m_bones; // 0x18	
-	CUtlString m_name; // 0x30	
-	CUtlString m_tipParentBoneName; // 0x38	
-	Vector m_vTipOffset; // 0x40	
-private:
-	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
-public:
-	CUtlString m_metacarpalBoneName; // 0x50	
-	Vector m_vSplayHingeAxis; // 0x58	
-	float m_flSplayMinAngle; // 0x64	
-	float m_flSplayMaxAngle; // 0x68	
-	float m_flFingerScaleRatio; // 0x6c	
 };
 
 // Alignment: 3
@@ -14898,19 +14917,6 @@ public:
 	CUtlVector< CBodyGroupSetting > m_bodyGroupSettings; // 0x40	
 };
 
-// Alignment: 6
-// Size: 0x50
-class CVrSkeletalInputSettings
-{
-public:
-	CUtlVector< CWristBone > m_wristBones; // 0x0	
-	CUtlVector< CFingerChain > m_fingers; // 0x18	
-	CUtlString m_name; // 0x30	
-	CUtlString m_outerKnuckle1; // 0x38	
-	CUtlString m_outerKnuckle2; // 0x40	
-	AnimVRHand_t m_eHand; // 0x48	
-};
-
 // Alignment: 2
 // Size: 0xb8
 class CEnumAnimParameter : public CConcreteAnimParameter
@@ -14980,58 +14986,64 @@ public:
 	int32_t m_nType; // 0x14	
 };
 
-// Alignment: 15
-// Size: 0x68
+// Alignment: 16
+// Size: 0x78
 class CAnimDemoCaptureSettings
 {
 public:
-	// MPropertyFriendlyName "Max Rotation Error"
+	// MPropertyFriendlyName "Bone Chain Length Error Scaling Range"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flMaxSplineErrorRotation; // 0x0	
+	Vector2D m_rangeBoneChainLength; // 0x0	
+	// MPropertyFriendlyName "Max Rotation Error (Mapped Against Bone Chain Length)"
+	// MPropertyGroupName "+Spline Settings"
+	Vector2D m_rangeMaxSplineErrorRotation; // 0x8	
 	// MPropertyFriendlyName "Max Translation Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flMaxSplineErrorTranslation; // 0x4	
+	float m_flMaxSplineErrorTranslation; // 0x10	
 	// MPropertyFriendlyName "Max Scale Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flMaxSplineErrorScale; // 0x8	
+	float m_flMaxSplineErrorScale; // 0x14	
 	// MPropertyFriendlyName "Max IK Rotation Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flIkRotation_MaxSplineError; // 0xc	
+	float m_flIkRotation_MaxSplineError; // 0x18	
 	// MPropertyFriendlyName "Max IK Translation Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flIkTranslation_MaxSplineError; // 0x10	
+	float m_flIkTranslation_MaxSplineError; // 0x1c	
 	// MPropertyFriendlyName "Max Rotation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flMaxQuantizationErrorRotation; // 0x14	
+	float m_flMaxQuantizationErrorRotation; // 0x20	
 	// MPropertyFriendlyName "Max Translation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flMaxQuantizationErrorTranslation; // 0x18	
+	float m_flMaxQuantizationErrorTranslation; // 0x24	
 	// MPropertyFriendlyName "Max Scale Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flMaxQuantizationErrorScale; // 0x1c	
+	float m_flMaxQuantizationErrorScale; // 0x28	
 	// MPropertyFriendlyName "Max IK Rotation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flIkRotation_MaxQuantizationError; // 0x20	
+	float m_flIkRotation_MaxQuantizationError; // 0x2c	
 	// MPropertyFriendlyName "Max IK Translation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flIkTranslation_MaxQuantizationError; // 0x24	
+	float m_flIkTranslation_MaxQuantizationError; // 0x30	
+private:
+	[[maybe_unused]] uint8_t __pad0034[0x4]; // 0x34
+public:
 	// MPropertyFriendlyName "Base Sequence"
 	// MPropertyGroupName "+Base Pose"
 	// MPropertyAttributeChoiceName "Sequence"
-	CUtlString m_baseSequence; // 0x28	
+	CUtlString m_baseSequence; // 0x38	
 	// MPropertyFriendlyName "Base Sequence Frame"
 	// MPropertyGroupName "+Base Pose"
-	int32_t m_nBaseSequenceFrame; // 0x30	
+	int32_t m_nBaseSequenceFrame; // 0x40	
 	// MPropertyFriendlyName "Bone Selection Mode"
 	// MPropertyGroupName "+Bones"
 	// MPropertyAttrChangeCallback
-	EDemoBoneSelectionMode m_boneSelectionMode; // 0x34	
+	EDemoBoneSelectionMode m_boneSelectionMode; // 0x44	
 	// MPropertyFriendlyName "Bones"
 	// MPropertyGroupName "+Bones"
 	// MPropertyAttrStateCallback
-	CUtlVector< BoneDemoCaptureSettings_t > m_bones; // 0x38	
+	CUtlVector< BoneDemoCaptureSettings_t > m_bones; // 0x48	
 	// MPropertyFriendlyName "IK Chains"
-	CUtlVector< IKDemoCaptureSettings_t > m_ikChains; // 0x50	
+	CUtlVector< IKDemoCaptureSettings_t > m_ikChains; // 0x60	
 };
 
 // Alignment: 1
@@ -15166,14 +15178,16 @@ public:
 	CUtlVector< float32 > m_outputWeightList; // 0x10	
 };
 
-// Alignment: 1
-// Size: 0x8
+// Alignment: 2
+// Size: 0x10
 struct BoneDemoCaptureSettings_t
 {
 public:
 	// MPropertyFriendlyName "Bone"
 	// MPropertyAttributeChoiceName "Bone"
 	CUtlString m_boneName; // 0x0	
+	// MPropertySuppressField
+	float m_flChainLength; // 0x8	
 };
 
 // Alignment: 6
@@ -15245,14 +15259,6 @@ public:
 	float m_flHipDipSpringStrength; // 0x38	
 	float m_flHipDipImpactScale; // 0x3c	
 	float m_flHipDipDelay; // 0x40	
-};
-
-// Alignment: 1
-// Size: 0xa8
-class CSkeletalInputUpdateNode : public CLeafUpdateNode
-{
-public:
-	SkeletalInputOpFixedSettings_t m_fixedOpData; // 0x58	
 };
 
 // Alignment: 2
@@ -15389,24 +15395,6 @@ public:
 	Quaternion m_defaultValue; // 0x60	
 	// MPropertyFriendlyName "Interpolate"
 	bool m_bInterpolate; // 0x70	
-};
-
-// Alignment: 9
-// Size: 0x48
-class CVRInputComponentUpdater : public CAnimComponentUpdater
-{
-private:
-	[[maybe_unused]] uint8_t __pad0030[0x4]; // 0x30
-public:
-	CAnimParamHandle m_FingerCurl_Thumb; // 0x34	
-	CAnimParamHandle m_FingerCurl_Index; // 0x36	
-	CAnimParamHandle m_FingerCurl_Middle; // 0x38	
-	CAnimParamHandle m_FingerCurl_Ring; // 0x3a	
-	CAnimParamHandle m_FingerCurl_Pinky; // 0x3c	
-	CAnimParamHandle m_FingerSplay_Thumb_Index; // 0x3e	
-	CAnimParamHandle m_FingerSplay_Index_Middle; // 0x40	
-	CAnimParamHandle m_FingerSplay_Middle_Ring; // 0x42	
-	CAnimParamHandle m_FingerSplay_Ring_Pinky; // 0x44	
 };
 
 // Alignment: 11
@@ -15641,15 +15629,6 @@ public:
 	bool m_bLoop; // 0xa0	
 };
 
-// Alignment: 2
-// Size: 0x8
-struct FingerSource_t
-{
-public:
-	AnimVRFinger_t m_nFingerIndex; // 0x0	
-	float m_flFingerWeight; // 0x4	
-};
-
 // Alignment: 7
 // Size: 0x2c
 struct JiggleBoneSettings_t
@@ -15730,22 +15709,6 @@ public:
 	float angle; // 0x10	
 	Vector vector; // 0x14	
 	Vector position; // 0x20	
-};
-
-// Alignment: 9
-// Size: 0x60
-struct FingerChain_t
-{
-public:
-	CUtlVector< FingerSource_t > m_targets; // 0x0	
-	CUtlVector< FingerBone_t > m_bones; // 0x18	
-	Vector m_vTipOffset; // 0x30	
-	Vector m_vSplayHingeAxis; // 0x3c	
-	int32_t m_tipParentBoneIndex; // 0x48	
-	int32_t m_metacarpalBoneIndex; // 0x4c	
-	float m_flSplayMinAngle; // 0x50	
-	float m_flSplayMaxAngle; // 0x54	
-	float m_flFingerScaleRatio; // 0x58	
 };
 
 // Alignment: 2
@@ -16707,7 +16670,7 @@ public:
 };
 
 // Alignment: 1
-// Size: 0x98
+// Size: 0xa8
 class CDemoSettingsComponentUpdater : public CAnimComponentUpdater
 {
 public:
@@ -17753,30 +17716,28 @@ public:
 	float flAlpha; // 0x4	
 };
 
-// Alignment: 6
+// Alignment: 5
 // Size: 0x30
 struct FeTaperedCapsuleRigid_t
 {
 public:
 	fltx4 vSphere[2]; // 0x0	
-	float flStickiness; // 0x20	
-	uint16_t nNode; // 0x24	
-	uint16_t nCollisionMask; // 0x26	
-	uint16_t nVertexMapIndex; // 0x28	
-	uint16_t nFlags; // 0x2a	
+	uint16_t nNode; // 0x20	
+	uint16_t nCollisionMask; // 0x22	
+	uint16_t nVertexMapIndex; // 0x24	
+	uint16_t nFlags; // 0x26	
 };
 
-// Alignment: 6
+// Alignment: 5
 // Size: 0x20
 struct FeSphereRigid_t
 {
 public:
 	fltx4 vSphere; // 0x0	
-	float flStickiness; // 0x10	
-	uint16_t nNode; // 0x14	
-	uint16_t nCollisionMask; // 0x16	
-	uint16_t nVertexMapIndex; // 0x18	
-	uint16_t nFlags; // 0x1a	
+	uint16_t nNode; // 0x10	
+	uint16_t nCollisionMask; // 0x12	
+	uint16_t nVertexMapIndex; // 0x14	
+	uint16_t nFlags; // 0x16	
 };
 
 // Alignment: 5
@@ -17987,7 +17948,7 @@ public:
 	uint32_t m_nFlags; // 0x88	
 };
 
-// Alignment: 8
+// Alignment: 6
 // Size: 0x40
 struct FeBoxRigid_t
 {
@@ -17996,10 +17957,8 @@ public:
 	uint16_t nNode; // 0x20	
 	uint16_t nCollisionMask; // 0x22	
 	Vector vSize; // 0x24	
-	float flStickiness; // 0x30	
-	uint16_t nVertexMapIndex; // 0x34	
-	uint16_t nFlags; // 0x36	
-	float flReserved[2]; // 0x38	
+	uint16_t nVertexMapIndex; // 0x30	
+	uint16_t nFlags; // 0x32	
 };
 
 // Alignment: 4
@@ -18244,16 +18203,15 @@ public:
 	uint16_t m_nCollisionMask; // 0x98	
 };
 
-// Alignment: 5
-// Size: 0x1c
+// Alignment: 4
+// Size: 0x18
 struct FeCollisionPlane_t
 {
 public:
 	uint16_t nCtrlParent; // 0x0	
 	uint16_t nChildNode; // 0x2	
 	RnPlane_t m_Plane; // 0x4	
-	float flStickiness; // 0x14	
-	float flStrength; // 0x18	
+	float flStrength; // 0x14	
 };
 
 // Alignment: 3
@@ -18366,8 +18324,8 @@ public:
 	Vector m_vNormal; // 0xc	
 };
 
-// Alignment: 9
-// Size: 0xa0
+// Alignment: 10
+// Size: 0xa8
 struct RnMesh_t
 {
 public:
@@ -18379,7 +18337,8 @@ public:
 	CUtlVector< RnWing_t > m_Wings; // 0x60	
 	CUtlVector< uint8 > m_Materials; // 0x78	
 	Vector m_vOrthographicAreas; // 0x90	
-	bool m_bHasOpenEdges; // 0x9c	
+	uint32_t m_nFlags; // 0x9c	
+	uint32_t m_nDebugFlags; // 0xa0	
 };
 
 // Alignment: 3
@@ -18563,8 +18522,8 @@ public:
 	constraint_breakableparams_t constraint; // 0x28	
 };
 
-// Alignment: 5
-// Size: 0x14
+// Alignment: 4
+// Size: 0x10
 struct FeTaperedCapsuleStretch_t
 {
 public:
@@ -18573,7 +18532,6 @@ public:
 	// MPropertySuppressField
 	uint16_t nDummy; // 0x6	
 	float flRadius[2]; // 0x8	
-	float flStickiness; // 0x10	
 };
 
 // Alignment: 3
@@ -18722,7 +18680,7 @@ public:
 };
 
 // Alignment: 1
-// Size: 0xb0
+// Size: 0xb8
 struct RnMeshDesc_t : public RnShapeDesc_t
 {
 public:
@@ -19766,18 +19724,14 @@ public:
 	CRenderBufferBinding m_extraBufferBinding; // 0x10	
 };
 
-// Alignment: 4
-// Size: 0x40
+// Alignment: 3
+// Size: 0x38
 struct AggregateLODSetup_t
 {
 public:
 	Vector m_vLODOrigin; // 0x0	
 	float m_fMaxObjectScale; // 0xc	
-	uint8_t m_nLODMask; // 0x10	
-private:
-	[[maybe_unused]] uint8_t __pad0011[0x7]; // 0x11
-public:
-	CUtlVectorFixedGrowable< float32 > m_fSwitchDistances; // 0x18	
+	CUtlVectorFixedGrowable< float32 > m_fSwitchDistances; // 0x10	
 };
 
 // Alignment: 15
@@ -20581,7 +20535,7 @@ public:
 	// No members available
 };
 
-// Alignment: 45
+// Alignment: 46
 // Size: 0x158
 class CParticleFloatInput : public CParticleInput
 {
@@ -20603,51 +20557,49 @@ public:
 private:
 	[[maybe_unused]] uint8_t __pad0079[0x3]; // 0x79
 public:
-	ParticleFloatRandomMode_t m_nRandomMode; // 0x7c	
+	int32_t m_nRandomSeed; // 0x7c	
+	ParticleFloatRandomMode_t m_nRandomMode; // 0x80	
 private:
-	[[maybe_unused]] uint8_t __pad0080[0x4]; // 0x80
+	[[maybe_unused]] uint8_t __pad0084[0x4]; // 0x84
 public:
-	float m_flLOD0; // 0x84	
-	float m_flLOD1; // 0x88	
-	float m_flLOD2; // 0x8c	
-	float m_flLOD3; // 0x90	
-	ParticleAttributeIndex_t m_nNoiseInputVectorAttribute; // 0x94	
-	float m_flNoiseOutputMin; // 0x98	
-	float m_flNoiseOutputMax; // 0x9c	
-	float m_flNoiseScale; // 0xa0	
-	Vector m_vecNoiseOffsetRate; // 0xa4	
-	float m_flNoiseOffset; // 0xb0	
-	int32_t m_nNoiseOctaves; // 0xb4	
-	PFNoiseTurbulence_t m_nNoiseTurbulence; // 0xb8	
-	PFNoiseType_t m_nNoiseType; // 0xbc	
-	PFNoiseModifier_t m_nNoiseModifier; // 0xc0	
-	float m_flNoiseTurbulenceScale; // 0xc4	
-	float m_flNoiseTurbulenceMix; // 0xc8	
-	float m_flNoiseImgPreviewScale; // 0xcc	
-	bool m_bNoiseImgPreviewLive; // 0xd0	
+	float m_flLOD0; // 0x88	
+	float m_flLOD1; // 0x8c	
+	float m_flLOD2; // 0x90	
+	float m_flLOD3; // 0x94	
+	ParticleAttributeIndex_t m_nNoiseInputVectorAttribute; // 0x98	
+	float m_flNoiseOutputMin; // 0x9c	
+	float m_flNoiseOutputMax; // 0xa0	
+	float m_flNoiseScale; // 0xa4	
+	Vector m_vecNoiseOffsetRate; // 0xa8	
+	float m_flNoiseOffset; // 0xb4	
+	int32_t m_nNoiseOctaves; // 0xb8	
+	PFNoiseTurbulence_t m_nNoiseTurbulence; // 0xbc	
+	PFNoiseType_t m_nNoiseType; // 0xc0	
+	PFNoiseModifier_t m_nNoiseModifier; // 0xc4	
+	float m_flNoiseTurbulenceScale; // 0xc8	
+	float m_flNoiseTurbulenceMix; // 0xcc	
+	float m_flNoiseImgPreviewScale; // 0xd0	
+	bool m_bNoiseImgPreviewLive; // 0xd4	
 private:
-	[[maybe_unused]] uint8_t __pad00d1[0xb]; // 0xd1
+	[[maybe_unused]] uint8_t __pad00d5[0xb]; // 0xd5
 public:
-	float m_flNoCameraFallback; // 0xdc	
-	bool m_bUseBoundsCenter; // 0xe0	
+	float m_flNoCameraFallback; // 0xe0	
+	bool m_bUseBoundsCenter; // 0xe4	
 private:
-	[[maybe_unused]] uint8_t __pad00e1[0x3]; // 0xe1
+	[[maybe_unused]] uint8_t __pad00e5[0x3]; // 0xe5
 public:
-	ParticleFloatInputMode_t m_nInputMode; // 0xe4	
-	float m_flMultFactor; // 0xe8	
-	float m_flInput0; // 0xec	
-	float m_flInput1; // 0xf0	
-	float m_flOutput0; // 0xf4	
-	float m_flOutput1; // 0xf8	
-	float m_flNotchedRangeMin; // 0xfc	
-	float m_flNotchedRangeMax; // 0x100	
-	float m_flNotchedOutputOutside; // 0x104	
-	float m_flNotchedOutputInside; // 0x108	
-	ParticleFloatBiasType_t m_nBiasType; // 0x10c	
-	float m_flBiasParameter; // 0x110	
-private:
-	[[maybe_unused]] uint8_t __pad0114[0x4]; // 0x114
-public:
+	ParticleFloatInputMode_t m_nInputMode; // 0xe8	
+	float m_flMultFactor; // 0xec	
+	float m_flInput0; // 0xf0	
+	float m_flInput1; // 0xf4	
+	float m_flOutput0; // 0xf8	
+	float m_flOutput1; // 0xfc	
+	float m_flNotchedRangeMin; // 0x100	
+	float m_flNotchedRangeMax; // 0x104	
+	float m_flNotchedOutputOutside; // 0x108	
+	float m_flNotchedOutputInside; // 0x10c	
+	ParticleFloatBiasType_t m_nBiasType; // 0x110	
+	float m_flBiasParameter; // 0x114	
 	CPiecewiseCurve m_Curve; // 0x118	
 };
 
@@ -23037,7 +22989,7 @@ public:
 	bool m_bEaseOut; // 0x205	
 };
 
-// Alignment: 5
+// Alignment: 6
 // Size: 0x1e0
 class C_OP_ColorInterpolate : public CParticleFunctionOperator
 {
@@ -23056,6 +23008,8 @@ public:
 	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d8	
 	// MPropertyFriendlyName "ease in and out"
 	bool m_bEaseInOut; // 0x1dc	
+	// MPropertyFriendlyName "use new code"
+	bool m_bUseNewCode; // 0x1dd	
 };
 
 // Alignment: 1
@@ -23678,6 +23632,15 @@ public:
 	bool m_bReverse; // 0x328	
 	// MPropertyFriendlyName "set orientation"
 	bool m_bSetOrientation; // 0x329	
+};
+
+// Alignment: 1
+// Size: 0x1d0
+class C_OP_ShapeMatchingConstraint : public CParticleFunctionConstraint
+{
+public:
+	// MPropertyFriendlyName "shape restoration time"
+	float m_flShapeRestorationTime; // 0x1c0	
 };
 
 // Alignment: 2
@@ -25760,7 +25723,7 @@ public:
 	float m_flRemapBias; // 0x2d8	
 };
 
-// Alignment: 4
+// Alignment: 5
 // Size: 0x4a0
 class C_OP_SetFloat : public CParticleFunctionOperator
 {
@@ -25774,6 +25737,8 @@ public:
 	ParticleSetMethod_t m_nSetMethod; // 0x31c	
 	// MPropertyFriendlyName "interpolation"
 	CPerParticleFloatInput m_Lerp; // 0x320	
+	// MPropertyFriendlyName "use new code"
+	bool m_bUseNewCode; // 0x478	
 };
 
 // Alignment: 5
@@ -26188,11 +26153,13 @@ public:
 	// MPropertyFriendlyName "brush only"
 	bool m_bBrushOnly; // 0x25d	
 	// MPropertyFriendlyName "include water"
+	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
 	bool m_bIncludeWater; // 0x25e	
 private:
 	[[maybe_unused]] uint8_t __pad025f[0x1]; // 0x25f
 public:
 	// MPropertyFriendlyName "CP Entity to Ignore for Collisions"
+	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
 	int32_t m_nIgnoreCP; // 0x260	
 	// MPropertyFriendlyName "control point movement distance tolerance"
 	// MPropertySuppressExpr "m_nCollisionMode == COLLISION_MODE_PER_PARTICLE_TRACE"
@@ -26294,6 +26261,7 @@ public:
 	// MPropertyFriendlyName "No Collision Behavior"
 	ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x500	
 	// MPropertyFriendlyName "include water"
+	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
 	bool m_bIncludeWater; // 0x504	
 	// MPropertyFriendlyName "set normal"
 	bool m_bSetNormal; // 0x505	
@@ -26311,6 +26279,7 @@ public:
 	// MPropertyFriendlyName "preserve initial Z-offset relative to cp"
 	int32_t m_nPreserveOffsetCP; // 0x510	
 	// MPropertyFriendlyName "CP Entity to Ignore for Collisions"
+	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
 	int32_t m_nIgnoreCP; // 0x514	
 };
 
@@ -27695,8 +27664,8 @@ public:
 	float m_flMaxDistance; // 0x1c4	
 };
 
-// Alignment: 5
-// Size: 0x480
+// Alignment: 6
+// Size: 0x5e0
 class C_OP_InstantaneousEmitter : public CParticleFunctionEmitter
 {
 public:
@@ -27707,10 +27676,15 @@ public:
 	CParticleCollectionFloatInput m_flStartTime; // 0x318	
 	// MPropertyFriendlyName "emission scale from killed parent particles"
 	float m_flInitFromKilledParentParticles; // 0x470	
+private:
+	[[maybe_unused]] uint8_t __pad0474[0x4]; // 0x474
+public:
+	// MPropertyFriendlyName "emission scale from parent particle count"
+	CParticleCollectionFloatInput m_flParentParticleScale; // 0x478	
 	// MPropertyFriendlyName "maximum emission per frame"
-	int32_t m_nMaxEmittedPerFrame; // 0x474	
+	int32_t m_nMaxEmittedPerFrame; // 0x5d0	
 	// MPropertyFriendlyName "control point with snapshot data"
-	int32_t m_nSnapshotControlPoint; // 0x478	
+	int32_t m_nSnapshotControlPoint; // 0x5d4	
 };
 
 // Alignment: 7
@@ -29157,7 +29131,7 @@ public:
 	float m_flAlphaRandExponent; // 0x1d4	
 };
 
-// Alignment: 10
+// Alignment: 11
 // Size: 0xe20
 class C_OP_RemapAverageHitboxSpeedtoCP : public CParticleFunctionPreEmission
 {
@@ -29169,9 +29143,8 @@ public:
 	// MPropertyFriendlyName "Output component"
 	// MPropertyAttributeChoiceName "vector_component"
 	int32_t m_nField; // 0x1d8	
-private:
-	[[maybe_unused]] uint8_t __pad01dc[0x4]; // 0x1dc
-public:
+	// MPropertyFriendlyName "hitbox data"
+	ParticleHitboxDataSelection_t m_nHitboxDataType; // 0x1dc	
 	// MPropertyFriendlyName "input minimum"
 	CParticleCollectionFloatInput m_flInputMin; // 0x1e0	
 	// MPropertyFriendlyName "input maximum"
@@ -29181,11 +29154,13 @@ public:
 	// MPropertyFriendlyName "output maximum"
 	CParticleCollectionFloatInput m_flOutputMax; // 0x5e8	
 	// MPropertyFriendlyName "intersection height CP"
+	// MPropertySuppressExpr "m_nHitboxDataType != PARTICLE_HITBOX_AVERAGE_SPEED"
 	int32_t m_nHeightControlPointNumber; // 0x740	
 private:
 	[[maybe_unused]] uint8_t __pad0744[0x4]; // 0x744
 public:
 	// MPropertyFriendlyName "comparison velocity"
+	// MPropertySuppressExpr "m_nHitboxDataType != PARTICLE_HITBOX_AVERAGE_SPEED"
 	CParticleCollectionVecInput m_vecComparisonVelocity; // 0x748	
 	// MPropertyFriendlyName "hitbox set"
 	char m_HitboxSetName[128]; // 0xda0	
@@ -29208,7 +29183,7 @@ public:
 	bool m_bParticles; // 0x32b	
 };
 
-// Alignment: 49
+// Alignment: 50
 // Size: 0x25f0
 class C_OP_RenderModels : public CParticleFunctionRenderer
 {
@@ -29280,127 +29255,133 @@ public:
 	// MPropertyFriendlyName "apply scales in local model space"
 	// MPropertySortPriority "700"
 	bool m_bLocalScale; // 0x1540	
+private:
+	[[maybe_unused]] uint8_t __pad1541[0x3]; // 0x1541
+public:
+	// MPropertyFriendlyName "model size cull bloat"
+	// MPropertyAttributeChoiceName "particlefield_size_cull_bloat"
+	int32_t m_nSizeCullBloat; // 0x1544	
 	// MPropertyStartGroup "Animation"
 	// MPropertyFriendlyName "animated"
 	// MPropertySortPriority "500"
-	bool m_bAnimated; // 0x1541	
+	bool m_bAnimated; // 0x1548	
 private:
-	[[maybe_unused]] uint8_t __pad1542[0x2]; // 0x1542
+	[[maybe_unused]] uint8_t __pad1549[0x3]; // 0x1549
 public:
 	// MPropertyFriendlyName "animation rate"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	float m_flAnimationRate; // 0x1544	
+	float m_flAnimationRate; // 0x154c	
 	// MPropertyFriendlyName "scale animation rate"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bScaleAnimationRate; // 0x1548	
+	bool m_bScaleAnimationRate; // 0x1550	
 	// MPropertyFriendlyName "force looping animations"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bForceLoopingAnimation; // 0x1549	
+	bool m_bForceLoopingAnimation; // 0x1551	
 	// MPropertyFriendlyName "reset animation frame on stop"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bResetAnimOnStop; // 0x154a	
+	bool m_bResetAnimOnStop; // 0x1552	
 	// MPropertyFriendlyName "set animation frame manually"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bManualAnimFrame; // 0x154b	
+	bool m_bManualAnimFrame; // 0x1553	
 	// MPropertyFriendlyName "animation rate scale field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	ParticleAttributeIndex_t m_nAnimationScaleField; // 0x154c	
+	ParticleAttributeIndex_t m_nAnimationScaleField; // 0x1554	
 	// MPropertyStartGroup "Animation"
 	// MPropertyFriendlyName "animation sequence field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "500"
-	ParticleAttributeIndex_t m_nAnimationField; // 0x1550	
+	ParticleAttributeIndex_t m_nAnimationField; // 0x1558	
 	// MPropertyFriendlyName "manual animation frame field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!(m_bAnimated && m_bManualAnimFrame)"
-	ParticleAttributeIndex_t m_nManualFrameField; // 0x1554	
+	ParticleAttributeIndex_t m_nManualFrameField; // 0x155c	
 	// MPropertyFriendlyName "activity override"
 	// MPropertySuppressExpr "mod != dota"
 	// MPropertySortPriority "500"
-	char m_ActivityName[256]; // 0x1558	
+	char m_ActivityName[256]; // 0x1560	
 	// MPropertyFriendlyName "sequence override"
 	// MPropertySuppressExpr "mod == dota"
 	// MPropertySortPriority "500"
-	char m_SequenceName[256]; // 0x1658	
+	char m_SequenceName[256]; // 0x1660	
 	// MPropertyFriendlyName "Enable Cloth Simulation"
-	bool m_bEnableClothSimulation; // 0x1758	
+	bool m_bEnableClothSimulation; // 0x1760	
 private:
-	[[maybe_unused]] uint8_t __pad1759[0x7]; // 0x1759
+	[[maybe_unused]] uint8_t __pad1761[0x7]; // 0x1761
 public:
 	// MPropertyStartGroup "Material"
 	// MPropertyFriendlyName "material override"
 	// MPropertySortPriority "600"
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hOverrideMaterial; // 0x1760	
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hOverrideMaterial; // 0x1768	
 	// MPropertyFriendlyName "override translucent materials"
 	// MPropertySortPriority "600"
-	bool m_bOverrideTranslucentMaterials; // 0x1768	
+	bool m_bOverrideTranslucentMaterials; // 0x1770	
 private:
-	[[maybe_unused]] uint8_t __pad1769[0x7]; // 0x1769
+	[[maybe_unused]] uint8_t __pad1771[0x7]; // 0x1771
 public:
 	// MPropertyFriendlyName "skin number"
 	// MPropertySortPriority "600"
-	CPerParticleFloatInput m_nSkin; // 0x1770	
+	CPerParticleFloatInput m_nSkin; // 0x1778	
 	// MPropertyFriendlyName "material variables"
 	// MPropertyAutoExpandSelf
 	// MPropertySortPriority "600"
-	CUtlVector< MaterialVariable_t > m_MaterialVars; // 0x18c8	
+	CUtlVector< MaterialVariable_t > m_MaterialVars; // 0x18d0	
 	// MPropertyStartGroup "Model Overrides"
 	// MPropertyFriendlyName "input model"
-	CParticleModelInput m_modelInput; // 0x18e0	
+	CParticleModelInput m_modelInput; // 0x18e8	
 	// MPropertyFriendlyName "model LOD"
-	int32_t m_nLOD; // 0x1940	
+	int32_t m_nLOD; // 0x1948	
 	// MPropertyFriendlyName "model override economy loadout slot type"
-	char m_EconSlotName[256]; // 0x1944	
+	char m_EconSlotName[256]; // 0x194c	
 	// MPropertyFriendlyName "model override original model only (ignore shapeshift/hex/etc)"
-	bool m_bOriginalModel; // 0x1a44	
+	bool m_bOriginalModel; // 0x1a4c	
 	// MPropertyFriendlyName "suppress tinting of the model"
-	bool m_bSuppressTint; // 0x1a45	
+	bool m_bSuppressTint; // 0x1a4d	
 	// MPropertyFriendlyName "use raw mesh group (ignore bodygroup field and use submodel field as raw meshgroup)"
-	bool m_bUseRawMeshGroup; // 0x1a46	
+	bool m_bUseRawMeshGroup; // 0x1a4e	
 	// MPropertyFriendlyName "disable shadows"
-	bool m_bDisableShadows; // 0x1a47	
+	bool m_bDisableShadows; // 0x1a4f	
 	// MPropertyFriendlyName "accept decals"
-	bool m_bAcceptsDecals; // 0x1a48	
+	bool m_bAcceptsDecals; // 0x1a50	
 	// MPropertyFriendlyName "forcedrawinterlevedwithsiblings"
-	bool m_bForceDrawInterlevedWithSiblings; // 0x1a49	
+	bool m_bForceDrawInterlevedWithSiblings; // 0x1a51	
 	// MPropertyFriendlyName "do not draw in particle pass"
-	bool m_bDoNotDrawInParticlePass; // 0x1a4a	
+	bool m_bDoNotDrawInParticlePass; // 0x1a52	
 	// MPropertyFriendlyName "render attribute"
-	char m_szRenderAttribute[260]; // 0x1a4b	
+	char m_szRenderAttribute[260]; // 0x1a53	
 private:
-	[[maybe_unused]] uint8_t __pad1b4f[0x1]; // 0x1b4f
+	[[maybe_unused]] uint8_t __pad1b57[0x1]; // 0x1b57
 public:
 	// MPropertyStartGroup "+Renderer Modifiers"
 	// MPropertyFriendlyName "Radius Scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flRadiusScale; // 0x1b50	
+	CParticleCollectionFloatInput m_flRadiusScale; // 0x1b58	
 	// MPropertyFriendlyName "alpha scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flAlphaScale; // 0x1ca8	
+	CParticleCollectionFloatInput m_flAlphaScale; // 0x1cb0	
 	// MPropertyFriendlyName "rotation roll scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flRollScale; // 0x1e00	
+	CParticleCollectionFloatInput m_flRollScale; // 0x1e08	
 	// MPropertyFriendlyName "per-particle alpha scale attribute"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "700"
-	ParticleAttributeIndex_t m_nAlpha2Field; // 0x1f58	
+	ParticleAttributeIndex_t m_nAlpha2Field; // 0x1f60	
 private:
-	[[maybe_unused]] uint8_t __pad1f5c[0x4]; // 0x1f5c
+	[[maybe_unused]] uint8_t __pad1f64[0x4]; // 0x1f64
 public:
 	// MPropertyFriendlyName "color blend"
 	// MPropertySortPriority "700"
-	CParticleCollectionVecInput m_vecColorScale; // 0x1f60	
+	CParticleCollectionVecInput m_vecColorScale; // 0x1f68	
 	// MPropertyFriendlyName "color blend type"
 	// MPropertySortPriority "700"
-	ParticleColorBlendType_t m_nColorBlendType; // 0x25b8	
+	ParticleColorBlendType_t m_nColorBlendType; // 0x25c0	
 };
 
 // Alignment: 3
@@ -29578,7 +29559,7 @@ public:
 };
 
 // Alignment: 27
-// Size: 0x2b90
+// Size: 0x2f90
 class C_OP_RenderSprites : public CBaseRendererSource2
 {
 public:
@@ -29599,108 +29580,109 @@ public:
 	// MPropertySuppressExpr "m_nOrientationType != PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL && m_nOrientationType != PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL"
 	bool m_bUseYawWithNormalAligned; // 0x25d0	
 private:
-	[[maybe_unused]] uint8_t __pad25d1[0x3]; // 0x25d1
+	[[maybe_unused]] uint8_t __pad25d1[0x7]; // 0x25d1
 public:
 	// MPropertyStartGroup "Fading and culling"
 	// MPropertyFriendlyName "minimum visual screen size"
 	// MPropertySortPriority "1000"
-	float m_flMinSize; // 0x25d4	
+	CParticleCollectionRendererFloatInput m_flMinSize; // 0x25d8	
 	// MPropertyFriendlyName "maximum visual screen size"
 	// MPropertySortPriority "1000"
-	float m_flMaxSize; // 0x25d8	
+	CParticleCollectionRendererFloatInput m_flMaxSize; // 0x2730	
 	// MPropertyFriendlyName "Factor to map size adjustment to alpha"
 	// MPropertySortPriority "1000"
-	float m_flAlphaAdjustWithSizeAdjust; // 0x25dc	
+	CParticleCollectionRendererFloatInput m_flAlphaAdjustWithSizeAdjust; // 0x2888	
 	// MPropertyFriendlyName "screen size to start fading"
 	// MPropertySortPriority "1000"
-	CParticleCollectionRendererFloatInput m_flStartFadeSize; // 0x25e0	
+	CParticleCollectionRendererFloatInput m_flStartFadeSize; // 0x29e0	
 	// MPropertyFriendlyName "screen size to fade away"
 	// MPropertySortPriority "1000"
-	CParticleCollectionRendererFloatInput m_flEndFadeSize; // 0x2738	
+	CParticleCollectionRendererFloatInput m_flEndFadeSize; // 0x2b38	
 	// MPropertyFriendlyName "start fade dot product of normal vs view"
 	// MPropertySortPriority "1000"
-	float m_flStartFadeDot; // 0x2890	
+	float m_flStartFadeDot; // 0x2c90	
 	// MPropertyFriendlyName "end fade dot product of normal vs view"
 	// MPropertySortPriority "1000"
-	float m_flEndFadeDot; // 0x2894	
+	float m_flEndFadeDot; // 0x2c94	
 	// MPropertyStartGroup "Distance to alpha coding"
 	// MPropertyFriendlyName "distance alpha"
 	// MPropertySortPriority "0"
-	bool m_bDistanceAlpha; // 0x2898	
+	bool m_bDistanceAlpha; // 0x2c98	
 	// MPropertyFriendlyName "use soft edges for distance alpha"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bDistanceAlpha"
-	bool m_bSoftEdges; // 0x2899	
+	bool m_bSoftEdges; // 0x2c99	
 private:
-	[[maybe_unused]] uint8_t __pad289a[0x2]; // 0x289a
+	[[maybe_unused]] uint8_t __pad2c9a[0x2]; // 0x2c9a
 public:
 	// MPropertyFriendlyName "start value for soft edges for distance alpha"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bDistanceAlpha"
-	float m_flEdgeSoftnessStart; // 0x289c	
+	float m_flEdgeSoftnessStart; // 0x2c9c	
 	// MPropertyFriendlyName "end value for soft edges for distance alpha"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bDistanceAlpha"
-	float m_flEdgeSoftnessEnd; // 0x28a0	
+	float m_flEdgeSoftnessEnd; // 0x2ca0	
 	// MPropertyStartGroup "Outlining"
 	// MPropertyFriendlyName "enable particle outlining"
 	// MPropertySortPriority "0"
-	bool m_bOutline; // 0x28a4	
+	bool m_bOutline; // 0x2ca4	
 	// MPropertyFriendlyName "outline color"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	Color m_OutlineColor; // 0x28a5	
+	Color m_OutlineColor; // 0x2ca5	
 private:
-	[[maybe_unused]] uint8_t __pad28a9[0x3]; // 0x28a9
+	[[maybe_unused]] uint8_t __pad2ca9[0x3]; // 0x2ca9
 public:
 	// MPropertyFriendlyName "outline alpha"
 	// MPropertyAttributeRange "0 255"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	int32_t m_nOutlineAlpha; // 0x28ac	
+	int32_t m_nOutlineAlpha; // 0x2cac	
 	// MPropertyFriendlyName "outline start 0"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	float m_flOutlineStart0; // 0x28b0	
+	float m_flOutlineStart0; // 0x2cb0	
 	// MPropertyFriendlyName "outline start 1"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	float m_flOutlineStart1; // 0x28b4	
+	float m_flOutlineStart1; // 0x2cb4	
 	// MPropertyFriendlyName "outline end 0"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	float m_flOutlineEnd0; // 0x28b8	
+	float m_flOutlineEnd0; // 0x2cb8	
 	// MPropertyFriendlyName "outline end 1"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	float m_flOutlineEnd1; // 0x28bc	
+	float m_flOutlineEnd1; // 0x2cbc	
 	// MPropertyStartGroup "Lighting and Shadows"
 	// MPropertyFriendlyName "lighting mode"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "mod != hlx"
-	ParticleLightingQuality_t m_nLightingMode; // 0x28c0	
+	ParticleLightingQuality_t m_nLightingMode; // 0x2cc0	
 private:
-	[[maybe_unused]] uint8_t __pad28c4[0x4]; // 0x28c4
+	[[maybe_unused]] uint8_t __pad2cc4[0x4]; // 0x2cc4
 public:
 	// MPropertyFriendlyName "vertex lighting tessellation (0-5)"
 	// MPropertyAttributeRange "0 5"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "mod != hlx || m_nLightingMode != PARTICLE_LIGHTING_PER_VERTEX"
-	CParticleCollectionRendererFloatInput m_flLightingTessellation; // 0x28c8	
+	CParticleCollectionRendererFloatInput m_flLightingTessellation; // 0x2cc8	
 	// MPropertyFriendlyName "lighting directionality"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "mod != hlx"
-	CParticleCollectionRendererFloatInput m_flLightingDirectionality; // 0x2a20	
+	CParticleCollectionRendererFloatInput m_flLightingDirectionality; // 0x2e20	
 	// MPropertyFriendlyName "Particle Shadows"
 	// MPropertySortPriority "400"
-	bool m_bParticleShadows; // 0x2b78	
+	// MPropertySuppressExpr "mod != csgo"
+	bool m_bParticleShadows; // 0x2f78	
 private:
-	[[maybe_unused]] uint8_t __pad2b79[0x3]; // 0x2b79
+	[[maybe_unused]] uint8_t __pad2f79[0x3]; // 0x2f79
 public:
 	// MPropertyFriendlyName "Shadow Density"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "!m_bParticleShadows"
-	float m_flShadowDensity; // 0x2b7c	
+	float m_flShadowDensity; // 0x2f7c	
 };
 
 // Alignment: 5
@@ -30760,6 +30742,16 @@ public:
 	int32_t lfomult; // 0x60	
 };
 
+// Alignment: 2
+// Size: 0x28
+struct FantasyCraftOperationBucket_t
+{
+public:
+	// MPropertyDescription "How many operations should the user get from this bucket"
+	uint16_t m_unOperationCount; // 0x0	
+	CUtlVector< FantasyCraftOperation_t > m_vecOperations; // 0x8	
+};
+
 // Alignment: 0
 // Size: 0x98
 class CNavVolumeCalculatedVector : public CNavVolume
@@ -30845,6 +30837,17 @@ public:
 	
 	// Static fields:
 	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("PingWheelMessageID_t")->m_static_fields[0]->m_instance);};
+};
+
+// Alignment: 1
+// Size: 0x2
+struct FantasyOperationID_t
+{
+public:
+	uint16_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyOperationID_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 2
@@ -31021,6 +31024,28 @@ public:
 };
 
 // Alignment: 1
+// Size: 0x1
+struct FantasyTabletID_t
+{
+public:
+	uint8_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyTabletID_t")->m_static_fields[0]->m_instance);};
+};
+
+// Alignment: 1
+// Size: 0x2
+struct FantasyCraftDataID_t
+{
+public:
+	uint16_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyCraftDataID_t")->m_static_fields[0]->m_instance);};
+};
+
+// Alignment: 1
 // Size: 0x20
 class CInButtonState
 {
@@ -31192,6 +31217,22 @@ private:
 	[[maybe_unused]] uint8_t __pad0054[0x4]; // 0x54
 public:
 	CBaseFlex* m_pOuter; // 0x58	
+};
+
+// Alignment: 8
+// Size: 0xb8
+struct FantasyCraftSetupData_t
+{
+public:
+	// MPropertyDescription "Unique identifier for this set of crafting data"
+	FantasyCraftDataID_t m_unID; // 0x0	
+	CUtlVector< FantasyCraftingTitleData_t > m_vecPrefixes; // 0x8	
+	CUtlVector< FantasyCraftingTitleData_t > m_vecSuffixes; // 0x20	
+	CUtlVector< FantasyCraftingGemData_t > m_vecGems; // 0x38	
+	CUtlVector< FantasyCraftingShapeData_t > m_vecShapes; // 0x50	
+	CUtlVector< FantasyCraftingQualityData_t > m_vecQualities; // 0x68	
+	CUtlVector< FantasyCraftingTabletData_t > m_vecTablets; // 0x80	
+	CUtlVector< FantasyCraftOperationBucket_t > m_vecOperations; // 0x98	
 };
 
 // Alignment: 2
@@ -31557,6 +31598,17 @@ public:
 	float m_maxTorque; // 0xc	
 	Vector m_axis; // 0x10	
 	float m_inertiaFactor; // 0x1c	
+};
+
+// Alignment: 1
+// Size: 0x1
+struct FantasyGemShape_t
+{
+public:
+	uint8_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyGemShape_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 3
@@ -32027,6 +32079,17 @@ public:
 	CNetworkedQuantizedFloat m_vecZ; // 0x28	
 };
 
+// Alignment: 1
+// Size: 0x1
+struct FantasyGemQuality_t
+{
+public:
+	uint8_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyGemQuality_t")->m_static_fields[0]->m_instance);};
+};
+
 // Alignment: 3
 // Size: 0x28
 struct ragdollelement_t
@@ -32212,6 +32275,43 @@ public:
 	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("attrib_definition_index_db32_t")->m_static_fields[0]->m_instance);};
 };
 
+// Alignment: 1
+// Size: 0x1
+struct FantasyTitle_t
+{
+public:
+	uint8_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyTitle_t")->m_static_fields[0]->m_instance);};
+};
+
+// Alignment: 8
+// Size: 0x50
+struct FantasyCraftingTitleData_t
+{
+public:
+	// MPropertyDescription "Unique integer ID of the title"
+	FantasyTitle_t m_unTitle; // 0x0	
+	// MPropertyDescription "Localization name of the title when used as an aggregate"
+	CUtlString m_sLocName; // 0x8	
+	// MPropertyDescription "Localization name of the title when used on it's own"
+	CUtlString m_sLocNameIndividual; // 0x10	
+	// MPropertyDescription "Localization token for explaining what the title does"
+	CUtlString m_sLocExplanation; // 0x18	
+	// MPropertyDescription "Localization token for explaining what the title does in sitations that allow mouseover"
+	CUtlString m_sLocExplanationMouseOver; // 0x20	
+	// MPropertyDescription "Controls how we decide to use the stat vector"
+	EFantasyStatMatchMode m_eMode; // 0x28	
+private:
+	[[maybe_unused]] uint8_t __pad002c[0x4]; // 0x2c
+public:
+	// MPropertyDescription "Stats to Track"
+	CUtlVector< FantasyCraftingTrackedStat_t > m_vecStats; // 0x30	
+	// MPropertyDescription "Bonus this title provides"
+	int32_t m_nBonus; // 0x48	
+};
+
 // Alignment: 28
 // Size: 0xc0
 class CBaseAchievement
@@ -32270,6 +32370,21 @@ class CRangeInt
 {
 public:
 	int32_t m_pValue[2]; // 0x0	
+};
+
+// Alignment: 4
+// Size: 0x18
+struct FantasyCraftingShapeData_t
+{
+public:
+	// MPropertyDescription "Unique identifier for the Shape"
+	FantasyGemShape_t m_unShapeID; // 0x0	
+	// MPropertyDescription "Maps the shape to it's code behavior."
+	EFantasyShapeBehavior m_eShapeBehavior; // 0x4	
+	// MPropertyDescription "Localization token for the name of the shape"
+	CUtlString m_sLocName; // 0x8	
+	// MPropertyDescription "Localization token for explaining what the shape does"
+	CUtlString m_sLocExplanation; // 0x10	
 };
 
 // Alignment: 1
@@ -32554,6 +32669,17 @@ public:
 	CUtlString m_strAdjective; // 0x0	
 };
 
+// Alignment: 1
+// Size: 0x2
+struct FantasyLeagueID_t
+{
+public:
+	uint16_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyLeagueID_t")->m_static_fields[0]->m_instance);};
+};
+
 // Alignment: 3
 // Size: 0x14
 struct NianDamageTaken_t
@@ -32562,6 +32688,32 @@ public:
 	int32_t nDamage; // 0x0	
 	PlayerID_t nPlayerID; // 0x4	
 	Vector vPos; // 0x8	
+};
+
+// Alignment: 4
+// Size: 0x18
+struct FantasyCraftingTrackedStat_t
+{
+public:
+	// MPropertyDescription "What Stats are we looking for"
+	CUtlString m_sStatName; // 0x0	
+	// MPropertyDescription "Is the match about the player, the player's team, or the match?"
+	EFantasyStatType m_eStatType; // 0x8	
+	// MPropertyDescription "Threshold Stat Value required"
+	uint32_t m_unThresholdValue; // 0xc	
+	// MPropertyDescription "Is the treshold a min or max?"
+	bool m_bThresholdIsMin; // 0x10	
+};
+
+// Alignment: 2
+// Size: 0x20
+struct FantasyRoleData_t
+{
+public:
+	// MPropertyDescription "What role are these players for"
+	Fantasy_Roles m_eRole; // 0x0	
+	// MPropertyDescription "List of Pro Players for the role"
+	CUtlVector< FantasyPlayerData_t > m_vecPlayers; // 0x8	
 };
 
 // Alignment: 6
@@ -32578,7 +32730,7 @@ public:
 };
 
 // Alignment: 21
-// Size: 0xb0
+// Size: 0xa8
 class CTakeDamageInfo
 {
 private:
@@ -32614,9 +32766,9 @@ private:
 public:
 	HSCRIPT m_hScriptInstance; // 0x88	
 private:
-	[[maybe_unused]] uint8_t __pad0090[0x18]; // 0x90
+	[[maybe_unused]] uint8_t __pad0090[0x14]; // 0x90
 public:
-	bool m_bInTakeDamageFlow; // 0xa8	
+	bool m_bInTakeDamageFlow; // 0xa4	
 	
 	// Static fields:
 	static CTakeDamageInfo &Get_EmptyInfo(){return *reinterpret_cast<CTakeDamageInfo*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CTakeDamageInfo")->m_static_fields[0]->m_instance);};
@@ -32688,6 +32840,45 @@ public:
 	uint32_t m_nFlags; // 0x38	
 };
 
+// Alignment: 2
+// Size: 0x8
+struct FantasyPeriodData_t
+{
+public:
+	// MPropertyDescription "What Fantasy Period this data is for"
+	FantasyPeriod_t m_unPeriod; // 0x0	
+	// MPropertyDescription "What level are fantasy tablets when this is the active crafting period?"
+	int32_t m_nTabletLevel; // 0x4	
+};
+
+// Alignment: 8
+// Size: 0x40
+class CDOTABingoStatDefinition
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// MPropertyDescription "Name of tracked match stat, used to look up match stat ID"
+	CUtlString m_strMatchStatName; // 0x8	
+	// MPropertyDescription "Expected value."
+	float m_fStatAverage; // 0x10	
+	// MPropertyDescription "Statistical standard deviation."
+	float m_fStatStdDev; // 0x14	
+	// MPropertyDescription "Short user-facing string that appears on a bingo square"
+	CUtlString m_sNameLocString; // 0x18	
+	// MPropertyDescription "User-facing tooltip with description"
+	CUtlString m_sTooltipLocString; // 0x20	
+	// MPropertyDescription "Optional value to use in loc string's dialog variable"
+	int32_t m_nLocStringValue; // 0x28	
+private:
+	[[maybe_unused]] uint8_t __pad002c[0x4]; // 0x2c
+public:
+	// MPropertyDescription "Optional information to include in a bingo stat tooltip"
+	CUtlString m_strHeroAdjective; // 0x30	
+	// MPropertyDescription "Whether we negate the hero adjective when displaying tooltip"
+	bool m_bNegativeHeroAdjective; // 0x38	
+};
+
 // Alignment: 6
 // Size: 0x20
 class CHeadLookParams
@@ -32719,6 +32910,21 @@ private:
 public:
 	char* m_pCSSClass; // 0x8	
 	bool m_bCannotBeSwapped; // 0x10	
+};
+
+// Alignment: 4
+// Size: 0x18
+struct FantasyCraftingQualityData_t
+{
+public:
+	// MPropertyDescription "Unique Identifier for the Quality"
+	FantasyGemQuality_t m_unQualityID; // 0x0	
+	// MPropertyDescription "Localization token for the name of the quality"
+	CUtlString m_sLocName; // 0x8	
+	// MPropertyDescription "How much does this quality improve the stat?"
+	int32_t m_nBonus; // 0x10	
+	// MPropertyDescription "How likely are we to roll this quality?"
+	int32_t m_nRollWeight; // 0x14	
 };
 
 // Alignment: 0
@@ -32825,6 +33031,17 @@ public:
 	uint32_t unKillEaterEvent; // 0x0	
 };
 
+// Alignment: 2
+// Size: 0x8
+struct FantasyCraftingGemMutation_t
+{
+public:
+	// MPropertyDescription "What this operation is targeting"
+	EFantasyMutationTarget m_eTarget; // 0x0	
+	// MPropertyDescription "What we are doing in this operation"
+	EFantasyMutationOperation m_eOperation; // 0x4	
+};
+
 // Alignment: 3
 // Size: 0x20
 class SimpleConstraintSoundProfile
@@ -32894,6 +33111,19 @@ struct ConceptHistory_t
 public:
 	float timeSpoken; // 0x0	
 	CRR_Response m_response; // 0x8	
+};
+
+// Alignment: 3
+// Size: 0x28
+struct FantasyCraftingGemData_t
+{
+public:
+	// MPropertyDescription "Unique Identifier for the Gem Type"
+	Fantasy_Gem_Type m_eType; // 0x0	
+	// MPropertyDescription "Localization name of the gem"
+	CUtlString m_sLocName; // 0x8	
+	// MPropertyDescription "Which stats can this gem roll"
+	CUtlVector< Fantasy_Scoring > m_eStats; // 0x10	
 };
 
 // Alignment: 1
@@ -32998,8 +33228,8 @@ public:
 	CSkeletonInstance* m_pSkeletonInstance; // 0x8	
 };
 
-// Alignment: 16
-// Size: 0x5c
+// Alignment: 17
+// Size: 0x60
 class CGameScriptedMoveData
 {
 public:
@@ -33014,14 +33244,18 @@ public:
 	MoveType_t m_nPrevMoveType; // 0x48	
 	bool m_bActive; // 0x49	
 	bool m_bTeleportOnEnd; // 0x4a	
-	bool m_bIgnoreRotation; // 0x4b	
-	ScriptedMoveType_t m_nType; // 0x4c	
-	bool m_bSuccess; // 0x50	
+	bool m_bEndOnDestinationReached; // 0x4b	
+	bool m_bIgnoreRotation; // 0x4c	
 private:
-	[[maybe_unused]] uint8_t __pad0051[0x3]; // 0x51
+	[[maybe_unused]] uint8_t __pad004d[0x3]; // 0x4d
 public:
-	ForcedCrouchState_t m_nForcedCrouchState; // 0x54	
-	bool m_bIgnoreCollisions; // 0x58	
+	ScriptedMoveType_t m_nType; // 0x50	
+	bool m_bSuccess; // 0x54	
+private:
+	[[maybe_unused]] uint8_t __pad0055[0x3]; // 0x55
+public:
+	ForcedCrouchState_t m_nForcedCrouchState; // 0x58	
+	bool m_bIgnoreCollisions; // 0x5c	
 };
 
 // Alignment: 2
@@ -33057,6 +33291,18 @@ public:
 	
 	// Static fields:
 	static int32_t &Get_s_nNextChangeToken(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CDOTA_Tree")->m_static_fields[0]->m_instance);};
+};
+
+// Alignment: 3
+// Size: 0x20
+struct FantasyCraftingTabletData_t
+{
+public:
+	// MPropertyDescription "Unique ID for the Tablet"
+	FantasyTabletID_t m_unID; // 0x0	
+	// MPropertyDescription "What role is this tablet for"
+	Fantasy_Roles m_eRole; // 0x4	
+	CUtlVector< FantasyCraftingGemSlotData_t > m_vecGemSlots; // 0x8	
 };
 
 // Alignment: 2
@@ -33161,12 +33407,12 @@ private:
 	[[maybe_unused]] uint8_t __pad00ac[0x4]; // 0xac
 public:
 	// MVDataPromoteField
-	CUtlDict< BlessingType_t > m_mapBlessingTypes; // 0xb0	
+	CUtlDict< BlessingType_t, int32, F( size=1 ) > m_mapBlessingTypes; // 0xb0	
 private:
 	[[maybe_unused]] uint8_t __pad00d8[0x40]; // 0xd8
 public:
 	// MVDataPromoteField
-	CUtlDict< Blessing_t > m_mapBlessings; // 0x118	
+	CUtlDict< Blessing_t, int32, F( size=1 ) > m_mapBlessings; // 0x118	
 private:
 	[[maybe_unused]] uint8_t __pad0140[0x28]; // 0x140
 public:
@@ -33365,14 +33611,14 @@ public:
 };
 
 // Alignment: 4
-// Size: 0xc8
+// Size: 0xc0
 struct SummaryTakeDamageInfo_t
 {
 public:
 	int32_t nSummarisedCount; // 0x0	
 	CTakeDamageInfo info; // 0x8	
-	CTakeDamageResult result; // 0xb8	
-	CHandle< CBaseEntity > hTarget; // 0xc0	
+	CTakeDamageResult result; // 0xb0	
+	CHandle< CBaseEntity > hTarget; // 0xb8	
 };
 
 // Alignment: 3
@@ -33400,6 +33646,17 @@ public:
 	// MNetworkEncodeFlags
 	// MNetworkChangeCallback "CNetworkViewOffsetVector"
 	CNetworkedQuantizedFloat m_vecZ; // 0x20	
+};
+
+// Alignment: 1
+// Size: 0x1
+struct FantasyGemSlot_t
+{
+public:
+	uint8_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyGemSlot_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 1
@@ -33578,6 +33835,44 @@ public:
 	static CUtlVector< CScriptUniformRandomStream* > &Get_sm_UniformStreams(){return *reinterpret_cast<CUtlVector< CScriptUniformRandomStream* >*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CScriptUniformRandomStream")->m_static_fields[0]->m_instance);};
 };
 
+// Alignment: 4
+// Size: 0x18
+struct FantasyPlayerData_t
+{
+public:
+	// MPropertyDescription "Account ID of the Pro Player"
+	uint32_t m_unAccountID; // 0x0	
+	// MPropertyDescription "What team this player is competing with for the fantasy league"
+	uint32_t m_unTeamID; // 0x4	
+	// MPropertyDescription "What region does this player play for"
+	ELeagueRegion m_eRegion; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
+public:
+	// MPropertyDescription "Name of the pro player"
+	CUtlString m_strPlayerName; // 0x10	
+};
+
+// Alignment: 5
+// Size: 0x30
+struct FantasyCraftOperation_t
+{
+public:
+	// MPropertyDescription "Unique identifier for this operation"
+	FantasyOperationID_t m_unOperationID; // 0x0	
+	// MPropertyDescription "Weight for when rolling which operations to add to the roll board"
+	int32_t m_nRollWeight; // 0x4	
+	// MPropertyDescription "What extra input is needed for the operation"
+	EFantasyOperationTarget m_eTarget; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
+public:
+	// MPropertyDescription "Localization String describing the operation"
+	CUtlString m_sLocDescription; // 0x10	
+	// MPropertyDescription "What operations this will perform"
+	CUtlVector< FantasyCraftingGemMutation_t > m_vecOperations; // 0x18	
+};
+
 // Alignment: 1
 // Size: 0x68
 class CResponseQueue
@@ -33620,6 +33915,17 @@ public:
 	// MNetworkDisable
 	// MNetworkChangeAccessorFieldPathIndex
 	CNetworkVarChainer __m_pChainEntity; // 0x8	
+};
+
+// Alignment: 2
+// Size: 0x38
+class CDOTAFantasyDefinition
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	CUtlVector< FantasyCraftSetupData_t > m_vecCraftingSetups; // 0x8	
+	CUtlVector< FantasyLeagueData_t > m_vecLeagues; // 0x20	
 };
 
 // Alignment: 0
@@ -33722,7 +34028,7 @@ public:
 };
 
 // Alignment: 34
-// Size: 0x12b8
+// Size: 0x12c8
 class CDOTA_Buff : public CHorizontalMotionController
 {
 private:
@@ -33774,9 +34080,22 @@ public:
 	CUtlVector< CDOTA_BuffParticle > m_iParticles; // 0xa0	
 	CUtlVector< CHandle< CBaseEntity > > m_hAuraUnits; // 0xb8	
 private:
-	[[maybe_unused]] uint8_t __pad00d0[0x11e0]; // 0xd0
+	[[maybe_unused]] uint8_t __pad00d0[0x11f0]; // 0xd0
 public:
-	HSCRIPT m_hScriptScope; // 0x12b0	
+	HSCRIPT m_hScriptScope; // 0x12c0	
+};
+
+// Alignment: 3
+// Size: 0xc
+struct FantasyCraftingGemSlotData_t
+{
+public:
+	// MPropertyDescription "Gem Slot"
+	FantasyGemSlot_t m_unGemSlot; // 0x0	
+	// MPropertyDescription "Gem Type"
+	Fantasy_Gem_Type m_eGemType; // 0x4	
+	// MPropertyDescription "Minimum tablet level to unlock this type of gem, -1 or 0 for always unlocked"
+	int32_t m_nRequiredTabletLevel; // 0x8	
 };
 
 // Alignment: 3
@@ -33835,6 +34154,26 @@ public:
 	
 	// Static fields:
 	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("GCPlayerSlot_t")->m_static_fields[0]->m_instance);};
+};
+
+// Alignment: 6
+// Size: 0x58
+struct FantasyLeagueData_t
+{
+public:
+	// MPropertyDescription "Unique identifier for the league"
+	FantasyLeagueID_t m_nFantasyLeagueID; // 0x0	
+	// MPropertyDescription "What event this data is tied to"
+	EEvent m_eEvent; // 0x4	
+	// MPropertyDescription "What data to use for crafting"
+	FantasyCraftDataID_t m_nCraftingID; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad000a[0x6]; // 0xa
+public:
+	// MPropertyDescription "Which Leagues is this attached to"
+	CUtlVector< LeagueID_t > m_nLeagues; // 0x10	
+	CUtlVector< FantasyRoleData_t > m_vecPlayers; // 0x28	
+	CUtlVector< FantasyPeriodData_t > m_vecPeriods; // 0x40	
 };
 
 // Alignment: 0
@@ -33928,17 +34267,6 @@ public:
 	float m_flStackAlarmTime; // 0x10	
 	int32_t m_nCampIndex; // 0x14	
 	int32_t m_nAlarmTypes; // 0x18	
-};
-
-// Alignment: 1
-// Size: 0x2
-struct FantasyOperationID_t
-{
-public:
-	uint16_t m_Value; // 0x0	
-	
-	// Static fields:
-	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyOperationID_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 100
@@ -34069,17 +34397,6 @@ public:
 	float m_flLightningFluctuation; // 0x3c0	
 	float m_flLightningAngle; // 0x3c4	
 	float m_flLightningEventPercentage; // 0x3c8	
-};
-
-// Alignment: 1
-// Size: 0x2
-struct FantasyCraftDataID_t
-{
-public:
-	uint16_t m_Value; // 0x0	
-	
-	// Static fields:
-	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyCraftDataID_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 0
@@ -34339,15 +34656,34 @@ public:
 	int32_t command_number; // 0x70	
 };
 
-// Alignment: 1
-// Size: 0x1
-struct FantasyTitle_t
+// Alignment: 10
+// Size: 0x48
+struct RoadToTIQuestDefinition_t
 {
 public:
-	uint8_t m_Value; // 0x0	
-	
-	// Static fields:
-	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyTitle_t")->m_static_fields[0]->m_instance);};
+	// MPropertyDescription "unique integer ID of this Road To TI quest within the challenge"
+	RoadToTIQuestID_t m_unID; // 0x0	
+	// MPropertyDescription "Quest type (match or player)"
+	ERoadToTIQuestType m_eQuestType; // 0x4	
+	// MPropertyDescription "Period the quest represents"
+	uint32_t m_unPeriod; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
+public:
+	// MPropertyDescription "Match ID for match quests"
+	MatchID_t m_unMatchID; // 0x10	
+	// MPropertyDescription "Series ID for match quests"
+	uint32_t m_unSeriesID; // 0x18	
+	// MPropertyDescription "League ID for match quests"
+	uint32_t m_unLeagueID; // 0x1c	
+	// MPropertyDescription "Player account ID for player quests"
+	uint32_t m_unPlayerID; // 0x20	
+	// MPropertyDescription "Team ID of the player or match winner"
+	uint32_t m_unTeamID; // 0x24	
+	// MPropertyDescription "Heroes available for the quest"
+	CUtlVector< uint8 > m_vecHeroes; // 0x28	
+	// MPropertyDescription "True if this is a developer quest"
+	bool m_bDeveloper; // 0x40	
 };
 
 // Alignment: 0
@@ -34356,17 +34692,6 @@ class C_SingleplayRules : public C_GameRules
 {
 public:
 	// No members available
-};
-
-// Alignment: 1
-// Size: 0x1
-struct FantasyGemShape_t
-{
-public:
-	uint8_t m_Value; // 0x0	
-	
-	// Static fields:
-	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyGemShape_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 4
@@ -34432,17 +34757,6 @@ struct SZooSetAnnotation_t
 {
 public:
 	CUtlString m_strSetTag; // 0x0	
-};
-
-// Alignment: 1
-// Size: 0x1
-struct FantasyGemQuality_t
-{
-public:
-	uint8_t m_Value; // 0x0	
-	
-	// Static fields:
-	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyGemQuality_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 5
@@ -34535,17 +34849,6 @@ public:
 	float m_flCompareValue; // 0x8	
 };
 
-// Alignment: 1
-// Size: 0x1
-struct FantasyTabletID_t
-{
-public:
-	uint8_t m_Value; // 0x0	
-	
-	// Static fields:
-	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyTabletID_t")->m_static_fields[0]->m_instance);};
-};
-
 // Alignment: 15
 // Size: 0xd0
 class CGlowOverlay
@@ -34582,6 +34885,30 @@ public:
 	int32_t m_queryHandle; // 0xc8	
 };
 
+// Alignment: 7
+// Size: 0x98
+class CDOTARoadToTIChallengeDefinition
+{
+public:
+	// MPropertyDescription "Event ID that the challenge is for"
+	EEvent m_eEvent; // 0x0	
+	// MPropertyDescription "Total Quest Periods within the challenge"
+	uint32_t m_unTotalQuestPeriods; // 0x4	
+	// MPropertyDescription "Number of hero options expected in each quest."
+	uint32_t m_unHeroesPerQuest; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
+public:
+	// MPropertyDescription "A list of quest difficulties. This defines the pattern for each period and total quests per period. Eg [1, 1, 2] would mean every period has 3 quests (two easy, then one medium)."
+	CUtlVector< uint32 > m_vecQuestPattern; // 0x10	
+	// MPropertyDescription "Item def for Culling Blade item"
+	item_definition_index_t m_unCullingBladeItemDef; // 0x28	
+	// MPropertyDescription "Item def for Reroll Token item"
+	item_definition_index_t m_unRerollItemDef; // 0x2c	
+	// MPropertyDescription "The quests in the challenge"
+	CUtlVector< RoadToTIQuestDefinition_t > m_vecQuests; // 0x30	
+};
+
 // Alignment: 1
 // Size: 0x30
 class C_DotaTree
@@ -34601,17 +34928,6 @@ public:
 	uint32_t unSeat; // 0x4	
 	uint32_t unReversedSeat; // 0x8	
 	uint32_t unTeamID; // 0xc	
-};
-
-// Alignment: 1
-// Size: 0x1
-struct FantasyGemSlot_t
-{
-public:
-	uint8_t m_Value; // 0x0	
-	
-	// Static fields:
-	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyGemSlot_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 2
@@ -34762,17 +35078,6 @@ public:
 	// MPropertyDescription "Possible Tiers for the Highlight"
 	// MPropertyAutoExpandSelf
 	CUtlVector< CDOTABattleReportHighlightTier_t > m_vecTiers; // 0x58	
-};
-
-// Alignment: 1
-// Size: 0x2
-struct FantasyLeagueID_t
-{
-public:
-	uint16_t m_Value; // 0x0	
-	
-	// Static fields:
-	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FantasyLeagueID_t")->m_static_fields[0]->m_instance);};
 };
 
 // Alignment: 1

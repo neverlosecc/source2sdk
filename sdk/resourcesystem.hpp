@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: resourcesystem.dll
-// Classes count: 54
+// Classes count: 56
 // Enums count: 2
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -468,6 +468,26 @@ public:
 // Alignment: 0
 // Size: 0x1
 class InfoForResourceTypeCResponseRulesList
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x1
+class InfoForResourceTypeCNmSkeleton
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No members available
+};
+
+// Alignment: 0
+// Size: 0x1
+class InfoForResourceTypeCNmClip
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0

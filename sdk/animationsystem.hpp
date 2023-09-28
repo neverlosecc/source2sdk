@@ -4,8 +4,8 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: animationsystem.dll
-// Classes count: 342
-// Enums count: 68
+// Classes count: 330
+// Enums count: 63
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
@@ -176,32 +176,6 @@ enum class RagdollPoseControl : uint32_t
 {
 	Absolute = 0x0,
 	Relative = 0x1,
-};
-
-// Alignment: 4
-// Size: 0x2
-enum class AnimVRHandMotionRange_t : uint32_t
-{
-	MotionRange_WithController = 0x0,
-	MotionRange_WithoutController = 0x1,
-};
-
-// Alignment: 4
-// Size: 0x4
-enum class AnimVrFingerSplay_t : uint32_t
-{
-	AnimVrFingerSplay_Thumb_Index = 0x0,
-	AnimVrFingerSplay_Index_Middle = 0x1,
-	AnimVrFingerSplay_Middle_Ring = 0x2,
-	AnimVrFingerSplay_Ring_Pinky = 0x3,
-};
-
-// Alignment: 4
-// Size: 0x2
-enum class AnimVrBoneTransformSource_t : uint32_t
-{
-	AnimVrBoneTransformSource_LiveStream = 0x0,
-	AnimVrBoneTransformSource_GripLimit = 0x1,
 };
 
 // Alignment: 4
@@ -377,25 +351,6 @@ enum class MorphBundleType_t : uint32_t
 	MORPH_BUNDLE_TYPE_POSITION_SPEED = 0x1,
 	MORPH_BUNDLE_TYPE_NORMAL_WRINKLE = 0x2,
 	MORPH_BUNDLE_TYPE_COUNT = 0x3,
-};
-
-// Alignment: 4
-// Size: 0x2
-enum class AnimVRHand_t : uint32_t
-{
-	AnimVRHand_Left = 0x0,
-	AnimVRHand_Right = 0x1,
-};
-
-// Alignment: 4
-// Size: 0x5
-enum class AnimVRFinger_t : uint32_t
-{
-	AnimVrFinger_Thumb = 0x0,
-	AnimVrFinger_Index = 0x1,
-	AnimVrFinger_Middle = 0x2,
-	AnimVrFinger_Ring = 0x3,
-	AnimVrFinger_Pinky = 0x4,
 };
 
 // Alignment: 4
@@ -853,7 +808,6 @@ struct TraceSettings_t;
 struct CMotionDataSet;
 struct CBlendCurve;
 struct CPoseHandle;
-struct SkeletalInputOpFixedSettings_t;
 struct MotionIndex;
 struct IKBoneNameAndIndex_t;
 struct AimMatrixOpFixedSettings_t;
@@ -2793,80 +2747,15 @@ public:
 };
 
 // Alignment: 2
-// Size: 0x8
-class CFingerSource
-{
-public:
-	AnimVRFinger_t m_nFingerIndex; // 0x0	
-	float m_flFingerWeight; // 0x4	
-};
-
-// Alignment: 7
-// Size: 0x38
-class CFingerBone
-{
-public:
-	CUtlString m_boneName; // 0x0	
-	Vector m_hingeAxis; // 0x8	
-	Vector m_vCapsulePos1; // 0x14	
-	Vector m_vCapsulePos2; // 0x20	
-	float m_flMinAngle; // 0x2c	
-	float m_flMaxAngle; // 0x30	
-	float m_flRadius; // 0x34	
-};
-
-// Alignment: 10
-// Size: 0x70
-class CFingerChain
-{
-public:
-	CUtlVector< CFingerSource > m_targets; // 0x0	
-	CUtlVector< CFingerBone > m_bones; // 0x18	
-	CUtlString m_name; // 0x30	
-	CUtlString m_tipParentBoneName; // 0x38	
-	Vector m_vTipOffset; // 0x40	
-private:
-	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
-public:
-	CUtlString m_metacarpalBoneName; // 0x50	
-	Vector m_vSplayHingeAxis; // 0x58	
-	float m_flSplayMinAngle; // 0x64	
-	float m_flSplayMaxAngle; // 0x68	
-	float m_flFingerScaleRatio; // 0x6c	
-};
-
-// Alignment: 4
-// Size: 0x30
-class CWristBone
-{
-public:
-	CUtlString m_name; // 0x0	
-	Vector m_vForwardLS; // 0x8	
-	Vector m_vUpLS; // 0x14	
-	Vector m_vOffset; // 0x20	
-};
-
-// Alignment: 6
-// Size: 0x50
-class CVrSkeletalInputSettings
-{
-public:
-	CUtlVector< CWristBone > m_wristBones; // 0x0	
-	CUtlVector< CFingerChain > m_fingers; // 0x18	
-	CUtlString m_name; // 0x30	
-	CUtlString m_outerKnuckle1; // 0x38	
-	CUtlString m_outerKnuckle2; // 0x40	
-	AnimVRHand_t m_eHand; // 0x48	
-};
-
-// Alignment: 1
-// Size: 0x8
+// Size: 0x10
 struct BoneDemoCaptureSettings_t
 {
 public:
 	// MPropertyFriendlyName "Bone"
 	// MPropertyAttributeChoiceName "Bone"
 	CUtlString m_boneName; // 0x0	
+	// MPropertySuppressField
+	float m_flChainLength; // 0x8	
 };
 
 // Alignment: 5
@@ -2897,58 +2786,64 @@ public:
 	CUtlString m_oneBoneEnd; // 0x20	
 };
 
-// Alignment: 15
-// Size: 0x68
+// Alignment: 16
+// Size: 0x78
 class CAnimDemoCaptureSettings
 {
 public:
-	// MPropertyFriendlyName "Max Rotation Error"
+	// MPropertyFriendlyName "Bone Chain Length Error Scaling Range"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flMaxSplineErrorRotation; // 0x0	
+	Vector2D m_rangeBoneChainLength; // 0x0	
+	// MPropertyFriendlyName "Max Rotation Error (Mapped Against Bone Chain Length)"
+	// MPropertyGroupName "+Spline Settings"
+	Vector2D m_rangeMaxSplineErrorRotation; // 0x8	
 	// MPropertyFriendlyName "Max Translation Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flMaxSplineErrorTranslation; // 0x4	
+	float m_flMaxSplineErrorTranslation; // 0x10	
 	// MPropertyFriendlyName "Max Scale Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flMaxSplineErrorScale; // 0x8	
+	float m_flMaxSplineErrorScale; // 0x14	
 	// MPropertyFriendlyName "Max IK Rotation Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flIkRotation_MaxSplineError; // 0xc	
+	float m_flIkRotation_MaxSplineError; // 0x18	
 	// MPropertyFriendlyName "Max IK Translation Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flIkTranslation_MaxSplineError; // 0x10	
+	float m_flIkTranslation_MaxSplineError; // 0x1c	
 	// MPropertyFriendlyName "Max Rotation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flMaxQuantizationErrorRotation; // 0x14	
+	float m_flMaxQuantizationErrorRotation; // 0x20	
 	// MPropertyFriendlyName "Max Translation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flMaxQuantizationErrorTranslation; // 0x18	
+	float m_flMaxQuantizationErrorTranslation; // 0x24	
 	// MPropertyFriendlyName "Max Scale Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flMaxQuantizationErrorScale; // 0x1c	
+	float m_flMaxQuantizationErrorScale; // 0x28	
 	// MPropertyFriendlyName "Max IK Rotation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flIkRotation_MaxQuantizationError; // 0x20	
+	float m_flIkRotation_MaxQuantizationError; // 0x2c	
 	// MPropertyFriendlyName "Max IK Translation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flIkTranslation_MaxQuantizationError; // 0x24	
+	float m_flIkTranslation_MaxQuantizationError; // 0x30	
+private:
+	[[maybe_unused]] uint8_t __pad0034[0x4]; // 0x34
+public:
 	// MPropertyFriendlyName "Base Sequence"
 	// MPropertyGroupName "+Base Pose"
 	// MPropertyAttributeChoiceName "Sequence"
-	CUtlString m_baseSequence; // 0x28	
+	CUtlString m_baseSequence; // 0x38	
 	// MPropertyFriendlyName "Base Sequence Frame"
 	// MPropertyGroupName "+Base Pose"
-	int32_t m_nBaseSequenceFrame; // 0x30	
+	int32_t m_nBaseSequenceFrame; // 0x40	
 	// MPropertyFriendlyName "Bone Selection Mode"
 	// MPropertyGroupName "+Bones"
 	// MPropertyAttrChangeCallback
-	EDemoBoneSelectionMode m_boneSelectionMode; // 0x34	
+	EDemoBoneSelectionMode m_boneSelectionMode; // 0x44	
 	// MPropertyFriendlyName "Bones"
 	// MPropertyGroupName "+Bones"
 	// MPropertyAttrStateCallback
-	CUtlVector< BoneDemoCaptureSettings_t > m_bones; // 0x38	
+	CUtlVector< BoneDemoCaptureSettings_t > m_bones; // 0x48	
 	// MPropertyFriendlyName "IK Chains"
-	CUtlVector< IKDemoCaptureSettings_t > m_ikChains; // 0x50	
+	CUtlVector< IKDemoCaptureSettings_t > m_ikChains; // 0x60	
 };
 
 // Alignment: 5
@@ -3495,7 +3390,7 @@ public:
 };
 
 // Alignment: 1
-// Size: 0x98
+// Size: 0xa8
 class CDemoSettingsComponentUpdater : public CAnimComponentUpdater
 {
 public:
@@ -3594,24 +3489,6 @@ public:
 	CAnimParamHandle m_hSlopeHeading; // 0x3e	
 	CAnimParamHandle m_hSlopeNormal; // 0x40	
 	CAnimParamHandle m_hSlopeNormal_WorldSpace; // 0x42	
-};
-
-// Alignment: 9
-// Size: 0x48
-class CVRInputComponentUpdater : public CAnimComponentUpdater
-{
-private:
-	[[maybe_unused]] uint8_t __pad0030[0x4]; // 0x30
-public:
-	CAnimParamHandle m_FingerCurl_Thumb; // 0x34	
-	CAnimParamHandle m_FingerCurl_Index; // 0x36	
-	CAnimParamHandle m_FingerCurl_Middle; // 0x38	
-	CAnimParamHandle m_FingerCurl_Ring; // 0x3a	
-	CAnimParamHandle m_FingerCurl_Pinky; // 0x3c	
-	CAnimParamHandle m_FingerSplay_Thumb_Index; // 0x3e	
-	CAnimParamHandle m_FingerSplay_Index_Middle; // 0x40	
-	CAnimParamHandle m_FingerSplay_Middle_Ring; // 0x42	
-	CAnimParamHandle m_FingerSplay_Ring_Pinky; // 0x44	
 };
 
 // Alignment: 3
@@ -4122,70 +3999,6 @@ public:
 
 // Alignment: 2
 // Size: 0x8
-struct FingerSource_t
-{
-public:
-	AnimVRFinger_t m_nFingerIndex; // 0x0	
-	float m_flFingerWeight; // 0x4	
-};
-
-// Alignment: 7
-// Size: 0x34
-struct FingerBone_t
-{
-public:
-	int32_t m_boneIndex; // 0x0	
-	Vector m_hingeAxis; // 0x4	
-	Vector m_vCapsulePos1; // 0x10	
-	Vector m_vCapsulePos2; // 0x1c	
-	float m_flMinAngle; // 0x28	
-	float m_flMaxAngle; // 0x2c	
-	float m_flRadius; // 0x30	
-};
-
-// Alignment: 9
-// Size: 0x60
-struct FingerChain_t
-{
-public:
-	CUtlVector< FingerSource_t > m_targets; // 0x0	
-	CUtlVector< FingerBone_t > m_bones; // 0x18	
-	Vector m_vTipOffset; // 0x30	
-	Vector m_vSplayHingeAxis; // 0x3c	
-	int32_t m_tipParentBoneIndex; // 0x48	
-	int32_t m_metacarpalBoneIndex; // 0x4c	
-	float m_flSplayMinAngle; // 0x50	
-	float m_flSplayMaxAngle; // 0x54	
-	float m_flFingerScaleRatio; // 0x58	
-};
-
-// Alignment: 2
-// Size: 0x30
-struct WristBone_t
-{
-public:
-	CTransform m_xOffsetTransformMS; // 0x0	
-	int32_t m_boneIndex; // 0x20	
-};
-
-// Alignment: 9
-// Size: 0x48
-struct SkeletalInputOpFixedSettings_t
-{
-public:
-	CUtlVector< WristBone_t > m_wristBones; // 0x0	
-	CUtlVector< FingerChain_t > m_fingers; // 0x18	
-	int32_t m_outerKnuckle1; // 0x30	
-	int32_t m_outerKnuckle2; // 0x34	
-	AnimVRHand_t m_eHand; // 0x38	
-	AnimVRHandMotionRange_t m_eMotionRange; // 0x3c	
-	AnimVrBoneTransformSource_t m_eTransformSource; // 0x40	
-	bool m_bEnableIK; // 0x44	
-	bool m_bEnableCollision; // 0x45	
-};
-
-// Alignment: 2
-// Size: 0x8
 struct IKSolverSettings_t
 {
 public:
@@ -4435,8 +4248,11 @@ private:
 	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CAnimNodePath m_nodePath; // 0x18	
-	CUtlString m_name; // 0x48	
-	AnimNodeNetworkMode m_networkMode; // 0x50	
+	AnimNodeNetworkMode m_networkMode; // 0x48	
+private:
+	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
+public:
+	CUtlString m_name; // 0x50	
 };
 
 // Alignment: 6
@@ -4758,14 +4574,6 @@ class CPoseHandle
 public:
 	uint16_t m_nIndex; // 0x0	
 	PoseType_t m_eType; // 0x2	
-};
-
-// Alignment: 1
-// Size: 0xa8
-class CSkeletalInputUpdateNode : public CLeafUpdateNode
-{
-public:
-	SkeletalInputOpFixedSettings_t m_fixedOpData; // 0x58	
 };
 
 // Alignment: 2

@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: engine2.dll
-// Classes count: 50
+// Classes count: 49
 // Enums count: 4
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -404,16 +404,6 @@ public:
 	int32_t m_nDummy0; // 0x0	
 };
 
-// Alignment: 0
-// Size: 0x8
-class IHandleEntity
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
-public:
-	// No members available
-};
-
 // Alignment: 1
 // Size: 0x28
 class CNetworkVarChainer
@@ -548,8 +538,10 @@ public:
 
 // Alignment: 3
 // Size: 0x30
-class CEntityInstance : public IHandleEntity
+class CEntityInstance
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkDisable
 	CUtlSymbolLarge m_iszPrivateVScripts; // 0x8	
