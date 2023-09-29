@@ -2859,14 +2859,16 @@ public:
 	AnimVRHand_t m_eHand; // 0x48	
 };
 
-// Alignment: 1
-// Size: 0x8
+// Alignment: 2
+// Size: 0x10
 struct BoneDemoCaptureSettings_t
 {
 public:
 	// MPropertyFriendlyName "Bone"
 	// MPropertyAttributeChoiceName "Bone"
 	CUtlString m_boneName; // 0x0	
+	// MPropertySuppressField
+	float m_flChainLength; // 0x8	
 };
 
 // Alignment: 5
@@ -2897,58 +2899,64 @@ public:
 	CUtlString m_oneBoneEnd; // 0x20	
 };
 
-// Alignment: 15
-// Size: 0x68
+// Alignment: 16
+// Size: 0x78
 class CAnimDemoCaptureSettings
 {
 public:
-	// MPropertyFriendlyName "Max Rotation Error"
+	// MPropertyFriendlyName "Bone Chain Length Error Scaling Range"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flMaxSplineErrorRotation; // 0x0	
+	Vector2D m_rangeBoneChainLength; // 0x0	
+	// MPropertyFriendlyName "Max Rotation Error (Mapped Against Bone Chain Length)"
+	// MPropertyGroupName "+Spline Settings"
+	Vector2D m_rangeMaxSplineErrorRotation; // 0x8	
 	// MPropertyFriendlyName "Max Translation Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flMaxSplineErrorTranslation; // 0x4	
+	float m_flMaxSplineErrorTranslation; // 0x10	
 	// MPropertyFriendlyName "Max Scale Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flMaxSplineErrorScale; // 0x8	
+	float m_flMaxSplineErrorScale; // 0x14	
 	// MPropertyFriendlyName "Max IK Rotation Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flIkRotation_MaxSplineError; // 0xc	
+	float m_flIkRotation_MaxSplineError; // 0x18	
 	// MPropertyFriendlyName "Max IK Translation Error"
 	// MPropertyGroupName "+Spline Settings"
-	float m_flIkTranslation_MaxSplineError; // 0x10	
+	float m_flIkTranslation_MaxSplineError; // 0x1c	
 	// MPropertyFriendlyName "Max Rotation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flMaxQuantizationErrorRotation; // 0x14	
+	float m_flMaxQuantizationErrorRotation; // 0x20	
 	// MPropertyFriendlyName "Max Translation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flMaxQuantizationErrorTranslation; // 0x18	
+	float m_flMaxQuantizationErrorTranslation; // 0x24	
 	// MPropertyFriendlyName "Max Scale Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flMaxQuantizationErrorScale; // 0x1c	
+	float m_flMaxQuantizationErrorScale; // 0x28	
 	// MPropertyFriendlyName "Max IK Rotation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flIkRotation_MaxQuantizationError; // 0x20	
+	float m_flIkRotation_MaxQuantizationError; // 0x2c	
 	// MPropertyFriendlyName "Max IK Translation Error"
 	// MPropertyGroupName "+Quantization Settings"
-	float m_flIkTranslation_MaxQuantizationError; // 0x24	
+	float m_flIkTranslation_MaxQuantizationError; // 0x30	
+private:
+	[[maybe_unused]] uint8_t __pad0034[0x4]; // 0x34
+public:
 	// MPropertyFriendlyName "Base Sequence"
 	// MPropertyGroupName "+Base Pose"
 	// MPropertyAttributeChoiceName "Sequence"
-	CUtlString m_baseSequence; // 0x28	
+	CUtlString m_baseSequence; // 0x38	
 	// MPropertyFriendlyName "Base Sequence Frame"
 	// MPropertyGroupName "+Base Pose"
-	int32_t m_nBaseSequenceFrame; // 0x30	
+	int32_t m_nBaseSequenceFrame; // 0x40	
 	// MPropertyFriendlyName "Bone Selection Mode"
 	// MPropertyGroupName "+Bones"
 	// MPropertyAttrChangeCallback
-	EDemoBoneSelectionMode m_boneSelectionMode; // 0x34	
+	EDemoBoneSelectionMode m_boneSelectionMode; // 0x44	
 	// MPropertyFriendlyName "Bones"
 	// MPropertyGroupName "+Bones"
 	// MPropertyAttrStateCallback
-	CUtlVector< BoneDemoCaptureSettings_t > m_bones; // 0x38	
+	CUtlVector< BoneDemoCaptureSettings_t > m_bones; // 0x48	
 	// MPropertyFriendlyName "IK Chains"
-	CUtlVector< IKDemoCaptureSettings_t > m_ikChains; // 0x50	
+	CUtlVector< IKDemoCaptureSettings_t > m_ikChains; // 0x60	
 };
 
 // Alignment: 5
@@ -3495,7 +3503,7 @@ public:
 };
 
 // Alignment: 1
-// Size: 0x98
+// Size: 0xa8
 class CDemoSettingsComponentUpdater : public CAnimComponentUpdater
 {
 public:
@@ -4435,8 +4443,11 @@ private:
 	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	CAnimNodePath m_nodePath; // 0x18	
-	CUtlString m_name; // 0x48	
-	AnimNodeNetworkMode m_networkMode; // 0x50	
+	AnimNodeNetworkMode m_networkMode; // 0x48	
+private:
+	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
+public:
+	CUtlString m_name; // 0x50	
 };
 
 // Alignment: 6

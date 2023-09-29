@@ -608,34 +608,32 @@ public:
 	uint16_t nChild[2]; // 0x0	
 };
 
-// Alignment: 6
+// Alignment: 5
 // Size: 0x30
 struct FeTaperedCapsuleRigid_t
 {
 public:
 	fltx4 vSphere[2]; // 0x0	
-	float flStickiness; // 0x20	
-	uint16_t nNode; // 0x24	
-	uint16_t nCollisionMask; // 0x26	
-	uint16_t nVertexMapIndex; // 0x28	
-	uint16_t nFlags; // 0x2a	
+	uint16_t nNode; // 0x20	
+	uint16_t nCollisionMask; // 0x22	
+	uint16_t nVertexMapIndex; // 0x24	
+	uint16_t nFlags; // 0x26	
 };
 
-// Alignment: 6
+// Alignment: 5
 // Size: 0x20
 struct FeSphereRigid_t
 {
 public:
 	fltx4 vSphere; // 0x0	
-	float flStickiness; // 0x10	
-	uint16_t nNode; // 0x14	
-	uint16_t nCollisionMask; // 0x16	
-	uint16_t nVertexMapIndex; // 0x18	
-	uint16_t nFlags; // 0x1a	
+	uint16_t nNode; // 0x10	
+	uint16_t nCollisionMask; // 0x12	
+	uint16_t nVertexMapIndex; // 0x14	
+	uint16_t nFlags; // 0x16	
 };
 
-// Alignment: 5
-// Size: 0x14
+// Alignment: 4
+// Size: 0x10
 struct FeTaperedCapsuleStretch_t
 {
 public:
@@ -644,10 +642,9 @@ public:
 	// MPropertySuppressField
 	uint16_t nDummy; // 0x6	
 	float flRadius[2]; // 0x8	
-	float flStickiness; // 0x10	
 };
 
-// Alignment: 8
+// Alignment: 6
 // Size: 0x40
 struct FeBoxRigid_t
 {
@@ -656,10 +653,8 @@ public:
 	uint16_t nNode; // 0x20	
 	uint16_t nCollisionMask; // 0x22	
 	Vector vSize; // 0x24	
-	float flStickiness; // 0x30	
-	uint16_t nVertexMapIndex; // 0x34	
-	uint16_t nFlags; // 0x36	
-	float flReserved[2]; // 0x38	
+	uint16_t nVertexMapIndex; // 0x30	
+	uint16_t nFlags; // 0x32	
 };
 
 // Alignment: 4
@@ -883,16 +878,15 @@ public:
 	float m_flRadius; // 0x18	
 };
 
-// Alignment: 5
-// Size: 0x1c
+// Alignment: 4
+// Size: 0x18
 struct FeCollisionPlane_t
 {
 public:
 	uint16_t nCtrlParent; // 0x0	
 	uint16_t nChildNode; // 0x2	
 	RnPlane_t m_Plane; // 0x4	
-	float flStickiness; // 0x14	
-	float flStrength; // 0x18	
+	float flStrength; // 0x14	
 };
 
 // Alignment: 4
@@ -972,8 +966,8 @@ public:
 	uint32_t m_nTriangleOffset; // 0x1c	
 };
 
-// Alignment: 9
-// Size: 0xa0
+// Alignment: 10
+// Size: 0xa8
 struct RnMesh_t
 {
 public:
@@ -985,7 +979,8 @@ public:
 	CUtlVector< RnWing_t > m_Wings; // 0x60	
 	CUtlVector< uint8 > m_Materials; // 0x78	
 	Vector m_vOrthographicAreas; // 0x90	
-	bool m_bHasOpenEdges; // 0x9c	
+	uint32_t m_nFlags; // 0x9c	
+	uint32_t m_nDebugFlags; // 0xa0	
 };
 
 // Alignment: 3
@@ -1023,7 +1018,7 @@ public:
 };
 
 // Alignment: 1
-// Size: 0xb0
+// Size: 0xb8
 struct RnMeshDesc_t : public RnShapeDesc_t
 {
 public:

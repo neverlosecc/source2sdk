@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: worldrenderer.dll
-// Classes count: 26
+// Classes count: 27
 // Enums count: 1
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -206,18 +206,14 @@ public:
 	int32_t m_nLightProbeVolumePrecomputedHandshake; // 0x14	
 };
 
-// Alignment: 4
-// Size: 0x40
+// Alignment: 3
+// Size: 0x38
 struct AggregateLODSetup_t
 {
 public:
 	Vector m_vLODOrigin; // 0x0	
 	float m_fMaxObjectScale; // 0xc	
-	uint8_t m_nLODMask; // 0x10	
-private:
-	[[maybe_unused]] uint8_t __pad0011[0x7]; // 0x11
-public:
-	CUtlVectorFixedGrowable< float32 > m_fSwitchDistances; // 0x18	
+	CUtlVectorFixedGrowable< float32 > m_fSwitchDistances; // 0x10	
 };
 
 // Alignment: 8
@@ -383,6 +379,16 @@ public:
 	// No members available
 };
 
+// Alignment: 0
+// Size: 0x8
+class CEntityComponent
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// No members available
+};
+
 // Alignment: 11
 // Size: 0x78
 class CEntityIdentity
@@ -419,8 +425,10 @@ public:
 
 // Alignment: 3
 // Size: 0x30
-class CEntityInstance : public IHandleEntity
+class CEntityInstance
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkDisable
 	CUtlSymbolLarge m_iszPrivateVScripts; // 0x8	
