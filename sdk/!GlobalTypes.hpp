@@ -23240,8 +23240,8 @@ public:
 	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("ModelConfigHandle_t")->m_static_fields[0]->m_instance);};
 };
 
-// Alignment: 9
-// Size: 0x38
+// Alignment: 12
+// Size: 0x44
 struct CSAdditionalMatchStats_t : public CSAdditionalPerRoundStats_t
 {
 public:
@@ -23254,6 +23254,9 @@ public:
 	int32_t m_numClutchKills; // 0x2c	
 	int32_t m_numPistolKills; // 0x30	
 	int32_t m_numSniperKills; // 0x34	
+	int32_t m_iNumSuicides; // 0x38	
+	int32_t m_iNumTeamKills; // 0x3c	
+	int32_t m_iTeamDamage; // 0x40	
 };
 
 // Alignment: 8
@@ -24490,11 +24493,11 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x518
+// Size: 0x520
 class CCSGOPlayerAnimGraphState
 {
 private:
-	[[maybe_unused]] uint8_t __pad0000[0x518]; // 0x0
+	[[maybe_unused]] uint8_t __pad0000[0x520]; // 0x0
 public:
 	// No members available
 };
