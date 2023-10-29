@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: !GlobalTypes
-// Classes count: 1293
+// Classes count: 1294
 // Enums count: 303
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -10328,6 +10328,14 @@ public:
 	float m_flSupport[26]; // 0x0	
 };
 
+// Alignment: 1
+// Size: 0x1
+struct RnVertex_t
+{
+public:
+	uint8_t m_nEdge; // 0x0	
+};
+
 // Alignment: 4
 // Size: 0x18
 class CovMatrix3
@@ -10339,8 +10347,8 @@ public:
 	float m_flYZ; // 0x14	
 };
 
-// Alignment: 12
-// Size: 0xd8
+// Alignment: 13
+// Size: 0xf0
 struct RnHull_t
 {
 public:
@@ -10350,15 +10358,16 @@ public:
 	Vector m_vOrthographicAreas; // 0x28	
 	matrix3x4_t m_MassProperties; // 0x34	
 	float m_flVolume; // 0x64	
-	CUtlVector< Vector > m_Vertices; // 0x68	
-	CUtlVector< RnHalfEdge_t > m_Edges; // 0x80	
-	CUtlVector< RnFace_t > m_Faces; // 0x98	
-	CUtlVector< RnPlane_t > m_Planes; // 0xb0	
-	uint32_t m_nFlags; // 0xc8	
+	CUtlVector< RnVertex_t > m_Vertices; // 0x68	
+	CUtlVector< Vector > m_VertexPositions; // 0x80	
+	CUtlVector< RnHalfEdge_t > m_Edges; // 0x98	
+	CUtlVector< RnFace_t > m_Faces; // 0xb0	
+	CUtlVector< RnPlane_t > m_FacePlanes; // 0xc8	
+	uint32_t m_nFlags; // 0xe0	
 private:
-	[[maybe_unused]] uint8_t __pad00cc[0x4]; // 0xcc
+	[[maybe_unused]] uint8_t __pad00e4[0x4]; // 0xe4
 public:
-	CRegionSVM* m_pRegionSVM; // 0xd0	
+	CRegionSVM* m_pRegionSVM; // 0xe8	
 };
 
 // Alignment: 5
@@ -11212,7 +11221,7 @@ public:
 };
 
 // Alignment: 1
-// Size: 0xe8
+// Size: 0x100
 struct RnHullDesc_t : public RnShapeDesc_t
 {
 public:
@@ -24493,11 +24502,11 @@ public:
 };
 
 // Alignment: 0
-// Size: 0x520
+// Size: 0x538
 class CCSGOPlayerAnimGraphState
 {
 private:
-	[[maybe_unused]] uint8_t __pad0000[0x520]; // 0x0
+	[[maybe_unused]] uint8_t __pad0000[0x538]; // 0x0
 public:
 	// No members available
 };
