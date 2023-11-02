@@ -845,7 +845,7 @@ enum class DOTAKeybindTemplate_t : uint32_t
 };
 
 // Alignment: 4
-// Size: 0xf1
+// Size: 0xf0
 enum class DOTAKeybindCommand_t : uint32_t
 {
 	DOTA_KEYBIND_NONE = 0x0,
@@ -1049,46 +1049,45 @@ enum class DOTAKeybindCommand_t : uint32_t
 	DOTA_KEYBIND_SPEC_SCOREBOARD = 0xc5,
 	DOTA_KEYBIND_SPEC_INCREASE_REPLAY_SPEED = 0xc6,
 	DOTA_KEYBIND_SPEC_DECREASE_REPLAY_SPEED = 0xc7,
-	DOTA_KEYBIND_SPEC_STATS_HARVEST = 0xc8,
-	DOTA_KEYBIND_SPEC_STATS_ITEM = 0xc9,
-	DOTA_KEYBIND_SPEC_STATS_GOLD = 0xca,
-	DOTA_KEYBIND_SPEC_STATS_XP = 0xcb,
-	DOTA_KEYBIND_SPEC_STATS_FANTASY = 0xcc,
-	DOTA_KEYBIND_SPEC_STATS_WINCHANCE = 0xcd,
-	DOTA_KEYBIND_SPEC_FOW_TOGGLEBOTH = 0xce,
-	DOTA_KEYBIND_SPEC_FOW_TOGGLERADIENT = 0xcf,
-	DOTA_KEYBIND_SPEC_FOW_TOGGLEDIRE = 0xd0,
-	DOTA_KEYBIND_SPEC_OPEN_BROADCASTER_MENU = 0xd1,
-	DOTA_KEYBIND_SPEC_DROPDOWN_KDA = 0xd2,
-	DOTA_KEYBIND_SPEC_DROPDOWN_LASTHITS_DENIES = 0xd3,
-	DOTA_KEYBIND_SPEC_DROPDOWN_LEVEL = 0xd4,
-	DOTA_KEYBIND_SPEC_DROPDOWN_XP_PER_MIN = 0xd5,
-	DOTA_KEYBIND_SPEC_DROPDOWN_GOLD = 0xd6,
-	DOTA_KEYBIND_SPEC_DROPDOWN_TOTALGOLD = 0xd7,
-	DOTA_KEYBIND_SPEC_DROPDOWN_GOLD_PER_MIN = 0xd8,
-	DOTA_KEYBIND_SPEC_DROPDOWN_BUYBACK = 0xd9,
-	DOTA_KEYBIND_SPEC_DROPDOWN_NETWORTH = 0xda,
-	DOTA_KEYBIND_SPEC_DROPDOWN_FANTASY = 0xdb,
-	DOTA_KEYBIND_SPEC_DROPDOWN_SORT = 0xdc,
-	DOTA_KEYBIND_SPEC_DROPDOWN_CLOSE = 0xdd,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_1 = 0xde,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_2 = 0xdf,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_3 = 0xe0,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_4 = 0xe1,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_5 = 0xe2,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_6 = 0xe3,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_7 = 0xe4,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_8 = 0xe5,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_9 = 0xe6,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_10 = 0xe7,
-	DOTA_KEYBIND_SPEC_COACH_VIEWTOGGLE = 0xe8,
-	DOTA_KEYBIND_INSPECTHEROINWORLD = 0xe9,
-	DOTA_KEYBIND_CAMERA_ZOOM_IN = 0xea,
-	DOTA_KEYBIND_CAMERA_ZOOM_OUT = 0xeb,
-	DOTA_KEYBIND_CONTROL_GROUPCYCLEPREV = 0xec,
-	DOTA_KEYBIND_DOTA_ALT = 0xed,
-	DOTA_KEYBIND_DOTA_ALTERNATIVE_CAST_SWITCH = 0xee,
-	DOTA_KEYBIND_COUNT = 0xef,
+	DOTA_KEYBIND_SPEC_STATS_ITEM = 0xc8,
+	DOTA_KEYBIND_SPEC_STATS_GOLD = 0xc9,
+	DOTA_KEYBIND_SPEC_STATS_XP = 0xca,
+	DOTA_KEYBIND_SPEC_STATS_FANTASY = 0xcb,
+	DOTA_KEYBIND_SPEC_STATS_WINCHANCE = 0xcc,
+	DOTA_KEYBIND_SPEC_FOW_TOGGLEBOTH = 0xcd,
+	DOTA_KEYBIND_SPEC_FOW_TOGGLERADIENT = 0xce,
+	DOTA_KEYBIND_SPEC_FOW_TOGGLEDIRE = 0xcf,
+	DOTA_KEYBIND_SPEC_OPEN_BROADCASTER_MENU = 0xd0,
+	DOTA_KEYBIND_SPEC_DROPDOWN_KDA = 0xd1,
+	DOTA_KEYBIND_SPEC_DROPDOWN_LASTHITS_DENIES = 0xd2,
+	DOTA_KEYBIND_SPEC_DROPDOWN_LEVEL = 0xd3,
+	DOTA_KEYBIND_SPEC_DROPDOWN_XP_PER_MIN = 0xd4,
+	DOTA_KEYBIND_SPEC_DROPDOWN_GOLD = 0xd5,
+	DOTA_KEYBIND_SPEC_DROPDOWN_TOTALGOLD = 0xd6,
+	DOTA_KEYBIND_SPEC_DROPDOWN_GOLD_PER_MIN = 0xd7,
+	DOTA_KEYBIND_SPEC_DROPDOWN_BUYBACK = 0xd8,
+	DOTA_KEYBIND_SPEC_DROPDOWN_NETWORTH = 0xd9,
+	DOTA_KEYBIND_SPEC_DROPDOWN_FANTASY = 0xda,
+	DOTA_KEYBIND_SPEC_DROPDOWN_SORT = 0xdb,
+	DOTA_KEYBIND_SPEC_DROPDOWN_CLOSE = 0xdc,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_1 = 0xdd,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_2 = 0xde,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_3 = 0xdf,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_4 = 0xe0,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_5 = 0xe1,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_6 = 0xe2,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_7 = 0xe3,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_8 = 0xe4,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_9 = 0xe5,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_10 = 0xe6,
+	DOTA_KEYBIND_SPEC_COACH_VIEWTOGGLE = 0xe7,
+	DOTA_KEYBIND_INSPECTHEROINWORLD = 0xe8,
+	DOTA_KEYBIND_CAMERA_ZOOM_IN = 0xe9,
+	DOTA_KEYBIND_CAMERA_ZOOM_OUT = 0xea,
+	DOTA_KEYBIND_CONTROL_GROUPCYCLEPREV = 0xeb,
+	DOTA_KEYBIND_DOTA_ALT = 0xec,
+	DOTA_KEYBIND_DOTA_ALTERNATIVE_CAST_SWITCH = 0xed,
+	DOTA_KEYBIND_COUNT = 0xee,
 };
 
 // Alignment: 4
@@ -5123,7 +5122,6 @@ public:
 	CUtlVector< sSharedCooldownInfo > m_SharedCooldownList; // 0x8	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnInventoryChanged"
-	// MNetworkSerializer "EHandleIndexOnly"
 	CHandle< C_BaseEntity > m_hItems[19]; // 0x20	
 	bool m_bItemQueried[19]; // 0x6c	
 private:
@@ -15458,8 +15456,8 @@ public:
 	int32_t attack_range_bonus; // 0x12ec	
 };
 
-// Alignment: 6
-// Size: 0x12d8
+// Alignment: 8
+// Size: 0x12e0
 class CDOTA_Modifier_Kunkka_Torrent_Thinker : public CDOTA_Buff
 {
 public:
@@ -15471,17 +15469,20 @@ private:
 public:
 	GameTime_t m_fTorrentStartTime; // 0x12cc	
 	float flDamagePerTick; // 0x12d0	
-	float damage_tick_interval; // 0x12d4	
+	float flFirstDamage; // 0x12d4	
+	float damage_tick_interval; // 0x12d8	
+	float percent_instant; // 0x12dc	
 };
 
-// Alignment: 3
+// Alignment: 4
 // Size: 0x12d8
 class CDOTA_Modifier_Kunkka_Torrent : public CDOTA_Buff
 {
 public:
 	int32_t torrent_damage; // 0x12c8	
 	float damage_tick_interval; // 0x12cc	
-	float flDamagePerTick; // 0x12d0	
+	float percent_instant; // 0x12d0	
+	float flDamagePerTick; // 0x12d4	
 };
 
 // Alignment: 1
@@ -15527,23 +15528,6 @@ public:
 	int32_t cleave_damage; // 0x12e0	
 };
 
-// Alignment: 2
-// Size: 0x12d8
-class CDOTA_Modifier_Kunkka_XMarksTheSpot : public CDOTA_Buff
-{
-public:
-	int32_t ally_ms; // 0x12c8	
-	int32_t ally_armor; // 0x12cc	
-};
-
-// Alignment: 0
-// Size: 0x12c8
-class CDOTA_Modifier_Kunkka_XMarksTheSpotMarker : public CDOTA_Buff
-{
-public:
-	// No members available
-};
-
 // Alignment: 3
 // Size: 0x12e0
 class CDOTA_Modifier_Kunkka_XMarksTheSpot_Thinker : public CDOTA_Buff
@@ -15555,6 +15539,24 @@ private:
 	[[maybe_unused]] uint8_t __pad12d5[0x3]; // 0x12d5
 public:
 	CHandle< C_BaseEntity > m_hEntity; // 0x12d8	
+};
+
+// Alignment: 3
+// Size: 0x12e0
+class CDOTA_Modifier_Kunkka_XMarksTheSpot : public CDOTA_Buff
+{
+public:
+	int32_t ally_ms; // 0x12c8	
+	int32_t ally_armor; // 0x12cc	
+	CHandle< C_BaseEntity > hThinker; // 0x12d0	
+};
+
+// Alignment: 0
+// Size: 0x12c8
+class CDOTA_Modifier_Kunkka_XMarksTheSpotMarker : public CDOTA_Buff
+{
+public:
+	// No members available
 };
 
 // Alignment: 3
@@ -21631,8 +21633,8 @@ public:
 	// No members available
 };
 
-// Alignment: 6
-// Size: 0x12e0
+// Alignment: 7
+// Size: 0x12e8
 class CDOTA_Modifier_Invoker_EMP : public CDOTA_Buff
 {
 public:
@@ -21641,7 +21643,8 @@ public:
 	float damage_per_mana; // 0x12d0	
 	float spell_lifesteal; // 0x12d4	
 	float spell_amp; // 0x12d8	
-	CHandle< C_BaseEntity > m_hPullThinker; // 0x12dc	
+	int32_t self_mana_restore_pct; // 0x12dc	
+	CHandle< C_BaseEntity > m_hPullThinker; // 0x12e0	
 };
 
 // Alignment: 1
@@ -22125,7 +22128,7 @@ public:
 	int32_t crit_chance; // 0x12cc	
 	int32_t crit_multiplier; // 0x12d0	
 	int32_t attack_speed; // 0x12d4	
-	int32_t active_multiplier; // 0x12d8	
+	float active_multiplier; // 0x12d8	
 	int32_t stun_chance; // 0x12dc	
 	float bash_cooldown; // 0x12e0	
 	float stun_duration; // 0x12e4	
@@ -22143,7 +22146,7 @@ class CDOTA_Modifier_Brewmaster_Void_Brawler_Slow : public CDOTA_Buff
 {
 public:
 	int32_t movespeed; // 0x12c8	
-	int32_t active_multiplier; // 0x12cc	
+	float active_multiplier; // 0x12cc	
 };
 
 // Alignment: 1
@@ -28941,8 +28944,8 @@ public:
 	int32_t scepter_armor; // 0x12c8	
 };
 
-// Alignment: 11
-// Size: 0x12f8
+// Alignment: 10
+// Size: 0x12f0
 class CDOTA_Modifier_Marci_Guardian_Buff : public CDOTA_Buff
 {
 public:
@@ -28954,12 +28957,11 @@ public:
 	int32_t creep_lifesteal_reduction_pct; // 0x12dc	
 	float m_fLifestealPct; // 0x12e0	
 	float m_fDamageAbsorbed; // 0x12e4	
-	CHandle< C_BaseEntity > m_hPartner; // 0x12e8	
-	bool m_bActive; // 0x12ec	
+	bool m_bActive; // 0x12e8	
 private:
-	[[maybe_unused]] uint8_t __pad12ed[0x3]; // 0x12ed
+	[[maybe_unused]] uint8_t __pad12e9[0x3]; // 0x12e9
 public:
-	ParticleIndex_t m_nFxIndex; // 0x12f0	
+	ParticleIndex_t m_nFxIndex; // 0x12ec	
 };
 
 // Alignment: 1
@@ -30393,12 +30395,13 @@ public:
 	int32_t bonus_movement_speed; // 0x12d0	
 };
 
-// Alignment: 1
+// Alignment: 2
 // Size: 0x12d8
 class CDOTA_Modifier_Eul_Cyclone : public CDOTA_Modifier_Cyclone
 {
 public:
 	CHandle< C_BaseEntity > m_hBlocker; // 0x12d0	
+	bool m_bBlockerCreated; // 0x12d4	
 };
 
 // Alignment: 0
@@ -69359,7 +69362,7 @@ public:
 	// No members available
 };
 
-// Alignment: 5
+// Alignment: 6
 // Size: 0x5c8
 class C_DOTA_Ability_ArcWarden_SparkWraith : public C_DOTABaseAbility
 {
@@ -69369,6 +69372,7 @@ public:
 	float wraith_vision_duration; // 0x5b8	
 	int32_t wraith_vision_radius; // 0x5bc	
 	float spark_damage; // 0x5c0	
+	int32_t creep_damage_bonus_pct; // 0x5c4	
 };
 
 // Alignment: 1
@@ -70538,14 +70542,13 @@ public:
 	ParticleIndex_t m_nToTargetFXIndex; // 0x5e8	
 };
 
-// Alignment: 3
-// Size: 0x5c0
+// Alignment: 2
+// Size: 0x5b8
 class CDOTA_Ability_Marci_Guardian : public C_DOTABaseAbility
 {
 public:
 	float buff_duration; // 0x5b0	
 	int32_t nearest_ally_search_range; // 0x5b4	
-	CHandle< C_BaseEntity > m_hPartner; // 0x5b8	
 };
 
 // Alignment: 5
@@ -76977,7 +76980,6 @@ class C_BaseCombatCharacter : public C_BaseFlex
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnWearablesChanged"
-	// MNetworkSerializer "EHandleIndexOnly"
 	C_NetworkUtlVectorBase< CHandle< C_EconWearable > > m_hMyWearables; // 0x968	
 	int32_t m_bloodColor; // 0x980	
 	AttachmentHandle_t m_leftFootAttachment; // 0x984	
@@ -77222,7 +77224,6 @@ public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnAbilitiesChanged"
 	// MNetworkPriority "32"
-	// MNetworkSerializer "EHandleIndexOnly"
 	CHandle< C_BaseEntity > m_hAbilities[35]; // 0xac8	
 	float m_flInvisibilityLevel; // 0xb54	
 	float m_flHullRadius; // 0xb58	

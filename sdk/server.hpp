@@ -14281,7 +14281,6 @@ public:
 	CUtlVector< sSharedCooldownInfo > m_SharedCooldownList; // 0x8	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnInventoryChanged"
-	// MNetworkSerializer "EHandleIndexOnly"
 	CHandle< CBaseEntity > m_hItems[19]; // 0x20	
 	bool m_bItemQueried[19]; // 0x6c	
 private:
@@ -26984,8 +26983,8 @@ public:
 	TrackedStatAggregateData_t m_aggregateData; // 0x20	
 };
 
-// Alignment: 8
-// Size: 0x40
+// Alignment: 14
+// Size: 0x58
 class CDOTABingoStatDefinition
 {
 private:
@@ -27010,6 +27009,21 @@ public:
 	CUtlString m_strHeroAdjective; // 0x30	
 	// MPropertyDescription "Whether we negate the hero adjective when displaying tooltip"
 	bool m_bNegativeHeroAdjective; // 0x38	
+private:
+	[[maybe_unused]] uint8_t __pad0039[0x3]; // 0x39
+public:
+	// MPropertyDescription "At which league phase this stat unlocks"
+	int32_t m_nMinLeaguePhase; // 0x3c	
+	// MPropertyDescription "Up to which league phase this stat is usable"
+	int32_t m_nMaxLeaguePhase; // 0x40	
+	// MPropertyDescription "Expected value for League Phase Playoffs game."
+	float m_fPlayoffsStatAverage; // 0x44	
+	// MPropertyDescription "Statistical standard deviation of League Phase Playoffs game."
+	float m_fPlayoffsStatStdDev; // 0x48	
+	// MPropertyDescription "Expected value for League Phase Main Event game."
+	float m_fMainEventStatAverage; // 0x4c	
+	// MPropertyDescription "Statistical standard deviation of League Phase Main Event game."
+	float m_fMainEventStatStdDev; // 0x50	
 };
 
 // Alignment: 1
@@ -27266,8 +27280,8 @@ public:
 	CUtlVector< FantasyCraftOperationBucket_t > m_vecOperations; // 0x98	
 };
 
-// Alignment: 4
-// Size: 0x18
+// Alignment: 5
+// Size: 0x20
 struct FantasyPlayerData_t
 {
 public:
@@ -27282,6 +27296,8 @@ private:
 public:
 	// MPropertyDescription "Name of the pro player"
 	CUtlString m_strPlayerName; // 0x10	
+	// MPropertyDescription "Is this player still playing in the league?"
+	bool m_bIsValid; // 0x18	
 };
 
 // Alignment: 2
@@ -51179,8 +51195,8 @@ public:
 	// No members available
 };
 
-// Alignment: 6
-// Size: 0x12d8
+// Alignment: 8
+// Size: 0x12e0
 class CDOTA_Modifier_Kunkka_Torrent_Thinker : public CDOTA_Buff
 {
 public:
@@ -51192,20 +51208,23 @@ private:
 public:
 	GameTime_t m_fTorrentStartTime; // 0x12cc	
 	float flDamagePerTick; // 0x12d0	
-	float damage_tick_interval; // 0x12d4	
+	float flFirstDamage; // 0x12d4	
+	float damage_tick_interval; // 0x12d8	
+	float percent_instant; // 0x12dc	
 };
 
-// Alignment: 6
-// Size: 0x12e0
+// Alignment: 7
+// Size: 0x12e8
 class CDOTA_Modifier_Kunkka_Torrent : public CDOTA_Buff
 {
 public:
 	int32_t torrent_damage; // 0x12c8	
 	float damage_tick_interval; // 0x12cc	
-	float flDamagePerTick; // 0x12d0	
-	float m_flStartZ; // 0x12d4	
-	float m_flCurTime; // 0x12d8	
-	bool m_bTorrentStorm; // 0x12dc	
+	float percent_instant; // 0x12d0	
+	float flDamagePerTick; // 0x12d4	
+	float m_flStartZ; // 0x12d8	
+	float m_flCurTime; // 0x12dc	
+	bool m_bTorrentStorm; // 0x12e0	
 };
 
 // Alignment: 1
@@ -51267,31 +51286,6 @@ public:
 	int32_t cleave_damage; // 0x12e0	
 };
 
-// Alignment: 1
-// Size: 0x570
-class CDOTA_Ability_Kunkka_XMarksTheSpot : public CDOTABaseAbility
-{
-public:
-	CHandle< CBaseEntity > m_hThinker; // 0x568	
-};
-
-// Alignment: 2
-// Size: 0x12d8
-class CDOTA_Modifier_Kunkka_XMarksTheSpot : public CDOTA_Buff
-{
-public:
-	int32_t ally_ms; // 0x12c8	
-	int32_t ally_armor; // 0x12cc	
-};
-
-// Alignment: 0
-// Size: 0x12c8
-class CDOTA_Modifier_Kunkka_XMarksTheSpotMarker : public CDOTA_Buff
-{
-public:
-	// No members available
-};
-
 // Alignment: 3
 // Size: 0x12e0
 class CDOTA_Modifier_Kunkka_XMarksTheSpot_Thinker : public CDOTA_Buff
@@ -51303,6 +51297,32 @@ private:
 	[[maybe_unused]] uint8_t __pad12d5[0x3]; // 0x12d5
 public:
 	CHandle< CBaseEntity > m_hEntity; // 0x12d8	
+};
+
+// Alignment: 1
+// Size: 0x570
+class CDOTA_Ability_Kunkka_XMarksTheSpot : public CDOTABaseAbility
+{
+public:
+	CHandle< CBaseEntity > m_hThinker; // 0x568	
+};
+
+// Alignment: 3
+// Size: 0x12e0
+class CDOTA_Modifier_Kunkka_XMarksTheSpot : public CDOTA_Buff
+{
+public:
+	int32_t ally_ms; // 0x12c8	
+	int32_t ally_armor; // 0x12cc	
+	CHandle< CBaseEntity > hThinker; // 0x12d0	
+};
+
+// Alignment: 0
+// Size: 0x12c8
+class CDOTA_Modifier_Kunkka_XMarksTheSpotMarker : public CDOTA_Buff
+{
+public:
+	// No members available
 };
 
 // Alignment: 0
@@ -62075,8 +62095,8 @@ public:
 	// No members available
 };
 
-// Alignment: 6
-// Size: 0x12e0
+// Alignment: 7
+// Size: 0x12e8
 class CDOTA_Modifier_Invoker_EMP : public CDOTA_Buff
 {
 public:
@@ -62085,7 +62105,8 @@ public:
 	float damage_per_mana; // 0x12d0	
 	float spell_lifesteal; // 0x12d4	
 	float spell_amp; // 0x12d8	
-	CHandle< CBaseEntity > m_hPullThinker; // 0x12dc	
+	int32_t self_mana_restore_pct; // 0x12dc	
+	CHandle< CBaseEntity > m_hPullThinker; // 0x12e0	
 };
 
 // Alignment: 1
@@ -62941,7 +62962,7 @@ public:
 	int32_t crit_chance; // 0x12cc	
 	int32_t crit_multiplier; // 0x12d0	
 	int32_t attack_speed; // 0x12d4	
-	int32_t active_multiplier; // 0x12d8	
+	float active_multiplier; // 0x12d8	
 	int32_t stun_chance; // 0x12dc	
 	float bash_cooldown; // 0x12e0	
 	float stun_duration; // 0x12e4	
@@ -62959,7 +62980,7 @@ class CDOTA_Modifier_Brewmaster_Void_Brawler_Slow : public CDOTA_Buff
 {
 public:
 	int32_t movespeed; // 0x12c8	
-	int32_t active_multiplier; // 0x12cc	
+	float active_multiplier; // 0x12cc	
 };
 
 // Alignment: 1
@@ -71036,7 +71057,7 @@ public:
 	int32_t attack_speed_bonus; // 0x12c8	
 };
 
-// Alignment: 5
+// Alignment: 6
 // Size: 0x580
 class CDOTA_Ability_ArcWarden_SparkWraith : public CDOTABaseAbility
 {
@@ -71046,6 +71067,7 @@ public:
 	float wraith_vision_duration; // 0x570	
 	int32_t wraith_vision_radius; // 0x574	
 	float spark_damage; // 0x578	
+	int32_t creep_damage_bonus_pct; // 0x57c	
 };
 
 // Alignment: 1
@@ -74437,16 +74459,6 @@ public:
 	int32_t scepter_armor; // 0x12c8	
 };
 
-// Alignment: 3
-// Size: 0x578
-class CDOTA_Ability_Marci_Guardian : public CDOTABaseAbility
-{
-public:
-	float buff_duration; // 0x568	
-	int32_t nearest_ally_search_range; // 0x56c	
-	CHandle< CBaseEntity > m_hPartner; // 0x570	
-};
-
 // Alignment: 11
 // Size: 0x12f8
 class CDOTA_Modifier_Marci_Guardian_Buff : public CDOTA_Buff
@@ -74460,12 +74472,21 @@ public:
 	int32_t creep_lifesteal_reduction_pct; // 0x12dc	
 	float m_fLifestealPct; // 0x12e0	
 	float m_fDamageAbsorbed; // 0x12e4	
-	CHandle< CBaseEntity > m_hPartner; // 0x12e8	
-	bool m_bActive; // 0x12ec	
+	bool m_bActive; // 0x12e8	
 private:
-	[[maybe_unused]] uint8_t __pad12ed[0x3]; // 0x12ed
+	[[maybe_unused]] uint8_t __pad12e9[0x3]; // 0x12e9
 public:
-	ParticleIndex_t m_nFxIndex; // 0x12f0	
+	ParticleIndex_t m_nFxIndex; // 0x12ec	
+	CHandle< CBaseEntity > m_hPartner; // 0x12f0	
+};
+
+// Alignment: 2
+// Size: 0x570
+class CDOTA_Ability_Marci_Guardian : public CDOTABaseAbility
+{
+public:
+	float buff_duration; // 0x568	
+	int32_t nearest_ally_search_range; // 0x56c	
 };
 
 // Alignment: 5
@@ -77149,12 +77170,13 @@ public:
 	int32_t bonus_movement_speed; // 0x12d0	
 };
 
-// Alignment: 1
+// Alignment: 2
 // Size: 0x12e8
 class CDOTA_Modifier_Eul_Cyclone : public CDOTA_Modifier_Cyclone
 {
 public:
 	CHandle< CBaseEntity > m_hBlocker; // 0x12e0	
+	bool m_bBlockerCreated; // 0x12e4	
 };
 
 // Alignment: 0
@@ -92647,7 +92669,6 @@ private:
 	[[maybe_unused]] uint8_t __pad07f9[0x7]; // 0x7f9
 public:
 	// MNetworkEnable
-	// MNetworkSerializer "EHandleIndexOnly"
 	CNetworkUtlVectorBase< CHandle< CEconWearable > > m_hMyWearables; // 0x800	
 	// MNetworkEnable
 	float m_flFieldOfView; // 0x818	
@@ -93077,7 +93098,6 @@ public:
 	// MNetworkEnable
 	// MNetworkUserGroup "Abilities"
 	// MNetworkPriority "32"
-	// MNetworkSerializer "EHandleIndexOnly"
 	CHandle< CBaseEntity > m_hAbilities[35]; // 0xed8	
 private:
 	[[maybe_unused]] uint8_t __pad0f64[0x4]; // 0xf64

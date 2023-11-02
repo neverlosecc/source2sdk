@@ -10912,7 +10912,7 @@ enum class EGuildAuditAction : uint32_t
 };
 
 // Alignment: 4
-// Size: 0xf1
+// Size: 0xf0
 enum class DOTAKeybindCommand_t : uint32_t
 {
 	DOTA_KEYBIND_NONE = 0x0,
@@ -11116,46 +11116,45 @@ enum class DOTAKeybindCommand_t : uint32_t
 	DOTA_KEYBIND_SPEC_SCOREBOARD = 0xc5,
 	DOTA_KEYBIND_SPEC_INCREASE_REPLAY_SPEED = 0xc6,
 	DOTA_KEYBIND_SPEC_DECREASE_REPLAY_SPEED = 0xc7,
-	DOTA_KEYBIND_SPEC_STATS_HARVEST = 0xc8,
-	DOTA_KEYBIND_SPEC_STATS_ITEM = 0xc9,
-	DOTA_KEYBIND_SPEC_STATS_GOLD = 0xca,
-	DOTA_KEYBIND_SPEC_STATS_XP = 0xcb,
-	DOTA_KEYBIND_SPEC_STATS_FANTASY = 0xcc,
-	DOTA_KEYBIND_SPEC_STATS_WINCHANCE = 0xcd,
-	DOTA_KEYBIND_SPEC_FOW_TOGGLEBOTH = 0xce,
-	DOTA_KEYBIND_SPEC_FOW_TOGGLERADIENT = 0xcf,
-	DOTA_KEYBIND_SPEC_FOW_TOGGLEDIRE = 0xd0,
-	DOTA_KEYBIND_SPEC_OPEN_BROADCASTER_MENU = 0xd1,
-	DOTA_KEYBIND_SPEC_DROPDOWN_KDA = 0xd2,
-	DOTA_KEYBIND_SPEC_DROPDOWN_LASTHITS_DENIES = 0xd3,
-	DOTA_KEYBIND_SPEC_DROPDOWN_LEVEL = 0xd4,
-	DOTA_KEYBIND_SPEC_DROPDOWN_XP_PER_MIN = 0xd5,
-	DOTA_KEYBIND_SPEC_DROPDOWN_GOLD = 0xd6,
-	DOTA_KEYBIND_SPEC_DROPDOWN_TOTALGOLD = 0xd7,
-	DOTA_KEYBIND_SPEC_DROPDOWN_GOLD_PER_MIN = 0xd8,
-	DOTA_KEYBIND_SPEC_DROPDOWN_BUYBACK = 0xd9,
-	DOTA_KEYBIND_SPEC_DROPDOWN_NETWORTH = 0xda,
-	DOTA_KEYBIND_SPEC_DROPDOWN_FANTASY = 0xdb,
-	DOTA_KEYBIND_SPEC_DROPDOWN_SORT = 0xdc,
-	DOTA_KEYBIND_SPEC_DROPDOWN_CLOSE = 0xdd,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_1 = 0xde,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_2 = 0xdf,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_3 = 0xe0,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_4 = 0xe1,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_5 = 0xe2,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_6 = 0xe3,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_7 = 0xe4,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_8 = 0xe5,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_9 = 0xe6,
-	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_10 = 0xe7,
-	DOTA_KEYBIND_SPEC_COACH_VIEWTOGGLE = 0xe8,
-	DOTA_KEYBIND_INSPECTHEROINWORLD = 0xe9,
-	DOTA_KEYBIND_CAMERA_ZOOM_IN = 0xea,
-	DOTA_KEYBIND_CAMERA_ZOOM_OUT = 0xeb,
-	DOTA_KEYBIND_CONTROL_GROUPCYCLEPREV = 0xec,
-	DOTA_KEYBIND_DOTA_ALT = 0xed,
-	DOTA_KEYBIND_DOTA_ALTERNATIVE_CAST_SWITCH = 0xee,
-	DOTA_KEYBIND_COUNT = 0xef,
+	DOTA_KEYBIND_SPEC_STATS_ITEM = 0xc8,
+	DOTA_KEYBIND_SPEC_STATS_GOLD = 0xc9,
+	DOTA_KEYBIND_SPEC_STATS_XP = 0xca,
+	DOTA_KEYBIND_SPEC_STATS_FANTASY = 0xcb,
+	DOTA_KEYBIND_SPEC_STATS_WINCHANCE = 0xcc,
+	DOTA_KEYBIND_SPEC_FOW_TOGGLEBOTH = 0xcd,
+	DOTA_KEYBIND_SPEC_FOW_TOGGLERADIENT = 0xce,
+	DOTA_KEYBIND_SPEC_FOW_TOGGLEDIRE = 0xcf,
+	DOTA_KEYBIND_SPEC_OPEN_BROADCASTER_MENU = 0xd0,
+	DOTA_KEYBIND_SPEC_DROPDOWN_KDA = 0xd1,
+	DOTA_KEYBIND_SPEC_DROPDOWN_LASTHITS_DENIES = 0xd2,
+	DOTA_KEYBIND_SPEC_DROPDOWN_LEVEL = 0xd3,
+	DOTA_KEYBIND_SPEC_DROPDOWN_XP_PER_MIN = 0xd4,
+	DOTA_KEYBIND_SPEC_DROPDOWN_GOLD = 0xd5,
+	DOTA_KEYBIND_SPEC_DROPDOWN_TOTALGOLD = 0xd6,
+	DOTA_KEYBIND_SPEC_DROPDOWN_GOLD_PER_MIN = 0xd7,
+	DOTA_KEYBIND_SPEC_DROPDOWN_BUYBACK = 0xd8,
+	DOTA_KEYBIND_SPEC_DROPDOWN_NETWORTH = 0xd9,
+	DOTA_KEYBIND_SPEC_DROPDOWN_FANTASY = 0xda,
+	DOTA_KEYBIND_SPEC_DROPDOWN_SORT = 0xdb,
+	DOTA_KEYBIND_SPEC_DROPDOWN_CLOSE = 0xdc,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_1 = 0xdd,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_2 = 0xde,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_3 = 0xdf,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_4 = 0xe0,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_5 = 0xe1,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_6 = 0xe2,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_7 = 0xe3,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_8 = 0xe4,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_9 = 0xe5,
+	DOTA_KEYBIND_SPEC_FOCUS_PLAYER_10 = 0xe6,
+	DOTA_KEYBIND_SPEC_COACH_VIEWTOGGLE = 0xe7,
+	DOTA_KEYBIND_INSPECTHEROINWORLD = 0xe8,
+	DOTA_KEYBIND_CAMERA_ZOOM_IN = 0xe9,
+	DOTA_KEYBIND_CAMERA_ZOOM_OUT = 0xea,
+	DOTA_KEYBIND_CONTROL_GROUPCYCLEPREV = 0xeb,
+	DOTA_KEYBIND_DOTA_ALT = 0xec,
+	DOTA_KEYBIND_DOTA_ALTERNATIVE_CAST_SWITCH = 0xed,
+	DOTA_KEYBIND_COUNT = 0xee,
 };
 
 // Alignment: 4
@@ -32851,8 +32850,8 @@ public:
 	int32_t m_nTabletLevel; // 0x4	
 };
 
-// Alignment: 8
-// Size: 0x40
+// Alignment: 14
+// Size: 0x58
 class CDOTABingoStatDefinition
 {
 private:
@@ -32877,6 +32876,21 @@ public:
 	CUtlString m_strHeroAdjective; // 0x30	
 	// MPropertyDescription "Whether we negate the hero adjective when displaying tooltip"
 	bool m_bNegativeHeroAdjective; // 0x38	
+private:
+	[[maybe_unused]] uint8_t __pad0039[0x3]; // 0x39
+public:
+	// MPropertyDescription "At which league phase this stat unlocks"
+	int32_t m_nMinLeaguePhase; // 0x3c	
+	// MPropertyDescription "Up to which league phase this stat is usable"
+	int32_t m_nMaxLeaguePhase; // 0x40	
+	// MPropertyDescription "Expected value for League Phase Playoffs game."
+	float m_fPlayoffsStatAverage; // 0x44	
+	// MPropertyDescription "Statistical standard deviation of League Phase Playoffs game."
+	float m_fPlayoffsStatStdDev; // 0x48	
+	// MPropertyDescription "Expected value for League Phase Main Event game."
+	float m_fMainEventStatAverage; // 0x4c	
+	// MPropertyDescription "Statistical standard deviation of League Phase Main Event game."
+	float m_fMainEventStatStdDev; // 0x50	
 };
 
 // Alignment: 6
@@ -33835,8 +33849,8 @@ public:
 	static CUtlVector< CScriptUniformRandomStream* > &Get_sm_UniformStreams(){return *reinterpret_cast<CUtlVector< CScriptUniformRandomStream* >*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CScriptUniformRandomStream")->m_static_fields[0]->m_instance);};
 };
 
-// Alignment: 4
-// Size: 0x18
+// Alignment: 5
+// Size: 0x20
 struct FantasyPlayerData_t
 {
 public:
@@ -33851,6 +33865,8 @@ private:
 public:
 	// MPropertyDescription "Name of the pro player"
 	CUtlString m_strPlayerName; // 0x10	
+	// MPropertyDescription "Is this player still playing in the league?"
+	bool m_bIsValid; // 0x18	
 };
 
 // Alignment: 5
