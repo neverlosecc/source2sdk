@@ -81,8 +81,8 @@ public:
 	CUtlLeanVector< EntityKeyValueData_t > m_entityKeyValues; // 0x30	
 };
 
-// Alignment: 15
-// Size: 0x90
+// Alignment: 14
+// Size: 0x88
 struct SceneObject_t
 {
 public:
@@ -97,16 +97,15 @@ public:
 	CUtlString m_skin; // 0x50	
 	ObjectTypeFlags_t m_nObjectTypeFlags; // 0x58	
 	Vector m_vLightingOrigin; // 0x5c	
-	uint32_t m_nLightGroup; // 0x68	
-	int16_t m_nOverlayRenderOrder; // 0x6c	
-	int16_t m_nLODOverride; // 0x6e	
-	int32_t m_nCubeMapPrecomputedHandshake; // 0x70	
-	int32_t m_nLightProbeVolumePrecomputedHandshake; // 0x74	
+	int16_t m_nOverlayRenderOrder; // 0x68	
+	int16_t m_nLODOverride; // 0x6a	
+	int32_t m_nCubeMapPrecomputedHandshake; // 0x6c	
+	int32_t m_nLightProbeVolumePrecomputedHandshake; // 0x70	
 private:
-	[[maybe_unused]] uint8_t __pad0078[0x8]; // 0x78
+	[[maybe_unused]] uint8_t __pad0074[0x4]; // 0x74
 public:
-	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x80	
-	CStrongHandle< InfoForResourceTypeCRenderMesh > m_renderable; // 0x88	
+	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x78	
+	CStrongHandle< InfoForResourceTypeCRenderMesh > m_renderable; // 0x80	
 };
 
 // Alignment: 1
