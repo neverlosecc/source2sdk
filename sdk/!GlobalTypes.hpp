@@ -3492,25 +3492,25 @@ enum class GameAnimEventIndex_t : uint32_t
 	AE_CL_BODYGROUP_SET_VALUE = 0x11,
 	AE_SV_BODYGROUP_SET_VALUE = 0x12,
 	AE_CL_BODYGROUP_SET_VALUE_CMODEL_WPN = 0x13,
-	AE_WPN_PRIMARYATTACK = 0x14,
-	AE_WPN_SECONDARYATTACK = 0x15,
-	AE_FIRE_INPUT = 0x16,
-	AE_CL_CLOTH_ATTR = 0x17,
-	AE_CL_CLOTH_GROUND_OFFSET = 0x18,
-	AE_CL_CLOTH_STIFFEN = 0x19,
-	AE_CL_CLOTH_EFFECT = 0x1a,
-	AE_CL_CREATE_ANIM_SCOPE_PROP = 0x1b,
-	AE_CL_WEAPON_TRANSITION_INTO_HAND = 0x1c,
-	AE_CL_BODYGROUP_SET_TO_CLIP = 0x1d,
-	AE_CL_BODYGROUP_SET_TO_NEXTCLIP = 0x1e,
-	AE_SV_SHOW_SILENCER = 0x1f,
-	AE_SV_ATTACH_SILENCER_COMPLETE = 0x20,
-	AE_SV_HIDE_SILENCER = 0x21,
-	AE_SV_DETACH_SILENCER_COMPLETE = 0x22,
-	AE_CL_EJECT_MAG = 0x23,
-	AE_WPN_COMPLETE_RELOAD = 0x24,
-	AE_WPN_HEALTHSHOT_INJECT = 0x25,
-	AE_CL_C4_SCREEN_TEXT = 0x26,
+	AE_WEAPON_PERFORM_ATTACK = 0x14,
+	AE_FIRE_INPUT = 0x15,
+	AE_CL_CLOTH_ATTR = 0x16,
+	AE_CL_CLOTH_GROUND_OFFSET = 0x17,
+	AE_CL_CLOTH_STIFFEN = 0x18,
+	AE_CL_CLOTH_EFFECT = 0x19,
+	AE_CL_CREATE_ANIM_SCOPE_PROP = 0x1a,
+	AE_CL_WEAPON_TRANSITION_INTO_HAND = 0x1b,
+	AE_CL_BODYGROUP_SET_TO_CLIP = 0x1c,
+	AE_CL_BODYGROUP_SET_TO_NEXTCLIP = 0x1d,
+	AE_SV_SHOW_SILENCER = 0x1e,
+	AE_SV_ATTACH_SILENCER_COMPLETE = 0x1f,
+	AE_SV_HIDE_SILENCER = 0x20,
+	AE_SV_DETACH_SILENCER_COMPLETE = 0x21,
+	AE_CL_EJECT_MAG = 0x22,
+	AE_WPN_COMPLETE_RELOAD = 0x23,
+	AE_WPN_HEALTHSHOT_INJECT = 0x24,
+	AE_CL_C4_SCREEN_TEXT = 0x25,
+	AE_GRENADE_THROW_COMPLETE = 0x26,
 };
 
 // Alignment: 4
@@ -12241,8 +12241,8 @@ public:
 	CUtlVectorFixedGrowable< float32 > m_fSwitchDistances; // 0x10	
 };
 
-// Alignment: 15
-// Size: 0x90
+// Alignment: 14
+// Size: 0x88
 struct SceneObject_t
 {
 public:
@@ -12257,16 +12257,15 @@ public:
 	CUtlString m_skin; // 0x50	
 	ObjectTypeFlags_t m_nObjectTypeFlags; // 0x58	
 	Vector m_vLightingOrigin; // 0x5c	
-	uint32_t m_nLightGroup; // 0x68	
-	int16_t m_nOverlayRenderOrder; // 0x6c	
-	int16_t m_nLODOverride; // 0x6e	
-	int32_t m_nCubeMapPrecomputedHandshake; // 0x70	
-	int32_t m_nLightProbeVolumePrecomputedHandshake; // 0x74	
+	int16_t m_nOverlayRenderOrder; // 0x68	
+	int16_t m_nLODOverride; // 0x6a	
+	int32_t m_nCubeMapPrecomputedHandshake; // 0x6c	
+	int32_t m_nLightProbeVolumePrecomputedHandshake; // 0x70	
 private:
-	[[maybe_unused]] uint8_t __pad0078[0x8]; // 0x78
+	[[maybe_unused]] uint8_t __pad0074[0x4]; // 0x74
 public:
-	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x80	
-	CStrongHandle< InfoForResourceTypeCRenderMesh > m_renderable; // 0x88	
+	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x78	
+	CStrongHandle< InfoForResourceTypeCRenderMesh > m_renderable; // 0x80	
 };
 
 // Alignment: 0
@@ -18856,82 +18855,82 @@ public:
 };
 
 // Alignment: 33
-// Size: 0x710
+// Size: 0x6d0
 class C_OP_ControlpointLight : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "initial color bias"
 	float m_flScale; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4cc]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01c4[0x48c]; // 0x1c4
 public:
 	// MPropertyFriendlyName "light 1 control point"
-	int32_t m_nControlPoint1; // 0x690	
+	int32_t m_nControlPoint1; // 0x650	
 	// MPropertyFriendlyName "light 2 control point"
-	int32_t m_nControlPoint2; // 0x694	
+	int32_t m_nControlPoint2; // 0x654	
 	// MPropertyFriendlyName "light 3 control point"
-	int32_t m_nControlPoint3; // 0x698	
+	int32_t m_nControlPoint3; // 0x658	
 	// MPropertyFriendlyName "light 4 control point"
-	int32_t m_nControlPoint4; // 0x69c	
+	int32_t m_nControlPoint4; // 0x65c	
 	// MPropertyFriendlyName "light 1 control point offset"
-	Vector m_vecCPOffset1; // 0x6a0	
+	Vector m_vecCPOffset1; // 0x660	
 	// MPropertyFriendlyName "light 2 control point offset"
-	Vector m_vecCPOffset2; // 0x6ac	
+	Vector m_vecCPOffset2; // 0x66c	
 	// MPropertyFriendlyName "light 3 control point offset"
-	Vector m_vecCPOffset3; // 0x6b8	
+	Vector m_vecCPOffset3; // 0x678	
 	// MPropertyFriendlyName "light 4 control point offset"
-	Vector m_vecCPOffset4; // 0x6c4	
+	Vector m_vecCPOffset4; // 0x684	
 	// MPropertyFriendlyName "light 1 50% distance"
-	float m_LightFiftyDist1; // 0x6d0	
+	float m_LightFiftyDist1; // 0x690	
 	// MPropertyFriendlyName "light 1 0% distance"
-	float m_LightZeroDist1; // 0x6d4	
+	float m_LightZeroDist1; // 0x694	
 	// MPropertyFriendlyName "light 2 50% distance"
-	float m_LightFiftyDist2; // 0x6d8	
+	float m_LightFiftyDist2; // 0x698	
 	// MPropertyFriendlyName "light 2 0% distance"
-	float m_LightZeroDist2; // 0x6dc	
+	float m_LightZeroDist2; // 0x69c	
 	// MPropertyFriendlyName "light 3 50% distance"
-	float m_LightFiftyDist3; // 0x6e0	
+	float m_LightFiftyDist3; // 0x6a0	
 	// MPropertyFriendlyName "light 3 0% distance"
-	float m_LightZeroDist3; // 0x6e4	
+	float m_LightZeroDist3; // 0x6a4	
 	// MPropertyFriendlyName "light 4 50% distance"
-	float m_LightFiftyDist4; // 0x6e8	
+	float m_LightFiftyDist4; // 0x6a8	
 	// MPropertyFriendlyName "light 4 0% distance"
-	float m_LightZeroDist4; // 0x6ec	
+	float m_LightZeroDist4; // 0x6ac	
 	// MPropertyFriendlyName "light 1 color"
-	Color m_LightColor1; // 0x6f0	
+	Color m_LightColor1; // 0x6b0	
 	// MPropertyFriendlyName "light 2 color"
-	Color m_LightColor2; // 0x6f4	
+	Color m_LightColor2; // 0x6b4	
 	// MPropertyFriendlyName "light 3 color"
-	Color m_LightColor3; // 0x6f8	
+	Color m_LightColor3; // 0x6b8	
 	// MPropertyFriendlyName "light 4 color"
-	Color m_LightColor4; // 0x6fc	
+	Color m_LightColor4; // 0x6bc	
 	// MPropertyFriendlyName "light 1 type 0=point 1=spot"
-	bool m_bLightType1; // 0x700	
+	bool m_bLightType1; // 0x6c0	
 	// MPropertyFriendlyName "light 2 type 0=point 1=spot"
-	bool m_bLightType2; // 0x701	
+	bool m_bLightType2; // 0x6c1	
 	// MPropertyFriendlyName "light 3 type 0=point 1=spot"
-	bool m_bLightType3; // 0x702	
+	bool m_bLightType3; // 0x6c2	
 	// MPropertyFriendlyName "light 4 type 0=point 1=spot"
-	bool m_bLightType4; // 0x703	
+	bool m_bLightType4; // 0x6c3	
 	// MPropertyFriendlyName "light 1 dynamic light"
-	bool m_bLightDynamic1; // 0x704	
+	bool m_bLightDynamic1; // 0x6c4	
 	// MPropertyFriendlyName "light 2 dynamic light"
-	bool m_bLightDynamic2; // 0x705	
+	bool m_bLightDynamic2; // 0x6c5	
 	// MPropertyFriendlyName "light 3 dynamic light"
-	bool m_bLightDynamic3; // 0x706	
+	bool m_bLightDynamic3; // 0x6c6	
 	// MPropertyFriendlyName "light 4 dynamic light"
-	bool m_bLightDynamic4; // 0x707	
+	bool m_bLightDynamic4; // 0x6c7	
 	// MPropertyFriendlyName "compute normals from control points"
-	bool m_bUseNormal; // 0x708	
+	bool m_bUseNormal; // 0x6c8	
 	// MPropertyFriendlyName "half-lambert normals"
-	bool m_bUseHLambert; // 0x709	
+	bool m_bUseHLambert; // 0x6c9	
 private:
-	[[maybe_unused]] uint8_t __pad070a[0x4]; // 0x70a
+	[[maybe_unused]] uint8_t __pad06ca[0x4]; // 0x6ca
 public:
 	// MPropertyFriendlyName "clamp minimum light value to initial color"
-	bool m_bClampLowerRange; // 0x70e	
+	bool m_bClampLowerRange; // 0x6ce	
 	// MPropertyFriendlyName "clamp maximum light value to initial color"
-	bool m_bClampUpperRange; // 0x70f	
+	bool m_bClampUpperRange; // 0x6cf	
 };
 
 // Alignment: 2
