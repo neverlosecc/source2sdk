@@ -9,8 +9,10 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-// Alignment: 1
+// Registered binary: networksystem.dll (project 'networksystem')
+// Alignment: 2
 // Size: 0x2
+// Has Trivial Destructor
 struct ChangeAccessorFieldPathIndex_t
 {
 public:

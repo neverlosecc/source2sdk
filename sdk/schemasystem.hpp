@@ -9,6 +9,7 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
+// Registered binary: schemasystem.dll (project 'schemasystem')
 // Alignment: 4
 // Size: 0x3
 enum class ThreeState_t : uint32_t
@@ -18,6 +19,7 @@ enum class ThreeState_t : uint32_t
 	TRS_NONE = 0x2,
 };
 
+// Registered binary: schemasystem.dll (project 'schemasystem')
 // Alignment: 1
 // Size: 0x50
 enum class fieldtype_t : uint8_t
@@ -104,7 +106,8 @@ enum class fieldtype_t : uint8_t
 	FIELD_TYPECOUNT = 0x4f,
 };
 
-// Alignment: 22
+// Registered binary: schemasystem.dll (project 'schemasystem')
+// Alignment: 16
 // Size: 0x180
 class CSchemaSystemInternalRegistration
 {
@@ -142,18 +145,26 @@ public:
 	KeyValues3 m_KV3; // 0x170	
 };
 
-// Alignment: 0
+// Registered binary: schemasystem.dll (project 'resourcefile')
+// Alignment: 1
 // Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MResourceTypeForInfoType "vrman"
 class InfoForResourceTypeCResourceManifestInternal
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	// No members available
 };
 
-// Alignment: 1
+// Registered binary: schemasystem.dll (project 'resourcefile')
+// Alignment: 8
 // Size: 0x8
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
 struct ResourceId_t
 {
 public:
@@ -163,8 +174,12 @@ public:
 	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("schemasystem.dll")->FindDeclaredClass("ResourceId_t")->m_static_fields[0]->m_instance);};
 };
 
-// Alignment: 2
+// Registered binary: schemasystem.dll (project 'resourcefile')
+// Alignment: 4
 // Size: 0x8
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 class CExampleSchemaVData_Monomorphic
 {
 public:
@@ -172,8 +187,12 @@ public:
 	int32_t m_nExample2; // 0x4	
 };
 
-// Alignment: 1
+// Registered binary: schemasystem.dll (project 'resourcefile')
+// Alignment: 8
 // Size: 0x10
+// Has VTable
+// 
+// MGetKV3ClassDefaults
 class CExampleSchemaVData_PolymorphicBase
 {
 private:
@@ -182,16 +201,24 @@ public:
 	int32_t m_nBase; // 0x8	
 };
 
-// Alignment: 1
+// Registered binary: schemasystem.dll (project 'resourcefile')
+// Alignment: 8
 // Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
 class CExampleSchemaVData_PolymorphicDerivedA : public CExampleSchemaVData_PolymorphicBase
 {
 public:
 	int32_t m_nDerivedA; // 0x10	
 };
 
-// Alignment: 1
+// Registered binary: schemasystem.dll (project 'resourcefile')
+// Alignment: 8
 // Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
 class CExampleSchemaVData_PolymorphicDerivedB : public CExampleSchemaVData_PolymorphicBase
 {
 public:

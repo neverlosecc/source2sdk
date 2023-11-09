@@ -9,6 +9,7 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
+// Registered binary: panorama.dll (project 'panorama_content')
 // Alignment: 4
 // Size: 0xd
 enum class ELayoutNodeType : uint32_t
@@ -28,6 +29,7 @@ enum class ELayoutNodeType : uint32_t
 	REFERENCE_PASSTHROUGH = 0xc,
 };
 
+// Registered binary: panorama.dll (project 'panorama_content')
 // Alignment: 4
 // Size: 0xf
 enum class EStyleNodeType : uint32_t

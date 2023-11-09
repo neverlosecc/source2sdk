@@ -9,8 +9,11 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-// Alignment: 1
+// Registered binary: host.dll (project 'host')
+// Alignment: 8
 // Size: 0x10
+// Has VTable
+// Is Abstract
 class CAnimScriptBase
 {
 private:
