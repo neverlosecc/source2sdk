@@ -9,6 +9,7 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 4
 // Size: 0x4
 enum class JointAxis_t : uint32_t
@@ -19,6 +20,7 @@ enum class JointAxis_t : uint32_t
 	JOINT_AXIS_COUNT = 0x3,
 };
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 4
 // Size: 0x3
 enum class JointMotion_t : uint32_t
@@ -41,8 +43,11 @@ struct RnCapsule_t;
 struct RnHull_t;
 struct RnMesh_t;
 
-// Alignment: 5
+// Registered binary: vphysics2.dll (project 'vphysics2')
+// Alignment: 4
 // Size: 0x18
+// Has Trivial Constructor
+// Has Trivial Destructor
 struct constraint_breakableparams_t
 {
 public:
@@ -53,8 +58,11 @@ public:
 	bool isActive; // 0x14	
 };
 
+// Registered binary: vphysics2.dll (project 'vphysics2')
 // Alignment: 4
 // Size: 0x10
+// Has Trivial Constructor
+// Has Trivial Destructor
 struct constraint_axislimit_t
 {
 public:
@@ -64,8 +72,11 @@ public:
 	float flMotorMaxTorque; // 0xc	
 };
 
+// Registered binary: vphysics2.dll (project 'vphysics2')
 // Alignment: 4
 // Size: 0x40
+// Has Trivial Constructor
+// Has Trivial Destructor
 struct constraint_hingeparams_t
 {
 public:
@@ -75,18 +86,25 @@ public:
 	constraint_breakableparams_t constraint; // 0x28	
 };
 
-// Alignment: 0
+// Registered binary: vphysics2.dll (project 'vphysics2')
+// Alignment: 8
 // Size: 0x8
+// Has VTable
+// Is Abstract
 class IPhysicsPlayerController
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	// No members available
+	// No schema binary for binding
 };
 
-// Alignment: 35
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x9c
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 class CFeJiggleBone
 {
 public:
@@ -127,8 +145,11 @@ public:
 	uint16_t m_nCollisionMask; // 0x98	
 };
 
-// Alignment: 4
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0xd0
+// 
+// MGetKV3ClassDefaults
 class CFeNamedJiggleBone
 {
 public:
@@ -138,8 +159,12 @@ public:
 	CFeJiggleBone m_jiggleBone; // 0x34	
 };
 
-// Alignment: 3
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0xa4
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 class CFeIndexedJiggleBone
 {
 public:
@@ -148,8 +173,11 @@ public:
 	CFeJiggleBone m_jiggleBone; // 0x8	
 };
 
-// Alignment: 98
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0x5e8
+// 
+// MGetKV3ClassDefaults
 struct PhysFeModelDesc_t
 {
 public:
@@ -256,8 +284,12 @@ public:
 	uint16_t m_nQuadVelocitySmoothIterations; // 0x5e6	
 };
 
-// Alignment: 2
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x20
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 class FourVectors2D
 {
 public:
@@ -265,8 +297,13 @@ public:
 	fltx4 y; // 0x10	
 };
 
-// Alignment: 3
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 2
 // Size: 0x10
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeEdgeDesc_t
 {
 public:
@@ -275,8 +312,12 @@ public:
 	uint16_t nVirtElem[2]; // 0xc	
 };
 
-// Alignment: 12
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x48
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct OldFeEdge_t
 {
 public:
@@ -294,8 +335,12 @@ public:
 	uint16_t m_nNode[4]; // 0x40	
 };
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 2
 // Size: 0x4
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeWeightedNode_t
 {
 public:
@@ -303,8 +348,12 @@ public:
 	uint16_t nWeight; // 0x2	
 };
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 4
 // Size: 0x18
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeKelagerBend2_t
 {
 public:
@@ -314,8 +363,12 @@ public:
 	uint16_t nReserved; // 0x16	
 };
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 4
 // Size: 0x1c
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeStiffHingeBuild_t
 {
 public:
@@ -325,8 +378,12 @@ public:
 	uint16_t nNode[3]; // 0x14	
 };
 
-// Alignment: 5
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x1c
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeTri_t
 {
 public:
@@ -337,8 +394,12 @@ public:
 	Vector2D v2; // 0x14	
 };
 
-// Alignment: 5
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x80
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeSimdTri_t
 {
 public:
@@ -349,8 +410,12 @@ public:
 	FourVectors2D v2; // 0x60	
 };
 
-// Alignment: 3
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x4c
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeQuad_t
 {
 public:
@@ -359,8 +424,12 @@ public:
 	Vector4D vShape[4]; // 0xc	
 };
 
-// Alignment: 7
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x20
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeNodeBase_t
 {
 public:
@@ -373,8 +442,12 @@ public:
 	QuaternionStorage qAdjust; // 0x10	
 };
 
-// Alignment: 4
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 2
 // Size: 0x8
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeNodeWindBase_t
 {
 public:
@@ -384,8 +457,12 @@ public:
 	uint16_t nNodeY1; // 0x6	
 };
 
-// Alignment: 3
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x10
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeNodeReverseOffset_t
 {
 public:
@@ -394,8 +471,12 @@ public:
 	uint16_t nTargetNode; // 0xe	
 };
 
-// Alignment: 4
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x130
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeSimdQuad_t
 {
 public:
@@ -405,8 +486,12 @@ public:
 	fltx4 f4Weights[4]; // 0xf0	
 };
 
-// Alignment: 5
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x28
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeAxialEdgeBend_t
 {
 public:
@@ -417,8 +502,13 @@ public:
 	uint16_t nNode[6]; // 0x1c	
 };
 
-// Alignment: 3
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x14
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeBandBendLimit_t
 {
 public:
@@ -427,8 +517,12 @@ public:
 	uint16_t nNode[6]; // 0x8	
 };
 
-// Alignment: 5
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x14
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeRodConstraint_t
 {
 public:
@@ -439,8 +533,12 @@ public:
 	float flRelaxationFactor; // 0x10	
 };
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 4
 // Size: 0xc
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeTwistConstraint_t
 {
 public:
@@ -450,8 +548,12 @@ public:
 	float flSwingRelax; // 0x8	
 };
 
-// Alignment: 5
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x50
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeSimdRodConstraint_t
 {
 public:
@@ -462,8 +564,12 @@ public:
 	fltx4 f4RelaxationFactor; // 0x40	
 };
 
-// Alignment: 3
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0xc
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeAnimStrayRadius_t
 {
 public:
@@ -472,8 +578,12 @@ public:
 	float flRelaxationFactor; // 0x8	
 };
 
-// Alignment: 3
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x30
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeSimdAnimStrayRadius_t
 {
 public:
@@ -482,8 +592,12 @@ public:
 	fltx4 flRelaxationFactor; // 0x20	
 };
 
-// Alignment: 7
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x70
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeSimdNodeBase_t
 {
 public:
@@ -496,8 +610,12 @@ public:
 	FourQuaternions qAdjust; // 0x30	
 };
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 4
 // Size: 0x10
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeNodeIntegrator_t
 {
 public:
@@ -507,8 +625,12 @@ public:
 	float flGravity; // 0xc	
 };
 
-// Alignment: 5
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x14
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeSpringIntegrator_t
 {
 public:
@@ -519,8 +641,12 @@ public:
 	float flNodeWeight0; // 0x10	
 };
 
-// Alignment: 5
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x50
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeSimdSpringIntegrator_t
 {
 public:
@@ -531,8 +657,12 @@ public:
 	fltx4 flNodeWeight0; // 0x40	
 };
 
-// Alignment: 3
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x10
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeCtrlOffset_t
 {
 public:
@@ -541,8 +671,12 @@ public:
 	uint16_t nCtrlChild; // 0xe	
 };
 
-// Alignment: 2
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x8
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeSoftParent_t
 {
 public:
@@ -550,8 +684,12 @@ public:
 	float flAlpha; // 0x4	
 };
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 4
 // Size: 0x14
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeCtrlSoftOffset_t
 {
 public:
@@ -561,8 +699,12 @@ public:
 	float flAlpha; // 0x10	
 };
 
-// Alignment: 2
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x4
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeCtrlOsOffset_t
 {
 public:
@@ -570,8 +712,12 @@ public:
 	uint16_t nCtrlChild; // 0x2	
 };
 
-// Alignment: 3
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x8
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeFollowNode_t
 {
 public:
@@ -580,8 +726,13 @@ public:
 	float flWeight; // 0x4	
 };
 
-// Alignment: 2
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x10
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct RnPlane_t
 {
 public:
@@ -589,8 +740,12 @@ public:
 	float m_flOffset; // 0xc	
 };
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 4
 // Size: 0xc
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeWorldCollisionParams_t
 {
 public:
@@ -600,16 +755,24 @@ public:
 	uint16_t nListEnd; // 0xa	
 };
 
-// Alignment: 1
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 2
 // Size: 0x4
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeTreeChildren_t
 {
 public:
 	uint16_t nChild[2]; // 0x0	
 };
 
-// Alignment: 5
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x30
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeTaperedCapsuleRigid_t
 {
 public:
@@ -620,8 +783,12 @@ public:
 	uint16_t nFlags; // 0x26	
 };
 
-// Alignment: 5
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x20
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeSphereRigid_t
 {
 public:
@@ -632,8 +799,12 @@ public:
 	uint16_t nFlags; // 0x16	
 };
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 4
 // Size: 0x10
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeTaperedCapsuleStretch_t
 {
 public:
@@ -644,8 +815,12 @@ public:
 	float flRadius[2]; // 0x8	
 };
 
-// Alignment: 6
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x40
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeBoxRigid_t
 {
 public:
@@ -657,8 +832,13 @@ public:
 	uint16_t nFlags; // 0x32	
 };
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 4
 // Size: 0x18
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 class CovMatrix3
 {
 public:
@@ -668,8 +848,13 @@ public:
 	float m_flYZ; // 0x14	
 };
 
-// Alignment: 4
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x60
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 class FourCovMatrices3
 {
 public:
@@ -679,8 +864,12 @@ public:
 	fltx4 m_flYZ; // 0x50	
 };
 
-// Alignment: 3
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x8
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeFitWeight_t
 {
 public:
@@ -689,8 +878,13 @@ public:
 	uint16_t nDummy; // 0x6	
 };
 
-// Alignment: 3
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0xc
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeFitInfluence_t
 {
 public:
@@ -699,8 +893,12 @@ public:
 	uint32_t nMatrixNode; // 0x8	
 };
 
-// Alignment: 5
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x40
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeFitMatrix_t
 {
 public:
@@ -711,8 +909,12 @@ public:
 	uint16_t nBeginDynamic; // 0x30	
 };
 
-// Alignment: 4
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 2
 // Size: 0x8
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeRigidColliderIndices_t
 {
 public:
@@ -722,8 +924,12 @@ public:
 	uint16_t m_nCollisionPlaneIndex; // 0x6	
 };
 
-// Alignment: 2
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x40
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeBuildTaperedCapsuleRigid_t : public FeTaperedCapsuleRigid_t
 {
 public:
@@ -731,8 +937,12 @@ public:
 	uint32_t m_nVertexMapHash; // 0x34	
 };
 
-// Alignment: 2
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x50
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeBuildBoxRigid_t : public FeBoxRigid_t
 {
 public:
@@ -740,8 +950,12 @@ public:
 	uint32_t m_nVertexMapHash; // 0x44	
 };
 
-// Alignment: 2
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x30
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeBuildSphereRigid_t : public FeSphereRigid_t
 {
 public:
@@ -749,16 +963,23 @@ public:
 	uint32_t m_nVertexMapHash; // 0x24	
 };
 
-// Alignment: 1
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 2
 // Size: 0x4
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeSourceEdge_t
 {
 public:
 	uint16_t nNode[2]; // 0x0	
 };
 
-// Alignment: 4
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0x20
+// 
+// MGetKV3ClassDefaults
 struct FeEffectDesc_t
 {
 public:
@@ -768,8 +989,11 @@ public:
 	KeyValues3 m_Params; // 0x10	
 };
 
-// Alignment: 6
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0x30
+// 
+// MGetKV3ClassDefaults
 struct FeVertexMapBuild_t
 {
 public:
@@ -781,16 +1005,22 @@ public:
 	CUtlVector< float32 > m_Weights; // 0x18	
 };
 
-// Alignment: 1
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0x18
+// 
+// MGetKV3ClassDefaults
 class CFeVertexMapBuildArray
 {
 public:
 	CUtlVector< FeVertexMapBuild_t* > m_Array; // 0x0	
 };
 
-// Alignment: 2
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0x10
+// 
+// MGetKV3ClassDefaults
 struct FeProxyVertexMap_t
 {
 public:
@@ -798,8 +1028,11 @@ public:
 	float m_flWeight; // 0x8	
 };
 
-// Alignment: 12
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0x38
+// 
+// MGetKV3ClassDefaults
 struct FeVertexMapDesc_t
 {
 public:
@@ -817,8 +1050,11 @@ public:
 	uint16_t nNodeListCount; // 0x32	
 };
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x90
+// 
+// MGetKV3ClassDefaults
 struct FeMorphLayerDepr_t
 {
 public:
@@ -835,8 +1071,11 @@ public:
 	uint32_t m_nFlags; // 0x88	
 };
 
-// Alignment: 7
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0x88
+// 
+// MGetKV3ClassDefaults
 class CFeMorphLayer
 {
 public:
@@ -852,16 +1091,25 @@ public:
 	CUtlVector< float32 > m_GoalDamping; // 0x70	
 };
 
-// Alignment: 1
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x68
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct Dop26_t
 {
 public:
 	float m_flSupport[26]; // 0x0	
 };
 
-// Alignment: 2
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x10
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct RnSphere_t
 {
 public:
@@ -869,8 +1117,12 @@ public:
 	float m_flRadius; // 0xc	
 };
 
-// Alignment: 2
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x1c
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct RnCapsule_t
 {
 public:
@@ -878,8 +1130,12 @@ public:
 	float m_flRadius; // 0x18	
 };
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 4
 // Size: 0x18
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct FeCollisionPlane_t
 {
 public:
@@ -889,16 +1145,26 @@ public:
 	float flStrength; // 0x14	
 };
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 1
 // Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct RnVertex_t
 {
 public:
 	uint8_t m_nEdge; // 0x0	
 };
 
-// Alignment: 4
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 1
 // Size: 0x4
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct RnHalfEdge_t
 {
 public:
@@ -908,16 +1174,24 @@ public:
 	uint8_t m_nFace; // 0x3	
 };
 
+// Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 1
 // Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct RnFace_t
 {
 public:
 	uint8_t m_nEdge; // 0x0	
 };
 
-// Alignment: 2
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0x30
+// 
+// MGetKV3ClassDefaults
 class CRegionSVM
 {
 public:
@@ -925,8 +1199,11 @@ public:
 	CUtlVector< uint32 > m_Nodes; // 0x18	
 };
 
-// Alignment: 13
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0xf0
+// 
+// MGetKV3ClassDefaults
 struct RnHull_t
 {
 public:
@@ -948,24 +1225,36 @@ public:
 	CRegionSVM* m_pRegionSVM; // 0xe8	
 };
 
-// Alignment: 1
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0xc
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct RnTriangle_t
 {
 public:
 	int32_t m_nIndex[3]; // 0x0	
 };
 
-// Alignment: 1
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0xc
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct RnWing_t
 {
 public:
 	int32_t m_nIndex[3]; // 0x0	
 };
 
-// Alignment: 4
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x20
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct RnNode_t
 {
 public:
@@ -975,8 +1264,11 @@ public:
 	uint32_t m_nTriangleOffset; // 0x1c	
 };
 
-// Alignment: 10
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0xa8
+// 
+// MGetKV3ClassDefaults
 struct RnMesh_t
 {
 public:
@@ -992,8 +1284,11 @@ public:
 	uint32_t m_nDebugFlags; // 0xa0	
 };
 
-// Alignment: 3
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0x10
+// 
+// MGetKV3ClassDefaults
 struct RnShapeDesc_t
 {
 public:
@@ -1002,48 +1297,70 @@ public:
 	CUtlString m_UserFriendlyName; // 0x8	
 };
 
-// Alignment: 1
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0x20
+// 
+// MGetKV3ClassDefaults
 struct RnSphereDesc_t : public RnShapeDesc_t
 {
 public:
 	RnSphere_t m_Sphere; // 0x10	
 };
 
-// Alignment: 1
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0x30
+// 
+// MGetKV3ClassDefaults
 struct RnCapsuleDesc_t : public RnShapeDesc_t
 {
 public:
 	RnCapsule_t m_Capsule; // 0x10	
 };
 
-// Alignment: 1
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0x100
+// 
+// MGetKV3ClassDefaults
 struct RnHullDesc_t : public RnShapeDesc_t
 {
 public:
 	RnHull_t m_Hull; // 0x10	
 };
 
-// Alignment: 1
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0xb8
+// 
+// MGetKV3ClassDefaults
 struct RnMeshDesc_t : public RnShapeDesc_t
 {
 public:
 	RnMesh_t m_Mesh; // 0x10	
 };
 
-// Alignment: 1
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x4
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct RnSoftbodyParticle_t
 {
 public:
 	float m_flMassInv; // 0x0	
 };
 
-// Alignment: 2
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x8
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct RnSoftbodySpring_t
 {
 public:
@@ -1051,8 +1368,13 @@ public:
 	float m_flLength; // 0x4	
 };
 
-// Alignment: 3
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x20
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct RnSoftbodyCapsule_t
 {
 public:
@@ -1061,8 +1383,13 @@ public:
 	uint16_t m_nParticle[2]; // 0x1c	
 };
 
-// Alignment: 8
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 16
 // Size: 0x10
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct RnBlendVertex_t
 {
 public:
@@ -1076,8 +1403,13 @@ public:
 	uint16_t m_nTargetIndex; // 0xe	
 };
 
-// Alignment: 6
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0x30
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct CastSphereSATParams_t
 {
 public:
@@ -1092,8 +1424,11 @@ public:
 	RnHull_t* m_pHull; // 0x28	
 };
 
-// Alignment: 35
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
 // Size: 0xd0
+// 
+// MGetKV3ClassDefaults
 struct RnBodyDesc_t
 {
 public:
@@ -1134,8 +1469,11 @@ public:
 	bool m_bHasShadowController; // 0xca	
 };
 
-// Alignment: 2
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x18
+// Has Trivial Constructor
+// Has Trivial Destructor
 struct VertexPositionNormal_t
 {
 public:
@@ -1143,16 +1481,21 @@ public:
 	Vector m_vNormal; // 0xc	
 };
 
-// Alignment: 1
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 4
 // Size: 0x10
+// Has Trivial Destructor
 struct VertexPositionColor_t
 {
 public:
 	Vector m_vPosition; // 0x0	
 };
 
-// Alignment: 1
+// Registered binary: vphysics2.dll (project 'vphysics2')
+// Alignment: 8
 // Size: 0xd8
+// 
+// MGetKV3ClassDefaults
 struct vphysics_save_cphysicsbody_t : public RnBodyDesc_t
 {
 public:

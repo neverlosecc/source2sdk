@@ -9,6 +9,7 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 4
 // Size: 0x4
 enum class HorizJustification_e : uint32_t
@@ -19,6 +20,7 @@ enum class HorizJustification_e : uint32_t
 	HORIZ_JUSTIFICATION_NONE = 0x3,
 };
 
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 4
 // Size: 0x4
 enum class VertJustification_e : uint32_t
@@ -29,6 +31,7 @@ enum class VertJustification_e : uint32_t
 	VERT_JUSTIFICATION_NONE = 0x3,
 };
 
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 4
 // Size: 0x3
 enum class LayoutPositionType_e : uint32_t
@@ -38,6 +41,7 @@ enum class LayoutPositionType_e : uint32_t
 	LAYOUTPOSITIONTYPE_NONE = 0x2,
 };
 
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 4
 // Size: 0x3
 enum class BloomBlendMode_t : uint32_t
@@ -47,6 +51,7 @@ enum class BloomBlendMode_t : uint32_t
 	BLOOM_BLEND_BLUR = 0x2,
 };
 
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 4
 // Size: 0x3
 enum class ViewFadeMode_t : uint32_t
@@ -61,64 +66,88 @@ struct PostProcessingBloomParameters_t;
 struct PostProcessingVignetteParameters_t;
 struct PostProcessingLocalContrastParameters_t;
 
-// Alignment: 1
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
+// Alignment: 8
 // Size: 0x8
+// 
+// MGetKV3ClassDefaults
 struct MaterialParam_t
 {
 public:
 	CUtlString m_name; // 0x0	
 };
 
-// Alignment: 1
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
+// Alignment: 8
 // Size: 0x10
+// 
+// MGetKV3ClassDefaults
 struct MaterialParamInt_t : public MaterialParam_t
 {
 public:
 	int32_t m_nValue; // 0x8	
 };
 
-// Alignment: 1
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
+// Alignment: 8
 // Size: 0x10
+// 
+// MGetKV3ClassDefaults
 struct MaterialParamFloat_t : public MaterialParam_t
 {
 public:
 	float m_flValue; // 0x8	
 };
 
-// Alignment: 1
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
+// Alignment: 8
 // Size: 0x18
+// 
+// MGetKV3ClassDefaults
 struct MaterialParamVector_t : public MaterialParam_t
 {
 public:
 	Vector4D m_value; // 0x8	
 };
 
-// Alignment: 1
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
+// Alignment: 8
 // Size: 0x10
+// 
+// MGetKV3ClassDefaults
 struct MaterialParamTexture_t : public MaterialParam_t
 {
 public:
 	CStrongHandle< InfoForResourceTypeCTextureBase > m_pValue; // 0x8	
 };
 
-// Alignment: 1
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
+// Alignment: 8
 // Size: 0x10
+// 
+// MGetKV3ClassDefaults
 struct MaterialParamString_t : public MaterialParam_t
 {
 public:
 	CUtlString m_value; // 0x8	
 };
 
-// Alignment: 1
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
+// Alignment: 8
 // Size: 0x20
+// 
+// MGetKV3ClassDefaults
 struct MaterialParamBuffer_t : public MaterialParam_t
 {
 public:
 	CUtlBinaryBlock m_value; // 0x8	
 };
 
-// Alignment: 14
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
+// Alignment: 8
 // Size: 0x130
+// 
+// MGetKV3ClassDefaults
 struct MaterialResourceData_t
 {
 public:
@@ -138,8 +167,12 @@ public:
 	CUtlVector< CUtlString > m_renderAttributesUsed; // 0x118	
 };
 
-// Alignment: 15
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
+// Alignment: 4
 // Size: 0x3c
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct PostProcessingTonemapParameters_t
 {
 public:
@@ -160,8 +193,12 @@ public:
 	float m_flMaxHighlightLum; // 0x38	
 };
 
-// Alignment: 10
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
+// Alignment: 4
 // Size: 0x70
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct PostProcessingBloomParameters_t
 {
 public:
@@ -177,8 +214,12 @@ public:
 	Vector m_vBlurTint[5]; // 0x34	
 };
 
-// Alignment: 6
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
+// Alignment: 4
 // Size: 0x24
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct PostProcessingVignetteParameters_t
 {
 public:
@@ -190,8 +231,12 @@ public:
 	Vector m_vColorTint; // 0x18	
 };
 
-// Alignment: 5
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
+// Alignment: 4
 // Size: 0x14
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct PostProcessingLocalContrastParameters_t
 {
 public:
@@ -202,8 +247,11 @@ public:
 	float m_flLocalContrastVignetteBlur; // 0x10	
 };
 
-// Alignment: 11
+// Registered binary: materialsystem2.dll (project 'materialsystem2')
+// Alignment: 8
 // Size: 0x118
+// 
+// MGetKV3ClassDefaults
 struct PostProcessingResource_t
 {
 public:

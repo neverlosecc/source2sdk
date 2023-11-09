@@ -9,6 +9,7 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
+// Registered binary: scenesystem.dll (project 'scenesystem')
 // Alignment: 1
 // Size: 0x4
 enum class DisableShadows_t : uint8_t
@@ -21,8 +22,11 @@ enum class DisableShadows_t : uint8_t
 
 struct SceneViewId_t;
 
-// Alignment: 2
+// Registered binary: scenesystem.dll (project 'scenesystem')
+// Alignment: 8
 // Size: 0x10
+// 
+// MGetKV3ClassDefaults
 class CSSDSEndFrameViewInfo
 {
 public:
@@ -30,16 +34,24 @@ public:
 	CUtlString m_ViewName; // 0x8	
 };
 
-// Alignment: 1
+// Registered binary: scenesystem.dll (project 'scenesystem')
+// Alignment: 8
 // Size: 0x18
+// 
+// MGetKV3ClassDefaults
 class CSSDSMsg_EndFrame
 {
 public:
 	CUtlVector< CSSDSEndFrameViewInfo > m_Views; // 0x0	
 };
 
-// Alignment: 2
+// Registered binary: scenesystem.dll (project 'scenesystem')
+// Alignment: 8
 // Size: 0x10
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct SceneViewId_t
 {
 public:
@@ -47,8 +59,11 @@ public:
 	uint64_t m_nFrameCount; // 0x8	
 };
 
-// Alignment: 2
+// Registered binary: scenesystem.dll (project 'scenesystem')
+// Alignment: 8
 // Size: 0x18
+// 
+// MGetKV3ClassDefaults
 class CSSDSMsg_ViewRender
 {
 public:
@@ -56,8 +71,11 @@ public:
 	CUtlString m_ViewName; // 0x10	
 };
 
-// Alignment: 6
+// Registered binary: scenesystem.dll (project 'scenesystem')
+// Alignment: 8
 // Size: 0x38
+// 
+// MGetKV3ClassDefaults
 class CSSDSMsg_LayerBase
 {
 public:
@@ -72,8 +90,11 @@ public:
 	CUtlString m_displayText; // 0x30	
 };
 
-// Alignment: 10
+// Registered binary: scenesystem.dll (project 'scenesystem')
+// Alignment: 8
 // Size: 0x30
+// 
+// MGetKV3ClassDefaults
 class CSSDSMsg_ViewTarget
 {
 public:
@@ -89,8 +110,11 @@ public:
 	int32_t m_nFormat; // 0x2c	
 };
 
-// Alignment: 3
+// Registered binary: scenesystem.dll (project 'scenesystem')
+// Alignment: 8
 // Size: 0x30
+// 
+// MGetKV3ClassDefaults
 class CSSDSMsg_ViewTargetList
 {
 public:
@@ -99,19 +123,23 @@ public:
 	CUtlVector< CSSDSMsg_ViewTarget > m_Targets; // 0x18	
 };
 
-// Alignment: 0
+// Registered binary: scenesystem.dll (project 'scenesystem')
+// Alignment: 8
 // Size: 0x38
+// 
+// MGetKV3ClassDefaults
 class CSSDSMsg_PreLayer : public CSSDSMsg_LayerBase
 {
 public:
-	// No members available
 };
 
-// Alignment: 0
+// Registered binary: scenesystem.dll (project 'scenesystem')
+// Alignment: 8
 // Size: 0x38
+// 
+// MGetKV3ClassDefaults
 class CSSDSMsg_PostLayer : public CSSDSMsg_LayerBase
 {
 public:
-	// No members available
 };
 

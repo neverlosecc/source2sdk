@@ -9,6 +9,7 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
+// Registered binary: rendersystemdx11.dll (project 'rendersystemdx11')
 // Alignment: 4
 // Size: 0x3
 enum class RenderSlotType_t : uint32_t
@@ -18,6 +19,7 @@ enum class RenderSlotType_t : uint32_t
 	RENDER_SLOT_PER_INSTANCE = 0x1,
 };
 
+// Registered binary: rendersystemdx11.dll (project 'rendersystemdx11')
 // Alignment: 4
 // Size: 0x9
 enum class RenderBufferFlags_t : uint32_t
@@ -33,6 +35,7 @@ enum class RenderBufferFlags_t : uint32_t
 	RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS = 0x100,
 };
 
+// Registered binary: rendersystemdx11.dll (project 'rendersystemdx11')
 // Alignment: 4
 // Size: 0xd
 enum class RenderPrimitiveType_t : uint32_t
@@ -52,6 +55,7 @@ enum class RenderPrimitiveType_t : uint32_t
 	RENDER_PRIM_TYPE_COUNT = 0xc,
 };
 
+// Registered binary: rendersystemdx11.dll (project 'rendersystemdx11')
 // Alignment: 4
 // Size: 0x4
 enum class InputLayoutVariation_t : uint32_t
@@ -62,6 +66,7 @@ enum class InputLayoutVariation_t : uint32_t
 	INPUT_LAYOUT_VARIATION_MAX = 0x3,
 };
 
+// Registered binary: rendersystemdx11.dll (project 'rendersystemdx11')
 // Alignment: 4
 // Size: 0x8
 enum class RenderMultisampleType_t : uint32_t
@@ -76,8 +81,10 @@ enum class RenderMultisampleType_t : uint32_t
 	RENDER_MULTISAMPLE_TYPE_COUNT = 0x6,
 };
 
-// Alignment: 7
+// Registered binary: rendersystemdx11.dll (project 'rendersystemdx11')
+// Alignment: 4
 // Size: 0x38
+// Has Trivial Destructor
 struct RenderInputLayoutField_t
 {
 public:
@@ -90,8 +97,10 @@ public:
 	int32_t m_nInstanceStepRate; // 0x34	
 };
 
+// Registered binary: rendersystemdx11.dll (project 'rendersystemdx11')
 // Alignment: 4
 // Size: 0xc4
+// Has Trivial Destructor
 struct VsInputSignatureElement_t
 {
 public:
@@ -101,7 +110,8 @@ public:
 	int32_t m_nD3DSemanticIndex; // 0xc0	
 };
 
-// Alignment: 1
+// Registered binary: rendersystemdx11.dll (project 'rendersystemdx11')
+// Alignment: 8
 // Size: 0x18
 struct VsInputSignature_t
 {

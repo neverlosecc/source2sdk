@@ -9,6 +9,7 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 4
 // Size: 0x10
 enum class ObjectTypeFlags_t : uint32_t
@@ -40,8 +41,11 @@ struct ChangeAccessorFieldPathIndex_t;
 struct CEntityIdentity;
 struct CScriptComponent;
 
-// Alignment: 7
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0x30
+// 
+// MGetKV3ClassDefaults
 struct EntityIOConnectionData_t
 {
 public:
@@ -57,8 +61,12 @@ public:
 	int32_t m_nTimesToFire; // 0x2c	
 };
 
-// Alignment: 2
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0x40
+// Has VTable
+// 
+// MGetKV3ClassDefaults
 struct EntityKeyValueData_t
 {
 private:
@@ -68,8 +76,12 @@ public:
 	CUtlBinaryBlock m_keyValuesData; // 0x20	
 };
 
-// Alignment: 4
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0x40
+// Has VTable
+// 
+// MGetKV3ClassDefaults
 struct PermEntityLumpData_t
 {
 private:
@@ -81,8 +93,11 @@ public:
 	CUtlLeanVector< EntityKeyValueData_t > m_entityKeyValues; // 0x30	
 };
 
-// Alignment: 14
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0x88
+// 
+// MGetKV3ClassDefaults
 struct SceneObject_t
 {
 public:
@@ -108,16 +123,24 @@ public:
 	CStrongHandle< InfoForResourceTypeCRenderMesh > m_renderable; // 0x80	
 };
 
-// Alignment: 1
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 4
 // Size: 0x4
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct BaseSceneObjectOverride_t
 {
 public:
 	uint32_t m_nSceneObjectIndex; // 0x0	
 };
 
-// Alignment: 4
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0x28
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct ExtraVertexStreamOverride_t : public BaseSceneObjectOverride_t
 {
 public:
@@ -127,8 +150,11 @@ public:
 	CRenderBufferBinding m_extraBufferBinding; // 0x10	
 };
 
-// Alignment: 3
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0x18
+// 
+// MGetKV3ClassDefaults
 struct MaterialOverride_t : public BaseSceneObjectOverride_t
 {
 public:
@@ -140,8 +166,11 @@ public:
 	CStrongHandle< InfoForResourceTypeIMaterial2 > m_pMaterial; // 0x10	
 };
 
-// Alignment: 10
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0x70
+// 
+// MGetKV3ClassDefaults
 struct InfoOverlayData_t
 {
 public:
@@ -160,8 +189,11 @@ public:
 	int32_t m_nSequenceOverride; // 0x6c	
 };
 
-// Alignment: 5
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0x30
+// 
+// MGetKV3ClassDefaults
 struct BakedLightingInfo_t
 {
 public:
@@ -175,8 +207,11 @@ public:
 	CUtlVector< CStrongHandle< InfoForResourceTypeCTextureBase > > m_lightMaps; // 0x18	
 };
 
-// Alignment: 4
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0x38
+// 
+// MGetKV3ClassDefaults
 struct WorldNodeOnDiskBufferData_t
 {
 public:
@@ -186,8 +221,12 @@ public:
 	CUtlVector< uint8 > m_pData; // 0x20	
 };
 
-// Alignment: 9
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 4
 // Size: 0x18
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct AggregateMeshInfo_t
 {
 public:
@@ -205,8 +244,11 @@ public:
 	int32_t m_nLightProbeVolumePrecomputedHandshake; // 0x14	
 };
 
-// Alignment: 3
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0x38
+// 
+// MGetKV3ClassDefaults
 struct AggregateLODSetup_t
 {
 public:
@@ -215,8 +257,11 @@ public:
 	CUtlVectorFixedGrowable< float32 > m_fSwitchDistances; // 0x10	
 };
 
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x78
+// 
+// MGetKV3ClassDefaults
 struct AggregateSceneObject_t
 {
 public:
@@ -233,8 +278,12 @@ public:
 	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x70	
 };
 
-// Alignment: 3
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 4
 // Size: 0x20
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct ClutterTile_t
 {
 public:
@@ -243,8 +292,11 @@ public:
 	AABB_t m_BoundsWs; // 0x8	
 };
 
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0xa0
+// 
+// MGetKV3ClassDefaults
 struct ClutterSceneObject_t
 {
 public:
@@ -264,8 +316,11 @@ public:
 	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x98	
 };
 
-// Alignment: 13
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0x140
+// 
+// MGetKV3ClassDefaults
 struct WorldNode_t
 {
 public:
@@ -284,8 +339,12 @@ public:
 	BakedLightingInfo_t m_nodeLightingInfo; // 0x110	
 };
 
-// Alignment: 5
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0x20
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct WorldBuilderParams_t
 {
 public:
@@ -299,8 +358,11 @@ public:
 	uint64_t m_nCompileFingerprint; // 0x18	
 };
 
-// Alignment: 7
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0x50
+// 
+// MGetKV3ClassDefaults
 struct NodeData_t
 {
 public:
@@ -316,8 +378,11 @@ public:
 	CUtlString m_worldNodePrefix; // 0x48	
 };
 
-// Alignment: 4
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0x80
+// 
+// MGetKV3ClassDefaults
 struct World_t
 {
 public:
@@ -327,8 +392,13 @@ public:
 	CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > > m_entityLumps; // 0x68	
 };
 
-// Alignment: 2
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 4
 // Size: 0x8
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
 struct VoxelVisBlockOffset_t
 {
 public:
@@ -336,8 +406,11 @@ public:
 	uint32_t m_nElementCount; // 0x4	
 };
 
-// Alignment: 13
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 8
 // Size: 0xa0
+// 
+// MGetKV3ClassDefaults
 class CVoxelVisibility
 {
 private:
@@ -358,38 +431,52 @@ public:
 	VoxelVisBlockOffset_t m_nVisBlocks; // 0x94	
 };
 
-// Alignment: 0
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 1
 // Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
 struct VMapResourceData_t
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	// No members available
+	// No schema binary for binding
 };
 
-// Alignment: 0
+// Registered binary: worldrenderer.dll (project 'worldrenderer')
+// Alignment: 1
 // Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MResourceTypeForInfoType "vmap"
 struct InfoForResourceTypeVMapResourceData_t
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	// No members available
 };
 
-// Alignment: 0
+// Registered binary: worldrenderer.dll (project 'entity2')
+// Alignment: 8
 // Size: 0x8
+// Has VTable
+// Is Abstract
+// Has Trivial Destructor
 class CEntityComponent
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	// No members available
+	// No schema binary for binding
 };
 
-// Alignment: 11
+// Registered binary: worldrenderer.dll (project 'entity2')
+// Alignment: 8
 // Size: 0x78
+// 
+// MNetworkVarNames "int32 m_nameStringableIndex"
 class CEntityIdentity
 {
 private:
@@ -422,8 +509,13 @@ public:
 	CEntityIdentity* m_pNextByClass; // 0x70	
 };
 
-// Alignment: 3
+// Registered binary: worldrenderer.dll (project 'entity2')
+// Alignment: 8
 // Size: 0x30
+// Has VTable
+// 
+// MNetworkVarNames "CEntityIdentity * m_pEntity"
+// MNetworkVarNames "CScriptComponent::Storage_t m_CScriptComponent"
 class CEntityInstance
 {
 private:
@@ -442,8 +534,10 @@ public:
 	CScriptComponent* m_CScriptComponent; // 0x28	
 };
 
-// Alignment: 1
+// Registered binary: worldrenderer.dll (project 'entity2')
+// Alignment: 8
 // Size: 0x38
+// Has VTable
 class CScriptComponent : public CEntityComponent
 {
 private:
