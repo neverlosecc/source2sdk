@@ -20782,7 +20782,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xc30
+// Size: 0xc90
 // Has VTable
 // 
 // MPulseBindableTarget
