@@ -5356,7 +5356,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vcompmat@”Ðþ"
+// MResourceTypeForInfoType "vcompmat@?gú"
 class InfoForResourceTypeCCompositeMaterialKit
 {
 private:
@@ -30993,12 +30993,12 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x80
+// Size: 0x98
 class C_CommandContext
 {
 public:
 	bool needsprocessing; // 0x0	
-	int32_t command_number; // 0x78	
+	int32_t command_number; // 0x90	
 };
 
 // Registered binary: client.dll (project 'client')

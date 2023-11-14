@@ -863,12 +863,12 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x80
+// Size: 0x98
 class C_CommandContext
 {
 public:
 	bool needsprocessing; // 0x0	
-	int32_t command_number; // 0x78	
+	int32_t command_number; // 0x90	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -6865,7 +6865,7 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x6c0
+// Size: 0x6d8
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -6897,44 +6897,44 @@ private:
 	[[maybe_unused]] uint8_t __pad054c[0x4]; // 0x54c
 public:
 	C_CommandContext m_CommandContext; // 0x550	
-	uint64_t m_nInButtonsWhichAreToggles; // 0x5d0	
+	uint64_t m_nInButtonsWhichAreToggles; // 0x5e8	
 	// MNetworkEnable
 	// MNetworkPriority "1"
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint32_t m_nTickBase; // 0x5d8	
+	uint32_t m_nTickBase; // 0x5f0	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnPawnChanged"
-	CHandle< C_BasePlayerPawn > m_hPawn; // 0x5dc	
-	CHandle< C_BasePlayerPawn > m_hPredictedPawn; // 0x5e0	
-	CSplitScreenSlot m_nSplitScreenSlot; // 0x5e4	
-	CHandle< CBasePlayerController > m_hSplitOwner; // 0x5e8	
+	CHandle< C_BasePlayerPawn > m_hPawn; // 0x5f4	
+	CHandle< C_BasePlayerPawn > m_hPredictedPawn; // 0x5f8	
+	CSplitScreenSlot m_nSplitScreenSlot; // 0x5fc	
+	CHandle< CBasePlayerController > m_hSplitOwner; // 0x600	
 private:
-	[[maybe_unused]] uint8_t __pad05ec[0x4]; // 0x5ec
+	[[maybe_unused]] uint8_t __pad0604[0x4]; // 0x604
 public:
-	CUtlVector< CHandle< CBasePlayerController > > m_hSplitScreenPlayers; // 0x5f0	
-	bool m_bIsHLTV; // 0x608	
+	CUtlVector< CHandle< CBasePlayerController > > m_hSplitScreenPlayers; // 0x608	
+	bool m_bIsHLTV; // 0x620	
 private:
-	[[maybe_unused]] uint8_t __pad0609[0x3]; // 0x609
+	[[maybe_unused]] uint8_t __pad0621[0x3]; // 0x621
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnConnectionStateChanged"
-	PlayerConnectedState m_iConnected; // 0x60c	
+	PlayerConnectedState m_iConnected; // 0x624	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnPlayerControllerNameChanged"
-	char m_iszPlayerName[128]; // 0x610	
+	char m_iszPlayerName[128]; // 0x628	
 private:
-	[[maybe_unused]] uint8_t __pad0690[0x8]; // 0x690
+	[[maybe_unused]] uint8_t __pad06a8[0x8]; // 0x6a8
 public:
 	// MNetworkEnable
 	// MNetworkEncoder "fixed64"
 	// MNetworkChangeCallback "OnSteamIDChanged"
-	uint64_t m_steamID; // 0x698	
-	bool m_bIsLocalPlayerController; // 0x6a0	
+	uint64_t m_steamID; // 0x6b0	
+	bool m_bIsLocalPlayerController; // 0x6b8	
 private:
-	[[maybe_unused]] uint8_t __pad06a1[0x3]; // 0x6a1
+	[[maybe_unused]] uint8_t __pad06b9[0x3]; // 0x6b9
 public:
 	// MNetworkEnable
-	uint32_t m_iDesiredFOV; // 0x6a4	
+	uint32_t m_iDesiredFOV; // 0x6bc	
 	
 	// Static fields:
 	static bool &Get_sm_bRunningPredictedClientStringCommands(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBasePlayerController")->m_static_fields[0]->m_instance);};
@@ -9054,7 +9054,7 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x808
+// Size: 0x820
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -9109,159 +9109,159 @@ public:
 class CCSPlayerController : public CBasePlayerController
 {
 private:
-	[[maybe_unused]] uint8_t __pad06c0[0x10]; // 0x6c0
+	[[maybe_unused]] uint8_t __pad06d8[0x10]; // 0x6d8
 public:
 	// MNetworkEnable
-	CCSPlayerController_InGameMoneyServices* m_pInGameMoneyServices; // 0x6d0	
+	CCSPlayerController_InGameMoneyServices* m_pInGameMoneyServices; // 0x6e8	
 	// MNetworkEnable
-	CCSPlayerController_InventoryServices* m_pInventoryServices; // 0x6d8	
+	CCSPlayerController_InventoryServices* m_pInventoryServices; // 0x6f0	
 	// MNetworkEnable
-	CCSPlayerController_ActionTrackingServices* m_pActionTrackingServices; // 0x6e0	
+	CCSPlayerController_ActionTrackingServices* m_pActionTrackingServices; // 0x6f8	
 	// MNetworkEnable
-	CCSPlayerController_DamageServices* m_pDamageServices; // 0x6e8	
+	CCSPlayerController_DamageServices* m_pDamageServices; // 0x700	
 	// MNetworkEnable
-	uint32_t m_iPing; // 0x6f0	
+	uint32_t m_iPing; // 0x708	
 	// MNetworkEnable
-	bool m_bHasCommunicationAbuseMute; // 0x6f4	
-private:
-	[[maybe_unused]] uint8_t __pad06f5[0x3]; // 0x6f5
-public:
-	// MNetworkEnable
-	CUtlSymbolLarge m_szCrosshairCodes; // 0x6f8	
-	// MNetworkEnable
-	uint8_t m_iPendingTeamNum; // 0x700	
-private:
-	[[maybe_unused]] uint8_t __pad0701[0x3]; // 0x701
-public:
-	// MNetworkEnable
-	GameTime_t m_flForceTeamTime; // 0x704	
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnCompTeammateColorChanged"
-	int32_t m_iCompTeammateColor; // 0x708	
-	// MNetworkEnable
-	bool m_bEverPlayedOnTeam; // 0x70c	
+	bool m_bHasCommunicationAbuseMute; // 0x70c	
 private:
 	[[maybe_unused]] uint8_t __pad070d[0x3]; // 0x70d
 public:
-	GameTime_t m_flPreviousForceJoinTeamTime; // 0x710	
+	// MNetworkEnable
+	CUtlSymbolLarge m_szCrosshairCodes; // 0x710	
+	// MNetworkEnable
+	uint8_t m_iPendingTeamNum; // 0x718	
 private:
-	[[maybe_unused]] uint8_t __pad0714[0x4]; // 0x714
+	[[maybe_unused]] uint8_t __pad0719[0x3]; // 0x719
 public:
 	// MNetworkEnable
-	CUtlSymbolLarge m_szClan; // 0x718	
-	CUtlString m_sSanitizedPlayerName; // 0x720	
+	GameTime_t m_flForceTeamTime; // 0x71c	
 	// MNetworkEnable
-	int32_t m_iCoachingTeam; // 0x728	
+	// MNetworkChangeCallback "OnCompTeammateColorChanged"
+	int32_t m_iCompTeammateColor; // 0x720	
+	// MNetworkEnable
+	bool m_bEverPlayedOnTeam; // 0x724	
+private:
+	[[maybe_unused]] uint8_t __pad0725[0x3]; // 0x725
+public:
+	GameTime_t m_flPreviousForceJoinTeamTime; // 0x728	
 private:
 	[[maybe_unused]] uint8_t __pad072c[0x4]; // 0x72c
 public:
 	// MNetworkEnable
-	uint64_t m_nPlayerDominated; // 0x730	
+	CUtlSymbolLarge m_szClan; // 0x730	
+	CUtlString m_sSanitizedPlayerName; // 0x738	
 	// MNetworkEnable
-	uint64_t m_nPlayerDominatingMe; // 0x738	
-	// MNetworkEnable
-	int32_t m_iCompetitiveRanking; // 0x740	
-	// MNetworkEnable
-	int32_t m_iCompetitiveWins; // 0x744	
-	// MNetworkEnable
-	int8_t m_iCompetitiveRankType; // 0x748	
+	int32_t m_iCoachingTeam; // 0x740	
 private:
-	[[maybe_unused]] uint8_t __pad0749[0x3]; // 0x749
+	[[maybe_unused]] uint8_t __pad0744[0x4]; // 0x744
 public:
 	// MNetworkEnable
-	int32_t m_iCompetitiveRankingPredicted_Win; // 0x74c	
+	uint64_t m_nPlayerDominated; // 0x748	
 	// MNetworkEnable
-	int32_t m_iCompetitiveRankingPredicted_Loss; // 0x750	
+	uint64_t m_nPlayerDominatingMe; // 0x750	
 	// MNetworkEnable
-	int32_t m_iCompetitiveRankingPredicted_Tie; // 0x754	
+	int32_t m_iCompetitiveRanking; // 0x758	
 	// MNetworkEnable
-	int32_t m_nEndMatchNextMapVote; // 0x758	
+	int32_t m_iCompetitiveWins; // 0x75c	
 	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint16_t m_unActiveQuestId; // 0x75c	
+	int8_t m_iCompetitiveRankType; // 0x760	
 private:
-	[[maybe_unused]] uint8_t __pad075e[0x2]; // 0x75e
+	[[maybe_unused]] uint8_t __pad0761[0x3]; // 0x761
 public:
 	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	QuestProgress::Reason m_nQuestProgressReason; // 0x760	
+	int32_t m_iCompetitiveRankingPredicted_Win; // 0x764	
+	// MNetworkEnable
+	int32_t m_iCompetitiveRankingPredicted_Loss; // 0x768	
+	// MNetworkEnable
+	int32_t m_iCompetitiveRankingPredicted_Tie; // 0x76c	
+	// MNetworkEnable
+	int32_t m_nEndMatchNextMapVote; // 0x770	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint32_t m_unPlayerTvControlFlags; // 0x764	
+	uint16_t m_unActiveQuestId; // 0x774	
 private:
-	[[maybe_unused]] uint8_t __pad0768[0x28]; // 0x768
-public:
-	int32_t m_iDraftIndex; // 0x790	
-	uint32_t m_msQueuedModeDisconnectionTimestamp; // 0x794	
-	uint32_t m_uiAbandonRecordedReason; // 0x798	
-	bool m_bCannotBeKicked; // 0x79c	
-	bool m_bEverFullyConnected; // 0x79d	
-	bool m_bAbandonAllowsSurrender; // 0x79e	
-	bool m_bAbandonOffersInstantSurrender; // 0x79f	
-	bool m_bDisconnection1MinWarningPrinted; // 0x7a0	
-	bool m_bScoreReported; // 0x7a1	
-private:
-	[[maybe_unused]] uint8_t __pad07a2[0x2]; // 0x7a2
+	[[maybe_unused]] uint8_t __pad0776[0x2]; // 0x776
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	int32_t m_nDisconnectionTick; // 0x7a4	
-private:
-	[[maybe_unused]] uint8_t __pad07a8[0x8]; // 0x7a8
-public:
-	// MNetworkEnable
-	bool m_bControllingBot; // 0x7b0	
-	// MNetworkEnable
-	bool m_bHasControlledBotThisRound; // 0x7b1	
-	bool m_bHasBeenControlledByPlayerThisRound; // 0x7b2	
-private:
-	[[maybe_unused]] uint8_t __pad07b3[0x1]; // 0x7b3
-public:
-	int32_t m_nBotsControlledThisRound; // 0x7b4	
+	QuestProgress::Reason m_nQuestProgressReason; // 0x778	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	bool m_bCanControlObservedBot; // 0x7b8	
+	uint32_t m_unPlayerTvControlFlags; // 0x77c	
 private:
-	[[maybe_unused]] uint8_t __pad07b9[0x3]; // 0x7b9
+	[[maybe_unused]] uint8_t __pad0780[0x28]; // 0x780
+public:
+	int32_t m_iDraftIndex; // 0x7a8	
+	uint32_t m_msQueuedModeDisconnectionTimestamp; // 0x7ac	
+	uint32_t m_uiAbandonRecordedReason; // 0x7b0	
+	bool m_bCannotBeKicked; // 0x7b4	
+	bool m_bEverFullyConnected; // 0x7b5	
+	bool m_bAbandonAllowsSurrender; // 0x7b6	
+	bool m_bAbandonOffersInstantSurrender; // 0x7b7	
+	bool m_bDisconnection1MinWarningPrinted; // 0x7b8	
+	bool m_bScoreReported; // 0x7b9	
+private:
+	[[maybe_unused]] uint8_t __pad07ba[0x2]; // 0x7ba
 public:
 	// MNetworkEnable
-	CHandle< C_CSPlayerPawn > m_hPlayerPawn; // 0x7bc	
-	// MNetworkEnable
-	CHandle< C_CSObserverPawn > m_hObserverPawn; // 0x7c0	
-	// MNetworkEnable
-	bool m_bPawnIsAlive; // 0x7c4	
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	int32_t m_nDisconnectionTick; // 0x7bc	
 private:
-	[[maybe_unused]] uint8_t __pad07c5[0x3]; // 0x7c5
+	[[maybe_unused]] uint8_t __pad07c0[0x8]; // 0x7c0
+public:
+	// MNetworkEnable
+	bool m_bControllingBot; // 0x7c8	
+	// MNetworkEnable
+	bool m_bHasControlledBotThisRound; // 0x7c9	
+	bool m_bHasBeenControlledByPlayerThisRound; // 0x7ca	
+private:
+	[[maybe_unused]] uint8_t __pad07cb[0x1]; // 0x7cb
+public:
+	int32_t m_nBotsControlledThisRound; // 0x7cc	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	bool m_bCanControlObservedBot; // 0x7d0	
+private:
+	[[maybe_unused]] uint8_t __pad07d1[0x3]; // 0x7d1
+public:
+	// MNetworkEnable
+	CHandle< C_CSPlayerPawn > m_hPlayerPawn; // 0x7d4	
+	// MNetworkEnable
+	CHandle< C_CSObserverPawn > m_hObserverPawn; // 0x7d8	
+	// MNetworkEnable
+	bool m_bPawnIsAlive; // 0x7dc	
+private:
+	[[maybe_unused]] uint8_t __pad07dd[0x3]; // 0x7dd
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "TeammateAndSpectatorExclusive"
-	uint32_t m_iPawnHealth; // 0x7c8	
+	uint32_t m_iPawnHealth; // 0x7e0	
 	// MNetworkEnable
 	// MNetworkUserGroup "TeammateAndSpectatorExclusive"
-	int32_t m_iPawnArmor; // 0x7cc	
+	int32_t m_iPawnArmor; // 0x7e4	
 	// MNetworkEnable
 	// MNetworkUserGroup "TeammateAndSpectatorExclusive"
-	bool m_bPawnHasDefuser; // 0x7d0	
+	bool m_bPawnHasDefuser; // 0x7e8	
 	// MNetworkEnable
 	// MNetworkUserGroup "TeammateAndSpectatorExclusive"
-	bool m_bPawnHasHelmet; // 0x7d1	
+	bool m_bPawnHasHelmet; // 0x7e9	
 	// MNetworkEnable
-	uint16_t m_nPawnCharacterDefIndex; // 0x7d2	
+	uint16_t m_nPawnCharacterDefIndex; // 0x7ea	
 	// MNetworkEnable
-	int32_t m_iPawnLifetimeStart; // 0x7d4	
+	int32_t m_iPawnLifetimeStart; // 0x7ec	
 	// MNetworkEnable
-	int32_t m_iPawnLifetimeEnd; // 0x7d8	
+	int32_t m_iPawnLifetimeEnd; // 0x7f0	
 	// MNetworkEnable
-	int32_t m_iPawnBotDifficulty; // 0x7dc	
+	int32_t m_iPawnBotDifficulty; // 0x7f4	
 	// MNetworkEnable
-	CHandle< CCSPlayerController > m_hOriginalControllerOfCurrentPawn; // 0x7e0	
+	CHandle< CCSPlayerController > m_hOriginalControllerOfCurrentPawn; // 0x7f8	
 	// MNetworkEnable
-	int32_t m_iScore; // 0x7e4	
+	int32_t m_iScore; // 0x7fc	
 	// MNetworkEnable
-	C_NetworkUtlVectorBase< EKillTypes_t > m_vecKills; // 0x7e8	
+	C_NetworkUtlVectorBase< EKillTypes_t > m_vecKills; // 0x800	
 	// MNetworkEnable
-	int32_t m_iMVPs; // 0x800	
-	bool m_bIsPlayerNameDirty; // 0x804	
+	int32_t m_iMVPs; // 0x818	
+	bool m_bIsPlayerNameDirty; // 0x81c	
 };
 
 // Registered binary: client.dll (project 'client')
