@@ -5,7 +5,7 @@
 // /////////////////////////////////////////////////////////////
 // Binary: !GlobalTypes
 // Classes count: 1294
-// Enums count: 303
+// Enums count: 304
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
@@ -2961,7 +2961,7 @@ enum class ValueRemapperHapticsType_t : uint32_t
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 4
-// Size: 0xe
+// Size: 0xf
 enum class TakeDamageFlags_t : uint32_t
 {
 	DFLAG_NONE = 0x0,
@@ -2980,6 +2980,7 @@ enum class TakeDamageFlags_t : uint32_t
 	// MEnumeratorIsNotAFlag
 	DMG_LASTDFLAG = 0x400,
 	DFLAG_IGNORE_ARMOR = 0x800,
+	DFLAG_SUPPRESS_UTILREMOVE = 0x1000,
 };
 
 // Registered binary: server.dll (project 'server')
@@ -4629,6 +4630,16 @@ enum class StanceType_t : uint32_t
 // Registered binary: server.dll (project 'server')
 // Alignment: 4
 // Size: 0x3
+enum class C4LightEffect_t : uint32_t
+{
+	eLightEffectNone = 0x0,
+	eLightEffectDropped = 0x1,
+	eLightEffectThirdPersonHeld = 0x2,
+};
+
+// Registered binary: server.dll (project 'server')
+// Alignment: 4
+// Size: 0x3
 enum class SubclassVDataChangeType_t : uint32_t
 {
 	SUBCLASS_VDATA_CREATED = 0x0,
@@ -5356,7 +5367,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vcompmat@?gú"
+// MResourceTypeForInfoType "vcompmat@‡½ÿ"
 class InfoForResourceTypeCCompositeMaterialKit
 {
 private:
@@ -30068,12 +30079,12 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x538
+// Size: 0x540
 // Has VTable
 class CCSGOPlayerAnimGraphState
 {
 private:
-	[[maybe_unused]] uint8_t __pad0000[0x538]; // 0x0
+	[[maybe_unused]] uint8_t __pad0000[0x540]; // 0x0
 public:
 	// No schema binary for binding
 };
@@ -30993,12 +31004,12 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x98
+// Size: 0xb0
 class C_CommandContext
 {
 public:
 	bool needsprocessing; // 0x0	
-	int32_t command_number; // 0x90	
+	int32_t command_number; // 0xa8	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -31220,7 +31231,7 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x98
+// Size: 0xb0
 class CDecalInfo
 {
 public:
@@ -31234,12 +31245,17 @@ public:
 private:
 	[[maybe_unused]] uint8_t __pad001c[0xc]; // 0x1c
 public:
-	CDecalInfo* m_pNext; // 0x28	
-	CDecalInfo* m_pPrev; // 0x30	
+	Vector m_vPosition; // 0x28	
+	float m_flBoundingRadiusSqr; // 0x34	
 private:
-	[[maybe_unused]] uint8_t __pad0038[0x58]; // 0x38
+	[[maybe_unused]] uint8_t __pad0038[0x8]; // 0x38
 public:
-	int32_t m_nDecalMaterialIndex; // 0x90	
+	CDecalInfo* m_pNext; // 0x40	
+	CDecalInfo* m_pPrev; // 0x48	
+private:
+	[[maybe_unused]] uint8_t __pad0050[0x58]; // 0x50
+public:
+	int32_t m_nDecalMaterialIndex; // 0xa8	
 };
 
 // Registered binary: client.dll (project 'client')
