@@ -5367,7 +5367,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vcompmat@R£ø"
+// MResourceTypeForInfoType "vcompmat@Ôhû"
 class InfoForResourceTypeCCompositeMaterialKit
 {
 private:
@@ -5985,13 +5985,15 @@ public:
 
 // Registered binary: engine2.dll (project 'engine2')
 // Alignment: 8
-// Size: 0x30
+// Size: 0x38
 // Has Trivial Destructor
 struct EventClientProcessInput_t
 {
 public:
 	EngineLoopState_t m_LoopState; // 0x0	
 	float m_flRealTime; // 0x28	
+	float m_flTickInterval; // 0x2c	
+	double m_flTickStartTime; // 0x30	
 };
 
 // Registered binary: engine2.dll (project 'entity2')
@@ -30079,12 +30081,12 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x540
+// Size: 0x5f8
 // Has VTable
 class CCSGOPlayerAnimGraphState
 {
 private:
-	[[maybe_unused]] uint8_t __pad0000[0x540]; // 0x0
+	[[maybe_unused]] uint8_t __pad0000[0x5f8]; // 0x0
 public:
 	// No schema binary for binding
 };
