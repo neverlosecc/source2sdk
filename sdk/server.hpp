@@ -5,7 +5,7 @@
 // /////////////////////////////////////////////////////////////
 // Binary: server.dll
 // Classes count: 757
-// Enums count: 122
+// Enums count: 121
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
@@ -1822,16 +1822,6 @@ enum class C4LightEffect_t : uint32_t
 	eLightEffectNone = 0x0,
 	eLightEffectDropped = 0x1,
 	eLightEffectThirdPersonHeld = 0x2,
-};
-
-// Registered binary: server.dll (project 'server')
-// Alignment: 4
-// Size: 0x3
-enum class EGrenadeThrowState : uint32_t
-{
-	NotThrowing = 0x0,
-	Throwing = 0x1,
-	ThrowComplete = 0x2,
 };
 
 // Registered binary: server.dll (project 'server')
@@ -8026,12 +8016,12 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x5f8
+// Size: 0x608
 // Has VTable
 class CCSGOPlayerAnimGraphState
 {
 private:
-	[[maybe_unused]] uint8_t __pad0000[0x5f8]; // 0x0
+	[[maybe_unused]] uint8_t __pad0000[0x608]; // 0x0
 public:
 	// No schema binary for binding
 };
@@ -10234,7 +10224,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x6a8
+// Size: 0x6b0
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -10299,22 +10289,26 @@ private:
 public:
 	int64_t m_nUsecTimestampLastUserCmdReceived; // 0x648	
 private:
-	[[maybe_unused]] uint8_t __pad0650[0x10]; // 0x650
+	[[maybe_unused]] uint8_t __pad0650[0x4]; // 0x650
 public:
-	ChatIgnoreType_t m_iIgnoreGlobalChat; // 0x660	
-	float m_flLastPlayerTalkTime; // 0x664	
-	float m_flLastEntitySteadyState; // 0x668	
-	int32_t m_nAvailableEntitySteadyState; // 0x66c	
-	bool m_bHasAnySteadyStateEnts; // 0x670	
+	int32_t m_nLastRealCommandNumberExecuted; // 0x654	
 private:
-	[[maybe_unused]] uint8_t __pad0671[0xf]; // 0x671
+	[[maybe_unused]] uint8_t __pad0658[0x10]; // 0x658
+public:
+	ChatIgnoreType_t m_iIgnoreGlobalChat; // 0x668	
+	float m_flLastPlayerTalkTime; // 0x66c	
+	float m_flLastEntitySteadyState; // 0x670	
+	int32_t m_nAvailableEntitySteadyState; // 0x674	
+	bool m_bHasAnySteadyStateEnts; // 0x678	
+private:
+	[[maybe_unused]] uint8_t __pad0679[0xf]; // 0x679
 public:
 	// MNetworkEnable
 	// MNetworkEncoder "fixed64"
 	// MNetworkChangeCallback "OnSteamIDChanged"
-	uint64_t m_steamID; // 0x680	
+	uint64_t m_steamID; // 0x688	
 	// MNetworkEnable
-	uint32_t m_iDesiredFOV; // 0x688	
+	uint32_t m_iDesiredFOV; // 0x690	
 	
 	// Static fields:
 	static bool &Get_sm_bRunningPredictedClientStringCommands(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBasePlayerController")->m_static_fields[0]->m_instance);};
@@ -16106,7 +16100,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xf900
+// Size: 0xf908
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -16163,193 +16157,193 @@ public:
 class CCSPlayerController : public CBasePlayerController
 {
 private:
-	[[maybe_unused]] uint8_t __pad06a8[0x10]; // 0x6a8
+	[[maybe_unused]] uint8_t __pad06b0[0x10]; // 0x6b0
 public:
 	// MNetworkEnable
-	CCSPlayerController_InGameMoneyServices* m_pInGameMoneyServices; // 0x6b8	
+	CCSPlayerController_InGameMoneyServices* m_pInGameMoneyServices; // 0x6c0	
 	// MNetworkEnable
-	CCSPlayerController_InventoryServices* m_pInventoryServices; // 0x6c0	
+	CCSPlayerController_InventoryServices* m_pInventoryServices; // 0x6c8	
 	// MNetworkEnable
-	CCSPlayerController_ActionTrackingServices* m_pActionTrackingServices; // 0x6c8	
+	CCSPlayerController_ActionTrackingServices* m_pActionTrackingServices; // 0x6d0	
 	// MNetworkEnable
-	CCSPlayerController_DamageServices* m_pDamageServices; // 0x6d0	
+	CCSPlayerController_DamageServices* m_pDamageServices; // 0x6d8	
 	// MNetworkEnable
-	uint32_t m_iPing; // 0x6d8	
+	uint32_t m_iPing; // 0x6e0	
 	// MNetworkEnable
-	bool m_bHasCommunicationAbuseMute; // 0x6dc	
+	bool m_bHasCommunicationAbuseMute; // 0x6e4	
 private:
-	[[maybe_unused]] uint8_t __pad06dd[0x3]; // 0x6dd
+	[[maybe_unused]] uint8_t __pad06e5[0x3]; // 0x6e5
 public:
 	// MNetworkEnable
-	CUtlSymbolLarge m_szCrosshairCodes; // 0x6e0	
+	CUtlSymbolLarge m_szCrosshairCodes; // 0x6e8	
 	// MNetworkEnable
-	uint8_t m_iPendingTeamNum; // 0x6e8	
+	uint8_t m_iPendingTeamNum; // 0x6f0	
 private:
-	[[maybe_unused]] uint8_t __pad06e9[0x3]; // 0x6e9
+	[[maybe_unused]] uint8_t __pad06f1[0x3]; // 0x6f1
 public:
 	// MNetworkEnable
-	GameTime_t m_flForceTeamTime; // 0x6ec	
+	GameTime_t m_flForceTeamTime; // 0x6f4	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnCompTeammateColorChanged"
-	int32_t m_iCompTeammateColor; // 0x6f0	
+	int32_t m_iCompTeammateColor; // 0x6f8	
 	// MNetworkEnable
-	bool m_bEverPlayedOnTeam; // 0x6f4	
-	bool m_bAttemptedToGetColor; // 0x6f5	
+	bool m_bEverPlayedOnTeam; // 0x6fc	
+	bool m_bAttemptedToGetColor; // 0x6fd	
 private:
-	[[maybe_unused]] uint8_t __pad06f6[0x2]; // 0x6f6
+	[[maybe_unused]] uint8_t __pad06fe[0x2]; // 0x6fe
 public:
-	int32_t m_iTeammatePreferredColor; // 0x6f8	
-	bool m_bTeamChanged; // 0x6fc	
-	bool m_bInSwitchTeam; // 0x6fd	
-	bool m_bHasSeenJoinGame; // 0x6fe	
-	bool m_bJustBecameSpectator; // 0x6ff	
-	bool m_bSwitchTeamsOnNextRoundReset; // 0x700	
-	bool m_bRemoveAllItemsOnNextRoundReset; // 0x701	
+	int32_t m_iTeammatePreferredColor; // 0x700	
+	bool m_bTeamChanged; // 0x704	
+	bool m_bInSwitchTeam; // 0x705	
+	bool m_bHasSeenJoinGame; // 0x706	
+	bool m_bJustBecameSpectator; // 0x707	
+	bool m_bSwitchTeamsOnNextRoundReset; // 0x708	
+	bool m_bRemoveAllItemsOnNextRoundReset; // 0x709	
 private:
-	[[maybe_unused]] uint8_t __pad0702[0x6]; // 0x702
-public:
-	// MNetworkEnable
-	CUtlSymbolLarge m_szClan; // 0x708	
-	char m_szClanName[32]; // 0x710	
-	// MNetworkEnable
-	int32_t m_iCoachingTeam; // 0x730	
-private:
-	[[maybe_unused]] uint8_t __pad0734[0x4]; // 0x734
+	[[maybe_unused]] uint8_t __pad070a[0x6]; // 0x70a
 public:
 	// MNetworkEnable
-	uint64_t m_nPlayerDominated; // 0x738	
+	CUtlSymbolLarge m_szClan; // 0x710	
+	char m_szClanName[32]; // 0x718	
 	// MNetworkEnable
-	uint64_t m_nPlayerDominatingMe; // 0x740	
-	// MNetworkEnable
-	int32_t m_iCompetitiveRanking; // 0x748	
-	// MNetworkEnable
-	int32_t m_iCompetitiveWins; // 0x74c	
-	// MNetworkEnable
-	int8_t m_iCompetitiveRankType; // 0x750	
+	int32_t m_iCoachingTeam; // 0x738	
 private:
-	[[maybe_unused]] uint8_t __pad0751[0x3]; // 0x751
+	[[maybe_unused]] uint8_t __pad073c[0x4]; // 0x73c
 public:
 	// MNetworkEnable
-	int32_t m_iCompetitiveRankingPredicted_Win; // 0x754	
+	uint64_t m_nPlayerDominated; // 0x740	
 	// MNetworkEnable
-	int32_t m_iCompetitiveRankingPredicted_Loss; // 0x758	
+	uint64_t m_nPlayerDominatingMe; // 0x748	
 	// MNetworkEnable
-	int32_t m_iCompetitiveRankingPredicted_Tie; // 0x75c	
+	int32_t m_iCompetitiveRanking; // 0x750	
 	// MNetworkEnable
-	int32_t m_nEndMatchNextMapVote; // 0x760	
+	int32_t m_iCompetitiveWins; // 0x754	
+	// MNetworkEnable
+	int8_t m_iCompetitiveRankType; // 0x758	
+private:
+	[[maybe_unused]] uint8_t __pad0759[0x3]; // 0x759
+public:
+	// MNetworkEnable
+	int32_t m_iCompetitiveRankingPredicted_Win; // 0x75c	
+	// MNetworkEnable
+	int32_t m_iCompetitiveRankingPredicted_Loss; // 0x760	
+	// MNetworkEnable
+	int32_t m_iCompetitiveRankingPredicted_Tie; // 0x764	
+	// MNetworkEnable
+	int32_t m_nEndMatchNextMapVote; // 0x768	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint16_t m_unActiveQuestId; // 0x764	
+	uint16_t m_unActiveQuestId; // 0x76c	
 private:
-	[[maybe_unused]] uint8_t __pad0766[0x2]; // 0x766
-public:
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	QuestProgress::Reason m_nQuestProgressReason; // 0x768	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint32_t m_unPlayerTvControlFlags; // 0x76c	
-private:
-	[[maybe_unused]] uint8_t __pad0770[0x28]; // 0x770
-public:
-	int32_t m_iDraftIndex; // 0x798	
-	uint32_t m_msQueuedModeDisconnectionTimestamp; // 0x79c	
-	uint32_t m_uiAbandonRecordedReason; // 0x7a0	
-	bool m_bCannotBeKicked; // 0x7a4	
-	bool m_bEverFullyConnected; // 0x7a5	
-	bool m_bAbandonAllowsSurrender; // 0x7a6	
-	bool m_bAbandonOffersInstantSurrender; // 0x7a7	
-	bool m_bDisconnection1MinWarningPrinted; // 0x7a8	
-	bool m_bScoreReported; // 0x7a9	
-private:
-	[[maybe_unused]] uint8_t __pad07aa[0x2]; // 0x7aa
+	[[maybe_unused]] uint8_t __pad076e[0x2]; // 0x76e
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	int32_t m_nDisconnectionTick; // 0x7ac	
-private:
-	[[maybe_unused]] uint8_t __pad07b0[0x8]; // 0x7b0
-public:
-	// MNetworkEnable
-	bool m_bControllingBot; // 0x7b8	
-	// MNetworkEnable
-	bool m_bHasControlledBotThisRound; // 0x7b9	
-	bool m_bHasBeenControlledByPlayerThisRound; // 0x7ba	
-private:
-	[[maybe_unused]] uint8_t __pad07bb[0x1]; // 0x7bb
-public:
-	int32_t m_nBotsControlledThisRound; // 0x7bc	
+	QuestProgress::Reason m_nQuestProgressReason; // 0x770	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	bool m_bCanControlObservedBot; // 0x7c0	
+	uint32_t m_unPlayerTvControlFlags; // 0x774	
 private:
-	[[maybe_unused]] uint8_t __pad07c1[0x3]; // 0x7c1
+	[[maybe_unused]] uint8_t __pad0778[0x28]; // 0x778
+public:
+	int32_t m_iDraftIndex; // 0x7a0	
+	uint32_t m_msQueuedModeDisconnectionTimestamp; // 0x7a4	
+	uint32_t m_uiAbandonRecordedReason; // 0x7a8	
+	bool m_bCannotBeKicked; // 0x7ac	
+	bool m_bEverFullyConnected; // 0x7ad	
+	bool m_bAbandonAllowsSurrender; // 0x7ae	
+	bool m_bAbandonOffersInstantSurrender; // 0x7af	
+	bool m_bDisconnection1MinWarningPrinted; // 0x7b0	
+	bool m_bScoreReported; // 0x7b1	
+private:
+	[[maybe_unused]] uint8_t __pad07b2[0x2]; // 0x7b2
 public:
 	// MNetworkEnable
-	CHandle< CCSPlayerPawn > m_hPlayerPawn; // 0x7c4	
-	// MNetworkEnable
-	CHandle< CCSObserverPawn > m_hObserverPawn; // 0x7c8	
-	int32_t m_DesiredObserverMode; // 0x7cc	
-	CEntityHandle m_hDesiredObserverTarget; // 0x7d0	
-	// MNetworkEnable
-	bool m_bPawnIsAlive; // 0x7d4	
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	int32_t m_nDisconnectionTick; // 0x7b4	
 private:
-	[[maybe_unused]] uint8_t __pad07d5[0x3]; // 0x7d5
+	[[maybe_unused]] uint8_t __pad07b8[0x8]; // 0x7b8
+public:
+	// MNetworkEnable
+	bool m_bControllingBot; // 0x7c0	
+	// MNetworkEnable
+	bool m_bHasControlledBotThisRound; // 0x7c1	
+	bool m_bHasBeenControlledByPlayerThisRound; // 0x7c2	
+private:
+	[[maybe_unused]] uint8_t __pad07c3[0x1]; // 0x7c3
+public:
+	int32_t m_nBotsControlledThisRound; // 0x7c4	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	bool m_bCanControlObservedBot; // 0x7c8	
+private:
+	[[maybe_unused]] uint8_t __pad07c9[0x3]; // 0x7c9
+public:
+	// MNetworkEnable
+	CHandle< CCSPlayerPawn > m_hPlayerPawn; // 0x7cc	
+	// MNetworkEnable
+	CHandle< CCSObserverPawn > m_hObserverPawn; // 0x7d0	
+	int32_t m_DesiredObserverMode; // 0x7d4	
+	CEntityHandle m_hDesiredObserverTarget; // 0x7d8	
+	// MNetworkEnable
+	bool m_bPawnIsAlive; // 0x7dc	
+private:
+	[[maybe_unused]] uint8_t __pad07dd[0x3]; // 0x7dd
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "TeammateAndSpectatorExclusive"
-	uint32_t m_iPawnHealth; // 0x7d8	
+	uint32_t m_iPawnHealth; // 0x7e0	
 	// MNetworkEnable
 	// MNetworkUserGroup "TeammateAndSpectatorExclusive"
-	int32_t m_iPawnArmor; // 0x7dc	
+	int32_t m_iPawnArmor; // 0x7e4	
 	// MNetworkEnable
 	// MNetworkUserGroup "TeammateAndSpectatorExclusive"
-	bool m_bPawnHasDefuser; // 0x7e0	
+	bool m_bPawnHasDefuser; // 0x7e8	
 	// MNetworkEnable
 	// MNetworkUserGroup "TeammateAndSpectatorExclusive"
-	bool m_bPawnHasHelmet; // 0x7e1	
+	bool m_bPawnHasHelmet; // 0x7e9	
 	// MNetworkEnable
-	uint16_t m_nPawnCharacterDefIndex; // 0x7e2	
+	uint16_t m_nPawnCharacterDefIndex; // 0x7ea	
 	// MNetworkEnable
-	int32_t m_iPawnLifetimeStart; // 0x7e4	
+	int32_t m_iPawnLifetimeStart; // 0x7ec	
 	// MNetworkEnable
-	int32_t m_iPawnLifetimeEnd; // 0x7e8	
+	int32_t m_iPawnLifetimeEnd; // 0x7f0	
 	// MNetworkEnable
-	int32_t m_iPawnBotDifficulty; // 0x7ec	
+	int32_t m_iPawnBotDifficulty; // 0x7f4	
 	// MNetworkEnable
-	CHandle< CCSPlayerController > m_hOriginalControllerOfCurrentPawn; // 0x7f0	
+	CHandle< CCSPlayerController > m_hOriginalControllerOfCurrentPawn; // 0x7f8	
 	// MNetworkEnable
-	int32_t m_iScore; // 0x7f4	
-	int32_t m_iRoundScore; // 0x7f8	
-	int32_t m_iRoundsWon; // 0x7fc	
+	int32_t m_iScore; // 0x7fc	
+	int32_t m_iRoundScore; // 0x800	
+	int32_t m_iRoundsWon; // 0x804	
 	// MNetworkEnable
-	CNetworkUtlVectorBase< EKillTypes_t > m_vecKills; // 0x800	
+	CNetworkUtlVectorBase< EKillTypes_t > m_vecKills; // 0x808	
 	// MNetworkEnable
-	int32_t m_iMVPs; // 0x818	
-	int32_t m_nUpdateCounter; // 0x81c	
-	float m_flSmoothedPing; // 0x820	
+	int32_t m_iMVPs; // 0x820	
+	int32_t m_nUpdateCounter; // 0x824	
+	float m_flSmoothedPing; // 0x828	
 private:
-	[[maybe_unused]] uint8_t __pad0824[0xf0a4]; // 0x824
+	[[maybe_unused]] uint8_t __pad082c[0xf0a4]; // 0x82c
 public:
-	IntervalTimer m_lastHeldVoteTimer; // 0xf8c8	
+	IntervalTimer m_lastHeldVoteTimer; // 0xf8d0	
 private:
-	[[maybe_unused]] uint8_t __padf8d8[0x8]; // 0xf8d8
+	[[maybe_unused]] uint8_t __padf8e0[0x8]; // 0xf8e0
 public:
-	bool m_bShowHints; // 0xf8e0	
+	bool m_bShowHints; // 0xf8e8	
 private:
-	[[maybe_unused]] uint8_t __padf8e1[0x3]; // 0xf8e1
+	[[maybe_unused]] uint8_t __padf8e9[0x3]; // 0xf8e9
 public:
-	int32_t m_iNextTimeCheck; // 0xf8e4	
-	bool m_bJustDidTeamKill; // 0xf8e8	
-	bool m_bPunishForTeamKill; // 0xf8e9	
-	bool m_bGaveTeamDamageWarning; // 0xf8ea	
-	bool m_bGaveTeamDamageWarningThisRound; // 0xf8eb	
+	int32_t m_iNextTimeCheck; // 0xf8ec	
+	bool m_bJustDidTeamKill; // 0xf8f0	
+	bool m_bPunishForTeamKill; // 0xf8f1	
+	bool m_bGaveTeamDamageWarning; // 0xf8f2	
+	bool m_bGaveTeamDamageWarningThisRound; // 0xf8f3	
 private:
-	[[maybe_unused]] uint8_t __padf8ec[0x4]; // 0xf8ec
+	[[maybe_unused]] uint8_t __padf8f4[0x4]; // 0xf8f4
 public:
-	double m_dblLastReceivedPacketPlatFloatTime; // 0xf8f0	
-	GameTime_t m_LastTeamDamageWarningTime; // 0xf8f8	
-	GameTime_t m_LastTimePlayerWasDisconnectedForPawnsRemove; // 0xf8fc	
+	double m_dblLastReceivedPacketPlatFloatTime; // 0xf8f8	
+	GameTime_t m_LastTeamDamageWarningTime; // 0xf900	
+	GameTime_t m_LastTimePlayerWasDisconnectedForPawnsRemove; // 0xf904	
 };
 
 // Registered binary: server.dll (project 'server')
@@ -20423,7 +20417,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe28
+// Size: 0xe30
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20479,124 +20473,124 @@ public:
 	CUtlVector< HSequence > m_thirdPersonFireSequences; // 0xcb0	
 	HSequence m_hCurrentThirdPersonSequence; // 0xcc8	
 	int32_t m_nSilencerBoneIndex; // 0xccc	
-	HSequence m_thirdPersonSequences[6]; // 0xcd0	
+	HSequence m_thirdPersonSequences[7]; // 0xcd0	
 private:
-	[[maybe_unused]] uint8_t __pad0ce8[0x8]; // 0xce8
+	[[maybe_unused]] uint8_t __pad0cec[0xc]; // 0xcec
 public:
-	bool m_bPlayerAmmoStockOnPickup; // 0xcf0	
-	bool m_bRequireUseToTouch; // 0xcf1	
+	bool m_bPlayerAmmoStockOnPickup; // 0xcf8	
+	bool m_bRequireUseToTouch; // 0xcf9	
 private:
-	[[maybe_unused]] uint8_t __pad0cf2[0x2]; // 0xcf2
+	[[maybe_unused]] uint8_t __pad0cfa[0x2]; // 0xcfa
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnWeaponStateNetworkChange"
-	CSWeaponState_t m_iState; // 0xcf4	
-	GameTime_t m_flLastTimeInAir; // 0xcf8	
-	GameTime_t m_flLastDeployTime; // 0xcfc	
+	CSWeaponState_t m_iState; // 0xcfc	
+	GameTime_t m_flLastTimeInAir; // 0xd00	
+	GameTime_t m_flLastDeployTime; // 0xd04	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalWeaponExclusive"
-	uint32_t m_nViewModelIndex; // 0xd00	
-	bool m_bReloadsWithClips; // 0xd04	
+	uint32_t m_nViewModelIndex; // 0xd08	
+	bool m_bReloadsWithClips; // 0xd0c	
 private:
-	[[maybe_unused]] uint8_t __pad0d05[0x1b]; // 0xd05
+	[[maybe_unused]] uint8_t __pad0d0d[0x1b]; // 0xd0d
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalWeaponExclusive"
 	// MNetworkPriority "32"
-	GameTime_t m_flTimeWeaponIdle; // 0xd20	
-	bool m_bFireOnEmpty; // 0xd24	
+	GameTime_t m_flTimeWeaponIdle; // 0xd28	
+	bool m_bFireOnEmpty; // 0xd2c	
 private:
-	[[maybe_unused]] uint8_t __pad0d25[0x3]; // 0xd25
+	[[maybe_unused]] uint8_t __pad0d2d[0x3]; // 0xd2d
 public:
-	CEntityIOOutput m_OnPlayerPickup; // 0xd28	
+	CEntityIOOutput m_OnPlayerPickup; // 0xd30	
 	// MNetworkEnable
-	CSWeaponMode m_weaponMode; // 0xd50	
-	float m_flTurningInaccuracyDelta; // 0xd54	
-	Vector m_vecTurningInaccuracyEyeDirLast; // 0xd58	
-	float m_flTurningInaccuracy; // 0xd64	
+	CSWeaponMode m_weaponMode; // 0xd58	
+	float m_flTurningInaccuracyDelta; // 0xd5c	
+	Vector m_vecTurningInaccuracyEyeDirLast; // 0xd60	
+	float m_flTurningInaccuracy; // 0xd6c	
 	// MNetworkEnable
-	float m_fAccuracyPenalty; // 0xd68	
-	GameTime_t m_flLastAccuracyUpdateTime; // 0xd6c	
-	float m_fAccuracySmoothedForZoom; // 0xd70	
-	GameTime_t m_fScopeZoomEndTime; // 0xd74	
+	float m_fAccuracyPenalty; // 0xd70	
+	GameTime_t m_flLastAccuracyUpdateTime; // 0xd74	
+	float m_fAccuracySmoothedForZoom; // 0xd78	
+	GameTime_t m_fScopeZoomEndTime; // 0xd7c	
 	// MNetworkEnable
-	int32_t m_iRecoilIndex; // 0xd78	
+	int32_t m_iRecoilIndex; // 0xd80	
 	// MNetworkEnable
-	float m_flRecoilIndex; // 0xd7c	
+	float m_flRecoilIndex; // 0xd84	
 	// MNetworkEnable
-	bool m_bBurstMode; // 0xd80	
+	bool m_bBurstMode; // 0xd88	
 private:
-	[[maybe_unused]] uint8_t __pad0d81[0x3]; // 0xd81
-public:
-	// MNetworkEnable
-	GameTick_t m_nPostponeFireReadyTicks; // 0xd84	
-	// MNetworkEnable
-	float m_flPostponeFireReadyFrac; // 0xd88	
-	// MNetworkEnable
-	bool m_bInReload; // 0xd8c	
-	// MNetworkEnable
-	bool m_bReloadVisuallyComplete; // 0xd8d	
-private:
-	[[maybe_unused]] uint8_t __pad0d8e[0x2]; // 0xd8e
+	[[maybe_unused]] uint8_t __pad0d89[0x3]; // 0xd89
 public:
 	// MNetworkEnable
-	GameTime_t m_flDroppedAtTime; // 0xd90	
+	GameTick_t m_nPostponeFireReadyTicks; // 0xd8c	
 	// MNetworkEnable
-	bool m_bIsHauledBack; // 0xd94	
+	float m_flPostponeFireReadyFrac; // 0xd90	
 	// MNetworkEnable
-	bool m_bSilencerOn; // 0xd95	
+	bool m_bInReload; // 0xd94	
+	// MNetworkEnable
+	bool m_bReloadVisuallyComplete; // 0xd95	
 private:
 	[[maybe_unused]] uint8_t __pad0d96[0x2]; // 0xd96
 public:
 	// MNetworkEnable
-	GameTime_t m_flTimeSilencerSwitchComplete; // 0xd98	
+	GameTime_t m_flDroppedAtTime; // 0xd98	
 	// MNetworkEnable
-	int32_t m_iOriginalTeamNumber; // 0xd9c	
-	float m_flNextAttackRenderTimeOffset; // 0xda0	
-private:
-	[[maybe_unused]] uint8_t __pad0da4[0x14]; // 0xda4
-public:
-	bool m_bCanBePickedUp; // 0xdb8	
-	bool m_bUseCanOverrideNextOwnerTouchTime; // 0xdb9	
-private:
-	[[maybe_unused]] uint8_t __pad0dba[0x2]; // 0xdba
-public:
-	GameTime_t m_nextOwnerTouchTime; // 0xdbc	
-	GameTime_t m_nextPrevOwnerTouchTime; // 0xdc0	
+	bool m_bIsHauledBack; // 0xd9c	
 	// MNetworkEnable
-	CHandle< CCSPlayerPawn > m_hPrevOwner; // 0xdc4	
-	// MNetworkEnable
-	GameTick_t m_nDropTick; // 0xdc8	
+	bool m_bSilencerOn; // 0xd9d	
 private:
-	[[maybe_unused]] uint8_t __pad0dcc[0x20]; // 0xdcc
-public:
-	bool m_donated; // 0xdec	
-private:
-	[[maybe_unused]] uint8_t __pad0ded[0x3]; // 0xded
+	[[maybe_unused]] uint8_t __pad0d9e[0x2]; // 0xd9e
 public:
 	// MNetworkEnable
-	GameTime_t m_fLastShotTime; // 0xdf0	
-	bool m_bWasOwnedByCT; // 0xdf4	
-	bool m_bWasOwnedByTerrorist; // 0xdf5	
-	bool m_bFiredOutOfAmmoEvent; // 0xdf6	
-private:
-	[[maybe_unused]] uint8_t __pad0df7[0x1]; // 0xdf7
-public:
-	int32_t m_numRemoveUnownedWeaponThink; // 0xdf8	
-private:
-	[[maybe_unused]] uint8_t __pad0dfc[0x4]; // 0xdfc
-public:
-	CIronSightController m_IronSightController; // 0xe00	
+	GameTime_t m_flTimeSilencerSwitchComplete; // 0xda0	
 	// MNetworkEnable
-	int32_t m_iIronSightMode; // 0xe18	
-	GameTime_t m_flLastLOSTraceFailureTime; // 0xe1c	
+	int32_t m_iOriginalTeamNumber; // 0xda4	
+	float m_flNextAttackRenderTimeOffset; // 0xda8	
+private:
+	[[maybe_unused]] uint8_t __pad0dac[0x14]; // 0xdac
+public:
+	bool m_bCanBePickedUp; // 0xdc0	
+	bool m_bUseCanOverrideNextOwnerTouchTime; // 0xdc1	
+private:
+	[[maybe_unused]] uint8_t __pad0dc2[0x2]; // 0xdc2
+public:
+	GameTime_t m_nextOwnerTouchTime; // 0xdc4	
+	GameTime_t m_nextPrevOwnerTouchTime; // 0xdc8	
 	// MNetworkEnable
-	int32_t m_iNumEmptyAttacks; // 0xe20	
+	CHandle< CCSPlayerPawn > m_hPrevOwner; // 0xdcc	
+	// MNetworkEnable
+	GameTick_t m_nDropTick; // 0xdd0	
+private:
+	[[maybe_unused]] uint8_t __pad0dd4[0x20]; // 0xdd4
+public:
+	bool m_donated; // 0xdf4	
+private:
+	[[maybe_unused]] uint8_t __pad0df5[0x3]; // 0xdf5
+public:
+	// MNetworkEnable
+	GameTime_t m_fLastShotTime; // 0xdf8	
+	bool m_bWasOwnedByCT; // 0xdfc	
+	bool m_bWasOwnedByTerrorist; // 0xdfd	
+	bool m_bFiredOutOfAmmoEvent; // 0xdfe	
+private:
+	[[maybe_unused]] uint8_t __pad0dff[0x1]; // 0xdff
+public:
+	int32_t m_numRemoveUnownedWeaponThink; // 0xe00	
+private:
+	[[maybe_unused]] uint8_t __pad0e04[0x4]; // 0xe04
+public:
+	CIronSightController m_IronSightController; // 0xe08	
+	// MNetworkEnable
+	int32_t m_iIronSightMode; // 0xe20	
+	GameTime_t m_flLastLOSTraceFailureTime; // 0xe24	
+	// MNetworkEnable
+	int32_t m_iNumEmptyAttacks; // 0xe28	
 };
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20608,25 +20602,25 @@ class CCSWeaponBaseGun : public CCSWeaponBase
 {
 public:
 	// MNetworkEnable
-	int32_t m_zoomLevel; // 0xe28	
+	int32_t m_zoomLevel; // 0xe30	
 	// MNetworkEnable
-	int32_t m_iBurstShotsRemaining; // 0xe2c	
+	int32_t m_iBurstShotsRemaining; // 0xe34	
 private:
-	[[maybe_unused]] uint8_t __pad0e30[0x8]; // 0xe30
+	[[maybe_unused]] uint8_t __pad0e38[0x8]; // 0xe38
 public:
-	int32_t m_silencedModelIndex; // 0xe38	
-	bool m_inPrecache; // 0xe3c	
+	int32_t m_silencedModelIndex; // 0xe40	
+	bool m_inPrecache; // 0xe44	
 	// MNetworkEnable
-	bool m_bNeedsBoltAction; // 0xe3d	
-	bool m_bSkillReloadAvailable; // 0xe3e	
-	bool m_bSkillReloadLiftedReloadKey; // 0xe3f	
-	bool m_bSkillBoltInterruptAvailable; // 0xe40	
-	bool m_bSkillBoltLiftedFireKey; // 0xe41	
+	bool m_bNeedsBoltAction; // 0xe45	
+	bool m_bSkillReloadAvailable; // 0xe46	
+	bool m_bSkillReloadLiftedReloadKey; // 0xe47	
+	bool m_bSkillBoltInterruptAvailable; // 0xe48	
+	bool m_bSkillBoltLiftedFireKey; // 0xe49	
 };
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe78
+// Size: 0xe80
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20639,34 +20633,34 @@ public:
 class CC4 : public CCSWeaponBase
 {
 public:
-	Vector m_vecLastValidPlayerHeldPosition; // 0xe28	
-	Vector m_vecLastValidDroppedPosition; // 0xe34	
-	bool m_bDoValidDroppedPositionCheck; // 0xe40	
+	Vector m_vecLastValidPlayerHeldPosition; // 0xe30	
+	Vector m_vecLastValidDroppedPosition; // 0xe3c	
+	bool m_bDoValidDroppedPositionCheck; // 0xe48	
 	// MNetworkEnable
-	bool m_bStartedArming; // 0xe41	
+	bool m_bStartedArming; // 0xe49	
 private:
-	[[maybe_unused]] uint8_t __pad0e42[0x2]; // 0xe42
+	[[maybe_unused]] uint8_t __pad0e4a[0x2]; // 0xe4a
 public:
 	// MNetworkEnable
-	GameTime_t m_fArmedTime; // 0xe44	
+	GameTime_t m_fArmedTime; // 0xe4c	
 	// MNetworkEnable
-	bool m_bBombPlacedAnimation; // 0xe48	
+	bool m_bBombPlacedAnimation; // 0xe50	
 	// MNetworkEnable
-	bool m_bIsPlantingViaUse; // 0xe49	
+	bool m_bIsPlantingViaUse; // 0xe51	
 private:
-	[[maybe_unused]] uint8_t __pad0e4a[0x6]; // 0xe4a
+	[[maybe_unused]] uint8_t __pad0e52[0x6]; // 0xe52
 public:
 	// MNetworkEnable
-	EntitySpottedState_t m_entitySpottedState; // 0xe50	
-	int32_t m_nSpotRules; // 0xe68	
-	bool m_bPlayedArmingBeeps[7]; // 0xe6c	
-	bool m_bBombPlanted; // 0xe73	
-	bool m_bDroppedFromDeath; // 0xe74	
+	EntitySpottedState_t m_entitySpottedState; // 0xe58	
+	int32_t m_nSpotRules; // 0xe70	
+	bool m_bPlayedArmingBeeps[7]; // 0xe74	
+	bool m_bBombPlanted; // 0xe7b	
+	bool m_bDroppedFromDeath; // 0xe7c	
 };
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20678,7 +20672,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20690,7 +20684,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe28
+// Size: 0xe30
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20702,7 +20696,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe28
+// Size: 0xe30
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20714,7 +20708,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe50
+// Size: 0xe58
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20724,12 +20718,12 @@ class CWeaponTaser : public CCSWeaponBaseGun
 {
 public:
 	// MNetworkEnable
-	GameTime_t m_fFireTime; // 0xe48	
+	GameTime_t m_fFireTime; // 0xe50	
 };
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe28
+// Size: 0xe30
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20741,7 +20735,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe30
+// Size: 0xe38
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20749,12 +20743,12 @@ public:
 class CKnife : public CCSWeaponBase
 {
 public:
-	bool m_bFirstAttack; // 0xe28	
+	bool m_bFirstAttack; // 0xe30	
 };
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe28
+// Size: 0xe30
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20766,7 +20760,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe58
+// Size: 0xe60
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20775,10 +20769,10 @@ public:
 class CWeaponShield : public CCSWeaponBaseGun
 {
 public:
-	float m_flBulletDamageAbsorbed; // 0xe48	
-	GameTime_t m_flLastBulletHitSoundTime; // 0xe4c	
+	float m_flBulletDamageAbsorbed; // 0xe50	
+	GameTime_t m_flLastBulletHitSoundTime; // 0xe54	
 	// MNetworkEnable
-	float m_flDisplayHealth; // 0xe50	
+	float m_flDisplayHealth; // 0xe58	
 };
 
 // Registered binary: server.dll (project 'server')
@@ -20873,7 +20867,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe50
+// Size: 0xe60
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20882,45 +20876,57 @@ public:
 // MNetworkVarNames "bool m_bIsHeldByPlayer"
 // MNetworkVarNames "bool m_bPinPulled"
 // MNetworkVarNames "bool m_bJumpThrow"
-// MNetworkVarNames "EGrenadeThrowState m_eThrowStatus"
+// MNetworkVarNames "bool m_bThrowAnimating"
 // MNetworkVarNames "GameTime_t m_fThrowTime"
 // MNetworkVarNames "float m_flThrowStrength"
 // MNetworkVarNames "float m_flThrowStrengthApproach"
 // MNetworkVarNames "GameTime_t m_fDropTime"
+// MNetworkVarNames "bool m_bJustPulledPin"
 // MNetworkVarNames "GameTick_t m_nNextHoldTick"
 // MNetworkVarNames "float m_flNextHoldFrac"
+// MNetworkVarNames "CHandle< CCSWeaponBase> m_hSwitchToWeaponAfterThrow"
 class CBaseCSGrenade : public CCSWeaponBase
 {
 public:
 	// MNetworkEnable
-	bool m_bRedraw; // 0xe28	
+	bool m_bRedraw; // 0xe30	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnGrenadeStateChanged"
-	bool m_bIsHeldByPlayer; // 0xe29	
+	bool m_bIsHeldByPlayer; // 0xe31	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnGrenadeStateChanged"
-	bool m_bPinPulled; // 0xe2a	
+	bool m_bPinPulled; // 0xe32	
 	// MNetworkEnable
-	bool m_bJumpThrow; // 0xe2b	
+	bool m_bJumpThrow; // 0xe33	
 	// MNetworkEnable
-	EGrenadeThrowState m_eThrowStatus; // 0xe2c	
+	bool m_bThrowAnimating; // 0xe34	
+private:
+	[[maybe_unused]] uint8_t __pad0e35[0x3]; // 0xe35
+public:
 	// MNetworkEnable
-	GameTime_t m_fThrowTime; // 0xe30	
+	GameTime_t m_fThrowTime; // 0xe38	
 	// MNetworkEnable
-	float m_flThrowStrength; // 0xe34	
+	float m_flThrowStrength; // 0xe3c	
 	// MNetworkEnable
-	float m_flThrowStrengthApproach; // 0xe38	
+	float m_flThrowStrengthApproach; // 0xe40	
 	// MNetworkEnable
-	GameTime_t m_fDropTime; // 0xe3c	
+	GameTime_t m_fDropTime; // 0xe44	
 	// MNetworkEnable
-	GameTick_t m_nNextHoldTick; // 0xe40	
+	bool m_bJustPulledPin; // 0xe48	
+private:
+	[[maybe_unused]] uint8_t __pad0e49[0x3]; // 0xe49
+public:
 	// MNetworkEnable
-	float m_flNextHoldFrac; // 0xe44	
+	GameTick_t m_nNextHoldTick; // 0xe4c	
+	// MNetworkEnable
+	float m_flNextHoldFrac; // 0xe50	
+	// MNetworkEnable
+	CHandle< CCSWeaponBase > m_hSwitchToWeaponAfterThrow; // 0xe54	
 };
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20931,14 +20937,14 @@ class CWeaponBaseItem : public CCSWeaponBase
 {
 public:
 	// MNetworkEnable
-	CountdownTimer m_SequenceCompleteTimer; // 0xe28	
+	CountdownTimer m_SequenceCompleteTimer; // 0xe30	
 	// MNetworkEnable
-	bool m_bRedraw; // 0xe40	
+	bool m_bRedraw; // 0xe48	
 };
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20950,7 +20956,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe40
+// Size: 0xe48
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20961,26 +20967,26 @@ class CFists : public CCSWeaponBase
 {
 public:
 	// MNetworkEnable
-	bool m_bPlayingUninterruptableAct; // 0xe28	
-private:
-	[[maybe_unused]] uint8_t __pad0e29[0x3]; // 0xe29
-public:
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnUninterruptChanged"
-	PlayerAnimEvent_t m_nUninterruptableActivity; // 0xe2c	
-	bool m_bRestorePrevWep; // 0xe30	
+	bool m_bPlayingUninterruptableAct; // 0xe30	
 private:
 	[[maybe_unused]] uint8_t __pad0e31[0x3]; // 0xe31
 public:
-	CHandle< CBasePlayerWeapon > m_hWeaponBeforePrevious; // 0xe34	
-	CHandle< CBasePlayerWeapon > m_hWeaponPrevious; // 0xe38	
-	bool m_bDelayedHardPunchIncoming; // 0xe3c	
-	bool m_bDestroyAfterTaunt; // 0xe3d	
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnUninterruptChanged"
+	PlayerAnimEvent_t m_nUninterruptableActivity; // 0xe34	
+	bool m_bRestorePrevWep; // 0xe38	
+private:
+	[[maybe_unused]] uint8_t __pad0e39[0x3]; // 0xe39
+public:
+	CHandle< CBasePlayerWeapon > m_hWeaponBeforePrevious; // 0xe3c	
+	CHandle< CBasePlayerWeapon > m_hWeaponPrevious; // 0xe40	
+	bool m_bDelayedHardPunchIncoming; // 0xe44	
+	bool m_bDestroyAfterTaunt; // 0xe45	
 };
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe50
+// Size: 0xe60
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -20992,7 +20998,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe28
+// Size: 0xe30
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21004,7 +21010,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe28
+// Size: 0xe30
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21016,7 +21022,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe28
+// Size: 0xe30
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21028,7 +21034,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe50
+// Size: 0xe60
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21040,7 +21046,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21437,7 +21443,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 16
-// Size: 0x2030
+// Size: 0x2040
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21565,54 +21571,54 @@ public:
 	// MNetworkEnable
 	bool m_bIsBuyMenuOpen; // 0x16c0	
 private:
-	[[maybe_unused]] uint8_t __pad16c1[0x62f]; // 0x16c1
+	[[maybe_unused]] uint8_t __pad16c1[0x63f]; // 0x16c1
 public:
-	CTransform m_xLastHeadBoneTransform; // 0x1cf0	
-	bool m_bLastHeadBoneTransformIsValid; // 0x1d10	
+	CTransform m_xLastHeadBoneTransform; // 0x1d00	
+	bool m_bLastHeadBoneTransformIsValid; // 0x1d20	
 private:
-	[[maybe_unused]] uint8_t __pad1d11[0x3]; // 0x1d11
+	[[maybe_unused]] uint8_t __pad1d21[0x3]; // 0x1d21
 public:
-	GameTime_t m_lastLandTime; // 0x1d14	
-	bool m_bOnGroundLastTick; // 0x1d18	
+	GameTime_t m_lastLandTime; // 0x1d24	
+	bool m_bOnGroundLastTick; // 0x1d28	
 private:
-	[[maybe_unused]] uint8_t __pad1d19[0x3]; // 0x1d19
+	[[maybe_unused]] uint8_t __pad1d29[0x3]; // 0x1d29
 public:
-	int32_t m_iPlayerLocked; // 0x1d1c	
+	int32_t m_iPlayerLocked; // 0x1d2c	
 private:
-	[[maybe_unused]] uint8_t __pad1d20[0x4]; // 0x1d20
+	[[maybe_unused]] uint8_t __pad1d30[0x4]; // 0x1d30
 public:
 	// MNetworkEnable
-	GameTime_t m_flTimeOfLastInjury; // 0x1d24	
+	GameTime_t m_flTimeOfLastInjury; // 0x1d34	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	GameTime_t m_flNextSprayDecalTime; // 0x1d28	
-	bool m_bNextSprayDecalTimeExpedited; // 0x1d2c	
+	GameTime_t m_flNextSprayDecalTime; // 0x1d38	
+	bool m_bNextSprayDecalTimeExpedited; // 0x1d3c	
 private:
-	[[maybe_unused]] uint8_t __pad1d2d[0x3]; // 0x1d2d
+	[[maybe_unused]] uint8_t __pad1d3d[0x3]; // 0x1d3d
 public:
 	// MNetworkEnable
-	int32_t m_nRagdollDamageBone; // 0x1d30	
+	int32_t m_nRagdollDamageBone; // 0x1d40	
 	// MNetworkEnable
-	Vector m_vRagdollDamageForce; // 0x1d34	
+	Vector m_vRagdollDamageForce; // 0x1d44	
 	// MNetworkEnable
-	Vector m_vRagdollDamagePosition; // 0x1d40	
+	Vector m_vRagdollDamagePosition; // 0x1d50	
 	// MNetworkEnable
-	char m_szRagdollDamageWeaponName[64]; // 0x1d4c	
+	char m_szRagdollDamageWeaponName[64]; // 0x1d5c	
 	// MNetworkEnable
-	bool m_bRagdollDamageHeadshot; // 0x1d8c	
+	bool m_bRagdollDamageHeadshot; // 0x1d9c	
 private:
-	[[maybe_unused]] uint8_t __pad1d8d[0x3]; // 0x1d8d
+	[[maybe_unused]] uint8_t __pad1d9d[0x3]; // 0x1d9d
 public:
 	// MNetworkEnable
-	Vector m_vRagdollServerOrigin; // 0x1d90	
+	Vector m_vRagdollServerOrigin; // 0x1da0	
 private:
-	[[maybe_unused]] uint8_t __pad1d9c[0x4]; // 0x1d9c
+	[[maybe_unused]] uint8_t __pad1dac[0x4]; // 0x1dac
 public:
 	// MNetworkEnable
-	CEconItemView m_EconGloves; // 0x1da0	
+	CEconItemView m_EconGloves; // 0x1db0	
 	// MNetworkEnable
-	QAngle m_qDeathEyeAngles; // 0x2018	
-	bool m_bSkipOneHeadConstraintUpdate; // 0x2024	
+	QAngle m_qDeathEyeAngles; // 0x2028	
+	bool m_bSkipOneHeadConstraintUpdate; // 0x2034	
 };
 
 // Registered binary: server.dll (project 'server')
@@ -21769,7 +21775,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21781,7 +21787,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21793,7 +21799,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21805,7 +21811,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21817,7 +21823,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21829,7 +21835,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21841,7 +21847,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21853,7 +21859,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21865,7 +21871,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21877,7 +21883,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21889,7 +21895,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21901,7 +21907,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21913,7 +21919,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21925,7 +21931,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21937,7 +21943,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21949,7 +21955,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21961,7 +21967,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21973,7 +21979,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21985,7 +21991,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -21997,7 +22003,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22009,7 +22015,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22021,7 +22027,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22033,7 +22039,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22045,7 +22051,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22057,7 +22063,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22069,7 +22075,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22081,7 +22087,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22093,7 +22099,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22105,7 +22111,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe48
+// Size: 0xe50
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22117,7 +22123,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe50
+// Size: 0xe60
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22129,7 +22135,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe50
+// Size: 0xe60
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22141,7 +22147,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe50
+// Size: 0xe60
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22153,7 +22159,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe50
+// Size: 0xe60
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22165,7 +22171,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe50
+// Size: 0xe60
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -22177,7 +22183,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xe58
+// Size: 0xe68
 // Has VTable
 // 
 // MPulseBindableTarget
