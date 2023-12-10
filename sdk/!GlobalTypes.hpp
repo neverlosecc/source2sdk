@@ -5,7 +5,7 @@
 // /////////////////////////////////////////////////////////////
 // Binary: !GlobalTypes
 // Classes count: 1294
-// Enums count: 304
+// Enums count: 303
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
@@ -4671,16 +4671,6 @@ enum class LessonPanelLayoutFileTypes_t : uint32_t
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 4
-// Size: 0x3
-enum class EGrenadeThrowState : uint32_t
-{
-	NotThrowing = 0x0,
-	Throwing = 0x1,
-	ThrowComplete = 0x2,
-};
-
-// Registered binary: server.dll (project 'server')
-// Alignment: 4
 // Size: 0x2
 enum class SceneOnPlayerDeath_t : uint32_t
 {
@@ -5367,7 +5357,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vcompmat@Ôhû"
+// MResourceTypeForInfoType "vcompmat@êgù"
 class InfoForResourceTypeCCompositeMaterialKit
 {
 private:
@@ -30081,12 +30071,12 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x5f8
+// Size: 0x608
 // Has VTable
 class CCSGOPlayerAnimGraphState
 {
 private:
-	[[maybe_unused]] uint8_t __pad0000[0x5f8]; // 0x0
+	[[maybe_unused]] uint8_t __pad0000[0x608]; // 0x0
 public:
 	// No schema binary for binding
 };
