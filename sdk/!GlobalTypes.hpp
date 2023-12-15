@@ -4,8 +4,8 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: !GlobalTypes
-// Classes count: 1403
-// Enums count: 566
+// Classes count: 1404
+// Enums count: 567
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
@@ -3822,7 +3822,7 @@ enum class DOTATeam_t : uint32_t
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 4
-// Size: 0x2e
+// Size: 0x2f
 enum class EEvent : uint32_t
 {
 	EVENT_ID_NONE = 0x0,
@@ -3871,6 +3871,7 @@ enum class EEvent : uint32_t
 	EVENT_ID_TEAM_2023_TOUR3 = 0x2b,
 	EVENT_ID_INTERNATIONAL_2023 = 0x2d,
 	EVENT_ID_10TH_ANNIVERSARY = 0x2e,
+	EVENT_ID_FROSTIVUS_2023 = 0x30,
 };
 
 // Registered binary: server.dll (project 'server')
@@ -4586,7 +4587,7 @@ enum class EGCBaseMsg : uint32_t
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 4
-// Size: 0x121
+// Size: 0x126
 enum class modifierfunction : uint32_t
 {
 	// MScriptDescription "GetModifierPreAttack_BonusDamage"
@@ -4743,427 +4744,437 @@ enum class modifierfunction : uint32_t
 	MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_UNIQUE_ACTIVE = 0x4b,
 	// MScriptDescription "GetModifierPhysicalArmorBonusPost"
 	MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_POST = 0x4c,
+	// MScriptDescription "GetModifierMinPhysicalArmor"
+	MODIFIER_PROPERTY_MIN_PHYSICAL_ARMOR = 0x4d,
 	// MScriptDescription "GetModifierIgnorePhysicalArmor"
-	MODIFIER_PROPERTY_IGNORE_PHYSICAL_ARMOR = 0x4d,
+	MODIFIER_PROPERTY_IGNORE_PHYSICAL_ARMOR = 0x4e,
 	// MScriptDescription "GetModifierMagicalResistanceBaseReduction"
-	MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BASE_REDUCTION = 0x4e,
+	MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BASE_REDUCTION = 0x4f,
 	// MScriptDescription "GetModifierMagicalResistanceDirectModification"
-	MODIFIER_PROPERTY_MAGICAL_RESISTANCE_DIRECT_MODIFICATION = 0x4f,
+	MODIFIER_PROPERTY_MAGICAL_RESISTANCE_DIRECT_MODIFICATION = 0x50,
 	// MScriptDescription "GetModifierMagicalResistanceBonus"
-	MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS = 0x50,
+	MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS = 0x51,
 	// MScriptDescription "GetModifierMagicalResistanceBonusIllusions"
-	MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS_ILLUSIONS = 0x51,
+	MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS_ILLUSIONS = 0x52,
 	// MScriptDescription "GetModifierMagicalResistanceBonusUnique"
-	MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS_UNIQUE = 0x52,
+	MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS_UNIQUE = 0x53,
 	// MScriptDescription "GetModifierMagicalResistanceDecrepifyUnique"
-	MODIFIER_PROPERTY_MAGICAL_RESISTANCE_DECREPIFY_UNIQUE = 0x53,
+	MODIFIER_PROPERTY_MAGICAL_RESISTANCE_DECREPIFY_UNIQUE = 0x54,
 	// MScriptDescription "GetModifierBaseRegen"
-	MODIFIER_PROPERTY_BASE_MANA_REGEN = 0x54,
+	MODIFIER_PROPERTY_BASE_MANA_REGEN = 0x55,
 	// MScriptDescription "GetModifierConstantManaRegen"
-	MODIFIER_PROPERTY_MANA_REGEN_CONSTANT = 0x55,
+	MODIFIER_PROPERTY_MANA_REGEN_CONSTANT = 0x56,
 	// MScriptDescription "GetModifierConstantManaRegenUnique"
-	MODIFIER_PROPERTY_MANA_REGEN_CONSTANT_UNIQUE = 0x56,
+	MODIFIER_PROPERTY_MANA_REGEN_CONSTANT_UNIQUE = 0x57,
 	// MScriptDescription "GetModifierTotalPercentageManaRegen"
-	MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE = 0x57,
+	MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE = 0x58,
 	// MScriptDescription "GetModifierConstantHealthRegen"
-	MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT = 0x58,
+	MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT = 0x59,
 	// MScriptDescription "GetModifierHealthRegenPercentage"
-	MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE = 0x59,
+	MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE = 0x5a,
 	// MScriptDescription "GetModifierHealthRegenPercentageUnique"
-	MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE_UNIQUE = 0x5a,
+	MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE_UNIQUE = 0x5b,
 	// MScriptDescription "GetModifierHealthBonus"
-	MODIFIER_PROPERTY_HEALTH_BONUS = 0x5b,
+	MODIFIER_PROPERTY_HEALTH_BONUS = 0x5c,
 	// MScriptDescription "GetModifierManaBonus"
-	MODIFIER_PROPERTY_MANA_BONUS = 0x5c,
+	MODIFIER_PROPERTY_MANA_BONUS = 0x5d,
 	// MScriptDescription "GetModifierExtraStrengthBonus"
-	MODIFIER_PROPERTY_EXTRA_STRENGTH_BONUS = 0x5d,
+	MODIFIER_PROPERTY_EXTRA_STRENGTH_BONUS = 0x5e,
 	// MScriptDescription "GetModifierExtraHealthBonus"
-	MODIFIER_PROPERTY_EXTRA_HEALTH_BONUS = 0x5e,
+	MODIFIER_PROPERTY_EXTRA_HEALTH_BONUS = 0x5f,
 	// MScriptDescription "GetModifierExtraManaBonus"
-	MODIFIER_PROPERTY_EXTRA_MANA_BONUS = 0x5f,
+	MODIFIER_PROPERTY_EXTRA_MANA_BONUS = 0x60,
 	// MScriptDescription "GetModifierExtraManaBonusPercentage"
-	MODIFIER_PROPERTY_EXTRA_MANA_BONUS_PERCENTAGE = 0x60,
+	MODIFIER_PROPERTY_EXTRA_MANA_BONUS_PERCENTAGE = 0x61,
 	// MScriptDescription "GetModifierExtraHealthPercentage"
-	MODIFIER_PROPERTY_EXTRA_HEALTH_PERCENTAGE = 0x61,
+	MODIFIER_PROPERTY_EXTRA_HEALTH_PERCENTAGE = 0x62,
 	// MScriptDescription "GetModifierExtraManaPercentage"
-	MODIFIER_PROPERTY_EXTRA_MANA_PERCENTAGE = 0x62,
+	MODIFIER_PROPERTY_EXTRA_MANA_PERCENTAGE = 0x63,
 	// MScriptDescription "GetModifierBonusStats_Strength"
-	MODIFIER_PROPERTY_STATS_STRENGTH_BONUS = 0x63,
+	MODIFIER_PROPERTY_STATS_STRENGTH_BONUS = 0x64,
 	// MScriptDescription "GetModifierBonusStats_Agility"
-	MODIFIER_PROPERTY_STATS_AGILITY_BONUS = 0x64,
+	MODIFIER_PROPERTY_STATS_AGILITY_BONUS = 0x65,
 	// MScriptDescription "GetModifierBonusStats_Intellect"
-	MODIFIER_PROPERTY_STATS_INTELLECT_BONUS = 0x65,
+	MODIFIER_PROPERTY_STATS_INTELLECT_BONUS = 0x66,
 	// MScriptDescription "GetModifierBonusStats_Strength_Percentage"
-	MODIFIER_PROPERTY_STATS_STRENGTH_BONUS_PERCENTAGE = 0x66,
+	MODIFIER_PROPERTY_STATS_STRENGTH_BONUS_PERCENTAGE = 0x67,
 	// MScriptDescription "GetModifierBonusStats_Agility_Percentage"
-	MODIFIER_PROPERTY_STATS_AGILITY_BONUS_PERCENTAGE = 0x67,
+	MODIFIER_PROPERTY_STATS_AGILITY_BONUS_PERCENTAGE = 0x68,
 	// MScriptDescription "GetModifierBonusStats_Intellect_Percentage"
-	MODIFIER_PROPERTY_STATS_INTELLECT_BONUS_PERCENTAGE = 0x68,
+	MODIFIER_PROPERTY_STATS_INTELLECT_BONUS_PERCENTAGE = 0x69,
 	// MScriptDescription "GetModifierCastRangeBonus"
-	MODIFIER_PROPERTY_CAST_RANGE_BONUS = 0x69,
+	MODIFIER_PROPERTY_CAST_RANGE_BONUS = 0x6a,
 	// MScriptDescription "GetModifierCastRangeBonusPercentage"
-	MODIFIER_PROPERTY_CAST_RANGE_BONUS_PERCENTAGE = 0x6a,
+	MODIFIER_PROPERTY_CAST_RANGE_BONUS_PERCENTAGE = 0x6b,
 	// MScriptDescription "GetModifierCastRangeBonusTarget"
-	MODIFIER_PROPERTY_CAST_RANGE_BONUS_TARGET = 0x6b,
+	MODIFIER_PROPERTY_CAST_RANGE_BONUS_TARGET = 0x6c,
 	// MScriptDescription "GetModifierCastRangeBonusStacking"
-	MODIFIER_PROPERTY_CAST_RANGE_BONUS_STACKING = 0x6c,
+	MODIFIER_PROPERTY_CAST_RANGE_BONUS_STACKING = 0x6d,
 	// MScriptDescription "GetModifierAttackRangeOverride"
-	MODIFIER_PROPERTY_ATTACK_RANGE_BASE_OVERRIDE = 0x6d,
+	MODIFIER_PROPERTY_ATTACK_RANGE_BASE_OVERRIDE = 0x6e,
 	// MScriptDescription "GetModifierAttackRangeBonus"
-	MODIFIER_PROPERTY_ATTACK_RANGE_BONUS = 0x6e,
+	MODIFIER_PROPERTY_ATTACK_RANGE_BONUS = 0x6f,
 	// MScriptDescription "GetModifierAttackRangeBonusUnique"
-	MODIFIER_PROPERTY_ATTACK_RANGE_BONUS_UNIQUE = 0x6f,
+	MODIFIER_PROPERTY_ATTACK_RANGE_BONUS_UNIQUE = 0x70,
 	// MScriptDescription "GetModifierAttackRangeBonusPercentage"
-	MODIFIER_PROPERTY_ATTACK_RANGE_BONUS_PERCENTAGE = 0x70,
+	MODIFIER_PROPERTY_ATTACK_RANGE_BONUS_PERCENTAGE = 0x71,
 	// MScriptDescription "GetModifierMaxAttackRange"
-	MODIFIER_PROPERTY_MAX_ATTACK_RANGE = 0x71,
+	MODIFIER_PROPERTY_MAX_ATTACK_RANGE = 0x72,
 	// MScriptDescription "GetModifierProjectileSpeedBonus"
-	MODIFIER_PROPERTY_PROJECTILE_SPEED_BONUS = 0x72,
+	MODIFIER_PROPERTY_PROJECTILE_SPEED_BONUS = 0x73,
 	// MScriptDescription "GetModifierProjectileSpeedBonusPercentage"
-	MODIFIER_PROPERTY_PROJECTILE_SPEED_BONUS_PERCENTAGE = 0x73,
+	MODIFIER_PROPERTY_PROJECTILE_SPEED_BONUS_PERCENTAGE = 0x74,
 	// MScriptDescription "GetModifierProjectileName"
-	MODIFIER_PROPERTY_PROJECTILE_NAME = 0x74,
+	MODIFIER_PROPERTY_PROJECTILE_NAME = 0x75,
 	// MScriptDescription "ReincarnateTime"
-	MODIFIER_PROPERTY_REINCARNATION = 0x75,
+	MODIFIER_PROPERTY_REINCARNATION = 0x76,
 	// MScriptDescription "ReincarnateSuppressFX"
-	MODIFIER_PROPERTY_REINCARNATION_SUPPRESS_FX = 0x76,
+	MODIFIER_PROPERTY_REINCARNATION_SUPPRESS_FX = 0x77,
 	// MScriptDescription "GetModifierConstantRespawnTime"
-	MODIFIER_PROPERTY_RESPAWNTIME = 0x77,
+	MODIFIER_PROPERTY_RESPAWNTIME = 0x78,
 	// MScriptDescription "GetModifierPercentageRespawnTime"
-	MODIFIER_PROPERTY_RESPAWNTIME_PERCENTAGE = 0x78,
+	MODIFIER_PROPERTY_RESPAWNTIME_PERCENTAGE = 0x79,
 	// MScriptDescription "GetModifierStackingRespawnTime"
-	MODIFIER_PROPERTY_RESPAWNTIME_STACKING = 0x79,
+	MODIFIER_PROPERTY_RESPAWNTIME_STACKING = 0x7a,
 	// MScriptDescription "GetModifierPercentageCooldown"
-	MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE = 0x7a,
+	MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE = 0x7b,
 	// MScriptDescription "GetModifierPercentageCooldownOngoing"
-	MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE_ONGOING = 0x7b,
+	MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE_ONGOING = 0x7c,
 	// MScriptDescription "GetModifierPercentageCasttime"
-	MODIFIER_PROPERTY_CASTTIME_PERCENTAGE = 0x7c,
+	MODIFIER_PROPERTY_CASTTIME_PERCENTAGE = 0x7d,
 	// MScriptDescription "GetModifierPercentageAttackAnimTime"
-	MODIFIER_PROPERTY_ATTACK_ANIM_TIME_PERCENTAGE = 0x7d,
+	MODIFIER_PROPERTY_ATTACK_ANIM_TIME_PERCENTAGE = 0x7e,
 	// MScriptDescription "GetModifierPercentageManacost"
-	MODIFIER_PROPERTY_MANACOST_PERCENTAGE = 0x7e,
+	MODIFIER_PROPERTY_MANACOST_PERCENTAGE = 0x7f,
 	// MScriptDescription "GetModifierPercentageManacostStacking"
-	MODIFIER_PROPERTY_MANACOST_PERCENTAGE_STACKING = 0x7f,
+	MODIFIER_PROPERTY_MANACOST_PERCENTAGE_STACKING = 0x80,
 	// MScriptDescription "GetModifierPercentageHealthcost"
-	MODIFIER_PROPERTY_HEALTHCOST_PERCENTAGE = 0x80,
+	MODIFIER_PROPERTY_HEALTHCOST_PERCENTAGE = 0x81,
 	// MScriptDescription "GetModifierPercentageHealthcostStacking"
-	MODIFIER_PROPERTY_HEALTHCOST_PERCENTAGE_STACKING = 0x81,
+	MODIFIER_PROPERTY_HEALTHCOST_PERCENTAGE_STACKING = 0x82,
 	// MScriptDescription "GetModifierConstantDeathGoldCost"
-	MODIFIER_PROPERTY_DEATHGOLDCOST = 0x82,
+	MODIFIER_PROPERTY_DEATHGOLDCOST = 0x83,
 	// MScriptDescription "GetModifierPercentageExpRateBoost"
-	MODIFIER_PROPERTY_EXP_RATE_BOOST = 0x83,
+	MODIFIER_PROPERTY_EXP_RATE_BOOST = 0x84,
 	// MScriptDescription "GetModifierPercentageGoldRateBoost"
-	MODIFIER_PROPERTY_GOLD_RATE_BOOST = 0x84,
+	MODIFIER_PROPERTY_GOLD_RATE_BOOST = 0x85,
 	// MScriptDescription "GetModifierPreAttack_CriticalStrike"
-	MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE = 0x85,
+	MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE = 0x86,
 	// MScriptDescription "GetModifierPreAttack_Target_CriticalStrike"
-	MODIFIER_PROPERTY_PREATTACK_TARGET_CRITICALSTRIKE = 0x86,
+	MODIFIER_PROPERTY_PREATTACK_TARGET_CRITICALSTRIKE = 0x87,
 	// MScriptDescription "GetModifierMagical_ConstantBlock"
-	MODIFIER_PROPERTY_MAGICAL_CONSTANT_BLOCK = 0x87,
+	MODIFIER_PROPERTY_MAGICAL_CONSTANT_BLOCK = 0x88,
 	// MScriptDescription "GetModifierPhysical_ConstantBlock"
-	MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK = 0x88,
+	MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK = 0x89,
 	// MScriptDescription "GetModifierPhysical_ConstantBlockSpecial"
-	MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK_SPECIAL = 0x89,
+	MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK_SPECIAL = 0x8a,
 	// MScriptDescription "GetModifierPhysical_ConstantBlockUnavoidablePreArmor"
-	MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK_UNAVOIDABLE_PRE_ARMOR = 0x8a,
+	MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK_UNAVOIDABLE_PRE_ARMOR = 0x8b,
 	// MScriptDescription "GetModifierTotal_ConstantBlock"
-	MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK = 0x8b,
+	MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK = 0x8c,
 	// MScriptDescription "GetOverrideAnimation"
-	MODIFIER_PROPERTY_OVERRIDE_ANIMATION = 0x8c,
+	MODIFIER_PROPERTY_OVERRIDE_ANIMATION = 0x8d,
 	// MScriptDescription "GetOverrideAnimationWeight"
-	MODIFIER_PROPERTY_OVERRIDE_ANIMATION_WEIGHT = 0x8d,
+	MODIFIER_PROPERTY_OVERRIDE_ANIMATION_WEIGHT = 0x8e,
 	// MScriptDescription "GetOverrideAnimationRate"
-	MODIFIER_PROPERTY_OVERRIDE_ANIMATION_RATE = 0x8e,
+	MODIFIER_PROPERTY_OVERRIDE_ANIMATION_RATE = 0x8f,
 	// MScriptDescription "GetAbsorbSpell"
-	MODIFIER_PROPERTY_ABSORB_SPELL = 0x8f,
+	MODIFIER_PROPERTY_ABSORB_SPELL = 0x90,
 	// MScriptDescription "GetReflectSpell"
-	MODIFIER_PROPERTY_REFLECT_SPELL = 0x90,
+	MODIFIER_PROPERTY_REFLECT_SPELL = 0x91,
 	// MScriptDescription "GetDisableAutoAttack"
-	MODIFIER_PROPERTY_DISABLE_AUTOATTACK = 0x91,
+	MODIFIER_PROPERTY_DISABLE_AUTOATTACK = 0x92,
 	// MScriptDescription "GetBonusDayVision"
-	MODIFIER_PROPERTY_BONUS_DAY_VISION = 0x92,
+	MODIFIER_PROPERTY_BONUS_DAY_VISION = 0x93,
+	// MScriptDescription "GetBonusDayVisionPercentage"
+	MODIFIER_PROPERTY_BONUS_DAY_VISION_PERCENTAGE = 0x94,
 	// MScriptDescription "GetBonusNightVision"
-	MODIFIER_PROPERTY_BONUS_NIGHT_VISION = 0x93,
+	MODIFIER_PROPERTY_BONUS_NIGHT_VISION = 0x95,
 	// MScriptDescription "GetBonusNightVisionUnique"
-	MODIFIER_PROPERTY_BONUS_NIGHT_VISION_UNIQUE = 0x94,
+	MODIFIER_PROPERTY_BONUS_NIGHT_VISION_UNIQUE = 0x96,
 	// MScriptDescription "GetBonusVisionPercentage"
-	MODIFIER_PROPERTY_BONUS_VISION_PERCENTAGE = 0x95,
+	MODIFIER_PROPERTY_BONUS_VISION_PERCENTAGE = 0x97,
 	// MScriptDescription "GetFixedDayVision"
-	MODIFIER_PROPERTY_FIXED_DAY_VISION = 0x96,
+	MODIFIER_PROPERTY_FIXED_DAY_VISION = 0x98,
 	// MScriptDescription "GetFixedNightVision"
-	MODIFIER_PROPERTY_FIXED_NIGHT_VISION = 0x97,
+	MODIFIER_PROPERTY_FIXED_NIGHT_VISION = 0x99,
 	// MScriptDescription "GetMinHealth"
-	MODIFIER_PROPERTY_MIN_HEALTH = 0x98,
+	MODIFIER_PROPERTY_MIN_HEALTH = 0x9a,
 	// MScriptDescription "GetAbsoluteNoDamagePhysical"
-	MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL = 0x99,
+	MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL = 0x9b,
 	// MScriptDescription "GetAbsoluteNoDamageMagical"
-	MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL = 0x9a,
+	MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL = 0x9c,
 	// MScriptDescription "GetAbsoluteNoDamagePure"
-	MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE = 0x9b,
+	MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE = 0x9d,
 	// MScriptDescription "GetIsIllusion"
-	MODIFIER_PROPERTY_IS_ILLUSION = 0x9c,
+	MODIFIER_PROPERTY_IS_ILLUSION = 0x9e,
 	// MScriptDescription "GetModifierIllusionLabel"
-	MODIFIER_PROPERTY_ILLUSION_LABEL = 0x9d,
+	MODIFIER_PROPERTY_ILLUSION_LABEL = 0x9f,
 	// MScriptDescription "GetModifierStrongIllusion"
-	MODIFIER_PROPERTY_STRONG_ILLUSION = 0x9e,
+	MODIFIER_PROPERTY_STRONG_ILLUSION = 0xa0,
 	// MScriptDescription "GetModifierSuperIllusion"
-	MODIFIER_PROPERTY_SUPER_ILLUSION = 0x9f,
+	MODIFIER_PROPERTY_SUPER_ILLUSION = 0xa1,
 	// MScriptDescription "GetModifierSuperIllusionWithUltimate"
-	MODIFIER_PROPERTY_SUPER_ILLUSION_WITH_ULTIMATE = 0xa0,
+	MODIFIER_PROPERTY_SUPER_ILLUSION_WITH_ULTIMATE = 0xa2,
 	// MScriptDescription "GetModifierXPDuringDeath"
-	MODIFIER_PROPERTY_XP_DURING_DEATH = 0xa1,
+	MODIFIER_PROPERTY_XP_DURING_DEATH = 0xa3,
 	// MScriptDescription "GetModifierTurnRate_Percentage"
-	MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE = 0xa2,
+	MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE = 0xa4,
 	// MScriptDescription "GetModifierTurnRate_Override"
-	MODIFIER_PROPERTY_TURN_RATE_OVERRIDE = 0xa3,
+	MODIFIER_PROPERTY_TURN_RATE_OVERRIDE = 0xa5,
 	// MScriptDescription "GetDisableHealing"
-	MODIFIER_PROPERTY_DISABLE_HEALING = 0xa4,
+	MODIFIER_PROPERTY_DISABLE_HEALING = 0xa6,
 	// MScriptDescription "GetAlwaysAllowAttack"
-	MODIFIER_PROPERTY_ALWAYS_ALLOW_ATTACK = 0xa5,
+	MODIFIER_PROPERTY_ALWAYS_ALLOW_ATTACK = 0xa7,
 	// MScriptDescription "GetAllowEtherealAttack"
-	MODIFIER_PROPERTY_ALWAYS_ETHEREAL_ATTACK = 0xa6,
+	MODIFIER_PROPERTY_ALWAYS_ETHEREAL_ATTACK = 0xa8,
 	// MScriptDescription "GetOverrideAttackMagical"
-	MODIFIER_PROPERTY_OVERRIDE_ATTACK_MAGICAL = 0xa7,
+	MODIFIER_PROPERTY_OVERRIDE_ATTACK_MAGICAL = 0xa9,
 	// MScriptDescription "GetModifierUnitStatsNeedsRefresh"
-	MODIFIER_PROPERTY_UNIT_STATS_NEEDS_REFRESH = 0xa8,
+	MODIFIER_PROPERTY_UNIT_STATS_NEEDS_REFRESH = 0xaa,
 	// MScriptDescription "Unused"
-	MODIFIER_PROPERTY_BOUNTY_CREEP_MULTIPLIER = 0xa9,
+	MODIFIER_PROPERTY_BOUNTY_CREEP_MULTIPLIER = 0xab,
 	// MScriptDescription "Unused"
-	MODIFIER_PROPERTY_BOUNTY_OTHER_MULTIPLIER = 0xaa,
+	MODIFIER_PROPERTY_BOUNTY_OTHER_MULTIPLIER = 0xac,
 	// MScriptDescription "GetModifierUnitDisllowUpgrading"
-	MODIFIER_PROPERTY_UNIT_DISALLOW_UPGRADING = 0xab,
+	MODIFIER_PROPERTY_UNIT_DISALLOW_UPGRADING = 0xad,
 	// MScriptDescription "GetModifierDodgeProjectile"
-	MODIFIER_PROPERTY_DODGE_PROJECTILE = 0xac,
+	MODIFIER_PROPERTY_DODGE_PROJECTILE = 0xae,
 	// MScriptDescription "GetTriggerCosmeticAndEndAttack"
-	MODIFIER_PROPERTY_TRIGGER_COSMETIC_AND_END_ATTACK = 0xad,
+	MODIFIER_PROPERTY_TRIGGER_COSMETIC_AND_END_ATTACK = 0xaf,
 	// MScriptDescription "GetModifierMaxDebuffDuration"
-	MODIFIER_PROPERTY_MAX_DEBUFF_DURATION = 0xae,
+	MODIFIER_PROPERTY_MAX_DEBUFF_DURATION = 0xb0,
 	// MScriptDescription "GetPrimaryStatDamageMultiplier"
-	MODIFIER_PROPERTY_PRIMARY_STAT_DAMAGE_MULTIPLIER = 0xaf,
+	MODIFIER_PROPERTY_PRIMARY_STAT_DAMAGE_MULTIPLIER = 0xb1,
 	// MScriptDescription "GetModifierPreAttack_DeadlyBlow"
-	MODIFIER_PROPERTY_PREATTACK_DEADLY_BLOW = 0xb0,
+	MODIFIER_PROPERTY_PREATTACK_DEADLY_BLOW = 0xb2,
 	// MScriptDescription "GetAlwaysAutoAttackWhileHoldPosition"
-	MODIFIER_PROPERTY_ALWAYS_AUTOATTACK_WHILE_HOLD_POSITION = 0xb1,
+	MODIFIER_PROPERTY_ALWAYS_AUTOATTACK_WHILE_HOLD_POSITION = 0xb3,
 	// MScriptDescription "OnSpellTargetReady"
-	MODIFIER_EVENT_ON_SPELL_TARGET_READY = 0xb2,
+	MODIFIER_EVENT_ON_SPELL_TARGET_READY = 0xb4,
 	// MScriptDescription "OnAttackRecord"
-	MODIFIER_EVENT_ON_ATTACK_RECORD = 0xb3,
+	MODIFIER_EVENT_ON_ATTACK_RECORD = 0xb5,
 	// MScriptDescription "OnAttackStart"
-	MODIFIER_EVENT_ON_ATTACK_START = 0xb4,
+	MODIFIER_EVENT_ON_ATTACK_START = 0xb6,
 	// MScriptDescription "OnAttack"
-	MODIFIER_EVENT_ON_ATTACK = 0xb5,
+	MODIFIER_EVENT_ON_ATTACK = 0xb7,
 	// MScriptDescription "OnAttackLanded"
-	MODIFIER_EVENT_ON_ATTACK_LANDED = 0xb6,
+	MODIFIER_EVENT_ON_ATTACK_LANDED = 0xb8,
 	// MScriptDescription "OnAttackFail"
-	MODIFIER_EVENT_ON_ATTACK_FAIL = 0xb7,
+	MODIFIER_EVENT_ON_ATTACK_FAIL = 0xb9,
 	// MScriptDescription "OnAttackAllied"
-	MODIFIER_EVENT_ON_ATTACK_ALLIED = 0xb8,
+	MODIFIER_EVENT_ON_ATTACK_ALLIED = 0xba,
 	// MScriptDescription "OnProjectileDodge"
-	MODIFIER_EVENT_ON_PROJECTILE_DODGE = 0xb9,
+	MODIFIER_EVENT_ON_PROJECTILE_DODGE = 0xbb,
 	// MScriptDescription "OnOrder"
-	MODIFIER_EVENT_ON_ORDER = 0xba,
+	MODIFIER_EVENT_ON_ORDER = 0xbc,
 	// MScriptDescription "OnUnitMoved"
-	MODIFIER_EVENT_ON_UNIT_MOVED = 0xbb,
+	MODIFIER_EVENT_ON_UNIT_MOVED = 0xbd,
 	// MScriptDescription "OnAbilityStart"
-	MODIFIER_EVENT_ON_ABILITY_START = 0xbc,
+	MODIFIER_EVENT_ON_ABILITY_START = 0xbe,
 	// MScriptDescription "OnAbilityExecuted"
-	MODIFIER_EVENT_ON_ABILITY_EXECUTED = 0xbd,
+	MODIFIER_EVENT_ON_ABILITY_EXECUTED = 0xbf,
 	// MScriptDescription "OnAbilityFullyCast"
-	MODIFIER_EVENT_ON_ABILITY_FULLY_CAST = 0xbe,
+	MODIFIER_EVENT_ON_ABILITY_FULLY_CAST = 0xc0,
 	// MScriptDescription "OnBreakInvisibility"
-	MODIFIER_EVENT_ON_BREAK_INVISIBILITY = 0xbf,
+	MODIFIER_EVENT_ON_BREAK_INVISIBILITY = 0xc1,
 	// MScriptDescription "OnAbilityEndChannel"
-	MODIFIER_EVENT_ON_ABILITY_END_CHANNEL = 0xc0,
+	MODIFIER_EVENT_ON_ABILITY_END_CHANNEL = 0xc2,
 	// MScriptDescription "Unused"
-	MODIFIER_EVENT_ON_PROCESS_UPGRADE = 0xc1,
+	MODIFIER_EVENT_ON_PROCESS_UPGRADE = 0xc3,
 	// MScriptDescription "Unused"
-	MODIFIER_EVENT_ON_REFRESH = 0xc2,
+	MODIFIER_EVENT_ON_REFRESH = 0xc4,
 	// MScriptDescription "OnTakeDamage"
-	MODIFIER_EVENT_ON_TAKEDAMAGE = 0xc3,
+	MODIFIER_EVENT_ON_TAKEDAMAGE = 0xc5,
 	// MScriptDescription "OnDamagePrevented"
-	MODIFIER_EVENT_ON_DEATH_PREVENTED = 0xc4,
+	MODIFIER_EVENT_ON_DEATH_PREVENTED = 0xc6,
 	// MScriptDescription "OnStateChanged"
-	MODIFIER_EVENT_ON_STATE_CHANGED = 0xc5,
+	MODIFIER_EVENT_ON_STATE_CHANGED = 0xc7,
 	// MScriptDescription "Unused"
-	MODIFIER_EVENT_ON_ORB_EFFECT = 0xc6,
+	MODIFIER_EVENT_ON_ORB_EFFECT = 0xc8,
 	// MScriptDescription "OnProcessCleave"
-	MODIFIER_EVENT_ON_PROCESS_CLEAVE = 0xc7,
+	MODIFIER_EVENT_ON_PROCESS_CLEAVE = 0xc9,
 	// MScriptDescription "OnDamageCalculated"
-	MODIFIER_EVENT_ON_DAMAGE_CALCULATED = 0xc8,
+	MODIFIER_EVENT_ON_DAMAGE_CALCULATED = 0xca,
 	// MScriptDescription "OnMagicDamageCalculated"
-	MODIFIER_EVENT_ON_MAGIC_DAMAGE_CALCULATED = 0xc9,
+	MODIFIER_EVENT_ON_MAGIC_DAMAGE_CALCULATED = 0xcb,
 	// MScriptDescription "OnAttacked"
-	MODIFIER_EVENT_ON_ATTACKED = 0xca,
+	MODIFIER_EVENT_ON_ATTACKED = 0xcc,
 	// MScriptDescription "OnDeath"
-	MODIFIER_EVENT_ON_DEATH = 0xcb,
+	MODIFIER_EVENT_ON_DEATH = 0xcd,
 	// MScriptDescription "OnDeathCompleted"
-	MODIFIER_EVENT_ON_DEATH_COMPLETED = 0xcc,
+	MODIFIER_EVENT_ON_DEATH_COMPLETED = 0xce,
 	// MScriptDescription "OnRespawn"
-	MODIFIER_EVENT_ON_RESPAWN = 0xcd,
+	MODIFIER_EVENT_ON_RESPAWN = 0xcf,
 	// MScriptDescription "OnSpentMana"
-	MODIFIER_EVENT_ON_SPENT_MANA = 0xce,
+	MODIFIER_EVENT_ON_SPENT_MANA = 0xd0,
 	// MScriptDescription "OnSpentHealth"
-	MODIFIER_EVENT_ON_SPENT_HEALTH = 0xcf,
+	MODIFIER_EVENT_ON_SPENT_HEALTH = 0xd1,
 	// MScriptDescription "OnTeleporting"
-	MODIFIER_EVENT_ON_TELEPORTING = 0xd0,
+	MODIFIER_EVENT_ON_TELEPORTING = 0xd2,
 	// MScriptDescription "OnTeleported"
-	MODIFIER_EVENT_ON_TELEPORTED = 0xd1,
+	MODIFIER_EVENT_ON_TELEPORTED = 0xd3,
 	// MScriptDescription "OnSetLocation"
-	MODIFIER_EVENT_ON_SET_LOCATION = 0xd2,
+	MODIFIER_EVENT_ON_SET_LOCATION = 0xd4,
 	// MScriptDescription "OnHealthGained"
-	MODIFIER_EVENT_ON_HEALTH_GAINED = 0xd3,
+	MODIFIER_EVENT_ON_HEALTH_GAINED = 0xd5,
 	// MScriptDescription "OnManaGained"
-	MODIFIER_EVENT_ON_MANA_GAINED = 0xd4,
+	MODIFIER_EVENT_ON_MANA_GAINED = 0xd6,
 	// MScriptDescription "OnTakeDamageKillCredit"
-	MODIFIER_EVENT_ON_TAKEDAMAGE_KILLCREDIT = 0xd5,
+	MODIFIER_EVENT_ON_TAKEDAMAGE_KILLCREDIT = 0xd7,
 	// MScriptDescription "OnHeroKilled"
-	MODIFIER_EVENT_ON_HERO_KILLED = 0xd6,
+	MODIFIER_EVENT_ON_HERO_KILLED = 0xd8,
 	// MScriptDescription "OnHealReceived"
-	MODIFIER_EVENT_ON_HEAL_RECEIVED = 0xd7,
+	MODIFIER_EVENT_ON_HEAL_RECEIVED = 0xd9,
 	// MScriptDescription "OnBuildingKilled"
-	MODIFIER_EVENT_ON_BUILDING_KILLED = 0xd8,
+	MODIFIER_EVENT_ON_BUILDING_KILLED = 0xda,
 	// MScriptDescription "OnModelChanged"
-	MODIFIER_EVENT_ON_MODEL_CHANGED = 0xd9,
+	MODIFIER_EVENT_ON_MODEL_CHANGED = 0xdb,
 	// MScriptDescription "OnModifierAdded"
-	MODIFIER_EVENT_ON_MODIFIER_ADDED = 0xda,
+	MODIFIER_EVENT_ON_MODIFIER_ADDED = 0xdc,
 	// MScriptDescription "OnTooltip"
-	MODIFIER_PROPERTY_TOOLTIP = 0xdb,
+	MODIFIER_PROPERTY_TOOLTIP = 0xdd,
 	// MScriptDescription "GetModifierModelChange"
-	MODIFIER_PROPERTY_MODEL_CHANGE = 0xdc,
+	MODIFIER_PROPERTY_MODEL_CHANGE = 0xde,
 	// MScriptDescription "GetModifierModelScale"
-	MODIFIER_PROPERTY_MODEL_SCALE = 0xdd,
+	MODIFIER_PROPERTY_MODEL_SCALE = 0xdf,
 	// MScriptDescription "GetModifierModelScaleAnimateTime"
-	MODIFIER_PROPERTY_MODEL_SCALE_ANIMATE_TIME = 0xde,
+	MODIFIER_PROPERTY_MODEL_SCALE_ANIMATE_TIME = 0xe0,
 	// MScriptDescription "GetModifierModelScaleUseInOutEase"
-	MODIFIER_PROPERTY_MODEL_SCALE_USE_IN_OUT_EASE = 0xdf,
+	MODIFIER_PROPERTY_MODEL_SCALE_USE_IN_OUT_EASE = 0xe1,
 	// MScriptDescription "GetModifierModelScaleConstant"
-	MODIFIER_PROPERTY_MODEL_SCALE_CONSTANT = 0xe0,
+	MODIFIER_PROPERTY_MODEL_SCALE_CONSTANT = 0xe2,
 	// MScriptDescription "GetModifierScepter"
-	MODIFIER_PROPERTY_IS_SCEPTER = 0xe1,
+	MODIFIER_PROPERTY_IS_SCEPTER = 0xe3,
 	// MScriptDescription "GetModifierShard"
-	MODIFIER_PROPERTY_IS_SHARD = 0xe2,
+	MODIFIER_PROPERTY_IS_SHARD = 0xe4,
 	// MScriptDescription "GetModifierRadarCooldownReduction"
-	MODIFIER_PROPERTY_RADAR_COOLDOWN_REDUCTION = 0xe3,
+	MODIFIER_PROPERTY_RADAR_COOLDOWN_REDUCTION = 0xe5,
 	// MScriptDescription "GetActivityTranslationModifiers"
-	MODIFIER_PROPERTY_TRANSLATE_ACTIVITY_MODIFIERS = 0xe4,
+	MODIFIER_PROPERTY_TRANSLATE_ACTIVITY_MODIFIERS = 0xe6,
 	// MScriptDescription "GetAttackSound"
-	MODIFIER_PROPERTY_TRANSLATE_ATTACK_SOUND = 0xe5,
+	MODIFIER_PROPERTY_TRANSLATE_ATTACK_SOUND = 0xe7,
 	// MScriptDescription "GetUnitLifetimeFraction"
-	MODIFIER_PROPERTY_LIFETIME_FRACTION = 0xe6,
+	MODIFIER_PROPERTY_LIFETIME_FRACTION = 0xe8,
 	// MScriptDescription "GetModifierProvidesFOWVision"
-	MODIFIER_PROPERTY_PROVIDES_FOW_POSITION = 0xe7,
+	MODIFIER_PROPERTY_PROVIDES_FOW_POSITION = 0xe9,
 	// MScriptDescription "GetModifierSpellsRequireHP"
-	MODIFIER_PROPERTY_SPELLS_REQUIRE_HP = 0xe8,
+	MODIFIER_PROPERTY_SPELLS_REQUIRE_HP = 0xea,
 	// MScriptDescription "GetForceDrawOnMinimap"
-	MODIFIER_PROPERTY_FORCE_DRAW_MINIMAP = 0xe9,
+	MODIFIER_PROPERTY_FORCE_DRAW_MINIMAP = 0xeb,
 	// MScriptDescription "GetModifierDisableTurning"
-	MODIFIER_PROPERTY_DISABLE_TURNING = 0xea,
+	MODIFIER_PROPERTY_DISABLE_TURNING = 0xec,
 	// MScriptDescription "GetModifierIgnoreCastAngle"
-	MODIFIER_PROPERTY_IGNORE_CAST_ANGLE = 0xeb,
+	MODIFIER_PROPERTY_IGNORE_CAST_ANGLE = 0xed,
 	// MScriptDescription "GetModifierChangeAbilityValue"
-	MODIFIER_PROPERTY_CHANGE_ABILITY_VALUE = 0xec,
+	MODIFIER_PROPERTY_CHANGE_ABILITY_VALUE = 0xee,
 	// MScriptDescription "GetModifierOverrideAbilitySpecial"
-	MODIFIER_PROPERTY_OVERRIDE_ABILITY_SPECIAL = 0xed,
+	MODIFIER_PROPERTY_OVERRIDE_ABILITY_SPECIAL = 0xef,
 	// MScriptDescription "GetModifierOverrideAbilitySpecialValue"
-	MODIFIER_PROPERTY_OVERRIDE_ABILITY_SPECIAL_VALUE = 0xee,
+	MODIFIER_PROPERTY_OVERRIDE_ABILITY_SPECIAL_VALUE = 0xf0,
 	// MScriptDescription "GetModifierAbilityLayout"
-	MODIFIER_PROPERTY_ABILITY_LAYOUT = 0xef,
+	MODIFIER_PROPERTY_ABILITY_LAYOUT = 0xf1,
 	// MScriptDescription "OnDominated"
-	MODIFIER_EVENT_ON_DOMINATED = 0xf0,
+	MODIFIER_EVENT_ON_DOMINATED = 0xf2,
 	// MScriptDescription "OnKill"
-	MODIFIER_EVENT_ON_KILL = 0xf1,
+	MODIFIER_EVENT_ON_KILL = 0xf3,
 	// MScriptDescription "OnAssist"
-	MODIFIER_EVENT_ON_ASSIST = 0xf2,
+	MODIFIER_EVENT_ON_ASSIST = 0xf4,
 	// MScriptDescription "GetModifierTempestDouble"
-	MODIFIER_PROPERTY_TEMPEST_DOUBLE = 0xf3,
+	MODIFIER_PROPERTY_TEMPEST_DOUBLE = 0xf5,
 	// MScriptDescription "PreserveParticlesOnModelChanged"
-	MODIFIER_PROPERTY_PRESERVE_PARTICLES_ON_MODEL_CHANGE = 0xf4,
+	MODIFIER_PROPERTY_PRESERVE_PARTICLES_ON_MODEL_CHANGE = 0xf6,
 	// MScriptDescription "OnAttackFinished"
-	MODIFIER_EVENT_ON_ATTACK_FINISHED = 0xf5,
+	MODIFIER_EVENT_ON_ATTACK_FINISHED = 0xf7,
 	// MScriptDescription "GetModifierIgnoreCooldown"
-	MODIFIER_PROPERTY_IGNORE_COOLDOWN = 0xf6,
+	MODIFIER_PROPERTY_IGNORE_COOLDOWN = 0xf8,
 	// MScriptDescription "GetModifierCanAttackTrees"
-	MODIFIER_PROPERTY_CAN_ATTACK_TREES = 0xf7,
+	MODIFIER_PROPERTY_CAN_ATTACK_TREES = 0xf9,
 	// MScriptDescription "GetVisualZDelta"
-	MODIFIER_PROPERTY_VISUAL_Z_DELTA = 0xf8,
+	MODIFIER_PROPERTY_VISUAL_Z_DELTA = 0xfa,
 	// MScriptDescription "GetVisualZSpeedBaseOverride"
-	MODIFIER_PROPERTY_VISUAL_Z_SPEED_BASE_OVERRIDE = 0xf9,
+	MODIFIER_PROPERTY_VISUAL_Z_SPEED_BASE_OVERRIDE = 0xfb,
 	// MScriptDescription
-	MODIFIER_PROPERTY_INCOMING_DAMAGE_ILLUSION = 0xfa,
+	MODIFIER_PROPERTY_INCOMING_DAMAGE_ILLUSION = 0xfc,
 	// MScriptDescription "GetModifierNoVisionOfAttacker"
-	MODIFIER_PROPERTY_DONT_GIVE_VISION_OF_ATTACKER = 0xfb,
+	MODIFIER_PROPERTY_DONT_GIVE_VISION_OF_ATTACKER = 0xfd,
 	// MScriptDescription "OnTooltip2"
-	MODIFIER_PROPERTY_TOOLTIP2 = 0xfc,
+	MODIFIER_PROPERTY_TOOLTIP2 = 0xfe,
 	// MScriptDescription "OnAttackRecordDestroy"
-	MODIFIER_EVENT_ON_ATTACK_RECORD_DESTROY = 0xfd,
+	MODIFIER_EVENT_ON_ATTACK_RECORD_DESTROY = 0xff,
 	// MScriptDescription "OnProjectileObstructionHit"
-	MODIFIER_EVENT_ON_PROJECTILE_OBSTRUCTION_HIT = 0xfe,
+	MODIFIER_EVENT_ON_PROJECTILE_OBSTRUCTION_HIT = 0x100,
 	// MScriptDescription "GetSuppressTeleport"
-	MODIFIER_PROPERTY_SUPPRESS_TELEPORT = 0xff,
+	MODIFIER_PROPERTY_SUPPRESS_TELEPORT = 0x101,
 	// MScriptDescription "OnAttackCancelled"
-	MODIFIER_EVENT_ON_ATTACK_CANCELLED = 0x100,
+	MODIFIER_EVENT_ON_ATTACK_CANCELLED = 0x102,
 	// MScriptDescription "GetSuppressCleave"
-	MODIFIER_PROPERTY_SUPPRESS_CLEAVE = 0x101,
+	MODIFIER_PROPERTY_SUPPRESS_CLEAVE = 0x103,
 	// MScriptDescription "BotAttackScoreBonus"
-	MODIFIER_PROPERTY_BOT_ATTACK_SCORE_BONUS = 0x102,
+	MODIFIER_PROPERTY_BOT_ATTACK_SCORE_BONUS = 0x104,
 	// MScriptDescription "GetModifierAttackSpeedReductionPercentage"
-	MODIFIER_PROPERTY_ATTACKSPEED_REDUCTION_PERCENTAGE = 0x103,
+	MODIFIER_PROPERTY_ATTACKSPEED_REDUCTION_PERCENTAGE = 0x105,
 	// MScriptDescription "GetModifierMoveSpeedReductionPercentage"
-	MODIFIER_PROPERTY_MOVESPEED_REDUCTION_PERCENTAGE = 0x104,
+	MODIFIER_PROPERTY_MOVESPEED_REDUCTION_PERCENTAGE = 0x106,
 	// MScriptDescription
-	MODIFIER_PROPERTY_ATTACK_WHILE_MOVING_TARGET = 0x105,
+	MODIFIER_PROPERTY_ATTACK_WHILE_MOVING_TARGET = 0x107,
 	// MScriptDescription "GetModifierAttackSpeedPercentage"
-	MODIFIER_PROPERTY_ATTACKSPEED_PERCENTAGE = 0x106,
+	MODIFIER_PROPERTY_ATTACKSPEED_PERCENTAGE = 0x108,
 	// MScriptDescription "OnAttemptProjectileDodge"
-	MODIFIER_EVENT_ON_ATTEMPT_PROJECTILE_DODGE = 0x107,
+	MODIFIER_EVENT_ON_ATTEMPT_PROJECTILE_DODGE = 0x109,
 	// MScriptDescription "OnPreDebuffApplied"
-	MODIFIER_EVENT_ON_PREDEBUFF_APPLIED = 0x108,
+	MODIFIER_EVENT_ON_PREDEBUFF_APPLIED = 0x10a,
 	// MScriptDescription "GetModifierPercentageCooldownStacking"
-	MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE_STACKING = 0x109,
+	MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE_STACKING = 0x10b,
 	// MScriptDescription "GetModifierSpellRedirectTarget"
-	MODIFIER_PROPERTY_SPELL_REDIRECT_TARGET = 0x10a,
+	MODIFIER_PROPERTY_SPELL_REDIRECT_TARGET = 0x10c,
 	// MScriptDescription "GetModifierTurnRateConstant"
-	MODIFIER_PROPERTY_TURN_RATE_CONSTANT = 0x10b,
+	MODIFIER_PROPERTY_TURN_RATE_CONSTANT = 0x10d,
 	// MScriptDescription "GetModifierIsRatPack"
-	MODIFIER_PROPERTY_RAT_PACK = 0x10c,
+	MODIFIER_PROPERTY_RAT_PACK = 0x10e,
 	// MScriptDescription "GetModifierPhysicalDamageOutgoing_Percentage"
-	MODIFIER_PROPERTY_PHYSICALDAMAGEOUTGOING_PERCENTAGE = 0x10d,
+	MODIFIER_PROPERTY_PHYSICALDAMAGEOUTGOING_PERCENTAGE = 0x10f,
 	// MScriptDescription "GetModifierKnockbackAmplification_Percentage"
-	MODIFIER_PROPERTY_KNOCKBACK_AMPLIFICATION_PERCENTAGE = 0x10e,
+	MODIFIER_PROPERTY_KNOCKBACK_AMPLIFICATION_PERCENTAGE = 0x110,
 	// MScriptDescription "GetModifierHealthBarPips"
-	MODIFIER_PROPERTY_HEALTHBAR_PIPS = 0x10f,
+	MODIFIER_PROPERTY_HEALTHBAR_PIPS = 0x111,
 	// MScriptDescription "GetModifierIncomingDamageConstant"
-	MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT = 0x110,
+	MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT = 0x112,
 	// MScriptDescription "OnSpellAppliedSuccessfully"
-	MODIFIER_EVENT_SPELL_APPLIED_SUCCESSFULLY = 0x111,
+	MODIFIER_EVENT_SPELL_APPLIED_SUCCESSFULLY = 0x113,
 	// MScriptDescription "GetModifierAvoidDamageAfterReductions"
-	MODIFIER_PROPERTY_AVOID_DAMAGE_AFTER_REDUCTIONS = 0x112,
+	MODIFIER_PROPERTY_AVOID_DAMAGE_AFTER_REDUCTIONS = 0x114,
 	// MScriptDescription "GetModifierPropetyFailAttack"
-	MODIFIER_PROPERTY_FAIL_ATTACK = 0x113,
+	MODIFIER_PROPERTY_FAIL_ATTACK = 0x115,
 	// MScriptDescription "GetModifierPrereduceIncomingDamage_Mult"
-	MODIFIER_PROPERTY_PREREDUCE_INCOMING_DAMAGE_MULT = 0x114,
+	MODIFIER_PROPERTY_PREREDUCE_INCOMING_DAMAGE_MULT = 0x116,
 	// MScriptDescription "GetModifierSuppressFullscreenDeathFX"
-	MODIFIER_PROPERTY_SUPPRESS_FULLSCREEN_DEATH_FX = 0x115,
+	MODIFIER_PROPERTY_SUPPRESS_FULLSCREEN_DEATH_FX = 0x117,
 	// MScriptDescription "MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT_POST"
-	MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT_POST = 0x116,
+	MODIFIER_PROPERTY_INCOMING_DAMAGE_CONSTANT_POST = 0x118,
 	// MScriptDescription "GetModifierDamageOutgoing_PercentageMultiplicative"
-	MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE_MULTIPLICATIVE = 0x117,
+	MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE_MULTIPLICATIVE = 0x119,
 	// MScriptDescription "GetModifierTickGold_Multiplier"
-	MODIFIER_PROPERTY_TICK_GOLD_MULTIPLIER = 0x118,
+	MODIFIER_PROPERTY_TICK_GOLD_MULTIPLIER = 0x11a,
 	// MScriptDescription "GetModifierSlowResistance"
-	MODIFIER_PROPERTY_SLOW_RESISTANCE = 0x119,
+	MODIFIER_PROPERTY_SLOW_RESISTANCE = 0x11b,
 	// MScriptDescription "GetModifierAoEBonusPercentage"
-	MODIFIER_PROPERTY_AOE_BONUS_PERCENTAGE = 0x11a,
+	MODIFIER_PROPERTY_AOE_BONUS_PERCENTAGE = 0x11c,
 	// MScriptDescription "GetModifierProjectileSpeed"
-	MODIFIER_PROPERTY_PROJECTILE_SPEED = 0x11b,
+	MODIFIER_PROPERTY_PROJECTILE_SPEED = 0x11d,
 	// MScriptDescription "GetModifierBecomeUniversal"
-	MODIFIER_PROPERTY_BECOME_UNIVERSAL = 0x11c,
+	MODIFIER_PROPERTY_BECOME_UNIVERSAL = 0x11e,
 	// MScriptDescription "OnForceProcMagicStick"
-	MODIFIER_EVENT_ON_FORCE_PROC_MAGIC_STICK = 0x11d,
+	MODIFIER_EVENT_ON_FORCE_PROC_MAGIC_STICK = 0x11f,
 	// MScriptDescription "GetModifierDoNotSinkAfterDeath"
-	MODIFIER_PROPERTY_DO_NOT_SINK_AFTER_DEATH = 0x11e,
-	MODIFIER_FUNCTION_LAST = 0x11f,
+	MODIFIER_PROPERTY_DO_NOT_SINK_AFTER_DEATH = 0x120,
+	// MScriptDescription "OnDamageHPLoss"
+	MODIFIER_EVENT_ON_DAMAGE_HPLOSS = 0x121,
+	// MScriptDescription "GetModifierForceMaxHealth"
+	MODIFIER_PROPERTY_FORCE_MAX_HEALTH = 0x122,
+	// MScriptDescription "GetModifierAoEBonusConstant"
+	MODIFIER_PROPERTY_AOE_BONUS_CONSTANT = 0x123,
+	MODIFIER_FUNCTION_LAST = 0x124,
 	MODIFIER_FUNCTION_INVALID = 0xffff,
 };
 
@@ -5340,7 +5351,7 @@ enum class DOTASelectionPriorityRules : uint32_t
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 4
-// Size: 0xe
+// Size: 0xf
 enum class DOTACommType_t : uint32_t
 {
 	DOTA_COMM_TYPE_NONE = 0x0,
@@ -5357,6 +5368,7 @@ enum class DOTACommType_t : uint32_t
 	DOTA_COMM_TYPE_RANKEDMATCHMAKE = 0xb,
 	DOTA_COMM_TYPE_DROPS = 0xc,
 	DOTA_COMM_TYPE_NEWPLAYER_EXPERT = 0xd,
+	DOTA_COMM_TYPE_COACHED = 0xe,
 };
 
 // Registered binary: server.dll (project 'server')
@@ -6582,7 +6594,7 @@ enum class ECustomGameInstallStatus : uint32_t
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 4
-// Size: 0x375
+// Size: 0x378
 enum class EDOTAGCMsg : uint32_t
 {
 	k_EMsgGCDOTABase = 0x1b58,
@@ -7172,7 +7184,6 @@ enum class EDOTAGCMsg : uint32_t
 	k_EMsgClientToGCRequestContestVotesResponse = 0x209c,
 	k_EMsgClientToGCMVPVoteTimeout = 0x209d,
 	k_EMsgClientToGCMVPVoteTimeoutResponse = 0x209e,
-	k_EMsgDetailedGameStats = 0x20a1,
 	k_EMsgMatchMatchmakingStats = 0x20a8,
 	k_EMsgClientToGCSubmitPlayerMatchSurvey = 0x20a9,
 	k_EMsgClientToGCSubmitPlayerMatchSurveyResponse = 0x20aa,
@@ -7470,6 +7481,10 @@ enum class EDOTAGCMsg : uint32_t
 	k_EMsgClientToGCFantasyCraftingRerollOptionsResponse = 0x22e9,
 	k_EMsgClientToGCRoadToTIDevForceQuest = 0x22e7,
 	k_EMsgLobbyRoadToTIMatchQuestData = 0x22eb,
+	k_EMsgClientToGCShowcaseModerationGetQueue = 0x22ec,
+	k_EMsgClientToGCShowcaseModerationGetQueueResponse = 0x22ed,
+	k_EMsgClientToGCShowcaseModerationApplyModeration = 0x22ee,
+	k_EMsgClientToGCShowcaseModerationApplyModerationResponse = 0x22ef,
 };
 
 // Registered binary: server.dll (project 'server')
@@ -8261,7 +8276,7 @@ enum class DOTA_HOLDOUT_TOWER_TYPE : uint32_t
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x2a
+// Size: 0x2b
 enum class DOTA_ABILITY_BEHAVIOR : uint64_t
 {
 	DOTA_ABILITY_BEHAVIOR_NONE = 0x0,
@@ -8306,6 +8321,7 @@ enum class DOTA_ABILITY_BEHAVIOR : uint64_t
 	DOTA_ABILITY_BEHAVIOR_OVERSHOOT = 0x4000000000,
 	DOTA_ABILITY_BEHAVIOR_IGNORE_MUTED = 0x8000000000,
 	DOTA_ABILITY_BEHAVIOR_ALT_CASTABLE = 0x10000000000,
+	DOTA_ABILITY_BEHAVIOR_BREAK_DISABLES = 0x20000000000,
 };
 
 // Registered binary: server.dll (project 'server')
@@ -8389,7 +8405,7 @@ enum class ABILITY_TYPES : uint32_t
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 4
-// Size: 0x6e
+// Size: 0x6f
 enum class DOTA_CHAT_MESSAGE : uint32_t
 {
 	CHAT_MESSAGE_INVALID = 0xffffffffffffffff,
@@ -8502,6 +8518,7 @@ enum class DOTA_CHAT_MESSAGE : uint32_t
 	CHAT_MESSAGE_HERO_KILL_WITH_PENGUIN = 0x74,
 	CHAT_MESSAGE_MINIBOSS_KILL = 0x75,
 	CHAT_MESSAGE_PLAYER_IN_GAME_BAN_TEXT = 0x76,
+	CHAT_MESSAGE_BANNER_PLANTED = 0x77,
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11804,12 +11821,15 @@ enum class PortraitDisplayMode_t : uint32_t
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 4
-// Size: 0x3
+// Size: 0x6
 enum class EShowcaseItemFlag_Hero : uint32_t
 {
 	k_eShowcaseItemFlag_Hero_None = 0x0,
 	k_eShowcaseItemFlag_Hero_ShowPedestal = 0x1,
 	k_eShowcaseItemFlag_Hero_UseCurrentLoadout = 0x2,
+	k_eShowcaseItemFlag_Hero_ShowHeroCard = 0x4,
+	k_eShowcaseItemFlag_Hero_HeroCardHideName = 0x8,
+	k_eShowcaseItemFlag_Hero_HeroCardUseMovie = 0x10,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -11960,6 +11980,19 @@ enum class EUnderDraftResponse : uint32_t
 	k_eNoGCConnection = 0x9,
 	k_eTooBusy = 0xa,
 	k_eCantRollBack = 0xb,
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 4
+// Size: 0x6
+enum class EShowcaseHeroPlusFlag : uint32_t
+{
+	k_eShowcaseHeroPlusFlag_None = 0x0,
+	k_eShowcaseHeroPlusFlag_BadgePosTop = 0x1,
+	k_eShowcaseHeroPlusFlag_BadgePosBottom = 0x2,
+	k_eShowcaseHeroPlusFlag_BadgePosLeft = 0x4,
+	k_eShowcaseHeroPlusFlag_BadgePosRight = 0x8,
+	k_eShowcaseHeroPlusFlag_ShowRelics = 0x10,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -12863,7 +12896,7 @@ enum class EItemEditorReservationResult : uint32_t
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 4
-// Size: 0x6
+// Size: 0x8
 enum class EShowcaseAuditAction : uint32_t
 {
 	k_eShowcaseAuditAction_Invalid = 0x0,
@@ -12872,6 +12905,8 @@ enum class EShowcaseAuditAction : uint32_t
 	k_eShowcaseAuditAction_AdminShowcaseAccountLocked = 0x3,
 	k_eShowcaseAuditAction_AdminShowcaseExonerated = 0x4,
 	k_eShowcaseAuditAction_AdminShowcaseConvicted = 0x5,
+	k_eShowcaseAuditAction_AdminModerationApproved = 0x6,
+	k_eShowcaseAuditAction_AdminModerationRejected = 0x7,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -12943,12 +12978,14 @@ enum class DOTA_WatchReplayType : uint32_t
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 4
-// Size: 0x3
+// Size: 0x5
 enum class EShowcaseType : uint32_t
 {
 	k_eShowcaseType_Invalid = 0x0,
 	k_eShowcaseType_Profile = 0x1,
 	k_eShowcaseType_MiniProfile = 0x2,
+	k_eShowcaseType_DefaultProfile = 0x3,
+	k_eShowcaseType_DefaultMiniProfile = 0x4,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -13190,6 +13227,7 @@ struct PARTICLE_EHANDLE__;
 struct CParticleProperty;
 struct CParticleFloatInput;
 struct CParticleCollectionRendererVecInput;
+struct item_definition_index_t;
 struct CDOTA_BaseNPC;
 struct ParticleIndex_t;
 struct CavernCrawlRoomID_t;
@@ -13216,7 +13254,6 @@ struct GameTime_t;
 struct CDOTABaseAbility;
 struct CavernCrawlPathID_t;
 struct AbilityID_t;
-struct item_definition_index_t;
 struct DOTASpecialAbility_t;
 struct CSoundEnvelope;
 struct CCopyRecipientFilter;
@@ -13615,7 +13652,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vcompmat@Üˆû"
+// MResourceTypeForInfoType "vcompmat@ •ý"
 class InfoForResourceTypeCCompositeMaterialKit
 {
 private:
@@ -27836,8 +27873,10 @@ public:
 	bool m_bLocalCoords; // 0xfd0	
 	// MPropertyFriendlyName "use bones instead of hitboxes"
 	bool m_bUseBones; // 0xfd1	
+	// MPropertyFriendlyName "Use renderable meshes instead of hitboxes"
+	bool m_bUseMesh; // 0xfd2	
 private:
-	[[maybe_unused]] uint8_t __pad0fd2[0x6]; // 0xfd2
+	[[maybe_unused]] uint8_t __pad0fd3[0x5]; // 0xfd3
 public:
 	// MPropertyFriendlyName "hitbox shell thickness"
 	CParticleCollectionFloatInput m_flShellSize; // 0xfd8	
@@ -36488,6 +36527,21 @@ public:
 // Has Trivial Destructor
 // 
 // MIsBoxedIntegerType
+struct item_definition_index_t
+{
+public:
+	uint32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("item_definition_index_t")->m_static_fields[0]->m_instance);};
+};
+
+// Registered binary: server.dll (project 'server')
+// Alignment: 4
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
 struct ParticleIndex_t
 {
 public:
@@ -37800,17 +37854,13 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 4
-// Size: 0x4
+// Size: 0x8
 // Has Trivial Destructor
-// 
-// MIsBoxedIntegerType
-struct item_definition_index_t
+struct WearableData_t
 {
 public:
-	uint32_t m_Value; // 0x0	
-	
-	// Static fields:
-	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("item_definition_index_t")->m_static_fields[0]->m_instance);};
+	item_definition_index_t nItemDef; // 0x0	
+	int32_t nSkin; // 0x4	
 };
 
 // Registered binary: server.dll (project 'server')
@@ -38725,11 +38775,12 @@ public:
 		uint8_t m_bItemRequiresCustomShop: 1; 		
 		uint8_t m_bShouldBeSuggested: 1; 		
 		uint8_t m_bShouldBeInitiallySuggested: 1; 		
+		uint8_t m_bIsAffectedByAoEIncrease: 1; 		
 		uint8_t m_bHasCastAnimation: 1; 		
 		uint8_t m_bItemHasPassive: 1; 		
 		uint8_t m_bDisplayOverheadAlertOnReceived: 1; 		
-		uint8_t __pad6: 5;
-	}; // 34 bits
+		uint8_t __pad6: 6;
+	}; // 36 bits
 };
 
 // Registered binary: server.dll (project 'server')
@@ -39830,7 +39881,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has Trivial Destructor
 class CModifierParams
 {
@@ -39869,60 +39920,65 @@ public:
 	CDOTA_Orb* pOrb; // 0x48	
 	CDOTA_Orb* pOrb2; // 0x50	
 	int32_t nCost; // 0x58	
-	int32_t nOrdertype; // 0x5c	
-	Vector vOldLoc; // 0x60	
-	Vector vNewLoc; // 0x6c	
-	Vector vCastLocation; // 0x78	
-	bool bCraniumBasherTested; // 0x84	
-	bool bMKBTested; // 0x85	
-	bool bOctarineTested; // 0x86	
-	bool bHeartRegenApplied; // 0x87	
-	bool bSangeAmpApplied; // 0x88	
-	bool bLocketAmpApplied; // 0x89	
-	bool bPaladinAmpApplied; // 0x8a	
-	bool bBlademailApplied; // 0x8b	
-	bool bForceFieldApplied; // 0x8c	
-	bool bKayaApplied; // 0x8d	
-	bool bStoutConsidered; // 0x8e	
-	bool bInterrupted; // 0x8f	
-	bool bDiffusalApplied; // 0x90	
-	bool bChainLightningConsidered; // 0x91	
-	bool bSuppressDamage; // 0x92	
-	bool bRangedAttack; // 0x93	
-	bool bProcessProcs; // 0x94	
-	bool bProjectileIsFromIllusion; // 0x95	
-	bool bHasMagicComponent; // 0x96	
-	bool bIsSpellLifesteal; // 0x97	
-	CEntityIndex pnMagicStickProcEntityIndices[64]; // 0x98	
-	bool bBloodstoneRegenApplied; // 0x198	
-	bool bShroudManaRestoreApplied; // 0x199	
-	bool bPhylacteryApplied; // 0x19a	
-	bool bAllowZeroDamageFromPostReductionBlock; // 0x19b	
-	bool bForceMagicStickProc; // 0x19c	
-	bool bIgnoreNegativeValuesIfDebuffImmune; // 0x19d	
-	bool bIgnorePositiveValuesIfDebuffImmune; // 0x19e	
-	bool bIgnoreAllIfDebuffImmune; // 0x19f	
-	bool bAlsoIgnoreBuffsIfDebuffImmune; // 0x1a0	
-	bool bIgnoreLowerIfDebuffImmune; // 0x1a1	
+	int32_t nHealthCost; // 0x5c	
+	int32_t nOrdertype; // 0x60	
+	Vector vOldLoc; // 0x64	
+	Vector vNewLoc; // 0x70	
+	Vector vCastLocation; // 0x7c	
+	bool bCraniumBasherTested; // 0x88	
+	bool bMKBTested; // 0x89	
+	bool bOctarineTested; // 0x8a	
+	bool bHeartRegenApplied; // 0x8b	
+	bool bSangeAmpApplied; // 0x8c	
+	bool bLocketAmpApplied; // 0x8d	
+	bool bPaladinAmpApplied; // 0x8e	
+	bool bBlademailApplied; // 0x8f	
+	bool bForceFieldApplied; // 0x90	
+	bool bKayaApplied; // 0x91	
+	bool bStoutConsidered; // 0x92	
+	bool bInterrupted; // 0x93	
+	bool bDiffusalApplied; // 0x94	
+	bool bChainLightningConsidered; // 0x95	
+	bool bSuppressDamage; // 0x96	
+	bool bRangedAttack; // 0x97	
+	bool bProcessProcs; // 0x98	
+	bool bProjectileIsFromIllusion; // 0x99	
+	bool bHasMagicComponent; // 0x9a	
+	bool bIsSpellLifesteal; // 0x9b	
+	CEntityIndex pnMagicStickProcEntityIndices[64]; // 0x9c	
+	bool bBloodstoneRegenApplied; // 0x19c	
+	bool bShroudManaRestoreApplied; // 0x19d	
+	bool bPhylacteryApplied; // 0x19e	
+	bool bAllowZeroDamageFromPostReductionBlock; // 0x19f	
+	bool bForceMagicStickProc; // 0x1a0	
+	bool bIgnoreNegativeValuesIfDebuffImmune; // 0x1a1	
+	bool bIgnorePositiveValuesIfDebuffImmune; // 0x1a2	
+	bool bIgnoreAllIfDebuffImmune; // 0x1a3	
+	bool bAlsoIgnoreBuffsIfDebuffImmune; // 0x1a4	
+	bool bIgnoreLowerIfDebuffImmune; // 0x1a5	
 private:
-	[[maybe_unused]] uint8_t __pad01a2[0x2]; // 0x1a2
+	[[maybe_unused]] uint8_t __pad01a6[0x2]; // 0x1a6
 public:
-	float flIgnoreLowerIfDebuffImmune; // 0x1a4	
-	bool bIgnoreHigherIfDebuffImmune; // 0x1a8	
+	float flIgnoreLowerIfDebuffImmune; // 0x1a8	
+	bool bIgnoreHigherIfDebuffImmune; // 0x1ac	
 private:
-	[[maybe_unused]] uint8_t __pad01a9[0x3]; // 0x1a9
+	[[maybe_unused]] uint8_t __pad01ad[0x3]; // 0x1ad
 public:
-	float flIgnoreHigherIfDebuffImmune; // 0x1ac	
-	char* pszAbilitySpecialName; // 0x1b0	
-	int32_t nAbilitySpecialLevel; // 0x1b8	
-	CHandle< CBaseEntity > hattacker; // 0x1bc	
-	CHandle< CBaseEntity > htarget; // 0x1c0	
-	CHandle< CBaseEntity > hunit; // 0x1c4	
-	CHandle< CDOTABaseAbility > inflictor; // 0x1c8	
+	float flIgnoreHigherIfDebuffImmune; // 0x1b0	
+	bool bIgnoreTemporaryAttackSpeedModifiers; // 0x1b4	
 private:
-	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
+	[[maybe_unused]] uint8_t __pad01b5[0x3]; // 0x1b5
 public:
-	CDOTA_Buff* pAddedBuff; // 0x1d0	
+	char* pszAbilitySpecialName; // 0x1b8	
+	int32_t nAbilitySpecialLevel; // 0x1c0	
+	CHandle< CBaseEntity > hattacker; // 0x1c4	
+	CHandle< CBaseEntity > htarget; // 0x1c8	
+	CHandle< CBaseEntity > hunit; // 0x1cc	
+	CHandle< CDOTABaseAbility > inflictor; // 0x1d0	
+private:
+	[[maybe_unused]] uint8_t __pad01d4[0x4]; // 0x1d4
+public:
+	CDOTA_Buff* pAddedBuff; // 0x1d8	
 	
 	// Static fields:
 	static CModifierParams &Get_s_Default(){return *reinterpret_cast<CModifierParams*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CModifierParams")->m_static_fields[0]->m_instance);};
@@ -40510,7 +40566,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x12c8
+// Size: 0x1318
 // Has VTable
 // Is Abstract
 class CDOTA_Buff : public CHorizontalMotionController
@@ -40564,9 +40620,9 @@ public:
 	CUtlVector< CDOTA_BuffParticle > m_iParticles; // 0xa0	
 	CUtlVector< CHandle< CBaseEntity > > m_hAuraUnits; // 0xb8	
 private:
-	[[maybe_unused]] uint8_t __pad00d0[0x11f0]; // 0xd0
+	[[maybe_unused]] uint8_t __pad00d0[0x1240]; // 0xd0
 public:
-	HSCRIPT m_hScriptScope; // 0x12c0	
+	HSCRIPT m_hScriptScope; // 0x1310	
 };
 
 // Registered binary: server.dll (project 'server')

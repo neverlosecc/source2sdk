@@ -3389,8 +3389,10 @@ public:
 	bool m_bLocalCoords; // 0xfd0	
 	// MPropertyFriendlyName "use bones instead of hitboxes"
 	bool m_bUseBones; // 0xfd1	
+	// MPropertyFriendlyName "Use renderable meshes instead of hitboxes"
+	bool m_bUseMesh; // 0xfd2	
 private:
-	[[maybe_unused]] uint8_t __pad0fd2[0x6]; // 0xfd2
+	[[maybe_unused]] uint8_t __pad0fd3[0x5]; // 0xfd3
 public:
 	// MPropertyFriendlyName "hitbox shell thickness"
 	CParticleCollectionFloatInput m_flShellSize; // 0xfd8	
