@@ -16100,7 +16100,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xf908
+// Size: 0xf910
 // Has VTable
 // 
 // MPulseBindableTarget
@@ -16344,6 +16344,8 @@ public:
 	double m_dblLastReceivedPacketPlatFloatTime; // 0xf8f8	
 	GameTime_t m_LastTeamDamageWarningTime; // 0xf900	
 	GameTime_t m_LastTimePlayerWasDisconnectedForPawnsRemove; // 0xf904	
+	uint32_t m_nSuspiciousHitCount; // 0xf908	
+	uint32_t m_nNonSuspiciousHitStreak; // 0xf90c	
 };
 
 // Registered binary: server.dll (project 'server')
