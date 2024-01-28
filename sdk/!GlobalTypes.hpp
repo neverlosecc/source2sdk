@@ -4587,7 +4587,7 @@ enum class EGCBaseMsg : uint32_t
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 4
-// Size: 0x126
+// Size: 0x128
 enum class modifierfunction : uint32_t
 {
 	// MScriptDescription "GetModifierPreAttack_BonusDamage"
@@ -5174,7 +5174,11 @@ enum class modifierfunction : uint32_t
 	MODIFIER_PROPERTY_FORCE_MAX_HEALTH = 0x122,
 	// MScriptDescription "GetModifierAoEBonusConstant"
 	MODIFIER_PROPERTY_AOE_BONUS_CONSTANT = 0x123,
-	MODIFIER_FUNCTION_LAST = 0x124,
+	// MScriptDescription "OnTakeDamagePostUnavoidableBlock"
+	MODIFIER_EVENT_ON_TAKEDAMAGE_POST_UNAVOIDABLE_BLOCK = 0x124,
+	// MScriptDescription "OnMuteDamageAbilities"
+	MODIFIER_EVENT_ON_MUTE_DAMAGE_ABILITIES = 0x125,
+	MODIFIER_FUNCTION_LAST = 0x126,
 	MODIFIER_FUNCTION_INVALID = 0xffff,
 };
 
@@ -5351,7 +5355,7 @@ enum class DOTASelectionPriorityRules : uint32_t
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 4
-// Size: 0xf
+// Size: 0x10
 enum class DOTACommType_t : uint32_t
 {
 	DOTA_COMM_TYPE_NONE = 0x0,
@@ -5369,6 +5373,7 @@ enum class DOTACommType_t : uint32_t
 	DOTA_COMM_TYPE_DROPS = 0xc,
 	DOTA_COMM_TYPE_NEWPLAYER_EXPERT = 0xd,
 	DOTA_COMM_TYPE_COACHED = 0xe,
+	DOTA_COMM_TYPE_MAPDRAWING = 0xf,
 };
 
 // Registered binary: server.dll (project 'server')
@@ -8276,7 +8281,7 @@ enum class DOTA_HOLDOUT_TOWER_TYPE : uint32_t
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x2b
+// Size: 0x2c
 enum class DOTA_ABILITY_BEHAVIOR : uint64_t
 {
 	DOTA_ABILITY_BEHAVIOR_NONE = 0x0,
@@ -8322,6 +8327,7 @@ enum class DOTA_ABILITY_BEHAVIOR : uint64_t
 	DOTA_ABILITY_BEHAVIOR_IGNORE_MUTED = 0x8000000000,
 	DOTA_ABILITY_BEHAVIOR_ALT_CASTABLE = 0x10000000000,
 	DOTA_ABILITY_BEHAVIOR_BREAK_DISABLES = 0x20000000000,
+	DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS = 0x40000000000,
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10503,16 +10509,17 @@ enum class DOTALobbyReadyState : uint32_t
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 4
-// Size: 0x7
+// Size: 0x8
 enum class DOTACommLevel_t : uint32_t
 {
 	DOTA_COMM_LEVEL_NONE = 0x0,
 	DOTA_COMM_LEVEL_COOLDOWN = 0x1,
 	DOTA_COMM_LEVEL_PINGS = 0x2,
-	DOTA_COMM_LEVEL_CHAT = 0x3,
-	DOTA_COMM_LEVEL_TIPPING = 0x4,
-	DOTA_COMM_LEVEL_VOICE = 0x5,
-	DOTA_COMM_LEVEL_ALLIED_ABILITY = 0x6,
+	DOTA_COMM_LEVEL_MAPDRAWING = 0x3,
+	DOTA_COMM_LEVEL_CHAT = 0x4,
+	DOTA_COMM_LEVEL_TIPPING = 0x5,
+	DOTA_COMM_LEVEL_VOICE = 0x6,
+	DOTA_COMM_LEVEL_ALLIED_ABILITY = 0x7,
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13652,7 +13659,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vcompmat@ •ý"
+// MResourceTypeForInfoType "vcompmat@æmú"
 class InfoForResourceTypeCCompositeMaterialKit
 {
 private:
@@ -37215,6 +37222,10 @@ private:
 	[[maybe_unused]] uint8_t __pad0054[0x4]; // 0x54
 public:
 	CBaseFlex* m_pOuter; // 0x58	
+	
+	// Datamap fields:
+	// void m_pSink; // 0x8
+	// void m_ConceptHistories; // 0x10
 };
 
 // Registered binary: server.dll (project 'server')
@@ -37484,6 +37495,9 @@ public:
 	RotationVector m_angular; // 0x18	
 	Vector m_linearSave; // 0x24	
 	RotationVector m_angularSave; // 0x30	
+	
+	// Datamap fields:
+	// bool m_bLocalSpace; // 0x8
 };
 
 // Registered binary: server.dll (project 'server')
@@ -37516,6 +37530,10 @@ private:
 	[[maybe_unused]] uint8_t __pad0014[0x4]; // 0x14
 public:
 	ResponseFollowup* m_pFollowup; // 0x18	
+	
+	// Datamap fields:
+	// int32_t delay; // 0x0
+	// int32_t respeakdelay; // 0x4
 };
 
 // Registered binary: server.dll (project 'server')
@@ -38055,6 +38073,9 @@ public:
 	CUtlStringToken m_nContext; // 0x10	
 	GameTick_t m_nNextThinkTick; // 0x14	
 	GameTick_t m_nLastThinkTick; // 0x18	
+	
+	// Datamap fields:
+	// void m_think; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -38926,6 +38947,9 @@ private:
 	[[maybe_unused]] uint8_t __pad0044[0x4]; // 0x44
 public:
 	CUtlVector< CHandle< CPointCommentaryNode > > m_vecNodes; // 0x48	
+	
+	// Datamap fields:
+	// void m_ModifiedConvars; // 0x20
 };
 
 // Registered binary: server.dll (project 'server')
@@ -39313,6 +39337,9 @@ public:
 	
 	// Static fields:
 	static int32_t &Get_g_SoundPatchCount(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CSoundPatch")->m_static_fields[0]->m_instance);};
+	
+	// Datamap fields:
+	// void m_guid; // 0x28
 };
 
 // Registered binary: server.dll (project 'server')
@@ -39417,6 +39444,13 @@ public:
 	SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t eKeypoints; // 0x8	
 	float m_keyPoints[2]; // 0xc	
 	float m_reversalSoundThresholds[3]; // 0x14	
+	
+	// Datamap fields:
+	// float m_keyPoints[0]; // 0xc
+	// float m_keyPoints[1]; // 0x10
+	// float m_reversalSoundThresholds[0]; // 0x14
+	// float m_reversalSoundThresholds[1]; // 0x18
+	// float m_reversalSoundThresholds[2]; // 0x1c
 };
 
 // Registered binary: server.dll (project 'server')
@@ -40277,6 +40311,11 @@ public:
 	CUtlSymbolLarge m_iszReversalSounds[3]; // 0x68	
 	bool m_bPlayTravelSound; // 0x80	
 	bool m_bPlayReversalSound; // 0x81	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge m_iszReversalSounds[0]; // 0x68
+	// CUtlSymbolLarge m_iszReversalSounds[1]; // 0x70
+	// CUtlSymbolLarge m_iszReversalSounds[2]; // 0x78
 };
 
 // Registered binary: server.dll (project 'server')
@@ -40311,6 +40350,9 @@ private:
 public:
 	Quaternion m_qStartRot; // 0x20	
 	ParticleIndex_t m_nFXIndex; // 0x30	
+	
+	// Datamap fields:
+	// void m_nSound; // 0x34
 };
 
 // Registered binary: server.dll (project 'server')
@@ -40566,7 +40608,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x1318
+// Size: 0x1338
 // Has VTable
 // Is Abstract
 class CDOTA_Buff : public CHorizontalMotionController
@@ -40611,7 +40653,8 @@ public:
 		uint8_t m_bMarkedForDeletion: 1; 		
 		uint8_t m_bAuraIsHeal: 1; 		
 		uint8_t m_bProvidedByAura: 1; 		
-		uint32_t __pad7: 19;
+		uint8_t m_bCurrentlyInAuraRange: 1; 		
+		uint32_t __pad7: 18;
 	}; // 24 bits
 	bool m_bPurgedDestroy; // 0x93	
 	GameTime_t m_flPreviousTick; // 0x94	
@@ -40620,9 +40663,9 @@ public:
 	CUtlVector< CDOTA_BuffParticle > m_iParticles; // 0xa0	
 	CUtlVector< CHandle< CBaseEntity > > m_hAuraUnits; // 0xb8	
 private:
-	[[maybe_unused]] uint8_t __pad00d0[0x1240]; // 0xd0
+	[[maybe_unused]] uint8_t __pad00d0[0x1260]; // 0xd0
 public:
-	HSCRIPT m_hScriptScope; // 0x1310	
+	HSCRIPT m_hScriptScope; // 0x1330	
 };
 
 // Registered binary: server.dll (project 'server')
@@ -41669,6 +41712,10 @@ private:
 	[[maybe_unused]] uint8_t __pad0038[0x58]; // 0x38
 public:
 	int32_t m_nDecalMaterialIndex; // 0x90	
+	
+	// Datamap fields:
+	// void m_decalEvent; // 0x38
+	// void m_hProjectedDecal; // 0x20
 };
 
 // Registered binary: client.dll (project 'client')
