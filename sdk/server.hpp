@@ -2182,6 +2182,9 @@ public:
 	CEntityIdentity* m_pNext; // 0x60	
 	CEntityIdentity* m_pPrevByClass; // 0x68	
 	CEntityIdentity* m_pNextByClass; // 0x70	
+	
+	// Datamap fields:
+	// void m_pAttributes; // 0x48
 };
 
 // Registered binary: server.dll (project 'entity2')
@@ -2481,6 +2484,9 @@ private:
 	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
 	float m_flFluidDensity; // 0x18	
+	
+	// Datamap fields:
+	// void m_pController; // 0x8
 };
 
 // Registered binary: server.dll (project 'server')
@@ -2778,6 +2784,9 @@ public:
 	float m_flUpMove; // 0x1ac	
 	Vector m_vecLastMovementImpulses; // 0x1b0	
 	QAngle m_vecOldViewAngles; // 0x1bc	
+	
+	// Datamap fields:
+	// void m_pButtonPressedCmdNumber; // 0x80
 };
 
 // Registered binary: server.dll (project 'server')
@@ -2997,6 +3006,25 @@ public:
 	float m_flZOffset; // 0x134	
 	// MNetworkDisable
 	Vector m_vRenderOrigin; // 0x138	
+	
+	// Datamap fields:
+	// void m_bDirtyHierarchy; // -0x1
+	// void m_bDirtyBoneMergeInfo; // -0x1
+	// void m_bNetworkedPositionChanged; // -0x1
+	// void m_bNetworkedAnglesChanged; // -0x1
+	// void m_bNetworkedScaleChanged; // -0x1
+	// void m_bWillBeCallingPostDataUpdate; // -0x1
+	// void m_bNotifyBoneTransformsChanged; // -0x1
+	// void m_nLatchAbsOrigin; // -0x1
+	// void m_bDirtyBoneMergeBoneToRoot; // -0x1
+	// CHandle< CBaseEntity > parentname; // 0x7fffffff
+	// bool useLocalOffset; // 0x7fffffff
+	// bool useParentRenderBounds; // 0x7fffffff
+	// bool positionInLocalSpace; // 0x7fffffff
+	// Vector scales; // 0x7fffffff
+	// Vector local.scales; // 0x7fffffff
+	// float scale; // 0x7fffffff
+	// float ModelScale; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -3098,6 +3126,9 @@ public:
 	int8_t m_nForceLOD; // 0x223	
 	// MNetworkDisable
 	int8_t m_nClothUpdateFlags; // 0x224	
+	
+	// Datamap fields:
+	// void m_pVPhysicsAggregate; // 0xe0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -3136,6 +3167,11 @@ public:
 	CUtlStringToken m_materialGroup; // 0x394	
 	// MNetworkEnable
 	uint8_t m_nHitboxSet; // 0x398	
+	
+	// Datamap fields:
+	// Vector velocity; // 0x7fffffff
+	// Vector rotationAxis; // 0x7fffffff
+	// float rotationSpeed; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -3520,6 +3556,10 @@ public:
 	// Static fields:
 	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CLightComponent")->m_static_fields[0]->m_instance);};
 	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CLightComponent")->m_static_fields[1]->m_instance);};
+	
+	// Datamap fields:
+	// SHIM m_bRenderSpecular; // 0xd4
+	// SHIM m_bCastShadows; // 0xc4
 };
 
 // Registered binary: server.dll (project 'server')
@@ -3663,6 +3703,9 @@ public:
 	int32_t m_nStepside; // 0x208	
 	int32_t m_iTargetVolume; // 0x20c	
 	Vector m_vecSmoothedVelocity; // 0x210	
+	
+	// Datamap fields:
+	// void m_pSurfaceData; // 0x200
 };
 
 // Registered binary: server.dll (project 'server')
@@ -3746,6 +3789,10 @@ public:
 	float m_flPrevCycleFromDiscontinuity; // 0x20	
 	// MNetworkDisable
 	float m_flPrevCycleForAnimEventDetection; // 0x24	
+	
+	// Datamap fields:
+	// CUtlString sequenceName; // 0x7fffffff
+	// int32_t sequence; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -4079,6 +4126,12 @@ private:
 public:
 	// MNetworkDisable
 	AnimationUpdateListHandle_t m_hAnimationUpdate; // 0x2dc	
+	
+	// Datamap fields:
+	// void m_pAnimGraphInstance; // 0x258
+	// float m_flCachedSequenceCycleRate; // 0x240
+	// bool m_bNotifyWhenSequenceFinished; // 0x248
+	// bool useClientSideAnimation; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -4126,6 +4179,10 @@ private:
 	[[maybe_unused]] uint8_t __pad0014[0x4]; // 0x14
 public:
 	ResponseFollowup* m_pFollowup; // 0x18	
+	
+	// Datamap fields:
+	// int32_t delay; // 0x0
+	// int32_t respeakdelay; // 0x4
 };
 
 // Registered binary: server.dll (project 'server')
@@ -4202,6 +4259,10 @@ private:
 	[[maybe_unused]] uint8_t __pad0054[0x4]; // 0x54
 public:
 	CBaseFlex* m_pOuter; // 0x58	
+	
+	// Datamap fields:
+	// void m_pSink; // 0x8
+	// void m_ConceptHistories; // 0x10
 };
 
 // Registered binary: server.dll (project 'server')
@@ -4283,6 +4344,9 @@ private:
 	[[maybe_unused]] uint8_t __pad0044[0x4]; // 0x44
 public:
 	CUtlVector< CHandle< CPointCommentaryNode > > m_vecNodes; // 0x48	
+	
+	// Datamap fields:
+	// void m_ModifiedConvars; // 0x20
 };
 
 // Registered binary: server.dll (project 'server')
@@ -4379,6 +4443,9 @@ public:
 	RotationVector m_angular; // 0x18	
 	Vector m_linearSave; // 0x24	
 	RotationVector m_angularSave; // 0x30	
+	
+	// Datamap fields:
+	// bool m_bLocalSpace; // 0x8
 };
 
 // Registered binary: server.dll (project 'server')
@@ -4457,6 +4524,9 @@ public:
 	
 	// Static fields:
 	static int32_t &Get_g_SoundPatchCount(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CSoundPatch")->m_static_fields[0]->m_instance);};
+	
+	// Datamap fields:
+	// void m_guid; // 0x28
 };
 
 // Registered binary: server.dll (project 'server')
@@ -4936,6 +5006,63 @@ public:
 	static int32_t &Get_m_nPredictionRandomSeedServer(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseEntity")->m_static_fields[7]->m_instance);};
 	static CBasePlayerController* &Get_m_pPredictionPlayerController(){return *reinterpret_cast<CBasePlayerController**>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseEntity")->m_static_fields[8]->m_instance);};
 	static bool &Get_sm_bDatadescValidating(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseEntity")->m_static_fields[9]->m_instance);};
+	
+	// Datamap fields:
+	// CUtlSymbolLarge m_iszPrivateVScripts; // 0x8
+	// void m_CScriptComponent; // 0x28
+	// CUtlSymbolLarge subclass_name; // 0x7fffffff
+	// void m_pSubclassVData; // 0x2e8
+	// void* m_think; // 0x260
+	// void* m_pfnTouch; // 0x288
+	// void* m_pfnUse; // 0x290
+	// void* m_pfnBlocked; // 0x298
+	// void* m_pfnMoveDone; // 0x2a0
+	// int32_t InputSetTeam; // 0x0
+	// void InputKill; // 0x0
+	// void InputKillHierarchy; // 0x0
+	// int32_t InputUse; // 0x0
+	// bool InputAlternativeSorting; // 0x0
+	// CUtlSymbolLarge InputSetParent; // 0x0
+	// CUtlSymbolLarge InputSetParentAttachment; // 0x0
+	// CUtlSymbolLarge InputSetParentAttachmentMaintainOffset; // 0x0
+	// void InputClearParent; // 0x0
+	// CUtlSymbolLarge InputFollowEntity; // 0x0
+	// CUtlSymbolLarge InputSetDamageFilter; // 0x0
+	// void InputEnableDamageForces; // 0x0
+	// void InputDisableDamageForces; // 0x0
+	// CUtlSymbolLarge InputDispatchResponse; // 0x0
+	// CUtlSymbolLarge InputAddContext; // 0x0
+	// CUtlSymbolLarge InputRemoveContext; // 0x0
+	// void InputClearContext; // 0x0
+	// CUtlSymbolLarge InputAddAttribute; // 0x0
+	// CUtlSymbolLarge InputRemoveAttribute; // 0x0
+	// void InputDisableShadow; // 0x0
+	// void InputEnableShadow; // 0x0
+	// CUtlSymbolLarge InputFireUser1; // 0x0
+	// CUtlSymbolLarge InputFireUser2; // 0x0
+	// CUtlSymbolLarge InputFireUser3; // 0x0
+	// CUtlSymbolLarge InputFireUser4; // 0x0
+	// CUtlSymbolLarge InputChangeSubclass; // 0x0
+	// void CBaseEntitySUB_Remove; // 0x0
+	// void CBaseEntitySUB_RemoveIfUncarried; // 0x0
+	// void CBaseEntitySUB_DoNothing; // 0x0
+	// void CBaseEntitySUB_Vanish; // 0x0
+	// void CBaseEntitySUB_CallUseToggle; // 0x0
+	// void CBaseEntitySUB_KillSelf; // 0x0
+	// void CBaseEntitySUB_KillSelfIfUncarried; // 0x0
+	// void CBaseEntityFrictionRevertThink; // 0x0
+	// void CBaseEntityFakeScriptThinkFunc; // 0x0
+	// void CBaseEntityClearNavIgnoreContentsThink; // 0x0
+	// void m_pGameSceneNode; // 0x248
+	// void m_nEntityType; // 0x2c0
+	// QAngle angles; // 0x7fffffff
+	// Vector origin; // 0x7fffffff
+	// CStrongHandle< InfoForResourceTypeCModel > model; // 0x7fffffff
+	// CUtlString ownername; // 0x7fffffff
+	// int32_t disableshadows; // 0x7fffffff
+	// int32_t disablereceiveshadows; // 0x7fffffff
+	// int32_t nodamageforces; // 0x7fffffff
+	// float angle; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -5027,6 +5154,15 @@ public:
 	// MNetworkEnable
 	char m_netlookupFilename[512]; // 0x4e0	
 	CUtlSymbolLarge m_lookupFilename; // 0x6e0	
+	
+	// Datamap fields:
+	// void CColorCorrectionFadeInThink; // 0x0
+	// void CColorCorrectionFadeOutThink; // 0x0
+	// void m_netlookupFilename; // 0x4e0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// float InputSetFadeInDuration; // 0x0
+	// float InputSetFadeOutDuration; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -5060,6 +5196,10 @@ public:
 	int32_t m_iDangerSound; // 0x4d0	
 	float m_flDirectDamagePerSecond; // 0x4d4	
 	int32_t m_iCustomDamageType; // 0x4d8	
+	
+	// Datamap fields:
+	// void m_hPlayingSound; // 0x4dc
+	// void CEntityFlameFlameThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -5078,6 +5218,9 @@ private:
 public:
 	CEntityIOOutput m_OnPass; // 0x4b8	
 	CEntityIOOutput m_OnFail; // 0x4e0	
+	
+	// Datamap fields:
+	// void InputTestActivator; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -5201,6 +5344,10 @@ private:
 public:
 	CUtlVector< CHandle< CFish > > m_fishes; // 0x4d8	
 	CountdownTimer m_visTimer; // 0x4f0	
+	
+	// Datamap fields:
+	// void CFishPoolUpdate; // 0x0
+	// float max_range; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -5247,6 +5394,13 @@ public:
 	CUtlVector< CHandle< CBaseEntity > > m_Listeners; // 0x4b8	
 	CEntityIOOutput m_OnTrue; // 0x4d0	
 	CEntityIOOutput m_OnFalse; // 0x4f8	
+	
+	// Datamap fields:
+	// bool InputSetValue; // 0x0
+	// bool InputSetValueTest; // 0x0
+	// void InputToggle; // 0x0
+	// void InputToggleTest; // 0x0
+	// void InputTest; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -5266,6 +5420,9 @@ public:
 	CEntityIOOutput m_InZone1; // 0x4c8	
 	CEntityIOOutput m_InZone2; // 0x4f0	
 	CEntityIOOutput m_InZone3; // 0x518	
+	
+	// Datamap fields:
+	// void InputCheckDistance; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -5293,6 +5450,13 @@ public:
 	SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t eKeypoints; // 0x8	
 	float m_keyPoints[2]; // 0xc	
 	float m_reversalSoundThresholds[3]; // 0x14	
+	
+	// Datamap fields:
+	// float m_keyPoints[0]; // 0xc
+	// float m_keyPoints[1]; // 0x10
+	// float m_reversalSoundThresholds[0]; // 0x14
+	// float m_reversalSoundThresholds[1]; // 0x18
+	// float m_reversalSoundThresholds[2]; // 0x1c
 };
 
 // Registered binary: server.dll (project 'server')
@@ -5321,6 +5485,11 @@ public:
 	CUtlSymbolLarge m_iszReversalSounds[3]; // 0x68	
 	bool m_bPlayTravelSound; // 0x80	
 	bool m_bPlayReversalSound; // 0x81	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge m_iszReversalSounds[0]; // 0x68
+	// CUtlSymbolLarge m_iszReversalSounds[1]; // 0x70
+	// CUtlSymbolLarge m_iszReversalSounds[2]; // 0x78
 };
 
 // Registered binary: server.dll (project 'server')
@@ -5385,6 +5554,9 @@ class CSkyboxReference : public CBaseEntity
 public:
 	WorldGroupId_t m_worldGroupId; // 0x4b0	
 	CHandle< CSkyCamera > m_hSkyCamera; // 0x4b4	
+	
+	// Datamap fields:
+	// const char * worldGroupID; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -5538,6 +5710,11 @@ public:
 	CUtlSymbolLarge m_positionNames[8]; // 0x500	
 	CHandle< CEnvSoundscape > m_hProxySoundscape; // 0x540	
 	bool m_bDisabled; // 0x544	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// void InputToggleEnabled; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -6321,6 +6498,21 @@ private:
 	[[maybe_unused]] uint8_t __pad0545[0x3]; // 0x545
 public:
 	CSkyCamera* m_pNext; // 0x548	
+	
+	// Datamap fields:
+	// int16_t m_skyboxData.scale; // 0x4b8
+	// Vector m_skyboxData.origin; // 0x4bc
+	// bool m_skyboxData.bClip3DSkyBoxNearToWorldFar; // 0x4c8
+	// float m_skyboxData.flClip3DSkyBoxNearToWorldFarOffset; // 0x4cc
+	// bool m_skyboxData.fog.enable; // 0x534
+	// bool m_skyboxData.fog.blend; // 0x535
+	// Vector m_skyboxData.fog.dirPrimary; // 0x4d8
+	// Color m_skyboxData.fog.colorPrimary; // 0x4e4
+	// Color m_skyboxData.fog.colorSecondary; // 0x4e8
+	// float m_skyboxData.fog.start; // 0x4f4
+	// float m_skyboxData.fog.end; // 0x4f8
+	// float m_skyboxData.fog.maxdensity; // 0x500
+	// void InputActivateSkybox; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -6434,6 +6626,9 @@ private:
 public:
 	Quaternion m_qStartRot; // 0x20	
 	ParticleIndex_t m_nFXIndex; // 0x30	
+	
+	// Datamap fields:
+	// void m_nSound; // 0x34
 };
 
 // Registered binary: server.dll (project 'server')
@@ -6481,6 +6676,9 @@ public:
 	CUtlStringToken m_nContext; // 0x10	
 	GameTick_t m_nNextThinkTick; // 0x14	
 	GameTick_t m_nLastThinkTick; // 0x18	
+	
+	// Datamap fields:
+	// void m_think; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -6636,6 +6834,19 @@ public:
 	int32_t m_iOpvarIndex; // 0x540	
 	// MNetworkEnable
 	bool m_bUseAutoCompare; // 0x544	
+	
+	// Datamap fields:
+	// uint64_t InputSetEventGuid; // 0x0
+	// CUtlSymbolLarge InputSetStackName; // 0x0
+	// CUtlSymbolLarge InputSetOperatorName; // 0x0
+	// CUtlSymbolLarge InputSetOpvarName; // 0x0
+	// CUtlSymbolLarge InputSetOpvarIndex; // 0x0
+	// CUtlSymbolLarge InputSetSourceEntity; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// void CSoundOpvarSetPointBaseSetOpvarThink; // 0x0
+	// void m_nGUID; // 0x4b8
+	// void m_hOpvarData; // 0x4c8
 };
 
 // Registered binary: server.dll (project 'server')
@@ -6679,6 +6890,10 @@ public:
 	Vector m_vPathingSourcePos; // 0x62c	
 	Vector m_vPathingListenerPos; // 0x638	
 	int32_t m_nPathingSourceIndex; // 0x644	
+	
+	// Datamap fields:
+	// void InputSetDisabledValue; // 0x0
+	// void CSoundOpvarSetPointEntitySetOpvarThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -6700,6 +6915,9 @@ public:
 	Vector m_vInnerMaxs; // 0x688	
 	Vector m_vOuterMins; // 0x694	
 	Vector m_vOuterMaxs; // 0x6a0	
+	
+	// Datamap fields:
+	// void CSoundOpvarSetAABBEntitySetOpvarThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -6729,6 +6947,9 @@ public:
 	float m_flDistMinSqr; // 0x660	
 	float m_flDistMaxSqr; // 0x664	
 	CUtlSymbolLarge m_iszPathCornerEntityName; // 0x668	
+	
+	// Datamap fields:
+	// void CSoundOpvarSetPathCornerEntitySetOpvarThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -6749,6 +6970,9 @@ public:
 	float m_flWindMax; // 0x57c	
 	float m_flWindMapMin; // 0x580	
 	float m_flWindMapMax; // 0x584	
+	
+	// Datamap fields:
+	// void CSoundOpvarSetOBBWindEntitySetOpvarThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -7066,6 +7290,11 @@ private:
 	[[maybe_unused]] uint8_t __pad04b5[0x3]; // 0x4b5
 public:
 	int32_t m_nType; // 0x4b8	
+	
+	// Datamap fields:
+	// void InputSetEnabled; // 0x0
+	// void InputSetDisabled; // 0x0
+	// void InputToggleEnabled; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -8997,6 +9226,9 @@ public:
 	CEntityOutputTemplate< int32 > m_OnSidesPicked; // 0xe60	
 	CEntityOutputTemplate< int32 > m_OnNewPhaseStarted; // 0xe88	
 	CEntityOutputTemplate< int32 > m_OnLevelTransition; // 0xeb0	
+	
+	// Datamap fields:
+	// void CMapVetoPickControllerVoteControllerThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9034,6 +9266,10 @@ private:
 public:
 	int32_t m_nTeam; // 0x4cc	
 	CEntityIOOutput m_OnEventFired; // 0x4d0	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9331,6 +9567,10 @@ private:
 public:
 	// MNetworkEnable
 	bool m_bEnabled; // 0x15a9	
+	
+	// Datamap fields:
+	// void m_pEnvMap; // 0x1598
+	// void m_pLightProbeVolume; // 0x15a0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9408,6 +9648,9 @@ private:
 public:
 	// MNetworkEnable
 	bool m_bEnabled; // 0x590	
+	
+	// Datamap fields:
+	// void m_pSceneObject; // 0x588
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9490,6 +9733,10 @@ public:
 	// MNetworkEnable
 	bool m_bHasHeightFogEnd; // 0x4f8	
 	bool m_bFirstTime; // 0x4f9	
+	
+	// Datamap fields:
+	// bool InputEnable; // 0x0
+	// bool InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9563,6 +9810,20 @@ public:
 	// MNetworkEnable
 	bool m_bIsEnabled; // 0x4e9	
 	bool m_bGradientFogNeedsTextures; // 0x4ea	
+	
+	// Datamap fields:
+	// bool InputEnable; // 0x0
+	// bool InputDisable; // 0x0
+	// float InputSetFogStartDistance; // 0x0
+	// float InputSetFogEndDistance; // 0x0
+	// float InputSetFogStartHeight; // 0x0
+	// float InputSetFogEndHeight; // 0x0
+	// float InputSetFogMaxOpacity; // 0x0
+	// float InputSetFogFalloffExponent; // 0x0
+	// float InputSetFogVerticalExponent; // 0x0
+	// Color InputSetFogColor; // 0x0
+	// float InputSetFogStrength; // 0x0
+	// float InputSetFarZ; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9637,6 +9898,9 @@ private:
 public:
 	// MNetworkEnable
 	bool m_bEnabled; // 0x14f1	
+	
+	// Datamap fields:
+	// void m_pSceneObject; // 0x14e8
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9671,6 +9935,13 @@ public:
 	bool m_bStartDisabled; // 0x4c0	
 	// MNetworkEnable
 	bool m_bIsEnabled; // 0x4c1	
+	
+	// Datamap fields:
+	// bool InputEnable; // 0x0
+	// bool InputDisable; // 0x0
+	// float InputSetPlayerVisibilityStrength; // 0x0
+	// float InputSetPlayerFogDistanceMultiplier; // 0x0
+	// float InputSetPlayerFogMaxDensityMultiplier; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9707,6 +9978,17 @@ public:
 	float m_flExposureAdaptationSpeedDown; // 0x4c8	
 	// MNetworkEnable
 	float m_flTonemapEVSmoothingRange; // 0x4cc	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// float InputSetMinExposure; // 0x0
+	// float InputSetMaxExposure; // 0x0
+	// float InputSetPercentTarget; // 0x0
+	// float InputSetPercentBrightPixels; // 0x0
+	// float InputSetMinAverageLuminosity; // 0x0
+	// float InputSetExposureAdaptationSpeedUp; // 0x0
+	// float InputSetExposureAdaptationSpeedDown; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9807,6 +10089,17 @@ public:
 	// MNetworkEnable
 	int32_t m_nForceRefreshCount; // 0x528	
 	bool m_bFirstTime; // 0x52c	
+	
+	// Datamap fields:
+	// void InputSetToDefaults; // 0x0
+	// float InputSetScattering; // 0x0
+	// float InputSetAnisotropy; // 0x0
+	// float InputSetFadeSpeed; // 0x0
+	// float InputSetDrawDistance; // 0x0
+	// bool EnableIndirect; // 0x0
+	// bool InputEnable; // 0x0
+	// bool InputDisable; // 0x0
+	// void ForceRefresh; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9846,6 +10139,10 @@ public:
 	int32_t m_nFalloffShape; // 0x4d4	
 	// MNetworkEnable
 	float m_flFalloffExponent; // 0x4d8	
+	
+	// Datamap fields:
+	// bool InputEnable; // 0x0
+	// bool InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9866,6 +10163,26 @@ private:
 	[[maybe_unused]] uint8_t __pad0519[0x3]; // 0x519
 public:
 	int32_t m_iChangedVariables; // 0x51c	
+	
+	// Datamap fields:
+	// float InputSetStartDist; // 0x0
+	// float InputSetEndDist; // 0x0
+	// float InputSetMaxDensity; // 0x0
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// Color InputSetColor; // 0x0
+	// Color InputSetColorSecondary; // 0x0
+	// int32_t InputSetFarZ; // 0x0
+	// CUtlSymbolLarge InputSetAngles; // 0x0
+	// float InputSet2DSkyboxFogFactor; // 0x0
+	// Color InputSetColorLerpTo; // 0x0
+	// Color InputSetColorSecondaryLerpTo; // 0x0
+	// float InputSetStartDistLerpTo; // 0x0
+	// float InputSetEndDistLerpTo; // 0x0
+	// float InputSetMaxDensityLerpTo; // 0x0
+	// float InputSet2DSkyboxFogFactorLerpTo; // 0x0
+	// void InputStartFogTransition; // 0x0
+	// void CFogControllerSetLerpValues; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9925,6 +10242,10 @@ public:
 	Vector m_vBoxSize; // 0x4b8	
 	// MNetworkEnable
 	bool m_bEnabled; // 0x4c4	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9955,6 +10276,14 @@ private:
 	[[maybe_unused]] uint8_t __pad04eb[0x1]; // 0x4eb
 public:
 	uint32_t m_hLayerSpawnGroup; // 0x4ec	
+	
+	// Datamap fields:
+	// void ShowWorldLayer; // 0x0
+	// void HideWorldLayer; // 0x0
+	// void SpawnEntities; // 0x0
+	// void DestroyEntities; // 0x0
+	// void ShowWorldLayerAndSpawnEntities; // 0x0
+	// void HideWorldLayerAndDestroyEntities; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9981,6 +10310,14 @@ private:
 	[[maybe_unused]] uint8_t __pad04d4[0x4]; // 0x4d4
 public:
 	CUtlVector< CHandle< CLightEntity > > m_vecLights; // 0x4d8	
+	
+	// Datamap fields:
+	// float InputFlickerLights; // 0x0
+	// float InputDisableLights; // 0x0
+	// float InputSetLightsBrightnessMultiplier; // 0x0
+	// float InputSetBrightnessDelta; // 0x0
+	// void CMultiLightProxyRestoreFlashlightThink; // 0x0
+	// void CMultiLightProxyApproachBrightnessThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10075,6 +10412,21 @@ private:
 	[[maybe_unused]] uint8_t __pad0505[0x3]; // 0x505
 public:
 	CPointCamera* m_pNext; // 0x508	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputChangeFOV; // 0x0
+	// void InputSetOnAndTurnOthersOff; // 0x0
+	// void InputSetOn; // 0x0
+	// void InputSetOff; // 0x0
+	// void InputForceActive; // 0x0
+	// void InputForceInactive; // 0x0
+	// void InputEnableDOF; // 0x0
+	// void InputDisableDOF; // 0x0
+	// float InputSetDOFNearBlurry; // 0x0
+	// float InputSetDOFNearCrisp; // 0x0
+	// float InputSetDOFFarCrisp; // 0x0
+	// float InputSetDOFFarBlurry; // 0x0
+	// float InputSetDOFTiltToGround; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10088,6 +10440,11 @@ class CPointCameraVFOV : public CPointCamera
 {
 public:
 	float m_flVerticalFOV; // 0x510	
+	
+	// Datamap fields:
+	// float m_flDofFarCrisp; // 0x4f0
+	// float m_flDofFarBlurry; // 0x4f4
+	// float m_flDofTiltToGround; // 0x4f8
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10115,6 +10472,10 @@ public:
 	CUtlVector< CEntityHandle > m_SpawnedEntityHandles; // 0x518	
 	HSCRIPT m_ScriptSpawnCallback; // 0x530	
 	HSCRIPT m_ScriptCallbackScope; // 0x538	
+	
+	// Datamap fields:
+	// void InputForceSpawn; // 0x0
+	// void InputDeleteCreatedSpawnGroups; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10136,6 +10497,11 @@ public:
 	int32_t m_iCurrentMaxPieces; // 0x4d4	
 	int32_t m_iMaxPieces; // 0x4d8	
 	int32_t m_iLastFrame; // 0x4dc	
+	
+	// Datamap fields:
+	// int32_t InputSetMaxPieces; // 0x0
+	// int32_t InputSetMaxPiecesDX8; // 0x0
+	// void m_LRU; // 0x4b0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10160,6 +10526,10 @@ public:
 	CUtlSymbolLarge m_iszSoundAreaType; // 0x4b8	
 	// MNetworkEnable
 	Vector m_vPos; // 0x4c0	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10312,6 +10682,14 @@ public:
 	
 	// Static fields:
 	static bool &Get_sm_bRunningPredictedClientStringCommands(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBasePlayerController")->m_static_fields[0]->m_instance);};
+	
+	// Datamap fields:
+	// bool fakeclient; // 0x7fffffff
+	// bool is_hltv; // 0x7fffffff
+	// const char * playername; // 0x7fffffff
+	// bool reserving; // 0x7fffffff
+	// void m_pCurrentCommand; // 0x680
+	// void m_LastCmd; // 0x5b8
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10449,6 +10827,9 @@ class CInfoGameEventProxy : public CPointEntity
 public:
 	CUtlSymbolLarge m_iszEventName; // 0x4b0	
 	float m_flRange; // 0x4b8	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputGenerateGameEvent; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10463,6 +10844,12 @@ class CProjectedDecal : public CPointEntity
 public:
 	int32_t m_nTexture; // 0x4b0	
 	float m_flDistance; // 0x4b4	
+	
+	// Datamap fields:
+	// void CProjectedDecalTriggerDecal; // 0x0
+	// void CProjectedDecalStaticDecal; // 0x0
+	// void InputActivate; // 0x0
+	// CUtlString texture; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10589,6 +10976,33 @@ public:
 	// MNetworkPriority "32"
 	// MNetworkUserGroup "Player"
 	CNetworkViewOffsetVector m_vecViewOffset; // 0x6d0	
+	
+	// Datamap fields:
+	// int32_t InputAlpha; // 0x0
+	// Color InputColor; // 0x0
+	// int32_t InputSkin; // 0x0
+	// void CBaseModelEntitySUB_DissolveIfUncarried; // 0x0
+	// void InputIgnite; // 0x0
+	// float InputIgniteLifetime; // 0x0
+	// int32_t InputIgnite; // 0x0
+	// float InputIgnite; // 0x0
+	// void InputExtinguish; // 0x0
+	// CUtlString add_attribute; // 0x7fffffff
+	// void CBaseModelEntitySUB_StartFadeOut; // 0x0
+	// void CBaseModelEntitySUB_StartFadeOutInstant; // 0x0
+	// void CBaseModelEntitySUB_FadeOut; // 0x0
+	// void CBaseModelEntitySUB_StartShadowFadeOut; // 0x0
+	// void CBaseModelEntitySUB_PerformShadowFadeOut; // 0x0
+	// void CBaseModelEntitySUB_StartShadowFadeIn; // 0x0
+	// void CBaseModelEntitySUB_PerformShadowFadeIn; // 0x0
+	// void CBaseModelEntitySUB_StopShadowFade; // 0x0
+	// Color rendercolor32; // 0x7fffffff
+	// Color rendercolor; // 0x7fffffff
+	// int32_t renderamt; // 0x7fffffff
+	// Vector mins; // 0x7fffffff
+	// Vector maxs; // 0x7fffffff
+	// const char * skin; // 0x7fffffff
+	// CUtlString bodygroups; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10632,6 +11046,14 @@ public:
 	bool m_bTriggerOnce; // 0x502	
 	bool m_bFastRetrigger; // 0x503	
 	bool m_bPassthoughCaller; // 0x504	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputEnableRefire; // 0x0
+	// void InputDisable; // 0x0
+	// void InputToggle; // 0x0
+	// void InputTrigger; // 0x0
+	// void InputCancelPending; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10708,6 +11130,15 @@ public:
 	Vector m_vecDataCPValue; // 0xc64	
 	int32_t m_nTintCP; // 0xc70	
 	Color m_clrTint; // 0xc74	
+	
+	// Datamap fields:
+	// void InputStart; // 0x0
+	// void InputStop; // 0x0
+	// void InputStopEndCap; // 0x0
+	// void InputDestroy; // 0x0
+	// CUtlSymbolLarge InputSetControlPoint; // 0x0
+	// void CParticleSystemStartParticleSystemThink; // 0x0
+	// CUtlString cpoint%d_value[64]; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10771,6 +11202,16 @@ public:
 	CNetworkUtlVectorBase< bool > m_PathNodes_PinEnabled; // 0x558	
 	// MNetworkEnable
 	CNetworkUtlVectorBase< float32 > m_PathNodes_RadiusScale; // 0x570	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge pathNodes; // 0x7fffffff
+	// void InputStart; // 0x0
+	// void InputStop; // 0x0
+	// void InputStopEndCap; // 0x0
+	// void InputDestroy; // 0x0
+	// CUtlSymbolLarge InputDisablePin; // 0x0
+	// float InputSetRadius; // 0x0
+	// float InputSetSlack; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10820,6 +11261,9 @@ public:
 class CFuncVehicleClip : public CBaseModelEntity
 {
 public:
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10845,6 +11289,10 @@ class CFuncVPhysicsClip : public CBaseModelEntity
 {
 public:
 	bool m_bDisabled; // 0x700	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10863,6 +11311,10 @@ private:
 public:
 	CUtlSymbolLarge m_iszInteractsAs; // 0x708	
 	CUtlSymbolLarge m_iszInteractsWith; // 0x710	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10914,6 +11366,9 @@ public:
 	CEntityIOOutput m_OnCommentaryNewGame; // 0x4b0	
 	CEntityIOOutput m_OnCommentaryMidGame; // 0x4d8	
 	CEntityIOOutput m_OnCommentaryMultiplayerSpawn; // 0x500	
+	
+	// Datamap fields:
+	// void InputMultiplayerSpawned; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10955,6 +11410,15 @@ public:
 	float m_OuterAngle; // 0x710	
 	// MNetworkEnable
 	float m_SpotRadius; // 0x714	
+	
+	// Datamap fields:
+	// void CDynamicLightDynamicLightThink; // 0x0
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// void InputToggle; // 0x0
+	// Color _light; // 0x7fffffff
+	// float pitch; // 0x7fffffff
+	// int32_t spawnflags; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10970,6 +11434,16 @@ public:
 	int32_t m_density; // 0x700	
 	int32_t m_frequency; // 0x704	
 	int32_t m_state; // 0x708	
+	
+	// Datamap fields:
+	// float m_flSpeed; // 0x31c
+	// void CBubblingFizzThink; // 0x0
+	// void InputActivate; // 0x0
+	// void InputDeactivate; // 0x0
+	// void InputToggle; // 0x0
+	// int32_t InputSetCurrent; // 0x0
+	// int32_t InputSetDensity; // 0x0
+	// int32_t InputSetFrequency; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -10984,6 +11458,9 @@ class CEnvTracer : public CPointEntity
 public:
 	Vector m_vecEnd; // 0x4b0	
 	float m_flDelay; // 0x4bc	
+	
+	// Datamap fields:
+	// void CEnvTracerTracerThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11017,6 +11494,10 @@ public:
 	Vector m_vecSprayDir; // 0x4bc	
 	float m_flAmount; // 0x4c8	
 	int32_t m_Color; // 0x4cc	
+	
+	// Datamap fields:
+	// void InputEmitBlood; // 0x0
+	// int32_t color; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11046,6 +11527,9 @@ private:
 	[[maybe_unused]] uint8_t __pad04b1[0x3]; // 0x4b1
 public:
 	int32_t m_nBeverageType; // 0x4b4	
+	
+	// Datamap fields:
+	// void InputActivate; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11073,6 +11557,20 @@ class CEnvWind : public CBaseEntity
 public:
 	// MNetworkEnable
 	CEnvWindShared m_EnvWindShared; // 0x4b0	
+	
+	// Datamap fields:
+	// int16_t m_EnvWindShared.m_iMinWind; // 0x4c0
+	// int16_t m_EnvWindShared.m_iMaxWind; // 0x4c2
+	// int32_t m_EnvWindShared.m_windRadius; // 0x4c4
+	// int16_t m_EnvWindShared.m_iMinGust; // 0x4c8
+	// int16_t m_EnvWindShared.m_iMaxGust; // 0x4ca
+	// float m_EnvWindShared.m_flMinGustDelay; // 0x4cc
+	// float m_EnvWindShared.m_flMaxGustDelay; // 0x4d0
+	// int16_t m_EnvWindShared.m_iGustDirChange; // 0x4d8
+	// float m_EnvWindShared.m_flGustDuration; // 0x4d4
+	// int32_t m_EnvWindShared.m_iWindDir; // 0x4ec
+	// float m_EnvWindShared.m_flWindSpeed; // 0x4f0
+	// void CEnvWindWindThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11103,6 +11601,9 @@ private:
 	[[maybe_unused]] uint8_t __pad04b4[0x4]; // 0x4b4
 public:
 	CUtlSymbolLarge m_iszParentAttachment; // 0x4b8	
+	
+	// Datamap fields:
+	// void InputFire; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11116,6 +11617,9 @@ class CEnvSplash : public CPointEntity
 {
 public:
 	float m_flScale; // 0x4b0	
+	
+	// Datamap fields:
+	// void InputSplash; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11130,6 +11634,9 @@ class CEnvViewPunch : public CPointEntity
 public:
 	float m_flRadius; // 0x4b0	
 	QAngle m_angViewPunch; // 0x4b4	
+	
+	// Datamap fields:
+	// void InputViewPunch; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11143,6 +11650,9 @@ class CEnvEntityIgniter : public CBaseEntity
 {
 public:
 	float m_flLifetime; // 0x4b0	
+	
+	// Datamap fields:
+	// void InputIgnite; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11185,6 +11695,11 @@ public:
 	CUtlSymbolLarge m_iszTemplate; // 0x4f8	
 	CEntityIOOutput m_pOutputOnSpawned; // 0x500	
 	CEntityIOOutput m_pOutputOnFailedSpawn; // 0x528	
+	
+	// Datamap fields:
+	// void InputForceSpawn; // 0x0
+	// CUtlSymbolLarge InputForceSpawnAtEntityOrigin; // 0x0
+	// void CEnvEntityMakerCheckSpawnThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11239,6 +11754,10 @@ public:
 	bool m_bAllowNoDrawTarget; // 0x518	
 	bool m_bAutoStart; // 0x519	
 	bool m_bLocalPlayerOnly; // 0x51a	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputShowHint; // 0x0
+	// void InputEndHint; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11266,6 +11785,10 @@ public:
 	CUtlSymbolLarge m_iszCustomLayoutFile; // 0x4e0	
 	int32_t m_iAttachType; // 0x4e8	
 	float m_flHeightOffset; // 0x4ec	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputShowHint; // 0x0
+	// void InputEndHint; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11281,6 +11804,11 @@ public:
 	CUtlSymbolLarge m_iszName; // 0x4b0	
 	CUtlSymbolLarge m_iszHintTargetEntity; // 0x4b8	
 	CHandle< CBasePlayerPawn > m_hTargetPlayer; // 0x4c0	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputShowHint; // 0x0
+	// void InputEndHint; // 0x0
+	// void InputSetTargetPlayerToActivator; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11311,6 +11839,11 @@ public:
 	int32_t m_iDesiredOverlay; // 0x52c	
 	// MNetworkEnable
 	bool m_bIsActive; // 0x530	
+	
+	// Datamap fields:
+	// void InputStartOverlay; // 0x0
+	// void InputStopOverlay; // 0x0
+	// int32_t InputSwitchOverlay; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11332,6 +11865,9 @@ private:
 	[[maybe_unused]] uint8_t __pad04bc[0x4]; // 0x4bc
 public:
 	CEntityIOOutput m_OnBeginFade; // 0x4c0	
+	
+	// Datamap fields:
+	// void InputFade; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11350,6 +11886,12 @@ private:
 	[[maybe_unused]] uint8_t __pad04d9[0x3]; // 0x4d9
 public:
 	float m_flLogoLength; // 0x4dc	
+	
+	// Datamap fields:
+	// void InputRollCredits; // 0x0
+	// void InputRollOutroCredits; // 0x0
+	// void InputShowLogo; // 0x0
+	// float InputSetLogoLength; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11375,6 +11917,13 @@ private:
 	[[maybe_unused]] uint8_t __pad04e0[0x8]; // 0x4e0
 public:
 	CPhysicsShake m_shakeCallback; // 0x4e8	
+	
+	// Datamap fields:
+	// void m_pShakeController; // 0x4e0
+	// void InputStartShake; // 0x0
+	// void InputStopShake; // 0x0
+	// float InputAmplitude; // 0x0
+	// float InputFrequency; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11391,6 +11940,10 @@ public:
 	float m_Radius; // 0x4b4	
 	float m_TiltTime; // 0x4b8	
 	GameTime_t m_stopTime; // 0x4bc	
+	
+	// Datamap fields:
+	// void InputStartTilt; // 0x0
+	// void InputStopTilt; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11408,6 +11961,13 @@ public:
 	int32_t m_nTrailLength; // 0x4b8	
 	int32_t m_nType; // 0x4bc	
 	CEntityIOOutput m_OnSpark; // 0x4c0	
+	
+	// Datamap fields:
+	// void CEnvSparkSparkThink; // 0x0
+	// void InputStartSpark; // 0x0
+	// void InputStopSpark; // 0x0
+	// void InputToggleSpark; // 0x0
+	// void InputSparkOnce; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11450,6 +12010,11 @@ public:
 	Class_T m_iClassIgnore2; // 0x744	
 	CUtlSymbolLarge m_iszEntityIgnoreName; // 0x748	
 	CHandle< CBaseEntity > m_hEntityIgnore; // 0x750	
+	
+	// Datamap fields:
+	// uint32_t m_nExplosionType; // 0x720
+	// void CEnvExplosionSmoke; // 0x0
+	// void InputExplode; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11613,6 +12178,15 @@ private:
 public:
 	CEntityIOOutput m_OnIgnited; // 0x740	
 	CEntityIOOutput m_OnExtinguished; // 0x768	
+	
+	// Datamap fields:
+	// void CFireBurnThink; // 0x0
+	// void CFireGoOutThink; // 0x0
+	// void InputStartFire; // 0x0
+	// float InputExtinguish; // 0x0
+	// float InputExtinguishTemporary; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11631,6 +12205,10 @@ private:
 public:
 	float m_radius; // 0x4b4	
 	float m_damage; // 0x4b8	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11657,6 +12235,10 @@ private:
 public:
 	CEntityIOOutput m_OnHeatLevelStart; // 0x4c8	
 	CEntityIOOutput m_OnHeatLevelEnd; // 0x4f0	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11674,6 +12256,11 @@ public:
 	float m_flMinBlendRate; // 0x4b8	
 	float m_flBlendDeltaMultiplier; // 0x4bc	
 	bool m_isStarted; // 0x4c0	
+	
+	// Datamap fields:
+	// void InputStart; // 0x0
+	// void InputStop; // 0x0
+	// void InputReset; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11718,6 +12305,9 @@ public:
 	// MNetworkMinValue "0.000000"
 	// MNetworkMaxValue "100.000000"
 	float m_flHDRColorScale; // 0x718	
+	
+	// Datamap fields:
+	// Color InputColor; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11736,6 +12326,12 @@ private:
 public:
 	CUtlSymbolLarge m_iszAchievementEventID; // 0x4b8	
 	CEntityIOOutput m_OnFired; // 0x4c0	
+	
+	// Datamap fields:
+	// void InputFireEvent; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// void InputToggle; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11757,6 +12353,11 @@ public:
 	// MNetworkEnable
 	bool m_bEnabled; // 0x4f8	
 	bool m_bStartDisabled; // 0x4f9	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// void InputToggle; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11778,6 +12379,16 @@ public:
 	CHandle< CBaseEntity > m_hTargetReference; // 0x4d4	
 	float m_flScale; // 0x4d8	
 	int32_t m_nMeasureType; // 0x4dc	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputSetMeasureTarget; // 0x0
+	// CUtlSymbolLarge InputSetMeasureReference; // 0x0
+	// CUtlSymbolLarge InputSetTarget; // 0x0
+	// CUtlSymbolLarge InputSetTargetReference; // 0x0
+	// float InputSetTargetScale; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// void CLogicMeasureMovementMeasureThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11797,6 +12408,12 @@ private:
 	[[maybe_unused]] uint8_t __pad04b9[0x3]; // 0x4b9
 public:
 	navproperties_t m_navProperty; // 0x4bc	
+	
+	// Datamap fields:
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// void InputToggle; // 0x0
+	// CUtlString navprop; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11884,6 +12501,12 @@ private:
 	[[maybe_unused]] uint8_t __pad07d0[0x4]; // 0x7d0
 public:
 	float m_flDefaultDist_3; // 0x7d4	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputSetSourceEntity; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// void CLogicNPCCounterSetNPCCounterThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11967,6 +12590,24 @@ public:
 class CLogicScript : public CPointEntity
 {
 public:
+	// Datamap fields:
+	// CUtlString Group00; // 0x7fffffff
+	// CUtlString Group01; // 0x7fffffff
+	// CUtlString Group02; // 0x7fffffff
+	// CUtlString Group03; // 0x7fffffff
+	// CUtlString Group04; // 0x7fffffff
+	// CUtlString Group05; // 0x7fffffff
+	// CUtlString Group06; // 0x7fffffff
+	// CUtlString Group07; // 0x7fffffff
+	// CUtlString Group08; // 0x7fffffff
+	// CUtlString Group09; // 0x7fffffff
+	// CUtlString Group10; // 0x7fffffff
+	// CUtlString Group11; // 0x7fffffff
+	// CUtlString Group12; // 0x7fffffff
+	// CUtlString Group13; // 0x7fffffff
+	// CUtlString Group14; // 0x7fffffff
+	// CUtlString Group15; // 0x7fffffff
+	// CUtlString Group16; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -11998,6 +12639,18 @@ public:
 	float m_flUpperRandomBound; // 0x544	
 	float m_flRemainingTime; // 0x548	
 	bool m_bPaused; // 0x54c	
+	
+	// Datamap fields:
+	// float InputRefireTime; // 0x0
+	// void InputFireTimer; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// void InputToggle; // 0x0
+	// float InputAddToTimer; // 0x0
+	// void InputResetTimer; // 0x0
+	// float InputSubtractFromTimer; // 0x0
+	// void InputPauseTimer; // 0x0
+	// void InputUnpauseTimer; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12040,6 +12693,11 @@ public:
 	CEntityIOOutput m_OnRoseAboveMax; // 0x518	
 	CEntityIOOutput m_OnFellBelowMin; // 0x540	
 	CEntityIOOutput m_OnFellBelowMax; // 0x568	
+	
+	// Datamap fields:
+	// float InputValue; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12057,6 +12715,9 @@ public:
 	Color m_OutColor1; // 0x4b8	
 	Color m_OutColor2; // 0x4bc	
 	CEntityOutputTemplate< Color > m_OutValue; // 0x4c0	
+	
+	// Datamap fields:
+	// float InputValue; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12074,6 +12735,15 @@ public:
 	int32_t m_triggermode; // 0x4e0	
 	int32_t m_initialstate; // 0x4e4	
 	int32_t m_counter; // 0x4e8	
+	
+	// Datamap fields:
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// void InputRemove; // 0x0
+	// void InputToggle; // 0x0
+	// int32_t InputSetCounter; // 0x0
+	// int32_t InputAddToCounter; // 0x0
+	// void InputGetCounter; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12094,6 +12764,9 @@ private:
 	[[maybe_unused]] uint8_t __pad05dc[0x4]; // 0x5dc
 public:
 	CUtlSymbolLarge m_globalstate; // 0x5e0	
+	
+	// Datamap fields:
+	// void CMultiSourceRegister; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12120,6 +12793,20 @@ public:
 	CEntityIOOutput m_OnHitMax; // 0x538	
 	CEntityIOOutput m_OnChangedFromMin; // 0x560	
 	CEntityIOOutput m_OnChangedFromMax; // 0x588	
+	
+	// Datamap fields:
+	// float InputAdd; // 0x0
+	// float InputDivide; // 0x0
+	// float InputMultiply; // 0x0
+	// float InputSetValue; // 0x0
+	// float InputSetValueNoFire; // 0x0
+	// float InputSubtract; // 0x0
+	// float InputSetHitMax; // 0x0
+	// float InputSetHitMin; // 0x0
+	// void InputGetValue; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// int32_t startvalue; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12138,6 +12825,12 @@ public:
 	uint8_t m_uchShuffleCaseMap[32]; // 0x5b8	
 	CEntityIOOutput m_OnCase[32]; // 0x5d8	
 	CEntityOutputTemplate< CVariantBase< CVariantDefaultAllocator > > m_OnDefault; // 0xad8	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputValue; // 0x0
+	// void InputPickRandom; // 0x0
+	// void InputPickRandomShuffle; // 0x0
+	// void InputResetShuffle; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12156,6 +12849,12 @@ public:
 	CEntityOutputTemplate< float32 > m_OnEqualTo; // 0x4e0	
 	CEntityOutputTemplate< float32 > m_OnNotEqualTo; // 0x508	
 	CEntityOutputTemplate< float32 > m_OnGreaterThan; // 0x530	
+	
+	// Datamap fields:
+	// float InputSetValue; // 0x0
+	// float InputSetValueCompare; // 0x0
+	// float InputSetCompareValue; // 0x0
+	// void InputCompare; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12174,6 +12873,11 @@ private:
 public:
 	int32_t m_minHitPoints; // 0x4b4	
 	int32_t m_minHitPointsToCommit; // 0x4b8	
+	
+	// Datamap fields:
+	// void InputSave; // 0x0
+	// float InputSaveDangerous; // 0x0
+	// int32_t InputSetMinHitpointsThreshold; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12190,6 +12894,11 @@ public:
 	float m_flTimeToTrigger; // 0x4c4	
 	GameTime_t m_flStartTime; // 0x4c8	
 	float m_flDangerousTime; // 0x4cc	
+	
+	// Datamap fields:
+	// void CLogicActiveAutosaveSaveThink; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12211,6 +12920,11 @@ private:
 	[[maybe_unused]] uint8_t __pad04bf[0x1]; // 0x4bf
 public:
 	float m_flDangerousTime; // 0x4c0	
+	
+	// Datamap fields:
+	// void InputSave; // 0x0
+	// float InputSaveDangerous; // 0x0
+	// void CLogicDistanceAutosaveSaveThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12227,6 +12941,11 @@ public:
 	CUtlSymbolLarge m_nameAttach2; // 0x4b8	
 	bool m_disabled; // 0x4c0	
 	bool m_succeeded; // 0x4c1	
+	
+	// Datamap fields:
+	// void InputDisableCollisions; // 0x0
+	// CUtlSymbolLarge InputDisableCollisionsWith; // 0x0
+	// void InputEnableCollisions; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12248,6 +12967,11 @@ public:
 	CEntityIOOutput m_OnAllTrue; // 0x550	
 	CEntityIOOutput m_OnAllFalse; // 0x578	
 	CEntityIOOutput m_OnMixed; // 0x5a0	
+	
+	// Datamap fields:
+	// void InputTest; // 0x0
+	// void Input_OnLogicBranchChanged; // 0x0
+	// void Input_OnLogicBranchRemoved; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12261,6 +12985,9 @@ class CLogicGameEvent : public CLogicalEntity
 {
 public:
 	CUtlSymbolLarge m_iszEventName; // 0x4b0	
+	
+	// Datamap fields:
+	// void InputFireEvent; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12281,6 +13008,11 @@ public:
 	bool m_drawText; // 0x4c0	
 	bool m_bDeveloperOnly; // 0x4c1	
 	bool m_bEnabled; // 0x4c2	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// CUtlSymbolLarge InputSetMessage; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12298,6 +13030,10 @@ public:
 	CEntityIOOutput m_OnUse; // 0x750	
 	int32_t m_iInputFilter; // 0x778	
 	int32_t m_iDontMessageParent; // 0x77c	
+	
+	// Datamap fields:
+	// void InputDisable; // 0x0
+	// void InputEnable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12365,6 +13101,10 @@ public:
 	float m_flWait; // 0x4b0	
 	float m_flRadius; // 0x4b4	
 	CEntityIOOutput m_OnPass; // 0x4b8	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputSetNextPathCorner; // 0x0
+	// void InputInPass; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12389,6 +13129,13 @@ private:
 	[[maybe_unused]] uint8_t __pad04cd[0x3]; // 0x4cd
 public:
 	CConstantForceController m_integrator; // 0x4d0	
+	
+	// Datamap fields:
+	// void m_pController; // 0x4b0
+	// void InputActivate; // 0x0
+	// void InputDeactivate; // 0x0
+	// float InputForceScale; // 0x0
+	// void CPhysForceForceOff; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12437,6 +13184,11 @@ private:
 	[[maybe_unused]] uint8_t __pad04cc[0x14]; // 0x4cc
 public:
 	CMotorController m_motor; // 0x4e0	
+	
+	// Datamap fields:
+	// float InputSetTargetSpeed; // 0x0
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12461,6 +13213,12 @@ public:
 	float m_angularLimit; // 0x4e4	
 	bool m_bActive; // 0x4e8	
 	bool m_bDampAllRotation; // 0x4e9	
+	
+	// Datamap fields:
+	// void m_pController; // 0x4d0
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// float InputSetAngularLimit; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12484,6 +13242,21 @@ public:
 	uint32_t m_teleportTick; // 0x4d8	
 	float m_minTeleportDistance; // 0x4dc	
 	CEntityIOOutput m_OnBreak; // 0x4e0	
+	
+	// Datamap fields:
+	// void m_hJoint; // 0x4b0
+	// void InputBreak; // 0x0
+	// void InputOnBreak; // 0x0
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// void InputEnableLinearConstraint; // 0x0
+	// void InputDisableLinearConstraint; // 0x0
+	// void InputEnableAngularConstraint; // 0x0
+	// void InputDisableAngularConstraint; // 0x0
+	// void InputTurnMotorOn; // 0x0
+	// void InputTurnMotorOff; // 0x0
+	// float InputSetMotorTorqueFactor; // 0x0
+	// float InputSetMotorTargetVelocity; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12525,6 +13298,18 @@ private:
 public:
 	CEntityIOOutput m_OnStartMoving; // 0x658	
 	CEntityIOOutput m_OnStopMoving; // 0x680	
+	
+	// Datamap fields:
+	// Vector m_hinge.worldPosition; // 0x5ec
+	// Vector m_hinge.worldAxisDirection; // 0x5f8
+	// float InputSetMotorTargetAngle; // 0x0
+	// float InputSetVelocity; // 0x0
+	// float InputSetHingeFriction; // 0x0
+	// float InputSetMinLimit; // 0x0
+	// float InputSetMaxLimit; // 0x0
+	// void CPhysHingeSoundThink; // 0x0
+	// void CPhysHingeLimitThink; // 0x0
+	// void CPhysHingeMoveThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12591,6 +13376,12 @@ private:
 	[[maybe_unused]] uint8_t __pad0535[0x3]; // 0x535
 public:
 	ConstraintSoundInfo m_soundInfo; // 0x538	
+	
+	// Datamap fields:
+	// float InputSetOffset; // 0x0
+	// float InputSetVelocity; // 0x0
+	// float InputSetSlideFriction; // 0x0
+	// void CPhysSlideConstraintSoundThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12609,6 +13400,12 @@ public:
 	float m_flAngularDampingRatio; // 0x514	
 	bool m_bEnableLinearConstraint; // 0x518	
 	bool m_bEnableAngularConstraint; // 0x519	
+	
+	// Datamap fields:
+	// float InputSetLinearFrequency; // 0x0
+	// float InputSetLinearDampingRatio; // 0x0
+	// float InputSetAngularFrequency; // 0x0
+	// float InputSetAngularDampingRatio; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12732,6 +13529,9 @@ public:
 	CEntityIOOutput m_NotifyForceReachedX; // 0x5c0	
 	CEntityIOOutput m_NotifyForceReachedY; // 0x5e8	
 	CEntityIOOutput m_NotifyForceReachedZ; // 0x610	
+	
+	// Datamap fields:
+	// void CGenericConstraintUpdateThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12816,6 +13616,12 @@ public:
 	Vector m_start; // 0x4d8	
 	Vector m_end; // 0x4e4	
 	uint32_t m_teleportTick; // 0x4f0	
+	
+	// Datamap fields:
+	// void m_pSpringJoint; // 0x4b0
+	// float InputSetFrequency; // 0x0
+	// float InputSetDampingRatio; // 0x0
+	// float InputSetRestLength; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12841,6 +13647,11 @@ private:
 public:
 	CUtlSymbolLarge m_iszFilterName; // 0x4c8	
 	CHandle< CBaseFilter > m_hFilter; // 0x4d0	
+	
+	// Datamap fields:
+	// void CPointPushPushThink; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12854,6 +13665,11 @@ class CInfoPlayerStart : public CPointEntity
 {
 public:
 	bool m_bDisabled; // 0x4b0	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// void InputToggle; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12879,6 +13695,9 @@ public:
 	CHandle< CBaseEntity > m_hReference; // 0x4d0	
 	EntFinderMethod_t m_FindMethod; // 0x4d4	
 	CEntityIOOutput m_OnFoundEntity; // 0x4d8	
+	
+	// Datamap fields:
+	// void InputFindEntity; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -12984,6 +13803,9 @@ public:
 	CEntityIOOutput m_OnReachedValueCustom; // 0x630	
 	CEntityIOOutput m_OnEngage; // 0x658	
 	CEntityIOOutput m_OnDisengage; // 0x680	
+	
+	// Datamap fields:
+	// void CPointValueRemapperUpdateThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13032,6 +13854,13 @@ public:
 	PointWorldTextJustifyVertical_t m_nJustifyVertical; // 0x958	
 	// MNetworkEnable
 	PointWorldTextReorientMode_t m_nReorientMode; // 0x95c	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// void InputToggle; // 0x0
+	// CUtlSymbolLarge InputSetMessage; // 0x0
+	// int32_t InputSetIntMessage; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13062,6 +13891,14 @@ public:
 	CEntityIOOutput m_OnNotFacingLookat; // 0x500	
 	CEntityOutputTemplate< Vector > m_TargetDir; // 0x528	
 	CEntityOutputTemplate< float32 > m_FacingPercentage; // 0x550	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// void InputToggle; // 0x0
+	// void InputTest; // 0x0
+	// CUtlSymbolLarge InputSetTargetEntity; // 0x0
+	// float tolerance; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13080,6 +13917,12 @@ private:
 public:
 	CHandle< CBaseEntity > m_hTargetEntity; // 0x4b4	
 	CEntityOutputTemplate< float32 > m_Distance; // 0x4b8	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// void InputToggle; // 0x0
+	// CUtlSymbolLarge InputSetTargetEntity; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13111,6 +13954,10 @@ public:
 	CEntityIOOutput m_OnGreaterThan; // 0x560	
 	CEntityIOOutput m_OnGreaterThanOrEqualTo; // 0x588	
 	CEntityIOOutput m_OnEqualTo; // 0x5b0	
+	
+	// Datamap fields:
+	// void InputTest; // 0x0
+	// void InputTestWithInterval; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13135,6 +13982,10 @@ private:
 	[[maybe_unused]] uint8_t __pad04cc[0x4]; // 0x4cc
 public:
 	CEntityOutputTemplate< float32 > m_Velocity; // 0x4d0	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13153,6 +14004,13 @@ public:
 	float m_flDelay; // 0x4bc	
 	CUtlSymbolLarge m_strTarget; // 0x4c0	
 	CHandle< CBaseEntity > m_pActivator; // 0x4c8	
+	
+	// Datamap fields:
+	// void CPointHurtHurtThink; // 0x0
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// void InputToggle; // 0x0
+	// void InputHurt; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13169,6 +14027,12 @@ public:
 	QAngle m_vSaveAngles; // 0x4bc	
 	bool m_bTeleportParentedEntities; // 0x4c8	
 	bool m_bTeleportUseCurrentAngle; // 0x4c9	
+	
+	// Datamap fields:
+	// void InputTeleport; // 0x0
+	// CUtlSymbolLarge InputTeleportEntity; // 0x0
+	// void InputTeleportToCurrentPos; // 0x0
+	// CUtlSymbolLarge InputTeleportEntityToCurrentPos; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13213,6 +14077,9 @@ private:
 public:
 	int32_t m_iMaxRagdollCount; // 0x4b4	
 	bool m_bSaveImportant; // 0x4b8	
+	
+	// Datamap fields:
+	// int32_t InputSetMaxRagdollCount; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13228,6 +14095,10 @@ public:
 	float m_loadTime; // 0x700	
 	float m_Duration; // 0x704	
 	float m_HoldTime; // 0x708	
+	
+	// Datamap fields:
+	// void InputReload; // 0x0
+	// void CRevertSavedLoadThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13243,6 +14114,9 @@ public:
 	CUtlVector< CHandle< CSceneListManager > > m_hListManagers; // 0x4b0	
 	CUtlSymbolLarge m_iszScenes[16]; // 0x4c8	
 	CHandle< CBaseEntity > m_hScenes[16]; // 0x548	
+	
+	// Datamap fields:
+	// void InputShutdown; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13361,6 +14235,39 @@ public:
 	
 	// Static fields:
 	static int32_t &Get_s_nSceneFlushCounter(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CSceneEntity")->m_static_fields[0]->m_instance);};
+	
+	// Datamap fields:
+	// void m_pScene; // 0x598
+	// void m_pRecipientFilter; // 0xa00
+	// void InputStartPlayback; // 0x0
+	// void InputPausePlayback; // 0x0
+	// void InputResumePlayback; // 0x0
+	// void InputCancelPlayback; // 0x0
+	// void InputCancelAtNextInterrupt; // 0x0
+	// float InputPitchShiftPlayback; // 0x0
+	// CUtlSymbolLarge InputInterjectResponse; // 0x0
+	// void InputStopWaitingForActor; // 0x0
+	// int32_t InputTriggerEvent; // 0x0
+	// CUtlSymbolLarge InputSetTarget1; // 0x0
+	// CUtlSymbolLarge InputSetTarget2; // 0x0
+	// void InputScriptPlayerDeath; // 0x0
+	// void InputPauseAtNextInterrupt; // 0x0
+	// void m_OnTrigger[ 0 ]; // 0x670
+	// void m_OnTrigger[ 1 ]; // 0x698
+	// void m_OnTrigger[ 2 ]; // 0x6c0
+	// void m_OnTrigger[ 3 ]; // 0x6e8
+	// void m_OnTrigger[ 4 ]; // 0x710
+	// void m_OnTrigger[ 5 ]; // 0x738
+	// void m_OnTrigger[ 6 ]; // 0x760
+	// void m_OnTrigger[ 7 ]; // 0x788
+	// void m_OnTrigger[ 8 ]; // 0x7b0
+	// void m_OnTrigger[ 9 ]; // 0x7d8
+	// void m_OnTrigger[ 10 ]; // 0x800
+	// void m_OnTrigger[ 11 ]; // 0x828
+	// void m_OnTrigger[ 12 ]; // 0x850
+	// void m_OnTrigger[ 13 ]; // 0x878
+	// void m_OnTrigger[ 14 ]; // 0x8a0
+	// void m_OnTrigger[ 15 ]; // 0x8c8
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13447,6 +14354,14 @@ public:
 	CTransform m_matOtherToMain; // 0x790	
 	CHandle< CBaseEntity > m_hInteractionMainEntity; // 0x7b0	
 	int32_t m_iPlayerDeathBehavior; // 0x7b4	
+	
+	// Datamap fields:
+	// void CScriptedSequenceScriptThink; // 0x0
+	// void InputMoveToPosition; // 0x0
+	// void InputBeginSequence; // 0x0
+	// void InputCancelSequence; // 0x0
+	// CUtlSymbolLarge InputSetActionSequence; // 0x0
+	// void InputScriptPlayerDeath; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13472,6 +14387,18 @@ private:
 public:
 	CUtlSymbolLarge m_OpvarValueString; // 0x4e0	
 	bool m_bSetOnSpawn; // 0x4e8	
+	
+	// Datamap fields:
+	// uint64_t InputSetEventGuid; // 0x0
+	// CUtlSymbolLarge InputSetStackName; // 0x0
+	// CUtlSymbolLarge InputSetOperatorName; // 0x0
+	// CUtlSymbolLarge InputSetOpvarName; // 0x0
+	// int32_t InputSetOpvarIndex; // 0x0
+	// void InputSetOpvar; // 0x0
+	// float InputChangeOpvarValue; // 0x0
+	// float InputChangeOpvarValueAndSet; // 0x0
+	// void m_nGUID; // 0x4b0
+	// void m_LastOpvarValueString; // 0x4f0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13493,6 +14420,11 @@ private:
 	[[maybe_unused]] uint8_t __pad04c4[0x4]; // 0x4c4
 public:
 	CUtlSymbolLarge m_iszProxyEntityName; // 0x4c8	
+	
+	// Datamap fields:
+	// int32_t InputInsertSound; // 0x0
+	// void InputEmitAISound; // 0x0
+	// void InputStopAISound; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13542,6 +14474,16 @@ private:
 	[[maybe_unused]] uint8_t __pad0548[0x8]; // 0x548
 public:
 	CEntityHandle m_hSource; // 0x550	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputSetSoundName; // 0x0
+	// CUtlSymbolLarge InputSetSourceEntity; // 0x0
+	// CUtlSymbolLarge InputStartSound; // 0x0
+	// bool InputPauseSound; // 0x0
+	// bool InputUnPauseSound; // 0x0
+	// void InputStopSound; // 0x0
+	// void m_nGUID; // 0x548
+	// void CSoundEventEntitySoundFinishedThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13582,6 +14524,9 @@ class CSoundEventOBBEntity : public CSoundEventEntity
 public:
 	Vector m_vMins; // 0x558	
 	Vector m_vMaxs; // 0x564	
+	
+	// Datamap fields:
+	// void CSoundEventOBBEntitySoundEventOBBThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13600,6 +14545,10 @@ public:
 	float m_flDistMaxSqr; // 0x568	
 	float m_flDotProductMax; // 0x56c	
 	bool bPlaying; // 0x570	
+	
+	// Datamap fields:
+	// void CSoundEventPathCornerEntitySoundEventPathCornerThink; // 0x0
+	// void m_vecPathCornerPairs; // 0x578
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13616,6 +14565,12 @@ private:
 public:
 	CUtlSymbolLarge m_iszParamName; // 0x4b8	
 	float m_flFloatValue; // 0x4c0	
+	
+	// Datamap fields:
+	// uint64_t InputSetEventGuid; // 0x0
+	// CUtlSymbolLarge InputSetParamName; // 0x0
+	// float InputSetFloatValue; // 0x0
+	// void m_nGUID; // 0x4b0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13763,6 +14718,11 @@ public:
 	// MNetworkMinValue "0.000000"
 	// MNetworkMaxValue "1.000000"
 	float m_flFarZScale; // 0x740	
+	
+	// Datamap fields:
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// Color InputSetColor; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13799,6 +14759,11 @@ public:
 	CUtlSymbolLarge m_engineSoundName; // 0x4d8	
 	CUtlSymbolLarge m_movementSoundName; // 0x4e0	
 	CUtlSymbolLarge m_targetEntityName; // 0x4e8	
+	
+	// Datamap fields:
+	// void m_soundTreads; // 0x4c0
+	// void m_soundEngine; // 0x4c8
+	// CUtlSymbolLarge InputTargetEntity; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13893,6 +14858,9 @@ class CAI_ChangeTarget : public CBaseEntity
 {
 public:
 	CUtlSymbolLarge m_iszNewTarget; // 0x4b0	
+	
+	// Datamap fields:
+	// void InputActivate; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13912,6 +14880,9 @@ public:
 	CUtlSymbolLarge m_strSearchName; // 0x4b8	
 	CUtlSymbolLarge m_strNewHintGroup; // 0x4c0	
 	float m_flRadius; // 0x4c8	
+	
+	// Datamap fields:
+	// void InputActivate; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13959,6 +14930,14 @@ public:
 	float m_flTimeoutInterval; // 0x570	
 	bool m_bStreamingStarted; // 0x574	
 	bool m_bUnloadingStarted; // 0x575	
+	
+	// Datamap fields:
+	// void CInfoSpawnGroupLoadUnloadSpawnGroupLoadingThink; // 0x0
+	// void CInfoSpawnGroupLoadUnloadSpawnGroupUnloadingThink; // 0x0
+	// void InputStartSpawnGroupLoad; // 0x0
+	// void InputActivateSpawnGroup; // 0x0
+	// void InputStartSpawnGroupUnload; // 0x0
+	// CUtlSymbolLarge InputSetSpawnGroup; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13976,6 +14955,9 @@ public:
 	CUtlSymbolLarge m_sNameFixupStaticPrefix; // 0x5c8	
 	CUtlSymbolLarge m_sNameFixupParent; // 0x5d0	
 	CUtlSymbolLarge m_sNameFixupLocal; // 0x5d8	
+	
+	// Datamap fields:
+	// void CPointPulseCallPulse_OnThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14028,6 +15010,21 @@ public:
 	CUtlSymbolLarge m_sSourceEntName; // 0x530	
 	CHandle< CBaseEntity > m_hSoundSource; // 0x538	
 	CEntityIndex m_nSoundSourceEntIndex; // 0x53c	
+	
+	// Datamap fields:
+	// void m_nGUID; // 0x540
+	// void CAmbientGenericRampThink; // 0x0
+	// void InputPlaySound; // 0x0
+	// void InputStopSound; // 0x0
+	// void InputToggleSound; // 0x0
+	// float InputPitch; // 0x0
+	// float InputVolume; // 0x0
+	// float InputFadeIn; // 0x0
+	// float InputFadeOut; // 0x0
+	// int32_t fadein; // 0x7fffffff
+	// int32_t fadeout; // 0x7fffffff
+	// int32_t fadeinsecs; // 0x7fffffff
+	// int32_t fadeoutsecs; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14130,6 +15127,25 @@ private:
 public:
 	// MNetworkEnable
 	CUtlSymbolLarge m_szDisplayText; // 0x8c0	
+	
+	// Datamap fields:
+	//  m_ls.sLockedSound; // 0x798
+	//  m_ls.sUnlockedSound; // 0x7a0
+	// void CBaseButtonButtonTouch; // 0x0
+	// void CBaseButtonButtonSpark; // 0x0
+	// void CBaseButtonTriggerAndWait; // 0x0
+	// void CBaseButtonButtonReturn; // 0x0
+	// void CBaseButtonButtonBackHome; // 0x0
+	// void CBaseButtonButtonUse; // 0x0
+	// void CBaseButtonActivateTouch; // 0x0
+	// void InputLock; // 0x0
+	// void InputUnlock; // 0x0
+	// void InputPress; // 0x0
+	// void InputPressIn; // 0x0
+	// void InputPressOut; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// CUtlString displaytext; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14142,6 +15158,11 @@ public:
 class CPhysicalButton : public CBaseButton
 {
 public:
+	// Datamap fields:
+	// void CPhysicalButtonPhysicsThink; // 0x0
+	// void CPhysicalButtonButtonTouch; // 0x0
+	// void CPhysicalButtonTriggerAndWait; // 0x0
+	// void CPhysicalButtonButtonBackHome; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14183,6 +15204,17 @@ public:
 	int32_t m_direction; // 0x9bc	
 	float m_returnSpeed; // 0x9c0	
 	float m_flStartPosition; // 0x9c4	
+	
+	// Datamap fields:
+	// bool m_bSolidBsp; // 0x7d0
+	// void CMomentaryRotButtonUseMoveDone; // 0x0
+	// void CMomentaryRotButtonReturnMoveDone; // 0x0
+	// void CMomentaryRotButtonSetPositionMoveDone; // 0x0
+	// void CMomentaryRotButtonUpdateThink; // 0x0
+	// float InputSetPosition; // 0x0
+	// float InputSetPositionImmediately; // 0x0
+	// void InputDisableUpdateTarget; // 0x0
+	// void InputEnableUpdateTarget; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14202,6 +15234,10 @@ public:
 	float m_radius; // 0x4b4	
 	float m_force; // 0x4b8	
 	Vector m_axis; // 0x4bc	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14251,6 +15287,25 @@ public:
 	bool m_isChaining; // 0x981	
 	// MNetworkEnable
 	bool m_bIsUsable; // 0x982	
+	
+	// Datamap fields:
+	// void m_nMovingSoundGUID; // 0x96c
+	//  m_ls.sLockedSound; // 0x7b0
+	//  m_ls.sUnlockedSound; // 0x7b8
+	// void InputOpen; // 0x0
+	// void InputClose; // 0x0
+	// void InputToggle; // 0x0
+	// void InputLock; // 0x0
+	// void InputUnlock; // 0x0
+	// float InputSetSpeed; // 0x0
+	// float InputSetToggleState; // 0x0
+	// void CBaseDoorDoorTouch; // 0x0
+	// void CBaseDoorDoorGoUp; // 0x0
+	// void CBaseDoorDoorGoDown; // 0x0
+	// void CBaseDoorDoorHitTop; // 0x0
+	// void CBaseDoorDoorHitBottom; // 0x0
+	// void CBaseDoorMovingSoundThink; // 0x0
+	// void CBaseDoorCloseAreaPortalsThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14305,6 +15360,11 @@ public:
 	Vector m_vDissolverOrigin; // 0x720	
 	// MNetworkEnable
 	uint32_t m_nMagnitude; // 0x72c	
+	
+	// Datamap fields:
+	// void CEntityDissolveDissolveThink; // 0x0
+	// void CEntityDissolveElectrocuteThink; // 0x0
+	// CUtlSymbolLarge InputDissolve; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14424,6 +15484,23 @@ public:
 	float m_flRotation; // 0x95c	
 	// MNetworkEnable
 	bool m_bFlipHorizontal; // 0x960	
+	
+	// Datamap fields:
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// void InputAlwaysUpdateOn; // 0x0
+	// void InputAlwaysUpdateOff; // 0x0
+	// float InputSetFOV; // 0x0
+	// CHandle< CBaseEntity > InputSetTarget; // 0x0
+	// bool InputSetCameraSpace; // 0x0
+	// bool InputSetLightOnlyTarget; // 0x0
+	// bool InputSetLightWorld; // 0x0
+	// bool InputSetEnableShadows; // 0x0
+	// Color InputSetLightColor; // 0x0
+	// float InputSetLightIntensity; // 0x0
+	// float InputSetAmbient; // 0x0
+	// CUtlSymbolLarge InputSetSpotlightTexture; // 0x0
+	// void CEnvProjectedTextureInitialThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14490,6 +15567,9 @@ private:
 public:
 	CUtlSymbolLarge m_sNoise; // 0x4c8	
 	CEntityIOOutput m_OnShowMessage; // 0x4d0	
+	
+	// Datamap fields:
+	// void InputShowMessage; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14531,6 +15611,11 @@ public:
 	CEntityIOOutput m_OnHeardSound; // 0x540	
 	char m_szLastSound[256]; // 0x568	
 	int32_t m_iLastRoutedFrame; // 0x668	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// CUtlSymbolLarge InputSetSpeakerName; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14569,6 +15654,17 @@ public:
 	PerformanceMode_t m_PerformanceMode; // 0x7b4	
 	CHandle< CBasePlayerPawn > m_hPhysicsAttacker; // 0x7b8	
 	GameTime_t m_flLastPhysicsInfluenceTime; // 0x7bc	
+	
+	// Datamap fields:
+	// void InputBreak; // 0x0
+	// int32_t InputSetHealth; // 0x0
+	// int32_t InputAddHealth; // 0x0
+	// int32_t InputRemoveHealth; // 0x0
+	// float InputSetMass; // 0x0
+	// void CBreakableDie; // 0x0
+	// int32_t material; // 0x7fffffff
+	// int32_t spawnobject; // 0x7fffffff
+	// int32_t propdata; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14603,6 +15699,19 @@ public:
 	CEntityIOOutput m_OnFullyClosed; // 0x7f8	
 	bool m_bCreateMovableNavMesh; // 0x820	
 	bool m_bCreateNavObstacle; // 0x821	
+	
+	// Datamap fields:
+	// void CFuncMoveLinearNavObstacleThink; // 0x0
+	// void CFuncMoveLinearNavMovableThink; // 0x0
+	// void InputOpen; // 0x0
+	// void InputClose; // 0x0
+	// float InputSetPosition; // 0x0
+	// float InputSetSpeed; // 0x0
+	// CUtlSymbolLarge InputTeleportToTarget; // 0x0
+	// float InputResetPosition; // 0x0
+	// float InputSetMoveDistanceFromStart; // 0x0
+	// float InputSetMoveDistanceFromEnd; // 0x0
+	// void CFuncMoveLinearStopMoveSound; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14637,6 +15746,27 @@ private:
 public:
 	Vector m_vecClientOrigin; // 0x74c	
 	QAngle m_vecClientAngles; // 0x758	
+	
+	// Datamap fields:
+	// void CFuncRotatingSpinUpMove; // 0x0
+	// void CFuncRotatingSpinDownMove; // 0x0
+	// void CFuncRotatingHurtTouch; // 0x0
+	// void CFuncRotatingRotatingUse; // 0x0
+	// void CFuncRotatingRotateMove; // 0x0
+	// void CFuncRotatingReverseMove; // 0x0
+	// float InputSetSpeed; // 0x0
+	// void InputStart; // 0x0
+	// void InputStop; // 0x0
+	// void InputToggle; // 0x0
+	// void InputReverse; // 0x0
+	// void InputStartForward; // 0x0
+	// void InputStartBackward; // 0x0
+	// void InputStopAtStartPos; // 0x0
+	// void InputSnapToStartPos; // 0x0
+	// Vector InputSetStartPos; // 0x0
+	// void m_nNoiseRunningGuid; // 0x734
+	// int32_t fanfriction; // 0x7fffffff
+	// int32_t Volume; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14650,6 +15780,9 @@ class CItemGenericTriggerHelper : public CBaseModelEntity
 {
 public:
 	CHandle< CItemGeneric > m_hParentItem; // 0x700	
+	
+	// Datamap fields:
+	// void CItemGenericTriggerHelperItemGenericTriggerHelperTouch; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14688,6 +15821,10 @@ public:
 class CGamePlayerEquip : public CRulePointEntity
 {
 public:
+	// Datamap fields:
+	// CUtlString weapon%d[32]; // 0x7fffffff
+	// void InputTriggerForAllPlayers; // 0x0
+	// CUtlSymbolLarge InputTriggerForActivatedPlayer; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14701,6 +15838,10 @@ class CMarkupVolume : public CBaseModelEntity
 {
 public:
 	bool m_bEnabled; // 0x700	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14720,6 +15861,10 @@ public:
 	bool m_bGroupByVolume; // 0x73a	
 	bool m_bGroupOtherGroups; // 0x73b	
 	bool m_bIsInGroup; // 0x73c	
+	
+	// Datamap fields:
+	// void m_GroupNames; // 0x708
+	// void m_Tags; // 0x720
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14759,6 +15904,15 @@ public:
 	CUtlSymbolLarge m_iszExcludedClass; // 0x710	
 	bool m_bInvertExclusion; // 0x718	
 	bool m_bScriptedMovement; // 0x719	
+	
+	// Datamap fields:
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// void InputToggle; // 0x0
+	// CUtlSymbolLarge InputSetExcluded; // 0x0
+	// bool InputSetInvert; // 0x0
+	// void InputSetSolid; // 0x0
+	// void InputSetNonsolid; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14784,6 +15938,15 @@ public:
 	// Static fields:
 	static int32_t &Get_s_nCurrIterVal(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CPathTrack")->m_static_fields[0]->m_instance);};
 	static bool &Get_s_bIsIterating(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CPathTrack")->m_static_fields[1]->m_instance);};
+	
+	// Datamap fields:
+	// void InputPass; // 0x0
+	// void InputEnableAlternatePath; // 0x0
+	// void InputDisableAlternatePath; // 0x0
+	// void InputToggleAlternatePath; // 0x0
+	// void InputEnablePath; // 0x0
+	// void InputDisablePath; // 0x0
+	// void InputTogglePath; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14814,6 +15977,14 @@ public:
 	CEntityIOOutput m_OnPlayerUse; // 0x860	
 	CEntityIOOutput m_OnStartTouch; // 0x888	
 	CHandle< CBasePlayerPawn > m_hCarryingPlayer; // 0x8b0	
+	
+	// Datamap fields:
+	// void InputWake; // 0x0
+	// void InputSleep; // 0x0
+	// void InputEnableMotion; // 0x0
+	// void InputDisableMotion; // 0x0
+	// void InputForceDrop; // 0x0
+	// void InputDisableFloating; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14841,6 +16012,9 @@ private:
 	[[maybe_unused]] uint8_t __pad04d1[0x7]; // 0x4d1
 public:
 	CEntityIOOutput m_OnPushedPlayer; // 0x4d8	
+	
+	// Datamap fields:
+	// void InputExplode; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14856,6 +16030,10 @@ public:
 	float m_damage; // 0x4b0	
 	float m_distance; // 0x4b4	
 	CUtlSymbolLarge m_directionEntityName; // 0x4b8	
+	
+	// Datamap fields:
+	// void CPhysImpactPointAtEntity; // 0x0
+	// void InputImpact; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -14948,6 +16126,19 @@ public:
 	AttachmentHandle_t m_iStartAttachment; // 0x750	
 	// MNetworkEnable
 	AttachmentHandle_t m_iEndAttachment; // 0x751	
+	
+	// Datamap fields:
+	// float InputSetScrollSpeed; // 0x0
+	// Vector InputSetForce; // 0x0
+	// void InputBreak; // 0x0
+	// int32_t Breakable; // 0x7fffffff
+	// int32_t Collide; // 0x7fffffff
+	// int32_t Barbed; // 0x7fffffff
+	// int32_t UseWind; // 0x7fffffff
+	// int32_t Dangling; // 0x7fffffff
+	// int32_t Type; // 0x7fffffff
+	// int32_t RopeShader; // 0x7fffffff
+	// CUtlString RopeMaterial; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15046,6 +16237,29 @@ private:
 public:
 	float m_flTimeScale; // 0x848	
 	GameTime_t m_flNextMPSoundTime; // 0x84c	
+	
+	// Datamap fields:
+	// int64_t m_soundMoveGuid; // 0x7ac
+	// void InputStop; // 0x0
+	// void InputStartForward; // 0x0
+	// void InputStartBackward; // 0x0
+	// void InputToggle; // 0x0
+	// void InputResume; // 0x0
+	// void InputReverse; // 0x0
+	// float InputSetSpeed; // 0x0
+	// float InputSetSpeedDir; // 0x0
+	// float InputSetSpeedReal; // 0x0
+	// float InputSetMaxSpeed; // 0x0
+	// float InputSetSpeedDirAccel; // 0x0
+	// CUtlSymbolLarge InputMoveToPathNode; // 0x0
+	// CUtlSymbolLarge InputTeleportToPathNode; // 0x0
+	// void InputLockOrientation; // 0x0
+	// void InputUnlockOrientation; // 0x0
+	// void CFuncTrackTrainNext; // 0x0
+	// void CFuncTrackTrainFind; // 0x0
+	// void CFuncTrackTrainNearestPath; // 0x0
+	// void CFuncTrackTrainDeadEnd; // 0x0
+	// int32_t volume; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15080,6 +16294,15 @@ public:
 	CUtlVector< CHandle< CBaseEntity > > m_hTouchingEntities; // 0x888	
 	// MNetworkEnable
 	bool m_bClientSidePredicted; // 0x8a0	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// void InputToggle; // 0x0
+	// void InputTouchTest; // 0x0
+	// void InputStartTouch; // 0x0
+	// void InputEndTouch; // 0x0
+	// bool okifnomodel; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15093,6 +16316,10 @@ class CTriggerMultiple : public CBaseTrigger
 {
 public:
 	CEntityIOOutput m_OnTrigger; // 0x8a8	
+	
+	// Datamap fields:
+	// void CTriggerMultipleMultiTouch; // 0x0
+	// void CTriggerMultipleMultiWaitOver; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15126,6 +16353,12 @@ private:
 public:
 	Vector m_VecNormPos; // 0xbfc	
 	float m_flNormCenterSize; // 0xc08	
+	
+	// Datamap fields:
+	// void CTriggerSndSosOpvarSndSosTriggerOpvarWaitOver; // 0x0
+	// void m_opvarNameChar; // 0x8f9
+	// void m_stackNameChar; // 0x9f9
+	// void m_operatorNameChar; // 0xaf9
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15161,6 +16394,11 @@ public:
 	CEntityIOOutput m_OnHurt; // 0x8e0	
 	CEntityIOOutput m_OnHurtPlayer; // 0x908	
 	CUtlVector< CHandle< CBaseEntity > > m_hurtEntities; // 0x930	
+	
+	// Datamap fields:
+	// void CTriggerHurtRadiationThink; // 0x0
+	// void CTriggerHurtHurtThink; // 0x0
+	// void CTriggerHurtNavThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15218,6 +16456,9 @@ public:
 	CUtlSymbolLarge m_iszLerpSound; // 0x8f0	
 	CEntityIOOutput m_OnLerpStarted; // 0x8f8	
 	CEntityIOOutput m_OnLerpFinished; // 0x920	
+	
+	// Datamap fields:
+	// void CTriggerLerpObjectLerpThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15237,6 +16478,11 @@ public:
 	bool m_bNoTouch; // 0x8e1	
 	bool m_bNewChapter; // 0x8e2	
 	bool m_bOnChangeLevelFired; // 0x8e3	
+	
+	// Datamap fields:
+	// void InputChangeLevel; // 0x0
+	// CUtlString map; // 0x7fffffff
+	// CUtlString landmark; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15278,6 +16524,9 @@ private:
 	[[maybe_unused]] uint8_t __pad08dc[0x4]; // 0x8dc
 public:
 	CountdownTimer m_RampTimer; // 0x8e0	
+	
+	// Datamap fields:
+	// void CTriggerFanPushThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15307,6 +16556,10 @@ private:
 	[[maybe_unused]] uint8_t __pad0701[0x3]; // 0x701
 public:
 	int32_t m_nBlockedTeamNumber; // 0x704	
+	
+	// Datamap fields:
+	// void InputBlockNav; // 0x0
+	// void InputUnblockNav; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15341,6 +16594,10 @@ public:
 	CEntityIOOutput m_OnNavLinkStart; // 0x500	
 	CEntityIOOutput m_OnNavLinkFinish; // 0x528	
 	bool m_bIsTerminus; // 0x550	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15475,6 +16732,13 @@ public:
 	Vector m_vecEndPos; // 0x78c	
 	CHandle< CBaseEntity > m_hEndEntity; // 0x798	
 	int32_t m_nDissolveType; // 0x79c	
+	
+	// Datamap fields:
+	// float InputWidth; // 0x0
+	// float InputNoise; // 0x0
+	// float InputColorRedValue; // 0x0
+	// float InputColorGreenValue; // 0x0
+	// float InputColorBlueValue; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15521,6 +16785,10 @@ public:
 	
 	// Static fields:
 	static CUtlVector< CFuncLadder* > &Get_s_Ladders(){return *reinterpret_cast<CUtlVector< CFuncLadder* >*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CFuncLadder")->m_static_fields[0]->m_instance);};
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15571,6 +16839,12 @@ private:
 	[[maybe_unused]] uint8_t __pad0850[0x1]; // 0x850
 public:
 	uint8_t m_iSurfaceType; // 0x851	
+	
+	// Datamap fields:
+	// void CFuncShatterglassGlassThink; // 0x0
+	// void InputHit; // 0x0
+	// void InputShatter; // 0x0
+	// void InputRestore; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15676,6 +16950,18 @@ public:
 	GameTime_t m_flBrightnessTimeStart; // 0x760	
 	int32_t m_nSpriteWidth; // 0x764	
 	int32_t m_nSpriteHeight; // 0x768	
+	
+	// Datamap fields:
+	// void CSpriteAnimateThink; // 0x0
+	// void CSpriteExpandThink; // 0x0
+	// void CSpriteAnimateUntilDead; // 0x0
+	// void CSpriteBeginFadeOutThink; // 0x0
+	// void InputHideSprite; // 0x0
+	// void InputShowSprite; // 0x0
+	// void InputToggleSprite; // 0x0
+	// float InputColorRedValue; // 0x0
+	// float InputColorGreenValue; // 0x0
+	// float InputColorBlueValue; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15725,6 +17011,10 @@ public:
 	CEntityIOOutput m_CustomOutput7; // 0x838	
 	CEntityIOOutput m_CustomOutput8; // 0x860	
 	CEntityIOOutput m_CustomOutput9; // 0x888	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15829,6 +17119,14 @@ public:
 	bool m_bDisableMipGen; // 0x8ff	
 	// MNetworkEnable
 	int32_t m_nExplicitImageLayout; // 0x900	
+	
+	// Datamap fields:
+	// void InputIgnoreUserInput; // 0x0
+	// void InputAcceptUserInput; // 0x0
+	// CUtlSymbolLarge InputAddCSSClass; // 0x0
+	// CUtlSymbolLarge InputRemoveCSSClass; // 0x0
+	// CUtlSymbolLarge InputLocalPlayerAddCSSClass; // 0x0
+	// CUtlSymbolLarge InputLocalPlayerRemoveCSSClass; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15844,6 +17142,11 @@ class CPointClientUIWorldTextPanel : public CPointClientUIWorldPanel
 public:
 	// MNetworkEnable
 	char m_messageText[512]; // 0x908	
+	
+	// Datamap fields:
+	// void InputToggle; // 0x0
+	// CUtlSymbolLarge InputSetMessage; // 0x0
+	// int32_t InputSetIntMessage; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15891,6 +17194,12 @@ public:
 	CNetworkUtlVectorBase< CUtlSymbolLarge > m_vecCSSClasses; // 0x4f0	
 	CUtlSymbolLarge m_szTargetsName; // 0x508	
 	CUtlVector< CHandle< CBaseModelEntity > > m_AdditionalTargetEntities; // 0x510	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// CUtlSymbolLarge InputAddCSSClass; // 0x0
+	// CUtlSymbolLarge InputRemoveCSSClass; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15969,6 +17278,9 @@ class CPointGiveAmmo : public CPointEntity
 {
 public:
 	CHandle< CBaseEntity > m_pActivator; // 0x4b0	
+	
+	// Datamap fields:
+	// void InputGiveAmmo; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -15995,6 +17307,13 @@ public:
 	CUtlSymbolLarge m_szMountTarget; // 0x928	
 	CHandle< CBaseEntity > m_hInstructorHint; // 0x930	
 	int32_t m_nBombSiteDesignation; // 0x934	
+	
+	// Datamap fields:
+	// void CBombTargetCBombTargetShim::Touch; // 0x0
+	// void CBombTargetCBombTargetShim::BombTargetUse; // 0x0
+	// void OnBombExplode; // 0x0
+	// void OnBombPlanted; // 0x0
+	// void OnBombDefused; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -16071,6 +17390,9 @@ public:
 	CBuoyancyHelper m_BuoyancyHelper; // 0x8a8	
 	// MNetworkEnable
 	float m_flFluidDensity; // 0x8c8	
+	
+	// Datamap fields:
+	// float InputSetFluidDensity; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -16346,6 +17668,12 @@ public:
 	GameTime_t m_LastTimePlayerWasDisconnectedForPawnsRemove; // 0xf904	
 	uint32_t m_nSuspiciousHitCount; // 0xf908	
 	uint32_t m_nNonSuspiciousHitStreak; // 0xf90c	
+	
+	// Datamap fields:
+	// void CCSPlayerControllerPlayerForceTeamThink; // 0x0
+	// void CCSPlayerControllerResetForceTeamThink; // 0x0
+	// void CCSPlayerControllerResourceDataThink; // 0x0
+	// void CCSPlayerControllerInventoryUpdateThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -16522,6 +17850,12 @@ class CPointGamestatsCounter : public CPointEntity
 public:
 	CUtlSymbolLarge m_strStatisticName; // 0x4b0	
 	bool m_bDisabled; // 0x4b8	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputSetName; // 0x0
+	// float InputIncrement; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -16535,6 +17869,10 @@ class CEnvHudHint : public CPointEntity
 {
 public:
 	CUtlSymbolLarge m_iszMessage; // 0x4b0	
+	
+	// Datamap fields:
+	// void InputShowHudHint; // 0x0
+	// void InputHideHudHint; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -16548,6 +17886,13 @@ class CBuyZone : public CBaseTrigger
 {
 public:
 	int32_t m_LegacyTeamNum; // 0x8a8	
+	
+	// Datamap fields:
+	// void CBuyZoneBuyZoneTouch; // 0x0
+	// void InputSetTeam_TerroristOnly; // 0x0
+	// void InputSetTeam_CTOnly; // 0x0
+	// void InputSetTeam_AllTeams; // 0x0
+	// void InputSetTeam_None; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -16586,6 +17931,11 @@ private:
 public:
 	// MNetworkEnable
 	CNetworkUtlVectorBase< CHandle< CBaseEntity > > m_hConveyorModels; // 0x738	
+	
+	// Datamap fields:
+	// void InputToggleDirection; // 0x0
+	// float InputSetSpeed; // 0x0
+	// float InputSetTransitionDuration; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -16644,6 +17994,13 @@ private:
 	[[maybe_unused]] uint8_t __pad0764[0x4]; // 0x764
 public:
 	CUtlString m_strAwardText; // 0x768	
+	
+	// Datamap fields:
+	// int32_t InputSetMoneyAmount; // 0x0
+	// void InputAddTeamMoneyTerrorist; // 0x0
+	// void InputAddTeamMoneyCT; // 0x0
+	// void InputAddMoneyPlayer; // 0x0
+	// void InputSpendMoneyFromPlayer; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -17014,6 +18371,15 @@ public:
 	// MNetworkChangeCallback "RenderingChanged"
 	Vector m_vPrecomputedOBBExtent; // 0x910	
 	bool m_bPvsModifyEntity; // 0x91c	
+	
+	// Datamap fields:
+	// void m_StyleEvent[0]; // 0x788
+	// void m_StyleEvent[1]; // 0x7b0
+	// void m_StyleEvent[2]; // 0x7d8
+	// void m_StyleEvent[3]; // 0x800
+	// void CBarnLightThink_SetNextQueuedLightStyle; // 0x0
+	// void CBarnLightThink_ApplyLightStylesToTargets; // 0x0
+	// void CBarnLightThink_LightStyleEvent; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -17129,6 +18495,9 @@ public:
 	float m_flBotMaxVisionDistance; // 0x4c0	
 	int32_t m_iHostageCount; // 0x4c4	
 	bool m_bFadePlayerVisibilityFarZ; // 0x4c8	
+	
+	// Datamap fields:
+	// int32_t InputFireWinCondition; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -17421,6 +18790,12 @@ private:
 public:
 	bool m_bDisabled; // 0x720	
 	bool m_bInFogVolumesList; // 0x721	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// CHandle< CBaseEntity > m_hFogController; // 0x718
+	// CHandle< CBaseEntity > m_hColorCorrectionController; // 0x71c
 };
 
 // Registered binary: server.dll (project 'server')
@@ -17444,6 +18819,10 @@ public:
 	
 	// Static fields:
 	static CUtlVector< CInfoDynamicShadowHint* > &Get_m_AllHints(){return *reinterpret_cast<CUtlVector< CInfoDynamicShadowHint* >*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CInfoDynamicShadowHint")->m_static_fields[0]->m_instance);};
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -17560,6 +18939,16 @@ class CFogTrigger : public CBaseTrigger
 {
 public:
 	fogparams_t m_fog; // 0x8a8	
+	
+	// Datamap fields:
+	// Color m_fog.colorPrimary; // 0x8bc
+	// Color m_fog.colorSecondary; // 0x8c0
+	// Vector m_fog.dirPrimary; // 0x8b0
+	// bool m_fog.enable; // 0x90c
+	// bool m_fog.blend; // 0x90d
+	// float m_fog.start; // 0x8cc
+	// float m_fog.end; // 0x8d0
+	// float m_fog.farz; // 0x8d4
 };
 
 // Registered binary: server.dll (project 'server')
@@ -17718,6 +19107,11 @@ public:
 	Color m_ColorTint; // 0xc84	
 	// MNetworkEnable
 	CStrongHandle< InfoForResourceTypeCTextureBase > m_hTextureOverride; // 0xc88	
+	
+	// Datamap fields:
+	// float InputSetScale; // 0x0
+	// float InputSetAlphaScale; // 0x0
+	// Color InputSetColorTint; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -17757,6 +19151,12 @@ public:
 	float m_flStartTime; // 0x730	
 	// MNetworkEnable
 	float m_flStartFrame; // 0x734	
+	
+	// Datamap fields:
+	// void InputStart; // 0x0
+	// void InputStop; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -17820,6 +19220,13 @@ public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnClientRagdollChanged"
 	bool m_bClientRagdoll; // 0x750	
+	
+	// Datamap fields:
+	// void CBaseAnimGraphChoreoServicesThink; // 0x0
+	// float InputSetPlaybackRate; // 0x0
+	// CUtlSymbolLarge InputSetBodyGroup; // 0x0
+	// void InputBecomeRagdoll; // 0x0
+	// CUtlSymbolLarge InputSetAnimGraphParameter; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -17842,6 +19249,10 @@ private:
 	[[maybe_unused]] uint8_t __pad0899[0x3]; // 0x899
 public:
 	matrix3x4_t m_mPreferredCatchTransform; // 0x89c	
+	
+	// Datamap fields:
+	// void health; // 0x7fffffff
+	// CUtlSymbolLarge propdata_override; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -17907,6 +19318,18 @@ public:
 	CUtlSymbolLarge m_iszPuntSound; // 0x9f8	
 	// MNetworkEnable
 	bool m_noGhostCollision; // 0xa00	
+	
+	// Datamap fields:
+	// void InputBreak; // 0x0
+	// int32_t InputSetHealth; // 0x0
+	// int32_t InputAddHealth; // 0x0
+	// int32_t InputRemoveHealth; // 0x0
+	// bool InputSetNavIgnore; // 0x0
+	// void InputEnablePuntSound; // 0x0
+	// void InputDisablePuntSound; // 0x0
+	// void CBreakablePropBreakThink; // 0x0
+	// void CBreakablePropRampToDefaultFadeScale; // 0x0
+	// uint32_t m_nExplosionType; // 0x9ac
 };
 
 // Registered binary: server.dll (project 'server')
@@ -17951,6 +19374,32 @@ public:
 	int32_t m_nGlowRangeMin; // 0xafc	
 	Color m_glowColor; // 0xb00	
 	int32_t m_nGlowTeam; // 0xb04	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputSetAnimationLooping; // 0x0
+	// CUtlSymbolLarge InputSetAnimationNoResetLooping; // 0x0
+	// CUtlSymbolLarge InputSetDefaultAnimationLooping; // 0x0
+	// CUtlSymbolLarge InputSetAnimationNotLooping; // 0x0
+	// CUtlSymbolLarge InputSetAnimationNoResetNotLooping; // 0x0
+	// CUtlSymbolLarge InputSetDefaultAnimationNotLooping; // 0x0
+	// CUtlSymbolLarge InputSetAnimation; // 0x0
+	// CUtlSymbolLarge InputSetAnimationNoReset; // 0x0
+	// CUtlSymbolLarge InputSetDefaultAnimation; // 0x0
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// void InputEnableCollision; // 0x0
+	// void InputDisableCollision; // 0x0
+	// float InputSetPlaybackRate; // 0x0
+	// void InputStartGlowing; // 0x0
+	// void InputStopGlowing; // 0x0
+	// Vector InputSetGlowOverride; // 0x0
+	// int32_t InputSetGlowRange; // 0x0
+	// void CDynamicPropAnimThink; // 0x0
+	// void CDynamicPropAnimgraphTickThink; // 0x0
+	// int32_t health; // 0x7fffffff
+	// bool HoldAnimation; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18025,6 +19474,11 @@ public:
 	GameTime_t m_LastEnterTime; // 0xac0	
 	float m_LastExitWeight; // 0xac4	
 	GameTime_t m_LastExitTime; // 0xac8	
+	
+	// Datamap fields:
+	// void CColorCorrectionVolumeThinkFunc; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18099,6 +19553,16 @@ public:
 	int32_t m_iNodeNumberMax; // 0x97c	
 	// MNetworkEnable
 	bool m_bListenedTo; // 0x980	
+	
+	// Datamap fields:
+	// void InputStartCommentary; // 0x0
+	// void InputStartUnstoppableCommentary; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// void CPointCommentaryNodeSpinThink; // 0x0
+	// void CPointCommentaryNodeUpdateViewThink; // 0x0
+	// void CPointCommentaryNodeUpdateViewPostThink; // 0x0
+	// void CPointCommentaryNodeAcculumatePlayTimeThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18191,6 +19655,15 @@ private:
 public:
 	CUtlSymbolLarge m_iszDecal; // 0x818	
 	CEntityIOOutput m_OnTouchedByEntity; // 0x820	
+	
+	// Datamap fields:
+	// int32_t m_nClipStyle; // 0x784
+	// void CEnvBeamStrikeThink; // 0x0
+	// void CEnvBeamUpdateThink; // 0x0
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// void InputToggle; // 0x0
+	// void InputStrikeOnce; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18255,6 +19728,12 @@ public:
 	// MNetworkEnable
 	bool m_bDraw3DSkybox; // 0x73d	
 	bool m_bStartEnabled; // 0x73e	
+	
+	// Datamap fields:
+	// void InputToggle; // 0x0
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
+	// CUtlSymbolLarge InputSetCamera; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18285,6 +19764,14 @@ private:
 public:
 	CHandle< CBaseEntity > m_hTargetEnt; // 0x784	
 	CEntityIOOutput m_OnDeath; // 0x788	
+	
+	// Datamap fields:
+	// void CGunTargetNext; // 0x0
+	// void CGunTargetStart; // 0x0
+	// void CGunTargetWait; // 0x0
+	// void InputStart; // 0x0
+	// void InputStop; // 0x0
+	// void InputToggle; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18306,6 +19793,10 @@ public:
 	CUtlString m_strEndTouchEventName; // 0x8b0	
 	// MNetworkEnable
 	CUtlString m_strTriggerID; // 0x8b8	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputSetStartTouchEvent; // 0x0
+	// CUtlSymbolLarge InputSetEndTouchEvent; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18344,6 +19835,12 @@ class CGameText : public CRulePointEntity
 public:
 	CUtlSymbolLarge m_iszMessage; // 0x710	
 	hudtextparms_t m_textParms; // 0x718	
+	
+	// Datamap fields:
+	// void InputDisplay; // 0x0
+	// CUtlSymbolLarge InputSetText; // 0x0
+	// Color color; // 0x7fffffff
+	// Color color2; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18360,6 +19857,9 @@ public:
 	CEntityIOOutput m_OnPlayerOutZone; // 0x730	
 	CEntityOutputTemplate< int32 > m_PlayersInCount; // 0x758	
 	CEntityOutputTemplate< int32 > m_PlayersOutCount; // 0x780	
+	
+	// Datamap fields:
+	// void InputCountPlayersInZone; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18415,6 +19915,10 @@ public:
 	CUtlSymbolLarge m_EffectInterpenetrateName; // 0x728	
 	CUtlSymbolLarge m_EffectZapName; // 0x730	
 	CUtlSymbolLarge m_iszEffectSource; // 0x738	
+	
+	// Datamap fields:
+	// void InputDisable; // 0x0
+	// void InputEnable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18453,6 +19957,10 @@ class COrnamentProp : public CDynamicProp
 {
 public:
 	CUtlSymbolLarge m_initialOwner; // 0xb08	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputSetAttached; // 0x0
+	// void InputDetach; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18515,6 +20023,9 @@ private:
 public:
 	CUtlSymbolLarge m_SoundscapeName; // 0x8b0	
 	CUtlVector< CHandle< CBasePlayerPawn > > m_spectators; // 0x8b8	
+	
+	// Datamap fields:
+	// void CTriggerSoundscapePlayerUpdateThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18560,6 +20071,10 @@ public:
 	float m_volume; // 0x798	
 	float m_flTWidth; // 0x79c	
 	float m_flTLength; // 0x7a0	
+	
+	// Datamap fields:
+	// void m_pMovementSound; // 0x790
+	// float rotation; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18573,6 +20088,15 @@ class CFuncPlat : public CBasePlatTrain
 {
 public:
 	CUtlSymbolLarge m_sNoise; // 0x7a8	
+	
+	// Datamap fields:
+	// void CFuncPlatPlatUse; // 0x0
+	// void CFuncPlatCallGoDown; // 0x0
+	// void CFuncPlatCallHitTop; // 0x0
+	// void CFuncPlatCallHitBottom; // 0x0
+	// void InputToggle; // 0x0
+	// void InputGoUp; // 0x0
+	// void InputGoDown; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18611,6 +20135,13 @@ private:
 	[[maybe_unused]] uint8_t __pad07bc[0x4]; // 0x7bc
 public:
 	CUtlSymbolLarge m_iszLastTarget; // 0x7c0	
+	
+	// Datamap fields:
+	// void CFuncTrainWait; // 0x0
+	// void CFuncTrainNext; // 0x0
+	// void InputToggle; // 0x0
+	// void InputStart; // 0x0
+	// void InputStop; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18632,6 +20163,9 @@ public:
 	TRAIN_CODE m_code; // 0x7f8	
 	int32_t m_targetState; // 0x7fc	
 	int32_t m_use; // 0x800	
+	
+	// Datamap fields:
+	// void CFuncTrackChangeFind; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18740,6 +20274,9 @@ public:
 	CEntityIOOutput m_OnTimeout; // 0x8f8	
 	CEntityIOOutput m_OnStartLook; // 0x920	
 	CEntityIOOutput m_OnEndLook; // 0x948	
+	
+	// Datamap fields:
+	// void CTriggerLookTimeoutThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18760,6 +20297,10 @@ private:
 public:
 	float m_flAlternateTicksFix; // 0x8c4	
 	float m_flPushSpeed; // 0x8c8	
+	
+	// Datamap fields:
+	// Vector InputSetPushDirection; // 0x0
+	// float InputSetPushSpeed; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18786,6 +20327,10 @@ class CTriggerToggleSave : public CBaseTrigger
 {
 public:
 	bool m_bDisabled; // 0x8a8	
+	
+	// Datamap fields:
+	// void InputEnable; // 0x0
+	// void InputDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18836,6 +20381,9 @@ public:
 	float m_fRadius; // 0x8b8	
 	int32_t m_nTouchers; // 0x8bc	
 	CEntityOutputTemplate< float32 > m_NearestEntityDistance; // 0x8c0	
+	
+	// Datamap fields:
+	// void CTriggerProximityMeasureThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18855,6 +20403,11 @@ private:
 	[[maybe_unused]] uint8_t __pad08dc[0x4]; // 0x8dc
 public:
 	CEntityOutputTemplate< Vector > m_pOutputForce; // 0x8e0	
+	
+	// Datamap fields:
+	// void InputImpact; // 0x0
+	// float InputSetMagnitude; // 0x0
+	// void CTriggerImpactDisable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18881,6 +20434,9 @@ class CTriggerActiveWeaponDetect : public CBaseTrigger
 public:
 	CEntityIOOutput m_OnTouchedActiveWeapon; // 0x8a8	
 	CUtlSymbolLarge m_iszWeaponClassName; // 0x8d0	
+	
+	// Datamap fields:
+	// void CTriggerActiveWeaponDetectActiveWeaponThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18911,6 +20467,10 @@ public:
 	Vector m_vecLinearForcePointAtWorld; // 0x8e8	
 	Vector m_vecLinearForceDirection; // 0x8f4	
 	bool m_bConvertToDebrisWhenPossible; // 0x900	
+	
+	// Datamap fields:
+	// void m_pController; // 0x8b0
+	// CUtlSymbolLarge InputSetLinearForcePointAt; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -18989,6 +20549,9 @@ public:
 	GameTime_t m_flLastFlexAnimationTime; // 0x90c	
 	uint32_t m_nNextSceneEventId; // 0x910	
 	bool m_bUpdateLayerPriorities; // 0x914	
+	
+	// Datamap fields:
+	// void CBaseFlexProcessSceneEventsThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -19079,6 +20642,24 @@ public:
 	CEntityIOOutput m_OnOpen; // 0xd20	
 	CEntityIOOutput m_OnLockedUse; // 0xd48	
 	CEntityIOOutput m_OnAjarOpen; // 0xd70	
+	
+	// Datamap fields:
+	// void m_hSoundMoving; // 0xb9c
+	//  m_ls.sLockedSound; // 0xb70
+	//  m_ls.sUnlockedSound; // 0xb78
+	// void InputOpen; // 0x0
+	// CUtlSymbolLarge InputOpenAwayFrom; // 0x0
+	// float InputOpenAwayFromActivator; // 0x0
+	// void InputClose; // 0x0
+	// void InputToggle; // 0x0
+	// void InputLock; // 0x0
+	// void InputUnlock; // 0x0
+	// void InputPlayerOpen; // 0x0
+	// void InputPlayerClose; // 0x0
+	// void CBasePropDoorDoorOpenMoveDone; // 0x0
+	// void CBasePropDoorDoorCloseMoveDone; // 0x0
+	// void CBasePropDoorDoorAutoCloseThink; // 0x0
+	// void CBasePropDoorDisableAreaPortalThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -19096,6 +20677,16 @@ public:
 	CUtlSymbolLarge m_iszSpriteName; // 0x7b0	
 	Vector m_firePosition; // 0x7b8	
 	float m_flStartFrame; // 0x7c4	
+	
+	// Datamap fields:
+	// void CEnvLaserStrikeThink; // 0x0
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// void InputToggle; // 0x0
+	// float width; // 0x7fffffff
+	// int32_t NoiseAmplitude; // 0x7fffffff
+	// int32_t TextureScroll; // 0x7fffffff
+	// CUtlString texture; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -19183,6 +20774,11 @@ public:
 	Vector m_vOriginalSpawnOrigin; // 0x940	
 	QAngle m_vOriginalSpawnAngles; // 0x94c	
 	bool m_bPhysStartAsleep; // 0x958	
+	
+	// Datamap fields:
+	// void CItemItemTouch; // 0x0
+	// void CItemMaterialize; // 0x0
+	// void CItemComeToRest; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -19259,6 +20855,22 @@ private:
 	[[maybe_unused]] uint8_t __pad0999[0x5f]; // 0x999
 public:
 	bool m_bValidatePoweredRagdollPose; // 0x9f8	
+	
+	// Datamap fields:
+	// void m_ragdoll.boneIndex; // 0x8b0
+	// void InputEnableMotion; // 0x0
+	// void InputDisableMotion; // 0x0
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
+	// float InputFadeAndRemove; // 0x0
+	// void CRagdollPropSetDebrisThink; // 0x0
+	// void CRagdollPropClearFlagsThink; // 0x0
+	// void CRagdollPropFadeOutThink; // 0x0
+	// void CRagdollPropSettleThink; // 0x0
+	// void CRagdollPropAttachedItemsThink; // 0x0
+	// void CRagdollPropRagdollTouch; // 0x0
+	// void m_ragdoll.list; // 0x898
+	// bool m_ragdoll.allowStretch; // 0x8c8
 };
 
 // Registered binary: server.dll (project 'server')
@@ -19289,6 +20901,11 @@ public:
 	float m_flRadius; // 0x910	
 	GameTime_t m_flNextSuckTime; // 0x914	
 	int32_t m_iMaxObjectsAttached; // 0x918	
+	
+	// Datamap fields:
+	// void InputToggle; // 0x0
+	// void InputTurnOn; // 0x0
+	// void InputTurnOff; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -19355,6 +20972,30 @@ private:
 	[[maybe_unused]] uint8_t __pad0b6f[0x1]; // 0xb6f
 public:
 	int32_t m_nCollisionGroupOverride; // 0xb70	
+	
+	// Datamap fields:
+	// void InputEnableMotion; // 0x0
+	// void InputDisableMotion; // 0x0
+	// void InputWake; // 0x0
+	// bool InputSetAutoConvertBackFromDebris; // 0x0
+	// void InputSleep; // 0x0
+	// void InputDisableFloating; // 0x0
+	// void InputStartGlowing; // 0x0
+	// void InputStopGlowing; // 0x0
+	// Vector InputSetGlowOverride; // 0x0
+	// int32_t InputSetGlowRange; // 0x0
+	// float InputSetMass; // 0x0
+	// void InputEnableGravity; // 0x0
+	// void InputDisableGravity; // 0x0
+	// void InputEnableDrag; // 0x0
+	// void InputDisableDrag; // 0x0
+	// void InputEnableCollisions; // 0x0
+	// void InputDisableCollisions; // 0x0
+	// bool forcemotiondisabled; // 0x7fffffff
+	// bool phys_start_asleep; // 0x7fffffff
+	// void CPhysicsPropClearFlagsThink; // 0x0
+	// int32_t m_nNavObstacleType; // 0xb68
+	// int32_t health; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -19384,6 +21025,9 @@ public:
 	Vector m_vOriginalMins; // 0xb90	
 	Vector m_vOriginalMaxs; // 0xb9c	
 	float m_flRespawnDuration; // 0xba8	
+	
+	// Datamap fields:
+	// void CPhysicsPropRespawnableMaterialize; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -19396,6 +21040,9 @@ public:
 class CWaterBullet : public CBaseAnimGraph
 {
 public:
+	// Datamap fields:
+	// Vector bullet_direction; // 0x7fffffff
+	// void CWaterBulletBulletThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -19538,6 +21185,18 @@ private:
 public:
 	GameTime_t m_flNextAttack; // 0x9bc	
 	CHandle< CCSPlayerPawn > m_hOriginalThrower; // 0x9c0	
+	
+	// Datamap fields:
+	// int32_t m_nExplosionType; // 0x9a0
+	// void CBaseGrenadeSmoke; // 0x0
+	// void CBaseGrenadeBounceTouch; // 0x0
+	// void CBaseGrenadeSlideTouch; // 0x0
+	// void CBaseGrenadeExplodeTouch; // 0x0
+	// void CBaseGrenadeDetonateUse; // 0x0
+	// void CBaseGrenadeDangerSoundThink; // 0x0
+	// void CBaseGrenadePreDetonate; // 0x0
+	// void CBaseGrenadeDetonate; // 0x0
+	// void CBaseGrenadeTumbleThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -19550,6 +21209,9 @@ public:
 class CCoopBonusCoin : public CDynamicProp
 {
 public:
+	// Datamap fields:
+	// void CCoopBonusCoinCoinTouch; // 0x0
+	// void CCoopBonusCoinCoinFadeOut; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -19721,6 +21383,9 @@ private:
 public:
 	QAngle m_angCatchUpToPlayerEye; // 0x980	
 	GameTime_t m_flLastSpinDetectionTime; // 0x98c	
+	
+	// Datamap fields:
+	// void CPlantedC4C4Think; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -19808,6 +21473,11 @@ public:
 	GameTime_t m_fExpireTime; // 0xa40	
 	GameTime_t m_fNextDetectPlayerSound; // 0xa44	
 	CHandle< CBaseEntity > m_hDisplayGrenade; // 0xa48	
+	
+	// Datamap fields:
+	// void CSensorGrenadeProjectileThink_Arm; // 0x0
+	// void CSensorGrenadeProjectileThink_Remove; // 0x0
+	// void CSensorGrenadeProjectileSensorThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -19962,6 +21632,11 @@ private:
 	[[maybe_unused]] uint8_t __pad3040[0x8]; // 0x3040
 public:
 	CountdownTimer m_BlockDirectionTimer; // 0x3048	
+	
+	// Datamap fields:
+	// void CChickenChickenTouch; // 0x0
+	// void CChickenChickenThink; // 0x0
+	// void CChickenChickenUse; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -20024,6 +21699,10 @@ class CItemDefuser : public CItem
 public:
 	EntitySpottedState_t m_entitySpottedState; // 0x968	
 	int32_t m_nSpotRules; // 0x980	
+	
+	// Datamap fields:
+	// void CItemDefuserActivateThink; // 0x0
+	// void CItemDefuserDefuserTouch; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -20074,6 +21753,10 @@ public:
 	// MNetworkUserGroup "LocalWeaponExclusive"
 	int32_t m_pReserveAmmo[2]; // 0xc30	
 	CEntityIOOutput m_OnPlayerUse; // 0xc38	
+	
+	// Datamap fields:
+	// int32_t InputSetClipPrimary; // 0x0
+	// int32_t InputSetClipSecondary; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -20175,6 +21858,10 @@ private:
 	[[maybe_unused]] uint8_t __pad0e25[0x3]; // 0xe25
 public:
 	CHandle< CEntityBlocker > m_hEntityBlocker; // 0xe28	
+	
+	// Datamap fields:
+	// float InputSetRotationDistance; // 0x0
+	// float InputSetSpeed; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -20194,6 +21881,10 @@ private:
 public:
 	int32_t m_currentDamageState; // 0xe34	
 	CUtlVector< CUtlSymbolLarge > m_damageStates; // 0xe38	
+	
+	// Datamap fields:
+	// void InputSetUnbreakable; // 0x0
+	// void InputSetBreakable; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -20236,6 +21927,10 @@ public:
 	
 	// Static fields:
 	static int32_t &Get_sm_lastInteraction(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CBaseCombatCharacter")->m_static_fields[0]->m_instance);};
+	
+	// Datamap fields:
+	// void InputBecomeServerRagdoll; // 0x0
+	// CUtlSymbolLarge InputSetRelationship; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -20297,6 +21992,16 @@ private:
 	[[maybe_unused]] uint8_t __pad0ace[0x2]; // 0xace
 public:
 	CHandle< CItemGenericTriggerHelper > m_hTriggerHelper; // 0xad0	
+	
+	// Datamap fields:
+	// void CItemGenericItemGenericTouch; // 0x0
+	// void InputStartAmbientSound; // 0x0
+	// void InputStopAmbientSound; // 0x0
+	// void InputToggleAmbientSound; // 0x0
+	// void m_hAmbientSound; // 0x968
+	// float auto_remove_timeout; // 0x7fffffff
+	// float drag_override; // 0x7fffffff
+	// float damping_override; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -20392,6 +22097,16 @@ public:
 	float m_fHltvReplayDelay; // 0xb40	
 	float m_fHltvReplayEnd; // 0xb44	
 	CEntityIndex m_iHltvReplayEntity; // 0xb48	
+	
+	// Datamap fields:
+	// void m_hPawnListEntry; // 0xb3c
+	// void m_hLastValidNavArea; // 0x970
+	// void m_hCurrentNavArea; // 0x958
+	// void m_hCurrentNavAreaBlocked; // 0x988
+	// CHandle< CBaseEntity > controller; // 0x7fffffff
+	// int32_t InputSetHealth; // 0x0
+	// bool InputSetHUDVisibility; // 0x0
+	// CUtlSymbolLarge InputSetFogController; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -20588,6 +22303,13 @@ public:
 	GameTime_t m_flLastLOSTraceFailureTime; // 0xe24	
 	// MNetworkEnable
 	int32_t m_iNumEmptyAttacks; // 0xe28	
+	
+	// Datamap fields:
+	// void CCSWeaponBaseDefaultTouch; // 0x0
+	// void CCSWeaponBaseRemoveUnownedWeaponThink; // 0x0
+	// void InputToggleCanBePickedUp; // 0x0
+	// float InputSetAmmoAmount; // 0x0
+	// int32_t InputSetReserveAmmoAmount; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -20825,6 +22547,10 @@ private:
 	[[maybe_unused]] uint8_t __pad0a54[0xc]; // 0xa54
 public:
 	uint16_t m_decoyWeaponDefIndex; // 0xa60	
+	
+	// Datamap fields:
+	// void CDecoyProjectileThink_Detonate; // 0x0
+	// void CDecoyProjectileGunfireThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -20865,6 +22591,13 @@ public:
 	CUtlVector< uint8 > m_VoxelFrameData; // 0xa80	
 	GameTime_t m_flLastBounce; // 0xa98	
 	GameTime_t m_fllastSimulationTime; // 0xa9c	
+	
+	// Datamap fields:
+	// void CSmokeGrenadeProjectileThink_Detonate; // 0x0
+	// void CSmokeGrenadeProjectileThink_Update; // 0x0
+	// void CSmokeGrenadeProjectileThink_Remove; // 0x0
+	// void CSmokeGrenadeProjectileThink_BuildingSmokeVolume; // 0x0
+	// void InitializeSpawnFromWorld; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -21419,6 +23152,9 @@ public:
 	CCSBot* m_pBot; // 0x1540	
 	bool m_bBotAllowActive; // 0x1548	
 	bool m_bCommittingSuicideOnTeamChange; // 0x1549	
+	
+	// Datamap fields:
+	// CHandle< CBaseEntity > original_controller; // 0x7fffffff
 };
 
 // Registered binary: server.dll (project 'server')
@@ -21441,6 +23177,12 @@ public:
 class CCSObserverPawn : public CCSPlayerPawnBase
 {
 public:
+	// Datamap fields:
+	// CCSObserver_ObserverServices m_pObserverServices; // 0x9e8
+	// CCSObserver_MovementServices m_pMovementServices; // 0xa10
+	// CCSObserver_UseServices m_pUseServices; // 0x9f8
+	// CCSObserver_ViewModelServices m_pViewModelServices; // 0xbc0
+	// CCSObserver_CameraServices m_pCameraServices; // 0xa08
 };
 
 // Registered binary: server.dll (project 'server')
@@ -21621,6 +23363,18 @@ public:
 	// MNetworkEnable
 	QAngle m_qDeathEyeAngles; // 0x2028	
 	bool m_bSkipOneHeadConstraintUpdate; // 0x2034	
+	
+	// Datamap fields:
+	// CCSPlayer_WeaponServices m_pWeaponServices; // 0x9d0
+	// CCSPlayer_ItemServices m_pItemServices; // 0x9d8
+	// CCSPlayer_UseServices m_pUseServices; // 0x9f8
+	// CCSPlayer_WaterServices m_pWaterServices; // 0x9f0
+	// CCSPlayer_MovementServices m_pMovementServices; // 0xa10
+	// CCSPlayer_ViewModelServices m_pViewModelServices; // 0xbc0
+	// CCSPlayer_CameraServices m_pCameraServices; // 0xa08
+	// void CCSPlayerPawnCheckStuffThink; // 0x0
+	// void CCSPlayerPawnPushawayThink; // 0x0
+	// void RescueZoneTouch; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -21749,6 +23503,11 @@ private:
 	[[maybe_unused]] uint8_t __pad2c50[0x14]; // 0x2c50
 public:
 	Vector m_vecHostageResetPosition; // 0x2c64	
+	
+	// Datamap fields:
+	// void HostageRescueZoneTouch; // 0x0
+	// void CHostageHostageUse; // 0x0
+	// void CHostageHostageThink; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')

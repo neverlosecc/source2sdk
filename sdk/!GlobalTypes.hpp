@@ -5357,7 +5357,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vcompmat@pú"
+// MResourceTypeForInfoType "vcompmat@ mú"
 class InfoForResourceTypeCCompositeMaterialKit
 {
 private:
@@ -28842,6 +28842,10 @@ private:
 	[[maybe_unused]] uint8_t __pad0054[0x4]; // 0x54
 public:
 	CBaseFlex* m_pOuter; // 0x58	
+	
+	// Datamap fields:
+	// void m_pSink; // 0x8
+	// void m_ConceptHistories; // 0x10
 };
 
 // Registered binary: server.dll (project 'server')
@@ -28919,6 +28923,9 @@ public:
 	RotationVector m_angular; // 0x18	
 	Vector m_linearSave; // 0x24	
 	RotationVector m_angularSave; // 0x30	
+	
+	// Datamap fields:
+	// bool m_bLocalSpace; // 0x8
 };
 
 // Registered binary: server.dll (project 'server')
@@ -28951,6 +28958,10 @@ private:
 	[[maybe_unused]] uint8_t __pad0014[0x4]; // 0x14
 public:
 	ResponseFollowup* m_pFollowup; // 0x18	
+	
+	// Datamap fields:
+	// int32_t delay; // 0x0
+	// int32_t respeakdelay; // 0x4
 };
 
 // Registered binary: server.dll (project 'server')
@@ -29762,6 +29773,9 @@ private:
 	[[maybe_unused]] uint8_t __pad0044[0x4]; // 0x44
 public:
 	CUtlVector< CHandle< CPointCommentaryNode > > m_vecNodes; // 0x48	
+	
+	// Datamap fields:
+	// void m_ModifiedConvars; // 0x20
 };
 
 // Registered binary: server.dll (project 'server')
@@ -29918,6 +29932,9 @@ public:
 	
 	// Static fields:
 	static int32_t &Get_g_SoundPatchCount(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CSoundPatch")->m_static_fields[0]->m_instance);};
+	
+	// Datamap fields:
+	// void m_guid; // 0x28
 };
 
 // Registered binary: server.dll (project 'server')
@@ -29933,6 +29950,13 @@ public:
 	SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t eKeypoints; // 0x8	
 	float m_keyPoints[2]; // 0xc	
 	float m_reversalSoundThresholds[3]; // 0x14	
+	
+	// Datamap fields:
+	// float m_keyPoints[0]; // 0xc
+	// float m_keyPoints[1]; // 0x10
+	// float m_reversalSoundThresholds[0]; // 0x14
+	// float m_reversalSoundThresholds[1]; // 0x18
+	// float m_reversalSoundThresholds[2]; // 0x1c
 };
 
 // Registered binary: server.dll (project 'server')
@@ -29948,6 +29972,9 @@ public:
 	CUtlStringToken m_nContext; // 0x10	
 	GameTick_t m_nNextThinkTick; // 0x14	
 	GameTick_t m_nLastThinkTick; // 0x18	
+	
+	// Datamap fields:
+	// void m_think; // 0x0
 };
 
 // Registered binary: server.dll (project 'server')
@@ -30247,6 +30274,11 @@ public:
 	CUtlSymbolLarge m_iszReversalSounds[3]; // 0x68	
 	bool m_bPlayTravelSound; // 0x80	
 	bool m_bPlayReversalSound; // 0x81	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge m_iszReversalSounds[0]; // 0x68
+	// CUtlSymbolLarge m_iszReversalSounds[1]; // 0x70
+	// CUtlSymbolLarge m_iszReversalSounds[2]; // 0x78
 };
 
 // Registered binary: server.dll (project 'server')
@@ -30268,6 +30300,9 @@ private:
 public:
 	Quaternion m_qStartRot; // 0x20	
 	ParticleIndex_t m_nFXIndex; // 0x30	
+	
+	// Datamap fields:
+	// void m_nSound; // 0x34
 };
 
 // Registered binary: server.dll (project 'server')
@@ -31248,6 +31283,10 @@ private:
 	[[maybe_unused]] uint8_t __pad0050[0x58]; // 0x50
 public:
 	int32_t m_nDecalMaterialIndex; // 0xa8	
+	
+	// Datamap fields:
+	// void m_decalEvent; // 0x50
+	// void m_hProjectedDecal; // 0x20
 };
 
 // Registered binary: client.dll (project 'client')

@@ -507,6 +507,9 @@ public:
 	CEntityIdentity* m_pNext; // 0x60	
 	CEntityIdentity* m_pPrevByClass; // 0x68	
 	CEntityIdentity* m_pNextByClass; // 0x70	
+	
+	// Datamap fields:
+	// void m_pAttributes; // 0x48
 };
 
 // Registered binary: worldrenderer.dll (project 'entity2')
