@@ -11921,11 +11921,11 @@ public:
 	// void m_CScriptComponent; // 0x28
 	// CUtlSymbolLarge subclass_name; // 0x7fffffff
 	// void m_pSubclassVData; // 0x2e8
-	// 19 m_think; // 0x260
-	// 19 m_pfnTouch; // 0x288
-	// 19 m_pfnUse; // 0x290
-	// 19 m_pfnBlocked; // 0x298
-	// 19 m_pfnMoveDone; // 0x2a0
+	// void* m_think; // 0x260
+	// void* m_pfnTouch; // 0x288
+	// void* m_pfnUse; // 0x290
+	// void* m_pfnBlocked; // 0x298
+	// void* m_pfnMoveDone; // 0x2a0
 	// int32_t InputSetTeam; // 0x0
 	// void InputKill; // 0x0
 	// void InputKillHierarchy; // 0x0
