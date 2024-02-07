@@ -11,13 +11,10 @@
 
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 4
-// Size: 0x10
+// Size: 0xd
 enum class ObjectTypeFlags_t : uint32_t
 {
 	OBJECT_TYPE_NONE = 0x0,
-	OBJECT_TYPE_IMAGE_LOD = 0x1,
-	OBJECT_TYPE_GEOMETRY_LOD = 0x2,
-	OBJECT_TYPE_DECAL = 0x4,
 	OBJECT_TYPE_MODEL = 0x8,
 	OBJECT_TYPE_BLOCK_LIGHT = 0x10,
 	OBJECT_TYPE_NO_SHADOWS = 0x20,
@@ -336,6 +333,11 @@ public:
 	CUtlVector< uint8 > m_sceneObjectLayerIndices; // 0xd8	
 	CUtlVector< uint8 > m_overlayLayerIndices; // 0xf0	
 	CUtlString m_grassFileName; // 0x108	
+	// -> m_nLightmapVersionNumber - 0x110
+	// -> m_nLightmapGameVersionNumber - 0x114
+	// -> m_vLightmapUvScale - 0x118
+	// -> m_bHasLightmaps - 0x120
+	// -> m_lightMaps - 0x128
 	BakedLightingInfo_t m_nodeLightingInfo; // 0x110	
 };
 
@@ -386,8 +388,18 @@ public:
 struct World_t
 {
 public:
+	// -> m_flMinDrawVolumeSize - 0x0
+	// -> m_bBuildBakedLighting - 0x4
+	// -> m_vLightmapUvScale - 0x8
+	// -> m_nCompileTimestamp - 0x10
+	// -> m_nCompileFingerprint - 0x18
 	WorldBuilderParams_t m_builderParams; // 0x0	
 	CUtlVector< NodeData_t > m_worldNodes; // 0x20	
+	// -> m_nLightmapVersionNumber - 0x38
+	// -> m_nLightmapGameVersionNumber - 0x3c
+	// -> m_vLightmapUvScale - 0x40
+	// -> m_bHasLightmaps - 0x48
+	// -> m_lightMaps - 0x50
 	BakedLightingInfo_t m_worldLightingInfo; // 0x38	
 	CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > > m_entityLumps; // 0x68	
 };
@@ -432,7 +444,7 @@ public:
 };
 
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -445,7 +457,7 @@ public:
 };
 
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -514,7 +526,7 @@ public:
 
 // Registered binary: worldrenderer.dll (project 'entity2')
 // Alignment: 8
-// Size: 0x30
+// Size: 0x38
 // Has VTable
 // 
 // MNetworkVarNames "CEntityIdentity * m_pEntity"
@@ -535,6 +547,7 @@ public:
 	// MNetworkEnable
 	// MNetworkDisable
 	CScriptComponent* m_CScriptComponent; // 0x28	
+	bool m_bVisibleinPVS; // 0x30	
 };
 
 // Registered binary: worldrenderer.dll (project 'entity2')

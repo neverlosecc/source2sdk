@@ -4,8 +4,8 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: animationsystem.dll
-// Classes count: 342
-// Enums count: 68
+// Classes count: 362
+// Enums count: 70
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
@@ -119,7 +119,7 @@ enum class AnimParamType_t : uint8_t
 	ANIMPARAM_FLOAT = 0x4,
 	ANIMPARAM_VECTOR = 0x5,
 	ANIMPARAM_QUATERNION = 0x6,
-	ANIMPARAM_STRINGTOKEN = 0x7,
+	ANIMPARAM_GLOBALSYMBOL = 0x7,
 	ANIMPARAM_COUNT = 0x8,
 };
 
@@ -214,39 +214,6 @@ enum class RagdollPoseControl : uint32_t
 {
 	Absolute = 0x0,
 	Relative = 0x1,
-};
-
-// Registered binary: animationsystem.dll (project 'animationsystem')
-// Alignment: 4
-// Size: 0x2
-enum class AnimVRHandMotionRange_t : uint32_t
-{
-	// MPropertyFriendlyName "With Controller"
-	MotionRange_WithController = 0x0,
-	// MPropertyFriendlyName "Without Controller"
-	MotionRange_WithoutController = 0x1,
-};
-
-// Registered binary: animationsystem.dll (project 'animationsystem')
-// Alignment: 4
-// Size: 0x4
-enum class AnimVrFingerSplay_t : uint32_t
-{
-	AnimVrFingerSplay_Thumb_Index = 0x0,
-	AnimVrFingerSplay_Index_Middle = 0x1,
-	AnimVrFingerSplay_Middle_Ring = 0x2,
-	AnimVrFingerSplay_Ring_Pinky = 0x3,
-};
-
-// Registered binary: animationsystem.dll (project 'animationsystem')
-// Alignment: 4
-// Size: 0x2
-enum class AnimVrBoneTransformSource_t : uint32_t
-{
-	// MPropertyFriendlyName "Live Stream"
-	AnimVrBoneTransformSource_LiveStream = 0x0,
-	// MPropertyFriendlyName "Grip Limit"
-	AnimVrBoneTransformSource_GripLimit = 0x1,
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
@@ -437,31 +404,91 @@ enum class MorphBundleType_t : uint32_t
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
-// Alignment: 4
-// Size: 0x2
-enum class AnimVRHand_t : uint32_t
+// Alignment: 1
+// Size: 0x5
+enum class MovementGait_t : uint8_t
 {
-	// MPropertyFriendlyName "Left Hand"
-	AnimVRHand_Left = 0x0,
-	// MPropertyFriendlyName "Right Hand"
-	AnimVRHand_Right = 0x1,
+	// MPropertyFriendlyName "None"
+	eInvalid = 0xffffffffffffffff,
+	// MPropertyFriendlyName "Walk"
+	eWalk = 0x0,
+	// MPropertyFriendlyName "Jog"
+	eJog = 0x1,
+	// MPropertyFriendlyName "Run"
+	eRun = 0x2,
+	// MPropertyFriendlyName "Sprint"
+	eSprint = 0x3,
 };
 
-// Registered binary: animationsystem.dll (project 'modellib')
-// Alignment: 4
-// Size: 0x5
-enum class AnimVRFinger_t : uint32_t
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 1
+// Size: 0x3
+enum class CNmBoneMask__WeightInfo_t : uint8_t
 {
-	// MPropertyFriendlyName "Thumb"
-	AnimVrFinger_Thumb = 0x0,
-	// MPropertyFriendlyName "Index"
-	AnimVrFinger_Index = 0x1,
-	// MPropertyFriendlyName "Middle"
-	AnimVrFinger_Middle = 0x2,
-	// MPropertyFriendlyName "Ring"
-	AnimVrFinger_Ring = 0x3,
-	// MPropertyFriendlyName "Pinky"
-	AnimVrFinger_Pinky = 0x4,
+	Zero = 0x0,
+	Mixed = 0x1,
+	One = 0x2,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 1
+// Size: 0x4
+enum class NmFootPhase_t : uint8_t
+{
+	LeftFootDown = 0x0,
+	RightFootPassing = 0x1,
+	RightFootDown = 0x2,
+	LeftFootPassing = 0x3,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 1
+// Size: 0x6
+enum class NmFootPhaseCondition_t : uint8_t
+{
+	LeftFootDown = 0x0,
+	LeftFootPassing = 0x1,
+	LeftPhase = 0x4,
+	RightFootDown = 0x2,
+	RightFootPassing = 0x3,
+	RightPhase = 0x5,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 1
+// Size: 0x3
+enum class NmTransitionRule_t : uint8_t
+{
+	// MPropertyFriendlyName "Fully Allowed"
+	AllowTransition = 0x0,
+	// MPropertyFriendlyName "Conditionally Allowed"
+	ConditionallyAllowTransition = 0x1,
+	// MPropertyFriendlyName "Blocked"
+	BlockTransition = 0x2,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 1
+// Size: 0x4
+enum class NmTransitionRuleCondition_t : uint8_t
+{
+	// MPropertyFriendlyName "Any Allowed"
+	AnyAllowed = 0x0,
+	// MPropertyFriendlyName "Fully Allowed"
+	FullyAllowed = 0x1,
+	// MPropertyFriendlyName "Conditionally Allowed"
+	ConditionallyAllowed = 0x2,
+	// MPropertyFriendlyName "Blocked"
+	Blocked = 0x3,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 4
+// Size: 0x2
+enum class NmFrameSnapEventMode_t : uint32_t
+{
+	Floor = 0x0,
+	Round = 0x1,
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -1060,10 +1087,18 @@ struct CRenderBufferBinding;
 struct PackedAABB_t;
 struct CDrawCullingData;
 struct CRenderSkeleton;
+struct DynamicMeshDeformParams_t;
+struct CRenderGroom;
 struct CAnimCycle;
 struct CFootCycle;
 struct CFootCycleDefinition;
 struct CFootTrajectories;
+struct SkeletonAnimCapture_t::FrameStamp_t;
+struct CNmSyncTrack;
+struct CNmRootMotionData;
+struct NmCompressionSettings_t::QuantizationRange_t;
+struct NmPercent_t;
+struct NmSyncTrackTime_t;
 struct CAnimGraphSettingsManager;
 struct CAnimNodePath;
 struct CAnimParamHandle;
@@ -1090,7 +1125,6 @@ struct TraceSettings_t;
 struct CMotionDataSet;
 struct CBlendCurve;
 struct CPoseHandle;
-struct SkeletalInputOpFixedSettings_t;
 struct MotionIndex;
 struct IKBoneNameAndIndex_t;
 struct AimMatrixOpFixedSettings_t;
@@ -1236,6 +1270,12 @@ public:
 private:
 	[[maybe_unused]] uint8_t __pad0095[0x3]; // 0x95
 public:
+	// -> m_nEntityIndex - 0x98
+	// -> m_modelName - 0xa0
+	// -> m_poseParams - 0xa8
+	// -> m_decodeOps - 0xc0
+	// -> m_internalOps - 0xd8
+	// -> m_decodedAnims - 0xf0
 	AnimationDecodeDebugDumpElement_t m_DecodeDump; // 0x98	
 };
 
@@ -1416,6 +1456,13 @@ public:
 	int32_t m_nFrames; // 0x10	
 	int32_t m_nFramesPerBlock; // 0x14	
 	CUtlVector< CAnimFrameBlockAnim > m_frameblockArray; // 0x18	
+	// -> m_boneArray - 0x30
+	// -> m_morphArray - 0x48
+	// -> m_userArray - 0x60
+	// -> m_bHasRotationBitArray - 0x78
+	// -> m_bHasMovementBitArray - 0x90
+	// -> m_bHasMorphBitArray - 0xa8
+	// -> m_bHasUserBitArray - 0xc0
 	CAnimEncodeDifference m_usageDifferences; // 0x30	
 };
 
@@ -1460,12 +1507,25 @@ class CAnimDesc
 {
 public:
 	CBufferString m_name; // 0x0	
+	// -> m_bLooping - 0x10
+	// -> m_bAllZeros - 0x11
+	// -> m_bHidden - 0x12
+	// -> m_bDelta - 0x13
+	// -> m_bLegacyWorldspace - 0x14
+	// -> m_bModelDoc - 0x15
+	// -> m_bImplicitSeqIgnoreDelta - 0x16
+	// -> m_bAnimGraphAdditive - 0x17
 	CAnimDesc_Flag m_flags; // 0x10	
 	float fps; // 0x18	
 private:
 	[[maybe_unused]] uint8_t __pad001c[0x4]; // 0x1c
 public:
 	// MKV3TransferName "m_pData"
+	// -> m_fileName - 0x20
+	// -> m_nFrames - 0x30
+	// -> m_nFramesPerBlock - 0x34
+	// -> m_frameblockArray - 0x38
+	// -> m_usageDifferences - 0x50
 	CAnimEncodedFrames m_Data; // 0x20	
 	CUtlVector< CAnimMovement > m_movementArray; // 0xf8	
 	CUtlVector< CAnimEventDefinition > m_eventArray; // 0x110	
@@ -1479,6 +1539,8 @@ private:
 public:
 	CUtlVector< Vector > m_vecBoneWorldMin; // 0x178	
 	CUtlVector< Vector > m_vecBoneWorldMax; // 0x190	
+	// -> m_flFadeInTime - 0x1a8
+	// -> m_flFadeOutTime - 0x1ac
 	CAnimSequenceParams m_sequenceParams; // 0x1a8	
 };
 
@@ -1609,6 +1671,12 @@ public:
 	CUtlVector< CStrongHandle< InfoForResourceTypeCAnimationGroup > > m_includedGroupArray_Handle; // 0x78	
 	// MKV3TransferName "m_directHSeqGroup"
 	CStrongHandle< InfoForResourceTypeCSequenceGroupData > m_directHSeqGroup_Handle; // 0x90	
+	// -> m_name - 0x98
+	// -> m_boneArray - 0xa8
+	// -> m_userArray - 0xc0
+	// -> m_morphArray - 0xd8
+	// -> m_nChannelElements - 0xf0
+	// -> m_dataChannelArray - 0xf8
 	CAnimKeyData m_decodeKey; // 0x98	
 	CUtlVector< CBufferString > m_szScripts; // 0x110	
 };
@@ -1643,6 +1711,14 @@ class CSeqAutoLayer
 public:
 	int16_t m_nLocalReference; // 0x0	
 	int16_t m_nLocalPose; // 0x2	
+	// -> m_bPost - 0x4
+	// -> m_bSpline - 0x5
+	// -> m_bXFade - 0x6
+	// -> m_bNoBlend - 0x7
+	// -> m_bLocal - 0x8
+	// -> m_bPose - 0x9
+	// -> m_bFetchFrame - 0xa
+	// -> m_bSubtract - 0xb
 	CSeqAutoLayerFlag m_flags; // 0x4	
 	float m_start; // 0xc	
 	float m_peak; // 0x10	
@@ -1720,12 +1796,18 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
-// Size: 0x68
+// Size: 0x70
 // 
 // MGetKV3ClassDefaults
 class CSeqMultiFetch
 {
 public:
+	// -> m_bRealtime - 0x0
+	// -> m_bCylepose - 0x1
+	// -> m_b0D - 0x2
+	// -> m_b1D - 0x3
+	// -> m_b2D - 0x4
+	// -> m_b2D_TRI - 0x5
 	CSeqMultiFetchFlag m_flags; // 0x0	
 	CUtlVector< int16 > m_localReferenceArray; // 0x8	
 	int32_t m_nGroupSize[2]; // 0x20	
@@ -1734,6 +1816,11 @@ public:
 	CUtlVector< float32 > m_poseKeyArray1; // 0x48	
 	int32_t m_nLocalCyclePoseParameter; // 0x60	
 	bool m_bCalculatePoseParameters; // 0x64	
+	bool m_bFixedBlendWeight; // 0x65	
+private:
+	[[maybe_unused]] uint8_t __pad0066[0x2]; // 0x66
+public:
+	float m_flFixedBlendWeightVals[2]; // 0x68	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
@@ -1773,7 +1860,7 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
-// Size: 0x118
+// Size: 0x120
 // 
 // MGetKV3ClassDefaults
 class CSeqS1SeqDesc
@@ -1784,19 +1871,29 @@ public:
 private:
 	[[maybe_unused]] uint8_t __pad001b[0x5]; // 0x1b
 public:
+	// -> m_flags - 0x20
+	// -> m_localReferenceArray - 0x28
+	// -> m_nGroupSize[2] - 0x40
+	// -> m_nLocalPose[2] - 0x48
+	// -> m_poseKeyArray0 - 0x50
+	// -> m_poseKeyArray1 - 0x68
+	// -> m_nLocalCyclePoseParameter - 0x80
+	// -> m_bCalculatePoseParameters - 0x84
+	// -> m_bFixedBlendWeight - 0x85
+	// -> m_flFixedBlendWeightVals[2] - 0x88
 	CSeqMultiFetch m_fetch; // 0x20	
-	int32_t m_nLocalWeightlist; // 0x88	
+	int32_t m_nLocalWeightlist; // 0x90	
 private:
-	[[maybe_unused]] uint8_t __pad008c[0x4]; // 0x8c
+	[[maybe_unused]] uint8_t __pad0094[0x4]; // 0x94
 public:
-	CUtlVector< CSeqAutoLayer > m_autoLayerArray; // 0x90	
-	CUtlVector< CSeqIKLock > m_IKLockArray; // 0xa8	
-	CSeqTransition m_transition; // 0xc0	
-	KeyValues3 m_SequenceKeys; // 0xc8	
+	CUtlVector< CSeqAutoLayer > m_autoLayerArray; // 0x98	
+	CUtlVector< CSeqIKLock > m_IKLockArray; // 0xb0	
+	CSeqTransition m_transition; // 0xc8	
+	KeyValues3 m_SequenceKeys; // 0xd0	
 	// MKV3TransferName "m_keyValueText"
-	CBufferString m_LegacyKeyValueText; // 0xd8	
-	CUtlVector< CAnimActivity > m_activityArray; // 0xe8	
-	CUtlVector< CFootMotion > m_footMotion; // 0x100	
+	CBufferString m_LegacyKeyValueText; // 0xe0	
+	CUtlVector< CAnimActivity > m_activityArray; // 0xf0	
+	CUtlVector< CFootMotion > m_footMotion; // 0x108	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
@@ -1961,7 +2058,7 @@ public:
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
-// Alignment: 4
+// Alignment: 8
 // Size: 0x4
 // Has Trivial Destructor
 // 
@@ -1976,7 +2073,7 @@ public:
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Destructor
 // 
@@ -2119,6 +2216,11 @@ struct VPhysXBodyPart_t
 public:
 	uint32_t m_nFlags; // 0x0	
 	float m_flMass; // 0x4	
+	// -> m_spheres - 0x8
+	// -> m_capsules - 0x20
+	// -> m_hulls - 0x38
+	// -> m_meshes - 0x50
+	// -> m_CollisionAttributeIndices - 0x68
 	VPhysics2ShapeDef_t m_rnShape; // 0x8	
 	uint16_t m_nCollisionAttributeIndex; // 0x80	
 	uint16_t m_nReserved; // 0x82	
@@ -2434,13 +2536,36 @@ public:
 	// MKV3TransferName "description"
 	CUtlString m_description; // 0x20	
 	// MKV3TransferName "physics"
+	// -> m_friction - 0x28
+	// -> m_elasticity - 0x2c
+	// -> m_density - 0x30
+	// -> m_thickness - 0x34
+	// -> m_softContactFrequency - 0x38
+	// -> m_softContactDampingRatio - 0x3c
+	// -> m_wheelDrag - 0x40
 	CPhysSurfacePropertiesPhysics m_physics; // 0x28	
 private:
 	[[maybe_unused]] uint8_t __pad0044[0x4]; // 0x44
 public:
 	// MKV3TransferName "audiosounds"
+	// -> m_impactSoft - 0x48
+	// -> m_impactHard - 0x50
+	// -> m_scrapeSmooth - 0x58
+	// -> m_scrapeRough - 0x60
+	// -> m_bulletImpact - 0x68
+	// -> m_rolling - 0x70
+	// -> m_break - 0x78
+	// -> m_strain - 0x80
 	CPhysSurfacePropertiesSoundNames m_audioSounds; // 0x48	
 	// MKV3TransferName "audioparams"
+	// -> m_reflectivity - 0x88
+	// -> m_hardnessFactor - 0x8c
+	// -> m_roughnessFactor - 0x90
+	// -> m_roughThreshold - 0x94
+	// -> m_hardThreshold - 0x98
+	// -> m_hardVelocityThreshold - 0x9c
+	// -> m_flStaticImpactVolume - 0xa0
+	// -> m_flOcclusionFactor - 0xa4
 	CPhysSurfacePropertiesAudio m_audioParams; // 0x88	
 };
 
@@ -2574,6 +2699,16 @@ struct PermModelData_t
 {
 public:
 	CUtlString m_name; // 0x0	
+	// -> m_nFlags - 0x8
+	// -> m_vHullMin - 0xc
+	// -> m_vHullMax - 0x18
+	// -> m_vViewMin - 0x24
+	// -> m_vViewMax - 0x30
+	// -> m_flMass - 0x3c
+	// -> m_vEyePosition - 0x40
+	// -> m_flMaxEyeDeflection - 0x4c
+	// -> m_sSurfaceProperty - 0x50
+	// -> m_keyValueText - 0x58
 	PermModelInfo_t m_modelInfo; // 0x8	
 	CUtlVector< PermModelExtPart_t > m_ExtParts; // 0x60	
 	CUtlVector< CStrongHandle< InfoForResourceTypeCRenderMesh > > m_refMeshes; // 0x78	
@@ -2588,6 +2723,13 @@ public:
 	CUtlVector< CUtlString > m_meshGroups; // 0x150	
 	CUtlVector< MaterialGroup_t > m_materialGroups; // 0x168	
 	uint64_t m_nDefaultMeshGroupMask; // 0x180	
+	// -> m_boneName - 0x188
+	// -> m_nParent - 0x1a0
+	// -> m_boneSphere - 0x1b8
+	// -> m_nFlag - 0x1d0
+	// -> m_bonePosParent - 0x1e8
+	// -> m_boneRotParent - 0x200
+	// -> m_boneScaleParent - 0x218
 	ModelSkeletonData_t m_modelSkeleton; // 0x188	
 	CUtlVector< int16 > m_remappingTable; // 0x230	
 	CUtlVector< uint16 > m_remappingTableStarts; // 0x248	
@@ -2599,7 +2741,7 @@ public:
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Destructor
 // 
@@ -2832,6 +2974,8 @@ public:
 	CUtlString m_boneName; // 0x0	
 	CUtlString m_parentName; // 0x8	
 	matrix3x4_t m_invBindPose; // 0x10	
+	// -> m_vecCenter - 0x40
+	// -> m_vecSize - 0x4c
 	SkeletonBoneBounds_t m_bbox; // 0x40	
 	float m_flSphereRadius; // 0x58	
 };
@@ -2888,6 +3032,8 @@ public:
 private:
 	[[maybe_unused]] uint8_t __pad0032[0x86]; // 0x32
 public:
+	// -> m_hBuffer - 0xb8
+	// -> m_nBindOffsetBytes - 0xc8
 	CRenderBufferBinding m_indexBuffer; // 0xb8	
 private:
 	[[maybe_unused]] uint8_t __pad00d0[0x10]; // 0xd0
@@ -2906,6 +3052,9 @@ class CMeshletDescriptor
 {
 public:
 	PackedAABB_t m_PackedAABB; // 0x0	
+	// -> m_vConeApex - 0x8
+	// -> m_ConeAxis[3] - 0x14
+	// -> m_ConeCutoff - 0x17
 	CDrawCullingData m_CullingData; // 0x8	
 };
 
@@ -2998,8 +3147,61 @@ public:
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
+// Alignment: 4
+// Size: 0xc
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct DynamicMeshDeformParams_t
+{
+public:
+	float m_flTensionCompressScale; // 0x0	
+	float m_flTensionStretchScale; // 0x4	
+	bool m_bRecomputeSmoothNormalsAfterAnimation; // 0x8	
+	bool m_bComputeDynamicMeshTensionAfterAnimation; // 0x9	
+};
+
+// Registered binary: animationsystem.dll (project 'modellib')
+// Alignment: 4
+// Size: 0x30
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct RenderHairStrandInfo_t
+{
+public:
+	uint32_t m_nGuideIdx[3]; // 0x0	
+	uint32_t m_nBaseTriIdx; // 0xc	
+	Vector2D m_vGuideBarycentric; // 0x10	
+	Vector2D m_vBaseBarycentric; // 0x18	
+	uint16_t m_vRootOffset_flLengthScale[4]; // 0x20	
+	uint32_t m_nPackedBaseMeshUv; // 0x28	
+	uint32_t m_nPad; // 0x2c	
+};
+
+// Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x58
+// 
+// MGetKV3ClassDefaults
+class CRenderGroom
+{
+public:
+	int32_t m_nSegmentsPerHairStrand; // 0x0	
+	int32_t m_nGuideHairCount; // 0x4	
+	int32_t m_nHairCount; // 0x8	
+	int32_t m_nGroomGroupID; // 0xc	
+	int32_t m_nAttachBoneIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0014[0x4]; // 0x14
+public:
+	CUtlBinaryBlock m_hairInfoBufferData; // 0x18	
+	CUtlVector< RenderHairStrandInfo_t > m_hairs; // 0x30	
+};
+
+// Registered binary: animationsystem.dll (project 'modellib')
+// Alignment: 8
+// Size: 0x1f8
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -3010,7 +3212,22 @@ private:
 public:
 	CUtlVectorFixedGrowable< CSceneObjectData > m_sceneObjects; // 0x10	
 	CUtlVector< CBaseConstraint* > m_constraints; // 0xa0	
+	// -> m_bones - 0xb8
+	// -> m_boneParents - 0xe8
+	// -> m_nBoneWeightCount - 0x100
 	CRenderSkeleton m_skeleton; // 0xb8	
+private:
+	[[maybe_unused]] uint8_t __pad0108[0xd8]; // 0x108
+public:
+	// -> m_flTensionCompressScale - 0x1e0
+	// -> m_flTensionStretchScale - 0x1e4
+	// -> m_bRecomputeSmoothNormalsAfterAnimation - 0x1e8
+	// -> m_bComputeDynamicMeshTensionAfterAnimation - 0x1e9
+	DynamicMeshDeformParams_t m_meshDeformParams; // 0x1e0	
+private:
+	[[maybe_unused]] uint8_t __pad01ec[0x4]; // 0x1ec
+public:
+	CRenderGroom* m_pGroomData; // 0x1f0	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
@@ -3500,6 +3717,15 @@ public:
 class CFootStride
 {
 public:
+	// -> m_vStancePositionMS - 0x0
+	// -> m_vMidpointPositionMS - 0xc
+	// -> m_flStanceDirectionMS - 0x18
+	// -> m_vToStrideStartPos - 0x1c
+	// -> m_stanceCycle - 0x28
+	// -> m_footLiftCycle - 0x2c
+	// -> m_footOffCycle - 0x30
+	// -> m_footStrikeCycle - 0x34
+	// -> m_footLandCycle - 0x38
 	CFootCycleDefinition m_definition; // 0x0	
 	CFootTrajectories m_trajectories; // 0x40	
 };
@@ -3518,16 +3744,104 @@ public:
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
+// Alignment: 8
+// Size: 0xc0
+// 
+// MGetKV3ClassDefaults
+struct SkeletonAnimCapture_t
+{
+public:
+	CEntityIndex m_nEntIndex; // 0x0	
+	CEntityIndex m_nEntParent; // 0x4	
+	CUtlVector< CEntityIndex > m_ImportedCollision; // 0x8	
+	CUtlString m_ModelName; // 0x20	
+	CUtlString m_CaptureName; // 0x28	
+	CUtlVector< SkeletonAnimCapture_t::Bone_t > m_ModelBindPose; // 0x30	
+	CUtlVector< SkeletonAnimCapture_t::Bone_t > m_FeModelInitPose; // 0x48	
+	int32_t m_nFlexControllers; // 0x60	
+	bool m_bPredicted; // 0x64	
+private:
+	[[maybe_unused]] uint8_t __pad0065[0x43]; // 0x65
+public:
+	CUtlVector< SkeletonAnimCapture_t::Frame_t > m_Frames; // 0xa8	
+};
+
+// Registered binary: animationsystem.dll (project 'modellib')
+// Alignment: 16
+// Size: 0x40
+// 
+// MGetKV3ClassDefaults
+struct SkeletonAnimCapture_t__Bone_t
+{
+public:
+	CUtlString m_Name; // 0x0	
+	CTransform m_BindPose; // 0x10	
+	int32_t m_nParent; // 0x30	
+};
+
+// Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 4
-// Size: 0x8
+// Size: 0x1c
 // Has Trivial Destructor
 // 
 // MGetKV3ClassDefaults
-class CFingerSource
+struct SkeletonAnimCapture_t__FrameStamp_t
 {
 public:
-	AnimVRFinger_t m_nFingerIndex; // 0x0	
-	float m_flFingerWeight; // 0x4	
+	float m_flTime; // 0x0	
+	float m_flEntitySimTime; // 0x4	
+	bool m_bTeleportTick; // 0x8	
+	bool m_bPredicted; // 0x9	
+private:
+	[[maybe_unused]] uint8_t __pad000a[0x2]; // 0xa
+public:
+	float m_flCurTime; // 0xc	
+	float m_flRealTime; // 0x10	
+	int32_t m_nFrameCount; // 0x14	
+	int32_t m_nTickCount; // 0x18	
+};
+
+// Registered binary: animationsystem.dll (project 'modellib')
+// Alignment: 16
+// Size: 0xc0
+// 
+// MGetKV3ClassDefaults
+struct SkeletonAnimCapture_t__Frame_t
+{
+public:
+	float m_flTime; // 0x0	
+	// -> m_flTime - 0x4
+	// -> m_flEntitySimTime - 0x8
+	// -> m_bTeleportTick - 0xc
+	// -> m_bPredicted - 0xd
+	// -> m_flCurTime - 0x10
+	// -> m_flRealTime - 0x14
+	// -> m_nFrameCount - 0x18
+	// -> m_nTickCount - 0x1c
+	SkeletonAnimCapture_t::FrameStamp_t m_Stamp; // 0x4	
+	CTransform m_Transform; // 0x20	
+	bool m_bTeleport; // 0x40	
+private:
+	[[maybe_unused]] uint8_t __pad0041[0x7]; // 0x41
+public:
+	CUtlVector< CTransform > m_CompositeBones; // 0x48	
+	CUtlVector< CTransform > m_SimStateBones; // 0x60	
+	CUtlVector< CTransform > m_FeModelAnims; // 0x78	
+	CUtlVector< VectorAligned > m_FeModelPos; // 0x90	
+	CUtlVector< float32 > m_FlexControllerWeights; // 0xa8	
+};
+
+// Registered binary: animationsystem.dll (project 'modellib')
+// Alignment: 16
+// Size: 0x30
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct SkeletonAnimCapture_t__Camera_t
+{
+public:
+	CTransform m_tmCamera; // 0x0	
+	float m_flTime; // 0x20	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
@@ -3535,69 +3849,366 @@ public:
 // Size: 0x38
 // 
 // MGetKV3ClassDefaults
-class CFingerBone
+struct SkeletonDemoDb_t
 {
 public:
-	CUtlString m_boneName; // 0x0	
-	Vector m_hingeAxis; // 0x8	
-	Vector m_vCapsulePos1; // 0x14	
-	Vector m_vCapsulePos2; // 0x20	
-	float m_flMinAngle; // 0x2c	
-	float m_flMaxAngle; // 0x30	
-	float m_flRadius; // 0x34	
+	CUtlVector< SkeletonAnimCapture_t* > m_AnimCaptures; // 0x0	
+	CUtlVector< SkeletonAnimCapture_t::Camera_t > m_CameraTrack; // 0x18	
+	float m_flRecordingTime; // 0x30	
 };
 
-// Registered binary: animationsystem.dll (project 'modellib')
-// Alignment: 8
-// Size: 0x70
-// 
-// MGetKV3ClassDefaults
-class CFingerChain
-{
-public:
-	CUtlVector< CFingerSource > m_targets; // 0x0	
-	CUtlVector< CFingerBone > m_bones; // 0x18	
-	CUtlString m_name; // 0x30	
-	CUtlString m_tipParentBoneName; // 0x38	
-	Vector m_vTipOffset; // 0x40	
-private:
-	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
-public:
-	CUtlString m_metacarpalBoneName; // 0x50	
-	Vector m_vSplayHingeAxis; // 0x58	
-	float m_flSplayMinAngle; // 0x64	
-	float m_flSplayMaxAngle; // 0x68	
-	float m_flFingerScaleRatio; // 0x6c	
-};
-
-// Registered binary: animationsystem.dll (project 'modellib')
+// Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x30
 // 
 // MGetKV3ClassDefaults
-class CWristBone
+class CNmBoneMask
 {
 public:
-	CUtlString m_name; // 0x0	
-	Vector m_vForwardLS; // 0x8	
-	Vector m_vUpLS; // 0x14	
-	Vector m_vOffset; // 0x20	
+	CGlobalSymbol m_ID; // 0x0	
+	CNmBoneMask::WeightInfo_t m_weightInfo; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad0009[0xf]; // 0x9
+public:
+	CUtlVector< float32 > m_weights; // 0x18	
 };
 
-// Registered binary: animationsystem.dll (project 'modellib')
-// Alignment: 8
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 16
 // Size: 0x50
 // 
 // MGetKV3ClassDefaults
-class CVrSkeletalInputSettings
+class CNmRootMotionData
 {
 public:
-	CUtlVector< CWristBone > m_wristBones; // 0x0	
-	CUtlVector< CFingerChain > m_fingers; // 0x18	
-	CUtlString m_name; // 0x30	
-	CUtlString m_outerKnuckle1; // 0x38	
-	CUtlString m_outerKnuckle2; // 0x40	
-	AnimVRHand_t m_eHand; // 0x48	
+	CUtlVector< CTransform > m_transforms; // 0x0	
+	int32_t m_nNumFrames; // 0x18	
+	float m_flAverageLinearVelocity; // 0x1c	
+	float m_flAverageAngularVelocityRadians; // 0x20	
+private:
+	[[maybe_unused]] uint8_t __pad0024[0xc]; // 0x24
+public:
+	CTransform m_totalDelta; // 0x30	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 4
+// Size: 0x8
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct NmCompressionSettings_t__QuantizationRange_t
+{
+public:
+	float m_flRangeStart; // 0x0	
+	float m_flRangeLength; // 0x4	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 16
+// Size: 0x40
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct NmCompressionSettings_t
+{
+public:
+	NmCompressionSettings_t::QuantizationRange_t m_translationRangeX; // 0x0	
+	NmCompressionSettings_t::QuantizationRange_t m_translationRangeY; // 0x8	
+	NmCompressionSettings_t::QuantizationRange_t m_translationRangeZ; // 0x10	
+	NmCompressionSettings_t::QuantizationRange_t m_scaleRange; // 0x18	
+	Quaternion m_constantRotation; // 0x20	
+	bool m_bIsRotationStatic; // 0x30	
+	bool m_bIsTranslationStatic; // 0x31	
+	bool m_bIsScaleStatic; // 0x32	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x10
+// Has VTable
+// Is Abstract
+// 
+// MGetKV3ClassDefaults
+class CNmEvent
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	float m_flStartTime; // 0x8	
+	float m_flDuration; // 0xc	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0xb0
+// 
+// MGetKV3ClassDefaults
+class CNmSyncTrack
+{
+public:
+	CUtlLeanVectorFixedGrowable< CNmSyncTrack::Event_t > m_syncEvents; // 0x0	
+	int32_t m_nStartEventOffset; // 0xa8	
+	
+	// Static fields:
+	static CNmSyncTrack &Get_s_defaultTrack(){return *reinterpret_cast<CNmSyncTrack*>(interfaces::g_schema->FindTypeScopeForModule("animationsystem.dll")->FindDeclaredClass("CNmSyncTrack")->m_static_fields[0]->m_instance);};
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x78
+// 
+// MGetKV3ClassDefaults
+class CNmSkeleton
+{
+public:
+	CGlobalSymbol m_ID; // 0x0	
+	CUtlLeanVector< CGlobalSymbol > m_boneIDs; // 0x8	
+	CUtlVector< int32 > m_parentIndices; // 0x18	
+	CUtlVector< CTransform > m_parentSpaceReferencePose; // 0x30	
+	CUtlVector< CTransform > m_modelSpaceReferencePose; // 0x48	
+	int32_t m_numBonesToSampleAtLowLOD; // 0x60	
+private:
+	[[maybe_unused]] uint8_t __pad0064[0x4]; // 0x64
+public:
+	CUtlLeanVector< CNmBoneMask > m_boneMasks; // 0x68	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 4
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct NmPercent_t
+{
+public:
+	float m_flValue; // 0x0	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 4
+// Size: 0x8
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct NmSyncTrackTime_t
+{
+public:
+	int32_t m_nEventIdx; // 0x0	
+	NmPercent_t m_percentageThrough; // 0x4	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 16
+// Size: 0x1b0
+// 
+// MGetKV3ClassDefaults
+class CNmClip
+{
+public:
+	CStrongHandle< InfoForResourceTypeCNmSkeleton > m_skeleton; // 0x0	
+	uint32_t m_nNumFrames; // 0x8	
+	float m_flDuration; // 0xc	
+	CUtlBinaryBlock m_compressedPoseData; // 0x10	
+	CUtlVector< NmCompressionSettings_t > m_trackCompressionSettings; // 0x28	
+	CUtlVector< uint32 > m_compressedPoseOffsets; // 0x40	
+private:
+	[[maybe_unused]] uint8_t __pad0058[0x48]; // 0x58
+public:
+	// -> m_syncEvents - 0xa0
+	// -> m_nStartEventOffset - 0x148
+	CNmSyncTrack m_syncTrack; // 0xa0	
+	// -> m_transforms - 0x150
+	// -> m_nNumFrames - 0x168
+	// -> m_flAverageLinearVelocity - 0x16c
+	// -> m_flAverageAngularVelocityRadians - 0x170
+	// -> m_totalDelta - 0x180
+	CNmRootMotionData m_rootMotion; // 0x150	
+	bool m_bIsAdditive; // 0x1a0	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x10
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct CNmSyncTrack__EventMarker_t
+{
+public:
+	NmPercent_t m_startTime; // 0x0	
+	CGlobalSymbol m_ID; // 0x8	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x10
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct CNmSyncTrack__Event_t
+{
+public:
+	CGlobalSymbol m_ID; // 0x0	
+	NmPercent_t m_startTime; // 0x8	
+	NmPercent_t m_duration; // 0xc	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 4
+// Size: 0x10
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct NmSyncTrackTimeRange_t
+{
+public:
+	// -> m_nEventIdx - 0x0
+	// -> m_percentageThrough - 0x4
+	NmSyncTrackTime_t m_startTime; // 0x0	
+	// -> m_nEventIdx - 0x8
+	// -> m_percentageThrough - 0xc
+	NmSyncTrackTime_t m_endTime; // 0x8	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x30
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmLegacyEvent : public CNmEvent
+{
+private:
+	[[maybe_unused]] uint8_t __pad0010[0x10]; // 0x10
+public:
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFootEvent : public CNmEvent
+{
+public:
+	NmFootPhase_t m_phase; // 0x10	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmIDEvent : public CNmEvent
+{
+public:
+	CGlobalSymbol m_ID; // 0x10	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmTransitionEvent : public CNmEvent
+{
+public:
+	NmTransitionRule_t m_rule; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0011[0x7]; // 0x11
+public:
+	CGlobalSymbol m_ID; // 0x18	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFrameSnapEvent : public CNmEvent
+{
+public:
+	NmFrameSnapEventMode_t m_frameSnapMode; // 0x10	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x48
+// 
+// MGetKV3ClassDefaults
+class CNmGraphDataSet
+{
+public:
+	CGlobalSymbol m_variationID; // 0x0	
+	CStrongHandle< InfoForResourceTypeCNmSkeleton > m_skeleton; // 0x8	
+	CUtlVector< CStrongHandleVoid > m_resources; // 0x10	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0xf0
+// 
+// MGetKV3ClassDefaults
+class CNmGraph
+{
+public:
+	CUtlVector< int16 > m_persistentNodeIndices; // 0x0	
+	CUtlVector< uint32 > m_instanceNodeStartOffsets; // 0x18	
+	uint32_t m_instanceRequiredMemory; // 0x30	
+	uint32_t m_instanceRequiredAlignment; // 0x34	
+	int16_t m_rootNodeIdx; // 0x38	
+private:
+	[[maybe_unused]] uint8_t __pad003a[0x6]; // 0x3a
+public:
+	CUtlVector< CGlobalSymbol > m_controlParameterIDs; // 0x40	
+	CUtlVector< CGlobalSymbol > m_virtualParameterIDs; // 0x58	
+	CUtlVector< int16 > m_virtualParameterNodeIndices; // 0x70	
+	CUtlVector< CNmGraph::ChildGraphSlot_t > m_childGraphSlots; // 0x88	
+	CUtlVector< CNmGraph::ExternalGraphSlot_t > m_externalGraphSlots; // 0xa0	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x10
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct CNmGraph__ExternalGraphSlot_t
+{
+public:
+	int16_t m_nNodeIdx; // 0x0	
+	CGlobalSymbol m_slotID; // 0x8	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 2
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct CNmGraph__ChildGraphSlot_t
+{
+public:
+	int16_t m_nNodeIdx; // 0x0	
+	int16_t m_dataSlotIdx; // 0x2	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x10
+// 
+// MGetKV3ClassDefaults
+class CNmGraphVariation
+{
+public:
+	CStrongHandle< InfoForResourceTypeCNmGraph > m_graph; // 0x0	
+	CStrongHandle< InfoForResourceTypeCNmGraphDataSet > m_dataSet; // 0x8	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -4033,7 +4644,7 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x30
+// Size: 0x48
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -4049,8 +4660,11 @@ public:
 	CGlobalSymbol m_group; // 0x20	
 	// MPropertyHideField
 	AnimTagID m_tagID; // 0x28	
+private:
+	[[maybe_unused]] uint8_t __pad002c[0x14]; // 0x2c
+public:
 	// MPropertyHideField
-	bool m_bIsReferenced; // 0x2c	
+	bool m_bIsReferenced; // 0x40	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -4069,7 +4683,7 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x50
+// Size: 0x68
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -4077,25 +4691,25 @@ public:
 class CAudioAnimTag : public CAnimTagBase
 {
 private:
-	[[maybe_unused]] uint8_t __pad0030[0x8]; // 0x30
+	[[maybe_unused]] uint8_t __pad0048[0x8]; // 0x48
 public:
 	// MPropertyFriendlyName "Sound Event"
 	// MPropertyAttributeEditor "SoundPicker()"
-	CUtlString m_clipName; // 0x38	
+	CUtlString m_clipName; // 0x50	
 	// MPropertyFriendlyName "Attachment"
 	// MPropertyAttributeChoiceName "Attachment"
-	CUtlString m_attachmentName; // 0x40	
+	CUtlString m_attachmentName; // 0x58	
 	// MPropertyFriendlyName "Volume"
 	// MPropertyAttributeRange "0 1"
-	float m_flVolume; // 0x48	
+	float m_flVolume; // 0x60	
 	// MPropertyFriendlyName "Stop on Tag End"
-	bool m_bStopWhenTagEnds; // 0x4c	
+	bool m_bStopWhenTagEnds; // 0x64	
 	// MPropertyFriendlyName "Stop When Graph Destroyed"
-	bool m_bStopWhenGraphEnds; // 0x4d	
+	bool m_bStopWhenGraphEnds; // 0x65	
 	// MPropertyFriendlyName "Play on Server"
-	bool m_bPlayOnServer; // 0x4e	
+	bool m_bPlayOnServer; // 0x66	
 	// MPropertyFriendlyName "Play on Client"
-	bool m_bPlayOnClient; // 0x4f	
+	bool m_bPlayOnClient; // 0x67	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -4120,7 +4734,7 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x58
+// Size: 0x70
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -4128,20 +4742,20 @@ public:
 class CBodyGroupAnimTag : public CAnimTagBase
 {
 private:
-	[[maybe_unused]] uint8_t __pad0030[0x8]; // 0x30
+	[[maybe_unused]] uint8_t __pad0048[0x8]; // 0x48
 public:
 	// MPropertyFriendlyName "Priority"
-	int32_t m_nPriority; // 0x38	
+	int32_t m_nPriority; // 0x50	
 private:
-	[[maybe_unused]] uint8_t __pad003c[0x4]; // 0x3c
+	[[maybe_unused]] uint8_t __pad0054[0x4]; // 0x54
 public:
 	// MPropertyFriendlyName "Body Group Settings"
-	CUtlVector< CBodyGroupSetting > m_bodyGroupSettings; // 0x40	
+	CUtlVector< CBodyGroupSetting > m_bodyGroupSettings; // 0x58	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x50
+// Size: 0x68
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -4149,38 +4763,22 @@ public:
 class CClothSettingsAnimTag : public CAnimTagBase
 {
 private:
-	[[maybe_unused]] uint8_t __pad0030[0x8]; // 0x30
+	[[maybe_unused]] uint8_t __pad0048[0x8]; // 0x48
 public:
 	// MPropertyFriendlyName "Stiffness"
 	// MPropertyAttributeRange "0 1"
-	float m_flStiffness; // 0x38	
+	float m_flStiffness; // 0x50	
 	// MPropertyFriendlyName "EaseIn"
 	// MPropertyAttributeRange "0 1"
-	float m_flEaseIn; // 0x3c	
+	float m_flEaseIn; // 0x54	
 	// MPropertyFriendlyName "EaseOut"
 	// MPropertyAttributeRange "0 1"
-	float m_flEaseOut; // 0x40	
+	float m_flEaseOut; // 0x58	
 private:
-	[[maybe_unused]] uint8_t __pad0044[0x4]; // 0x44
+	[[maybe_unused]] uint8_t __pad005c[0x4]; // 0x5c
 public:
 	// MPropertyFriendlyName "VertexSet"
-	CUtlString m_nVertexSet; // 0x48	
-};
-
-// Registered binary: animationsystem.dll (project 'animgraphlib')
-// Alignment: 8
-// Size: 0x40
-// Has VTable
-// 
-// MGetKV3ClassDefaults
-// MPropertyFriendlyName "FootFall Tag"
-class CFootFallAnimTag : public CAnimTagBase
-{
-private:
-	[[maybe_unused]] uint8_t __pad0030[0x8]; // 0x30
-public:
-	// MPropertyFriendlyName "Foot"
-	FootFallTagFoot_t m_foot; // 0x38	
+	CUtlString m_nVertexSet; // 0x60	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -4189,30 +4787,46 @@ public:
 // Has VTable
 // 
 // MGetKV3ClassDefaults
-// MPropertyFriendlyName "FootstepLanded Tag"
-class CFootstepLandedAnimTag : public CAnimTagBase
+// MPropertyFriendlyName "FootFall Tag"
+class CFootFallAnimTag : public CAnimTagBase
 {
 private:
-	[[maybe_unused]] uint8_t __pad0030[0x8]; // 0x30
+	[[maybe_unused]] uint8_t __pad0048[0x8]; // 0x48
 public:
-	// MPropertyFriendlyName "Footstep Type"
-	FootstepLandedFootSoundType_t m_FootstepType; // 0x38	
-private:
-	[[maybe_unused]] uint8_t __pad003c[0x4]; // 0x3c
-public:
-	// MPropertyFriendlyName "Override Sound"
-	// MPropertyAttributeChoiceName "Sound"
-	CUtlString m_OverrideSoundName; // 0x40	
-	// MPropertyFriendlyName "Debug Name"
-	CUtlString m_DebugAnimSourceString; // 0x48	
-	// MPropertyFriendlyName "Bone Name"
-	// MPropertyAttributeChoiceName "Bone"
-	CUtlString m_BoneName; // 0x50	
+	// MPropertyFriendlyName "Foot"
+	FootFallTagFoot_t m_foot; // 0x50	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x50
+// Size: 0x70
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "FootstepLanded Tag"
+class CFootstepLandedAnimTag : public CAnimTagBase
+{
+private:
+	[[maybe_unused]] uint8_t __pad0048[0x8]; // 0x48
+public:
+	// MPropertyFriendlyName "Footstep Type"
+	FootstepLandedFootSoundType_t m_FootstepType; // 0x50	
+private:
+	[[maybe_unused]] uint8_t __pad0054[0x4]; // 0x54
+public:
+	// MPropertyFriendlyName "Override Sound"
+	// MPropertyAttributeChoiceName "Sound"
+	CUtlString m_OverrideSoundName; // 0x58	
+	// MPropertyFriendlyName "Debug Name"
+	CUtlString m_DebugAnimSourceString; // 0x60	
+	// MPropertyFriendlyName "Bone Name"
+	// MPropertyAttributeChoiceName "Bone"
+	CUtlString m_BoneName; // 0x68	
+};
+
+// Registered binary: animationsystem.dll (project 'animgraphlib')
+// Alignment: 8
+// Size: 0x68
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -4220,24 +4834,24 @@ public:
 class CMaterialAttributeAnimTag : public CAnimTagBase
 {
 private:
-	[[maybe_unused]] uint8_t __pad0030[0x8]; // 0x30
+	[[maybe_unused]] uint8_t __pad0048[0x8]; // 0x48
 public:
 	// MPropertyFriendlyName "Attribute Name"
-	CUtlString m_AttributeName; // 0x38	
+	CUtlString m_AttributeName; // 0x50	
 	// MPropertyFriendlyName "Attribute Type"
 	// MPropertyAttrChangeCallback
-	MatterialAttributeTagType_t m_AttributeType; // 0x40	
+	MatterialAttributeTagType_t m_AttributeType; // 0x58	
 	// MPropertyFriendlyName "Value"
 	// MPropertyAttrStateCallback
-	float m_flValue; // 0x44	
+	float m_flValue; // 0x5c	
 	// MPropertyFriendlyName "Color"
 	// MPropertyAttrStateCallback
-	Color m_Color; // 0x48	
+	Color m_Color; // 0x60	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x78
+// Size: 0x90
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -4245,48 +4859,48 @@ public:
 class CParticleAnimTag : public CAnimTagBase
 {
 private:
-	[[maybe_unused]] uint8_t __pad0030[0x8]; // 0x30
+	[[maybe_unused]] uint8_t __pad0048[0x8]; // 0x48
 public:
 	// MPropertySuppressField
-	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_hParticleSystem; // 0x38	
+	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_hParticleSystem; // 0x50	
 	// MPropertyAttributeEditor "AssetBrowse( vpcf )"
 	// MPropertyFriendlyName "Particle System"
-	CUtlString m_particleSystemName; // 0x40	
+	CUtlString m_particleSystemName; // 0x58	
 	// MPropertyFriendlyName "Configuration"
-	CUtlString m_configName; // 0x48	
+	CUtlString m_configName; // 0x60	
 	// MPropertyFriendlyName "Detach From Owner"
-	bool m_bDetachFromOwner; // 0x50	
+	bool m_bDetachFromOwner; // 0x68	
 	// MPropertyFriendlyName "Stop on Tag End"
 	// MPropertyGroupName "Ending"
-	bool m_bStopWhenTagEnds; // 0x51	
+	bool m_bStopWhenTagEnds; // 0x69	
 	// MPropertyFriendlyName "Tag End Stop is Instant"
 	// MPropertyGroupName "Ending"
-	bool m_bTagEndStopIsInstant; // 0x52	
+	bool m_bTagEndStopIsInstant; // 0x6a	
 private:
-	[[maybe_unused]] uint8_t __pad0053[0x5]; // 0x53
+	[[maybe_unused]] uint8_t __pad006b[0x5]; // 0x6b
 public:
 	// MPropertyFriendlyName "Attachment"
 	// MPropertyGroupName "Attachments"
 	// MPropertyAttributeChoiceName "Attachment"
-	CUtlString m_attachmentName; // 0x58	
+	CUtlString m_attachmentName; // 0x70	
 	// MPropertyFriendlyName "Attachment Type"
 	// MPropertyGroupName "Attachments"
-	ParticleAttachment_t m_attachmentType; // 0x60	
+	ParticleAttachment_t m_attachmentType; // 0x78	
 private:
-	[[maybe_unused]] uint8_t __pad0064[0x4]; // 0x64
+	[[maybe_unused]] uint8_t __pad007c[0x4]; // 0x7c
 public:
 	// MPropertyFriendlyName "Attachment (Control Point 1)"
 	// MPropertyGroupName "Attachments"
 	// MPropertyAttributeChoiceName "Attachment"
-	CUtlString m_attachmentCP1Name; // 0x68	
+	CUtlString m_attachmentCP1Name; // 0x80	
 	// MPropertyFriendlyName "Attachment Type (Control Point 1)"
 	// MPropertyGroupName "Attachments"
-	ParticleAttachment_t m_attachmentCP1Type; // 0x70	
+	ParticleAttachment_t m_attachmentCP1Type; // 0x88	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x50
+// Size: 0x68
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -4294,29 +4908,29 @@ public:
 class CRagdollAnimTag : public CAnimTagBase
 {
 private:
-	[[maybe_unused]] uint8_t __pad0030[0x8]; // 0x30
+	[[maybe_unused]] uint8_t __pad0048[0x8]; // 0x48
 public:
 	// MPropertyFriendlyName "Pose Control"
-	AnimPoseControl m_nPoseControl; // 0x38	
+	AnimPoseControl m_nPoseControl; // 0x50	
 	// MPropertyFriendlyName "Frequency"
 	// MPropertyAttributeRange "0 30"
-	float m_flFrequency; // 0x3c	
+	float m_flFrequency; // 0x54	
 	// MPropertyFriendlyName "Damping Ratio"
 	// MPropertyAttributeRange "0 2"
-	float m_flDampingRatio; // 0x40	
+	float m_flDampingRatio; // 0x58	
 	// MPropertyFriendlyName "Decay Duration"
 	// MPropertyAttributeRange "-1 1000"
-	float m_flDecayDuration; // 0x44	
+	float m_flDecayDuration; // 0x5c	
 	// MPropertyFriendlyName "Decay Bias"
 	// MPropertyAttributeRange "0 1"
-	float m_flDecayBias; // 0x48	
+	float m_flDecayBias; // 0x60	
 	// MPropertyFriendlyName "Destroy"
-	bool m_bDestroy; // 0x4c	
+	bool m_bDestroy; // 0x64	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x40
+// Size: 0x58
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -4324,16 +4938,16 @@ public:
 class CSequenceFinishedAnimTag : public CAnimTagBase
 {
 private:
-	[[maybe_unused]] uint8_t __pad0030[0x8]; // 0x30
+	[[maybe_unused]] uint8_t __pad0048[0x8]; // 0x48
 public:
 	// MPropertyFriendlyName "Sequence"
 	// MPropertyAttributeChoiceName "Sequence"
-	CUtlString m_sequenceName; // 0x38	
+	CUtlString m_sequenceName; // 0x50	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x30
+// Size: 0x48
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -4345,7 +4959,7 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x38
+// Size: 0x50
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -4471,41 +5085,25 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x10
-// 
-// MGetKV3ClassDefaults
-// MPropertyFriendlyName "Movement Mode"
-// MPropertyElementNameFn
-class CMovementMode
-{
-public:
-	// MPropertyFriendlyName "Name"
-	CUtlString m_name; // 0x0	
-	// MPropertyFriendlyName "Top Speed"
-	float m_flSpeed; // 0x8	
-};
-
-// Registered binary: animationsystem.dll (project 'animgraphlib')
-// Alignment: 8
-// Size: 0xc0
+// Size: 0xb0
 // Has VTable
 // 
 // MGetKV3ClassDefaults
 class CMovementComponentUpdater : public CAnimComponentUpdater
 {
 public:
-	CUtlVector< CMovementMode > m_movementModes; // 0x30	
-	CUtlVector< CSmartPtr< CAnimMotorUpdaterBase > > m_motors; // 0x48	
-	CAnimInputDamping m_facingDamping; // 0x60	
-	FacingMode m_eDefaultFacingMode; // 0x70	
+	CUtlVector< CSmartPtr< CAnimMotorUpdaterBase > > m_motors; // 0x30	
+	CAnimInputDamping m_facingDamping; // 0x48	
+	FacingMode m_eDefaultFacingMode; // 0x58	
 private:
-	[[maybe_unused]] uint8_t __pad0074[0x8]; // 0x74
+	[[maybe_unused]] uint8_t __pad005c[0x8]; // 0x5c
 public:
-	int32_t m_nDefaultMotorIndex; // 0x7c	
-	bool m_bMoveVarsDisabled; // 0x80	
-	bool m_bNetworkPath; // 0x81	
-	bool m_bNetworkFacing; // 0x82	
-	CAnimParamHandle m_paramHandles[30]; // 0x83	
+	int32_t m_nDefaultMotorIndex; // 0x64	
+	float m_flDefaultRunSpeed; // 0x68	
+	bool m_bMoveVarsDisabled; // 0x6c	
+	bool m_bNetworkPath; // 0x6d	
+	bool m_bNetworkFacing; // 0x6e	
+	CAnimParamHandle m_paramHandles[30]; // 0x6f	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -4522,7 +5120,7 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0xa0
+// Size: 0xa8
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -4536,6 +5134,7 @@ public:
 	float m_flSpringFrequencyMin; // 0x90	
 	float m_flSpringFrequencyMax; // 0x94	
 	float m_flMaxStretch; // 0x98	
+	bool m_bSolidCollisionAtZeroWeight; // 0x9c	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -4556,28 +5155,6 @@ public:
 	CAnimParamHandle m_hSlopeHeading; // 0x3e	
 	CAnimParamHandle m_hSlopeNormal; // 0x40	
 	CAnimParamHandle m_hSlopeNormal_WorldSpace; // 0x42	
-};
-
-// Registered binary: animationsystem.dll (project 'animgraphlib')
-// Alignment: 8
-// Size: 0x48
-// Has VTable
-// 
-// MGetKV3ClassDefaults
-class CVRInputComponentUpdater : public CAnimComponentUpdater
-{
-private:
-	[[maybe_unused]] uint8_t __pad0030[0x4]; // 0x30
-public:
-	CAnimParamHandle m_FingerCurl_Thumb; // 0x34	
-	CAnimParamHandle m_FingerCurl_Index; // 0x36	
-	CAnimParamHandle m_FingerCurl_Middle; // 0x38	
-	CAnimParamHandle m_FingerCurl_Ring; // 0x3a	
-	CAnimParamHandle m_FingerCurl_Pinky; // 0x3c	
-	CAnimParamHandle m_FingerSplay_Thumb_Index; // 0x3e	
-	CAnimParamHandle m_FingerSplay_Index_Middle; // 0x40	
-	CAnimParamHandle m_FingerSplay_Middle_Ring; // 0x42	
-	CAnimParamHandle m_FingerSplay_Ring_Pinky; // 0x44	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -4670,6 +5247,9 @@ class CMotionSearchNode
 {
 public:
 	CUtlVector< CMotionSearchNode* > m_children; // 0x0	
+	// -> m_centroidVectors - 0x18
+	// -> m_nCentroids - 0x30
+	// -> m_nDimensions - 0x34
 	CVectorQuantizer m_quantizer; // 0x18	
 	CUtlVector< CUtlVector< SampleCode > > m_sampleCodes; // 0x38	
 	CUtlVector< CUtlVector< int32 > > m_sampleIndices; // 0x50	
@@ -4684,7 +5264,14 @@ public:
 class CMotionSearchDB
 {
 public:
+	// -> m_children - 0x0
+	// -> m_quantizer - 0x18
+	// -> m_sampleCodes - 0x38
+	// -> m_sampleIndices - 0x50
+	// -> m_selectableSamples - 0x68
 	CMotionSearchNode m_rootNode; // 0x0	
+	// -> m_subQuantizers - 0x80
+	// -> m_nDimensions - 0x98
 	CProductQuantizer m_residualQuantizer; // 0x80	
 	CUtlVector< MotionDBIndex > m_codeIndices; // 0xa0	
 };
@@ -4697,6 +5284,9 @@ public:
 class CMotionGraphGroup
 {
 public:
+	// -> m_rootNode - 0x0
+	// -> m_residualQuantizer - 0x80
+	// -> m_codeIndices - 0xa0
 	CMotionSearchDB m_searchDB; // 0x0	
 	CUtlVector< CSmartPtr< CMotionGraph > > m_motionGraphs; // 0xb8	
 	CUtlVector< CMotionGraphConfig > m_motionGraphConfigs; // 0xd0	
@@ -5250,89 +5840,7 @@ public:
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
-// Alignment: 4
-// Size: 0x8
-// Has Trivial Destructor
-// 
-// MGetKV3ClassDefaults
-struct FingerSource_t
-{
-public:
-	AnimVRFinger_t m_nFingerIndex; // 0x0	
-	float m_flFingerWeight; // 0x4	
-};
-
-// Registered binary: animationsystem.dll (project 'animgraphlib')
-// Alignment: 4
-// Size: 0x34
-// Has Trivial Destructor
-// 
-// MGetKV3ClassDefaults
-struct FingerBone_t
-{
-public:
-	int32_t m_boneIndex; // 0x0	
-	Vector m_hingeAxis; // 0x4	
-	Vector m_vCapsulePos1; // 0x10	
-	Vector m_vCapsulePos2; // 0x1c	
-	float m_flMinAngle; // 0x28	
-	float m_flMaxAngle; // 0x2c	
-	float m_flRadius; // 0x30	
-};
-
-// Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x60
-// 
-// MGetKV3ClassDefaults
-struct FingerChain_t
-{
-public:
-	CUtlVector< FingerSource_t > m_targets; // 0x0	
-	CUtlVector< FingerBone_t > m_bones; // 0x18	
-	Vector m_vTipOffset; // 0x30	
-	Vector m_vSplayHingeAxis; // 0x3c	
-	int32_t m_tipParentBoneIndex; // 0x48	
-	int32_t m_metacarpalBoneIndex; // 0x4c	
-	float m_flSplayMinAngle; // 0x50	
-	float m_flSplayMaxAngle; // 0x54	
-	float m_flFingerScaleRatio; // 0x58	
-};
-
-// Registered binary: animationsystem.dll (project 'animgraphlib')
-// Alignment: 16
-// Size: 0x30
-// Has Trivial Destructor
-// 
-// MGetKV3ClassDefaults
-struct WristBone_t
-{
-public:
-	CTransform m_xOffsetTransformMS; // 0x0	
-	int32_t m_boneIndex; // 0x20	
-};
-
-// Registered binary: animationsystem.dll (project 'animgraphlib')
-// Alignment: 8
-// Size: 0x48
-// 
-// MGetKV3ClassDefaults
-struct SkeletalInputOpFixedSettings_t
-{
-public:
-	CUtlVector< WristBone_t > m_wristBones; // 0x0	
-	CUtlVector< FingerChain_t > m_fingers; // 0x18	
-	int32_t m_outerKnuckle1; // 0x30	
-	int32_t m_outerKnuckle2; // 0x34	
-	AnimVRHand_t m_eHand; // 0x38	
-	AnimVRHandMotionRange_t m_eMotionRange; // 0x3c	
-	AnimVrBoneTransformSource_t m_eTransformSource; // 0x40	
-	bool m_bEnableIK; // 0x44	
-	bool m_bEnableCollision; // 0x45	
-};
-
-// Registered binary: animationsystem.dll (project 'animgraphlib')
-// Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
 struct IKSolverSettings_t
@@ -5360,7 +5868,7 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x50
+// Size: 0x68
 // Has VTable
 // Is Abstract
 // 
@@ -5384,17 +5892,17 @@ public:
 	// MPropertyAttrChangeCallback
 	CUtlString m_componentName; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0048[0x4]; // 0x48
+	[[maybe_unused]] uint8_t __pad0048[0x18]; // 0x48
 public:
 	// MPropertyHideField
-	bool m_bNetworkingRequested; // 0x4c	
+	bool m_bNetworkingRequested; // 0x60	
 	// MPropertyHideField
-	bool m_bIsReferenced; // 0x4d	
+	bool m_bIsReferenced; // 0x61	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x60
+// Size: 0x78
 // Has VTable
 // Is Abstract
 // 
@@ -5403,39 +5911,39 @@ class CConcreteAnimParameter : public CAnimParameterBase
 {
 public:
 	// MPropertyFriendlyName "Preview Button"
-	AnimParamButton_t m_previewButton; // 0x50	
+	AnimParamButton_t m_previewButton; // 0x68	
 	// MPropertyFriendlyName "Network"
-	AnimParamNetworkSetting m_eNetworkSetting; // 0x54	
+	AnimParamNetworkSetting m_eNetworkSetting; // 0x6c	
 	// MPropertyFriendlyName "Force Latest Value"
-	bool m_bUseMostRecentValue; // 0x58	
+	bool m_bUseMostRecentValue; // 0x70	
 	// MPropertyFriendlyName "Auto Reset"
-	bool m_bAutoReset; // 0x59	
+	bool m_bAutoReset; // 0x71	
 	// MPropertyFriendlyName "Game Writable"
 	// MPropertyGroupName "+Permissions"
 	// MPropertyAttrStateCallback
-	bool m_bGameWritable; // 0x5a	
+	bool m_bGameWritable; // 0x72	
 	// MPropertyFriendlyName "Graph Writable"
 	// MPropertyGroupName "+Permissions"
 	// MPropertyAttrStateCallback
-	bool m_bGraphWritable; // 0x5b	
+	bool m_bGraphWritable; // 0x73	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x60
+// Size: 0x78
 // Has VTable
 // 
 // MGetKV3ClassDefaults
 class CVirtualAnimParameter : public CAnimParameterBase
 {
 public:
-	CUtlString m_expressionString; // 0x50	
-	AnimParamType_t m_eParamType; // 0x58	
+	CUtlString m_expressionString; // 0x68	
+	AnimParamType_t m_eParamType; // 0x70	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x68
+// Size: 0x80
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -5444,7 +5952,7 @@ class CBoolAnimParameter : public CConcreteAnimParameter
 {
 public:
 	// MPropertyFriendlyName "Default Value"
-	bool m_bDefaultValue; // 0x60	
+	bool m_bDefaultValue; // 0x78	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -5457,20 +5965,21 @@ public:
 class CEnumAnimParameter : public CConcreteAnimParameter
 {
 private:
-	[[maybe_unused]] uint8_t __pad0060[0x8]; // 0x60
+	[[maybe_unused]] uint8_t __pad0078[0x8]; // 0x78
 public:
 	// MPropertyFriendlyName "Default Value"
-	uint8_t m_defaultValue; // 0x68	
+	uint8_t m_defaultValue; // 0x80	
 private:
-	[[maybe_unused]] uint8_t __pad0069[0x7]; // 0x69
+	[[maybe_unused]] uint8_t __pad0081[0x7]; // 0x81
 public:
 	// MPropertyFriendlyName "Values"
-	CUtlVector< CUtlString > m_enumOptions; // 0x70	
+	// MPropertyAttrChangeCallback
+	CUtlVector< CUtlString > m_enumOptions; // 0x88	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x70
+// Size: 0x88
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -5479,16 +5988,16 @@ class CIntAnimParameter : public CConcreteAnimParameter
 {
 public:
 	// MPropertyFriendlyName "Default Value"
-	int32_t m_defaultValue; // 0x60	
+	int32_t m_defaultValue; // 0x78	
 	// MPropertyFriendlyName "Min Value"
-	int32_t m_minValue; // 0x64	
+	int32_t m_minValue; // 0x7c	
 	// MPropertyFriendlyName "Max Value"
-	int32_t m_maxValue; // 0x68	
+	int32_t m_maxValue; // 0x80	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x70
+// Size: 0x88
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -5497,18 +6006,18 @@ class CFloatAnimParameter : public CConcreteAnimParameter
 {
 public:
 	// MPropertyFriendlyName "Default Value"
-	float m_fDefaultValue; // 0x60	
+	float m_fDefaultValue; // 0x78	
 	// MPropertyFriendlyName "Min Value"
-	float m_fMinValue; // 0x64	
+	float m_fMinValue; // 0x7c	
 	// MPropertyFriendlyName "Max Value"
-	float m_fMaxValue; // 0x68	
+	float m_fMaxValue; // 0x80	
 	// MPropertyFriendlyName "Interpolate"
-	bool m_bInterpolate; // 0x6c	
+	bool m_bInterpolate; // 0x84	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x70
+// Size: 0x88
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -5517,25 +6026,41 @@ class CVectorAnimParameter : public CConcreteAnimParameter
 {
 public:
 	// MPropertyFriendlyName "Default Value"
-	Vector m_defaultValue; // 0x60	
+	Vector m_defaultValue; // 0x78	
 	// MPropertyFriendlyName "Interpolate"
-	bool m_bInterpolate; // 0x6c	
+	bool m_bInterpolate; // 0x84	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 16
-// Size: 0x80
+// Size: 0xa0
 // Has VTable
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Quaternion Parameter"
 class CQuaternionAnimParameter : public CConcreteAnimParameter
 {
+private:
+	[[maybe_unused]] uint8_t __pad0078[0x8]; // 0x78
 public:
 	// MPropertyFriendlyName "Default Value"
-	Quaternion m_defaultValue; // 0x60	
+	Quaternion m_defaultValue; // 0x80	
 	// MPropertyFriendlyName "Interpolate"
-	bool m_bInterpolate; // 0x70	
+	bool m_bInterpolate; // 0x90	
+};
+
+// Registered binary: animationsystem.dll (project 'animgraphlib')
+// Alignment: 8
+// Size: 0x80
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "Symbol Parameter"
+class CSymbolAnimParameter : public CConcreteAnimParameter
+{
+public:
+	// MPropertyFriendlyName "Default Value"
+	CGlobalSymbol m_defaultValue; // 0x78	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -5632,6 +6157,9 @@ public:
 class CStateMachineComponentUpdater : public CAnimComponentUpdater
 {
 public:
+	// -> m_states - 0x38
+	// -> m_transitions - 0x50
+	// -> m_startStateIndex - 0x80
 	CAnimStateMachineUpdater m_stateMachine; // 0x30	
 };
 
@@ -5661,6 +6189,8 @@ class CAnimUpdateNodeBase
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
+	// -> m_path[11] - 0x18
+	// -> m_nCount - 0x44
 	CAnimNodePath m_nodePath; // 0x18	
 	AnimNodeNetworkMode m_networkMode; // 0x48	
 private:
@@ -5867,6 +6397,8 @@ public:
 class FootFixedSettings
 {
 public:
+	// -> m_flTraceHeight - 0x0
+	// -> m_flTraceRadius - 0x4
 	TraceSettings_t m_traceSettings; // 0x0	
 	VectorAligned m_vFootBaseBindPosePositionMS; // 0x10	
 	float m_flFootBaseLength; // 0x20	
@@ -5957,6 +6489,8 @@ public:
 class CMotionMatchingUpdateNode : public CLeafUpdateNode
 {
 public:
+	// -> m_groups - 0x58
+	// -> m_nDimensionCount - 0x70
 	CMotionDataSet m_dataSet; // 0x58	
 	CUtlVector< CSmartPtr< CMotionMetricEvaluator > > m_metrics; // 0x78	
 	CUtlVector< float32 > m_weights; // 0x90	
@@ -6061,18 +6595,6 @@ public:
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
-// Alignment: 8
-// Size: 0xa8
-// Has VTable
-// 
-// MGetKV3ClassDefaults
-class CSkeletalInputUpdateNode : public CLeafUpdateNode
-{
-public:
-	SkeletalInputOpFixedSettings_t m_fixedOpData; // 0x58	
-};
-
-// Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 1
 // Size: 0x4
 // Has Trivial Destructor
@@ -6147,6 +6669,9 @@ class CStateMachineUpdateNode : public CAnimUpdateNodeBase
 private:
 	[[maybe_unused]] uint8_t __pad0058[0x10]; // 0x58
 public:
+	// -> m_states - 0x70
+	// -> m_transitions - 0x88
+	// -> m_startStateIndex - 0xb8
 	CAnimStateMachineUpdater m_stateMachine; // 0x68	
 	CUtlVector< CStateNodeStateData > m_stateData; // 0xc0	
 	CUtlVector< CStateNodeTransitionData > m_transitionData; // 0xd8	
@@ -6284,6 +6809,8 @@ public:
 	CAnimGraphSettingsManager m_settings; // 0x78	
 	CSmartPtr< CStaticPoseCacheBuilder > m_pStaticPoseCache; // 0xa8	
 	CSmartPtr< CAnimSkeleton > m_pSkeleton; // 0xb0	
+	// -> m_path[11] - 0xb8
+	// -> m_nCount - 0xe4
 	CAnimNodePath m_rootNodePath; // 0xb8	
 };
 
@@ -6324,6 +6851,8 @@ class CMotionGraphConfig
 public:
 	float m_paramValues[4]; // 0x0	
 	float m_flDuration; // 0x10	
+	// -> m_nGroup - 0x14
+	// -> m_nMotion - 0x16
 	MotionIndex m_nMotionIndex; // 0x14	
 	int32_t m_nSampleStart; // 0x18	
 	int32_t m_nSampleCount; // 0x1c	
@@ -6339,6 +6868,8 @@ class CSingleFrameUpdateNode : public CLeafUpdateNode
 {
 public:
 	CUtlVector< CSmartPtr< CAnimActionUpdater > > m_actions; // 0x58	
+	// -> m_nIndex - 0x70
+	// -> m_eType - 0x72
 	CPoseHandle m_hPoseCacheHandle; // 0x70	
 	HSequence m_hSequence; // 0x74	
 	float m_flCycle; // 0x78	
@@ -6482,10 +7013,17 @@ struct ChainToSolveData_t
 {
 public:
 	int32_t m_nChainIndex; // 0x0	
+	// -> m_SolverType - 0x4
+	// -> m_nNumIterations - 0x8
 	IKSolverSettings_t m_SolverSettings; // 0x4	
 private:
 	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
 public:
+	// -> m_TargetSource - 0x10
+	// -> m_Bone - 0x18
+	// -> m_AnimgraphParameterNamePosition - 0x28
+	// -> m_AnimgraphParameterNameOrientation - 0x2c
+	// -> m_TargetCoordSystem - 0x30
 	IKTargetSettings_t m_TargetSettings; // 0x10	
 	SolveIKChainAnimNodeDebugSetting m_DebugSetting; // 0x38	
 	float m_flDebugNormalizedValue; // 0x3c	
@@ -6546,6 +7084,14 @@ class CAimMatrixUpdateNode : public CUnaryUpdateNode
 private:
 	[[maybe_unused]] uint8_t __pad0068[0x8]; // 0x68
 public:
+	// -> m_attachment - 0x70
+	// -> m_damping - 0xf0
+	// -> m_poseCacheHandles[10] - 0x100
+	// -> m_eBlendMode - 0x128
+	// -> m_fAngleIncrement - 0x12c
+	// -> m_nSequenceMaxFrame - 0x130
+	// -> m_nBoneMaskIndex - 0x134
+	// -> m_bTargetIsPosition - 0x138
 	AimMatrixOpFixedSettings_t m_opFixedSettings; // 0x70	
 private:
 	[[maybe_unused]] uint8_t __pad0140[0x8]; // 0x140
@@ -6708,6 +7254,10 @@ class CFollowAttachmentUpdateNode : public CUnaryUpdateNode
 private:
 	[[maybe_unused]] uint8_t __pad0068[0x8]; // 0x68
 public:
+	// -> m_attachment - 0x70
+	// -> m_boneIndex - 0xf0
+	// -> m_bMatchTranslation - 0xf4
+	// -> m_bMatchRotation - 0xf5
 	FollowAttachmentSettings_t m_opFixedData; // 0x70	
 };
 
@@ -6723,6 +7273,8 @@ private:
 	[[maybe_unused]] uint8_t __pad0068[0x8]; // 0x68
 public:
 	CUtlVector< HSequence > m_clips; // 0x70	
+	// -> m_nIndex - 0x88
+	// -> m_eType - 0x8a
 	CPoseHandle m_hBasePoseCacheHandle; // 0x88	
 	CAnimParamHandle m_facingTarget; // 0x8c	
 private:
@@ -6781,6 +7333,13 @@ class CFootPinningUpdateNode : public CUnaryUpdateNode
 private:
 	[[maybe_unused]] uint8_t __pad0068[0x8]; // 0x68
 public:
+	// -> m_footInfo - 0x70
+	// -> m_flBlendTime - 0x88
+	// -> m_flLockBreakDistance - 0x8c
+	// -> m_flMaxLegTwist - 0x90
+	// -> m_nHipBoneIndex - 0x94
+	// -> m_bApplyLegTwistLimits - 0x98
+	// -> m_bApplyFootRotationLimits - 0x99
 	FootPinningPoseOpFixedData_t m_poseOpFixedData; // 0x70	
 	FootPinningTimingSource m_eTimingSource; // 0xa0	
 private:
@@ -6887,6 +7446,17 @@ class CLookAtUpdateNode : public CUnaryUpdateNode
 private:
 	[[maybe_unused]] uint8_t __pad0068[0x8]; // 0x68
 public:
+	// -> m_attachment - 0x70
+	// -> m_damping - 0xf0
+	// -> m_bones - 0x100
+	// -> m_flYawLimit - 0x118
+	// -> m_flPitchLimit - 0x11c
+	// -> m_flHysteresisInnerAngle - 0x120
+	// -> m_flHysteresisOuterAngle - 0x124
+	// -> m_bRotateYawForward - 0x128
+	// -> m_bMaintainUpDirection - 0x129
+	// -> m_bTargetIsPosition - 0x12a
+	// -> m_bUseHysteresis - 0x12b
 	LookAtOpFixedSettings_t m_opFixedSettings; // 0x70	
 private:
 	[[maybe_unused]] uint8_t __pad0130[0x8]; // 0x130
@@ -6998,6 +7568,8 @@ class CSolveIKChainUpdateNode : public CUnaryUpdateNode
 {
 public:
 	CUtlVector< CSolveIKTargetHandle_t > m_targetHandles; // 0x68	
+	// -> m_ChainsToSolveData - 0x80
+	// -> m_bMatchTargetOrientation - 0x98
 	SolveIKChainPoseOpFixedSettings_t m_opFixedData; // 0x80	
 };
 

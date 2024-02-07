@@ -10,7 +10,7 @@
 // /////////////////////////////////////////////////////////////
 
 // Registered binary: networksystem.dll (project 'networksystem')
-// Alignment: 2
+// Alignment: 8
 // Size: 0x2
 // Has Trivial Destructor
 struct ChangeAccessorFieldPathIndex_t

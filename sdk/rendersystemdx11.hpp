@@ -21,7 +21,7 @@ enum class RenderSlotType_t : uint32_t
 
 // Registered binary: rendersystemdx11.dll (project 'rendersystemdx11')
 // Alignment: 4
-// Size: 0x9
+// Size: 0xc
 enum class RenderBufferFlags_t : uint32_t
 {
 	RENDER_BUFFER_USAGE_VERTEX_BUFFER = 0x1,
@@ -33,6 +33,9 @@ enum class RenderBufferFlags_t : uint32_t
 	RENDER_BUFFER_APPEND_CONSUME_BUFFER = 0x40,
 	RENDER_BUFFER_UAV_COUNTER = 0x80,
 	RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS = 0x100,
+	RENDER_BUFFER_ACCELERATION_STRUCTURE = 0x200,
+	RENDER_BUFFER_SHADER_BINDING_TABLE = 0x400,
+	RENDER_BUFFER_PER_FRAME_WRITE_ONCE = 0x800,
 };
 
 // Registered binary: rendersystemdx11.dll (project 'rendersystemdx11')
@@ -67,9 +70,9 @@ enum class InputLayoutVariation_t : uint32_t
 };
 
 // Registered binary: rendersystemdx11.dll (project 'rendersystemdx11')
-// Alignment: 4
+// Alignment: 1
 // Size: 0x8
-enum class RenderMultisampleType_t : uint32_t
+enum class RenderMultisampleType_t : uint8_t
 {
 	RENDER_MULTISAMPLE_INVALID = 0xffffffffffffffff,
 	RENDER_MULTISAMPLE_NONE = 0x0,
@@ -82,7 +85,7 @@ enum class RenderMultisampleType_t : uint32_t
 };
 
 // Registered binary: rendersystemdx11.dll (project 'rendersystemdx11')
-// Alignment: 4
+// Alignment: 8
 // Size: 0x38
 // Has Trivial Destructor
 struct RenderInputLayoutField_t
@@ -98,7 +101,7 @@ public:
 };
 
 // Registered binary: rendersystemdx11.dll (project 'rendersystemdx11')
-// Alignment: 4
+// Alignment: 8
 // Size: 0xc4
 // Has Trivial Destructor
 struct VsInputSignatureElement_t

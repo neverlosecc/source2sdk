@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: resourcesystem.dll
-// Classes count: 56
+// Classes count: 59
 // Enums count: 2
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -50,7 +50,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -64,7 +64,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -78,7 +78,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -106,7 +106,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -120,7 +120,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -134,7 +134,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -148,7 +148,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -162,7 +162,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -176,7 +176,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -190,7 +190,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -204,7 +204,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -218,7 +218,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -232,7 +232,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -246,7 +246,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -260,7 +260,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -274,7 +274,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -288,7 +288,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -302,7 +302,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -316,7 +316,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -330,7 +330,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -344,13 +344,13 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
 // MResourceTypeForInfoType "vsnd"
-struct InfoForResourceTypeVSound_t
+class InfoForResourceTypeCVoiceContainerBase
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
@@ -358,7 +358,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -372,7 +372,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -386,7 +386,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -400,7 +400,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -414,7 +414,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -428,7 +428,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -442,7 +442,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -456,7 +456,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -470,7 +470,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -484,7 +484,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -498,7 +498,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -512,7 +512,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -526,7 +526,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -540,7 +540,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -554,7 +554,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -568,7 +568,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -582,7 +582,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -596,12 +596,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vcompmat@ mú"
+// MResourceTypeForInfoType "vcompmat"
 class InfoForResourceTypeCCompositeMaterialKit
 {
 private:
@@ -610,7 +610,21 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MResourceTypeForInfoType "vgcxdatavxml"
+class InfoForResourceTypeCGcExportableExternalData
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: resourcesystem.dll (project 'resourcesystem')
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -624,7 +638,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -638,7 +652,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -652,12 +666,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vskel"
+// MResourceTypeForInfoType "vnmskel"
 class InfoForResourceTypeCNmSkeleton
 {
 private:
@@ -666,12 +680,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vclip"
+// MResourceTypeForInfoType "vnmclip"
 class InfoForResourceTypeCNmClip
 {
 private:
@@ -679,8 +693,36 @@ private:
 public:
 };
 
+// Registered binary: resourcesystem.dll (project 'resourcesystem')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MResourceTypeForInfoType "vnmgraphvanmgrpheconitemvents"
+class InfoForResourceTypeCNmGraph
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: resourcesystem.dll (project 'resourcesystem')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MResourceTypeForInfoType "vnmdset"
+class InfoForResourceTypeCNmGraphDataSet
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
 // Registered binary: resourcesystem.dll (project 'mathlib_extended')
-// Alignment: 2
+// Alignment: 8
 // Size: 0x2
 // Has Trivial Destructor
 // 
@@ -695,7 +737,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'mathlib_extended')
-// Alignment: 2
+// Alignment: 8
 // Size: 0x2
 // Has Trivial Destructor
 // 
@@ -786,7 +828,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'mathlib_extended')
-// Alignment: 4
+// Alignment: 8
 // Size: 0x18
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -798,7 +840,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'mathlib_extended')
-// Alignment: 4
+// Alignment: 8
 // Size: 0x8
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -810,7 +852,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'mathlib_extended')
-// Alignment: 16
+// Alignment: 8
 // Size: 0x40
 // Has Trivial Constructor
 // Has Trivial Destructor
