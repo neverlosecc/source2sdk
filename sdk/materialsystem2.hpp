@@ -261,16 +261,37 @@ public:
 private:
 	[[maybe_unused]] uint8_t __pad0041[0x3]; // 0x41
 public:
+	// -> m_blendMode - 0x44
+	// -> m_flBloomStrength - 0x48
+	// -> m_flScreenBloomStrength - 0x4c
+	// -> m_flBlurBloomStrength - 0x50
+	// -> m_flBloomThreshold - 0x54
+	// -> m_flBloomThresholdWidth - 0x58
+	// -> m_flSkyboxBloomStrength - 0x5c
+	// -> m_flBloomStartValue - 0x60
+	// -> m_flBlurWeight[5] - 0x64
+	// -> m_vBlurTint[5] - 0x78
 	PostProcessingBloomParameters_t m_bloomParams; // 0x44	
 	bool m_bHasVignetteParams; // 0xb4	
 private:
 	[[maybe_unused]] uint8_t __pad00b5[0x3]; // 0xb5
 public:
+	// -> m_flVignetteStrength - 0xb8
+	// -> m_vCenter - 0xbc
+	// -> m_flRadius - 0xc4
+	// -> m_flRoundness - 0xc8
+	// -> m_flFeather - 0xcc
+	// -> m_vColorTint - 0xd0
 	PostProcessingVignetteParameters_t m_vignetteParams; // 0xb8	
 	bool m_bHasLocalContrastParams; // 0xdc	
 private:
 	[[maybe_unused]] uint8_t __pad00dd[0x3]; // 0xdd
 public:
+	// -> m_flLocalContrastStrength - 0xe0
+	// -> m_flLocalContrastEdgeStrength - 0xe4
+	// -> m_flLocalContrastVignetteStart - 0xe8
+	// -> m_flLocalContrastVignetteEnd - 0xec
+	// -> m_flLocalContrastVignetteBlur - 0xf0
 	PostProcessingLocalContrastParameters_t m_localConstrastParams; // 0xe0	
 	int32_t m_nColorCorrectionVolumeDim; // 0xf4	
 	CUtlBinaryBlock m_colorCorrectionVolumeData; // 0xf8	
