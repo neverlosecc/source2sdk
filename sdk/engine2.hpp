@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: engine2.dll
-// Classes count: 49
+// Classes count: 48
 // Enums count: 4
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -76,7 +76,7 @@ public:
 };
 
 // Registered binary: engine2.dll (project 'engine2')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -89,7 +89,7 @@ public:
 };
 
 // Registered binary: engine2.dll (project 'engine2')
-// Alignment: 4
+// Alignment: 8
 // Size: 0x4
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -100,7 +100,7 @@ public:
 };
 
 // Registered binary: engine2.dll (project 'engine2')
-// Alignment: 4
+// Alignment: 8
 // Size: 0x4
 // Has Trivial Destructor
 struct EventProfileStorageAvailable_t
@@ -110,7 +110,7 @@ public:
 };
 
 // Registered binary: engine2.dll (project 'engine2')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -155,13 +155,15 @@ public:
 
 // Registered binary: engine2.dll (project 'engine2')
 // Alignment: 8
-// Size: 0x30
+// Size: 0x38
 // Has Trivial Destructor
 struct EventClientProcessInput_t
 {
 public:
 	EngineLoopState_t m_LoopState; // 0x0	
 	float m_flRealTime; // 0x28	
+	float m_flTickInterval; // 0x2c	
+	double m_flTickStartTime; // 0x30	
 };
 
 // Registered binary: engine2.dll (project 'engine2')
@@ -192,7 +194,7 @@ public:
 };
 
 // Registered binary: engine2.dll (project 'engine2')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Destructor
 struct EventClientSceneSystemThreadStateChange_t
@@ -231,7 +233,7 @@ public:
 
 // Registered binary: engine2.dll (project 'engine2')
 // Alignment: 8
-// Size: 0x30
+// Size: 0x38
 // Has Trivial Destructor
 struct EventClientFrameSimulate_t
 {
@@ -239,6 +241,7 @@ public:
 	EngineLoopState_t m_LoopState; // 0x0	
 	float m_flRealTime; // 0x28	
 	float m_flFrameTime; // 0x2c	
+	double m_flWhenScheduleSendTickPacket; // 0x30	
 };
 
 // Registered binary: engine2.dll (project 'engine2')
@@ -332,18 +335,7 @@ public:
 };
 
 // Registered binary: engine2.dll (project 'engine2')
-// Alignment: 4
-// Size: 0x8
-// Has Trivial Destructor
-struct EventClientSendInput_t
-{
-public:
-	bool m_bFinalClientCommandTick; // 0x0	
-	int32_t m_nAdditionalClientCommandsToCreate; // 0x4	
-};
-
-// Registered binary: engine2.dll (project 'engine2')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Destructor
 struct EventClientPredictionPostNetupdate_t
@@ -355,7 +347,7 @@ public:
 };
 
 // Registered binary: engine2.dll (project 'engine2')
-// Alignment: 4
+// Alignment: 8
 // Size: 0x4
 // Has Trivial Destructor
 struct EventClientPollNetworking_t
@@ -365,7 +357,7 @@ public:
 };
 
 // Registered binary: engine2.dll (project 'engine2')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Destructor
 struct EventClientProcessNetworking_t
@@ -479,7 +471,7 @@ public:
 };
 
 // Registered binary: engine2.dll (project 'engine2')
-// Alignment: 4
+// Alignment: 8
 // Size: 0x4
 // Has Trivial Destructor
 struct EventAppShutdown_t
@@ -502,7 +494,7 @@ public:
 };
 
 // Registered binary: engine2.dll (project 'entity2')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -636,20 +628,20 @@ public:
 
 // Registered binary: engine2.dll (project 'entity2')
 // Alignment: 8
-// Size: 0x8
-// Has VTable
+// Size: 0x1
+// Has Trivial Constructor
 // Has Trivial Destructor
 class CEmptyEntityInstance
 {
 private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
 	// No schema binary for binding
 };
 
 // Registered binary: engine2.dll (project 'entity2')
 // Alignment: 8
-// Size: 0x30
+// Size: 0x38
 // Has VTable
 // 
 // MNetworkVarNames "CEntityIdentity * m_pEntity"
@@ -670,6 +662,7 @@ public:
 	// MNetworkEnable
 	// MNetworkDisable
 	CScriptComponent* m_CScriptComponent; // 0x28	
+	bool m_bVisibleinPVS; // 0x30	
 };
 
 // Registered binary: engine2.dll (project 'entity2')

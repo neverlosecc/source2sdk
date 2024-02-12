@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: resourcesystem.dll
-// Classes count: 56
+// Classes count: 59
 // Enums count: 2
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -50,12 +50,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vtest"
+// MResourceTypeForInfoType
 struct InfoForResourceTypeTestResource_t
 {
 private:
@@ -64,12 +64,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vptest"
+// MResourceTypeForInfoType
 struct InfoForResourceTypeProceduralTestResource_t
 {
 private:
@@ -78,12 +78,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vmtst"
+// MResourceTypeForInfoType
 struct InfoForResourceTypeManifestTestResource_t
 {
 private:
@@ -106,12 +106,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vdata"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCVDataResource
 {
 private:
@@ -120,12 +120,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vpulse"
+// MResourceTypeForInfoType
 class InfoForResourceTypeIPulseGraphDef
 {
 private:
@@ -134,12 +134,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vts"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCTypeScriptResource
 {
 private:
@@ -148,12 +148,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vjs"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCJavaScriptResource
 {
 private:
@@ -162,12 +162,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vpcf"
+// MResourceTypeForInfoType
 class InfoForResourceTypeIParticleSystemDefinition
 {
 private:
@@ -176,12 +176,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vsnap"
+// MResourceTypeForInfoType
 class InfoForResourceTypeIParticleSnapshot
 {
 private:
@@ -190,12 +190,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vanim"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCAnimData
 {
 private:
@@ -204,12 +204,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vagrp"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCAnimationGroup
 {
 private:
@@ -218,12 +218,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vseq"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCSequenceGroupData
 {
 private:
@@ -232,12 +232,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vmat"
+// MResourceTypeForInfoType
 class InfoForResourceTypeIMaterial2
 {
 private:
@@ -246,12 +246,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vmorf"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCMorphSetData
 {
 private:
@@ -260,12 +260,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vmesh"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCRenderMesh
 {
 private:
@@ -274,12 +274,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vmdl"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCModel
 {
 private:
@@ -288,12 +288,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vtex"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCTextureBase
 {
 private:
@@ -302,12 +302,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vsvg"
+// MResourceTypeForInfoType
 class InfoForResourceTypeIVectorGraphic
 {
 private:
@@ -316,12 +316,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vsndevts"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCVSoundEventScriptList
 {
 private:
@@ -330,12 +330,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vsndstckvseq"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCVSoundStackScriptList
 {
 private:
@@ -344,13 +344,13 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vsnd"
-struct InfoForResourceTypeVSound_t
+// MResourceTypeForInfoType
+class InfoForResourceTypeCVoiceContainerBase
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
@@ -358,12 +358,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vmix"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCVMixListResource
 {
 private:
@@ -372,12 +372,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vphys"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCPhysAggregateData
 {
 private:
@@ -386,12 +386,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vsurf"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCVPhysXSurfacePropertiesList
 {
 private:
@@ -400,12 +400,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vents"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCEntityLump
 {
 private:
@@ -414,12 +414,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vwnod"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCWorldNode
 {
 private:
@@ -428,12 +428,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vwrld"
+// MResourceTypeForInfoType
 struct InfoForResourceTypeWorld_t
 {
 private:
@@ -442,12 +442,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vvis"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCVoxelVisibility
 {
 private:
@@ -456,12 +456,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vpost"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCPostProcessingResource
 {
 private:
@@ -470,12 +470,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vcss"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCPanoramaStyle
 {
 private:
@@ -484,12 +484,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vxml"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCPanoramaLayout
 {
 private:
@@ -498,12 +498,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vpdi"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCPanoramaDynamicImages
 {
 private:
@@ -512,12 +512,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "item"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCDotaItemDefinitionResource
 {
 private:
@@ -526,12 +526,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vdpn"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCDOTAPatchNotesList
 {
 private:
@@ -540,12 +540,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vdvn"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCDOTANovelsList
 {
 private:
@@ -554,12 +554,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vanmgrpheconitemvents"
+// MResourceTypeForInfoType
 class InfoForResourceTypeIAnimGraphModelBinding
 {
 private:
@@ -568,12 +568,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vcdlist"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCChoreoSceneFileData
 {
 private:
@@ -582,12 +582,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vdacdefsvsvg"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCDACGameDefsData
 {
 private:
@@ -596,12 +596,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vcompmat"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCCompositeMaterialKit
 {
 private:
@@ -610,12 +610,26 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vsmart"
+// MResourceTypeForInfoType
+class InfoForResourceTypeCGcExportableExternalData
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: resourcesystem.dll (project 'resourcesystem')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MResourceTypeForInfoType
 class InfoForResourceTypeCSmartProp
 {
 private:
@@ -624,12 +638,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "econitemvents"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCCSGOEconItem
 {
 private:
@@ -638,12 +652,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vrr"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCResponseRulesList
 {
 private:
@@ -652,12 +666,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vskel"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCNmSkeleton
 {
 private:
@@ -666,12 +680,12 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vclip"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCNmClip
 {
 private:
@@ -679,8 +693,36 @@ private:
 public:
 };
 
+// Registered binary: resourcesystem.dll (project 'resourcesystem')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MResourceTypeForInfoType
+class InfoForResourceTypeCNmGraph
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: resourcesystem.dll (project 'resourcesystem')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MResourceTypeForInfoType
+class InfoForResourceTypeCNmGraphDataSet
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
 // Registered binary: resourcesystem.dll (project 'mathlib_extended')
-// Alignment: 2
+// Alignment: 8
 // Size: 0x2
 // Has Trivial Destructor
 // 
@@ -695,7 +737,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'mathlib_extended')
-// Alignment: 2
+// Alignment: 8
 // Size: 0x2
 // Has Trivial Destructor
 // 
@@ -786,7 +828,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'mathlib_extended')
-// Alignment: 4
+// Alignment: 8
 // Size: 0x18
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -798,7 +840,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'mathlib_extended')
-// Alignment: 4
+// Alignment: 8
 // Size: 0x8
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -810,7 +852,7 @@ public:
 };
 
 // Registered binary: resourcesystem.dll (project 'mathlib_extended')
-// Alignment: 16
+// Alignment: 8
 // Size: 0x40
 // Has Trivial Constructor
 // Has Trivial Destructor

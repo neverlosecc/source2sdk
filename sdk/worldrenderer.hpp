@@ -11,13 +11,10 @@
 
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 4
-// Size: 0x10
+// Size: 0xd
 enum class ObjectTypeFlags_t : uint32_t
 {
 	OBJECT_TYPE_NONE = 0x0,
-	OBJECT_TYPE_IMAGE_LOD = 0x1,
-	OBJECT_TYPE_GEOMETRY_LOD = 0x2,
-	OBJECT_TYPE_DECAL = 0x4,
 	OBJECT_TYPE_MODEL = 0x8,
 	OBJECT_TYPE_BLOCK_LIGHT = 0x10,
 	OBJECT_TYPE_NO_SHADOWS = 0x20,
@@ -78,7 +75,7 @@ public:
 
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
-// Size: 0x40
+// Size: 0x38
 // Has VTable
 // 
 // MGetKV3ClassDefaults
@@ -88,14 +85,13 @@ private:
 	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	CUtlString m_name; // 0x8	
-	CUtlString m_hammerUniqueId; // 0x10	
-	CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > > m_childLumps; // 0x18	
-	CUtlLeanVector< EntityKeyValueData_t > m_entityKeyValues; // 0x30	
+	CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > > m_childLumps; // 0x10	
+	CUtlLeanVector< EntityKeyValueData_t > m_entityKeyValues; // 0x28	
 };
 
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
-// Size: 0x90
+// Size: 0x88
 // 
 // MGetKV3ClassDefaults
 struct SceneObject_t
@@ -112,16 +108,15 @@ public:
 	CUtlString m_skin; // 0x50	
 	ObjectTypeFlags_t m_nObjectTypeFlags; // 0x58	
 	Vector m_vLightingOrigin; // 0x5c	
-	uint32_t m_nLightGroup; // 0x68	
-	int16_t m_nOverlayRenderOrder; // 0x6c	
-	int16_t m_nLODOverride; // 0x6e	
-	int32_t m_nCubeMapPrecomputedHandshake; // 0x70	
-	int32_t m_nLightProbeVolumePrecomputedHandshake; // 0x74	
+	int16_t m_nOverlayRenderOrder; // 0x68	
+	int16_t m_nLODOverride; // 0x6a	
+	int32_t m_nCubeMapPrecomputedHandshake; // 0x6c	
+	int32_t m_nLightProbeVolumePrecomputedHandshake; // 0x70	
 private:
-	[[maybe_unused]] uint8_t __pad0078[0x8]; // 0x78
+	[[maybe_unused]] uint8_t __pad0074[0x4]; // 0x74
 public:
-	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x80	
-	CStrongHandle< InfoForResourceTypeCRenderMesh > m_renderable; // 0x88	
+	CStrongHandle< InfoForResourceTypeCModel > m_renderableModel; // 0x78	
+	CStrongHandle< InfoForResourceTypeCRenderMesh > m_renderable; // 0x80	
 };
 
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
@@ -337,6 +332,11 @@ public:
 	CUtlVector< uint8 > m_sceneObjectLayerIndices; // 0xd8	
 	CUtlVector< uint8 > m_overlayLayerIndices; // 0xf0	
 	CUtlString m_grassFileName; // 0x108	
+	// -> m_nLightmapVersionNumber - 0x110
+	// -> m_nLightmapGameVersionNumber - 0x114
+	// -> m_vLightmapUvScale - 0x118
+	// -> m_bHasLightmaps - 0x120
+	// -> m_lightMaps - 0x128
 	BakedLightingInfo_t m_nodeLightingInfo; // 0x110	
 };
 
@@ -387,8 +387,18 @@ public:
 struct World_t
 {
 public:
+	// -> m_flMinDrawVolumeSize - 0x0
+	// -> m_bBuildBakedLighting - 0x4
+	// -> m_vLightmapUvScale - 0x8
+	// -> m_nCompileTimestamp - 0x10
+	// -> m_nCompileFingerprint - 0x18
 	WorldBuilderParams_t m_builderParams; // 0x0	
 	CUtlVector< NodeData_t > m_worldNodes; // 0x20	
+	// -> m_nLightmapVersionNumber - 0x38
+	// -> m_nLightmapGameVersionNumber - 0x3c
+	// -> m_vLightmapUvScale - 0x40
+	// -> m_bHasLightmaps - 0x48
+	// -> m_lightMaps - 0x50
 	BakedLightingInfo_t m_worldLightingInfo; // 0x38	
 	CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > > m_entityLumps; // 0x68	
 };
@@ -433,7 +443,7 @@ public:
 };
 
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
@@ -446,12 +456,12 @@ public:
 };
 
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vmap"
+// MResourceTypeForInfoType
 struct InfoForResourceTypeVMapResourceData_t
 {
 private:
@@ -515,7 +525,7 @@ public:
 
 // Registered binary: worldrenderer.dll (project 'entity2')
 // Alignment: 8
-// Size: 0x30
+// Size: 0x38
 // Has VTable
 // 
 // MNetworkVarNames "CEntityIdentity * m_pEntity"
@@ -536,6 +546,7 @@ public:
 	// MNetworkEnable
 	// MNetworkDisable
 	CScriptComponent* m_CScriptComponent; // 0x28	
+	bool m_bVisibleinPVS; // 0x30	
 };
 
 // Registered binary: worldrenderer.dll (project 'entity2')

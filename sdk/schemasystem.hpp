@@ -21,7 +21,7 @@ enum class ThreeState_t : uint32_t
 
 // Registered binary: schemasystem.dll (project 'schemasystem')
 // Alignment: 1
-// Size: 0x50
+// Size: 0x51
 enum class fieldtype_t : uint8_t
 {
 	FIELD_VOID = 0x0,
@@ -103,11 +103,12 @@ enum class fieldtype_t : uint8_t
 	FIELD_ENGINE_TIME = 0x4c,
 	FIELD_ENGINE_TICK = 0x4d,
 	FIELD_WORLD_GROUP_ID = 0x4e,
-	FIELD_TYPECOUNT = 0x4f,
+	FIELD_GLOBALSYMBOL = 0x4f,
+	FIELD_TYPECOUNT = 0x50,
 };
 
 // Registered binary: schemasystem.dll (project 'schemasystem')
-// Alignment: 16
+// Alignment: 8
 // Size: 0x180
 class CSchemaSystemInternalRegistration
 {
@@ -146,12 +147,12 @@ public:
 };
 
 // Registered binary: schemasystem.dll (project 'resourcefile')
-// Alignment: 1
+// Alignment: 8
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vrman"
+// MResourceTypeForInfoType
 class InfoForResourceTypeCResourceManifestInternal
 {
 private:
